@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Terramind-AI Inference</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;max-width:800px;margin:2rem auto}
+      #preview{max-width:400px}
+    </style>
+  </head>
+  <body>
+    <h1>Terramind-AI</h1>
+    <p>Upload an image to get predictions.</p>
+    <input id="file" type="file" accept="image/*" />
+    <div><img id="preview" /></div>
+    <button id="send">Predict</button>
+    <pre id="out"></pre>
+
+    <script>
+      const send = document.getElementById('send')
+      const file = document.getElementById('file')
+      const out = document.getElementById('out')
+      const preview = document.getElementById('preview')
+      file.addEventListener('change', e=>{
+        if(e.target.files && e.target.files[0]){
+          preview.src = URL.createObjectURL(e.target.files[0])
+        }
+      })
+      send.onclick = async ()=>{
+        if(!file.files || !file.files[0]){ alert('Select file'); return }
+        const fd = new FormData(); fd.append('file', file.files[0])
+        out.textContent = 'Sending...'
+        try{
+          const res = await fetch('http://localhost:8000/predict', { method:'POST', body: fd })
+          const j = await res.json()
+          out.textContent = JSON.stringify(j, null, 2)
+        }catch(err){ out.textContent = String(err) }
+      }
+    </script>
+  </body>
+</html>

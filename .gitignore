@@ -1,0 +1,30 @@
+# Dataset
+data/
+datasets/
+*.zip
+*.rar
+
+# Large model files
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs and outputs
+outputs/
+logs/
+*.log
+checkpoints/
+runs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
