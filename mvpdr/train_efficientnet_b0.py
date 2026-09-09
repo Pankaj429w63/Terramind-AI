@@ -2,6 +2,7 @@
 
 Safety rules:
   * Uses only the dataset-provided mode labels: 1=train, 2=validation, 0=test.
+  * Validation and test share one deterministic eval transform; train augmentation is separate.
   * Never writes to models/, models/archive/, or a shared checkpoint directory.
   * Requires --confirm-train and a unique --run-name before any training starts.
 """
@@ -31,6 +32,10 @@ DATASET_ROOT = PROJECT_ROOT / "data" / "plantwild" / "plantwild"
 EXPERIMENTS_ROOT = PROJECT_ROOT / "outputs" / "experiments"
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD = [0.229, 0.224, 0.225]
+OFFICIAL_SPLIT_COUNTS = {"train": 13045, "validation": 1820, "test": 3677}
+EVAL_RESIZE_OVER_CROP = 256 / 224
+BICUBIC = T.InterpolationMode.BICUBIC
+SPLIT_MODES = {"1": "train", "2": "validation", "0": "test"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,9 +44,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--confirm-train", action="store_true",
                         help="Required safety switch before training can begin.")
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--epochs", type=int, default=20)
-    parser.add_argument("--patience", type=int, default=5)
-    parser.add_argument("--min-delta", type=float, default=0.002,
+    parser.add_argument("--epochs", type=int, default=25,
+                        help="Upper bound; early stopping is the real terminator.")
+    parser.add_argument("--patience", type=int, default=7,
+                        help="Epochs without a min-delta val macro-F1 gain before stop.")
+    parser.add_argument("--min-delta", type=float, default=0.001,
                         help="Minimum validation macro-F1 gain required to reset patience.")
     parser.add_argument("--img-size", type=int, default=224)
     parser.add_argument("--batch-size", type=int, default=16)
@@ -49,9 +56,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--freeze-epochs", type=int, default=3)
     parser.add_argument("--head-lr", type=float, default=3e-4)
     parser.add_argument("--backbone-lr", type=float, default=1e-5)
-    parser.add_argument("--weight-decay", type=float, default=1e-4)
-    parser.add_argument("--dropout", type=float, default=0.30)
-    parser.add_argument("--label-smoothing", type=float, default=0.10)
+    parser.add_argument("--weight-decay", type=float, default=1.5e-4)
+    parser.add_argument("--dropout", type=float, default=0.25)
+    parser.add_argument("--label-smoothing", type=float, default=0.05)
     parser.add_argument("--num-workers", type=int, default=0)
     return parser.parse_args()
 
@@ -61,6 +68,14 @@ def seed_everything(seed: int) -> None:
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+
+def seed_worker(worker_id: int) -> None:
+    worker_seed = (torch.initial_seed() + worker_id) % 2**32
+    random.seed(worker_seed)
+    np.random.seed(worker_seed)
 
 
 def load_classes() -> dict[str, int]:
@@ -76,32 +91,117 @@ def load_classes() -> dict[str, int]:
     return classes
 
 
-def load_official_split() -> tuple[list[str], list[str], list[str]]:
+def normalize_image_rel(image_rel: str) -> str:
+    return image_rel.replace("\\", "/").strip()
+
+
+def parse_split_line(line: str) -> tuple[str, int, str]:
+    try:
+        image_rel, class_id_str, mode = line.rsplit("=", 2)
+    except ValueError as exc:
+        raise ValueError(f"Malformed PlantWild split entry: {line!r}") from exc
+    image_rel = normalize_image_rel(image_rel)
+    if mode not in SPLIT_MODES:
+        raise ValueError(f"Unknown PlantWild split mode {mode!r}: {line!r}")
+    return image_rel, int(class_id_str), mode
+
+
+def assert_official_split(train: list[str], val: list[str], test: list[str],
+                          class_to_id: dict[str, int]) -> dict[str, object]:
+    id_to_name = {class_id: name for name, class_id in class_to_id.items()}
+    grouped = {"train": train, "validation": val, "test": test}
+    path_sets: dict[str, set[str]] = {}
+    class_sets: dict[str, set[int]] = {}
+    for split_name, lines in grouped.items():
+        paths: list[str] = []
+        class_ids: set[int] = set()
+        for line in lines:
+            image_rel, class_id, _mode = parse_split_line(line)
+            folder_name = Path(image_rel).parts[0]
+            if folder_name not in class_to_id:
+                raise RuntimeError(f"Unknown class folder in {split_name}: {folder_name!r}")
+            if class_id not in id_to_name:
+                raise RuntimeError(f"Unknown class id {class_id} in {split_name}: {line!r}")
+            if class_to_id[folder_name] != class_id:
+                raise RuntimeError(
+                    f"Class id/folder mismatch in {split_name}: {line!r} "
+                    f"(folder={folder_name!r} id={class_id})"
+                )
+            paths.append(image_rel)
+            class_ids.add(class_id)
+        if len(paths) != len(set(paths)):
+            raise RuntimeError(f"Duplicate image paths inside official {split_name} split.")
+        path_sets[split_name] = set(paths)
+        class_sets[split_name] = class_ids
+
+    leaked = {
+        "train/validation": sorted(path_sets["train"] & path_sets["validation"]),
+        "train/test": sorted(path_sets["train"] & path_sets["test"]),
+        "validation/test": sorted(path_sets["validation"] & path_sets["test"]),
+    }
+    leaked = {name: values for name, values in leaked.items() if values}
+    if leaked:
+        details = ", ".join(f"{name}={len(values)}" for name, values in leaked.items())
+        raise RuntimeError(f"Official PlantWild split contains image-path leakage: {details}")
+
+    counts = {name: len(lines) for name, lines in grouped.items()}
+    if counts != OFFICIAL_SPLIT_COUNTS:
+        raise RuntimeError(
+            "Unexpected official split counts; expected "
+            f"{OFFICIAL_SPLIT_COUNTS}; got {counts}."
+        )
+    missing_train_classes = sorted(set(range(89)) - class_sets["train"])
+    if missing_train_classes:
+        raise RuntimeError(f"Train split is missing class ids: {missing_train_classes}")
+    return {
+        "counts": counts,
+        "path_overlap": "none",
+        "within_split_duplicates": "none",
+        "class_id_folder_alignment": "ok",
+        "train_class_coverage": len(class_sets["train"]),
+        "validation_class_coverage": len(class_sets["validation"]),
+        "test_class_coverage": len(class_sets["test"]),
+        "source": "PlantWild trainval.txt modes 1=train, 2=validation, 0=test",
+    }
+
+
+def load_official_split(class_to_id: dict[str, int]) -> tuple[list[str], list[str], list[str], dict[str, object]]:
     split_file = DATASET_ROOT / "trainval.txt"
-    splits = {"0": [], "1": [], "2": []}
+    splits: dict[str, list[str]] = {"0": [], "1": [], "2": []}
     with split_file.open(encoding="utf-8") as handle:
         for raw in handle:
             line = raw.strip()
             if not line:
                 continue
-            try:
-                _, _, mode = line.rsplit("=", 2)
-            except ValueError as exc:
-                raise ValueError(f"Malformed PlantWild split entry: {line!r}") from exc
-            if mode not in splits:
-                raise ValueError(f"Unknown PlantWild split mode {mode!r}: {line!r}")
+            _image_rel, _class_id, mode = parse_split_line(line)
             splits[mode].append(line)
-
     train, val, test = splits["1"], splits["2"], splits["0"]
-    path_sets = [{line.split("=", 1)[0] for line in values} for values in (train, val, test)]
-    if path_sets[0] & path_sets[1] or path_sets[0] & path_sets[2] or path_sets[1] & path_sets[2]:
-        raise RuntimeError("Official PlantWild split contains an image-path overlap.")
-    if (len(train), len(val), len(test)) != (13045, 1820, 3677):
-        raise RuntimeError(
-            "Unexpected official split counts; expected train=13045, val=1820, test=3677; "
-            f"got train={len(train)}, val={len(val)}, test={len(test)}."
-        )
-    return train, val, test
+    audit = assert_official_split(train, val, test, class_to_id)
+    return train, val, test, audit
+
+
+def build_train_transform(img_size: int) -> T.Compose:
+    """Stochastic augmentation used only for the official train split."""
+    return T.Compose([
+        T.RandomResizedCrop(img_size, scale=(0.70, 1.0), interpolation=BICUBIC),
+        T.RandomHorizontalFlip(p=0.5),
+        T.RandomRotation(12),
+        T.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.10),
+        T.ToTensor(),
+        T.RandomErasing(p=0.10, scale=(0.02, 0.12), value="random"),
+        T.Normalize(IMAGENET_MEAN, IMAGENET_STD),
+    ])
+
+
+def build_eval_transform(img_size: int) -> T.Compose:
+    """Deterministic EfficientNet eval recipe shared by validation and test."""
+    resize_size = int(round(img_size * EVAL_RESIZE_OVER_CROP))
+    return T.Compose([
+        T.Resize(resize_size, interpolation=BICUBIC),
+        T.CenterCrop(img_size),
+        T.ToTensor(),
+        T.Normalize(IMAGENET_MEAN, IMAGENET_STD),
+    ])
 
 
 class PlantWildDataset(Dataset):
@@ -110,15 +210,14 @@ class PlantWildDataset(Dataset):
         self.items: list[tuple[Path, int]] = []
         missing: list[str] = []
         for line in lines:
-            image_rel = line.split("=", 1)[0]
-            class_name = Path(image_rel).parts[0]
+            image_rel, class_id, _mode = parse_split_line(line)
             image_path = DATASET_ROOT / "images" / image_rel
-            if class_name not in class_to_id:
-                raise RuntimeError(f"Unknown class in split: {class_name!r}")
+            if class_id not in set(class_to_id.values()):
+                raise RuntimeError(f"Unknown class id in split: {class_id}")
             if not image_path.is_file():
                 missing.append(str(image_path))
                 continue
-            self.items.append((image_path, class_to_id[class_name]))
+            self.items.append((image_path, class_id))
         if missing:
             raise FileNotFoundError(f"{len(missing)} listed images are missing; first: {missing[0]}")
 
@@ -159,13 +258,22 @@ def make_optimizer(model: nn.Module, args: argparse.Namespace, backbone_trainabl
     )
 
 
-def make_weighted_sampler(dataset: PlantWildDataset) -> WeightedRandomSampler:
+def make_scheduler(optimizer: optim.Optimizer, min_delta: float) -> optim.lr_scheduler.ReduceLROnPlateau:
+    return optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode="max", factor=0.5, patience=2, cooldown=1,
+        threshold=min_delta, min_lr=1e-6,
+    )
+
+
+def make_weighted_sampler(dataset: PlantWildDataset, generator: torch.Generator) -> WeightedRandomSampler:
     """Balance class exposure in the training loader only, with replacement."""
     class_counts = Counter(label for _, label in dataset.items)
     weights = torch.as_tensor(
         [1.0 / class_counts[label] for _, label in dataset.items], dtype=torch.double
     )
-    return WeightedRandomSampler(weights, num_samples=len(weights), replacement=True)
+    return WeightedRandomSampler(
+        weights, num_samples=len(weights), replacement=True, generator=generator
+    )
 
 
 def macro_f1(predictions: list[int], targets: list[int], num_classes: int = 89) -> float:
@@ -250,12 +358,38 @@ def prepare_run_directory(args: argparse.Namespace) -> Path:
 def main() -> None:
     args = parse_args()
     class_to_id = load_classes()
-    train_lines, val_lines, test_lines = load_official_split()
+    train_lines, val_lines, test_lines, split_audit = load_official_split(class_to_id)
+    train_transform = build_train_transform(args.img_size)
+    eval_transform = build_eval_transform(args.img_size)
     plan = {
         "experiment": "EfficientNet-B0 pretrained PlantWild official split",
-        "split": {"train": len(train_lines), "validation": len(val_lines), "test": len(test_lines)},
+        "split": split_audit,
         "num_classes": len(class_to_id),
         "model": "torchvision EfficientNet_B0_Weights.DEFAULT",
+        "preprocessing": {
+            "train": "RandomResizedCrop+HFlip+Rotation+ColorJitter+RandomErasing+ImageNetNorm",
+            "validation": "Resize(shorter-edge, BICUBIC)+CenterCrop+ImageNetNorm",
+            "test": "identical to validation (shared transform object)",
+            "eval_resize_size": int(round(args.img_size * EVAL_RESIZE_OVER_CROP)),
+            "eval_crop_size": args.img_size,
+            "train_transform_is_eval": train_transform == eval_transform,
+            "val_and_test_share_eval_transform": True,
+        },
+        "regularization": {
+            "dropout": args.dropout,
+            "label_smoothing": args.label_smoothing,
+            "weight_decay": args.weight_decay,
+            "freeze_epochs": args.freeze_epochs,
+            "grad_clip": 1.0,
+        },
+        "early_stopping": {
+            "monitor": "val_macro_f1",
+            "patience": args.patience,
+            "min_delta": args.min_delta,
+            "epochs_cap": args.epochs,
+            "restore_best_for_test": True,
+            "lr_scheduler": "ReduceLROnPlateau(max, factor=0.5, patience=2, cooldown=1)",
+        },
         "output_policy": "unique outputs/experiments/<run-name>; never writes models/ or models/archive/",
         "training_requires": "--confirm-train plus a unique --run-name",
     }
@@ -267,36 +401,32 @@ def main() -> None:
     run_dir = prepare_run_directory(args)
     seed_everything(args.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    config = vars(args) | {"device": str(device), "official_split": plan["split"]}
+    config = vars(args) | {"device": str(device), "official_split": split_audit["counts"]}
     (run_dir / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
     print(f"Training started run={args.run_name} device={device} epochs={args.epochs}", flush=True)
     print(f"Writing checkpoints only to {run_dir}", flush=True)
 
-    train_transform = T.Compose([
-        T.Resize((256, 256)), T.RandomCrop((args.img_size, args.img_size)),
-        T.RandomHorizontalFlip(), T.RandomRotation(15),
-        T.ColorJitter(brightness=0.20, contrast=0.20, saturation=0.15),
-        T.ToTensor(), T.RandomErasing(p=0.15, scale=(0.02, 0.15), value="random"),
-        T.Normalize(IMAGENET_MEAN, IMAGENET_STD),
-    ])
-    eval_transform = T.Compose([
-        T.Resize((256, 256)), T.CenterCrop((args.img_size, args.img_size)),
-        T.ToTensor(), T.Normalize(IMAGENET_MEAN, IMAGENET_STD),
-    ])
     train_ds = PlantWildDataset(train_lines, class_to_id, train_transform)
     val_ds = PlantWildDataset(val_lines, class_to_id, eval_transform)
     test_ds = PlantWildDataset(test_lines, class_to_id, eval_transform)
-    train_sampler = make_weighted_sampler(train_ds)
-    train_loader = DataLoader(
-        train_ds, batch_size=args.batch_size, sampler=train_sampler, num_workers=args.num_workers
-    )
-    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
-    test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
+    if val_ds.transform is not test_ds.transform:
+        raise RuntimeError("Validation and test must share the identical eval transform object.")
+    generator = torch.Generator()
+    generator.manual_seed(args.seed)
+    train_sampler = make_weighted_sampler(train_ds, generator)
+    loader_kwargs = {
+        "batch_size": args.batch_size,
+        "num_workers": args.num_workers,
+        "worker_init_fn": seed_worker if args.num_workers else None,
+    }
+    train_loader = DataLoader(train_ds, sampler=train_sampler, generator=generator, **loader_kwargs)
+    val_loader = DataLoader(val_ds, shuffle=False, **loader_kwargs)
+    test_loader = DataLoader(test_ds, shuffle=False, **loader_kwargs)
 
     model = build_model(args.dropout).to(device)
     set_backbone_trainable(model, trainable=False)
     optimizer = make_optimizer(model, args, backbone_trainable=False)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="max", factor=0.5, patience=1)
+    scheduler = make_scheduler(optimizer, args.min_delta)
     criterion = nn.CrossEntropyLoss(label_smoothing=args.label_smoothing)
     best_f1, stale, history = -1.0, 0, []
 
@@ -304,7 +434,7 @@ def main() -> None:
         if epoch == args.freeze_epochs + 1:
             set_backbone_trainable(model, trainable=True)
             optimizer = make_optimizer(model, args, backbone_trainable=True)
-            scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="max", factor=0.5, patience=1)
+            scheduler = make_scheduler(optimizer, args.min_delta)
         print(f"[epoch {epoch}/{args.epochs}] starting (backbone_frozen={epoch <= args.freeze_epochs})", flush=True)
         train_loss, train_acc = train_epoch(
             model, train_loader, optimizer, criterion, device, args.accum_steps, epoch
