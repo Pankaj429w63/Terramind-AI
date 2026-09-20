@@ -1,0 +1,831 @@
+{
+  "final_config": {
+    "backbone": "MobileNetV3-Small+pretrained",
+    "img_size": 160,
+    "batch_size": 16,
+    "accum_steps": 4,
+    "eff_batch": 64,
+    "lr": 0.0004,
+    "weight_decay": 0.0001,
+    "dropout": 0.45,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.1,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingWarmRestarts(T_0=3, T_mult=2, eta_min=1e-6)",
+    "sampler": "shuffle=True (no replacement oversampling)",
+    "gradual_unfreeze_epoch": 4,
+    "backbone_lr_after_unfreeze": 1e-05,
+    "classifier_lr_after_unfreeze": 0.0001,
+    "early_stop_min_delta": 0.005,
+    "augmentation": "RandomCrop+HorizontalFlip+Rotation+ColorJitter+Affine+RandomErasing",
+    "epochs": 22,
+    "patience": 5,
+    "seed": 42
+  },
+  "best_epoch": 22,
+  "epochs_ran": 22,
+  "best_val_acc": 0.42967032967032964,
+  "best_val_loss": 2.653851024921124,
+  "train_acc_final_eval": 0.48371023380605593,
+  "val_acc_final_eval": 0.42967032967032964,
+  "test_loss": 2.6500627587987315,
+  "test_acc": 0.43160184933369594,
+  "test_macro_precision": 0.40257788452061777,
+  "test_macro_recall": 0.36335433060969186,
+  "test_macro_f1": 0.35262134471878576,
+  "test_weighted_f1": 0.40371950566630593,
+  "overfitting": {
+    "train_val_gap_pp": 5.403990413572629,
+    "val_test_gap_pp": 0.0,
+    "train_test_gap_pp": 5.210838447235999,
+    "assessment": "MODERATE (acceptable, generalization OK)"
+  },
+  "per_class_test": {
+    "apple black rot": {
+      "precision": 0.38461538461538464,
+      "recall": 0.14705882352941177,
+      "f1-score": 0.2127659574468085,
+      "support": 34.0
+    },
+    "apple leaf": {
+      "precision": 0.4418604651162791,
+      "recall": 0.4318181818181818,
+      "f1-score": 0.4367816091954023,
+      "support": 88.0
+    },
+    "apple mosaic virus": {
+      "precision": 0.36363636363636365,
+      "recall": 0.1111111111111111,
+      "f1-score": 0.1702127659574468,
+      "support": 36.0
+    },
+    "apple rust": {
+      "precision": 0.46153846153846156,
+      "recall": 0.39344262295081966,
+      "f1-score": 0.4247787610619469,
+      "support": 61.0
+    },
+    "apple scab": {
+      "precision": 0.39215686274509803,
+      "recall": 0.3448275862068966,
+      "f1-score": 0.3669724770642202,
+      "support": 58.0
+    },
+    "banana leaf": {
+      "precision": 0.6382978723404256,
+      "recall": 0.625,
+      "f1-score": 0.631578947368421,
+      "support": 48.0
+    },
+    "banana panama disease": {
+      "precision": 0.48333333333333334,
+      "recall": 0.6744186046511628,
+      "f1-score": 0.5631067961165048,
+      "support": 43.0
+    },
+    "basil downy mildew": {
+      "precision": 0.2,
+      "recall": 0.058823529411764705,
+      "f1-score": 0.09090909090909091,
+      "support": 17.0
+    },
+    "basil leaf": {
+      "precision": 0.45491803278688525,
+      "recall": 0.9487179487179487,
+      "f1-score": 0.6149584487534626,
+      "support": 117.0
+    },
+    "bean halo blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 23.0
+    },
+    "bean leaf": {
+      "precision": 0.2916666666666667,
+      "recall": 0.13725490196078433,
+      "f1-score": 0.18666666666666668,
+      "support": 51.0
+    },
+    "bean mosaic virus": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1-score": 0.25,
+      "support": 25.0
+    },
+    "bean rust": {
+      "precision": 0.2765957446808511,
+      "recall": 0.3939393939393939,
+      "f1-score": 0.325,
+      "support": 33.0
+    },
+    "bell pepper leaf": {
+      "precision": 0.6153846153846154,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.43243243243243246,
+      "support": 48.0
+    },
+    "bell pepper leaf spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 23.0
+    },
+    "blueberry leaf": {
+      "precision": 0.45569620253164556,
+      "recall": 0.6428571428571429,
+      "f1-score": 0.5333333333333333,
+      "support": 56.0
+    },
+    "blueberry rust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 23.0
+    },
+    "broccoli downy mildew": {
+      "precision": 1.0,
+      "recall": 0.07692307692307693,
+      "f1-score": 0.14285714285714285,
+      "support": 13.0
+    },
+    "broccoli leaf": {
+      "precision": 0.5573770491803278,
+      "recall": 0.6415094339622641,
+      "f1-score": 0.5964912280701754,
+      "support": 53.0
+    },
+    "cabbage alternaria leaf spot": {
+      "precision": 0.36363636363636365,
+      "recall": 0.16,
+      "f1-score": 0.2222222222222222,
+      "support": 25.0
+    },
+    "cabbage leaf": {
+      "precision": 0.5,
+      "recall": 0.7934782608695652,
+      "f1-score": 0.6134453781512605,
+      "support": 92.0
+    },
+    "carrot cavity spot": {
+      "precision": 0.7222222222222222,
+      "recall": 0.9285714285714286,
+      "f1-score": 0.8125,
+      "support": 14.0
+    },
+    "cauliflower alternaria leaf spot": {
+      "precision": 0.5,
+      "recall": 0.05263157894736842,
+      "f1-score": 0.09523809523809523,
+      "support": 19.0
+    },
+    "cauliflower leaf": {
+      "precision": 0.65625,
+      "recall": 0.5384615384615384,
+      "f1-score": 0.5915492957746479,
+      "support": 39.0
+    },
+    "celery anthracnose": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 8.0
+    },
+    "celery early blight": {
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "f1-score": 0.16666666666666666,
+      "support": 11.0
+    },
+    "celery leaf": {
+      "precision": 0.6046511627906976,
+      "recall": 0.6190476190476191,
+      "f1-score": 0.611764705882353,
+      "support": 42.0
+    },
+    "cherry leaf": {
+      "precision": 0.5,
+      "recall": 0.5263157894736842,
+      "f1-score": 0.5128205128205128,
+      "support": 57.0
+    },
+    "cherry leaf spot": {
+      "precision": 0.37142857142857144,
+      "recall": 0.2826086956521739,
+      "f1-score": 0.32098765432098764,
+      "support": 46.0
+    },
+    "cherry powdery mildew": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 22.0
+    },
+    "citrus canker": {
+      "precision": 0.4573170731707317,
+      "recall": 0.7009345794392523,
+      "f1-score": 0.5535055350553506,
+      "support": 107.0
+    },
+    "citrus greening disease": {
+      "precision": 0.37777777777777777,
+      "recall": 0.3617021276595745,
+      "f1-score": 0.3695652173913043,
+      "support": 47.0
+    },
+    "coffee leaf": {
+      "precision": 0.5,
+      "recall": 0.18518518518518517,
+      "f1-score": 0.2702702702702703,
+      "support": 27.0
+    },
+    "coffee leaf rust": {
+      "precision": 0.5531914893617021,
+      "recall": 0.6842105263157895,
+      "f1-score": 0.611764705882353,
+      "support": 38.0
+    },
+    "corn gray leaf spot": {
+      "precision": 0.36363636363636365,
+      "recall": 0.27906976744186046,
+      "f1-score": 0.3157894736842105,
+      "support": 43.0
+    },
+    "corn leaf": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5806451612903226,
+      "f1-score": 0.6206896551724138,
+      "support": 31.0
+    },
+    "corn northern leaf blight": {
+      "precision": 0.3673469387755102,
+      "recall": 0.4090909090909091,
+      "f1-score": 0.3870967741935484,
+      "support": 44.0
+    },
+    "corn rust": {
+      "precision": 0.5555555555555556,
+      "recall": 0.7446808510638298,
+      "f1-score": 0.6363636363636364,
+      "support": 47.0
+    },
+    "corn smut": {
+      "precision": 0.7101449275362319,
+      "recall": 0.8448275862068966,
+      "f1-score": 0.7716535433070866,
+      "support": 58.0
+    },
+    "cucumber angular leaf spot": {
+      "precision": 0.5,
+      "recall": 0.48,
+      "f1-score": 0.4897959183673469,
+      "support": 50.0
+    },
+    "cucumber bacterial wilt": {
+      "precision": 0.35135135135135137,
+      "recall": 0.4642857142857143,
+      "f1-score": 0.4,
+      "support": 28.0
+    },
+    "cucumber leaf": {
+      "precision": 0.3972602739726027,
+      "recall": 0.42028985507246375,
+      "f1-score": 0.4084507042253521,
+      "support": 69.0
+    },
+    "cucumber powdery mildew": {
+      "precision": 0.4444444444444444,
+      "recall": 0.5957446808510638,
+      "f1-score": 0.509090909090909,
+      "support": 47.0
+    },
+    "eggplant cercospora leaf spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 17.0
+    },
+    "eggplant leaf": {
+      "precision": 0.375,
+      "recall": 0.375,
+      "f1-score": 0.375,
+      "support": 48.0
+    },
+    "garlic leaf": {
+      "precision": 0.34523809523809523,
+      "recall": 0.6444444444444445,
+      "f1-score": 0.4496124031007752,
+      "support": 45.0
+    },
+    "garlic leaf blight": {
+      "precision": 0.4,
+      "recall": 0.41379310344827586,
+      "f1-score": 0.4067796610169492,
+      "support": 29.0
+    },
+    "garlic rust": {
+      "precision": 0.38636363636363635,
+      "recall": 0.53125,
+      "f1-score": 0.4473684210526316,
+      "support": 32.0
+    },
+    "ginger leaf": {
+      "precision": 0.2777777777777778,
+      "recall": 0.14285714285714285,
+      "f1-score": 0.18867924528301888,
+      "support": 35.0
+    },
+    "ginger leaf spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 17.0
+    },
+    "ginger sheath blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 17.0
+    },
+    "grape black rot": {
+      "precision": 0.5365853658536586,
+      "recall": 0.4888888888888889,
+      "f1-score": 0.5116279069767442,
+      "support": 45.0
+    },
+    "grape downy mildew": {
+      "precision": 0.4157303370786517,
+      "recall": 0.46835443037974683,
+      "f1-score": 0.44047619047619047,
+      "support": 79.0
+    },
+    "grape leaf": {
+      "precision": 0.6521739130434783,
+      "recall": 0.375,
+      "f1-score": 0.47619047619047616,
+      "support": 40.0
+    },
+    "grape leaf spot": {
+      "precision": 0.5,
+      "recall": 0.047619047619047616,
+      "f1-score": 0.08695652173913043,
+      "support": 21.0
+    },
+    "grapevine leafroll disease": {
+      "precision": 0.38461538461538464,
+      "recall": 0.18518518518518517,
+      "f1-score": 0.25,
+      "support": 27.0
+    },
+    "lettuce downy mildew": {
+      "precision": 0.14285714285714285,
+      "recall": 0.13043478260869565,
+      "f1-score": 0.13636363636363635,
+      "support": 23.0
+    },
+    "lettuce leaf": {
+      "precision": 0.55,
+      "recall": 0.4583333333333333,
+      "f1-score": 0.5,
+      "support": 48.0
+    },
+    "lettuce mosaic virus": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 20.0
+    },
+    "maple leaf": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6349206349206349,
+      "f1-score": 0.6504065040650406,
+      "support": 63.0
+    },
+    "maple tar spot": {
+      "precision": 0.5,
+      "recall": 0.4444444444444444,
+      "f1-score": 0.47058823529411764,
+      "support": 27.0
+    },
+    "peach leaf": {
+      "precision": 0.125,
+      "recall": 0.03225806451612903,
+      "f1-score": 0.05128205128205128,
+      "support": 31.0
+    },
+    "peach leaf curl": {
+      "precision": 0.5,
+      "recall": 0.44680851063829785,
+      "f1-score": 0.47191011235955055,
+      "support": 47.0
+    },
+    "plum leaf": {
+      "precision": 0.40476190476190477,
+      "recall": 0.26153846153846155,
+      "f1-score": 0.3177570093457944,
+      "support": 65.0
+    },
+    "plum pocket disease": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 15.0
+    },
+    "potato early blight": {
+      "precision": 0.375,
+      "recall": 0.26666666666666666,
+      "f1-score": 0.3116883116883117,
+      "support": 45.0
+    },
+    "potato late blight": {
+      "precision": 0.2638888888888889,
+      "recall": 0.3958333333333333,
+      "f1-score": 0.31666666666666665,
+      "support": 48.0
+    },
+    "potato leaf": {
+      "precision": 0.24390243902439024,
+      "recall": 0.20408163265306123,
+      "f1-score": 0.2222222222222222,
+      "support": 49.0
+    },
+    "raspberry leaf": {
+      "precision": 0.675,
+      "recall": 0.75,
+      "f1-score": 0.7105263157894737,
+      "support": 36.0
+    },
+    "rice blast": {
+      "precision": 0.5416666666666666,
+      "recall": 0.4482758620689655,
+      "f1-score": 0.49056603773584906,
+      "support": 29.0
+    },
+    "rice leaf": {
+      "precision": 0.49206349206349204,
+      "recall": 0.62,
+      "f1-score": 0.5486725663716814,
+      "support": 50.0
+    },
+    "rice sheath blight": {
+      "precision": 0.5056179775280899,
+      "recall": 0.9,
+      "f1-score": 0.6474820143884892,
+      "support": 50.0
+    },
+    "soybean leaf": {
+      "precision": 0.2441860465116279,
+      "recall": 0.4375,
+      "f1-score": 0.31343283582089554,
+      "support": 48.0
+    },
+    "squash leaf": {
+      "precision": 0.48717948717948717,
+      "recall": 0.4634146341463415,
+      "f1-score": 0.475,
+      "support": 82.0
+    },
+    "squash powdery mildew": {
+      "precision": 0.4186046511627907,
+      "recall": 0.32142857142857145,
+      "f1-score": 0.36363636363636365,
+      "support": 56.0
+    },
+    "strawberry anthracnose": {
+      "precision": 0.65,
+      "recall": 0.6842105263157895,
+      "f1-score": 0.6666666666666666,
+      "support": 19.0
+    },
+    "strawberry leaf": {
+      "precision": 0.5681818181818182,
+      "recall": 0.6410256410256411,
+      "f1-score": 0.6024096385542169,
+      "support": 39.0
+    },
+    "strawberry leaf scorch": {
+      "precision": 0.4444444444444444,
+      "recall": 0.26666666666666666,
+      "f1-score": 0.3333333333333333,
+      "support": 15.0
+    },
+    "tobacco leaf": {
+      "precision": 1.0,
+      "recall": 0.07142857142857142,
+      "f1-score": 0.13333333333333333,
+      "support": 14.0
+    },
+    "tobacco mosaic virus": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "f1-score": 0.3333333333333333,
+      "support": 18.0
+    },
+    "tomato bacterial leaf spot": {
+      "precision": 0.08,
+      "recall": 0.07142857142857142,
+      "f1-score": 0.07547169811320754,
+      "support": 56.0
+    },
+    "tomato early blight": {
+      "precision": 0.2111111111111111,
+      "recall": 0.2753623188405797,
+      "f1-score": 0.2389937106918239,
+      "support": 69.0
+    },
+    "tomato late blight": {
+      "precision": 0.3333333333333333,
+      "recall": 0.3559322033898305,
+      "f1-score": 0.3442622950819672,
+      "support": 59.0
+    },
+    "tomato leaf": {
+      "precision": 0.4166666666666667,
+      "recall": 0.4444444444444444,
+      "f1-score": 0.43010752688172044,
+      "support": 45.0
+    },
+    "tomato leaf mold": {
+      "precision": 0.3188405797101449,
+      "recall": 0.46808510638297873,
+      "f1-score": 0.3793103448275862,
+      "support": 47.0
+    },
+    "tomato mosaic virus": {
+      "precision": 0.16393442622950818,
+      "recall": 0.2702702702702703,
+      "f1-score": 0.20408163265306123,
+      "support": 37.0
+    },
+    "tomato septoria leaf spot": {
+      "precision": 0.17857142857142858,
+      "recall": 0.11363636363636363,
+      "f1-score": 0.1388888888888889,
+      "support": 44.0
+    },
+    "tomato yellow leaf curl virus": {
+      "precision": 0.27450980392156865,
+      "recall": 0.4117647058823529,
+      "f1-score": 0.32941176470588235,
+      "support": 34.0
+    },
+    "zucchini yellow mosaic virus": {
+      "precision": 0.3,
+      "recall": 0.25,
+      "f1-score": 0.2727272727272727,
+      "support": 36.0
+    }
+  },
+  "tune_results": [
+    {
+      "cfg": {
+        "lr": 0.0004,
+        "wd": 0.0001,
+        "dropout": 0.45,
+        "desc": "mbv3s lr=4e-04 wd=1e-04 d=0.45"
+      },
+      "best_va": 0.11125,
+      "hist": [
+        {
+          "ep": 1,
+          "tr_l": 4.578790514628093,
+          "tr_a": 0.026,
+          "va_l": 4.292385244369507,
+          "va_a": 0.09375
+        },
+        {
+          "ep": 2,
+          "tr_l": 4.331985038757324,
+          "tr_a": 0.062,
+          "va_l": 4.164215307235718,
+          "va_a": 0.11125
+        }
+      ]
+    },
+    {
+      "cfg": {
+        "lr": 0.0002,
+        "wd": 0.0002,
+        "dropout": 0.55,
+        "desc": "mbv3s lr=2e-04 wd=2e-04 d=0.55"
+      },
+      "best_va": 0.09,
+      "hist": [
+        {
+          "ep": 1,
+          "tr_l": 4.6544446194966635,
+          "tr_a": 0.012,
+          "va_l": 4.353168888092041,
+          "va_a": 0.06
+        },
+        {
+          "ep": 2,
+          "tr_l": 4.4868012631734215,
+          "tr_a": 0.04,
+          "va_l": 4.24224196434021,
+          "va_a": 0.09
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 4.226064365163257,
+      "train_acc": 0.08095055576849368,
+      "val_loss": 3.641480998154525,
+      "val_acc": 0.1912087912087912,
+      "lr": 0.0004,
+      "time_s": 260.74269556999207
+    },
+    {
+      "epoch": 2,
+      "train_loss": 3.7626623424911645,
+      "train_acc": 0.16098121885779992,
+      "val_loss": 3.381532365673191,
+      "val_acc": 0.24010989010989012,
+      "lr": 0.00030025,
+      "time_s": 280.22095227241516
+    },
+    {
+      "epoch": 3,
+      "train_loss": 3.6192764497342442,
+      "train_acc": 0.18635492525871983,
+      "val_loss": 3.3012392159346695,
+      "val_acc": 0.26703296703296703,
+      "lr": 0.00010075000000000004,
+      "time_s": 261.5617914199829
+    },
+    {
+      "epoch": 4,
+      "train_loss": 3.535430833926919,
+      "train_acc": 0.21142200076657724,
+      "val_loss": 3.2081879657703443,
+      "val_acc": 0.2906593406593407,
+      "lr": 1e-05,
+      "time_s": 411.8878164291382
+    },
+    {
+      "epoch": 5,
+      "train_loss": 3.455101646852475,
+      "train_acc": 0.22644691452663857,
+      "val_loss": 3.1334139603834887,
+      "val_acc": 0.3038461538461538,
+      "lr": 8.608757210636101e-06,
+      "time_s": 413.5024251937866
+    },
+    {
+      "epoch": 6,
+      "train_loss": 3.3828059865762192,
+      "train_acc": 0.24377155998466846,
+      "val_loss": 3.091437954955049,
+      "val_acc": 0.31868131868131866,
+      "lr": 5.2500000000000006e-06,
+      "time_s": 408.54427099227905
+    },
+    {
+      "epoch": 7,
+      "train_loss": 3.354948450569542,
+      "train_acc": 0.2526638558834803,
+      "val_loss": 3.0763861561869525,
+      "val_acc": 0.31978021978021975,
+      "lr": 1.8912427893638996e-06,
+      "time_s": 403.4337453842163
+    },
+    {
+      "epoch": 8,
+      "train_loss": 3.325159923780828,
+      "train_acc": 0.2597163664239172,
+      "val_loss": 3.0136034934075324,
+      "val_acc": 0.33901098901098903,
+      "lr": 1e-05,
+      "time_s": 398.7524826526642
+    },
+    {
+      "epoch": 9,
+      "train_loss": 3.2750652508792313,
+      "train_acc": 0.26761211192027595,
+      "val_loss": 2.957919587669792,
+      "val_acc": 0.3489010989010989,
+      "lr": 9.638427779428613e-06,
+      "time_s": 406.39627170562744
+    },
+    {
+      "epoch": 10,
+      "train_loss": 3.2079281463710774,
+      "train_acc": 0.28056726715216557,
+      "val_loss": 2.917939964755551,
+      "val_acc": 0.35714285714285715,
+      "lr": 8.608757210636101e-06,
+      "time_s": 418.7966935634613
+    },
+    {
+      "epoch": 11,
+      "train_loss": 3.168062306784633,
+      "train_acc": 0.2930624760444615,
+      "val_loss": 2.8708013513586024,
+      "val_acc": 0.3758241758241758,
+      "lr": 7.067746303734178e-06,
+      "time_s": 408.1794979572296
+    },
+    {
+      "epoch": 12,
+      "train_loss": 3.1368219722866235,
+      "train_acc": 0.30180145649674206,
+      "val_loss": 2.850425315165258,
+      "val_acc": 0.37967032967032965,
+      "lr": 5.2500000000000006e-06,
+      "time_s": 407.56435203552246
+    },
+    {
+      "epoch": 13,
+      "train_loss": 3.1022272564707793,
+      "train_acc": 0.31161364507474126,
+      "val_loss": 2.830182559149606,
+      "val_acc": 0.3868131868131868,
+      "lr": 3.432253696265824e-06,
+      "time_s": 413.50396633148193
+    },
+    {
+      "epoch": 14,
+      "train_loss": 3.089868716893867,
+      "train_acc": 0.30755078574166345,
+      "val_loss": 2.825062501299512,
+      "val_acc": 0.38846153846153847,
+      "lr": 1.8912427893638996e-06,
+      "time_s": 422.8053457736969
+    },
+    {
+      "epoch": 15,
+      "train_loss": 3.0809615046368473,
+      "train_acc": 0.3129168263702568,
+      "val_loss": 2.822434719840249,
+      "val_acc": 0.38846153846153847,
+      "lr": 8.615722205713881e-07,
+      "time_s": 445.20825839042664
+    },
+    {
+      "epoch": 16,
+      "train_loss": 3.0868175163539537,
+      "train_acc": 0.31192027596780375,
+      "val_loss": 2.7970881849854856,
+      "val_acc": 0.3934065934065934,
+      "lr": 1e-05,
+      "time_s": 478.4394562244415
+    },
+    {
+      "epoch": 17,
+      "train_loss": 3.049890376983268,
+      "train_acc": 0.32364890762744347,
+      "val_loss": 2.7639378343309673,
+      "val_acc": 0.40054945054945057,
+      "lr": 9.908730081915346e-06,
+      "time_s": 448.42916202545166
+    },
+    {
+      "epoch": 18,
+      "train_loss": 3.0119745493392096,
+      "train_acc": 0.3307014181678804,
+      "val_loss": 2.7331840405097374,
+      "val_acc": 0.4054945054945055,
+      "lr": 9.638427779428613e-06,
+      "time_s": 439.9968903064728
+    },
+    {
+      "epoch": 19,
+      "train_loss": 2.9957728477125656,
+      "train_acc": 0.336220774243005,
+      "val_loss": 2.707311883863512,
+      "val_acc": 0.4098901098901099,
+      "lr": 9.199480658437092e-06,
+      "time_s": 437.0832076072693
+    },
+    {
+      "epoch": 20,
+      "train_loss": 2.956354665573459,
+      "train_acc": 0.34266002299731696,
+      "val_loss": 2.6754192844851987,
+      "val_acc": 0.4291208791208791,
+      "lr": 8.608757210636101e-06,
+      "time_s": 424.4231939315796
+    },
+    {
+      "epoch": 21,
+      "train_loss": 2.9362359368604642,
+      "train_acc": 0.35101571483326943,
+      "val_loss": 2.6731631687709263,
+      "val_acc": 0.4236263736263736,
+      "lr": 7.888958606843111e-06,
+      "time_s": 441.00703620910645
+    },
+    {
+      "epoch": 22,
+      "train_loss": 2.9127545033436983,
+      "train_acc": 0.3572249904177846,
+      "val_loss": 2.653851024921124,
+      "val_acc": 0.42967032967032964,
+      "lr": 7.067746303734178e-06,
+      "time_s": 416.20429158210754
+    }
+  ]
+}

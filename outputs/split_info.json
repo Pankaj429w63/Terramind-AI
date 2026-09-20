@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "train_count": 13045,
+  "val_count": 1820,
+  "test_count": 3677,
+  "source": "PlantWild supplied mode labels (1=train, 2=val, 0=test)"
+}

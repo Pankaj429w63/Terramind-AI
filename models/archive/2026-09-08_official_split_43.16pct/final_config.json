@@ -1,0 +1,23 @@
+{
+  "backbone": "MobileNetV3-Small+pretrained",
+  "img_size": 160,
+  "batch_size": 16,
+  "accum_steps": 4,
+  "eff_batch": 64,
+  "lr": 0.0004,
+  "weight_decay": 0.0001,
+  "dropout": 0.45,
+  "grad_clip": 1.0,
+  "label_smoothing": 0.1,
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingWarmRestarts(T_0=3, T_mult=2, eta_min=1e-6)",
+  "sampler": "shuffle=True (no replacement oversampling)",
+  "gradual_unfreeze_epoch": 4,
+  "backbone_lr_after_unfreeze": 1e-05,
+  "classifier_lr_after_unfreeze": 0.0001,
+  "early_stop_min_delta": 0.005,
+  "augmentation": "RandomCrop+HorizontalFlip+Rotation+ColorJitter+Affine+RandomErasing",
+  "epochs": 22,
+  "patience": 5,
+  "seed": 42
+}

@@ -1,0 +1,1497 @@
+{
+  "datasets": [
+    {
+      "dataset_path": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild",
+      "found_images": 18542,
+      "classes": {
+        "apple black rot": 173,
+        "apple leaf": 444,
+        "apple mosaic virus": 181,
+        "apple rust": 308,
+        "apple scab": 292,
+        "banana leaf": 243,
+        "banana panama disease": 216,
+        "basil downy mildew": 86,
+        "basil leaf": 589,
+        "bean halo blight": 115,
+        "bean leaf": 258,
+        "bean mosaic virus": 125,
+        "bean rust": 165,
+        "bell pepper leaf": 240,
+        "bell pepper leaf spot": 117,
+        "blueberry leaf": 281,
+        "blueberry rust": 117,
+        "broccoli downy mildew": 65,
+        "broccoli leaf": 269,
+        "cabbage alternaria leaf spot": 128,
+        "cabbage leaf": 464,
+        "carrot cavity spot": 74,
+        "cauliflower alternaria leaf spot": 98,
+        "cauliflower leaf": 195,
+        "celery anthracnose": 44,
+        "celery early blight": 55,
+        "celery leaf": 212,
+        "cherry leaf": 286,
+        "cherry leaf spot": 230,
+        "cherry powdery mildew": 114,
+        "citrus canker": 535,
+        "citrus greening disease": 237,
+        "coffee leaf": 138,
+        "coffee leaf rust": 190,
+        "corn gray leaf spot": 216,
+        "corn leaf": 156,
+        "corn northern leaf blight": 224,
+        "corn rust": 237,
+        "corn smut": 293,
+        "cucumber angular leaf spot": 251,
+        "cucumber bacterial wilt": 143,
+        "cucumber leaf": 348,
+        "cucumber powdery mildew": 236,
+        "eggplant cercospora leaf spot": 88,
+        "eggplant leaf": 240,
+        "garlic leaf": 228,
+        "garlic leaf blight": 147,
+        "garlic rust": 160,
+        "ginger leaf": 177,
+        "ginger leaf spot": 87,
+        "ginger sheath blight": 87,
+        "grape black rot": 229,
+        "grape downy mildew": 395,
+        "grape leaf": 201,
+        "grape leaf spot": 106,
+        "grapevine leafroll disease": 138,
+        "lettuce downy mildew": 118,
+        "lettuce leaf": 244,
+        "lettuce mosaic virus": 100,
+        "maple leaf": 316,
+        "maple tar spot": 139,
+        "peach leaf": 157,
+        "peach leaf curl": 235,
+        "plum leaf": 325,
+        "plum pocket disease": 76,
+        "potato early blight": 227,
+        "potato late blight": 240,
+        "potato leaf": 249,
+        "raspberry leaf": 180,
+        "rice blast": 148,
+        "rice leaf": 252,
+        "rice sheath blight": 250,
+        "soybean leaf": 242,
+        "squash leaf": 410,
+        "squash powdery mildew": 281,
+        "strawberry anthracnose": 98,
+        "strawberry leaf": 199,
+        "strawberry leaf scorch": 76,
+        "tobacco leaf": 71,
+        "tobacco mosaic virus": 91,
+        "tomato bacterial leaf spot": 280,
+        "tomato early blight": 346,
+        "tomato late blight": 295,
+        "tomato leaf": 226,
+        "tomato leaf mold": 239,
+        "tomato mosaic virus": 189,
+        "tomato septoria leaf spot": 220,
+        "tomato yellow leaf curl virus": 171,
+        "zucchini yellow mosaic virus": 181
+      },
+      "missing_paths": [],
+      "corrupt_files": [],
+      "sample_opened": [
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0082.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\47.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0146.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\38.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0155.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\1.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0056.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0133.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\86.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0003.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0051.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0070.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\147.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0101.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0135.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0065.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0045.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\111.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\10.jpg",
+        "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\9.jpg"
+      ],
+      "duplicates": {
+        "9e3be9ade3c2402f667573cfc17ea610af70be1b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\10.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\96.jpg"
+        ],
+        "4f0fd26aa06ef5674164663f6e45adc880bb2632": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0145.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\google_0163.jpg"
+        ],
+        "2723bae9d8dfd1c9cb6bcf8ec56e65a1951eaefa": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\google_0018.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\google_0035.jpg"
+        ],
+        "b3634a76444b69d5e73ee453043ad82dbf0f670a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\34.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\102.jpg"
+        ],
+        "79be5dea50f691290f20758c9505c27e16ff70ba": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\80.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\42.jpg"
+        ],
+        "e4b01b7c797743c68a558ead6214ff5ae7f10356": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple black rot\\2.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\12.jpg"
+        ],
+        "80b49de1ae91501eb38dc0800c9cd68cd3d7fdf5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\87.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\strawberry leaf\\36.jpg"
+        ],
+        "309e920d0e42a559f6c0d81a5967398dd5a6e564": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\google_0207.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\google_0158.jpg"
+        ],
+        "5d9563fd01ae67641e7715b76d8cad79244c4c95": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\216.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\22.jpg"
+        ],
+        "2e96a9425174ca77bfd8f37bb5d3eaf19c0f6979": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\google_0110.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\google_0369.jpg"
+        ],
+        "7b286b8511734d861b0e04a4b1595eebcb69821d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\34.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple leaf\\28.jpg"
+        ],
+        "d54eacfe746f19525d72da7aa8cb956310efa15e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\18.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\76.jpg"
+        ],
+        "0281ac1733fa410dca7d14f9f31ed7f96ccc6c1b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\google_0069.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\google_0082.jpg"
+        ],
+        "1c8abcb13692f9ae32bce80d7960784bb210a16b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\google_0052.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\google_0125.jpg"
+        ],
+        "88af81997abc7b8a3ea7d23cdfd73d39b2f506aa": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\93.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\16.jpg"
+        ],
+        "8fae8635283adca96932fd8efcd7fc56977f45bd": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\google_0161.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\google_0111.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\google_0034.jpg"
+        ],
+        "50a32b35e28c6106a3b58bedd4a712ffb991c448": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple mosaic virus\\google_0100.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0315.jpg"
+        ],
+        "3cd067a1c21d3e1197a7e419ff972cf1f7ad5080": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\4.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\60.jpg"
+        ],
+        "7a5bab81a78a62ce3f1563e6cf4142faa0bbffc2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\20.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\43.jpg"
+        ],
+        "c02c37752ab1bbbe9f88d4726e76b4a5e8c7f737": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\104.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\8.jpg"
+        ],
+        "93e8978e7bb56316b057653a0fa663c956506acb": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\98.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\286.jpg"
+        ],
+        "5e3cb5016fd97e90227c718341ddfa46b9fc480e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\162.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\76.jpg"
+        ],
+        "d9a1fb9ec02c6cb55c9802c54efd4cce91c62b6f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\7.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\77.jpg"
+        ],
+        "86477cf6de6bee7276caaa4a3cd5be6ead1969ca": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\78.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\65.jpg"
+        ],
+        "5768309c9671385ccc71bcb00674ae5e1d24e077": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\64.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\62.jpg"
+        ],
+        "38fe1364ac7c2a45d2e344f9fab1f8cd5dd6e140": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple rust\\77.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\apple scab\\37.jpg"
+        ],
+        "9578e83129737ce6c180c6ed9d9ce36f88097113": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\addition (15).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\11.jpg"
+        ],
+        "1076a2ccc7b40895abf55067748e2f583918bb71": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\google_0003.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\add_2 (9).jpg"
+        ],
+        "169560af64d414e0cbe28e2a6ec519ee28d923d4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\116.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\addition (27).jpg"
+        ],
+        "0805aff328ae43c4e56cb86a5c84c179f6eec7b2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\105.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\banana panama disease\\addition (17).jpg"
+        ],
+        "dc9055a5c270c2d7709beb479acd61746e16bbd0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil downy mildew\\google_0064.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0068.jpg"
+        ],
+        "2cf0aafcfd38eb6e32addd4798194cd196e52b7c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil downy mildew\\google_0020.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0131.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0209.jpg"
+        ],
+        "a3872ea31dba3ac4701a3d3df61799e80a2ff809": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\272.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\85.jpg"
+        ],
+        "17f7b43fa26227bf3360f713d81a29f1af3f3fa3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\203.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\121.jpg"
+        ],
+        "5fcd34ca325afa99239e9359a47f0d427a8a0720": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\285.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\222.jpg"
+        ],
+        "cbc677945338333304ead3701b8017c9125216be": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\335.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\198.jpg"
+        ],
+        "1e34fbb3e8e23081535ed48bdac4b5136691669d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\google_0008.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce leaf\\google_0194.jpg"
+        ],
+        "c989970ee6c9b8e3227cf0429738e2914f3e9127": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\213.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\90.jpg"
+        ],
+        "1c4c4e078e4aef7f38cae2c32e2147d87a139633": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\basil leaf\\google_0005.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce leaf\\google_0144.jpg"
+        ],
+        "758745433a0c6c64de9193cd48c00b91b8b15b5c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\google_0041.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0001.jpg"
+        ],
+        "2c73072d13df7b22624d2e2c5b0772764b7d1e4d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\24.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\26.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\56.jpg"
+        ],
+        "9d4ee9892b1e1a29631b54f19c215c284537bb44": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\google_0032.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0060.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0071.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0055.jpg"
+        ],
+        "58dfb84046f37d7aad8fd2db13278b359c04cc9a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\google_0191.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0002.jpg"
+        ],
+        "b279a8a8d5ed82e1fa8042cfc9054361ab83e5be": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\google_0027.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0213.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0106.jpg"
+        ],
+        "fb777db622fc6346be1888709af7c9fea0b2b3b5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean halo blight\\google_0174.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber angular leaf spot\\google_0179.jpg"
+        ],
+        "cb785785948d38b289120daac4f01b217dd586f7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\1.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\6.jpg"
+        ],
+        "e8bad2cb228ddb8a48dc0783d743bc50698733ee": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\google_0054.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0054.jpg"
+        ],
+        "91346acd01f898594b010db57dd65171a5551b34": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\56.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\339.jpg"
+        ],
+        "ba9b5e2942b44e542d924b51d8370e6b3a89847f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\google_0138.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\google_0031.jpg"
+        ],
+        "975afd494a5e963730aec2b4a6b67eb13044af09": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\google_0183.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\google_0526.jpg"
+        ],
+        "d4b29180714f6a8858c2f56cdc987536b83ab70b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\google_0005.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\google_0602.jpg"
+        ],
+        "7b748a8fb384b8bfb589cd9e7255b4f2133b05cb": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\46.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\14.jpg"
+        ],
+        "613a02efef3cc5b265a6020130eb9b7ec25a2bc1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\6.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\3.jpg"
+        ],
+        "c522c3dd6392aea022b29c96f9a63140a2fa17f7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\26.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\6.jpg"
+        ],
+        "41c9f837c47e3bbca5af075c31a1df531bec57b5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean leaf\\google_0054 - Copy.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0054 - Copy.jpg"
+        ],
+        "79e5eb5088f53962c023cb6f70b8e25962d17802": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean mosaic virus\\30.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\184.jpg"
+        ],
+        "b9014433b40a420ff9af39bb037c7d892e74b6ce": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0051.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\google_0135.jpg"
+        ],
+        "38f1f985dfb5773885742993ae9d62314a72671d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\10.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\66.jpg"
+        ],
+        "091387724976093f470e30618e7f21c3e4d4f1f8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0130.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bean rust\\google_0030.jpg"
+        ],
+        "86819a93fd7c9ba186f4b0daaa7a143fe847e207": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\google_0066.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber leaf\\google_0018.jpg"
+        ],
+        "f50aec311703e0f49a50339452774805801cf14b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\63.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\12.jpg"
+        ],
+        "76054a144e8d50d72c53d4015288984a986023a9": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf\\97.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\47.jpg"
+        ],
+        "09b8b4e800dc32d86424e036540ad88a07367d1e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0016.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0131.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0169.jpg"
+        ],
+        "cf3cf04132bf619193e89ce2fcdd1795b186f982": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0000.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0226.jpg"
+        ],
+        "2439b9784cd66d14547afd4c82a8069d990f223a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0066.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0044.jpg"
+        ],
+        "65875af427ab5d3d5c0e0741aa2ab761fccce96b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0160.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0247.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0159.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0059.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0004.jpg"
+        ],
+        "93253caab16cbb0729c43f3e4be5a6e65c6208f5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\bell pepper leaf spot\\google_0020.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0190.jpg"
+        ],
+        "9446a1a20d1947705a0011e3e12c37d8591e64bc": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\55.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn rust\\81.jpg"
+        ],
+        "bdf3053b9e903c4b25241051923b1bb0153b2189": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\41.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf rust\\5.jpg"
+        ],
+        "37fdfcaa8980d311fbe9b3a653d134d8fcd1b5b2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\26.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf rust\\39.jpg"
+        ],
+        "fbb0a69887b82c196cbc00e726e420380e079184": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\blueberry rust\\google_0185.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0177.jpg"
+        ],
+        "df9c74b60093caf331024da5025778c0f8e3bf50": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli downy mildew\\google_0056.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0002.jpg"
+        ],
+        "b5ea8de504ed77c0240acb52f54df08d28b3a84c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli downy mildew\\google_0003.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0102.jpg"
+        ],
+        "5d1baa3afe5736f37bf9d31743fe4e32c35dcbdf": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli downy mildew\\google_0251.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0049.jpg"
+        ],
+        "8060f23eb87b1db958c316d939d96856fa2673af": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli downy mildew\\25.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\7.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\add (2).jpg"
+        ],
+        "1e864b24779f42e26640627624c2f785c0b748b3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli leaf\\google_0051.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\google_0037.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower leaf\\google_0029.jpg"
+        ],
+        "05622b4929adb5861fb2230f68ee2e99a21d3619": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\broccoli leaf\\google_0482.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower leaf\\google_0251.jpg"
+        ],
+        "7493f412b64ac9c7e5acb7e1d52385d022ae6ff1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0065.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0103.jpg"
+        ],
+        "1dbf4edced6a3b90da06899c65ff6258654f5136": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0057.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0261.jpg"
+        ],
+        "53e7d01e100441518a53496878efa9ce987eaf0e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0075.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0061.jpg"
+        ],
+        "e4a79fd737abd6a59f664e3fefea89a68f8114ff": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0148.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0230.jpg"
+        ],
+        "a11ee7d307a7aea106eeea680ae64984dd2c9517": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0226.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0100.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0041.jpg"
+        ],
+        "d11a3374cfdba06429c30e67ca2f42b4496469fd": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0072.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0051.jpg"
+        ],
+        "c88474a2778fd3e6625fe756e55034bb728267bc": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0016.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0050.jpg"
+        ],
+        "a75a0f4ecf89825152c4bf1d0cc379df9fd58bc4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0128.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0222.jpg"
+        ],
+        "14d4011f9642b3a894a7198721e8e90e0c6155b7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0002.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0011.jpg"
+        ],
+        "b4b7de2f02cf7db1fe7c2d1575ee4dfb2d9f96c4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0000.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0001.jpg"
+        ],
+        "c1b68b5cfebbdbd21f59f28f90ef667f232dbf76": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0206.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0234.jpg"
+        ],
+        "3198c57852bfb2f9bea0883464dc90a25781d4e0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0047.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0046.jpg"
+        ],
+        "ce3f0c1de608dcb84338cb8725722bdafa9141d3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0058.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0056.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0030.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0036.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0087.jpg"
+        ],
+        "65651d98399471bad9528e6adc11357b58c9cba2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0026.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0021.jpg"
+        ],
+        "92552f413d9f61d703afa5fda2110a42e7a2016c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0032.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0033.jpg"
+        ],
+        "3139b2ca9859e89a606c83ab3d189538ed02d0eb": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0001.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0000.jpg"
+        ],
+        "900ba6dfc862a2c5ba26eaa9c14d362902c8f832": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0013.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0028.jpg"
+        ],
+        "e5ecf44d3ea990a190eef8a5959569d6c5c40536": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0006.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\google_0015.jpg"
+        ],
+        "699ef4b6f122af8b6d1da3f3462e0eb4edcc996b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\34.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\4.jpg"
+        ],
+        "8b6c672887890065f624067d2f0397ba53dc514a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0010.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0186.jpg"
+        ],
+        "feed9960ea81b83cb559200b00b745f7462663e1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage alternaria leaf spot\\google_0020.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\google_0047.jpg"
+        ],
+        "7142a4e1035cd89fdc25b7aa6f60ae6113a85996": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\340.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\341.jpg"
+        ],
+        "9480d4c41421cf5eddcca9301d6bc384fe2ba19c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\373.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\369.jpg"
+        ],
+        "0bbf79d408288273cb502fad95aa2a4c5faf2b71": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\368.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\372.jpg"
+        ],
+        "da118dd211c55b67143ea3d13fa3353023c6753e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\142.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\143.jpg"
+        ],
+        "4f4a11e9dc836095c7bc100c3d7e0e8a30bcf7a4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\256.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cabbage leaf\\255.jpg"
+        ],
+        "b40207578b19051e8236313e1260563bf0645db5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\9.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\170.jpg"
+        ],
+        "5e9c6c9d8e3bb0219c5bfb8b2a6215fa8a2c03ff": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower alternaria leaf spot\\6.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cauliflower leaf\\98.jpg"
+        ],
+        "1c0bd2c3e6a53ae921e7baae7b5a20251c0e0d53": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\16.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery leaf\\90.jpg"
+        ],
+        "ecd7986c71b37504e466dda7b4f28a9a0249c5a4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\google_0023.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0059.jpg"
+        ],
+        "e5a8745892987cbcf0d7bfe57bcb5a2d631644d2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\google_0017.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0070.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0058.jpg"
+        ],
+        "2cd3951ffc7a409ad0579ca008896bafce3b4cf4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\27.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery leaf\\121.jpg"
+        ],
+        "2baf59f5cec5e03f17aa73b04c5d66a92eccef35": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\google_0015.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0003.jpg"
+        ],
+        "c8441bd4c71eba65b5c9de17727f35952e3195d5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\celery early blight\\google_0109.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0091.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0039.jpg"
+        ],
+        "168da24ae2c0030b2c4a4157a257953730d7cc0f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\170.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\167.jpg"
+        ],
+        "e2708954b1a1ec1e11da240e602fdde7b6ff1239": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\171.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf\\168.jpg"
+        ],
+        "150365bb5440fb979f2daa1ecaf97a913fc0dabe": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0465.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0122.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\google_0070.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0003.jpg"
+        ],
+        "6120217907c9633b5b27ea91e4a705544c7b6d92": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0343.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0069.jpg"
+        ],
+        "1faa5a286943ffbe3eb0fb47fd239c1a638552a6": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0238.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0178.jpg"
+        ],
+        "afbc084c50e5fa512ecb682e8e6925b881e7429e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0158.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\plum leaf\\google_0039.jpg"
+        ],
+        "f312b3fefca23655d4dad24c6002efdb097f5749": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry leaf spot\\google_0289.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0071.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0013.jpg"
+        ],
+        "11592391ebb85b135c5598b7074811f87b4e4dac": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0003.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0038.jpg"
+        ],
+        "f49bffcf13cf1621e2a91ae1f57bb5449b48ee62": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0036.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0189.jpg"
+        ],
+        "23de9a6a94d1ee3750383af3b5abf3312571e717": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0084.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0233.jpg"
+        ],
+        "94b19b42f0e958d8d8fac6413d02c2289bd62f26": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0019.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0098.jpg"
+        ],
+        "4bf3deff793bf9765a791876679496826730a8ca": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0058.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0096.jpg"
+        ],
+        "2fc866a653e4abf6e2778039301ef09f43e2e25a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0032.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\google_0067.jpg"
+        ],
+        "7a45faa0970b3f9e0fae93b2b85334994a0c2519": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0029.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\google_0043.jpg"
+        ],
+        "3bcd056f2a07238dcb3649e4eabfcfe39ecc2241": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\15.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\peach leaf curl\\28.jpg"
+        ],
+        "0af4996f25a145862f47527112a1f8def726e48a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\google_0018.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0017.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0106.jpg"
+        ],
+        "7cb8c6349aebe51378ace127cf886b440191879d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cherry powdery mildew\\33.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\190.jpg"
+        ],
+        "151bbbccfab193428b3055ee1a4a8277b085e4e3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\331.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\333.jpg"
+        ],
+        "5920415c87bd813a5590ee16784d66313cb7d0ed": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\305.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\307.jpg"
+        ],
+        "5febff186fb1667018e68c91a63b16c3ce906a5d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\277.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\280.jpg"
+        ],
+        "87e80e2484e336383af3461a52df163c885d67fc": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\279.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\276.jpg"
+        ],
+        "abd4dfdfafd95ad39aacebc723a33ab5e3eb8882": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\247.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\249.jpg"
+        ],
+        "7d6307a5c5483c553e42ec02540ec10a3807aac5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\306.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\308.jpg"
+        ],
+        "a9f3fdc98c81735a93ef727f4e71d2e2ff490332": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\355.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\citrus canker\\361.jpg"
+        ],
+        "9687c7e6f2e8408e0d4161bf36e971b04eccdc05": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf\\329.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf rust\\16.jpg"
+        ],
+        "bbb0eb0b01a623ea37e4b3c1c1e7e3838b1021c1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf rust\\54.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\coffee leaf rust\\51.jpg"
+        ],
+        "a101128e3f9abe42b3188965d932ce66e1266190": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\38.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\37.jpg"
+        ],
+        "d13a9b83fef9afa3e73936eb69f15ac143e93a77": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0133.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0132.jpg"
+        ],
+        "ea873fc672396fabfdf485246b3dd87c97e72711": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0036.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0023.jpg"
+        ],
+        "ecac696e7f61257187995296d9b2ca2459b6807f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0194.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0047.jpg"
+        ],
+        "36471a9211547d1ae42b863b74ab5c5ee3e0a2a0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\12.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\11.jpg"
+        ],
+        "c4efbd250c77e2e0a72cb82d064b3eeb33dac1a5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\20.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\13.jpg"
+        ],
+        "9a64ad7c94b4907a6002c5b6d169cb7b9478a77f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0203.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn rust\\google_0097.jpg"
+        ],
+        "14b7c38ceda975c4b57bc839edf8b625a00bd65b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\30.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\add (7).jpg"
+        ],
+        "81fc3521d31a9bd1435cd753467e4c0e2d936640": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0176.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0072.jpg"
+        ],
+        "6cdc1d1a62d13f8f6b01e73629189331cf7dcd05": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0026.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0068.jpg"
+        ],
+        "c874e1d50465c1cbc2106a5486be318cea9e6b79": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0028.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0031.jpg"
+        ],
+        "a0c77c0f07f678a0b93b5ea13dc54cc8e01e3f2b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0373.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\google_0137.jpg"
+        ],
+        "a49eb412c0a1240bdf13857a5e168800a2c3912b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0079.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0040.jpg"
+        ],
+        "65a9d35ae03c736f0a02ebbf74eae8ab35481f3d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0106.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0024.jpg"
+        ],
+        "c540669d00b126f94d68b31059bd294b6883c9e6": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0124.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0129.jpg"
+        ],
+        "f15f3b5a598ea16092fb8e5c54534d38a4a377ac": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn gray leaf spot\\google_0127.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\google_0003.jpg"
+        ],
+        "6e07294983254fada5e64602b6195314624eb5d0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\5.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\add (6).jpg"
+        ],
+        "b5c9d3668e64dd473e7013025c6ac42f631d2b8a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\12.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\add (8).jpg"
+        ],
+        "68603380464280cbf9f020d1ea8cf164e17c335d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\59.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn rust\\47.jpg"
+        ],
+        "b214999fb7773cabcbd6b578058a43e017434899": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\104.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\add (30).jpg"
+        ],
+        "697daa490857ae60572ebeb916af2eef99f4c33a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\add (17).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn northern leaf blight\\50.jpg"
+        ],
+        "0f2ef955cdd5247b9aeb218d491b26033f74520d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn smut\\174.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\corn smut\\170.jpg"
+        ],
+        "a89d9a9d1cb2c3815bbc9058acaff33b0f304036": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber angular leaf spot\\google_0034.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0097.jpg"
+        ],
+        "19e2dc6409679ce288af6fa525cc9c7eb00892c0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber bacterial wilt\\google_0126.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber leaf\\google_0361.jpg"
+        ],
+        "b196539cc065739eefa08171d127814b2f2d3c69": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber bacterial wilt\\google_0044.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash leaf\\zgoogle_0242.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\google_0092.jpg"
+        ],
+        "38b891fe8bd4d4419d748da431eaa66380c3212d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber bacterial wilt\\google_0020.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber leaf\\google_0146.jpg"
+        ],
+        "86642e0a3c16bccf430a8abcabda330f52c67510": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber leaf\\google_0177.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0290.jpg"
+        ],
+        "44e5ee94bf956177ad72880c4a3cd4db6457a492": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber leaf\\google_0058.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0170.jpg"
+        ],
+        "91c40d22187f0c0f9b69d3cb10c781b3ef0c600a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0056.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0100.jpg"
+        ],
+        "90f9ccba80145fa50c7db18088c3b7de008040fa": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0036.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0191.jpg"
+        ],
+        "67248bb1ffbd20ae6cd4e0b9a98459be7977ab9b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0002.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0007.jpg"
+        ],
+        "693f649890d28436fdc01b30642aab7de3499576": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0164.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0094.jpg"
+        ],
+        "29c1117d8488801462c4620430d7d086d0b11c03": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0102.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0228.jpg"
+        ],
+        "f63699655061f769d3ce1916c33514cbc4e26565": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0088.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0312.jpg"
+        ],
+        "45ef68f19755cc1984b6c3242b98ba4a7d8b6ea1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0145.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0123.jpg"
+        ],
+        "ce4704c7138e01dd89e35bc746005e9347cdcea0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\172.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\138.jpg"
+        ],
+        "54be88f10505badbbbee1ad8b26d03ac40a6245e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0022.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0329.jpg"
+        ],
+        "e67d87f0d6d63f16039e0ef9caa9d687b055d27b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0026.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0192.jpg"
+        ],
+        "0d23beace83cf562e613bea0ddbb06a0675525e7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0181.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0176.jpg"
+        ],
+        "e7252c86dfcbe8896b75c6aae32c918d04850277": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0001.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0286.jpg"
+        ],
+        "c14cd76ba28b5157c82abfcea2bd7e0c0d70db6e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\169.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\152.jpg"
+        ],
+        "d1c08cb3ccba41ed5ef84299dbcec66d3d96f9c3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0063.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0074.jpg"
+        ],
+        "19b244483770465a1eb14e21fddc85105e29fb40": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\cucumber powdery mildew\\google_0046.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0009.jpg"
+        ],
+        "0356775eda736c61343f30504ebe38d46d224e2e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0045.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0029.jpg"
+        ],
+        "b70ed76714b2729d16f11766461ccd83c52ec1a8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\google_0053.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0126.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0007.jpg"
+        ],
+        "05d5ee2ba87edf02d95b7440121c53be582fbf64": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\eggplant cercospora leaf spot\\96.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\1.jpg"
+        ],
+        "187bbe560e330d9fb5c1346f3f0b055132e5267e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf\\google_0043.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0004.jpg"
+        ],
+        "efbd766daa85ffcaf6c738ff5c528ea889abb53c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf\\google_0185.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0254.jpg"
+        ],
+        "a9d4f1529c238e99f22db3c672acf67af9d3d5a1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0035.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0035.jpg"
+        ],
+        "de624d76b05b1b023f1adfeb8bd606c5a09a1d43": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\145.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\159.jpg"
+        ],
+        "bef3d01d9dbf7bf856ebedf751d66f2ab2440499": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0002.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0002.jpg"
+        ],
+        "d3a3e48483f26ca4bb416a93bb5c85e523881424": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\7.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\172.jpg"
+        ],
+        "86bfe162a143273758462882bfb7d2ec81b2de6f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0210.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0210.jpg"
+        ],
+        "987320b8b0544b0f57e2073a66acff78d19b2d5c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0013.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0013.jpg"
+        ],
+        "0e10677e769d0cc6943db9eb184396accbee2f5c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0044.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0044.jpg"
+        ],
+        "05f0ca05d03ef3ac3046a14e31e26e99309bef13": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic leaf blight\\google_0124.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\google_0124.jpg"
+        ],
+        "3a5afaa55227ccf3194151b73688535f65ab2b93": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\183.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\180.jpg"
+        ],
+        "11b47bcd6530304137b2fc71da1ceee75fa70ac8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\181.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\178.jpg"
+        ],
+        "2f9ad94bb00158edc11b504d81efcc128e6b9df4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\24.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\garlic rust\\26.jpg"
+        ],
+        "8764b12fbbb36282c8cd59fc0278beddc329cf10": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf\\google_0002.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\google_0000.jpg"
+        ],
+        "ab740037e634bb4f61b0c5d2c7063683c99311ec": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf\\30.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\11.jpg"
+        ],
+        "f27aa62d66057c41afc0cec4f5e3b8d784caf97d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\105.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\109.jpg"
+        ],
+        "d7c1d6c8211077dcde30852b3644233530111dea": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\google_0011.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\google_0046.jpg"
+        ],
+        "8068db02aa7d84016c8b23e1bd43968364c37b06": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\42.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\10.jpg"
+        ],
+        "0b1add349b926bb9eca457148d986b202ae815b0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\81.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\78.jpg"
+        ],
+        "38f80c51ddb63fadc7e14a6669f33d4db347636a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger leaf spot\\25.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\6.jpg"
+        ],
+        "913f89f87998b2e7988358e0293751fb40c12dec": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\20.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\17.jpg"
+        ],
+        "9e05e7002d11749c117df3f4b672fe9db1652184": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\30.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\20.jpg"
+        ],
+        "2945aa4cca6d318c50de60fb9cf8bde3c862108d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\170.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\138.jpg"
+        ],
+        "3fe8cf8416ec65a4be5f14873079338f1b4ca833": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\26.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\52.jpg"
+        ],
+        "26881ae9d3ba0bec3427328a09bdda0255b87a9a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\58.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\162.jpg"
+        ],
+        "7108d38691a4933973b15ecbce34e8eda36b8b46": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\google_0007.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\google_0028.jpg"
+        ],
+        "d3d3a7be7dd25edd4a34666b82347e304300b5b8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\64.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\146.jpg"
+        ],
+        "d604cf0e1abcfbd111b426a87ba90bc1ec182cb5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\ginger sheath blight\\39.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\48.jpg"
+        ],
+        "a4481b4b71f83f79ee09c5195fa735cda9e10127": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\156.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\157.jpg"
+        ],
+        "0fab7b147124072e2d49e848e10032e55d12f88c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\google_0064.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\google_0076.jpg"
+        ],
+        "dcd7a2ac563b0fc387e4c0854dad2c0d48a28407": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\google_0081.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\google_0209.jpg"
+        ],
+        "a4e4444419d035421b5e05c7ce2ef350bbc8a731": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape black rot\\google_0052.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\google_0105.jpg"
+        ],
+        "cfe8b2963925447ea44f623f8285b579c73d3ade": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\122.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\241.jpg"
+        ],
+        "031e1b5cc06e29a40f7abebc828681d6c6215e46": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\216.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\102.jpg"
+        ],
+        "83132f5436b419ad4c56ccb63d5c87b23976ae85": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape downy mildew\\79.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\1.jpg"
+        ],
+        "5ed29a72064eca95cc3a3265b93e1b4d2d3c8d3e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf\\google_0286.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\strawberry leaf\\google_0338.jpg"
+        ],
+        "a48b47ea217eb8565a3a3ba9f425461d63c2ab09": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf\\6.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\25.jpg"
+        ],
+        "e77108c0b3b729a2e73b88994f51cab1eed9a17a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0070.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\maple tar spot\\google_0067.jpg"
+        ],
+        "8952475228e8293e94e01b9adb3b5c60c8fbb69a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\99.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\97.jpg"
+        ],
+        "f1476b33e878b40a71e0046e5b6ba446fdcd4366": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0032.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\maple tar spot\\google_0001.jpg"
+        ],
+        "589b3390eb48b1dd02c206ccab9351a3d38bb9f4": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0030.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0223.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\google_0012.jpg"
+        ],
+        "6cf1f0dab34dcd250c22063788ac04b2a1cefaa0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\grape leaf spot\\google_0046.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0170.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0163.jpg"
+        ],
+        "06756eb6e6da3de63304cf7a9129f818611aac75": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\47.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\32.jpg"
+        ],
+        "ef6677a083c2daca68906ec35eda14e199653533": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\44.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\28.jpg"
+        ],
+        "4fb90d698d284948c753233440f3c0184c0767cf": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\65.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\34.jpg"
+        ],
+        "55489ce05f1e1fa443208dae3c6888cf1dee2e87": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\63.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\25.jpg"
+        ],
+        "3a48ac9063088c0b2fa713905601486137bb3ccb": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\78.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\36.jpg"
+        ],
+        "b75dbed1bd9d9315922e7f046018c0b9565e605a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\14.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\15.jpg"
+        ],
+        "2678ee00641d510db1f975657a5e3170f234ea24": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce downy mildew\\google_0039.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\google_0011.jpg"
+        ],
+        "ec80e1b87a8f11b85b6a4a75c28b9b7797010bb1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\51.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\92.jpg"
+        ],
+        "f7124bb7049f8e6d6704bd3c1345711a8ae8f79a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\lettuce mosaic virus\\google_0039.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\google_0042.jpg"
+        ],
+        "e9cf96f4b540f40ed6bab10f2be679edcfea42ee": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\plum leaf\\47.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\plum leaf\\45.jpg"
+        ],
+        "2cc805cbf3a3003ea4234f1c4a77adb2d6c911c3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\plum leaf\\google_0151.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\plum pocket disease\\google_0019.jpg"
+        ],
+        "038de205d507a0a900875bcdf5302ffa04cfc837": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0200.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0343.jpg"
+        ],
+        "01b06c8218465877f454e44bdf92dfaa73fe49ef": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0133.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0096.jpg"
+        ],
+        "15cb7073b23abf0fbf58489ef06fc84c9dbf5fed": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0084.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0133.jpg"
+        ],
+        "742112fc28261c9ce9dde63f84168c4e1e492b69": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0112.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0112.jpg"
+        ],
+        "3a3026d63fb2e06683cf0031a4a6d27f7d3c0707": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0011.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0046.jpg"
+        ],
+        "d4cb55224737ab23d48299f2a07ba080437af5d5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0111.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0008.jpg"
+        ],
+        "ea497d54983f7727f01af04820072f3f50d0e838": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\55.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\10.jpg"
+        ],
+        "45abc31a55ac634eb959c666d1552d21a970b514": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0171.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0292.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0260.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0205.jpg"
+        ],
+        "885f35d0d1d8dc03f78bd8512f4bfe2f9add17aa": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0048.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0149.jpg"
+        ],
+        "3ac70c033a11e391cb6864fcc3bda1e4ae2f0e7d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0158.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0137.jpg"
+        ],
+        "c2ee40f6a581a3197e309978519d1bd0b2ab8868": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0055.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0120.jpg"
+        ],
+        "14969a155d11e37a9817a63a766161960e44e4de": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\100.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\31.jpg"
+        ],
+        "2a54ce7822b60414f49232fb0a5c84a3cc4aa21d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0005.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0044.jpg"
+        ],
+        "1c9d2a404ea0de704b4f38b0cdef1eb98c8d244c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0241.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0349.jpg"
+        ],
+        "28fb7486d2971ea754329f42ec0a69431bfe35e8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0129.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0054.jpg"
+        ],
+        "96e33ffb70ee7f966f33de334d25a787a61ac2e0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0201.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0014.jpg"
+        ],
+        "2a2e0d942da08815f59fd05d7c18983d863942ea": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0120.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0048.jpg"
+        ],
+        "2d1121155a27a9fc113eb2c397679e091dd36b1a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0017.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0016.jpg"
+        ],
+        "6f4db6320269a3237e6c8a71b5ec0257777c9083": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\41.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\246.jpg"
+        ],
+        "e593612a1db64799d201baf23b72832f00edc990": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0053.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0152.jpg"
+        ],
+        "ef44a14101149fbeffdabe2239f333ced522fd9c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0030.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0287.jpg"
+        ],
+        "d185601be0f38c88d25952660f1731017583f864": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0284.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0035.jpg"
+        ],
+        "ee208ef680625fb735140173e9834a6ac6230de5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0089.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0296.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0164.jpg"
+        ],
+        "61c9d39eac63a281bc723e01f0c08c38b1cf7132": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0123.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0152.jpg"
+        ],
+        "e37e2c75b3fd5f8729762e2d844c2dfa6305613c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato early blight\\google_0225.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0036.jpg"
+        ],
+        "63628b360d207cf666ec7924b91e0a9c80cb8d40": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\add (3).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0006.jpg"
+        ],
+        "f7a923ab20d87467b7799b5082ccfc0eaa9d6e03": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0077.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0098.jpg"
+        ],
+        "9b2d89967203cd561b355bf71a976955320bd7f9": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0023.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\add (5).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0372.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0056.jpg"
+        ],
+        "4133e594a655c47f42bfa86188302c1bb85fe29a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0032.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0204.jpg"
+        ],
+        "396ac32ebc5eda98b956e8acc48c552c5d835779": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0167.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\add (6).jpg"
+        ],
+        "94b351ae5b5451bd6beabb2a6175fb3a4ae556b0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato late blight\\google_0090.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0175.jpg"
+        ],
+        "b77992de1fc922115b84a73a5d03ae00a2cb0c28": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato leaf\\12.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato leaf\\109.jpg"
+        ],
+        "f13dea818f42a03fa4f79ca7ca497eacf7cdc2bc": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\potato leaf\\google_0292.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\google_0003.jpg"
+        ],
+        "cb9dc1142cd675fd1efe94a1384a6fd1c74ca4ee": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\raspberry leaf\\google_0056.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\strawberry leaf\\google_0485.jpg"
+        ],
+        "899711b21ed855562e208fb926265e24f3b02517": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\raspberry leaf\\56.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\raspberry leaf\\58.jpg"
+        ],
+        "78c43012e48353e67d0cc3d92372dcbebd58f311": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\raspberry leaf\\59.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\raspberry leaf\\57.jpg"
+        ],
+        "f3a773a18140c250f8b57d5b228363654ed79cc9": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice leaf\\139.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice leaf\\136.jpg"
+        ],
+        "f46502b94e91e72e4de9d93ed9ee2c4e61901976": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\40.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\153.jpg"
+        ],
+        "e27a1e4a7d800d44e91c02f37e0f5b0e70f4e86c": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\177.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\rice sheath blight\\176.jpg"
+        ],
+        "56e2268d9955a477d5a523e759ad93a89a2300e7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\84.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\soybean leaf\\82.jpg"
+        ],
+        "0caf92587a9096a6e798e98b5bf868bc6210c58a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash leaf\\google_0009.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash powdery mildew\\google_0358.jpg"
+        ],
+        "ee563030d840e441cf71b04d5165f5fda87a3f12": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash leaf\\z396.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\17.jpg"
+        ],
+        "72007e13868669f8255f51d0b4fbb1f96670bab8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash leaf\\zgoogle_0131.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\google_0047.jpg"
+        ],
+        "77cab85ff6f8103b38572ed87b62262e9f20738f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\squash leaf\\z441.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\62.jpg"
+        ],
+        "8f77a5c66dd4995b26f42d8c8a6e5f941eb363a8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\strawberry leaf scorch\\google_0089.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0014.jpg"
+        ],
+        "4394c3c84ae3fdf72d0371825925d97b6152bb82": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tobacco leaf\\49.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tobacco mosaic virus\\12.jpg"
+        ],
+        "927f1fe066348658ffc9ece35bc69ad6dc5cfbae": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tobacco leaf\\37.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tobacco mosaic virus\\35.jpg"
+        ],
+        "684a369f7ec412dfc79bbddfd46784f0b594a5c1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0070.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0130.jpg"
+        ],
+        "6c077f4c2ac2cf1d5a24e7fafbcf1faf09de1029": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\116.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\96.jpg"
+        ],
+        "ba7a745eeee907a806c002029c87db9c7deb7a3a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0071.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0051.jpg"
+        ],
+        "12969c2d5a4b4aa9f3efea1eed24fcbe48b135e5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\103.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\39.jpg"
+        ],
+        "1e351a48369f567c1a6b9241c9a42717224f81ea": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0328.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0344.jpg"
+        ],
+        "875f81f8e2a4f19cb60b7f6b64ea2b13f94163c1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0128.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0230.jpg"
+        ],
+        "f586e51033493c0805c8b3c11d525f920ac46581": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0163.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0052.jpg"
+        ],
+        "c03da1cb872371507fd9b13cd7b8dcf52ce64d48": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0091.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0204.jpg"
+        ],
+        "d79999e1df1473988fe6d6f6b043dd3f5d7f2322": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\49.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\101.jpg"
+        ],
+        "74243e4eb0f2bbdc0ae35ed6ce34f5d3fc897f94": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0017.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0113.jpg"
+        ],
+        "0b024a6946f34edf2f60ce92244e77dd92672a1f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\15.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\19.jpg"
+        ],
+        "c4fe31f3cc3ea9eeb111e468e9ecf11cb128ffc6": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\109.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\88.jpg"
+        ],
+        "43a7a0b967359dc41dea7bf1b99f079cac72b313": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\google_0415.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0202.jpg"
+        ],
+        "3f2efa8b726edd112d6b6f49200f1cad94a634c0": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato bacterial leaf spot\\28.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\6.jpg"
+        ],
+        "d617691ad79b39133592940ca9cbfb4a896b4f3a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0099.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0102.jpg"
+        ],
+        "12b94744c0f5be76df9e17e44f636608ccf5b636": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0021.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0268.jpg"
+        ],
+        "03ec596a89ca8379c10ded7869aef05ad7721a94": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0087.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\google_0016.jpg"
+        ],
+        "71ac9197438350a4fef1e4e5cb09582cff2823e2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0009.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0008.jpg"
+        ],
+        "5b9b9c3ef27f7da25167b6b537c9379f0016f744": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0354.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0133.jpg"
+        ],
+        "e2241ac1e2c86b0446c957dbe99a1add8c10cc02": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0307.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0134.jpg"
+        ],
+        "56c9f5273c49da0097b853c044d5b0116c2215d3": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0322.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0200.jpg"
+        ],
+        "8c7e3df2147047bbac7413d78f2bd62ff2a680ab": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0177.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\google_0081.jpg"
+        ],
+        "01a8c01b3c98e9e2c821fb6aede8a4038e78771b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0154.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\google_0072.jpg"
+        ],
+        "de12fa65247c1d7c8f8e71c2e559c21fbec31809": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0033.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\google_0260.jpg"
+        ],
+        "8f83cf2598d8405d1b6671e8de2c54eebef50c48": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\67 - Copy.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\67 - Copy.jpg"
+        ],
+        "ff3e32e8255c0d2716994904f64262a75f7e881d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\188.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\207.jpg"
+        ],
+        "ee7d3f12918e0c6ba29aad421996da50027b9b5e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\46.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\75.jpg"
+        ],
+        "41db99d3fcaf1ff2842d95c809f786f00591760e": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato early blight\\google_0157.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\google_0098.jpg"
+        ],
+        "cafb72f6af8c22b798ae593aacb9d164c1f8a8bf": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\add (9).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\107.jpg"
+        ],
+        "9fbf446225a7746d9ca01a634e21cc9f5ed49768": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\add (14).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\220.jpg"
+        ],
+        "a9b879bfda5c71ae258b9bce5c8c8fd98520f54b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\5.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\33.jpg"
+        ],
+        "4cb5ddcd77311e2a79bed04266021ba67cc4b060": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\add (4).jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\162.jpg"
+        ],
+        "fd2172a385bf98638db572ed7524477cf5cbb270": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\163.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\add (12).jpg"
+        ],
+        "e1982e3db3891eee3d5c6b34b4d5cf831740e938": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\121.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato late blight\\add (2).jpg"
+        ],
+        "a6b6d176c9cef51eeee542b3c3d60baa58606fa9": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\google_0056.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\google_0306.jpg"
+        ],
+        "44a42ef4617df7b4861c055bb291508d07de31c5": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\85.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\80.jpg"
+        ],
+        "4e6a6380495a373c7ff8015f111b2e9b93171668": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\59.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\57.jpg"
+        ],
+        "6a53c6d6f67e0d90002a10273348dd9abd63a9d1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\98.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\62.jpg"
+        ],
+        "627dce81d7bcbd9453b1bdd60a52f600d67fe4f2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\92.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\16.jpg"
+        ],
+        "9d8b4904e47412e1a65feb036534c9c1bab5d9e7": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf\\152.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\50.jpg"
+        ],
+        "72a006e536bea50af6671ea95335cefa8f181f3a": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato leaf mold\\141.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato septoria leaf spot\\34.jpg"
+        ],
+        "3b1afc144e1947188e20a251e73c71cd2b23c84d": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\13.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\4.jpg"
+        ],
+        "5c722f0bfff64761fa7452eeab7da2f127e161bb": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\1.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\11.jpg"
+        ],
+        "19691dad75d3707006d9a859f047857ce02e71c2": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\236.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\35.jpg"
+        ],
+        "7b17bb741a288c74366ccaccbd2bf144ea866a2f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\209.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\15.jpg"
+        ],
+        "a324cd6512c6d1d9d448b3338468c4ae8e1c08f8": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\177.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\151.jpg"
+        ],
+        "71452d1f287a27e46ed92701547ed0871d904858": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\59.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\zucchini yellow mosaic virus\\90.jpg"
+        ],
+        "57d087dc3f6f03d860bda0c4ac34dc4ff67dac1b": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\30.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\29.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\12.jpg"
+        ],
+        "837cd69cf695bc4593f3b5d70cf4a8f8abc8572f": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\25.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\42.jpg"
+        ],
+        "3df254e364158035efec4e8da8fa2c54604ca684": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\199.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\149.jpg"
+        ],
+        "4f5771ee3f3296dd4b73fba8a9ca919db1a0fbb1": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\143.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\40.jpg"
+        ],
+        "b80f16b0ca2b87e8b4c483e2da42c582ef414841": [
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato mosaic virus\\2.jpg",
+          "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild\\images\\tomato yellow leaf curl virus\\1.jpg"
+        ]
+      }
+    }
+  ]
+}

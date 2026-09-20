@@ -1,0 +1,43 @@
+{
+  "final_config": {
+    "backbone": "MobileNetV3-Small+pretrained",
+    "img_size": 160,
+    "batch_size": 16,
+    "accum_steps": 4,
+    "eff_batch": 64,
+    "lr": 0.0004,
+    "weight_decay": 0.0001,
+    "dropout": 0.45,
+    "grad_clip": 1.0,
+    "label_smoothing": 0.1,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingWarmRestarts(T_0=3, T_mult=2, eta_min=1e-6)",
+    "sampler": "shuffle=True (no replacement oversampling)",
+    "gradual_unfreeze_epoch": 4,
+    "backbone_lr_after_unfreeze": 1e-05,
+    "classifier_lr_after_unfreeze": 0.0001,
+    "early_stop_min_delta": 0.005,
+    "augmentation": "RandomCrop+HorizontalFlip+Rotation+ColorJitter+Affine+RandomErasing",
+    "epochs": 22,
+    "patience": 5,
+    "seed": 42
+  },
+  "best_epoch": 22,
+  "epochs_ran": 22,
+  "best_val_acc": 0.42967032967032964,
+  "best_val_loss": 2.653851024921124,
+  "train_acc_final_eval": 0.48371023380605593,
+  "val_acc_final_eval": 0.42967032967032964,
+  "test_loss": 2.6500627587987315,
+  "test_acc": 0.43160184933369594,
+  "test_macro_precision": 0.40257788452061777,
+  "test_macro_recall": 0.36335433060969186,
+  "test_macro_f1": 0.35262134471878576,
+  "test_weighted_f1": 0.40371950566630593,
+  "overfitting": {
+    "train_val_gap_pp": 5.403990413572629,
+    "val_test_gap_pp": 0.0,
+    "train_test_gap_pp": 5.210838447235999,
+    "assessment": "MODERATE (acceptable, generalization OK)"
+  }
+}

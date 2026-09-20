@@ -2,18 +2,21 @@ from pathlib import Path
 import random
 import time
 import json
+import argparse
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 import torchvision.models as models
+import torchvision.transforms as T
 import yaml
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from datasets.plantwild import PlantWildDataset
 
-ROOT = Path(r"c:/Users/PANKAJ YADAV/OneDrive/Desktop/Terramind AI/data/plantwild/plantwild")
-OUT = Path(r"c:/Users/PANKAJ YADAV/OneDrive/Desktop/Terramind AI/outputs")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ROOT = PROJECT_ROOT / 'data' / 'plantwild' / 'plantwild'
+OUT = PROJECT_ROOT / 'outputs'
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT/"logs").mkdir(exist_ok=True)
 (OUT/"checkpoints").mkdir(exist_ok=True)
@@ -31,7 +34,13 @@ num_classes = len(classes_map)
 with open(ROOT/'trainval.txt','r',encoding='utf-8') as f:
     all_lines=[l.strip() for l in f if l.strip()]
 
-# stratified
+parser = argparse.ArgumentParser(description='Fast, regularized PlantWild training run.')
+parser.add_argument('--max-train-samples', type=int, default=256)
+parser.add_argument('--epochs', type=int, default=2)
+parser.add_argument('--patience', type=int, default=1)
+args = parser.parse_args()
+
+# stratified split
 seed=42; random.seed(seed)
 by_class={}
 for ln in all_lines:
@@ -47,29 +56,50 @@ for cls,items in by_class.items():
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print('Device',device)
 
-cfg={'lr':0.001,'train_epoch':2,'batch_size':8,'seed':seed}
+cfg={'lr':0.0003,'weight_decay':0.0001,'train_epoch':args.epochs,
+     'batch_size':8,'seed':seed,'patience':args.patience}
 # reduce for CPU
 if device.type=='cpu':
     cfg['batch_size']=8
 
-# use tiny subset 10% for quick run
-n=int(len(train_lines)*0.1)
-train_subset=train_lines[:n]
-val_subset=val_lines[:min(200,len(val_lines))]
+def stratified_limit(lines, limit):
+    grouped = {}
+    for line in lines:
+        grouped.setdefault(line.split('=')[0].split('/')[0], []).append(line)
+    selected = [items[0] for items in grouped.values()]
+    pool = [line for items in grouped.values() for line in items[1:]]
+    random.Random(seed).shuffle(pool)
+    selected.extend(pool[:max(0, limit - len(selected))])
+    random.Random(seed).shuffle(selected)
+    return selected
 
-train_ds=PlantWildDataset(ROOT, train_subset, classes_map)
-val_ds=PlantWildDataset(ROOT, val_subset, classes_map)
+train_subset=stratified_limit(train_lines, min(args.max_train_samples, len(train_lines)))
+val_subset=val_lines
+
+train_transform = T.Compose([
+    T.Resize((224,224)), T.RandomHorizontalFlip(), T.RandomRotation(10),
+    T.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15),
+    T.ToTensor(), T.Normalize([0.485,0.456,0.406], [0.229,0.224,0.225])
+])
+val_transform = T.Compose([
+    T.Resize((224,224)), T.ToTensor(),
+    T.Normalize([0.485,0.456,0.406], [0.229,0.224,0.225])
+])
+train_ds=PlantWildDataset(ROOT, train_subset, classes_map, transform=train_transform)
+val_ds=PlantWildDataset(ROOT, val_subset, classes_map, transform=val_transform)
 train_dl=DataLoader(train_ds, batch_size=cfg['batch_size'], shuffle=True, num_workers=0)
 val_dl=DataLoader(val_ds, batch_size=cfg['batch_size'], shuffle=False, num_workers=0)
 
-model=models.resnet50(pretrained=True)
-model.fc=nn.Linear(model.fc.in_features, num_classes)
+model=models.resnet18(weights=None)
+model.fc=nn.Sequential(nn.Dropout(0.4), nn.Linear(model.fc.in_features, num_classes))
 model=model.to(device)
-opt=optim.Adam(model.parameters(), lr=cfg['lr'])
+opt=optim.AdamW(model.parameters(), lr=cfg['lr'], weight_decay=cfg['weight_decay'])
+scheduler=optim.lr_scheduler.ReduceLROnPlateau(opt, mode='min', factor=0.5, patience=1)
 
 crit=nn.CrossEntropyLoss()
 metrics={'history':[]}
 best_val=-1.0
+stale_epochs=0
 for epoch in range(1,cfg['train_epoch']+1):
     t0=time.time(); model.train(); total=0;correct=0;loss_sum=0.0
     for imgs,labels in train_dl:
@@ -90,14 +120,26 @@ for epoch in range(1,cfg['train_epoch']+1):
     val_loss=loss_sum/total; val_acc=correct/total; elapsed=time.time()-t0
     print(f'Epoch {epoch}/{cfg["train_epoch"]}: train_acc={train_acc:.4f} val_acc={val_acc:.4f} time={elapsed:.1f}s')
     metrics['history'].append({'epoch':epoch,'train_loss':train_loss,'train_acc':train_acc,'val_loss':val_loss,'val_acc':val_acc,'time':elapsed})
+    scheduler.step(val_loss)
     ckpt=OUT/'checkpoints'/f'quick_epoch_{epoch}.pth'
     torch.save({'epoch':epoch,'state':model.state_dict(),'opt':opt.state_dict(),'val_acc':val_acc}, ckpt)
     if val_acc>best_val:
         best_val=val_acc; torch.save({'state':model.state_dict(),'val_acc':val_acc}, OUT/'checkpoints'/'quick_best.pth')
+        stale_epochs=0
+    else:
+        stale_epochs += 1
+        if stale_epochs >= cfg['patience']:
+            print(f'Early stopping at epoch {epoch}')
+            break
 
 # save final
-Path('c:/Users/PANKAJ YADAV/OneDrive/Desktop/Terramind AI/models').mkdir(parents=True, exist_ok=True)
-torch.save(model.state_dict(), Path('c:/Users/PANKAJ YADAV/OneDrive/Desktop/Terramind AI/models')/'quick_final.pth')
+models_dir = PROJECT_ROOT / 'models'
+models_dir.mkdir(parents=True, exist_ok=True)
+best_checkpoint = torch.load(OUT/'checkpoints'/'quick_best.pth', map_location=device)
+model.load_state_dict(best_checkpoint['state'])
+torch.save({'model_state':model.state_dict(), 'num_classes':num_classes,
+            'classes':classes_map, 'best_val_acc':best_val},
+           models_dir/'quick_final.pth')
 with open(OUT/'metrics.json','w') as f: json.dump(metrics,f)
 with open(OUT/'logs'/'training.log','a') as f: f.write('quick run complete\n')
 print('Quick run complete. best val', best_val)

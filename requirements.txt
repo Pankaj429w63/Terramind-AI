@@ -19,3 +19,6 @@ requests
 fastapi
 uvicorn[standard]
 python-multipart
+supabase
+python-dotenv
+qdrant-client

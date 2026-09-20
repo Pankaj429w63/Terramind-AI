@@ -1,32 +1,84 @@
-# Datasets
+# ------------------------------------------------------------
+# TerraMind AI — .gitignore
+# Balanced: tracks metrics, configs, and diagnostic artifacts
+# while excluding raw datasets, large model checkpoints,
+# per-process RAG state, and local build caches.
+# ------------------------------------------------------------
+
+# Datasets (raw training data — very large)
 data/
 datasets/
+saved_runs/
 *.zip
+*.tar
+*.gz
+*.parquet
 
-# Trained models
+# Large model checkpoints and ML artifacts
 *.pth
 *.pt
 *.ckpt
 *.onnx
+*.safetensors
+*.bin
+!models/**/config.json
+!models/**/*.md
+!outputs/experiments/**/config.json
+!outputs/experiments/**/results.json
+!outputs/final_config.json
+!outputs/full_report.json
+!outputs/metrics.json
+!outputs/split_info.json
+!outputs/tune_results.json
+!outputs/configs_effective.yaml
+!outputs/metrics/**/*.json
 
-# Logs and outputs
-outputs/
+# Training visualizations / graphs are tracked as release artifacts
+!outputs/graphs/*.png
+
+# Per-process runtime state (regenerated every backend boot)
+outputs/checkpoints/
+outputs/reports/
+outputs/qdrant/
+outputs/qdrant_data/
+outputs/rag/tfidf.pkl
+outputs/rag/tfidf_corpus.json
+outputs/rag/vector_store_memory.json
 logs/
 runs/
-checkpoints/
 *.log
 
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 venv/
 .venv/
+env/
+build/
+dist/
+*.egg-info/
 
-# Environment
+# Node / Next.js build caches
+node_modules/
+.next/
+out/
+frontend/tsconfig.tsbuildinfo
+
+# Environment & secrets
 .env
+.env.local
+.env.*.local
+supabase/.env
 
-# Jupyter
+# IDE
+.vscode/
+.idea/
 .ipynb_checkpoints/
 
-# VS Code
-.vscode/
+# OS
+.DS_Store
+Thumbs.db
+
+# Stray OS / shell cache directories that leaked into project root
+Microsoft/

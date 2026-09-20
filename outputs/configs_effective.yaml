@@ -1,0 +1,12 @@
+cfg:
+  augment_epoch: 1
+  backbone: resnet18
+  batch_size: 16
+  lr: 0.0003
+  max_train_samples: 178
+  num_workers: 2
+  patience: 1
+  seed: 42
+  train_epoch: 2
+  weight_decay: 0.0001
+device: cpu
