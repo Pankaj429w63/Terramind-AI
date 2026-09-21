@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8e0a3e2f-de38-5a4f-8477-082fee1fed1a",
+  "category": "diseases",
+  "source": "Cornell NYS IPM / Cornell AgriTech Tree Fruit Guidelines",
+  "title": "Apple Black Rot (Botryosphaeria obtusa) and Botryosphaeria Canker Complex",
+  "crop": "apple",
+  "disease": "black rot",
+  "content": "Black rot of apple, caused by the ascomycete Botryosphaeria obtusa (syn. Diplodia seriata; Physalospora obtusa), produces three distinct syndromes: (1) frogeye leaf spot on leaves (2-5 mm circular lesions with purple margins and tan centers speckled with pycnidia); (2) slightly sunken target-like cankers on woody branches, pruning stubs, and fire-blighted wood; (3) firm, black, leathery fruit decay originating at blossom end or wound sites with concentric rings of pycnidia. The pathogen overwinters in mummified fruit, cankers, and dead wood; ascospores and conidia are released during spring rains and disseminated by rain splash to infect young leaves, fruit, and wounded wood when temperatures are 20-27 C with >6 hours of leaf wetness. Management combines dormant removal of mummies and cankered wood, protection of pruning cuts, vigor management, and protectant fungicide programs from tight cluster through first cover with additional summer sprays in high-pressure orchards. Black rot is differentiated from bitter rot (Colletotrichum) by the absence of salmon-colored spore masses and from white rot by the darker, more leathery fruit lesions.",
+  "url": "https://nysipm.cornell.edu/agriculture/fruits/tree-fruit/diseases/apple-diseases/#black-rot",
+  "author": "Cornell University NYS IPM Program (Cornell AgriTech, Geneva NY)",
+  "date": "2024-03-15",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "botryosphaeria",
+    "apple",
+    "leaf-spot",
+    "fruit-rot",
+    "canker",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "apple black rot",
+    "crop_slug": "apple",
+    "disease_slug": "black_rot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 0
+  }
+}

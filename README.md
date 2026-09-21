@@ -695,3 +695,13 @@ If you use TerraMind AI in an academic or publication context, please cite:
     <a href="#licensing">License</a>
   </p>
 </div>
+
+---
+
+## Knowledge-base population progress
+
+- 58 PlantWild disease knowledge documents were populated from source records and validated on 2026-09-22.
+- Disease source validation: 58 passed, 0 failed.
+- JSON Schema validation: 58 checked, 0 failures. Manifest identity validation: 58 checked, 0 failures.
+- The remaining 163 global validation failures belong to existing placeholder documents in the agriculture, fertilizer, plant care, and treatment categories; no disease document is affected.
+- Qdrant ingestion has not been performed.

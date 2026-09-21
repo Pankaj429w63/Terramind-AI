@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "3dc7492f-0260-5cf6-89f5-fea3f86b55ba",
+  "category": "diseases",
+  "source": "The Ohio State University Extension OSU VegNet Disease Fact Sheets",
+  "title": "Alternaria Leaf Spot and Head Rot of Cabbage and Cole Crops (A. brassicicola / A. brassicae)",
+  "crop": "cabbage",
+  "disease": "alternaria leaf spot",
+  "content": "Alternaria leaf spot of cabbage, cauliflower, broccoli, kale, and brassicas is caused by two necrotrophic ascomycetes: Alternaria brassicicola (small 2-5 mm dark leaf spot with 5-10 septa) and A. brassicae (larger 5-25 mm target-like concentric ring lesions with longer beak conidia). Both also cause black pod, seed infection, and post-harvest head rot on cabbage and cauliflower. Globally distributed and favored by warm humid 20-25 C conditions with frequent rain/overhead irrigation. On cabbage initial 2-10 mm dark circular spots with tan/gray centers and dark borders become sooty-black conidial/conidiophore masses under humid conditions; diffuse yellow chlorotic halo surrounds lesions; old lesion centers become papery and fall out giving shot-hole; coalescence causes blighting of entire lower leaves. On cabbage heads infection progresses through wrapper leaves into head layers causing dark brown to black firm concentric rot; on cauliflower curds dark pinpoint lesions expand to brown sunken rot during wet harvests. Both fungi are internally and externally seedborne causing seedling damping-off and wirestem; seedling inoculum from seedbeds is the main primary source in clean fields. Conidia disperse via splash, overhead irrigation, wind after residue disturbance, workers, equipment; overwinter in brassica debris and cruciferous weeds (wild radish, wild mustard, shepherd's purse) with survival reduced by deep burial. Management: (1) tested healthy seed from certified semi-arid brassica seed-increase regions; hot-water 50 C x 25 min or iprodione/thiophanate-methyl slurry seed treatment; (2) 2-3 year non-brassica rotations with corn, small grains, legumes; deep plowing to bury debris; cruciferous weed sanitation; (3) tolerant cabbage F1 hybrids; (4) avoid overhead irrigation, use drip; adequate spacing; (5) 7-10 day protectant fungicide programs from heading (button stage) through harvest: best performing FRAC 3 + FRAC 11 premixes (difenoconazole + azoxystrobin, propiconazole + trifloxystrobin, tebuconazole + pyraclostrobin), FRAC 7 + 11 premixes (fluxapyroxad + pyraclostrobin), FRAC 9 (cyprodinil+fludioxonil), multi-site partners FRAC M3 (chlorothalonil, mancozeb) and M1 (copper); alternate FRAC groups to prevent QoI resistance documented in coastal CA/FL A. brassicicola populations; (6) rapid pre-cool 1-2 C within 30 minutes of harvest, 0 C storage with 95% RH and no condensation; 2-min 100 ppm free chlorine pH 7 dip before packing kills surface conidia and curtails head rot.",
+  "url": "https://ohioline.osu.edu/factsheet/plpath-gen-10",
+  "author": "The Ohio State University Extension Department of Plant Pathology",
+  "date": "2022-09-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "ascomycota",
+    "cabbage",
+    "brassica",
+    "seedborne",
+    "osu"
+  ],
+  "metadata": {
+    "class_label": "cabbage alternaria leaf spot",
+    "crop_slug": "cabbage",
+    "disease_slug": "alternaria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 19
+  }
+}

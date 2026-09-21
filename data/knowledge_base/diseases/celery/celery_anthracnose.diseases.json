@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "80b687b0-deae-5e2c-ada6-a6c985b47020",
+  "category": "diseases",
+  "source": "University of California Statewide IPM Program (UC ANR)",
+  "title": "Anthracnose of Celery (Colletotrichum acutatum s.l.) - UC IPM Guidelines",
+  "crop": "celery",
+  "disease": "anthracnose",
+  "content": "Celery anthracnose (also stem anthracnose, crater disease, celery curl) is a destructive fungal disease of celery (Apium graveolens var. dulce) and celeriac (A. graveolens var. rapaceum) caused by the ascomycete Colletotrichum acutatum sensu lato (Glomerella acutata teleomorph). It is most severe in coastal California celery (Ventura/Santa Barbara/Monterey counties) and in Florida, Michigan, Israel, southern Europe, and Australia under cool moist conditions. 100% crop loss occurs when infected transplants are planted into fields with frequent overhead irrigation. Symptoms: (1) on leaves, 2-5 mm yellow to tan irregular necrotic spots concentrated along margins that may drop out giving shot-hole appearance and leaf marginal necrosis; (2) on petioles - most diagnostic and economically important - elongated sunken oval to irregular 3-15 mm crater-like tan to dark brown lesions with darker margins running lengthwise along petiole; under moist conditions the center of petiole lesions exudes a characteristic pink to salmon spore mass (conidial ooze) from acervuli with black setae; severely affected petioles curl longitudinally, twist, and may die back; (3) on crowns, soft sunken crown rot extending into root crown causing wilting and collapse. The pathogen is exclusively seedborne on celery with no alternative hosts confirmed for the celery-specialized C. acutatum clade; seed infestation rates of < 0.1% can initiate a field epidemic. Conidia disperse via splash from overhead sprinklers/rain; longer distances via contaminated trays, farm machinery, and worker clothing. Infection favored by 15-22 C combined with >= 12 hours continuous leaf wetness (fog/sprinklers). Management: (1) only anthracnose-indexed seed produced in arid celery non-production regions; 50 C x 30 min precise hot-water seed treatment; (2) mancozeb+thiram protectant + prothioconazole systemic seed treatments; (3) greenhouse sanitation: tray sterilization, drip irrigation, avoid sprinklers; inspect twice weekly and discard entire trays with visible lesions; (4) 4-year rotations, avoid consecutive celery plantings, control Apium graveolens weed volunteers; (5) UC IPM foliar program: azoxystrobin (FRAC 11) transplant soil drench followed by 5-7 foliar 14-day sprays alternating FRAC 11, FRAC 11+3 (azoxystrobin + propiconazole), FRAC 7 (fluxapyroxad), and multi-site FRAC M3 + M1 (mancozeb + copper); never apply FRAC 11 solo > 3 consecutive sprays and always tank-mix with multi-site partner because QoI resistance is documented in CA celery C. acutatum populations.",
+  "url": "https://www2.ipm.ucanr.edu/agriculture/celery/Anthracnose/",
+  "author": "University of California ANR Statewide IPM Program",
+  "date": "2024-01-09",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "colletotrichum",
+    "ascomycota",
+    "celery",
+    "anthracnose",
+    "seedborne",
+    "ucanr"
+  ],
+  "metadata": {
+    "class_label": "celery anthracnose",
+    "crop_slug": "celery",
+    "disease_slug": "anthracnose",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 24
+  }
+}

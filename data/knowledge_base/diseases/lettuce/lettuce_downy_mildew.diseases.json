@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "be135863-b141-5588-9558-b223b3f3139c",
+  "category": "diseases",
+  "source": "Cornell University Long Island Horticultural Research & Extension Center (LIHREC) / UC Davis IPM Lettuce Guidelines",
+  "title": "Lettuce Downy Mildew (Bremia lactucae, Oomycota Peronosporaceae)",
+  "crop": "lettuce",
+  "disease": "downy mildew",
+  "content": "Lettuce downy mildew is the most destructive foliar disease of crisphead, romaine, butterhead, and leaf lettuce (Lactuca sativa L.) worldwide, caused by the obligate biotrophic oomycete Bremia lactucae Regel (Peronosporales, Peronosporaceae, Oomycota). The disease occurs in all lettuce-growing regions of North America, Europe, Asia, Australia, and southern South America, causing 20-80% yield losses in unprotected susceptible cultivars during cool wet production periods. Bremia lactucae is highly specialized on the genus Lactuca; economically important formae speciales are f. sp. lactucae (cultivated lettuce). Symptoms first appear on the oldest (outermost) lower-canopy leaves as yellowish-green, angular, vein-limited chlorotic lesions 5-20 mm on the upper leaf surface. Under humid, cool (10-18 C) conditions, a dense, white, downy felt-like growth of sporangiophores and lemon-shaped sporangia emerges through stomata on the corresponding lower (abaxial) leaf surface - this downy sporulation is diagnostic. As lesions mature, they turn necrotic brown, become papery, and may tear or develop shot holes; severe systemic infections of young romaine and butterhead transplants can kill seedlings or produce stunted, chlorotic plants. The pathogen overwinters as thick-walled globose oospores (35-50 um) in decaying lettuce crop debris on the soil surface and in wild Lactuca weed hosts (L. serriola - prickly lettuce, L. virosa, L. saligna). In protected culture (high tunnels, greenhouses) and mild climates, the asexual sporangial stage persists year-round on volunteer and weedy Lactuca hosts. Sporangia are wind-dispersed up to 50 km; sporangia release 4-8 biflagellate zoospores that require 3-6 hours of continuous leaf wetness at 12-18 C to infect through stomata. Management: (1) genetic resistance: 35+ race-specific dominant Dm (downy mildew resistance) genes have been bred into lettuce; however, B. lactucae is hypervariable with > 40 races identified, and most Dm genes have been overcome by new races. Quantitative partial polygenic resistance from L. serriola and L. virosa provides more durable field protection. (2) cultural: 3-4 year crop rotations with non-Asteraceae crops; deep plow to bury residue; avoid overhead sprinkler irrigation; use drip irrigation; wide plant spacing; remove wild Lactuca weeds. (3) forecasting models (Bremcast, IPMlettuce) schedule sprays based on leaf wetness and temperature. (4) fungicides: FRAC 4 (mefenoxam, metalaxyl-M), FRAC 40 (dimethomorph, mandipropamid), FRAC 49 (oxathiapiprolin), FRAC P07 (fosetyl-Al, phosphonates), FRAC M3 (mancozeb), FRAC M1 (copper). Organic: copper + Bacillus amyloliquefaciens + Reynoutria sachalinensis.",
+  "url": "https://blogs.cornell.edu/livegpath/gallery/lettuce/lettuce-downy-mildew/",
+  "author": "Cornell University LIHREC Vegetable MD Online / UC IPM Program Lettuce Disease Guidelines",
+  "date": "2023-08-29",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "bremia",
+    "stramenopile",
+    "lettuce",
+    "lactuca",
+    "downy-mildew",
+    "cornell",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "lettuce downy mildew",
+    "crop_slug": "lettuce",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 56
+  }
+}

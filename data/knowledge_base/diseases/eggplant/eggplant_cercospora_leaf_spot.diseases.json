@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "f7bbaa4c-edb5-56ec-a618-435eb4d1c1f1",
+  "category": "diseases",
+  "source": "University of Florida IFAS Extension - North Florida Research and Education Center",
+  "title": "Cercospora Leaf Spot and Fruit Rot of Eggplant (Cercospora melongenae / C. solani-melongenae)",
+  "crop": "eggplant",
+  "disease": "cercospora leaf spot",
+  "content": "Cercospora leaf spot and phoma blight complex is the most common foliar disease of eggplant (Solanum melongena L.) in warm humid production areas worldwide including the southeastern USA, Caribbean basin, Latin America, India, Southeast Asia, West Africa, and northern Australia. The primary causal organism is the ascomycete fungus Cercospora melongenae (teleomorph Mycosphaerella melongenae, now Pseudocercospora melongenae; C. solani-melongenae, C. dalbergiae, and C. viperis also occur as secondary components in the Cercospora leaf-blight complex on solanaceous crops). The disease can cause 15-45% yield reductions by reducing photosynthetic leaf area and causing premature defoliation, and by producing direct blemishes and necrotic fruit rot lesions that render eggplant fruit unmarketable for fresh-market retail sale. Symptoms occur on all above-ground parts but are most obvious on leaves. On leaves, symptoms begin as small (1-4 mm), circular to slightly irregular, chlorotic yellow-green flecks on the lower surface of older, mature leaves. As lesions expand to 5-15 mm in diameter they become light tan to gray in the center, usually with a distinct narrow yellow chlorotic halo (halo is most diagnostic when seen with transmitted light); with age the central lesion portion becomes grayish-brown to brown with a slightly sunken papery texture. The lesions often coalesce into large irregularly shaped necrotic areas 2-5 cm across that cause severe leaf blade blight. On the underside of lesions, a close examination with a 10x hand lens reveals the diagnostic fasciculate bundles of dark, 3-8 septate, geniculate conidiophores that emerge through the stomata, each bearing a single long, slender, multi-septate, hyaline to pale olivaceous, obclavate-cylindrical Cercospora conidium measuring 30-150 x 3-5 um with 4-20 transverse septa. On leaf petioles and young stems, lesions are elongated, sunken, dark brown cankers 5-20 mm long that may girdle and kill young branches. On eggplant fruit, which is the major economic loss component, slightly sunken, circular, dark brown to black leathery lesions develop, typically 5-30 mm in diameter with a well-defined slightly raised margin. Lesions may be covered with a dark velvety layer of conidiophores and conidia under humid conditions, and they can expand to large patches of superficial necrotic skin tissue with shallow 3-6 mm depth necrosis of the fruit flesh. Secondary Alternaria and Colletotrichum organisms often enter through these Cercospora lesions causing a deep wet fruit rot. The pathogen overwinters as mycelium, pseudothecia, and stromata on infected eggplant crop debris on the soil surface, in solanaceous weed hosts (Solanum nigrum, S. ptycanthum, S. carolinense, S. torvum, S. aculeatissimum), and in/on eggplant seeds (both external conidia on the seed coat and internal mycelium in the cotyledon layer). Seed infestation rates of up to 15% have been documented in commercial hybrid lots from tropical seed multiplication fields. Initial lesions develop on lower leaves from wind-dispersed ascospores released from pseudothecia on overwintered debris or from conidia splash-dispersed from infected seedling cotyledons; secondary polycyclic spread is primarily by rain splash droplets and overhead irrigation carrying conidia from primary lesions upward through the canopy; insects (thrips, mites, flea beetles, cotton aphids) also carry conidia short distances; workers' hands and equipment spread inoculum when canopies are wet. Infection is favored by high temperatures (25-32 C / 77-90 F), high RH (> 85%), and frequent rainfall or overhead sprinkler irrigation providing 8-12 hours of continuous leaf wetness per infection event; incubation period is 5-8 days. Management: (1) seed health and seed treatment: use Cercospora-indexed seed produced in low-humidity seed-increase regions; hot water seed treatment at 51 C for 30 minutes; slurry seed treatment with captan + thiram + benomyl or prothioconazole reduces initial seedling infection. (2) field crop rotation of 2-3 years with non-solanaceous crops (grasses, cucurbits, legumes) to reduce soil-surface residue inoculum; prompt deep incorporation of eggplant vines after harvest with a moldboard plow. (3) solanaceous weed management especially of horsenettle (S. carolinense), black nightshade (S. nigrum), and tropical soda apple (S. viarum) in field borders. (4) cultural practices: use wide row spacing (0.9-1.2 m between plants) and raised, plastic-mulched beds with drip irrigation to improve air movement and reduce leaf wetness; avoid overhead sprinkler irrigation; use white or aluminized plastic mulches to repel aphid and thrips vectors. (5) resistant cultivars are not widely available in commercial eggplant hybrids, though the tropical landraces 'S. melongena var. insanum', 'Pusa Purple Cluster', 'Manjri Gota', 'Arka Nidhi', and Solanum gilo x S. melongena introgression lines (IL-EP-10, IL-EP-26) carry polygenic quantitative resistance being incorporated by public breeding programs. (6) fungicide programs: protectant sprays initiated at first symptoms and continued on 10-14 day intervals through harvest, alternating between FRAC M3 multi-site (mancozeb, chlorothalonil, maneb), FRAC M1 copper (copper hydroxide, copper oxychloride, Bordeaux), FRAC 3 DMI (tebuconazole, difenoconazole, prothioconazole, tetraconazole), FRAC 11 QoI (azoxystrobin, pyraclostrobin, trifloxystrobin - always tank-mix with multi-site to prevent QoI resistance), FRAC 7+11 SDHI + QoI premixes (fluxapyroxad + pyraclostrobin, pydiflumetofen + difenoconazole), and FRAC 2 (dicarboximide iprodione, vinclozolin). Organic production programs rely on copper, potassium bicarbonate, neem oil, and Bacillus amyloliquefaciens QST 713 rotations but provide only 50-60% reduction compared to synthetic programs in UF IFAS GCREC trials.",
+  "url": "https://edis.ifas.ufl.edu/publication/VH054",
+  "author": "University of Florida IFAS Extension - North Florida Research and Education Center - Horticultural Sciences Department",
+  "date": "2022-11-28",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "cercospora",
+    "ascomycota",
+    "eggplant",
+    "solanum",
+    "leaf-spot",
+    "fruit-rot",
+    "uf"
+  ],
+  "metadata": {
+    "class_label": "eggplant cercospora leaf spot",
+    "crop_slug": "eggplant",
+    "disease_slug": "cercospora_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 43
+  }
+}

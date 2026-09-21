@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "fee1a9aa-511e-57a1-911a-1ff0230e986a",
+  "category": "diseases",
+  "source": "University of Delaware Cooperative Extension",
+  "title": "Alternaria Diseases of Cauliflower, Cabbage, and Brassica Vegetables",
+  "crop": "cauliflower",
+  "disease": "alternaria leaf spot",
+  "content": "Alternaria leaf spot and curd rot of cauliflower are caused by the same A. brassicicola / A. brassicae complex affecting all cole crops: A. brassicicola (dark leaf spot, worldwide, shorter conidial beak) and A. brassicae (gray leaf spot, more common in cool temperate regions, longer beak, larger target lesions). Both also cause seed infection and post-harvest black mold on cauliflower curds during storage, transit, and retail display; primary cauliflower losses are due to curd blemishes and post-harvest decay causing downgrading/rejection. Foliar symptoms in seedbed or plug trays are dark pinhead cotyledon spots expanding into irregular black lesions and seedling collapse at soil line (damping-off); in field plants, 1-3 mm to 5-15 mm dark circular spots with sharply defined borders on older lower leaves that develop concentric bull's-eye patterns and sooty-black conidial masses, with ragged shot-hole appearance as old lesion centers crack or fall out. On cauliflower edible curd inflorescences, infection begins in wounds, trichomes, and stomata of floret bracts as 1-2 mm black speck expanding into larger sunken brown-black rotted areas that can destroy 100% of packed curds within 5 days at 15-20 C if condensation is present. On seed multiplication stalks, elongated dark lesions cause pod blight and direct seed contamination. Both pathogens are internally and externally seedborne; they survive between crops on brassica crop residue, cruciferous weeds (Sinapis arvensis, Raphanus raphanistrum, Capsella bursa-pastoris, Thlaspi arvense), and volunteer brassicas. Conidia are splash-dispersed short distances during rain and wind-dispersed long distances during thunderstorms or dry harvest operations; optimal conditions for infection are 18-24 C with 12+ hours of leaf wetness and cool moist periods within 2 weeks of heading. Management: (1) certified brassica seed from tested semi-arid production fields; hot-water 50 C x 25 min or iprodione treatment; (2) cauliflower is more susceptible than most brassicas so plant on 3+ year rotations and destroy nearby cruciferous weeds; (3) choose tolerant snowball/Romanesco hybrids; (4) protectant fungicide programs from curd initiation (button stage) through harvest on 7-10 day schedule: best FRAC 3 + 11 premixes (difenoconazole + azoxystrobin, propiconazole + trifloxystrobin, tebuconazole + pyraclostrobin), FRAC 7 + 11 premixes (fluxapyroxad + pyraclostrobin), FRAC 9 (cyprodinil + fludioxonil), multi-site M3 (chlorothalonil, mancozeb) + M1 (copper); alternate FRAC groups to prevent QoI resistance detected in CA and FL A. brassicicola populations; (5) rapid hydrocooling/forced-air pre-cooling to 1-2 C within 30 minutes of cutting, storage at 0 C with 95% RH and no condensation; 2-minute 100 ppm free chlorine pH 7.0 dip before packing kills surface conidia.",
+  "url": "https://www.udel.edu/canr/extension/plant-disease-diagnostics/diseases-of-vegetables/brassica/alternaria/",
+  "author": "University of Delaware Cooperative Extension",
+  "date": "2023-04-27",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "ascomycota",
+    "cauliflower",
+    "curd-rot",
+    "udel"
+  ],
+  "metadata": {
+    "class_label": "cauliflower alternaria leaf spot",
+    "crop_slug": "cauliflower",
+    "disease_slug": "alternaria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 22
+  }
+}

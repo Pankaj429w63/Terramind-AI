@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a2b91bf0-c627-5a1f-bdef-6f005478c0f1",
+  "category": "diseases",
+  "source": "USDA-ARS National Plant Disease Recovery System (NPDRS)",
+  "title": "Apple Mosaic Virus (ApMV, Ilarvirus, Bromoviridae) Pathogen Profile",
+  "crop": "apple",
+  "disease": "mosaic virus",
+  "content": "Apple mosaic virus (ApMV) is a tripartite positive-sense RNA ilarvirus with worldwide distribution on apple, pear, quince, peach, plum, cherry, almond, apricot, hop, and strawberry. On sensitive apple cultivars (Golden Delicious, Bramley, Cox's Orange Pippin), leaves develop bright yellow or cream-colored mosaic / ringspot patterns 1-10 mm across; tolerant cultivars (Red Delicious, most scab-resistant cultivars) show few or no symptoms. ApMV does not cause fruit symptoms, but heavy foliar necrosis can reduce photosynthesis, fruit set, and yields by 25-50% in unmanaged high-incidence blocks. Transmission is exclusively via graft propagation using infected budwood or rootstock; no confirmed arthropod vector is known in apple orchards. Diagnosis uses DAS-ELISA or RT-PCR on early-spring leaf or bark samples. Management relies entirely on certification programs: plant only virus-indexed nursery stock from approved sources, test budwood before grafting, rogue infected trees from foundation blocks, and use heat therapy combined with meristem tip culture to sanitize elite selections. No curative treatments exist.",
+  "url": "https://www.ars.usda.gov/OPHS/npdrp/docs/PDFs/Virus_Pathogen_Profiles/Apple_Mosaic_Virus.pdf",
+  "author": "United States Department of Agriculture - Agricultural Research Service NPDRS",
+  "date": "2022-10-28",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "virus",
+    "ilarvirus",
+    "bromoviridae",
+    "apple",
+    "graft-transmitted",
+    "certification",
+    "usda-ars"
+  ],
+  "metadata": {
+    "class_label": "apple mosaic virus",
+    "crop_slug": "apple",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 2
+  }
+}

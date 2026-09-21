@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e7df11d2-2a37-5715-8912-4687d97efa21",
+  "category": "diseases",
+  "source": "Purdue University Extension - Corn and Soybean Disease Management",
+  "title": "Common Corn Rust (Puccinia sorghi Schwein.) Management Guide",
+  "crop": "corn",
+  "disease": "rust",
+  "content": "Common rust of corn is caused by the macrocyclic heteroecious basidiomycete rust Puccinia sorghi Schwein., one of the most widely distributed and recognizable foliar diseases of maize (Zea mays L.) worldwide. While generally lower yield losses than GLS, NLB, or southern rust in most commercial corn-belt hybrid acreage, common rust still causes 5-15% reductions on susceptible dent and flour corn cultivars and 20-50% losses on specialty sweet corn and popcorn cultivars when infection occurs early (V6-V10). The pathogen is macrocyclic with five spore stages, heteroecious between Zea mays (uredinial/telial repeating dikaryotic stage on maize/teosinte) and alternate Oxalis wood sorrel hosts (spermagonial/aecial stage on O. stricta, O. corniculata, O. dillenii, O. europaea). Common rust distinguished from southern corn rust (P. polysora) by several features: (1) common rust uredinia produced on BOTH upper and lower leaf surfaces; southern rust almost exclusively upper surface; (2) common rust uredinia are oval to elongate, cinnamon-brown, 1-2 mm, scattered irregularly across leaf blades and sheaths; southern rust pustules smaller, orange-brown, densely clustered, circular; (3) common rust telia dark brown to black covered at first by epidermis breaking through later in season; (4) common rust urediniospores are globose echinulate 24-33 um with 4-5 scattered germ pores vs. 3-4 equatorial southern rust pores. Symptoms begin as small chlorotic flecks 3-5 days post infection that enlarge and erupt as raised, powdery brick-red to cinnamon-brown uredinia containing masses of dikaryotic urediniospores. Each pustule surrounded by small chlorotic halo on susceptible hybrids; resistant hybrid reactions Type 0 immune/no visible symptoms to Type 1 small necrotic flecks no sporulation hypersensitive Rp gene reaction to Type 2 small pustules limited sporulation necrosis margins moderate resistance to Type 3/4 large sporulating pustules chlorotic halos susceptible. Alternate Oxalis aecial host cycle epidemiologically significant only in few isolated valleys southern Mexico/Guatemala where both Oxalis and winter corn grow year-round; throughout temperate North America, Europe, and highland Asia temperate epidemics are initiated by urediniospores wind-dispersed northward from tropical/subtropical overwintering corn areas (southern FL, southern TX, Mexico, Caribbean islands) on late-spring storm systems. Pustule development optimal 16-23 C; temperatures above 29 C strongly suppress common rust (the reason southern rust replaces common rust late season in southern corn belt states). Urediniospores require 3-6 hours leaf wetness (dew/fog/light rain) and 100% RH for germination; infection occurs through stomata via appressorial differentiation; incubation period 6-8 days at 20 C, 12-14 days at 15 C. About 80 pathogenic races recognized on standard differential maize lines each carrying single Rp (rust resistance) genes (Rp1-A through Rp1-Z, Rp3-Rp11). The Rp1-D gene formerly deployed in >40% commercial US hybrids was overcome by a single-step somatic recombination event in 1995-96 producing Race 1-4, and now is rarely deployed alone. Stacked Rp gene combinations (e.g. Rp1-G + Rp3-A + Rp5) confer broader more durable race specificity. Management: (1) plant resistant commercial hybrids with stacked partial quantitative resistance plus one or more Rp major genes; this is sufficient for most grain corn production scenarios eliminating fungicide need; (2) sweet corn and popcorn cultivars often highly susceptible; scout from V6 through VT, apply foliar fungicide at first incidence of pustules on third leaf above ear leaf on 5% or more of plants; FRAC 3 (tebuconazole, prothioconazole, metconazole, difenoconazole), FRAC 11 (azoxystrobin, pyraclostrobin, trifloxystrobin), FRAC 7 + 11 premixes, FRAC U8 (fluazinam) are all highly effective on common rust; (3) in seed production blocks remove alternate Oxalis weeds within 200 m where this cycle occurs; (4) in tropical maize, common rust combined with Turcicum leaf blight is a major production constraint; CIMMYT releases OPVs and hybrids with combinations of polygenic partial resistance for targeted African/Asian environments.",
+  "url": "https://extension.purdue.edu/fieldcrops/disease/corn/common-rust.html",
+  "author": "Purdue University Extension, Department of Botany and Plant Pathology",
+  "date": "2022-06-21",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rust",
+    "basidiomycota",
+    "puccinia",
+    "corn",
+    "maize",
+    "purdue"
+  ],
+  "metadata": {
+    "class_label": "corn rust",
+    "crop_slug": "corn",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 37
+  }
+}

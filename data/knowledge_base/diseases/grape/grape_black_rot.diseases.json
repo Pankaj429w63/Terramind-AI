@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "0e293b7c-f589-59fe-bdab-f986ae30e4b8",
+  "category": "diseases",
+  "source": "USDA ARS Grape Genetics Research Unit / Cornell University NYS IPM Grape Disease Guidelines",
+  "title": "Grape Black Rot (Guignardia bidwellii, anamorph Phyllosticta ampelicida)",
+  "crop": "grape",
+  "disease": "black rot",
+  "content": "Grape black rot is the most destructive and widespread fungal disease of Vitis vinifera (European wine grape) and interspecific hybrid table grape cultivars grown in the eastern and midwestern United States, southern Canada, western Europe, China, Japan, southern South America, and southern Africa. The causal organism is the ascomycete Guignardia bidwellii (Ellis) Viala & Ravaz, anamorphic stage Phyllosticta ampelicida (Engelm.) Aa (Botryosphaeriales, Phyllostictaceae). It is not present in most of California, the Mediterranean grape-growing regions with arid growing seasons, and Australia (exclusion quarantined). Yield losses of 50-100% occur annually on susceptible V. vinifera cultivars in unsprayed eastern US vineyards; even well-managed commercial vineyards typically apply 5-15 fungicide sprays per season targeting black rot. The pathogen attacks all young, succulent green grape tissues: leaves, petioles, shoots, tendrils, inflorescences (rachis, calyx, pedicels), and developing green berries; mature (veraison and later) berries are highly resistant. On leaves, the first symptoms are tiny, circular, reddish-brown lesions (1-2 mm) on the upper surface that expand to 5-15 mm with distinct dark brown margins and ashen-gray to tan necrotic centers; within the lesion centers, numerous (50-200 per lesion), small (60-200 um), embedded, globose, ostiolate black pycnidia of the Phyllosticta anamorph develop, often arranged in a single ring within the lesion margin. The pycnidia are diagnostic. On young shoots, tendrils, and inflorescence rachises, lesions are slightly sunken, elongated, purplish-black cankers 3-20 mm long with pycnidia along the lesion surface; cankers can girdle and kill young shoots. The most economically important symptom occurs on green developing berries: small, whitish-tan, circular specks develop 1-2 weeks after infection that rapidly expand into large (5-15 mm), sunken, chocolate-brown to black lesions that eventually cover the entire berry surface. Infected berries shrivel, mummify, turn hard, coal-black, and remain firmly attached to the cluster (unlike Botrytis-infected berries which are soft and often drop). Numerous embedded pycnidia erupt through the mummified berry skin. Overwintering occurs primarily in the form of pseudothecia (sexual fruiting bodies) in mummified berries on the vine floor and, to a lesser degree, in pycnidia on infected cane cankers. Ascospores are forcibly discharged from pseudothecia beginning at early grape budbreak and continuing through bloom; ascospores are the principal source of primary inoculum. Discharge and infection require extended wetting periods (at least 6-9 hours of leaf wetness or continuous rain) at temperatures of 18-27 C (65-80 F). Secondary infections are caused by splash-dispersed conidia from pycnidia on any infected green tissue, with repeated secondary cycles throughout the season under favorable wetting conditions. Latent infections established on young berries before veraison become quiescent and resume active necrosis only when berries reach 8-10 Brix sugar content or approximately 5-6 weeks after bloom, explaining the characteristic sudden appearance of berry rot near veraison on berries that appeared healthy previously. Management: (1) integrated cultural practices: remove and destroy mummified berry clusters from the vine and vine floor during dormant pruning; rake and bury mummies by shallow disking or deep cultivation before budbreak; maintain a clean weed-free vine floor; train vines to high wire bilateral cordon, vertical shoot-positioned (VSP), or Geneva Double Curtain (GDC) systems with wide inter-row spacing to maximize air movement, sun exposure, and rapid canopy drying; avoid excessive nitrogen that promotes extended succulent shoot growth. (2) genetic resistance: Vitis labrusca and V. aestivalis native American grape species (e.g., 'Concord', 'Niagara', 'Catawba', 'Delaware') have moderate to high levels of polygenic quantitative resistance derived from Gnb locus RAPD markers; most V. vinifera cultivars (e.g., 'Chardonnay', 'Pinot Noir', 'Riesling', 'Cabernet Sauvignon', 'Merlot') are highly to extremely susceptible; interspecific hybrid cultivars with native American species ancestry (e.g., 'Vignoles', 'Chambourcin', 'Noiret', 'Norton') show intermediate resistance levels. (3) fungicide programs are the principal management tool in commercial V. vinifera vineyards: a typical New York/Ohio IPM program applies sprays from immediately before bloom through 4-6 weeks post-bloom (approximately 8 spray applications in high-pressure years). Most effective single-site materials in Cornell/USDA trials: FRAC 11 QoI (azoxystrobin, pyraclostrobin, trifloxystrobin, kresoxim-methyl, fluoxastrobin; highly effective protectant + 2-3 day kickback curative activity; resistance developing slowly in some New York and Ohio populations since 2010); FRAC 7 SDHI (fluxapyroxad, boscalid, penthiopyrad, benzovindiflupyr; excellent protectant against berry infection, always tank-mix with multi-site); FRAC 3 DMI triazoles (tebuconazole, difenoconazole, myclobutanil, fenbuconazole, metconazole, prothioconazole; good to excellent protectant + kickback curative activity of up to 4 days post-infection - the best curative tools for black rot); FRAC U6 (fluopyram); FRAC 9+12 (pyrimethanil + cyprodinil; weak); multi-site protectant FRAC M3 mancozeb, FRAC M1 copper, FRAC M2 sulfur (sulfur is weak on black rot alone, adequate as tank-mix partner); FRAC 4+M3 metalaxyl-M + mancozeb is ineffective (mefenoxam only controls oomycetes, not ascomycetes). All single-site chemistries must be alternated with multi-site partners and/or mixed FRAC groups to prevent development of fungicide resistance. Organic programs rely on lime sulfur, copper (Bordeaux mixture, copper hydroxide, copper oxychloride), and sulfur applied on a strict 7-10 day schedule from budbreak through 4 weeks post-bloom, but rarely exceed 60-70% control compared to the best conventional programs in high-pressure wet years.",
+  "url": "https://ecommons.cornell.edu/bitstreams/266f7d55-54cb-4791-85ea-3a2e9396a637/download",
+  "author": "Cornell University NYS IPM Program - Grape Disease Management Guidelines / USDA ARS Grape Genetics Research Unit, Geneva NY",
+  "date": "2023-03-22",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "guignardia",
+    "phyllosticta",
+    "grape",
+    "vitis",
+    "black-rot",
+    "cornell",
+    "usda",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "grape black rot",
+    "crop_slug": "grape",
+    "disease_slug": "black_rot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 51
+  }
+}

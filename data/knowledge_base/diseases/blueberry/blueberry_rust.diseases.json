@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a21cf2f8-bb29-5c78-889c-312c514de178",
+  "category": "diseases",
+  "source": "North Carolina State University (NCSU) Extension",
+  "title": "Blueberry Rust (Thekopsora minima, syn. Pucciniastrum vaccinii)",
+  "crop": "blueberry",
+  "disease": "rust",
+  "content": "Blueberry rust, caused by the heteroecious basidiomycete rust Thekopsora minima (formerly Pucciniastrum vaccinii), affects highbush (Vaccinium corymbosum), rabbiteye (V. virgatum), and lowbush (V. angustifolium) blueberries in eastern North America, Pacific Northwest, Chile, Argentina, New Zealand, Australia, South Africa, and highland Southeast Asia. Yield reductions of 10-30% are reported on susceptible cultivars with severe premature defoliation and reduced cold-hardiness. On upper leaf surfaces, small circular to angular 1-4 mm reddish-brown lesions with purple-brown margins form; lesions may coalesce into large necrotic patches with tan center fading; on corresponding lower surfaces tiny hypophyllous light orange-to-cinnamon powdery uredinia erupt through stomata, giving the entire lower surface a rust color in heavy infections. Late-season dark brown crust-like telia form on undersides. The alternate aecial host is Tsuga canadensis (eastern hemlock) and other Tsuga species on which spermogonia and aecia develop in spring; however, the pathogen often persists asexually locally on wild evergreen Ericaceae, abandoned plantings, or on the primary host itself in warmer climates via repeating uredinial cycles on overlapping leaf flushes without needing Tsuga. Urediniospores are wind-dispersed long distances and require 6-10 hours of leaf wetness at 18-22 C for infection; secondary cycles repeat every 10-14 days. Management: (1) less susceptible highbush (Duke, Elliott, Aurora, Northland); rabbiteye generally more tolerant than highbush; (2) avoid Tsuga stands near plantings in eastern USA; (3) pruning for air circulation, drip irrigation, avoid excessive nitrogen on lush foliage; (4) fungicide programs from 50% leaf expansion through harvest on 10-14 day intervals plus post-harvest to protect late flushes, using FRAC 3 DMI (tebuconazole, propiconazole, metconazole, fenbuconazole), FRAC 11 (pyraclostrobin, azoxystrobin+difenoconazole), FRAC 7+11 premixes, FRAC M1 sulphur (avoid near oils or >30 C), copper materials in organic production, and FRAC U8 fluazinam; NCSU has developed a leaf-wetness warning model to reduce unnecessary sprays.",
+  "url": "https://content.ces.ncsu.edu/blueberry-rust",
+  "author": "NC State Extension Plant Pathology and Horticulture Departments",
+  "date": "2023-07-11",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rust",
+    "basidiomycota",
+    "thekopsora",
+    "vaccinium",
+    "blueberry",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "blueberry rust",
+    "crop_slug": "blueberry",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 16
+  }
+}

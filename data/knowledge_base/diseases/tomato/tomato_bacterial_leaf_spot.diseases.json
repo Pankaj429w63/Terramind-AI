@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "dc84d74d-77fa-5323-8769-47abf1f346d3",
+  "category": "diseases",
+  "source": "North Carolina State Extension",
+  "title": "Bacterial Spot of Pepper and Tomato",
+  "crop": "tomato",
+  "disease": "bacterial leaf spot",
+  "content": "Bacterial spot of tomato is caused by Xanthomonas species. Symptoms include water-soaked spots on leaves that become brown and may be surrounded by yellow tissue; severe disease can cause defoliation, and fruit can develop raised or scabby lesions. The disease is favored by warm, wet conditions and can be introduced on infected seed or transplants, persist in crop debris, and spread in splashing water. North Carolina State Extension recommends using disease-free seed and transplants, rotating away from tomato and pepper, removing crop debris and volunteers, avoiding overhead irrigation and handling wet plants, and following current local guidance for bactericide use.",
+  "url": "https://content.ces.ncsu.edu/bacterial-spot-of-pepper-and-tomato",
+  "author": "Matthew D. Scherer, Inga Meadows, Lindsey Henson, Ella Hinchliffe, and Sara Villani",
+  "date": "2019-02-14",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "xanthomonas",
+    "tomato",
+    "leaf-spot",
+    "seedborne",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "tomato bacterial leaf spot",
+    "crop_slug": "tomato",
+    "disease_slug": "bacterial_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 80
+  }
+}

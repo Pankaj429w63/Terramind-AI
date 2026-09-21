@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "5145bd37-ef48-532c-a3b8-1357f3e85d23",
+  "category": "diseases",
+  "source": "North Carolina State Extension",
+  "title": "Early Blight of Tomato",
+  "crop": "tomato",
+  "disease": "early blight",
+  "content": "Early blight of tomato is caused primarily by Alternaria linariae. Lesions begin on lower leaves as small brownish-black spots with characteristic concentric rings and can lead to leaf loss as disease progresses. The pathogen survives in crop debris and volunteer tomatoes, and spores can move by wind, air currents, and water splash. Disease is favored by temperatures above 80 degrees F with moderate to heavy rainfall. North Carolina State Extension recommends maintaining crop vigor, removing volunteer tomatoes, rotating for two to three years, using tolerant varieties where available, improving plant airflow with trellising and pruning of lower leaves, applying mulch, and using preventive fungicides according to label directions when needed.",
+  "url": "https://content.ces.ncsu.edu/early-blight-of-tomato",
+  "author": "Inga Meadows, Ella Hinchliffe, and Sara Villani",
+  "date": "2015-12-11",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "tomato",
+    "early-blight",
+    "leaf-spot",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "tomato early blight",
+    "crop_slug": "tomato",
+    "disease_slug": "early_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 81
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2553a825-2abb-5515-acf7-4f55edaea976",
+  "category": "diseases",
+  "source": "United States Department of Agriculture - APHIS Citrus Health Response Program",
+  "title": "Citrus Canker (Xanthomonas citri pv. citri) - Federal Pest Profile",
+  "crop": "citrus",
+  "disease": "canker",
+  "content": "Citrus canker is a devastating quarantine-significant bacterial disease of commercial citrus and related Rutaceae species, caused by the gammaproteobacterium Xanthomonas citri pv. citri (syn. X. axonopodis pv. citri; Xac). It is a List 2 EPPO pest and subject to Federal Domestic Quarantine 7 CFR 301 in the United States. The disease occurs in > 30 citrus-growing countries in Asia (China, India, Japan, Korea, Thailand, Philippines), the Americas (Argentina, Brazil, Paraguay, Uruguay, southern USA, Mexico), Australasia (Australia, PNG), Africa (Mozambique, Reunion, Comoros, Oman, Saudi Arabia), and Indian Ocean Islands. No curative control exists; once established it must be managed by area-wide integrated programs including host removal, quarantine, and copper sprays. Symptoms occur on leaves, twigs, fruit of all ages. Young lesions are slightly raised circular creamy white blister-like spots (1-3 mm) that erupt through the epidermis, turn tan-brown, and develop a distinctive rough, corky, crater-like appearance with a water-soaked yellow halo caused by xanthan polysaccharide diffusion; the halo is most visible with transmitted light on leaves. With age, lesions become spongy, corky, gray-brown with a depressed center on fruit and twigs. Severe leaf infection causes yellowing, young shoot stunting, and premature defoliation; fruit lesions are superficial extending only 1-2 mm into flavedo and white albedo (juice sacs never colonized) but result in severe grade-out, fruit drop, reduced market value. Xac is a Gram-negative 1.5-2.0 x 0.5-0.75 um motile single polar flagellum strictly aerobic catalase-positive oxidase-negative xanthomonadin-pigmented rod. At least five pathotypes: A (Asiatic, most widespread, aggressive on grapefruit/Mexican lime/sweet orange); A* (Key/Mexican lime only - Oman, Saudi Arabia, India); Aw (Wellington Key lime/alemow restricted); B (cancrosis B - Argentina/Uruguay lemon only); C (Brazil Key lime only). Xac disseminates locally by wind-blown rain splash, overhead sprinkler irrigation, dews, workers/equipment/animals when leaf surfaces are wet. Long-distance spread via infected nursery budwood, seedlings, and lesion-bearing rind fruit. It survives epiphytically up to 10^7 cfu/cm^2 on host surfaces and in lesions; does not persist long-term in soil or decaying debris away from living host tissue. Infection occurs through stomata and wounds (most importantly citrus leafminer Phyllocnistis citrella feeding galleries, the single most important entry point in South Florida and Brazil canker programs). Optimal conditions 20-30 C with >= 20 minutes free water. Management: (1) strict international/interstate quarantine + movement controls; USDA federal inspection of nursery stock under Citrus Health Response Program; (2) in established areas, area-wide sanitation plus removal of all known canker-infected trees within 575-meter (1900 ft) radius of infected residential properties (historic APHIS eradication rule); (3) windbreaks of non-citrus Casuarina / Melaleuca at 40-60 meter intervals across commercial groves reduce wind-driven rain splash by 60-90%; (4) systemic control of citrus leafminer (CLM) using spinosad, diflubenzuron, abamectin to reduce wound entry; CLM control is the single most effective practice to reduce summer canker increase in juvenile groves; (5) protective copper bactericide sprays (copper hydroxide, oxychloride, sulfate, tribasic) on 3-4 week intervals on spring/summer flush growth and fruit from petal fall to 12 weeks post-bloom; rates based on canopy volume to reduce resistance/phytotoxicity. (6) No commercial HLB-resistant transgenic citrus scion cultivars are released yet; Xa21 rice resistance gene and cecropin/attacin antibacterial genes field-trialled under USDA BRS permits; most tolerant commercial cultivars (Sun Chu Sha mandarin, Fremont mandarin, Carrizo citrange rootstock) show tolerance not immunity.",
+  "url": "https://www.aphis.usda.gov/aphis/ourfocus/planthealth/plant-pest-and-disease-programs/pests-and-diseases/citrus-canker",
+  "author": "United States Department of Agriculture - APHIS",
+  "date": "2022-11-15",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "xanthomonas",
+    "xanthomonadaceae",
+    "citrus",
+    "quarantine",
+    "usda-aphis"
+  ],
+  "metadata": {
+    "class_label": "citrus canker",
+    "crop_slug": "citrus",
+    "disease_slug": "canker",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 30
+  }
+}

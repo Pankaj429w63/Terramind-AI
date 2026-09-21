@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cddea22a-da20-5104-ac5c-59abdc6987cf",
+  "category": "diseases",
+  "source": "Virginia Cooperative Extension",
+  "title": "Angular Leaf Spot of Cucumber",
+  "crop": "cucumber",
+  "disease": "angular leaf spot",
+  "content": "Cucumber angular leaf spot is caused by Pseudomonas syringae pv. lachrymans. Virginia Cooperative Extension describes characteristic leaf lesions that are delimited by veins and notes that the bacterium can survive in seed. The publication lists resistant varieties and pesticides among management options.",
+  "url": "https://pubs.ext.vt.edu/450/450-700/450-700.html",
+  "author": "Mary Ann Hansen, Lina Rodriguez Salamanca, Elizabeth A. Bush, and Douglas Higgins",
+  "date": "2024-01-22",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "pseudomonas",
+    "angular-leaf-spot",
+    "cucumber",
+    "cucurbit",
+    "seedborne",
+    "virginia-tech"
+  ],
+  "metadata": {
+    "class_label": "cucumber angular leaf spot",
+    "crop_slug": "cucumber",
+    "disease_slug": "angular_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 39
+  }
+}

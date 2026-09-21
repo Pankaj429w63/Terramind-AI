@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "365d31d9-ce27-5849-9ec9-cdb5f85f9aec",
+  "category": "diseases",
+  "source": "University of Illinois Extension - Vegetable Production Guide",
+  "title": "Halo Blight of Beans (Pseudomonas syringae pv. phaseolicola)",
+  "crop": "bean",
+  "disease": "halo blight",
+  "content": "Halo blight is a serious seedborne bacterial disease of common bean (Phaseolus vulgaris) caused by Gram-negative gammaproteobacterium Pseudomonas syringae pv. phaseolicola. It is most severe in cool moist growing regions (16-22 C) and can cause 40-100% losses in susceptible navy and pinto bean cultivars under favorable conditions. Symptoms: (1) on leaves, small angular watersoaked translucent 1-3 mm spots on the lower surface that enlarge to necrotic brown lesions each surrounded by a diagnostic wide pale green-yellow 2-5 mm 'halo' caused by systemic translocation of the phaseolotoxin toxin that irreversibly inhibits ornithine carbamoyltransferase (OCTase) in the urea cycle causing arginine auxotrophy and chlorosis; (2) on stems and petioles, elongated reddish-brown to black streaks that may girdle and kill the growing point plus creamy bacterial ooze under humid conditions; (3) on pods, small circular watersoaked sunken reddish-brown lesions with bacterial exudate that internally discolor, shrivel, or kill seed within. Seedborne inoculum (both external micropylar coat contamination and internal cotyledon contamination) is the main primary inoculum source. Secondary spread occurs in wind-driven rain, overhead irrigation splash, cultivation equipment, and insects when foliage is wet; infection occurs through stomata and hydathodes. Nine races are recognized; Race 6 is the most common globally. Management: certified pathogen-indexed seed produced in low-pressure arid seed regions; 2-3 year crop rotation away from Phaseolus hosts; clean tillage to bury debris; avoid overhead irrigation and field operations when foliage is wet; resistant cultivars carrying Pse-1 through Pse-9 R-genes (Pse-4 most widely deployed); copper-based bactericides (copper hydroxide, copper oxychloride) at 5-7 day intervals beginning at first trifoliate, although they cannot compensate for high seedborne inoculum; in organic production, copper combined with plant defense elicitors acibenzolar-S-methyl or chitosan.",
+  "url": "https://extension.illinois.edu/vegguide/beets-beans-and-peas/diseases-beans",
+  "author": "University of Illinois Extension, Department of Crop Sciences",
+  "date": "2023-06-14",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "pseudomonas",
+    "halo-blight",
+    "bean",
+    "seedborne",
+    "phaseolotoxin",
+    "illinois"
+  ],
+  "metadata": {
+    "class_label": "bean halo blight",
+    "crop_slug": "bean",
+    "disease_slug": "halo_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 9
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "3c184de9-5539-5e4c-b05c-f841cba71f7d",
+  "category": "diseases",
+  "source": "North Carolina State Extension",
+  "title": "Foliar Fungal Diseases on High Tunnel and Greenhouse Tomatoes",
+  "crop": "tomato",
+  "disease": "leaf mold",
+  "content": "Tomato leaf mold is caused by Passalora fulva and is most important in humid protected production. Symptoms begin as pale-yellow areas on upper leaf surfaces; olive-green to gray-brown velvety growth develops on the corresponding lower surface. Severe infections can cause leaves to yellow, dry, and drop. North Carolina State Extension recommends reducing leaf wetness and relative humidity through ventilation and spacing, avoiding practices that prolong leaf wetness, removing infected plant material, sanitizing production areas, and selecting resistant cultivars where available.",
+  "url": "https://content.ces.ncsu.edu/foliar-fungal-diseases-on-high-tunnel-and-greenhouse-tomatoes",
+  "author": "Matthew D. Scherer, Inga Meadows, Ella Hinchliffe, and Sara Villani",
+  "date": "2020-05-04",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "passalora",
+    "tomato",
+    "leaf-mold",
+    "greenhouse",
+    "high-tunnel",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "tomato leaf mold",
+    "crop_slug": "tomato",
+    "disease_slug": "leaf_mold",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 84
+  }
+}

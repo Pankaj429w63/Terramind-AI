@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "3d8766cb-dfef-5a58-8d8c-38ebf5d9a1b3",
+  "category": "diseases",
+  "source": "Michigan State University Extension",
+  "title": "Carrot Cavity Spot (Pythium violae, Globisporangium) - Root Disease Fact Sheet",
+  "crop": "carrot",
+  "disease": "cavity spot",
+  "content": "Cavity spot is the most important soilborne root disease of carrot (Daucus carota var. sativus), characterized by discrete sunken elliptical to circular lesions on the mature taproot that render the crop unmarketable for fresh-cut and bagged trade. Present in all major carrot-growing regions (MI, TX, CA, WA, WI; Canada, UK, Netherlands, France, Israel, Japan, Australia); annual losses are 10-30% of marketable yield in the USA due to culling and grading costs. Primary causal agent is the slow-growing oomycete Pythium violae (Pythium clade 10; syn. Globisporangium violae after 2017 taxonomic split of paraphyletic Pythium into Pythium s.s., Phytopythium, and Globisporangium). Other Globisporangium species (G. sylvaticum, G. intermedium, G. irregulare, G. ultimum, P. sulcatum) produce identical cavity-like lesions but are usually associated with damping-off and fibrous root rot. Symptoms begin as 1-3 mm gray-brown to black slightly sunken lesions at lateral root emergence points of the taproot, oriented transversely across the root expanding to 5-15 mm wide and 1-5 mm deep producing a crater limited to periderm and outer cortex only; the stele is never invaded unlike bacterial soft rot or Sclerotium rot. Lesions are most abundant on the lower half of the taproot and are often not visible until roots are washed at harvest. P. violae produces oospores, sporangia, and zoospores in soil; hyphae infect feeder roots progressing to adjacent taproot epidermal cells. Disease severity increases with continuous carrot monoculture due to oospore buildup in soil; first-year carrots in a rotation rarely show cavity spot. Infection is favored by cold (8-18 C) heavy poorly-drained soils pH 6.0-7.0 during taproot expansion; early carrots in cool springs and late-harvested carrots remaining in cold soil into fall develop more lesions. Management: (1) 4+ year rotations away from carrots, parsley, celery, parsnip (all P. violae hosts); avoid 1-year rotations even with cover crops; (2) subsurface tillage, raised beds to improve internal drainage, avoid plow-layer compaction; (3) tolerant/resistant F1 hybrids (Navajo, Topcut, Yaya, Bolero, Sytan, Nandrin, Maestro, Apache rated moderately resistant in US trials); (4) in-furrow or banded soil oomycides mefenoxam (FRAC 4) and/or cyazofamid (FRAC 21) at planting, noting that mefenoxam-resistant P. violae populations are widespread in many production areas and must be monitored; (5) long-term Brassica juncea mustard or Raphanus sativus oilseed radish biofumigation cover crops incorporated green reduce oospore inoculum via glucosinolate hydrolysis, providing partial control comparable to a moderate soil mefenoxam rate in MSU trials; (6) do not over-apply phosphate fertilizers; elevated P is associated with increased cavity spot in UK and US surveys.",
+  "url": "https://www.canr.msu.edu/resources/carrot-disease-cavity-spot",
+  "author": "Michigan State University Extension, Department of Plant, Soil and Microbial Sciences",
+  "date": "2022-02-17",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "pythium",
+    "globisporangium",
+    "carrot",
+    "root-disease",
+    "msu"
+  ],
+  "metadata": {
+    "class_label": "carrot cavity spot",
+    "crop_slug": "carrot",
+    "disease_slug": "cavity_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 21
+  }
+}

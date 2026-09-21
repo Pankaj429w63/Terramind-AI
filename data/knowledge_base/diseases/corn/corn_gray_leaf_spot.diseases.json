@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9cf1ef3c-7d0d-5c81-8d6e-36fdab6af3ff",
+  "category": "diseases",
+  "source": "Crop Protection Network (CPN) joint publication Iowa State/UIUC/UMN/USDA",
+  "title": "Gray Leaf Spot of Corn (Cercospora zeae-maydis / C. zeina)",
+  "crop": "corn",
+  "disease": "gray leaf spot",
+  "content": "Gray leaf spot (GLS) is caused by ascomycetes Cercospora zeae-maydis (Group I - predominant North America, Brazil, southern Africa) and Cercospora zeina (Group II - China, Kenya/Uganda/Zambia, mid-Atlantic USA). It is the most yield-limiting foliar maize (Zea mays L.) disease in the United States, and a major constraint in sub-Saharan Africa, China, Mexico, Central/South America. Severe disease can reduce grain yields by 20-40% on susceptible hybrids; up to 70% in no-till continuous maize systems IA/IL/IN/OH when onset is at or before tasseling (VT-R1). Initial symptoms on older lower leaves 14-21 days after infection are small pinpoint tan-to-brown lesions with chlorotic halos easily confused with early eyespot, anthracnose, or northern leaf blight; diagnostic GLS feature develops 5-10 days later: lesions expand into narrow, rectangular, vein-limited 'brick-shaped' or 'tablet-shaped' (1-2 mm wide x 5-50 mm long) lesions parallel to veins that do NOT cross them. Lesions are grayish-tan to brown on upper surface; on lower surface diagnostic gray velvety layer of slender multi-septate pigmented curved Cercospora conidia (70-200 um x 4-6 um, 4-15 septa) borne on dark fasciculate conidiophores. On susceptible hybrids, lesions coalesce extensively producing large necrotic blighted areas that kill entire leaf blades. Disease progresses rapidly from lower canopy upward after tasseling when canopy is closed and dew wetness is highest. Principal virulence factor is photoactivated perylenequinone toxin cercosporin generating reactive oxygen species causing lipid peroxidation and cell membrane damage. Both species overwinter in maize residue soil-surface as stromata, pseudothecia, mycelium; no soilborne survival beyond 12-18 months post decomposition. In spring V5-V8 stages mature pseudothecia forcibly eject filiform multi-septate ascospores under warm humid 24-28 C, RH >90% and prolonged 11-15 hours leaf wetness required (GLS warning model uses wetness duration+temperature index). Disease is monocyclic primary inoculum origin but polycyclic via repeated splash/wind-dispersed conidia on 14-21 day canopy cycle. Management: (1) crop rotation and tillage: 1+ year corn-soybean/small grains/fallow rotation reduces inoculum by promoting residue decomposition; no-till continuous corn has 2-5x higher GLS, requiring minimum 2-year rotation for zero-till; (2) resistant hybrids are most cost-effective and sustainable practice. GLS resistance is primarily polygenic/quantitative with many small-effect QTL (bins 1.06, 2.04, 3.04, 4.08, 5.03, 5.04, 8.06) plus a few major R-genes (Rgs1 from teosinte introgression). Commercial hybrids rated 1-9 on standard scale; choose hybrids rated >= 5 medium-pressure fields and >= 7 continuous no-till fields; (3) foliar fungicides: apply between VT (tassel) and R2 (blister) stage if disease is at 5% severity on the leaf below ear leaf at tasseling. Highest-performing FRAC 11 (trifloxystrobin, pyraclostrobin, azoxystrobin, picoxystrobin), FRAC 7 + 11 premixes (fluxapyroxad + pyraclostrobin, benzovindiflupyr + prothioconazole, bixafen + prothioconazole + trifloxystrobin), FRAC 3 + 11 premixes (prothioconazole + trifloxystrobin, difenoconazole + azoxystrobin), with or without multi-site FRAC M3 (mancozeb) for resistance management. QoI reduced sensitivity reported in C. zeae-maydis in IA/OH/KY corn-following-corn blocks with 5+ sequential QoI-only sprays; limit to 2-3 applications/season only in mixture with alternate MOA.",
+  "url": "https://cropprotectionnetwork.org/resources/publications/gray-leaf-spot-of-corn",
+  "author": "Crop Protection Network (CPN) - joint publication of Iowa State, University of Illinois, University of Minnesota, and USDA",
+  "date": "2023-04-04",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "cercospora",
+    "ascomycota",
+    "corn",
+    "maize",
+    "gray-leaf-spot",
+    "cpn"
+  ],
+  "metadata": {
+    "class_label": "corn gray leaf spot",
+    "crop_slug": "corn",
+    "disease_slug": "gray_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 34
+  }
+}

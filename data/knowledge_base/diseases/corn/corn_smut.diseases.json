@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4a79dd6e-2983-51ef-8773-d4f11454e4b8",
+  "category": "diseases",
+  "source": "University of Nebraska-Lincoln Extension CropWatch",
+  "title": "Common Smut of Corn (Ustilago maydis) - 'Huitlacoche' Profile",
+  "crop": "corn",
+  "disease": "smut",
+  "content": "Common smut of corn (boil smut; 'huitlacoche' in Nahuatl-derived Mexican cuisine for edible immature galls) is an iconic gall-forming fungal disease of maize caused by the basidiomycete Ustilago maydis (syn. Ustilago zeae). U. maydis is a model system in molecular plant pathology, cell biology, and fungal genetics; its 20.5 Mb ~6900-gene 23-chromosome genome fully sequenced in 2006; it was the first basidiomycete in which CRISPR-Cas9 editing was demonstrated largely because of its efficient homologous recombination system; the Brunstig cycle of obligate parasitic dikaryotic mycelial growth was worked out by classic German mycologists in the early 20th century. U. maydis is found worldwide in every corn-cultivation region from sea level to 3,600 m Peruvian Andes, attacking all above-ground meristematic parts including seedling coleoptiles, leaves, stalks, tassels, ears, brace roots, and shanks. Symptomatology is dominated by conspicuous globular to elongated galls (boils) up to 15-30 cm in diameter that replace individual kernels or entire ears and tassel branches. Young galls first appear as pale green to whitish, fleshy swellings covered by a shiny glaucous host periderm; as they mature, the interior mass of hypertrophied host cells proliferates with dikaryotic mycelium, and the entire gall interior differentiates into billions of dark olive-brown to black spherical echinulate teliospores (8-12 um in diameter, ornamented with blunt rounded spines). At full maturity 4-6 weeks after infection in ear galls the periderm ruptures and powdery masses of teliospores are released. On leaves, galls are usually small (<3 cm), chlorotic-necrotic, often aborting without producing significant teliospores; severe systemic seedling infections (blight smut) can kill young plants. Tassel galls may cause partial or complete sterility and abnormal male inflorescence development. On ears, common smut galls are distinguished from Head Smut (Sporisorium reilianum) by the absence of a fibrous vascular 'skeleton' inside the gall; common smut galls are fleshy throughout. Economic impact highly variable: commercial hybrid dent corn US corn belt incidence typically <2% overall yield loss >1% rare; in seed maize, popcorn, and specialty sweet corn inbreds/heirlooms, losses 20-50% recorded in fields with high insect feeding and hail wounding. In Mexico, immature premelanized ear galls are a valued delicacy called huitlacoche that commands a 3-10x premium over corn itself, so the disease is actually promoted or induced via deliberate inoculation in some production areas. Disease cycle begins when overwintered teliospores on soil, corn debris, or seed surfaces germinate in warm 25-30 C moist conditions to produce a four-celled promycelium (basidium) bearing four oval haploid uninucleate yeast-like sporidia (b-alpha and a-alpha mating types of the b and a mating loci). Sporidia multiply by budding saprophytically on plant surfaces or in soil organic matter in a yeast-like 'sporidial stage'. When two compatible sporidia (a1b1 x a2b2) meet on a host plant surface they fuse via conjugation tubes and form the obligate parasitic dikaryotic filament that alone can penetrate and induce galls. Infection can only occur through actively-growing meristematic host tissue or through wounds such as corn borer (Ostrinia nubilalis), rootworm beetle feeding, aphid stylet wounds, hail, wind whipping, or mechanical cultivation injuries. U. maydis is not a vascular wilt pathogen; each gall is a localized infection focus. A single teliospore has capability of producing all four mating type combinations via recombination during meiosis in the promycelium, so minimal inoculum of one teliospore is enough to cause disease when it lands on a wounded plant surface near two sporidia that fuse. Management: (1) resistant hybrids most practical control; most commercial dent corn hybrids carry moderate quantitative resistance conferred by multiple minor-effect QTLs. Heirloom sweet corn, popcorn, many white corn landraces highly susceptible; (2) balanced nitrogen fertilization - excessive (>150 lb N/acre) or improperly-timed nitrogen applications increase smut severity promoting lush easily-wounded meristematic tissue; (3) reduce mechanical/insect injuries; control European corn borer, fall armyworm, corn earworm with Bt hybrids or insecticide sprays reducing natural infection courts; (4) 2-3 year crop rotation reduces soilborne teliospore loads; deep plowing accelerates teliospore decay; (5) carboxin+thiram seed treatment eliminates seedborne teliospore inoculum; (6) foliar fungicides generally ineffective because infection occurs over many tissues over a long time window; early planting to avoid tasseling during peak hail periods more reliable cultural tactic. For huitlacoche production, deliberate wound inoculation of shank side of ears at blister stage (R2) with compatible dikaryotic Ustilago culture suspension at 1 x 10^6 teliospores/ml produces consistent marketable gall formation on 60-90% of harvested ears.",
+  "url": "https://cropwatch.unl.edu/plantdisease/corn/smut",
+  "author": "University of Nebraska-Lincoln Extension, Department of Plant Pathology",
+  "date": "2022-07-12",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "basidiomycota",
+    "ustilago",
+    "smut",
+    "corn",
+    "maize",
+    "huitlacoche",
+    "unl"
+  ],
+  "metadata": {
+    "class_label": "corn smut",
+    "crop_slug": "corn",
+    "disease_slug": "smut",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 38
+  }
+}

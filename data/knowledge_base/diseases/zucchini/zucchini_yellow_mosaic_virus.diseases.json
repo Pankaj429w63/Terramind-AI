@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "12a85b64-5a7f-592e-a578-1fb49d91e36e",
+  "category": "diseases",
+  "source": "University of Maryland Extension",
+  "title": "Viruses in Cucurbits",
+  "crop": "zucchini",
+  "disease": "yellow mosaic virus",
+  "content": "Zucchini yellow mosaic virus is a potyvirus that infects cucurbit crops. University of Maryland Extension lists ZYMV among the cucurbit potyviruses. Cucurbit virus infections can cause leaf mosaic and distortion, fruit bumps or discoloration, reduced fruit size, early browning or shriveling, plant death, and reduced yields. Aphids transmit potyviruses and cucumoviruses; the source notes that insecticides do not prevent nonpersistent virus transmission.",
+  "url": "https://extension.umd.edu/resource/viruses-cucurbits",
+  "author": "Gerald (Jerry) Brust",
+  "date": "2024-10-22",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "potyvirus",
+    "zucchini",
+    "cucurbit",
+    "yellow-mosaic",
+    "aphid",
+    "umd"
+  ],
+  "metadata": {
+    "class_label": "zucchini yellow mosaic virus",
+    "crop_slug": "zucchini",
+    "disease_slug": "yellow_mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 88
+  }
+}

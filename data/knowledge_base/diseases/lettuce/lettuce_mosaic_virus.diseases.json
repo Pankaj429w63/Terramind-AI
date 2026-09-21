@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "09d89ab6-104c-53ca-bb45-b41e8670c36c",
+  "category": "diseases",
+  "source": "USDA APHIS PPQ National Pathogen Testing Laboratory / Plant Virus Biodiversity and Conservation Database",
+  "title": "Lettuce Mosaic Virus (LMV, Potyvirus, Potyviridae) on Lettuce and Asteraceae",
+  "crop": "lettuce",
+  "disease": "mosaic virus",
+  "content": "Lettuce mosaic virus (LMV) is the most important and widespread viral pathogen of cultivated lettuce (Lactuca sativa L.) worldwide, affecting all major lettuce types (crisphead iceberg, romaine cos, butterhead, buttercrunch, leaf, stem, and oilseed lettuce). LMV is classified in the genus Potyvirus (family Potyviridae, order Patatavirales) with a positive-sense single-stranded monopartite RNA genome of 10,127 nt encoding a single large 3,381 aa polyprotein cleaved by virus-encoded NIa and HC-Pro proteases into 11 mature functional proteins. The virus occurs in all major lettuce-growing regions of the Americas, Europe, the Mediterranean basin, Africa, the Middle East, India, China, Japan, Australia, and New Zealand. Yield and quality losses of 10-60% are documented in susceptible cultivars in years with high aphid vector pressure; additional economic losses occur due to post-harvest shipping grade rejection of LMV-infected romaine and leaf lettuce with visible mosaic and leaf distortion symptoms. LMV has a moderately wide host range within the Asteraceae family: 120+ species in 20+ genera are naturally or experimentally infected, including endive (Cichorium endivia), escarole (C. pumilum), chicory (C. intybus), artichoke (Cynara scolymus), safflower (Carthamus tinctorius), sunflower (Helianthus annuus), and 50+ wild Asteraceae weed species (Lactuca serriola, L. virosa, Sonchus oleraceus, S. asper, Taraxacum officinale - common dandelion). Symptoms on lettuce vary with host cultivar, virus isolate (pathotype), plant age at infection, and environmental temperature: (1) systemic vein clearing and faint yellow mottling on the first 2-4 true leaves when infection occurs in the seedling stage (cotyledon to 4-leaf stage) - this 'seedling mosaic' is the most diagnostic; (2) irregular yellow and dark green mosaic mottling and mottle on all subsequent leaves; (3) leaf distortion, downward curling, crinkling, rosetting, and stunting of the entire plant on young infections; (4) in crisphead iceberg lettuce, the head may fail to form entirely or produce a small, misshapen, non-marketable head with internal brown necrotic flecks; (5) necrotic local lesions and systemic necrosis on some LMV-resistant cultivars inoculated with resistance-breaking LMV pathotype II or IV isolates; (6) plants infected after heading (late adult-plant stage) may develop only mild, subtle upper-leaf mosaic with no significant yield reduction (symptomless 'latent' carrier infections). LMV is transmitted by three principal mechanisms: (1) aphid vectors (non-persistent, stylet-borne transmission): at least 20 species of aphid vectors in the order Hemiptera, family Aphididae transmit LMV; the most important vectors globally are Myzus persicae (green peach aphid - the most efficient and widespread vector), Nasonovia ribisnigri (currant-lettuce aphid), Macrosiphum euphorbiae (potato aphid), Aphis gossypii (cotton aphid), A. fabae (black bean aphid), and Hyperomyzus lactucae (sowthistle aphid). Acquisition and inoculation occur within 10-30 seconds of aphid stylet probing of epidermal cells; the virus is retained in the distal part of the maxillary stylets for only 15-60 minutes post-acquisition; no latent period, no transovarial or transstadial passage in the vector. (2) seed transmission: LMV is transmitted in the seed coat of lettuce seed at rates of 0.1-10% depending on lettuce cultivar and LMV isolate; seedborne inoculum is the primary mechanism of long-distance international spread and the source of primary inoculum in clean commercial fields when seed lots are not virus-indexed. (3) mechanical transmission: LMV is highly sap-transmissible and is spread within a lettuce seedbed or transplant tray by workers' hands, clothing, and contaminated equipment during thinning, transplanting, and cultivation operations. It is not transmitted by pollen, dodder, or soil. Management: (1) use of virus-indexed, LMV-free certified seed produced in arid low-aphid seed-increase regions is the single most important LMV management practice; ELISA and RT-PCR testing of mother seed-stock plants and representative seed lots reduces seed transmission rates to below 0.001%, below the economic threshold for field epidemics. (2) genetic resistance: two allelic dominant resistance genes mo-1 (resistant to pathotype I and II LMV isolates, derived from L. sativa cv. 'Calmar') and mo-2 (resistant to all known pathotypes including IV and V resistance-breaking pathotypes, derived from L. virosa PIVT 1309 through interspecific introgression line 'Marrakech') are deployed in commercial lettuce hybrids; mo-1 resistance has been overcome by LMV pathotype IV isolates in the Salinas Valley CA and parts of France since 1996, so mo-2 and other new LMV R genes are being pyramided by breeding programs. (3) aphid vector management: because of the non-persistent transmission mechanism, insecticides that kill aphids only after they have already probed and transmitted (systemic neonicotinoids, most pyrethroids) have limited effect on reducing LMV spread; mineral oil sprays (1-2% horticultural oil), insecticidal soap, and anti-transpirant film-forming polymers sprayed on 5-7 day intervals physically interfere with stylet probing and reduce transmission by 50-70% in seedbeds; reflective aluminum mulches repel alate aphid migrants in open-field production. (4) weed management: remove wild Asteraceae weed hosts (prickly lettuce, sowthistle, dandelion) from field borders, transplant tray areas, and irrigation ditches before the lettuce crop emerges, as these serve as reservoirs of both LMV and aphid vectors. (5) seedbed sanitation: use only sterile, soilless transplant media; disinfect transplant tray equipment, benches, and tools between production cycles; do not handle healthy trays after handling suspect plants without hand-washing and tool-disinfestation procedures. There are no curative chemical or biological antiviral treatments available for LMV once a plant is infected.",
+  "url": "https://www.aphis.usda.gov/planthealth/seeds/downloads/lettucemosaic.pdf",
+  "author": "USDA APHIS PPQ National Plant Germplasm Quarantine Program - Seed Health Testing Laboratory",
+  "date": "2022-11-07",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "virus",
+    "potyvirus",
+    "potyviridae",
+    "ssrna",
+    "lettuce",
+    "lactuca",
+    "mosaic",
+    "aphid-vector",
+    "seed-transmitted",
+    "usda",
+    "government"
+  ],
+  "metadata": {
+    "class_label": "lettuce mosaic virus",
+    "crop_slug": "lettuce",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 58
+  }
+}

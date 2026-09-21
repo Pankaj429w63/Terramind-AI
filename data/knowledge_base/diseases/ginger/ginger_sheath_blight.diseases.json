@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "eee28ad1-eb3c-5524-98ff-ef28d9b2f138",
+  "category": "diseases",
+  "source": "Food and Agriculture Organization of the United Nations (FAO) - Crop Protection Compendium / ICAR IISR Ginger IPM",
+  "title": "Ginger Sheath Blight and Rhizome Rot Complex (Rhizoctonia solani AG-2-2, Sclerotium rolfsii, Pythium aphanidermatum)",
+  "crop": "ginger",
+  "disease": "sheath blight",
+  "content": "Ginger sheath blight and rhizome rot is the most destructive soilborne disease complex of ginger (Zingiber officinale) worldwide, with particular severity in South Asia (India, Nepal, Bangladesh, Sri Lanka), Southeast Asia (China, Thailand, Indonesia), Nigeria, and parts of the Caribbean. The disease complex is caused by a synergistic interaction of three soilborne pathogens: Rhizoctonia solani Kuhn anastomosis group AG-2-2 (teleomorph Thanatephorus cucumeris; causes sheath blight phase), Sclerotium rolfsii Sacc. (teleomorph Athelia rolfsii; causes southern blight / collar rot phase), and Pythium aphanidermatum (Edson) Fitzp. (oomycete; causes soft rhizome rot phase). Total crop losses of 50-100% are recorded annually in susceptible cultivars during high-rainfall years with poor soil drainage. Symptoms begin 2-4 months after planting as small, water-soaked, dark green to brown lesions at the base of the outermost leaf sheaths near the soil line (the collar region). Lesions expand rapidly upward along the pseudostem sheath (1-10 cm within 3-5 days) and turn reddish-brown to dark brown; the outer sheath becomes rotted and easily peels away from the inner pseudostem. Characteristic coarse, brown, septate Rhizoctonia hyphae (5-12 um diameter, right-angle branching, constricted at branch points) and small (1-3 mm) irregular white-then-brown sclerotia are visible on the rotted sheath surface and in adjacent soil. Within 10-20 days, infection spreads inward to younger leaf sheaths and down into the fleshy rhizomes causing a soft, wet, foul-smelling rhizome rot (primarily due to secondary Pythium and Erwinia bacteria entering through the Rhizoctonia necrotic lesions); entire ginger clumps collapse, wilt, turn yellow, and die. Pythium aphanidermatum acting alone produces a rapidly spreading, water-soaked, cream-to-brown soft rot of rhizomes with very little visible sheath discoloration above ground. Sclerotium rolfsii acting alone produces abundant white, cottony, radiating mycelial fans at the collar region and numerous spherical (1-2 mm diameter), mustard-seed-sized tan-to-dark-brown sclerotia superficially attached to rotted sheaths and soil. All three pathogens survive long-term (4-6 years) as sclerotia (R. solani, S. rolfsii) and thick-walled oospores (P. aphanidermatum) free in soil or embedded in infected ginger crop residue. Initial infections occur when young ginger sprouts emerge through infested soil; subsequent spread within a field is primarily by farm equipment, irrigation water, movement of infested soil, and planting of infected seed rhizomes. Management requires an integrated program because no single tactic is effective alone. (1) certified disease-free seed rhizomes from fields with no history of sheath blight/rhizome rot; seed rhizome treatment with a 30-minute dip in Mancozeb 0.3% + Streptocycline 100 ppm before storage and planting is standard. (2) long rotations (4-5 years) with non-host crops such as rice, maize, sorghum, or leguminous green manures (Crotalaria, Sesbania); avoid rotations with other susceptible crops (turmeric, potato, tomato, soybean, bean, sugarbeet). (3) soil amendments: pre-plant incorporation of neem cake (250 kg/ha), castor cake, or farmyard manure enriched with Trichoderma harzianum (T. viride, T. asperellum strains) + Pseudomonas fluorescens bio-control agents (each at 5-10 kg/ha formulated on vermiculite/charcoal carrier) reduces soil inoculum levels by 50-70% in on-farm IISR trials. (4) cultural practices: plant on raised, broad beds (30-45 cm height) with excellent surface drainage and 30-40% shade netting; avoid excessive nitrogen fertilization; do not over-irrigate; avoid cultivation during wet periods when soil sticks to equipment. (5) biological control: soil drench applications of Trichoderma viride (2x10^6 cfu/g, 5 g/liter) + P. fluorescens every 30 days beginning 30 days after planting provides equivalent reduction to one standard fungicide drench in organic production. (6) fungicide soil drenches when lesions first appear: Carbendazim 50 WP (FRAC 1) 0.1% + Mancozeb (FRAC M3) 0.25% soil drench (500 ml per plant), followed after 15 days by Metalaxyl-M + Mancozeb (Ridomil Gold MZ, FRAC 4+M3) 0.2% drench to target Pythium component.",
+  "url": "https://www.fao.org/3/cb0705en/cb0705en.pdf",
+  "author": "Food and Agriculture Organization of the United Nations (FAO), Plant Production and Protection Division, Rome",
+  "date": "2021-12-10",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "oomycete",
+    "rhizoctonia",
+    "sclerotium",
+    "pythium",
+    "ginger",
+    "sheath-blight",
+    "rhizome-rot",
+    "soilborne",
+    "fao",
+    "government"
+  ],
+  "metadata": {
+    "class_label": "ginger sheath blight",
+    "crop_slug": "ginger",
+    "disease_slug": "sheath_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 50
+  }
+}

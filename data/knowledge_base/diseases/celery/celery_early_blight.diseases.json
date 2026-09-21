@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "0281d2fe-9d16-5bee-b844-065703dfc88e",
+  "category": "diseases",
+  "source": "University of California ANR Statewide IPM Program",
+  "title": "Celery Early Blight / Cercospora Leaf Spot (Cercospora apii, Pseudocercospora)",
+  "crop": "celery",
+  "disease": "early blight",
+  "content": "Early blight of celery, also called Cercospora leaf spot, is caused by the ascomycete Cercospora apii (teleomorph Mycosphaerella apiicola, now Pseudocercospora apiicola under modern Mycosphaerellaceae systematics). The oldest known foliar celery disease reported in Europe and North America since the 1880s, now worldwide; on celery outermost oldest leaves develop small 2-3 mm circular chlorotic yellow spots enlarging to 5-10 mm tan/brown center with distinct dark purple-red border; underside of lesion bears diagnostic pale gray to brown fuzzy layer of Cercospora conidiophores and slender multi-septate hyaline/olivaceous curved 40-200 x 3-5 um conidia (3-10 septa), distinguishing it from Septoria late blight (pycnidia) and bacterial blight (oozing, no conidia). In severe infections lesions coalesce; entire leaf blades wither and die, reducing marketable petiole length and delaying harvest. The pathogen is both externally conidial contamination and internally seedborne mycelium in seed coat as primary inoculum source; secondary splash dispersal from overhead irrigation and rain via conidia; insects (aphids, leafminers) carry conidia short distances; 25-28 C, RH > 85%, >= 10 hours leaf wetness per day are optimal. The disease appears 2-3 weeks earlier than Septoria apiicola late blight (hence 'early' blight) although both coexist mid-season in moist regions. Management: (1) healthy disease-tested seed; 48 C x 30 min hot water plus thiram + captan or prothioconazole seed treatment; (2) minimum 3-year crop rotations between celery crops; destroy volunteer celery and wild Apium weeds; (3) greenhouse transplants: sub-irrigation, avoid overhead misting, apply one mancozeb + copper spray before transplanting; (4) drip or furrow irrigation if possible; overhead sprinklers if used must be early morning so leaves dry by midday; (5) foliar fungicides on 7-14 day interval at first symptom through 2 weeks pre-harvest: alternating FRAC M3 (mancozeb, maneb, captan), FRAC M1 (copper), FRAC 11 (azoxystrobin, pyraclostrobin), FRAC 3 (propiconazole, difenoconazole, tetraconazole), and FRAC 7 + 11 premixes (fluxapyroxad + pyraclostrobin); QoI resistance (FRAC 11) is widespread in C. apii populations in USA, Europe, Australia, so never use solo FRAC 11; always mix with multi-site partner. Partial quantitative resistance in modern green/golden F1 hybrids (Tango, Green Bay, D'Artagnan) in US trials.",
+  "url": "https://www2.ipm.ucanr.edu/agriculture/celery/Early-Blight/",
+  "author": "University of California ANR Statewide IPM Program",
+  "date": "2023-12-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "cercospora",
+    "ascomycota",
+    "celery",
+    "early-blight",
+    "ucanr"
+  ],
+  "metadata": {
+    "class_label": "celery early blight",
+    "crop_slug": "celery",
+    "disease_slug": "early_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 25
+  }
+}

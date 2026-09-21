@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9a85777e-ce7d-54e2-8b0d-cffd8287bbb2",
+  "category": "diseases",
+  "source": "University of Illinois Extension / University of Minnesota Extension Cucurbit IPM",
+  "title": "Bacterial Wilt of Cucurbits (Erwinia tracheiphila) on Cucumber and Muskmelon",
+  "crop": "cucumber",
+  "disease": "bacterial wilt",
+  "content": "Bacterial wilt is the most destructive vascular wilt of cantaloupe (Cucumis melo var. cantalupensis) and cucumber (Cucumis sativus) in the midwestern and eastern United States, caused by the enterobacterium Erwinia tracheiphila (syn. Pantoea tracheiphila, recently reclassified to Erwiniaceae). It also affects pumpkin, squash, gourds, and some watermelon cultivars, but watermelon is usually considered highly resistant. The disease is confined to North America east of the Rocky Mountains, parts of eastern Canada, and a few isolated locations in the USSR, China, and Korea; it is not present in the western United States, Europe, or the Southern Hemisphere. Bacterial wilt killed up to 90% of muskmelon vines in parts of Illinois, Indiana, and Ohio in the 1920s; today, where striped and spotted cucumber beetle vectors are not adequately controlled, 10-70% of plants in susceptible cultivars may be killed before harvest. Symptoms first appear as a dull green flagging or wilting of individual leaves during the heat of midday; early wilting may be confused with temporary water stress or herbicide injury. Over the course of 1-7 days, the wilting becomes progressively more severe and permanent as the vascular system becomes invaded; eventually the entire vine or entire plant wilts and collapses, turns yellow-brown, and dies. Rapid vine death (within 7-14 days after first symptoms) is characteristic. The most diagnostic field test for bacterial wilt is the 'string test' (also called the 'snap test' or 'spaghetti test'): cut across a recently wilted stem near the crown with a clean knife, bring the two cut surfaces together slowly for 5-10 seconds, then pull them apart. If bacterial wilt is present, thin, viscous, glistening white-to-opalescent threads or strands of viscous exopolysaccharide slime 5-25 mm long will stretch between the two cut surfaces as the plant surfaces are separated. The string test is about 80% reliable on recently wilted cucumber and muskmelon vines but may give false negatives on other cucurbits or on plants wilted for more than 4-6 days. Internal examination of a longitudinally sectioned crown and lower stem reveals yellowish-brown, slimy, water-soaked vascular discoloration; the pith remains relatively firm (unlike Fusarium wilt which causes pith cavity and shredding, or southern blight with sclerotia near the soil line). E. tracheiphila overwinters exclusively in the digestive tract (gut lumen, Malpighian tubules, and hemocoel) of hibernating adult striped cucumber beetles (Acalymma vittatum) and spotted cucumber beetles / southern corn rootworms (Diabrotica undecimpunctata howardi). In spring, emerging overwintered beetles that feed on cucurbit cotyledons and young leaves transmit the bacterium to susceptible plants by depositing frass (fecal pellets) containing the bacteria on fresh feeding wounds; the bacteria then enter the plant through the feeding wounds and multiply in the xylem. The bacteria do not move through the soil, are not seedborne, and are not carried on transplants unless infested beetles have already fed on them. Cucumber and muskmelon are highly susceptible; squash, pumpkin, and gourd are moderately susceptible; watermelon and most Citrullus accessions are highly resistant or immune due to xylem morphological characteristics and induced tylose production that prevents systemic spread. Management relies almost entirely on insect vector control because there are no effective bactericides for E. tracheiphila after infection. (1) Effective cucumber beetle control: apply systemic neonicotinoid insecticides (imidacloprid, thiamethoxam, clothianidin) as transplant tray drench or in-furrow soil application at planting; this is the most consistently effective treatment because it provides 5-7 weeks of xylem-mobile beetle toxicity in the critical seedling stage when plants are most susceptible to systemic wilt. Foliar sprays of pyrethroids (bifenthrin, cyhalothrin, permethrin), carbaryl, or spinosad every 5-7 days from cotyledon expansion through fruit sizing also reduce beetle feeding but are less efficient than the systemic approach because beetles must ingest lethal doses before transmitting. (2) trap crops of highly attractive Blue Hubbard squash or Blue Ballet squash planted in perimeter rows draw beetle populations away from main crop cucumber/muskmelon; weekly sprays directed at trap-crop rows can concentrate vector control. (3) row covers of spun-bonded polyester (Reemay, Agryl) placed over plants at emergence and removed only at female anthesis provide excellent early-season protection where practical for small plantings. (4) resistant cultivars: no commercial cucumber or muskmelon cultivars are fully immune to bacterial wilt; the cucumber hybrids 'Saladin', 'Rocky', 'Dasher II', 'Thunder', and a few others show quantitative partial resistance that slows symptom development. (5) prompt removal and destruction of wilted plants from the field to prevent beetles from feeding on heavily colonized tissues and increasing inoculum levels in local beetle populations. Antibiotic sprays (streptomycin, oxytetracycline) have not provided reliable control in university trials.",
+  "url": "https://extension.illinois.edu/vegguide/cucurbits/diseases-cucumber",
+  "author": "University of Illinois Extension / University of Minnesota Extension Cucurbit Disease IPM Program",
+  "date": "2022-08-03",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "erwinia",
+    "enterobacteriaceae",
+    "wilt",
+    "cucumber",
+    "cucumber-beetle-vector",
+    "illinois"
+  ],
+  "metadata": {
+    "class_label": "cucumber bacterial wilt",
+    "crop_slug": "cucumber",
+    "disease_slug": "bacterial_wilt",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 40
+  }
+}

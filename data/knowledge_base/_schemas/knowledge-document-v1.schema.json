@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "terramind://schemas/knowledge-document-v1.schema.json",
+  "title": "TerraMind Knowledge Document",
+  "description": "Structured agricultural knowledge document for RAG ingestion.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "category",
+    "source",
+    "title",
+    "crop",
+    "content",
+    "url",
+    "author",
+    "date",
+    "region",
+    "reliability",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "document_id": {
+      "type": "string",
+      "description": "Deterministic document UUID v5 in terramind:kb namespace (category:crop_slug:disease_slug?)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "diseases",
+        "treatment",
+        "fertilizer",
+        "plant care",
+        "agriculture"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "Human-readable source identifier, e.g. USDA Extension, FAO, CABI, peer journal name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Document title for retrieval display"
+    },
+    "crop": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Crop common name in English (matched to PlantWild crop token)"
+    },
+    "disease": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Disease / condition common name in English; null for agriculture/plant care docs"
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Plain-text factual agricultural content (NOT fabricated — placeholder until sourced)."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Publicly accessible URL of the authoritative source; placeholder until sourced."
+    },
+    "author": {
+      "type": "string",
+      "description": "Author, institution or issuing body name"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date in ISO 8601 YYYY-MM-DD"
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "global",
+        "north_america",
+        "europe",
+        "asia",
+        "africa",
+        "south_america",
+        "oceania"
+      ],
+      "description": "Primary geographic applicability region"
+    },
+    "reliability": {
+      "type": "string",
+      "enum": [
+        "peer_reviewed",
+        "government",
+        "extension",
+        "industry",
+        "community",
+        "unverified"
+      ],
+      "description": "Source trust tier (higher enumeration = more authoritative)"
+    },
+    "language": {
+      "type": "string",
+      "default": "en"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      },
+      "description": "Arbitrary key/value payload passed through to the RAG vector store (Document.metadata)."
+    }
+  }
+}

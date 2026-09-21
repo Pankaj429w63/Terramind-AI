@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9bd30116-163f-5257-b5f1-4cdf678110ba",
+  "category": "diseases",
+  "source": "Plants (Basel) / National Library of Medicine PubMed Central",
+  "title": "Micropropagation of Ginger (Zingiber officinale Roscoe) 'Bentong' and Evaluation of Its Secondary Metabolites and Antioxidant Activities Compared with the Conventionally Propagated Plant",
+  "crop": "ginger",
+  "disease": "leaf spot",
+  "content": "A peer-reviewed article on ginger lists leaf spot or blast as Phyllosticta zingiberi and Pyricularia zingiberi. This record identifies those pathogen names explicitly rather than treating ginger leaf spot as a single universal diagnosis.",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8066238/",
+  "author": "Nisar Ahmad Zahid, Hawa Z. E. Jaafar, and Mansor Hakiman",
+  "date": "2021-03-26",
+  "region": "global",
+  "reliability": "peer_reviewed",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "phyllosticta",
+    "pyricularia",
+    "ginger",
+    "leaf-spot",
+    "blast",
+    "peer-reviewed"
+  ],
+  "metadata": {
+    "class_label": "ginger leaf spot",
+    "crop_slug": "ginger",
+    "disease_slug": "leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 49
+  }
+}

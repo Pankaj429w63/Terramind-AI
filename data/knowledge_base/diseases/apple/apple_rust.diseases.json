@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "dbcef254-564d-5ea6-9416-21b7131ce88f",
+  "category": "diseases",
+  "source": "Penn State Extension, Tree Fruit Production Team",
+  "title": "Cedar Apple Rust (Gymnosporangium juniperi-virginianae) on Apple",
+  "crop": "apple",
+  "disease": "rust",
+  "content": "Cedar apple rust (CAR) is the most important of three Gymnosporangium rust diseases of apple in eastern North America, caused by the heteroecious demicyclic basidiomycete G. juniperi-virginianae alternating between apple/crabapple (Malus, aecia & spermagonia) and eastern red cedar / Rocky Mountain juniper (Juniperus virginiana, J. scopulorum, telia & basidiospores). On apple, symptoms appear 1-3 weeks after petal fall as small pale yellow chlorotic spots that enlarge to bright orange-yellow lesions with red borders and tiny spermagonial dots on the upper surface; by late summer, cylindrical tube-like aecia (0.5-1 cm) erupt from the lower leaf surface and release aeciospores. Similar fruit lesions near the calyx end are larger, corky, and distorted. Severe infection causes premature defoliation and vigor decline. On juniper, distinctive green-brown spherical galls (1-4 cm) produce orange gelatinous telial horns after spring soaking rains that forcibly discharge basidiospores wind-carried 5-10 km during 4+ hour leaf wetness periods at 10-24 C. The full 24-month life cycle has no repeating uredinial stage. Management: remove nearby junipers within 1-2 km where practical; plant resistant cultivars (Freedom, Liberty, Enterprise, Priscilla); apply protective sprays on a 7-10 day schedule from pink through 2-3 weeks post-petal fall using FRAC 3, 7, and 11 materials timed with CAR warning infection-period models.",
+  "url": "https://extension.psu.edu/cedar-apple-rust-on-apple",
+  "author": "Penn State Extension Department of Plant Pathology & Environmental Microbiology",
+  "date": "2023-04-18",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "basidiomycota",
+    "gymnosporangium",
+    "rust",
+    "heteroecious",
+    "apple",
+    "juniper",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "apple rust",
+    "crop_slug": "apple",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 3
+  }
+}

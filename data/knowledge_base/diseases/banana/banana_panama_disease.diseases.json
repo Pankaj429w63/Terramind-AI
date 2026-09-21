@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b3a95dfc-5ce1-5e0f-b48e-30d2a21df599",
+  "category": "diseases",
+  "source": "Food and Agriculture Organization of the United Nations (FAO) - Global Banana TR4 Program",
+  "title": "Panama Disease / Fusarium Wilt of Banana (Fusarium oxysporum f. sp. cubense, incl. TR4)",
+  "crop": "banana",
+  "disease": "panama disease",
+  "content": "Fusarium wilt of banana (Panama disease) is a lethal vascular wilt caused by the soilborne ascomycete Fusarium oxysporum f. sp. cubense (Foc). It is historically the most destructive banana disease on record: it destroyed >40,000 hectares of export Gros Michel plantations in Central America and the Caribbean 1890-1960, forcing the global export industry switch to resistant Cavendish varieties that still dominate international trade today. Tropical Race 4 (Foc TR4), which is virulent on Cavendish under both tropical and subtropical conditions plus all Race 1 and Race 2 susceptible varieties, emerged in Southeast Asia in the 1990s and is now spreading globally via infected planting material, soil, and water movement, threatening Cavendish on every inhabited banana-growing continent. External symptoms are progressive yellowing and wilting along leaf margins advancing to the midrib, with petioles collapsing at the laminar junction so leaves hang like a skirt around the pseudostem. Longitudinal sections reveal the characteristic reddish-brown vascular discoloration most intense near the rhizome and tapering toward the apex. The fungus enters through feeder roots, colonizes the cortex, then invades the xylem producing microconidia, macroconidia, and chlamydospores that can persist 30+ years in fallow soil. Foc races are Race 1 (Gros Michel, Silk, Pome, Pisang Awak), Race 2 (Bluggoe cooking bananas), Subtropical Race 4 (Cavendish under cool subtropics of Taiwan/South Africa), and Tropical Race 4 (TR4). Management: strict quarantine and phytosanitary movement controls, disinfection of machinery/footbaths, certified disease-free tissue-culture plantlets, exclusion diagnostics (real-time PCR / LAMP TR4 assays), TR4-resistant Cavendish cultivars in field trials (transgenic and CRISPR non-GMO edited lines), crop rotation with non-host groundcovers and organic amendments including composts + Trichoderma to suppress inoculum, minimum tillage to preserve antagonistic soil microbiomes, and intercropping.",
+  "url": "https://www.fao.org/plant-health-action/details-events/detail-events-detail/en/c/1347284/",
+  "author": "Food and Agriculture Organization of the United Nations (FAO), Plant Production and Protection Division",
+  "date": "2023-09-11",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "fusarium",
+    "foc",
+    "wilt",
+    "banana",
+    "tr4",
+    "quarantine",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "banana panama disease",
+    "crop_slug": "banana",
+    "disease_slug": "panama_disease",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 6
+  }
+}

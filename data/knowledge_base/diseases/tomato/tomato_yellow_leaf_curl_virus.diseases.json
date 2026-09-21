@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e4dc953c-fb3d-5ba3-a61d-724eca72385b",
+  "category": "diseases",
+  "source": "North Carolina State Extension",
+  "title": "Tomato Yellow Leaf Curl Virus",
+  "crop": "tomato",
+  "disease": "yellow leaf curl virus",
+  "content": "Tomato yellow leaf curl virus is transmitted by whiteflies. Infected tomato plants can become stunted and develop upward-curled leaves with yellowing; disease can reduce fruit set and yield when plants are infected early. North Carolina State Extension recommends planting resistant varieties where available, using virus-free transplants, excluding whiteflies from production areas when practical, managing whiteflies, and removing infected plants and weed hosts that can support the virus or vector.",
+  "url": "https://content.ces.ncsu.edu/tomato-yellow-leaf-curl-virus",
+  "author": "Erik Murray, Barbara Reeves, Inga Meadows, Ella Hinchliffe, and Sara Villani",
+  "date": "2023-07-14",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "begomovirus",
+    "tomato",
+    "yellow-leaf-curl",
+    "whitefly",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "tomato yellow leaf curl virus",
+    "crop_slug": "tomato",
+    "disease_slug": "yellow_leaf_curl_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 87
+  }
+}

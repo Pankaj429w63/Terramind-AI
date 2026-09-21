@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "175344e6-1fd9-5eaf-9d5f-c4bc1f39abae",
+  "category": "diseases",
+  "source": "USDA-ARS National Plant Disease Recovery System (NPDRS)",
+  "title": "Bean Common Mosaic Virus (BCMV, Potyvirus) and BCMNV Pathogen Profile",
+  "crop": "bean",
+  "disease": "mosaic virus",
+  "content": "Bean common mosaic virus (BCMV, genus Potyvirus, family Potyviridae) is one of the most prevalent and economically important viruses of common bean (Phaseolus vulgaris L.) worldwide, causing average 10-20% yield reductions in commercial dry bean production and 50-100% severe losses when combined with Bean common mosaic necrosis virus (BCMNV) or early-season infection on susceptible cultivars. Symptoms vary by strain, genotype, and environment: systemic mosaic or mottle of irregular light and dark green patches, downward curled leaf margins, vein banding, leaf wrinkling and size reduction; whole-plant stunting, excessive branching, delayed maturity, and poor pod set; pod deformation, mottling, and reduced seed size/number on susceptible cultivars. Black root - a systemic necrosis - occurs on certain cultivars infected with BCMNV or specific BCMV strains above 30 C. BCMV has flexuous 750 nm filamentous virions with a 10 kb single positive-sense RNA genome encoding a 10-protein polyprotein (P1, HC-Pro, P3, 6K1, CI, 6K2, NIa-VPg, NIa-Pro, NIb RdRp, CP). Transmission: (1) efficient seedborne transmission at 30-80% rate depending on cultivar and stage at infection; (2) non-persistent stylet-borne aphid transmission by > 20 species including Acyrthosiphon pisum, Aphis fabae, Myzus persicae, Aphis gossypii; (3) mechanical transmission during hand pinching, farm operations, tools and clothing; (4) minor pollen transmission. 30+ pathotypes are categorized against the 7 described bc recessive resistance genes (bc-1, bc-1^2, bc-2, bc-2^2, bc-3, bc-u, bc-4) and dominant hypersensitive I gene. Management: certified virus-free seed indexed by ELISA and RT-PCR; resistant cultivars carrying stacked bc recessive genes (bc-u + bc-1^2 + bc-2^2 for broad strain protection) plus the dominant I gene, combined with bc-genes to avoid temperature-dependent systemic necrosis; reflective mulches to repel aphids, mineral oil sprays to interfere with stylet-borne transmission, and early planting to avoid peak flights; field sanitation of volunteer beans and nearby legume reservoirs; avoid overlapping succession plantings.",
+  "url": "https://www.ars.usda.gov/ARSUserFiles/20801500/Beans/BCMV%20pathogen%20profile%20NPDRS.pdf",
+  "author": "USDA-ARS National Plant Disease Recovery System, Prosser WA",
+  "date": "2021-08-12",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "virus",
+    "potyvirus",
+    "bean",
+    "seedborne",
+    "aphid-transmitted",
+    "bcmv",
+    "usda-ars"
+  ],
+  "metadata": {
+    "class_label": "bean mosaic virus",
+    "crop_slug": "bean",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 11
+  }
+}

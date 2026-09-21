@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "50240574-591c-572d-9d4a-b1953ceb7a61",
+  "category": "diseases",
+  "source": "Washington State University Hortsense",
+  "title": "Tomato Mosaic Viruses",
+  "crop": "tomato",
+  "disease": "mosaic virus",
+  "content": "Tomato mosaic diseases are associated with tomato mosaic virus and tobacco mosaic virus. Infected plants can show mottled light- and dark-green foliage, distorted leaves, reduced growth, and fruit-quality problems. These viruses are readily spread mechanically on contaminated hands, tools, and plant material; infected seed can also introduce virus. Washington State University recommends planting resistant varieties where available, using clean seed and transplants, removing infected plants, controlling volunteer plants and weeds, and disinfecting hands, tools, and equipment before working with healthy plants.",
+  "url": "https://hortsense.cahnrs.wsu.edu/fact-sheet/tomato-mosaic-viruses/",
+  "author": "Washington State University Hortsense",
+  "date": "2022-12-07",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "tobamovirus",
+    "tomato",
+    "mosaic",
+    "mechanical-transmission",
+    "wsu"
+  ],
+  "metadata": {
+    "class_label": "tomato mosaic virus",
+    "crop_slug": "tomato",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 85
+  }
+}

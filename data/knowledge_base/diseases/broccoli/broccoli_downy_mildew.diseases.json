@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "04d80e3f-099d-5ca3-82a9-80bb4c05063c",
+  "category": "diseases",
+  "source": "University of Massachusetts Amherst Center for Agriculture, Food and the Environment",
+  "title": "Downy Mildew of Cole Crops (Hyaloperonospora parasitica) on Broccoli, Cabbage, Cauliflower",
+  "crop": "broccoli",
+  "disease": "downy mildew",
+  "content": "Downy mildew of brassicas, caused by obligate biotrophic oomycete Hyaloperonospora parasitica (formerly Peronospora parasitica), affects all Brassicaceae including broccoli, cabbage, cauliflower, Brussels sprouts, kale, collards, turnip, radish, and weed relatives (Capsella, wild mustard, field pennycress) that serve as local reservoirs. On broccoli, lower surface of oldest leaves develop slightly sunken yellow-to-tan angular vein-limited necrotic spots corresponding to sparse white-to-lavender fuzzy sporangiophore growth under high humidity; lesions coalesce into V-shaped areas following veins, entire leaves brown, wilt, and drop prematurely reducing head size and photosynthetic area. Systemic spread up stems to developing heads causes internal darkening and necrosis of individual broccoli florets, downy/moldy appearance, and post-harvest softening that renders entire boxes unmarketable. On cauliflower similar infection causes black speck and curd browning. Seedling cotyledon yellowing, stunting, fuzzy lower-surface growth, and damping-off occurs in seedling flats; infected transplants introduce the disease to production fields. Lemon-shaped sporangia (20-28 x 16-20 um) borne on tree-like sporangiophores that emerge from stomata pre-dawn at RH > 95% release 4-8 biflagellate reniform zoospores within 2-3 hours of wetting. Infection requires 3-5 hours free moisture at 10-15 C with 3-5 day incubation. Thick-walled oospores (30-40 um) overwinter in debris and on seed. Management: (1) seedling sanitation is critical - steam/soilless media, sub-irrigation, horizontal airflow fans, close spacing, rogue infected plugs before transplanting; (2) avoid consecutive brassica plantings, manage cruciferous weeds in borders; (3) resistant F1 hybrids where available (pathotype specialization is high in broccoli); (4) drip irrigation, wide row spacing, avoid lush nitrogen; (5) fungicides initiated at first true leaf stage in seedbeds on 7-10 day schedule in cool moist periods: FRAC P7 (fosetyl-Al, potassium phosphite), FRAC 40 (mandipropamid, dimethomorph), FRAC 21 (cyazofamid, amisulbrom), FRAC 45 (ametoctradin), multi-site FRAC M3 (mancozeb, copper), and FRAC U15 oxathiapiprolin (extremely effective, must be mixed and alternated for resistance management; potassium bicarbonate + copper + elicitors in organic reduced severity 50-70% less than synthetics).",
+  "url": "https://ag.umass.edu/vegetable/fact-sheets/brassicas-downy-mildew",
+  "author": "UMass Amherst Center for Agriculture, Food and the Environment",
+  "date": "2023-03-06",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "hyaloperonospora",
+    "downy-mildew",
+    "broccoli",
+    "brassica",
+    "umass"
+  ],
+  "metadata": {
+    "class_label": "broccoli downy mildew",
+    "crop_slug": "broccoli",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 17
+  }
+}

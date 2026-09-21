@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "97bdf5b8-5f1a-5d18-97f7-1069c246c334",
+  "category": "diseases",
+  "source": "USDA-APHIS Citrus Health Response Program / USDA-ARS Horticultural Research Laboratory Ft. Pierce",
+  "title": "Huanglongbing (HLB / Citrus Greening) - Candidatus Liberibacter asiaticus / africanus",
+  "crop": "citrus",
+  "disease": "greening disease",
+  "content": "Citrus Huanglongbing (HLB, citrus greening, yellow shoot disease) is widely considered the most destructive bacterial disease of cultivated citrus in recorded history. Associated with three non-culturable phloem-limited Gram-negative alphaproteobacteria in genus Candidatus Liberibacter: Las (Ca. L. asiaticus, most widespread, vectored by Asian citrus psyllid Diaphorina citri, warm-tolerant 25-35 C); Laf (Ca. L. africanus, cool-subtropical southern Africa only, Trioza erytreae); Lam (Ca. L. americanus, Brazil only early 2000s, now displaced by Las). HLB first described in southern China 1919; spread to Asia/Africa 1960s; reached Sao Paulo Brazil 2004, Florida USA 2005; present in >50 countries on every inhabited citrus-growing continent. Estimated 50-80 billion USD citrus losses 2005-2025; in Florida alone commercial citrus acreage dropped 850,000 acres (2004) to 473,000 (2019); orange juice production declined 72% over the same period. HLB symptoms are caused by systemic phloem Liberibacter colonization that plugs sieve plates, causes starch overaccumulation in leaves, and disrupts carbohydrate translocation from source leaves to sink fruit/roots. Foliar symptoms most diagnostic: (1) asymmetrical blotchy mottle yellow/green patches across blades that does not follow vein boundaries and is most visible when backlit; (2) deficiency-like zinc/iron-like yellowing that is non-uniform across the canopy, typically worst on a single branch before spreading; (3) corky thickened veins, leathery texture, small pointed upright leaves on young shoots; (4) extensive premature leaf drop and sparse canopy. Fruit symptoms: (1) small lopsided poorly-colored fruit with curved misshapen axis; (2) premature fruit drop and retained small fruit that remain green at the stylar end while the stem end colors (hence 'greening'); (3) small aborted brown-stained seeds inside locules; (4) bitter off-flavor juice with high titratable acidity, low Brix, poor color that renders fruit unsuitable for juice/fresh-market. Root symptoms - often under-diagnosed - are fine feeder root necrosis appearing before extensive canopy symptoms; 30-50% of the fibrous root system dies before trees decline. Las is transmitted efficiently by the Asian citrus psyllid Diaphorina citri in persistent circulative-propagative manner: acquisition access periods as short as 15-30 min on infected plant sufficient for nymphs; Las replicates in psyllid gut/hemocoel/salivary glands; adults transmit entire lifetime (several months). Also graft-transmissible via infected budwood - main pre-certification long-distance pathway; very low vertical seed transmission and mechanical only in research. Management in commercial groves: (1) Area-wide psyllid suppression is primary tactic: dormant soil neonicotinoid drenches (imidacloprid, thiamethoxam) in young non-bearing groves; rotations of foliar organophosphates, pyrethroids, and spirotetramat; release of Tamarixia radiata parasitoid wasps (classical biocontrol well-established in Florida/Mexico); (2) plant only USDA-certified pathogen-tested budwood and nursery trees from ACP-proof screenhouse nurseries - only way to delay infection in new plantings; (3) intensive nutritional programs with enhanced soil/foliar applications of Mg, Mn, Zn, B, Fe plus gibberellic acid and antioxidants used by many Florida growers to extend productive life of infected trees but do NOT eliminate the pathogen; (4) thermotherapy (40 C x 48-96 hours) on potted trees or tarped field canopies reduces Las titer but is not curative; (5) no commercial HLB-immune citrus scion cultivar is currently available; field tolerance documented in some mandarin hybrids (Sugar Belle, LB8-9 Sugar Belle, Bingo, Tango mandarin); Carrizo citrange, US-812, US-942 rootstocks most tolerant; transgenic resistance (spinach defensin, plantibody, CRISPR SWEET transporter edits) is under USDA BRS field trials but no commercial HLB-resistant transgenic scion is presently released.",
+  "url": "https://www.aphis.usda.gov/planthealth/hlb",
+  "author": "USDA-APHIS Citrus Health Response Program / USDA-ARS Horticultural Research Laboratory Ft. Pierce FL",
+  "date": "2023-08-30",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "liberibacter",
+    "hlb",
+    "huanglongbing",
+    "citrus",
+    "psyllid-vector",
+    "usda-aphis"
+  ],
+  "metadata": {
+    "class_label": "citrus greening disease",
+    "crop_slug": "citrus",
+    "disease_slug": "greening_disease",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 31
+  }
+}

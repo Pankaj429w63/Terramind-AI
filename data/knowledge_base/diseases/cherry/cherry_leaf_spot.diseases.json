@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e51bf24c-ca7f-570f-a3fe-3122e0c5d31f",
+  "category": "diseases",
+  "source": "Michigan State University Extension - Northwest Michigan Horticulture Research Center",
+  "title": "Cherry Leaf Spot (Blumeriella jaapii, Coccomyces) on Sweet and Tart Cherry",
+  "crop": "cherry",
+  "disease": "leaf spot",
+  "content": "Cherry leaf spot (yellow leaf spot, shot hole disease) is the most economically important foliar disease of cultivated sweet cherry (Prunus avium) and tart cherry (P. cerasus) worldwide, caused by the ascomycete Blumeriella jaapii (formerly Coccomyces hiemalis; anamorph Phloeosporella padi). It is endemic in all major cherry production regions: the Great Lakes basin (Michigan, Wisconsin, New York, Ontario), Pacific Northwest (WA, OR, BC), mid-Atlantic PA NY Hudson Valley, Western Europe, Turkey, and Iran. Tart cherry cultivars (Montmorency, Balaton, English Morello) are generally more susceptible than sweet cherry (Bing, Lapins, Sweetheart moderate to severe depending on climate). Symptoms appear 1-3 weeks after spring infection as small 1-3 mm circular red-purple slightly raised spots that enlarge to 3-5 mm angular tan-brown necrotic centers with red borders; on susceptible cultivars, mature 2-3 week lesion centers dry and fall out producing characteristic shot hole. Diagnostic acervuli with white hair-like conidiophores and curved multi-septate fusiform conidia develop on the lower leaf surface inside lesions 5-10 days after lesion appearance, visible with 10x lens. Infected leaves develop generalized yellowing between lesions and drop prematurely; severe mid-summer defoliation before harvest reduces photosynthesis, fruit soluble solids/size, winter cold-hardiness of buds and wood, and predisposes trees to bacterial canker and winter injury. Leaf spot is the main driver of Michigan tart cherry production cost structure, requiring 6-10 fungicide sprays in unsprayed orchards compared to < 5 with resistant germplasm. The pathogen overwinters as stromatic mycelium and immature pseudothecia in fallen orchard-floor leaves; in spring during pink-to-petal fall period, mature asci forcibly eject 2-celled hyaline ascospores during rain events at T >= 8 C, with peak discharge at 16-20 C. Ascospores directly penetrate cuticle after >= 4 hours continuous leaf wetness at 16-24 C. Secondary inoculum acervuli from initial lesions repeat infection cycles every 10-21 days through the growing season. Management: (1) flail mowing/mulching of autumn leaf litter plus urea (50 lb N/acre) application to fallen leaves before disking reduces primary ascospore load by 70-90%; (2) MSU/Cornell/BCRI releases (USAMrs Cherry, NM-1, NM-6, MSU Choice) carry partial major-gene resistance; GiSelA rootstocks do not confer foliar resistance; (3) Michigan Cherry Leaf Spot Model (temperature + leaf wetness) calculates infection periods to time sprays; (4) standard program begins at petal fall continuing on 10-14 day intervals through 2 weeks post-harvest (critical to prevent early defoliation): best FRAC 3 + 7 (metconazole + fluxapyroxad, fenbuconazole + fluxapyroxad, difenoconazole + benzovindiflupyr premixes), FRAC 11 (trifloxystrobin, pyraclostrobin, kresoxim-methyl), FRAC U6 (fluopyram), multi-site FRAC M3 (captan, mancozeb, dodine). QoI resistance (FRAC 11) is now widespread in B. jaapii populations in Michigan, NY, WI, and Ontario orchards with 10+ years of QoI use; limit to 2-3 per season in tank-mix with multi-site partner, never consecutive.",
+  "url": "https://www.canr.msu.edu/news/cherry_leaf_spot_management_for_2023",
+  "author": "Michigan State University Extension Northwest Michigan Horticulture Research Center",
+  "date": "2023-05-18",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "blumeriella",
+    "cherry",
+    "shot-hole",
+    "defoliation",
+    "msu"
+  ],
+  "metadata": {
+    "class_label": "cherry leaf spot",
+    "crop_slug": "cherry",
+    "disease_slug": "leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 28
+  }
+}

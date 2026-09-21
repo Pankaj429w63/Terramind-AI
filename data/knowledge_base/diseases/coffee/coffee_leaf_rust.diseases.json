@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "fe79de38-eaca-5f14-88c3-7775827ff258",
+  "category": "diseases",
+  "source": "Food and Agriculture Organization of the United Nations (FAO) / World Coffee Research",
+  "title": "Coffee Leaf Rust (Hemileia vastatrix, 'Roya') - Global Epidemic Status and Management",
+  "crop": "coffee",
+  "disease": "leaf rust",
+  "content": "Coffee leaf rust (CLR / roya in Spanish) is the most important and historically devastating disease of cultivated Arabica coffee (Coffea arabica, ~60% of global production) and Canephora Robusta (C. canephora, ~40% global production). Caused by the obligate biotrophic basidiomycete rust Hemileia vastatrix (Pucciniales) native to Upper Nile plateau of Ethiopia/Sudan/Uganda where wild Arabica coevolved with it. Spread to every coffee-growing country tropical America, Asia, Africa, Oceania after the first pandemic in Ceylon (Sri Lanka) 1869-1890 destroyed the entire British colonial Arabica industry and forced the switch to tea. The new even more severe pandemic (La Roya II) swept Latin America and Caribbean 2008-2013 reducing total regional production by 15-30% (50-70% individual countries Colombia, Guatemala, Honduras, Peru, Costa Rica) causing an estimated 2.9 billion USD production/livelihood losses and displacing 2.2 million smallholder workers; a second resurgent wave 2020-2024 is driven by climate change warmer minimum winter temperatures and more frequent extended dry-wet cycles favoring uredinial infection. CLR symptoms are restricted to the lower (abaxial) leaf surface where the pathogen produces powdery orange to yellow-orange erumpent uredinial sori of dikaryotic urediniospores (26-40 x 18-28 um, globose to ovoid echinulate with smooth spot characteristic of Hemileia genus). On the corresponding adaxial (upper) leaf surface, area above each uredinium first becomes chlorotic yellow-green then necrotic brown as lesions expand; 1-3 cm irregular chlorotic patches are first visible field symptom before uredinia erupt. Severe infection >40% foliage causes premature leaf abscission starting from lowest canopy nodes and working up to productive primary fruiting wood; defoliation >20% canopy leads to reduced fruit filling, primary branch dieback ('dieback syndrome'), reduced return bloom following season, and plant death in young/stressed trees. H. vastatrix is a macrocyclic autoecious (single host) rust with full spore stages; the repeating uredinial stage is the dominant epidemiologically relevant spore. Urediniospores are wind-dispersed hundreds of km on cyclonic trade-wind trajectories; infection requires 2-8 hours free water at 15-28 C, latent period 14-28 days. The pathogen is hypervariable; > 50 physiological races have been described against nine S_H major coffee resistance genes (S_H 1-9). The pandemic Race II complex that overcame S_H 3 in Colombian Castillo/Caturra varieties drove the 2008-2013 roya crisis. Management: (1) genetic resistance most sustainable single tactic - World Coffee Research (WCR) with Cenicafe (Colombia), Embrapa (Brazil), IICAFE (Costa Rica), JIRC (Kenya), CIRAD (France) release F1 hybrids and parental stock with stacked S_H 5/6/7/8/9; Catimore and Sarchimor derived germplasm most widely planted resistant cultivars in Latin America; (2) shade agroforestry (40-60% shade cover) with timber/legume shade trees (Inga edulis, Erythrina poeppigiana, Gliricidia sepium) reduces CLR severity 30-50% via microclimate modification, increased mycoparasitic Lecanicillium/Cladosporium biocontrol, and improved tree nutrition; (3) balanced fertilization emphasis N, Cu, and silicon; Cu-based nutritional sprays also have direct fungistatic activity; (4) single vertical axis / flying-bus pruning regimes open canopy reducing wetness duration; removal of old low branches with high inoculum loads; (5) fungicides: FRAC 11 (trifloxystrobin, pyraclostrobin, azoxystrobin), FRAC 3 (cyproconazole, tebuconazole, tetraconazole, epoxiconazole), FRAC 3+11 premixes, FRAC 7 (fluxapyroxad), copper multi-site FRAC M1 (hydroxide, tribasic sulfate, oxychloride) are standard FAO/Cenicafe recommendations. Apply 2-5 sprays/year timed after main flowering and before fruiting node leaf hardening; limit FRAC 11 to 2 sprays/year with alternation to prevent QoI resistance documented in Brazil/Ecuador H. vastatrix populations; (6) biological control Lecanicillium lecanii, Bacillus subtilis, Bacillus amyloliquefaciens QST 713 registered in several countries perform best when combined with mineral oils, copper, partial resistance in agroforestry.",
+  "url": "https://www.fao.org/coffee-leaf-rust/en/",
+  "author": "Food and Agriculture Organization of the United Nations (FAO) / World Coffee Research Cenicafe Partnership",
+  "date": "2023-05-08",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rust",
+    "basidiomycota",
+    "hemileia",
+    "coffee",
+    "roya",
+    "fao",
+    "world-coffee-research"
+  ],
+  "metadata": {
+    "class_label": "coffee leaf rust",
+    "crop_slug": "coffee",
+    "disease_slug": "leaf_rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 33
+  }
+}

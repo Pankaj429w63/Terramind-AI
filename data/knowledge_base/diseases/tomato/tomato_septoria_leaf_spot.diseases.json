@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ac0fb920-2929-5736-bd78-ce98f728dd40",
+  "category": "diseases",
+  "source": "North Carolina State Extension",
+  "title": "Septoria Leaf Spot of Tomato",
+  "crop": "tomato",
+  "disease": "septoria leaf spot",
+  "content": "Septoria leaf spot of tomato is caused by Septoria lycopersici. The disease produces small circular leaf spots with dark margins and pale centers that contain dark fruiting bodies; it commonly starts on lower leaves and can cause defoliation. The pathogen survives in infected debris and volunteer plants, and spores are spread by splashing water. North Carolina State Extension recommends removing diseased material and volunteers, rotating crops, avoiding overhead irrigation and work in wet plants, improving airflow, and applying preventive fungicides only as directed on the label when disease pressure warrants them.",
+  "url": "https://content.ces.ncsu.edu/septoria-leaf-spot-of-tomato",
+  "author": "Inga Meadows, Tyler Clabby, Ella Hinchliffe, and Sara Villani",
+  "date": "2021-09-22",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "septoria",
+    "tomato",
+    "leaf-spot",
+    "defoliation",
+    "ncsu"
+  ],
+  "metadata": {
+    "class_label": "tomato septoria leaf spot",
+    "crop_slug": "tomato",
+    "disease_slug": "septoria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 86
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b6d7fef3-385f-59c4-adba-3b64866a8626",
+  "category": "diseases",
+  "source": "Penn State Extension",
+  "title": "Tomato-Potato Late Blight in the Home Garden",
+  "crop": "tomato",
+  "disease": "late blight",
+  "content": "Tomato late blight is caused by the water mold Phytophthora infestans. Penn State Extension describes pale-green to brown lesions on infected plants, downy white growth under suitable conditions, and greasy-appearing spots on fruit. The source emphasizes that the disease can affect both tomato and potato.",
+  "url": "https://extension.psu.edu/tomato-potato-late-blight-in-the-home-garden/",
+  "author": "Beth K. Gugino, Sara R. May, and Alan A. MacNab",
+  "date": "2024-07-25",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "water-mold",
+    "phytophthora",
+    "tomato",
+    "late-blight",
+    "potato",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "tomato late blight",
+    "crop_slug": "tomato",
+    "disease_slug": "late_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 82
+  }
+}

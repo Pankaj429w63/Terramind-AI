@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "23ac82d3-34b1-5f3d-9091-bf237084cd54",
+  "category": "diseases",
+  "source": "Cornell University Vegetable MD Online / Long Island Horticultural Research & Extension Center (LIHREC)",
+  "title": "Powdery Mildew of Cucurbits (Podosphaera xanthii, Golovinomyces orontii) on Cucumber, Squash, Melon",
+  "crop": "cucumber",
+  "disease": "powdery mildew",
+  "content": "Powdery mildew is the most common and most widely distributed foliar disease of cucurbits worldwide, affecting cucumber (Cucumis sativus), squash, pumpkin (Cucurbita pepo, C. moschata, C. maxima), melon (Cucumis melo), watermelon (Citrullus lanatus), and gourds. The disease is primarily caused by the obligate biotrophic ascomycete Podosphaera xanthii (formerly Sphaerotheca fuliginea; anamorphic stage Oidium subgen. Fibroidium). A second powdery mildew fungus, Golovinomyces orontii (formerly Erysiphe cichoracearum var. cichoracearum; anamorph Oidium subgen. Reticuloidium), may also occur, especially in greenhouse and high-tunnel production, but P. xanthii is the predominant species in open-field cucurbit production worldwide. Powdery mildew is estimated to reduce yields of susceptible cucurbit cultivars by 20-40% annually through reduced photosynthetic leaf area, premature defoliation, sunscald on exposed fruit, reduced fruit size and soluble solids, and incomplete fruit coloring. On all cucurbit hosts the first symptoms are faint chlorotic mottling on the upper surface of older (lower canopy) leaves; within 3-5 days a white, talcum-like powdery growth of superficial ectophytic mycelium, conidiophores, and conidia appears first on the lower (abaxial) leaf surface and then on both surfaces. In severe infections, the entire lower and upper surfaces of leaves, petioles, stems, and even pedicels and young fruit become covered in a white felt-like layer. Infected leaves eventually turn yellow, brown, wither, and die prematurely; severe defoliation before harvest is the primary cause of yield and quality losses. Unlike downy mildews, powdery mildews do not require free moisture on the leaf for infection; indeed, conidial germination is actually inhibited by free water films on leaves. The optimum conditions for infection are moderate temperatures (20-27 C / 68-81 F), moderate to high relative humidity (50-90% RH), and dense shaded canopies. The disease usually appears first in the lower shaded canopy where air movement is poor, then spreads upward. In greenhouses and high tunnels, powdery mildew is generally more severe than in the field because of more stable moderate humidity and temperature. P. xanthii produces long chains of barrel-shaped, single-celled, hyaline conidia (25-45 x 14-26 um) borne upright on upright, moderately branched conidiophores (conidia are separated by conspicuous fibrosin bodies visible with phase contrast microscopy - the defining feature separating P. xanthii from G. orontii, which lacks fibrosin bodies and has catenate conidia in two-dimensional patterns). The fungus overwinters as dark, globose, cleistothecial sexual fruiting bodies (chasmothecia 85-120 um diameter with dichotomously branched appendages and one ascus) on cucurbit crop debris and on perennial weed hosts such as common ground cherry, milkweed, burdock, and lambsquarters. Chasmothecia contain ascospores released in spring following rains; however, in much of the United States and warm temperate regions, the most important source of initial inoculum is asexual conidia wind-dispersed long distances from southern, earlier-planted cucurbit fields or from greenhouse and high-tunnel cucurbit crops. Management: (1) genetic resistance is the most important single tactic for powdery mildew control. Qualitative Pm race-specific major genes Pm-1, Pm-2, Pm-3, Pm-4, Pm-5 have been bred into commercial cucumber hybrids; they are highly effective but have been overcome by new P. xanthii races in many areas. Quantitative partial resistance (polygenic) is also available in many cucumber, pumpkin, and melon hybrids and provides more durable moderate field resistance even against new races. (2) cultural management: avoid excessive nitrogen that promotes succulent shaded growth; use wide row spacing and trellising of cucumbers to improve air movement and reduce canopy humidity; remove and destroy old lower leaves that develop initial mildew foci; avoid overhead irrigation in the evening to prevent extended dew periods; manage weeds in borders. (3) greenhouse/high tunnel environmental management: vent to minimize RH >90% periods; use horizontal airflow fans; heat at night to reduce condensation; use UV-transparent plastics where compatible with insect pollination because ultraviolet light reduces powdery mildew spore viability. (4) fungicides: conventional programs combine multi-site contact materials (sulphur FRAC M2, mineral oils VPH, potassium bicarbonate GB05, copper FRAC M1) with systemic single-SOI materials rotated or tank-mixed for resistance management. The most effective groups against cucurbit powdery mildew in Cornell LIHREC and Penn State trials are FRAC 3 (DMI: myclobutanil, tebuconazole, triflumizole, prothioconazole, difenoconazole), FRAC 11 (QoI: trifloxystrobin, pyraclostrobin, azoxystrobin, kresoxim-methyl - caution widespread QoI resistance in P. xanthii since 1999), FRAC U6 (fluopyram), FRAC 7 (SDHI: fluxapyroxad, penthiopyrad, benzovindiflupyr, pydiflumetofen), FRAC 13 (azafenidin), FRAC 50 (cyflufenamid, metrafenone), FRAC U8 (ametoctradin), FRAC 5 (quinoxyfen), and FRAC 40+45 (mefenoxam + amisulbrom are NOT effective against powdery mildews - caution, use downy-specific groups only for downy). In organic production programs based on sulfur, potassium bicarbonate, neem oil, Reynoutria sachalinensis extract, and Bacillus amyloliquefaciens provide 60-80% control compared to the best synthetic programs when applied at 7-day intervals under moderate pressure.",
+  "url": "https://blogs.cornell.edu/livegpath/gallery/cucurbits/cucurbit-powdery-mildew/",
+  "author": "Cornell University Long Island Horticultural Research & Extension Center (LIHREC) / Vegetable MD Online",
+  "date": "2024-01-18",
+  "region": "global",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "podosphaera",
+    "powdery-mildew",
+    "cucumber",
+    "cucurbit",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "cucumber powdery mildew",
+    "crop_slug": "cucumber",
+    "disease_slug": "powdery_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 42
+  }
+}

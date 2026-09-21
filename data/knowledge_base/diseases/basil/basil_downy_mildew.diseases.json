@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "dad1f29f-ec94-5982-b4af-43815e2f51fd",
+  "category": "diseases",
+  "source": "Rutgers New Jersey Agricultural Experiment Station (NJAES)",
+  "title": "Downy Mildew of Basil (Peronospora belbahrii) - Fact Sheet FS1282",
+  "crop": "basil",
+  "disease": "downy mildew",
+  "content": "Basil downy mildew is the most destructive foliar disease of sweet basil (Ocimum basilicum) worldwide. The obligate oomycete Peronospora belbahrii emerged as a global threat in 2007-2008, with simultaneous epidemics in Florida, California, New Jersey, Italy, Switzerland, and Israel spread via infected seed and transplants in the international nursery trade. Symptoms first appear on the upper surface of mature lower leaves as faint angular (vein-limited) chlorotic yellowing that resembles nitrogen deficiency; within days the pathogen produces abundant grayish-purple to brown felt-like sporangiophores and sporangia on the lower leaf surface visible with a 10x lens. Infected leaves eventually brown, curl upward, and fall from the plant; the entire canopy can be denuded within 1-2 weeks under high pressure, rendering fresh-market cut basil or pesto unmarketable. In greenhouses, systemic stem infection with blackened vascular tissue and plant death occurs. Sporangia release motile zoospores or germinate directly; infection requires only 4 hours of leaf wetness at 20-25 C. P. belbahrii is homothallic and produces thick-walled oospores in leaf tissue that may overwinter in debris and on seed. Infestation rates as low as 0.01% on seed can establish a new field focus. Management: Rutgers-bred resistant basil cultivars (Rutgers Obsession II, Devotion, Thunderstruck, Nufar - the first resistant cultivar released in 2010); certified pathogen-tested seed; greenhouse humidity management via bottom-heat dehumidification, horizontal airflow fans, and night heating; weekly preventive sprays in conventional systems with FRAC 40 (mandipropamid, dimethomorph), FRAC 21 (cyazofamid, amisulbrom), FRAC 45 (mandestrobin), or FRAC P7 phosphonates; and in organic production, resistance combined with hydrogen dioxide, neem oil, copper soaps, and potassium bicarbonate (most effective organic in trials). Hot-water seed treatment at 50 C for 20 minutes reduces seedborne inoculum.",
+  "url": "https://njaes.rutgers.edu/fs1282/",
+  "author": "Rutgers NJAES - Department of Plant Biology",
+  "date": "2022-05-02",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "peronospora",
+    "downy-mildew",
+    "basil",
+    "resistant-cultivar",
+    "rutgers"
+  ],
+  "metadata": {
+    "class_label": "basil downy mildew",
+    "crop_slug": "basil",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 7
+  }
+}

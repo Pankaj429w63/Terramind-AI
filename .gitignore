@@ -6,7 +6,15 @@
 # ------------------------------------------------------------
 
 # Datasets (raw training data — very large)
-data/
+data/*
+!data/knowledge_base/
+data/knowledge_base/*
+!data/knowledge_base/diseases/
+!data/knowledge_base/diseases/**
+!data/knowledge_base/_schemas/
+data/knowledge_base/_schemas/*
+!data/knowledge_base/_schemas/knowledge-document-v1.schema.json
+!data/knowledge_base/_schemas/trusted_sources.config.json
 datasets/
 saved_runs/
 *.zip

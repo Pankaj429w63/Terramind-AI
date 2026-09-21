@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "f08f6981-69a0-5fc7-957c-abdcf531bf2f",
+  "category": "diseases",
+  "source": "Crop Protection Network (CPN) joint publication Iowa State/UIUC/Purdue/Ohio State/USDA",
+  "title": "Northern Corn Leaf Blight (Exserohilum turcicum, Setosphaeria turcica, Helminthosporium turcicum)",
+  "crop": "corn",
+  "disease": "northern leaf blight",
+  "content": "Northern corn leaf blight (NCLB) is a destructive polycyclic foliar blight of maize caused by the ascomycete Setosphaeria turcica (anamorph Exserohilum turcicum, formerly Helminthosporium turcicum Pass. 1876). Occurs worldwide in humid maize-growing regions 18-27 C: north-central and eastern US corn belt (IA, IL, IN, OH, MN, NE, SD, WI, MI, ON/QC Canada), southeastern USA, Mexico, Colombia, Venezuela, southern Brazil, Argentina, humid mid-altitude East Africa Kenya/Uganda/Tanzania/Ethiopia, South Africa, Northeast India, Philippines, southern China. NCLB reduces grain yield by decreasing green leaf area duration during the critical grain-filling period (R1-R6); yield losses are proportional to percent leaf area blighted at 2 weeks after silking. Typical economic losses 10-20% moderate blight 10-20% LAD destroyed to 40-70% severe epidemics with disease onset tasseling or earlier. NCLB also predisposes infected stalks to Fusarium/Gibberella stalk rots depleting carbohydrate reserves increasing harvest losses and downed corn. Symptoms first appear on lower canopy (oldest) leaves 10-14 days after primary infection as long, elliptical, cigar-shaped grayish-green watersoaked lesions 2-5 cm wide by 10-30 cm long (longest lesions of any corn foliar disease); after 2-4 days lesions turn necrotic tan-brown and develop dark olive to black velvety sporulation on BOTH leaf surfaces (especially lower surface) with distinct parallel-sided rounded-end margins. Heavy pressure coalesces lesions into large necrotic areas; entire leaves die within a week producing a blighted appearance easily confused with frost/drought/Goss wilt. On susceptible dent/sweet corn cultivars lesions may develop on husks, leaf sheaths, and the shank. Pathogen produces elongated fusiform multi-septate conidia singly on dark geniculate conidiophores emerging through stomata or directly through epidermis. Overwinters as stromata, mycelium, chlamydospores in corn residue (stalks, leaves, cobs) on/near soil surface; survival 18-24 months no-till; <2% after 12 months buried residue. Primary spring infection: mature pseudothecia on overwintered debris eject ascospores on rain events; conidia from infected residue also important primary inoculum source. Conidia splash-dispersed 1-2 m from residue sources, wind-dispersed several km under thunderstorm downdrafts. Infection requires 6-18 hours leaf wetness 20-25 C; minimum 6 hours at 20 C Wisconsin Disease Survey threshold. Established disease repeats every 10-14 days progressing lower-to-upper canopy. At least 5 races (0, 1, 2, 3, N) based on avirulence genes against three qualitative dominant Ht resistance genes in maize (Ht1, Ht2, Ht3, HtN1). Race 0 historically predominant; Race 1 (overcomes Ht1) appeared mid-1990s and now most frequent US corn belt where >50% acreage carries Ht1. Race N (HtN1) predominant parts of sub-Saharan Africa. Management: (1) resistant hybrids - qualitative Ht genes (Ht1, Ht2, Ht3, HtN1, HtNB) provide race-specific protection that reduces lesion number and delays expansion until after grain filling; quantitative (partial) resistance QTL (chromosome bins 2.08, 3.06, 5.04, 6.05, 8.05, 9.03) are more durable against all races and are the main resistance mechanism in modern commercial hybrids. Plant hybrids with NCLB ratings 6-9 (1-9 scale) in continuous corn. (2) cultural: 2-year rotation non-hosts (soybean, wheat, alfalfa), tillage to bury residue, adequate N fertilization; (3) foliar fungicides: apply late vegetative V10-V12 through silking VT-R1 stages if (a) susceptible hybrid planted, (b) corn follows corn in reduced-till system, and (c) NCLB lesions present on third leaf below ear at tassel. Best in university trials: FRAC 7+11 premixes (fluxapyroxad+pyraclostrobin, bixafen+prothioconazole, benzovindiflupyr+prothioconazole, fluxapyroxad+difenoconazole), FRAC 3+11 premixes (prothioconazole+trifloxystrobin, metconazole+pyraclostrobin), and FRAC 11 alone (pyraclostrobin, trifloxystrobin). Single well-timed VT-R1 spray sufficient; rarely second spray 21-28 days on high-yield seed production fields. Sweet corn and popcorn are highly susceptible and typically require 2-3 sprays on 10-14 day schedule in high-pressure regions.",
+  "url": "https://cropprotectionnetwork.org/resources/publications/northern-corn-leaf-blight",
+  "author": "Crop Protection Network (CPN) - joint publication of Iowa State, University of Illinois, Purdue, Ohio State, and USDA",
+  "date": "2023-03-29",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "exserohilum",
+    "setosphaeria",
+    "corn",
+    "maize",
+    "northern-leaf-blight",
+    "cornell-cpn"
+  ],
+  "metadata": {
+    "class_label": "corn northern leaf blight",
+    "crop_slug": "corn",
+    "disease_slug": "northern_leaf_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 36
+  }
+}

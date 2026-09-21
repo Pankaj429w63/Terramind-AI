@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8a37b1a0-84fc-5743-9608-a00084d04bde",
+  "category": "diseases",
+  "source": "New York State IPM Program - Cornell AgriTech Apple Disease Guidelines",
+  "title": "Apple Scab (Venturia inaequalis) Management Based on the Mills Infection Period Model",
+  "crop": "apple",
+  "disease": "scab",
+  "content": "Apple scab, caused by the ascomycete Venturia inaequalis (anamorph Fusicladium pomi), is the most important apple disease in cool humid production regions (north-central Europe, eastern North America, southern Chile, New Zealand, southeastern Australia, cool highlands of Asia, Africa, and South America). On susceptible cultivars total crop loss can occur in rainy springs without sprays. Primary lesions are velvety olive-green to brown spots on leaves, petioles, blossoms, and fruit; older foliar lesions become brown and corky; fruit lesions are scabby, russeted, cracked, and permit secondary Penicillium and Botrytis rots. The pathogen overwinters as pseudothecia in fallen orchard-floor leaves undergoing meiotic development through winter; in spring after rains, mature asci forcibly eject 8-celled ascospores at temperatures >= 6 C, with peak discharge during green tip through petal fall. Discharged ascospores directly penetrate the cuticle of wet susceptible tissue after a Mills-table infection period (temperature + leaf wetness hours). Lesions appear after 9-17 days and produce conidia for secondary cycles repeating every 8-14 days throughout the growing season at 15-24 C with >6 hours wetness. Integrated management combines: leaf-litter shredding / urea application in autumn to reduce primary ascospore load by 50-90%; resistant cultivars carrying Rvi (Vf) genes (Liberty, Enterprise, Prima, Topaz, Rewena, Florina); protectant fungicide programs from green tip through terminal bud set using FRAC M3/M4 (captan, mancozeb) multi-site materials tank-mixed with low-risk FRAC 3 (DMI), FRAC 7 (SDHI), and FRAC 11 (QoI) materials rotated by label guidance to prevent resistance; curative DMI kickback sprays within 72-96 hours after missed-coverage infection events; and resistance monitoring for DMI, SDHI, and QoI reduced sensitivities in local populations.",
+  "url": "https://nysipm.cornell.edu/agriculture/fruits/tree-fruit/diseases/apple-diseases/#apple-scab",
+  "author": "Cornell University NYS IPM Program / Cornell AgriTech",
+  "date": "2024-02-20",
+  "region": "global",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ascomycota",
+    "venturia",
+    "apple",
+    "scab",
+    "mills-table",
+    "resistance-management",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "apple scab",
+    "crop_slug": "apple",
+    "disease_slug": "scab",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 4
+  }
+}

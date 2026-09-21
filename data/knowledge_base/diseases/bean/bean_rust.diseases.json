@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "26decc95-3864-5a1f-a305-a926fbc43f25",
+  "category": "diseases",
+  "source": "University of Wisconsin-Extension Division of Extension",
+  "title": "Rust of Beans (Uromyces appendiculatus) - A3780",
+  "crop": "bean",
+  "disease": "rust",
+  "content": "Bean rust is an autoecious microcyclic foliar rust of common bean (Phaseolus vulgaris) caused by the basidiomycete Uromyces appendiculatus (syn. U. phaseoli var. appendiculatus). It is found in all bean-growing regions of the Americas, Africa, Europe, and Asia, causing 15-40% typical losses in commercial dry beans; losses >70% are documented on susceptible snap beans with early infection and frequent dews. On leaves, tiny raised 1-2 mm reddish-brown powdery uredinial pustules erupt on BOTH leaf surfaces (unlike flush bacterial blight lesions), often with a narrow chlorotic halo; under heavy infection pustules coalesce to kill entire leaves. On petioles, stems, and pods similar pustules occur but are less common. In late season, uredinia convert to darker brown/black telial pustules with 2-celled teliospores for overwintering. The polycyclic repeating uredinial cycle occurs every 7-14 days at 17-27 C with >= 2-4 hours of free moisture and overnight RH > 90%. Urediniospores are dikaryotic, wind-dispersed hundreds of kilometers, and germinate via appressorium over a stoma forming a haustorium within a mesophyll cell. The pathogen is highly variable with >90 described pathogenic races worldwide that differentiate on a standard 12-line differential set carrying Ur-1 through Ur-14 major R genes. New races arise by asexual mutation and, on Tsuga alternate hosts in Asia, by sexual basidiospore recombination. Management: (1) resistant cultivars carrying effective pyramided 2-3 Ur genes (Ur-3, Ur-5, Ur-11, Ur-14, Ur-B11); (2) certified disease-free seed; (3) >= 2-year rotations with non-Phaseolus crops plus deep plowing to bury debris and volunteers; (4) weather-based infection-warning models to schedule fungicides only during high-risk periods; effective chemistries FRAC 11 QoI (azoxystrobin, pyraclostrobin, trifloxystrobin), FRAC 3 DMI (tebuconazole, myclobutanil, tetraconazole), FRAC 7 SDHI (fluxapyroxad, benzovindiflupyr, bixafen), and multi-site M3 (mancozeb, chlorothalonil, sulphur); avoid sequential single-SOI applications and tank-mix with multi-site partners because QoI and SDHI resistance has been documented in U. appendiculatus in the Americas and Africa.",
+  "url": "https://ipcm.wisc.edu/download/pubsDM/Bean-Rust-A3780.pdf",
+  "author": "University of Wisconsin-Extension Division of Extension",
+  "date": "2022-04-28",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rust",
+    "uromyces",
+    "basidiomycota",
+    "bean",
+    "polycyclic",
+    "wisconsin"
+  ],
+  "metadata": {
+    "class_label": "bean rust",
+    "crop_slug": "bean",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-21",
+    "class_index": 12
+  }
+}
