@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white" alt="Next.js 14" />
   <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/Vercel-Frontend-000000?logo=vercel&logoColor=white" alt="Vercel" />
+  <a href="https://vercel.com/pankaj429w63/terramind-ai-72q1"><img src="https://img.shields.io/badge/Vercel-Production-brightgreen?logo=vercel&logoColor=white" alt="Vercel production deployment" /></a>
   <img src="https://img.shields.io/badge/Supabase-Auth%20%7C%20Postgres-3FCF8E?logo=supabase&logoColor=white" alt="Supabase Auth and PostgreSQL" />
   <img src="https://img.shields.io/badge/Qdrant-Optional%20vector%20search-DC244C?logo=qdrant&logoColor=white" alt="Optional Qdrant vector search" />
 </p>
