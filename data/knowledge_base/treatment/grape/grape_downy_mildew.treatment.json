@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2d7f97d1-2cab-59ae-9039-4e8d227485f2",
+  "category": "treatment",
+  "source": "Cornell University, New York State Integrated Pest Management Program",
+  "title": "Grape Downy Mildew — Disease Management",
+  "crop": "grape",
+  "disease": "downy mildew",
+  "content": "Grape downy mildew (Plasmopara viticola) is managed with canopy management, vineyard sanitation and a preventive fungicide program driven by weather-based disease models. Open the canopy and manage vigour so foliage dries quickly, and reduce overwintering inoculum by destroying fallen leaves. Downy mildew is favoured by warm, wet, humid conditions; use local downy-mildew forecasting to time the first and subsequent sprays. Apply protectant fungicides (multi-site materials such as mancozeb or captan where labelled) beginning before infection and continuing through the susceptible pre-bloom, bloom, and early fruit stages, tank-mixed or alternated with single-site materials (FRAC group 4, 11, 40 and others with downy-mildew activity). Because the pathogen can develop resistance, rotate modes of action and follow all label restrictions, including pre-harvest intervals.",
+  "url": "https://nysipm.cornell.edu/agriculture/fruits/grapes/diseases/grape-downy-mildew/",
+  "author": "Cornell University, New York State Integrated Pest Management Program",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "plasmopara",
+    "downy-mildew",
+    "grape",
+    "forecasting",
+    "fungicide",
+    "nysipm"
+  ],
+  "metadata": {
+    "class_label": "grape downy mildew",
+    "crop_slug": "grape",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 52
+  }
+}

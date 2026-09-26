@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c38da16a-b161-5945-b53d-2e3f803f38c5",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Apple Production",
+  "crop": "apple",
+  "disease": null,
+  "content": "Apple is a temperate tree fruit grown commercially across the world's mid-latitude regions and is one of the most economically important deciduous fruit crops. Production is concentrated where winters are cold enough to satisfy the chilling requirement, summers are moderate, and rainfall or irrigation is adequate; in the United States the leading regions are Washington state, New York, Michigan, Pennsylvania and California, while China is by far the world's largest producer, followed by the European Union, Turkey, India and the United States. Apples are grown on size-controlling rootstocks and trained to supported systems such as the tall spindle, which allow high-density plantings, earlier bearing and better fruit quality. Typical commercial orchard yields vary widely with density, rootstock, cultivar and management, ranging from roughly 400 to 1,000 bushels per acre in mature, well-managed blocks; yields are cyclical because the crop is biennial-bearing unless thinned and managed. Because apple is a perennial crop, rotation as practised in annual cropping does not apply: instead, orchard blocks are replanted on a long cycle, and growers manage soil health between blocks using cover crops and green manures, and reduce replant disease by rotating away from apples or by soil fumigation and rootstock choice before replanting. Grass and legume cover crops are widely used in orchard alleys to improve soil structure, support traffic and provide habitat for beneficial insects, while a herbicide strip is maintained in the tree row. Apples face significant climate-adaptation challenges, including spring frosts that damage bloom, hail damage, sunburn and increasingly variable winter chill; growers respond with frost protection, shade and evaporative cooling, sunburn protectants and the selection of cultivars matched to local chill and heat conditions. The crop also faces major pest and disease pressures including fire blight, apple scab, codling moth and the invasive spotted lanternfly, requiring integrated pest management.",
+  "url": "https://extension.psu.edu/apple-production",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "apple",
+    "temperate",
+    "orchard",
+    "production",
+    "rootstock",
+    "economics"
+  ],
+  "metadata": {
+    "class_label": "apple",
+    "crop_slug": "apple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

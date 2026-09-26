@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2891144b-39c7-59f2-a53a-c1c8030af697",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO) / Penn State Extension",
+  "title": "Fruit Production and Harvesting — Tree Fruit and Stone Fruit",
+  "crop": "peach",
+  "disease": null,
+  "content": "Peach and nectarine are temperate stone fruits grown for fresh market, processing (canning and freezing) and, increasingly, for export, and they are among the most widely planted deciduous fruit crops in the world. Peaches require a distinct winter chilling period to break dormancy and bud normally, so production is concentrated in regions with cold but not severe winters and warm summers; because the trees bloom relatively early, suitable sites must also avoid spring frosts that destroy the crop. Penn State Extension's fruit production guidance stresses that site selection is the first and most important decision, because most fruit crops need plenty of sunlight through the day to produce well, and that orchard soil should be tested and amended before planting since correction afterwards is slow and difficult. The major world producers include China, which dominates world production, along with Spain, Italy, Turkey, Greece, the United States and Iran; in the United States, California dominates canning clingstone production while Georgia, South Carolina, New Jersey, Pennsylvania and other states produce fresh-market fruit. Peach production is organised around thinning and pruning as crop-load management: Penn State Extension notes that fruit trees often set more fruit than they can support, that leaving too much fruit weakens the tree and makes it more susceptible to pests, and that thinning is a highly effective crop-load management tool that improves fruit size, reduces disease spread and promotes return bloom, while pruning develops the desired tree shape, improves air circulation and increases produce quality. Yields vary by region, age and management, commonly reaching on the order of 15-30 tonnes per hectare in mature, well-managed orchards. Peach is a perennial, so rotation does not apply; instead, orchard blocks are managed on long cycles with cover crops and grass or legume alleys supporting soil health. Climate-adaptation pressures include insufficient winter chill, spring frost and hail; principal disease and pest pressures include brown rot, bacterial spot, peach leaf curl, oriental fruit moth and plum curculio.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Jayson K. Harper, Ph.D., Tara Baugher, Ph.D., and Melanie Schupp, Penn State Extension",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "peach",
+    "stone-fruit",
+    "chilling",
+    "thinning",
+    "production",
+    "processing"
+  ],
+  "metadata": {
+    "class_label": "peach",
+    "crop_slug": "peach",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

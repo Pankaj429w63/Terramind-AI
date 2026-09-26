@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ed276d01-160a-500c-bce2-295cd6bd0737",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Cercospora Leaf Spot of Eggplant — Pest Management Guidelines",
+  "crop": "eggplant",
+  "disease": "cercospora leaf spot",
+  "content": "Cercospora leaf spot of eggplant is managed with sanitation, rotation, resistant varieties and protectant fungicides. Remove and destroy infected crop residue and volunteer plants, which carry the fungus between seasons, and rotate away from eggplant and related solanaceous hosts. Provide good air movement and irrigate at the base to keep foliage dry and reduce leaf wetness that favours infection. Plant varieties with tolerance where available. When the disease is present or weather favours it, apply labelled protectant fungicides (multi-site materials alternated with single-site products) on a regular schedule and rotate modes of action. Follow the label for rate, interval and days to harvest for eggplant.",
+  "url": "https://ipm.ucanr.edu/agriculture/eggplant/cercospora-leaf-spot/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "cercospora",
+    "eggplant",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "eggplant cercospora leaf spot",
+    "crop_slug": "eggplant",
+    "disease_slug": "cercospora_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 43
+  }
+}

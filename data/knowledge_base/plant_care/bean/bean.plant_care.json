@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d5acbc3b-73fa-5e6c-ae0a-f07033474d65",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Growing Beans in Home Gardens",
+  "crop": "bean",
+  "disease": null,
+  "content": "Beans are warm-season legumes and should be planted only after the soil has warmed, because seed sown into cold, wet soil rots. UMN Extension advises planting seeds directly in the garden, usually from mid-May onward in Minnesota, in a sunny site with a well-drained, moderately fertile soil; do not soak seed before planting and avoid excessive nitrogen, because bean is a legume that fixes its own nitrogen when properly inoculated and excess nitrogen reduces pod set. Space bush beans about 2-4 inches apart in rows 18-24 inches apart, and plant pole beans in hills or rows; install poles, trellises or other supports at planting time so that pole beans can climb as they grow, which also improves air movement and reduces disease. Water beans evenly, about an inch per week, and avoid overhead watering late in the day; mulch to conserve moisture and suppress weeds. Beans need pollination by bees for good pod set, so avoid insecticide applications during bloom. Scout weekly for bean beetles, aphids, spider mites and for the beetles and caterpillars that chew pods and leaves, and watch for the foliar diseases that follow wet weather. Harvest snap beans before the seeds inside the pods bulge, pick shelling beans when pods are thin and tough but not dry, and pick dry beans when pods are dry and the beans inside rattle. Regular picking keeps plants productive; store fresh beans in the refrigerator and handle pods gently because they bruise.",
+  "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-beans",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bean",
+    "legume",
+    "spacing",
+    "trellis",
+    "harvest",
+    "pollination"
+  ],
+  "metadata": {
+    "class_label": "bean",
+    "crop_slug": "bean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

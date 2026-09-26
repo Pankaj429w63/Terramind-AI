@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c74635cb-ad3b-5041-864e-a38820d39175",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Early Blight of Celery — Pest Management Guidelines",
+  "crop": "celery",
+  "disease": "early blight",
+  "content": "Early blight (Cercospora apii) of celery is managed by sanitation, rotation and a protectant fungicide program. Remove and destroy crop residue and volunteer celery, which carry the fungus between crops, and rotate away from celery and related umbelliferous crops. Keep foliage dry with drip irrigation, and space plants for airflow. When lesions are present or weather is conducive, apply labelled fungicides protectively — multi-site materials tank-mixed or alternated with single-site products — and rotate modes of action to slow resistance. Preventative applications are far more effective than treating established infections. Follow the label for rate, interval and pre-harvest interval for celery.",
+  "url": "https://ipm.ucanr.edu/agriculture/celery/early-blight/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "cercospora",
+    "celery",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "celery early blight",
+    "crop_slug": "celery",
+    "disease_slug": "early_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 25
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "14e30d13-0183-5569-b4ba-b0dfc514f3be",
+  "category": "treatment",
+  "source": "International Rice Research Institute (IRRI) — Rice Knowledge Bank",
+  "title": "Rice Blast — Management",
+  "crop": "rice",
+  "disease": "blast",
+  "content": "Rice blast (Magnaporthe oryzae) is managed with resistant varieties, balanced fertilisation, water management, clean seed and fungicides. Plant blast-resistant or tolerant varieties and use certified clean seed; treat seed where locally recommended. Avoid excessive nitrogen, which increases susceptibility and blast severity — split nitrogen applications and base rates on soil tests. Maintain consistent flooding where possible, since alternate wetting and drying stress can increase neck blast, and avoid severe drought stress at susceptible stages. Remove and destroy crop residue and volunteer rice that carry the fungus. When blast pressure is high (for example at the neck-blast stage), apply a recommended fungicide (for example a locally registered product with blast activity) at the label rate and timing, rotating modes of action. Confirm registered products and doses with your national plant-protection authority.",
+  "url": "https://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast",
+  "author": "International Rice Research Institute (IRRI) — Rice Knowledge Bank",
+  "date": "2018-01-01",
+  "region": "asia",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "magnaporthe",
+    "blast",
+    "rice",
+    "resistant-varieties",
+    "nitrogen-management",
+    "fungicide",
+    "irri"
+  ],
+  "metadata": {
+    "class_label": "rice blast",
+    "crop_slug": "rice",
+    "disease_slug": "blast",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 69
+  }
+}

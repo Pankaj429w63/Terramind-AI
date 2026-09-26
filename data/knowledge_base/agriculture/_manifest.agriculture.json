@@ -1,0 +1,415 @@
+{
+  "category": "agriculture",
+  "rag_category": "agriculture",
+  "total_documents": 34,
+  "crops": {
+    "apple": {
+      "crop": "apple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "apple.agriculture.json",
+          "document_id": "c38da16a-b161-5945-b53d-2e3f803f38c5",
+          "crop": "apple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "banana": {
+      "crop": "banana",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "banana.agriculture.json",
+          "document_id": "84e282c7-fd01-50a5-a30f-6de9f5883ded",
+          "crop": "banana",
+          "status": "sourced"
+        }
+      ]
+    },
+    "basil": {
+      "crop": "basil",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "basil.agriculture.json",
+          "document_id": "31a23d5d-738d-5b78-aca8-ed56a96e51cf",
+          "crop": "basil",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bean": {
+      "crop": "bean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bean.agriculture.json",
+          "document_id": "630af542-c170-54ed-96df-2b918c00e478",
+          "crop": "bean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bell_pepper": {
+      "crop": "bell pepper",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bell_pepper.agriculture.json",
+          "document_id": "320ed4b4-4a40-59c6-9c6f-76b16cfd76e9",
+          "crop": "bell pepper",
+          "status": "sourced"
+        }
+      ]
+    },
+    "blueberry": {
+      "crop": "blueberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "blueberry.agriculture.json",
+          "document_id": "a8b9bb23-3fa1-5cff-b4c2-a4b2437616f5",
+          "crop": "blueberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "broccoli": {
+      "crop": "broccoli",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "broccoli.agriculture.json",
+          "document_id": "4288b541-42ec-5058-bfc8-b461ed5ed954",
+          "crop": "broccoli",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cabbage": {
+      "crop": "cabbage",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cabbage.agriculture.json",
+          "document_id": "2b20b435-c4df-572c-953b-88c42e2df9ad",
+          "crop": "cabbage",
+          "status": "sourced"
+        }
+      ]
+    },
+    "carrot": {
+      "crop": "carrot",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "carrot.agriculture.json",
+          "document_id": "fb1a0360-a6d8-5e3f-8c4c-3a1e696b1628",
+          "crop": "carrot",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cauliflower": {
+      "crop": "cauliflower",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cauliflower.agriculture.json",
+          "document_id": "8661e37f-7e55-5565-a772-61fda9f9faaa",
+          "crop": "cauliflower",
+          "status": "sourced"
+        }
+      ]
+    },
+    "celery": {
+      "crop": "celery",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "celery.agriculture.json",
+          "document_id": "0b33eed9-5b80-5008-8051-9403a94736be",
+          "crop": "celery",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cherry": {
+      "crop": "cherry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cherry.agriculture.json",
+          "document_id": "eede0e38-3c85-5fbd-94a6-df9b23c2e7fc",
+          "crop": "cherry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "citrus": {
+      "crop": "citrus",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "citrus.agriculture.json",
+          "document_id": "187764a0-f882-5792-a31a-a1d7dd1d69d4",
+          "crop": "citrus",
+          "status": "sourced"
+        }
+      ]
+    },
+    "coffee": {
+      "crop": "coffee",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "coffee.agriculture.json",
+          "document_id": "b3035e0f-0a74-5f3f-b464-70b085768bdd",
+          "crop": "coffee",
+          "status": "sourced"
+        }
+      ]
+    },
+    "corn": {
+      "crop": "corn",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "corn.agriculture.json",
+          "document_id": "48611f34-e55c-5c3d-a78f-6b9c7884a8f9",
+          "crop": "corn",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cucumber": {
+      "crop": "cucumber",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cucumber.agriculture.json",
+          "document_id": "4b867b4b-8314-5a99-97be-d3310d55931a",
+          "crop": "cucumber",
+          "status": "sourced"
+        }
+      ]
+    },
+    "eggplant": {
+      "crop": "eggplant",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "eggplant.agriculture.json",
+          "document_id": "379e3aab-7cd6-5cd7-aa3b-5389e2a10223",
+          "crop": "eggplant",
+          "status": "sourced"
+        }
+      ]
+    },
+    "garlic": {
+      "crop": "garlic",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "garlic.agriculture.json",
+          "document_id": "44c46cf6-c5b3-510f-91a2-a1cc735e95c7",
+          "crop": "garlic",
+          "status": "sourced"
+        }
+      ]
+    },
+    "ginger": {
+      "crop": "ginger",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "ginger.agriculture.json",
+          "document_id": "d585e97d-c830-5534-a2ad-6d1e38d926aa",
+          "crop": "ginger",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grape": {
+      "crop": "grape",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grape.agriculture.json",
+          "document_id": "4e975116-ae1e-5697-bac1-7271a2b3eb24",
+          "crop": "grape",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grapevine": {
+      "crop": "grapevine",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grapevine.agriculture.json",
+          "document_id": "d96d7966-8b22-51e3-946c-9358d5f60d8e",
+          "crop": "grapevine",
+          "status": "sourced"
+        }
+      ]
+    },
+    "lettuce": {
+      "crop": "lettuce",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "lettuce.agriculture.json",
+          "document_id": "99cfe3ac-ba18-5053-9a08-0768a2e455dd",
+          "crop": "lettuce",
+          "status": "sourced"
+        }
+      ]
+    },
+    "maple": {
+      "crop": "maple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "maple.agriculture.json",
+          "document_id": "4888bab2-041c-5239-a0fb-a6c34f5ebe29",
+          "crop": "maple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "peach": {
+      "crop": "peach",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "peach.agriculture.json",
+          "document_id": "2891144b-39c7-59f2-a53a-c1c8030af697",
+          "crop": "peach",
+          "status": "sourced"
+        }
+      ]
+    },
+    "plum": {
+      "crop": "plum",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "plum.agriculture.json",
+          "document_id": "d3d00fd5-ae56-5e4e-bde7-0e8690c2ec7e",
+          "crop": "plum",
+          "status": "sourced"
+        }
+      ]
+    },
+    "potato": {
+      "crop": "potato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "potato.agriculture.json",
+          "document_id": "9f4f4de5-9e1b-58e9-ab05-5a4f6927677c",
+          "crop": "potato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "raspberry": {
+      "crop": "raspberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "raspberry.agriculture.json",
+          "document_id": "86438258-e00a-5779-8944-c3945620d932",
+          "crop": "raspberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "rice": {
+      "crop": "rice",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "rice.agriculture.json",
+          "document_id": "93ce24a8-43a3-5fbf-8d93-e84d0b3c73c6",
+          "crop": "rice",
+          "status": "sourced"
+        }
+      ]
+    },
+    "soybean": {
+      "crop": "soybean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "soybean.agriculture.json",
+          "document_id": "55680803-e681-55dd-8ab3-e97aeb930160",
+          "crop": "soybean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "squash": {
+      "crop": "squash",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "squash.agriculture.json",
+          "document_id": "61d7d002-47b2-5f7b-9c8b-8d70b7b6bf80",
+          "crop": "squash",
+          "status": "sourced"
+        }
+      ]
+    },
+    "strawberry": {
+      "crop": "strawberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "strawberry.agriculture.json",
+          "document_id": "96615309-e2d7-5ac7-ad86-e97af13cf172",
+          "crop": "strawberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tobacco": {
+      "crop": "tobacco",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tobacco.agriculture.json",
+          "document_id": "a0040fd2-e63d-5f58-9333-88ba7f104497",
+          "crop": "tobacco",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tomato": {
+      "crop": "tomato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tomato.agriculture.json",
+          "document_id": "7c53976d-d907-5507-8e24-2517362e8deb",
+          "crop": "tomato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "zucchini": {
+      "crop": "zucchini",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "zucchini.agriculture.json",
+          "document_id": "8ea3c381-30f1-55a6-8a3b-14761d6d351f",
+          "crop": "zucchini",
+          "status": "sourced"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "83a179fd-0240-559a-9444-a4dde70cf8b8",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Soil Fertility and Nutrient Management for Field Crops",
+  "crop": "tobacco",
+  "disease": null,
+  "content": "Tobacco is a high-value field crop with a nutrient programme that is unusual because quality and leaf chemistry, not simply yield, drive management decisions. Penn State Extension's soil-fertility and nutrient-management guidance for field crops begins from soil testing: phosphorus, potassium and lime requirements are established from the soil test and applied before planting, since both nutrients are relatively immobile and tobacco has a comparatively shallow, fibrous root system. Nitrogen is the nutrient that most directly controls tobacco leaf yield, but excess nitrogen produces coarse, high-nitrogen leaf with poor curing and smoking quality, so nitrogen rates are kept moderate and matched to the crop's expected uptake. Potassium is required in large amounts by tobacco and is important for leaf quality, burn and disease resistance, and it is often applied in generous quantities because soils may fix potassium and because the crop removes a large amount with the harvested leaf. Magnesium and calcium status also influence leaf quality and should be confirmed by soil test, with dolomitic lime supplying both lime and magnesium where needed. Nitrogen is normally applied partly at transplanting and partly as a sidedress during early growth rather than all at once. Retain crop residue and rotate to protect soil organic matter, and follow local best-management practice on rates to avoid nitrate loss to groundwater.",
+  "url": "https://extension.psu.edu/programs/nutrient-management/educational/soil-fertility",
+  "author": "Penn State Extension (College of Agricultural Sciences), Pennsylvania Nutrient Management Program",
+  "date": "2021-09-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tobacco",
+    "nitrogen",
+    "potassium",
+    "leaf-quality",
+    "field-crop",
+    "nutrient-management"
+  ],
+  "metadata": {
+    "class_label": "tobacco",
+    "crop_slug": "tobacco",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

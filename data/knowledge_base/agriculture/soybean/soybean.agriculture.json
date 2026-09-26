@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "55680803-e681-55dd-8ab3-e97aeb930160",
+  "category": "agriculture",
+  "source": "USDA Economic Research Service (United States Department of Agriculture)",
+  "title": "Soybeans and Oil Crops",
+  "crop": "soybean",
+  "disease": null,
+  "content": "Soybean is one of the most important oilseed and protein crops in the world and is the second-largest crop by area in the United States, valued as a source of protein meal for livestock feed, vegetable oil for food and industrial use, and biodiesel. Soybeans are adapted to warm, temperate and subtropical climates and are grown as a summer annual; global production is dominated by Brazil, the United States, Argentina, China, India and Paraguay, while in the United States production is concentrated in the Midwest and Corn Belt — Illinois, Iowa, Minnesota, Indiana, Nebraska, Ohio and Missouri — with additional production in the South and eastern states. Soybean is a legume and fixes atmospheric nitrogen when properly inoculated, which makes it the outstanding rotation partner for corn: the corn-soybean rotation is the backbone of U.S. Midwest cropping systems because the soybean crop supplies nitrogen to the following corn crop, breaks pest and disease cycles and improves soil structure. Yields vary widely with region, maturity group and management, with high-yield U.S. Midwest production commonly reaching on the order of 3-4 tonnes per hectare and average global yields lower; soybean is highly responsive to management in narrow rows and with adequate moisture. Soybean ground is commonly planted to cereal rye or other cover crops over winter, which protect the soil from erosion, reduce nutrient loss and suppress weeds. The crop is economically central to U.S. agriculture and to global protein and oil markets, and the United States, Brazil and Argentina dominate world export supply. Climate-adaptation pressures include drought and heat during pod fill, waterlogging, and changes in the length of the growing season, while principal pest and disease pressures include soybean aphid, soybean cyst nematode, sudden death syndrome, soybean rust, white mould and frogeye leaf spot.",
+  "url": "https://www.ers.usda.gov/topics/crops/soybeans-and-oil-crops/",
+  "author": "USDA Economic Research Service (United States Department of Agriculture)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "soybean",
+    "oilseed",
+    "nitrogen-fixation",
+    "corn-rotation",
+    "export",
+    "usda-ers"
+  ],
+  "metadata": {
+    "class_label": "soybean",
+    "crop_slug": "soybean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

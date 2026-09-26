@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8ea3c381-30f1-55a6-8a3b-14761d6d351f",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 7. Cucurbit Production (Vegetable Production Handbook of Florida)",
+  "crop": "zucchini",
+  "disease": null,
+  "content": "Zucchini is a summer squash and a warm-season cucurbit harvested immature, grown for fresh market and increasingly for value-added and processed products, and it is produced throughout temperate and subtropical regions where a warm growing season is available. Zucchini is the most widely grown summer squash and is produced both in the open and under high tunnels and protected culture, which extend the season and improve fruit quality; production is limited by frost and cool weather, which cause poor fruit set and misshapen fruit, so it is concentrated in warm climates and in seasonal windows that avoid cold. In the United States the major producing states include Florida, Georgia, California, Michigan, New York and the Carolinas, while major world producers include China, India, Ukraine, Turkey, Italy, Spain and Mexico. In Florida, cucurbits including zucchini are grown as warm- and cool-season crops on the state's sandy soils, and the Vegetable Production Handbook gives the state's planting dates, recommended cultivars and approved pesticide options. Zucchini is commonly produced on raised, often fumigated beds with plastic mulch and drip irrigation, which warm the soil, retain moisture and reduce fruit rot, and the crop is harvested repeatedly through a long picking window, which makes timely picking essential to keep plants productive and fruit tender. Yields are high in well-managed crops, commonly on the order of 15-40 tonnes per hectare over the season. Cucurbits share pests and diseases and should be rotated away from other cucurbits, alternating with cereals, legumes and non-cucurbit vegetables to break disease cycles, and cover crops are used before planting to improve soil and organic matter. Zucchini is economically important as a fast-turnover fresh-market vegetable with a long harvest window, and its production risks include powdery and downy mildew, squash bug, squash vine borer, cucumber beetles and aphid-transmitted viruses, with adaptation centred on protected culture, resistant cultivars and warm-season timing.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV123",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "zucchini",
+    "summer-squash",
+    "cucurbit",
+    "plastic-mulch",
+    "rotation",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "zucchini",
+    "crop_slug": "zucchini",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

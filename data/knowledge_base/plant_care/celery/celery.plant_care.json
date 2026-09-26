@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cb047193-b4e3-52bc-a02d-c90aa24be5a0",
+  "category": "plant care",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Celery and Cool-Season Vegetable Crop Culture in the Florida Garden",
+  "crop": "celery",
+  "disease": null,
+  "content": "Celery is a cool-season vegetable with a long growing season, a shallow root system and a high, continuous demand for water and nutrients, and the Florida Vegetable Gardening Guide published by UF/IFAS Extension treats it as a cool-weather crop in the home garden. Select a sunny site and prepare the soil well before planting, working in organic matter and adjusting pH to the range best for vegetable gardens on sandy soil, generally 5.8-6.3; have the soil tested so that lime, if needed, is applied two to three months before planting and thoroughly mixed to a depth of six to eight inches. Celery is normally grown from transplants rather than direct-seeded seed, and transplants should be healthy, free of insects and disease symptoms and not already flowering when they are set out. Set celery so that the rows are not crowded, because good air movement and even spacing reduce the foliar disease to which this shallow-rooted crop is prone; the guide advises rotating vegetables so that the same crop or plant family is not grown repeatedly in the same ground, and turning the soil well in advance of planting to discourage soil insects. Because the root system is shallow, celery cannot forage widely: keep the soil constantly and evenly moist and water deeply enough to wet the root zone, since both water and nutrient shortages cause small, pithy stalks and physiological disorders, and irregular moisture is associated with blackheart. Control weeds around and within the garden by mulching and hand-pulling, because weeds harbour the insects and diseases that attack celery, and choose adapted varieties with resistance or tolerance to nematodes and common diseases. Scout the crop through the season for the insects and diseases that thrive in hot weather, noting that late-summer plantings are most exposed to these problems. Harvest when the stalks are crisp and reach usable size, cutting the plant at the base, and keep harvested celery cool, since quality declines quickly in warm conditions.",
+  "url": "https://edis.ifas.ufl.edu/publication/VH021",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-04-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "celery",
+    "cool-season",
+    "transplant",
+    "irrigation",
+    "blackheart",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "celery",
+    "crop_slug": "celery",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

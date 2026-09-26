@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "dcfe8da2-d95c-5e2c-8bf4-abddf51e77b5",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Alternaria Leaf Spot of Cauliflower — Pest Management Guidelines",
+  "crop": "cauliflower",
+  "disease": "alternaria leaf spot",
+  "content": "Alternaria leaf spot on cauliflower is controlled by the same integrated program used on other brassicas. Start with certified or treated seed, rotate away from cole crops and remove or bury crop residue to reduce inoculum. Manage irrigation to keep foliage dry and improve air movement. Apply protectant fungicides preventively when weather favours the disease, using multi-site materials tank-mixed or alternated with single-site products (FRAC groups 7 and 11 have Alternaria activity), and rotate modes of action to limit resistance. Written for cauliflower specifically, follow the label for rate, interval and days to harvest.",
+  "url": "https://ipm.ucanr.edu/agriculture/cauliflower/alternaria-leaf-spot/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "cauliflower",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "cauliflower alternaria leaf spot",
+    "crop_slug": "cauliflower",
+    "disease_slug": "alternaria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 22
+  }
+}

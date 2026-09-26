@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "18f58108-74ae-5ec6-93c3-261ee9ee1261",
+  "category": "treatment",
+  "source": "University of Florida IFAS Extension (EDIS)",
+  "title": "Bacterial Spot of Tomato — Management",
+  "crop": "tomato",
+  "disease": "bacterial leaf spot",
+  "content": "Bacterial spot of tomato (Xanthomonas species) is managed with clean seed and transplants, sanitation, resistant varieties and copper-based sprays. Use certified disease-free seed and transplants, and where recommended treat seed (for example with hot water or a labelled disinfectant) because the bacteria are seed-borne. Rotate away from tomato and pepper for at least two years, remove and destroy crop debris and volunteer solanaceous plants, and avoid overhead irrigation and working in wet foliage, which spread bacteria. Plant resistant or tolerant varieties where available. Copper-based bactericides, often tank-mixed with a labelled protectant (for example mancozeb) where permitted, can reduce spread when applied preventively on a schedule, but cannot cure infected plants. Follow local labels, as copper registrations and resistance management vary.",
+  "url": "https://edis.ifas.ufl.edu/publication/PP300",
+  "author": "University of Florida Institute of Food and Agricultural Sciences (UF/IFAS), EDIS",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "xanthomonas",
+    "bacterial-spot",
+    "tomato",
+    "certified-seed",
+    "copper",
+    "ufl"
+  ],
+  "metadata": {
+    "class_label": "tomato bacterial leaf spot",
+    "crop_slug": "tomato",
+    "disease_slug": "bacterial_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 80
+  }
+}

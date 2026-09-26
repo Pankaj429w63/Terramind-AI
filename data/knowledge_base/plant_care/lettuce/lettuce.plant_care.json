@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ef5aa24f-963a-546e-9a5f-4ef6dcf1f1f1",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Lettuce",
+  "crop": "lettuce",
+  "disease": null,
+  "content": "Lettuce is a cool-season leafy crop that grows quickly and is best suited to cool weather, turning bitter and bolting to seed when it matures in heat. UC IPM advises choosing a sunny site with a well-drained, fertile soil high in organic matter, and sowing seed or setting transplants so that the crop matures in cool conditions; lettuce can be grown almost year-round in mild coastal areas, and succession sowings every two to three weeks provide a continuous supply. Sow seed shallowly, because lettuce seed needs light to germinate, and thin or space plants so that leaves have room to develop — about 8-12 inches apart for head types and closer for leaf types. Keep the soil evenly moist at all times, because lettuce is shallow-rooted and quickly becomes bitter and tough under moisture stress; drip irrigation keeps the foliage dry and reduces the foliar diseases to which lettuce is prone. Lettuce is a light to moderate feeder: work compost into the bed before planting and side-dress lightly with nitrogen during growth, since excessive nitrogen makes the leaves soft and prone to disease and since too little produces pale, slow-growing plants. Boron and calcium should be adequate, and even moisture is important because irregular water supply and rapid growth are associated with tipburn, a physiological disorder of the leaf margins. Scout weekly for aphids, caterpillars, slugs and for the downy mildew, powdery mildew and sclerotinia that dominate lettuce disease problems, and remove affected leaves promptly. Harvest leaf lettuce by cutting outer leaves or the whole plant when leaves reach usable size, and head lettuce when the head is firm and full-sized, harvesting in the cool of the morning; lettuce wilts quickly and is perishable, so cool it immediately and store near 32 F and high humidity, washing just before use.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-lettuce/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "lettuce",
+    "cool-season",
+    "succession-sowing",
+    "tipburn",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "lettuce",
+    "crop_slug": "lettuce",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

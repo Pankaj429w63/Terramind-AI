@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8c42b7ad-ff84-5a89-80c3-f16bb6580f09",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Downy Mildew of Lettuce — Pest Management Guidelines",
+  "crop": "lettuce",
+  "disease": "downy mildew",
+  "content": "Lettuce downy mildew (Bremia lactucae) is managed with resistant varieties, cultural practices and preventive fungicides. Downy mildew has many races, so rely on varieties with resistance to the prevailing races in your area and rotate among different resistance genes where possible. Irrigate at the base to keep foliage dry, space plants for airflow, and avoid planting in cool, wet conditions that favour infection. Remove and destroy crop residue to reduce overwintering inoculum. Apply protectant fungicides preventively before infection periods, alternating multi-site materials with single-site FRAC-group products (including group 4 and 40 materials with downy-mildew activity) and rotating modes of action to slow resistance. Confirm current registrations and pre-harvest intervals for lettuce with the UC IPM guidelines and product labels.",
+  "url": "https://ipm.ucanr.edu/agriculture/lettuce/downy-mildew/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "bremia",
+    "downy-mildew",
+    "lettuce",
+    "resistant-varieties",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "lettuce downy mildew",
+    "crop_slug": "lettuce",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 56
+  }
+}

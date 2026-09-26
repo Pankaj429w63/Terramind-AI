@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "dc39c139-061a-5b1d-8f59-634ac7891a5d",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Eggplant",
+  "crop": "eggplant",
+  "disease": null,
+  "content": "Eggplant is a warm-season, long-season fruiting vegetable that needs more heat than tomato or pepper and grows poorly in cool conditions. UC IPM advises planting in full sun on a well-drained, fertile soil, setting transplants only after the soil has warmed thoroughly and all danger of frost has passed, and choosing the warmest part of the garden or using black plastic mulch and row covers to accumulate heat. Space plants about 18-24 inches apart in rows 30-36 inches apart, and stake or cage taller varieties to keep heavy-fruited plants upright, since fruit touching the ground is prone to rot. Water deeply and evenly through the season, since eggplant is intolerant of both drought and waterlogging and irregular moisture causes small, bitter fruit and blossom-end rot associated with calcium transport problems; drip irrigation keeps foliage dry and reduces foliar disease. Eggplant is a heavy feeder: incorporate compost and a balanced fertilizer before planting and side-dress or fertigate after the first fruit sets, without excess nitrogen, which delays fruiting. The flowers are self-pollinating but benefit from bee movement and wind, and fruit set fails in cool weather or when temperatures are excessively high. Scout weekly for flea beetles, Colorado potato beetle, aphids and spider mites, checking the undersides of leaves, and watch for verticillium wilt and for fruit rots in wet conditions. Harvest when the fruit is glossy, firm and full-sized but before the skin loses its shine and the flesh becomes seedy and bitter; cut fruit from the plant with a short stem rather than pulling. Harvested eggplant is perishable and sensitive to chilling injury, so store it at about 50-55 F and high humidity and use it within days rather than holding it at refrigerator temperature.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-eggplant/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "eggplant",
+    "heat-loving",
+    "staking",
+    "flea-beetle",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "eggplant",
+    "crop_slug": "eggplant",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

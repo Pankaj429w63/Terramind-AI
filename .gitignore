@@ -11,6 +11,16 @@ data/*
 data/knowledge_base/*
 !data/knowledge_base/diseases/
 !data/knowledge_base/diseases/**
+!data/knowledge_base/treatment/
+!data/knowledge_base/treatment/**
+!data/knowledge_base/fertilizer/
+!data/knowledge_base/fertilizer/**
+!data/knowledge_base/plant_care/
+!data/knowledge_base/plant_care/**
+!data/knowledge_base/agriculture/
+!data/knowledge_base/agriculture/**
+!data/knowledge_base/knowledge_base.manifest.json
+!data/knowledge_base/rag_ingestion.manifest.json
 !data/knowledge_base/_schemas/
 data/knowledge_base/_schemas/*
 !data/knowledge_base/_schemas/knowledge-document-v1.schema.json

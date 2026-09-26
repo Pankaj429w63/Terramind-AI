@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "1a35496f-5ceb-5382-87d0-a6b76cea0c7e",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Alternaria Leaf Spot of Cabbage and Cole Crops — Pest Management Guidelines",
+  "crop": "cabbage",
+  "disease": "alternaria leaf spot",
+  "content": "Alternaria leaf spot (Alternaria brassicae and related species) is managed with clean seed, rotation, sanitation and fungicides when conditions favour disease. Use certified or hot-water-treated seed where recommended, rotate away from brassica crops, and remove or incorporate crop residue to reduce survival of the fungus. Provide good air movement and avoid overhead irrigation that prolongs leaf wetness. When the disease is established or weather is conducive, apply labelled fungicides (for example FRAC group M multi-site protectants and FRAC group 7 or 11 single-site materials with Alternaria activity) on a protectant schedule, rotating modes of action to slow resistance. Follow label rates and pre-harvest intervals for cabbage.",
+  "url": "https://ipm.ucanr.edu/agriculture/cabbage/alternaria-leaf-spot/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "cabbage",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "cabbage alternaria leaf spot",
+    "crop_slug": "cabbage",
+    "disease_slug": "alternaria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 19
+  }
+}

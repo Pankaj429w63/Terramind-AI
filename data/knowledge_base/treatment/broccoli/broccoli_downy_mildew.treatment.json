@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "991ef632-dbac-5ad2-ac3e-810b7e9f7b05",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Downy Mildew of Broccoli and Cole Crops — Pest Management Guidelines",
+  "crop": "broccoli",
+  "disease": "downy mildew",
+  "content": "Downy mildew of broccoli and other cole crops (caused by Hyaloperonospora and Peronospora species) is managed with cultural practices and protectant fungicides. Use drip or furrow irrigation to keep foliage dry, space plants for good airflow, and rotate away from cole crops and other brassica hosts to reduce inoculum. Remove crop debris and avoid overhead irrigation late in the day, which extends leaf wetness and promotes sporulation. Fungicides active against downy mildew (including FRAC group M multi-site protectants and FRAC group 4 and 40 single-site materials where labelled) should be applied protectively before infection periods and rotated by mode of action. Always confirm current registrations and pre-harvest intervals for broccoli with the UC IPM guidelines and product labels.",
+  "url": "https://ipm.ucanr.edu/agriculture/broccoli/downy-mildew/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "downy-mildew",
+    "broccoli",
+    "irrigation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "broccoli downy mildew",
+    "crop_slug": "broccoli",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 17
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "44c46cf6-c5b3-510f-91a2-a1cc735e95c7",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Garlic Production",
+  "crop": "garlic",
+  "disease": null,
+  "content": "Garlic is a cool-season allium grown for its bulbs and is produced on every continent, both for culinary use and, increasingly, for nutraceutical markets. Garlic is grown almost entirely from cloves rather than true seed, and it is classified into hardneck and softneck types: hardneck types are more cold-hardy and are grown in northern regions, while softneck types, which store better and braid well, dominate warmer production areas, including the major California production of the United States. Global garlic production is dominated by China, which accounts for the large majority of world supply, followed by India, Bangladesh, Egypt, Spain, South Korea and the United States; within the United States, commercial production is concentrated in California, with significant regional production in New York, Oregon, Washington and elsewhere to serve local fresh markets. Garlic is typically planted in the autumn in cold-winter regions so that roots establish before the ground freezes, and in spring in milder regions or for certain types, and it is grown from cloves planted at relatively close spacing, typically several inches apart in multiple rows per bed; yields are commonly on the order of 5-12 tonnes per hectare under good commercial management. The crop fits well into vegetable rotation because it is planted in autumn and harvested in mid-summer, leaving the ground available for a succeeding crop, and it can follow a legume or a heavily manured crop; because alliums are intolerant of waterlogging and are poor competitors, cover crops and careful soil preparation are used to improve structure and suppress weeds. Garlic is economically important as a high-value fresh market vegetable and because it is widely processed and traded internationally, and its production risks include onion thrips, white rot, fusarium basal rot and stem and bulb nematode, with climate adaptation focused on type choice and planting-date adjustment.",
+  "url": "https://extension.psu.edu/garlic-production",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "garlic",
+    "allium",
+    "hardneck",
+    "softneck",
+    "rotation",
+    "production"
+  ],
+  "metadata": {
+    "class_label": "garlic",
+    "crop_slug": "garlic",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

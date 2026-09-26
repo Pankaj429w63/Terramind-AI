@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4b867b4b-8314-5a99-97be-d3310d55931a",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 7. Cucurbit Production (Vegetable Production Handbook of Florida)",
+  "crop": "cucumber",
+  "disease": null,
+  "content": "Cucumber is a warm-season cucurbit grown for fresh-market and processing use and is produced throughout the temperate and subtropical world, most commonly under protected or mulched systems that manage moisture and disease. Cucumbers are grown both in the open and in high tunnels and greenhouses, with the latter increasingly important for fresh-market supply; production requires warm conditions and is limited by frost and by cool weather, which causes poor fruit set and misshapen fruit. In Florida, cucumbers are grown as a cool- or warm-season cucurbit crop on sandy soils, and the Vegetable Production Handbook gives the state's planting dates, cultivar recommendations and approved pesticide options for cucurbits. In the United States, commercial production is concentrated in Florida, Georgia, California, Michigan, New York, Indiana and the Carolinas, with substantial processing acreage; major world producers include China, Turkey, Russia, Mexico, the United States, Ukraine, Iran and Spain. Cucumbers are typically grown on raised, often fumigated beds with drip irrigation and plastic mulch, which keep the crop above cool soil, retain moisture and reduce fruit rot, and yields are high in well-managed crops, commonly on the order of 20-50 tonnes per hectare under field-polyculture and considerably higher in greenhouse production. Cucurbits share pest and disease problems and should be rotated away from other cucurbits, alternating with cereals, legumes and non-cucurbit vegetables to break disease cycles, and cover crops are used before planting to manage soil and increase organic matter. The crop is economically important both fresh and processed — including pickling — and its production risks include downy and powdery mildew, bacterial wilt vectored by cucumber beetles, and aphids transmitted virus; adaptation centres on protected culture, mulching and resistant cultivars.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV123",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cucumber",
+    "cucurbit",
+    "mulch",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "cucumber",
+    "crop_slug": "cucumber",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

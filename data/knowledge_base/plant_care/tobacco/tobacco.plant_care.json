@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ca9f521e-8ae8-5d05-89b6-454ac010e2e5",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "No-Till Innovations in Tobacco",
+  "crop": "tobacco",
+  "disease": null,
+  "content": "Tobacco is a warm-season specialty field crop that is traditionally transplanted by hand and then cultivated numerous times with machinery to eliminate weeds and competition and to loosen the soil. Penn State Extension describes this traditional production method on Lancaster County farms, where tobacco has been grown since colonial times and where about 7,000 acres produce the local Pennsylvania, or type 41, variety used for cigar wrappers. The traditional system depends on repeated cultivation: because the crop is transplanted rather than direct-seeded and because weeds must be controlled without the selective herbicides available for agronomic crops, growers plough and cultivate the soil, which leaves it loose and very apt to erode in heavy rain, so gullies and ditches can develop and valuable topsoil can be lost on sloping ground. Penn State Extension therefore promotes no-till transplanting for tobacco, developed with Amish and Mennonite growers, which plants the crop directly into a cover crop such as clover, rye or wheat and leaves a thick mat of residue protecting the soil; no-till increases soil health and reduces runoff, erosion and nutrient pollution, and growers who have adopted it report uniform, high-quality crops comparable to their no-till corn and alfalfa. Key culture points for tobacco are therefore careful site and soil management, timely transplanting in spring after frost risk has passed, weed control through cultivation or no-till cover-crop systems, and scouting for the insects and diseases that attack the foliage through the season. Harvest timing and method depend on the tobacco type (for example flue-cured, burley or dark air-cured), and harvested leaves are cured and graded carefully afterwards to preserve leaf quality through to market. Follow current, locally recommended variety, fertility, pest-management and curing practices, since these differ by tobacco type, soil and region.",
+  "url": "https://extension.psu.edu/no-till-innovations-in-tobacco-video/",
+  "author": "Jeffrey Graybill, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tobacco",
+    "transplanting",
+    "cultivation",
+    "no-till",
+    "curing",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "tobacco",
+    "crop_slug": "tobacco",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

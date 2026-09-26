@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "865dd98f-4c53-5ee2-bbfd-c68f6cbb29ad",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Backyard Grape Growing",
+  "crop": "grapevine",
+  "disease": null,
+  "content": "The productive life of a grapevine depends on training and pruning decisions made from the first year, because grapes bear their fruit on one-year-old wood and because the structure to which the vine is trained can be filled but must not be overgrown. Penn State Extension stresses that a mature grapevine naturally produces far more wood than it can support — much more than is necessary or desirable — and that typically about 90 percent of the new growth of a mature vine is removed during dormant pruning, leaving roughly three to four buds per foot of cordon. Pruning is carried out in the dormant months between December and March and sets the bud number and therefore the crop for the coming season: a vine that is too large carries more disease and produces lower-quality fruit, while a small vine is unproductive. Train vines so that one to two layers of leaves cover any area of the canopy, since that balance is best for flower-bud and fruit development, and note that different cultivars have different growth habits. Penn State Extension describes the vertical shoot position system used for vinifera and high-quality hybrid grapes, which creates a hedge-like wall of foliage with the fruit zone at the base; the fruiting wire is set 30-36 inches above the ground, green shoots are trained vertically and held with catch wires, and the vine is head-trained and cane-pruned or cordon-trained and spur-pruned. Vines can be supported on arbors, fences or standard trellises, but the training structure should be decided early because there is only one chance to train the vine correctly. Keep new vines watered and weeded, and control insect and disease pests throughout the season, since canopy management and pest control together determine fruit quality.",
+  "url": "https://extension.psu.edu/backyard-grape-growing/",
+  "author": "Barbara Goulart and Mark Chien, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-05-11",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "grapevine",
+    "training",
+    "pruning",
+    "vertical-shoot-position",
+    "bud-number",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "grapevine",
+    "crop_slug": "grapevine",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

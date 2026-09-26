@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "7dc7f3bd-9d91-56d8-b3ff-ddaee0ae12b7",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences) / Cornell Cooperative Extension",
+  "title": "Raspberry Production",
+  "crop": "raspberry",
+  "disease": null,
+  "content": "Raspberries are bramble fruits with perennial roots and biennial canes, and they require a sunny, well-drained site with good air movement because brambles are susceptible to root rots and to the cane and fruit diseases that follow wet, crowded conditions. Prepare the site thoroughly before planting, testing and amending the soil, and removing perennial weeds, because they are difficult to control once a row is established. Penn State Extension describes the two fruiting habits that determine pruning and harvest: field-grown summer-bearing raspberries produce their first significant crop in about the third year after planting, while primocane-bearing (fall-bearing) plants usually yield a significant crop in the second year. At maturity, about four years old, field plantings of red raspberries should produce roughly 5,000 pounds of fruit per acre, while black raspberry yields are about half those of red raspberries; high-tunnel production is at least double that of field production for both red and black raspberries, and tunnel-grown primocane-fruiting raspberries may produce a viable harvest the same year they are planted if set out early in the spring. Train and maintain the rows so that canes are supported and the planting is not overcrowded, which improves air movement and reduces fruit rots. Raspberry flowers are self-fruitful and pollinated by bees and wind, so avoid insecticide applications during bloom. Scout through the season for spotted-wing drosophila, cane borers and the cane blights, and remove and destroy infested or diseased canes. Harvest is critical to quality: Penn State Extension advises that raspberries must be firm, well coloured and free of insects and rot for market, and that if harvested at the proper time and handled carefully they remain in good condition for several days. Because the fruit is fragile it should be picked and packed directly into containers without further sorting, harvested at least once every three days and adjusted for weather, with losses to spotted-wing drosophila reduced if fruit is harvested daily or every other day. Cool berries promptly to remove field heat, and pick early in the day, since precooling before shipment significantly extends shelf life.",
+  "url": "https://extension.psu.edu/raspberry-production/",
+  "author": "Kathy Demchak, Senior Extension Associate, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2021-12-09",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "raspberry",
+    "brambles",
+    "primocane",
+    "spotted-wing-drosophila",
+    "postharvest",
+    "harvest"
+  ],
+  "metadata": {
+    "class_label": "raspberry",
+    "crop_slug": "raspberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

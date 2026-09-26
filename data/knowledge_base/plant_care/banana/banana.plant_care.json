@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "6c38f8b3-527b-558f-8bb9-c9a2e29b825c",
+  "category": "plant care",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Banana Growing in the Florida Home Landscape",
+  "crop": "banana",
+  "disease": null,
+  "content": "Bananas are large, fast-growing tropical herbaceous plants and need a frost-free site with full sun, a well-drained soil and protection from wind. UF/IFAS advises planting in spring to early summer in south Florida so plants are well established before winter, spacing plants about 8-10 feet apart in rows 10-12 feet apart, and setting suckers or tissue-cultured plants in holes amended with organic matter with the growing point just above the soil line. Bananas are heavy feeders and heavy water users: water deeply once or twice a week, more in sandy soil, and apply a complete fertilizer containing nitrogen, phosphorus, potassium and magnesium in small, frequent applications through the warm season, because potassium is needed in large amounts for bunch fill and pseudostem strength. Because the plants are herbaceous and shallow-rooted, maintain a mulch layer to conserve moisture and suppress weeds, but keep mulch clear of the pseudostem to avoid rot. Remove excess suckers, leaving one or two vigorous followers per mat to replace the fruiting stem after harvest, and cut the spent pseudostem to the ground after the bunch is harvested. Support heavy bunches with a prop to prevent toppling. Wind and cold protection are important: cover or wrap plants when frost threatens. Harvest when the bunch is full and fingers are rounded and no longer angular, generally 90-150 days after flowering depending on cultivar and temperatures, cutting the stalk and hanging the bunch to ripen; bananas ripen best at about 60-70 F and should not be refrigerated.",
+  "url": "https://edis.ifas.ufl.edu/publication/MG040",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-06-06",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "banana",
+    "tropical",
+    "suckers",
+    "potassium",
+    "harvest",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "banana",
+    "crop_slug": "banana",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

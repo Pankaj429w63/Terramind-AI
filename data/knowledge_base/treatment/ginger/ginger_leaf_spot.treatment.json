@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "10d118ba-19db-577f-b017-054f97363981",
+  "category": "treatment",
+  "source": "University of Hawai'i at Manoa, College of Tropical Agriculture and Human Resources (CTAHR) — Hawaii Agricultural Experiment Station Circular 62",
+  "title": "Ginger Leaf Spot (Phyllosticta zingiberis) — Integrated Management",
+  "crop": "ginger",
+  "disease": "leaf spot",
+  "content": "Foliar leaf spots of ginger (including Phyllosticta leaf spot, Phyllosticta zingiberis) are managed primarily through sanitation, clean planting material, drainage and, where necessary, protectant fungicides. Use disease-free rhizomes for planting and treat seed rhizomes as locally recommended before planting. Remove and destroy infected leaves and crop debris, since the fungus survives in infested residue and is spread by rain splash and wind. Avoid waterlogging by planting on raised, well-drained beds, and maintain balanced nutrition with adequate potassium to keep plants vigorous; stressed, waterlogged plants are more susceptible. Rotate away from ginger in infested fields. When disease appears, apply a locally registered protectant fungicide (for example a copper-based or mancozeb-type material) at the label rate and interval, and rotate modes of action to slow resistance. Confirm current registered products and doses with your national or state plant-protection authority, as approvals differ by country.",
+  "url": "https://cms.ctahr.hawaii.edu/Portals/43/C2-62.pdf",
+  "author": "E. E. Trujillo (1964), University of Hawai'i at Manoa, College of Tropical Agriculture and Human Resources (CTAHR), Hawaii Agricultural Experiment Station Circular 62",
+  "date": "1964-12-01",
+  "region": "global",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "phyllosticta",
+    "ginger",
+    "clean-planting-material",
+    "drainage",
+    "sanitation",
+    "fungicide",
+    "ctahr"
+  ],
+  "metadata": {
+    "class_label": "ginger leaf spot",
+    "crop_slug": "ginger",
+    "disease_slug": "leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "source_review": "URL replaced from untrusted spices.res.in to CTAHR Circular 62 (.edu, trusted 'extension' tier); resolves HTTP 200 application/pdf.",
+    "class_index": 49
+  }
+}

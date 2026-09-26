@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "fdcc9ecc-0b78-5ddd-a2be-8a037a7aaa12",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Peppers",
+  "crop": "bell pepper",
+  "disease": null,
+  "content": "Peppers are warm-season fruiting vegetables and require a long, warm growing season to produce mature fruit. UC IPM advises planting in full sun on a well-drained, fertile soil, setting transplants only after the soil and air have warmed and all frost danger has passed, because peppers are more sensitive to cold than tomatoes and set poorly in cool weather. Space plants about 12-18 inches apart in rows 24-36 inches apart. Water deeply but infrequently, soaking the soil rather than the foliage, and maintain even moisture during flowering and fruit set; use drip or furrow irrigation to keep leaves dry, and mulch to conserve moisture and reduce blossom-end rot, which is associated with irregular water supply and calcium transport problems rather than simple soil calcium shortage. Work compost and a balanced fertilizer into the bed before planting and side-dress or fertigate lightly after the first fruit sets; excessive nitrogen produces lush foliage and delayed fruit set. Peppers are self-pollinating, but a light buzz from bees and wind movement improves set, and fruit set is poor when temperatures are above about 90 F or below about 60 F. Scout weekly for aphids, thrips, pepper weevil and caterpillars, and for bacterial spot and other foliar diseases on leaves and fruit. Harvest green fruit when it reaches full size and is firm and glossy, or leave fruit to ripen to red, yellow or orange for higher sugar and vitamin content; cut fruit from the plant with the stem attached, and store at about 45-55 F and high humidity rather than at refrigerator temperatures that damage the fruit.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-peppers/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bell-pepper",
+    "transplant",
+    "blossom-end-rot",
+    "fruit-set",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "bell pepper",
+    "crop_slug": "bell_pepper",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

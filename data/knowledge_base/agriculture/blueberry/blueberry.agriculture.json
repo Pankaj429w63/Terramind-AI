@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a8b9bb23-3fa1-5cff-b4c2-a4b2437616f5",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Highbush Blueberry Production",
+  "crop": "blueberry",
+  "disease": null,
+  "content": "Blueberry is a perennial woody fruit crop of acid soils and is one of the most important small fruits traded internationally, with production expanding rapidly over the past few decades as fresh-market demand has grown. Commercial production is concentrated in regions with acid, well-drained, high-organic-matter soils and with enough winter chill for the type grown; the leading global producers include the United States, Chile, Peru, Spain, Mexico, Canada and Poland, and within the United States the principal states are Michigan, Georgia, Oregon, Washington, New Jersey and North Carolina. Penn State Extension explains that the blueberry plant is a long-lived perennial that can remain productive for 50 years or more with proper care, which makes pre-plant site selection and soil preparation decisive. Blueberry types differ by region: northern highbush dominates cooler regions, southern highbush the milder South, rabbiteye the Southeast, and lowbush the wild stands of Maine and eastern Canada; growers choose among early-, mid- and late-season cultivars to spread harvest and market risk. Penn State Extension notes that the United States once produced nearly all of the world's cultivated blueberries but now produces about 60 percent, reflecting major expansion in South America, Europe and elsewhere, while per capita consumption and demand for fresh berries have risen sharply. Blueberry plants require adequate moisture, particularly during fruit development, so irrigation is a key input; Penn State Extension stresses that after planting, adequate moisture is essential through the first year. Yields vary widely by type, age and management, from a few tonnes per hectare in young or low-input plantings to well over 10 tonnes per hectare in mature, intensive highbush blocks. Because blueberry is a long-lived perennial, rotation does not apply; instead, growers emphasise pre-plant pH correction with elemental sulfur, incorporation of organic matter and mulch, and cover crops between rows. The crop faces climate-adaptation challenges including insufficient winter chill, frost at bloom, hail and drought, and its principal disease and pest pressures include mummy berry, botryosphaeria canker, anthracnose fruit rot and spotted-wing drosophila.",
+  "url": "https://extension.psu.edu/highbush-blueberry-production",
+  "author": "Kathy Demchak, Senior Extension Associate, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-02-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "blueberry",
+    "acid-soil",
+    "highbush",
+    "export",
+    "production",
+    "chilling"
+  ],
+  "metadata": {
+    "class_label": "blueberry",
+    "crop_slug": "blueberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

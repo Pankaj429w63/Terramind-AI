@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2b20b435-c4df-572c-953b-88c42e2df9ad",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 6. Cole Crop Production (Vegetable Production Handbook of Florida)",
+  "crop": "cabbage",
+  "disease": null,
+  "content": "Cabbage is a cool-season cole crop grown for its dense head and is one of the most widely produced vegetables in the world, valued both as a fresh-market crop and for processing into sauerkraut and coleslaw. Cabbage production spans temperate and subtropical regions, with major world producers including China, India, Russia, South Korea, Ukraine, Japan and the United States; within the United States, production is concentrated in California, Texas, Florida, Georgia, New York and Wisconsin, with winter production in the South and summer production in northern states. In Florida, cabbage is grown as a winter vegetable crop on sandy soils and the Vegetable Production Handbook gives the state's planting dates, recommended cultivars and approved pesticide options. Cabbage grows on a wide range of soils but performs best on well-drained, fertile soil with pH near 6.0-6.8, and is usually grown from transplants on raised beds with drip irrigation; it is a heavy feeder and responds to good fertility and even moisture, and heads split if water is irregular near maturity. Yields are high for a vegetable, commonly on the order of 25-60 tonnes per hectare depending on region, cultivar and management, which makes cabbage an important and relatively low-cost source of nutrition and a significant commodity in world trade. As a brassica, cabbage should be rotated away from other cole crops to reduce clubroot and other soil-borne diseases, and it rotates well with cereals, legumes and non-brassica vegetables; cover crops improve soil health and reduce erosion. Climate adaptation centres on timing production to cool seasons and using protected culture and bolting-resistant cultivars where heat is a risk; principal pest pressures include caterpillars, aphids, flea beetles and root maggots.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV122",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cabbage",
+    "cole-crop",
+    "cool-season",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "cabbage",
+    "crop_slug": "cabbage",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

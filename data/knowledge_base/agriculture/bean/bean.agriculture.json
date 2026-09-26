@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "630af542-c170-54ed-96df-2b918c00e478",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Snap Bean Production",
+  "crop": "bean",
+  "disease": null,
+  "content": "Snap beans (common bean harvested as a fresh or processed pod crop) are warm-season legumes grown across a wide range of temperate and subtropical environments and are an important vegetable crop in the United States and worldwide. Beans are grown as bush or pole types; bush beans dominate commercial fresh-market and processing production because they can be machine harvested, while pole beans are common in market-garden and home production. Because the common bean is a legume, it fixes atmospheric nitrogen when properly inoculated with the appropriate Rhizobium, which makes it a valuable rotation partner: succeeding crops such as leafy greens or brassicas benefit from the residual nitrogen and improved soil structure. Typical snap bean yields range broadly, on the order of several tonnes per hectare for well-managed commercial fields to much less in marginal conditions. Production is concentrated in regions with moderate summers, including the Midwest, the Pacific Northwest, New York and parts of the South for fresh market and processing, while major world producers of dry and snap beans include India, Myanmar, Brazil, China, Mexico and the United States. Beans fit readily into rotation with corn, root crops and brassicas and are well suited to cover-crop systems, where the crop itself acts as a nitrogen-fixing component of the rotation; growers commonly precede or follow beans with a cereal and legume cover crop mix to protect soil over winter. Climate-related risks include sensitivity to frost and cold, wet soils at planting, drought stress during pod fill and heat that causes pod abortion or poor pod set, so adaptation focuses on irrigation, planting-date adjustments and improved cultivars. Principal disease pressures include seed rots and seedling blights, common bacterial blight, rust, white mould and bean common mosaic virus, managed by clean seed, resistant varieties, rotation and timely irrigation.",
+  "url": "https://extension.psu.edu/snap-bean-production",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bean",
+    "legume",
+    "nitrogen-fixation",
+    "rotation",
+    "processing",
+    "production"
+  ],
+  "metadata": {
+    "class_label": "bean",
+    "crop_slug": "bean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

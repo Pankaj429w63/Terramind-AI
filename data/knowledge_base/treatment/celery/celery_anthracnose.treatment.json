@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a8af32f0-5391-5cc8-8bbd-ea41821dac35",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Anthracnose of Celery — Pest Management Guidelines",
+  "crop": "celery",
+  "disease": "anthracnose",
+  "content": "Celery anthracnose (Colletotrichum species) is managed with clean seed, crop rotation, sanitation and protectant fungicides. Begin with pathogen-free or treated seed and transplants, rotate away from celery and related hosts, and remove or incorporate crop debris because the fungus survives in residue. Manage irrigation to avoid extended leaf wetness and splashing that spread conidia. Apply labelled fungicides on a protectant schedule when the disease is present or weather favours it, combining multi-site materials with single-site products and rotating modes of action. Confirm current registrations and pre-harvest intervals using the UC IPM guidelines and product labels.",
+  "url": "https://ipm.ucanr.edu/agriculture/celery/anthracnose/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "colletotrichum",
+    "celery",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "celery anthracnose",
+    "crop_slug": "celery",
+    "disease_slug": "anthracnose",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 24
+  }
+}

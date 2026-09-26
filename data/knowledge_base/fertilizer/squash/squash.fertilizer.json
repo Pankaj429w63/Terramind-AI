@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "487b8b3e-812e-5f78-abfb-81dfbdef0086",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "squash",
+  "disease": null,
+  "content": "Squash and other cucurbits are vigorous, fast-growing vining vegetables with a high demand for nutrients over a relatively short harvest window. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook recommends combining adequate fertilizer rates with irrigation scheduling and crop nutrient-status monitoring so that nutrients stay in the root zone and are not leached from sandy soils. In plastic-mulched, drip-irrigated production, phosphorus is generally applied pre-plant based on soil test because it is relatively immobile, while nitrogen and potassium are applied as a target rate with split or fertigated applications through the season, and supplemental applications are permitted to compensate for leaching rains and an extended harvest period. Potassium is important for fruit size, colour and quality in squash, while nitrogen sustains vine growth and continuous fruit production; an interruption in nitrogen supply shows up quickly as reduced fruit set and smaller, paler fruit, and excessive nitrogen produces excessive vine growth at the expense of yield and can delay maturity. Boron and other micronutrients may be limiting on coarse, low-organic-matter soils, and magnesium can be deficient on sandy leached soils. Even moisture is important to avoid blossom-end rot and poor fruit development, and soil pH should be maintained in the recommended range for commercial vegetable production.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "squash",
+    "cucurbit",
+    "potassium",
+    "fertigation",
+    "uf-ifas",
+    "bmp"
+  ],
+  "metadata": {
+    "class_label": "squash",
+    "crop_slug": "squash",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

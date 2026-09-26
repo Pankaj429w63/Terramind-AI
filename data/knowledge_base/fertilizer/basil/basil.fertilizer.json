@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "f02cc777-688d-513f-9476-5d6418c2be41",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Basil: A Summer Favorite — Growing and Nutrition",
+  "crop": "basil",
+  "disease": null,
+  "content": "Basil is a fast-growing leafy herb in the mint family and responds strongly to nitrogen, which drives the vegetative leaf growth that is the harvested product. Work compost or a balanced complete fertilizer into the bed before planting and maintain soil pH in the 6.0-7.0 range, where most nutrients are most available to this crop. Because basil is grown for foliage rather than fruit, nitrogen-rich feeding produces the tender, aromatic leaves desired, but excessive nitrogen can reduce essential-oil content and flavour, so moderate split applications are preferred over a single heavy dose. Keep moisture even: basil wilts quickly and drought stress causes early flowering (bolting), which ends leaf production. Side-dress lightly with a nitrogen source such as compost or a soluble complete fertilizer every three to four weeks through the growing season, and pinch out flower spikes to prolong harvest. In container and hydroponic production, basil performs best with a nutrient solution in the electrical conductivity range of about 1.6-2.2 mS/cm and pH 5.5-6.6 as described in Penn State Extension hydroponic guidance. Avoid over-fertilising, which builds up soluble salts in containers and damages roots.",
+  "url": "https://extension.psu.edu/basil-a-summer-favorite",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2021-10-18",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "herb",
+    "basil",
+    "extension",
+    "penn-state",
+    "hydroponics"
+  ],
+  "metadata": {
+    "class_label": "basil",
+    "crop_slug": "basil",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

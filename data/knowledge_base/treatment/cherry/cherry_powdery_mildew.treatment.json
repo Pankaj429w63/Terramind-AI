@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "acbef682-4e20-5857-9c44-3b2017857d06",
+  "category": "treatment",
+  "source": "Michigan State University Extension",
+  "title": "Powdery Mildew of Cherry — Management",
+  "crop": "cherry",
+  "disease": "powdery mildew",
+  "content": "Powdery mildew on cherry (Podosphaera clandestina) is managed with resistant cultivars, canopy management and protectant fungicides. Plant resistant or tolerant cherry cultivars where available, prune and train trees to open the canopy and improve airflow, and avoid excessive nitrogen that promotes dense, shaded, susceptible foliage. Irrigate at the base rather than overhead to reduce humidity around the leaves and fruit. Reduce overwintering inoculum by removing infected shoots and debris where practical. Where the disease has been a problem, apply labelled fungicides on a protectant schedule beginning before symptoms develop, tank-mixing or alternating multi-site materials with single-site FRAC-group products and rotating modes of action. Follow the label for rate, timing and pre-harvest interval.",
+  "url": "https://www.canr.msu.edu/news/powdery_mildew_on_cherry",
+  "author": "Michigan State University Extension",
+  "date": "2021-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "podosphaera",
+    "powdery-mildew",
+    "cherry",
+    "canopy-management",
+    "fungicide",
+    "msu"
+  ],
+  "metadata": {
+    "class_label": "cherry powdery mildew",
+    "crop_slug": "cherry",
+    "disease_slug": "powdery_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 29
+  }
+}

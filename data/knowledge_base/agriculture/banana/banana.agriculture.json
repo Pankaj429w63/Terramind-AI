@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "84e282c7-fd01-50a5-a30f-6de9f5883ded",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Banana Market Review and Commodity Overview",
+  "crop": "banana",
+  "disease": null,
+  "content": "Banana and plantain are among the most traded and most consumed fruits in the world and are a staple food and income source for millions of smallholders in tropical regions. The crop is grown throughout the humid tropics, principally within about 30 degrees of the equator, in warm, frost-free conditions with high and well-distributed rainfall or irrigation; the leading producers include India, China, Indonesia, Brazil, Ecuador, the Philippines and several Central American and Caribbean countries, while Ecuador, the Philippines, Colombia, Costa Rica and Guatemala are among the largest exporters. The trade is dominated by the Cavendish subgroup for export, while a very wide range of locally preferred cultivars and cooking bananas and plantains dominate domestic and regional markets in Africa, Asia and Latin America. Yields are highly variable: well-managed commercial plantations typically produce on the order of 30-50 tonnes per hectare per year, whereas smallholder stands commonly yield far less because of poor nutrition, pests and drought. Bananas are perennial and are grown in mats maintained by suckers rather than in annual rotation, but intercropping with annual food crops is common and cover crops and mulches are used to protect soil and conserve moisture; because the crop is propagated vegetatively, clean planting material is central to managing pests and diseases. The banana sector is under severe pressure from Fusarium wilt tropical race 4 (TR4) and from Black Sigatoka, both of which have reshaped production and driven investment in resistant varieties and strict biosecurity. Economic importance is high because bananas are the world's most exported fruit, an important source of foreign exchange for exporting countries and a critical source of nutrition and income for smallholder households. Climate adaptation focuses on drought-tolerant cultivars, irrigation, and diversification away from a single export cultivar.",
+  "url": "https://www.fao.org/markets-and-trade/commodities-overview/bananas-tropical-fruits/bananas/en",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2023-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "banana",
+    "tropical",
+    "traded-fruit",
+    "TR4",
+    "production",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "banana",
+    "crop_slug": "banana",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

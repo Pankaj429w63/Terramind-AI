@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "95ef5965-feaf-585a-9416-57f0381ef83d",
+  "category": "treatment",
+  "source": "Penn State Extension, Plant Disease Clinic",
+  "title": "Tar Spot of Maple — Disease Management",
+  "crop": "maple",
+  "disease": "tar spot",
+  "content": "Maple tar spot (Rhytisma species) is primarily a cosmetic disease, so control is usually optional and cultural. Rake and destroy fallen leaves in autumn to reduce the fungal inoculum that produces new infections the following spring, since the fungus overwinters in leaf litter beneath the tree. Where the disease is severe and unsightly, a labelled fungicide applied as buds open in spring can provide protection; however, treatment is often not warranted for tree health and is rarely economical on large trees. Maintain tree vigour with proper watering and mulching to reduce stress. Because tar spot rarely harms the tree, chemical control should be reserved for high-value specimen trees and applied strictly according to the product label.",
+  "url": "https://extension.psu.edu/tar-spot-of-maple",
+  "author": "Penn State Extension, Plant Disease Clinic",
+  "date": "2023-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rhytisma",
+    "tar-spot",
+    "maple",
+    "sanitation",
+    "cosmetic",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "maple tar spot",
+    "crop_slug": "maple",
+    "disease_slug": "tar_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 60
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "1cd2155e-0621-565c-8cfb-5f25486887a7",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Cabbage",
+  "crop": "cabbage",
+  "disease": null,
+  "content": "Cabbage is a hardy cool-season cole crop that will tolerate light frost but produces the best, most solid heads in cool, evenly moist conditions. UC IPM advises selecting a sunny, well-drained site with a fertile soil high in organic matter, and setting transplants in spring or autumn so the crop matures before or after the heat of summer; cabbage can also be overwintered in mild climates. Space plants about 12-18 inches apart in rows 24-36 inches apart to allow full head development and good air movement. Water regularly and evenly, because irregular moisture causes heads to split and reduces quality; drip or furrow irrigation keeps foliage dry. Cabbage is a heavy nitrogen user: work generous compost or a balanced fertilizer into the bed before planting and side-dress through the season, with adequate phosphorus and potassium from a soil test. Keep pH near 6.0-6.8, which both maximises nutrient availability and helps suppress clubroot, and rotate brassicas to avoid build-up of soil-borne pathogens and nematodes. Scout weekly for cabbageworm and other caterpillars, aphids, flea beetles and cabbage root maggot, inspecting the heads and the undersides of the wrapper leaves. Harvest when heads are firm and solid and reach a usable size, cutting the head at ground level; harvesting before the head splits is important because mature heads split quickly after rain. Withstand light frost but harvest before hard freeze. Store heads at about 32 F and high humidity for several months, and know that cabbage may release odours during storage.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-cabbage/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cabbage",
+    "cole-crop",
+    "head-splitting",
+    "clubroot",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "cabbage",
+    "crop_slug": "cabbage",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

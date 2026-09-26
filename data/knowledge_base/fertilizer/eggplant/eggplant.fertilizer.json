@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "81e1705c-9c3d-527f-806f-c3a71e178ddf",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "eggplant",
+  "disease": null,
+  "content": "Eggplant is a long-season solanaceous vegetable and is managed with much the same nutrient programme as tomato and pepper. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook stresses that rate is only part of a sound recommendation and that fertilizer material, placement and timing must be considered together with irrigation scheduling and crop nutrient-status monitoring to keep nutrients in the root zone. In plastic-mulched, drip-irrigated production, nitrogen and potassium are applied as a target rate with split or fertigated applications through the season, because both are mobile in sandy soils and subject to leaching; phosphorus is relatively immobile and is largely applied pre-plant based on soil test. Adequate potassium supports fruit set, fruit size and quality, while nitrogen sustains the long vegetative and fruiting period. Magnesium and micronutrients can become limiting on sandy, leached soils and should be checked with soil and tissue analysis. Maintain soil pH in the range recommended for commercial vegetable production and follow best-management practices to protect water quality. Fruit disorders such as blossom-end rot are associated with calcium transport problems aggravated by irregular moisture, so even irrigation is as important as the fertilizer programme itself.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "eggplant",
+    "solanaceous",
+    "fertigation",
+    "potassium",
+    "uf-ifas",
+    "calcium"
+  ],
+  "metadata": {
+    "class_label": "eggplant",
+    "crop_slug": "eggplant",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

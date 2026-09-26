@@ -29,3 +29,9 @@ create policy "users manage reviews for own diagnoses" on public.expert_reviews 
 
 create index if not exists diagnoses_user_created_idx on public.diagnoses(user_id, created_at desc);
 create index if not exists reports_user_created_idx on public.reports(user_id, created_at desc);
+
+-- Private model checkpoint storage for ephemeral inference hosts such as Render Free.
+-- Only the backend service-role client uses this bucket; it is never exposed to browsers.
+insert into storage.buckets (id, name, public)
+values ('model-artifacts', 'model-artifacts', false)
+on conflict (id) do nothing;

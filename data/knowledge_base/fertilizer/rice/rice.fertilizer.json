@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "759e9bfa-312a-50c6-a120-714adb1f3753",
+  "category": "fertilizer",
+  "source": "University of Arkansas System Division of Agriculture, Cooperative Extension Service",
+  "title": "2025 Arkansas Rice Quick Facts — Nitrogen, Sulfur and Zinc Fertilization",
+  "crop": "rice",
+  "disease": null,
+  "content": "Arkansas Cooperative Extension publishes the state's standard rice fertility guidance. For nitrogen, hybrids generally receive 120-150 lb N per acre preflood followed by 30 lb N per acre at late boot, while varieties are managed either with a single preflood application (100 percent of N applied preflood on dry soil followed by a timely flood) or with a two-way split of roughly 70 percent preflood plus about 45 lb N per acre at least four weeks after the preflood application and once internode elongation has begun. Preflood urea should be treated with an NBPT-containing urease inhibitor where timely flooding is a concern — more than two days on silt loam soils or more than seven days on clay soils — or ammonium sulfate should be used instead; urea applied into the flood should not be treated. The N-STaR (Nitrogen Soil Test for Rice) programme provides field-specific nitrogen rates for silt loam soils sampled to 18 inches and clay soils sampled to 12 inches, and a GreenSeeker handheld with a reference plot can be used to judge midseason need, where a reference-plot value divided by the field average below 1.15 indicates a midseason application is warranted. Potassium is applied according to soil test, with recommended K2O rates stepping down as soil test levels rise, and brown spot on rice is frequently a symptom of potassium deficiency that fungicides cannot correct. Rice does not normally require sulfur for high yields in Arkansas, although it may be needed on sandy soils or where the SO4-S soil test value is below 5 ppm, and 100 lb of ammonium sulfate supplies about 24 lb of plant-available sulfur. Zinc deficiency occurs mainly on silt and sandy loam soils and precision-graded fields: apply 10 lb of zinc per acre as a granular fertilizer before emergence where soil-test zinc is below 4.1 ppm and pH is above 6.0, or below 1.6 ppm where pH is below 6.0, and for salvage apply 1 lb of actual zinc per acre as an EDTA chelate to drained soil together with 100 lb per acre of ammonium sulfate before re-flooding. Zinc-treated seed should carry 0.25-0.50 lb zinc per hundredweight of seed.",
+  "url": "https://uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/2025%20Arkansas%20Rice%20Quick%20Facts.pdf",
+  "author": "Jarrod Hardke, Rice Extension Agronomist, University of Arkansas System Division of Agriculture",
+  "date": "2025-06-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "rice",
+    "nitrogen",
+    "n-star",
+    "zinc",
+    "potassium",
+    "arkansas-extension"
+  ],
+  "metadata": {
+    "class_label": "rice",
+    "crop_slug": "rice",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

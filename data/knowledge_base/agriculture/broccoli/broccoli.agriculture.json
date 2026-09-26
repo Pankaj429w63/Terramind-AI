@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4288b541-42ec-5058-bfc8-b461ed5ed954",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 6. Cole Crop Production (Vegetable Production Handbook of Florida)",
+  "crop": "broccoli",
+  "disease": null,
+  "content": "Broccoli is a cool-season cole crop grown for its edible head and is an important fresh-market and processing vegetable produced across temperate and subtropical regions worldwide. Because broccoli is adapted to cool growing conditions, commercial production is concentrated in areas with mild or cool seasons: in the United States the principal producing states are California and Arizona for year-round supply, with Florida, Georgia and other eastern states supplying winter and spring windows, and major world producers include China, India, the United States, Spain, Italy and Mexico. In Florida, cole crops including broccoli are grown as a winter vegetable crop on the state's sandy soils, and the Vegetable Production Handbook describes planting dates, cultivar recommendations and the pesticide options approved for the state, reflecting the crop's fit into a cool-season production window that avoids summer heat. Broccoli is grown from transplants and is commonly produced on raised, fumigated beds with drip irrigation; the crop matures in roughly 60-100 days depending on cultivar, season and region. Yields vary with region and management but quality commercial crops yield on the order of several tonnes per hectare per season, and broccoli is economically important both domestically and as an export and processing crop. Cole crops grow best on well-drained, fertile soils with pH near 6.0-6.8 and fit into rotation with non-brassica crops such as corn, legumes and root crops to reduce soil-borne disease including clubroot; cover crops are used to protect soil and break disease cycles. Climate-adaptation pressures include heat that causes bolting and poor head quality, so production is timed to cool windows and increasingly moved into protected culture, while principal pest pressures include lepidopteran caterpillars, aphids, flea beetles and diamondback moth.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV122",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "broccoli",
+    "cole-crop",
+    "cool-season",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "broccoli",
+    "crop_slug": "broccoli",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4e54cf92-14c8-5c13-900a-87a2ac4ac607",
+  "category": "plant care",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Ginger Cultivation — Planting Material, Spacing and Crop Management (FAO)",
+  "crop": "ginger",
+  "disease": null,
+  "content": "Ginger is a tropical, shade-tolerant rhizomatous crop grown from seed rhizomes rather than true seed, and FAO guidance on its cultivation notes that it requires a warm, humid climate with a long growing season and well-drained, fertile soils rich in organic matter; it is intolerant of waterlogging and of prolonged drought. Prepare the land deeply and thoroughly before planting, working in compost or well-rotted manure, and choose a site with partial shade where temperatures are high, since ginger performs best under light shade that moderates heat and moisture stress. Select sound, disease-free seed rhizomes with healthy buds and treat them before planting as recommended locally, then plant them in beds or on ridges at the start of the rainy season, setting pieces shallowly and covering with soil and a mulch layer; mulch is important because it conserves moisture, suppresses weeds and keeps soil temperatures moderate over the long season. Spacing varies with the production system but must allow the plants room to tiller and to develop rhizomes without crowding. Ginger has a shallow root system and depends on even moisture: irrigate during dry spells and ensure drainage in heavy rain, since waterlogging causes rhizome rots that can destroy the crop. Weed the crop carefully and by hand where necessary, because the developing rhizomes are shallow and easily damaged. Scout through the season for the bacterial wilt, rhizome rot and shoot borer that are the main constraints on the crop, and rotate away from ginger and related crops to reduce build-up of soil-borne disease. Harvest for use as fresh ginger once rhizomes reach usable size, and allow the crop to mature and foliage to yellow for the dried and processed product, lifting rhizomes carefully and curing them before storage.",
+  "url": "https://www.fao.org/4/t0207e/T0207E03.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "ginger",
+    "rhizome",
+    "mulch",
+    "drainage",
+    "rot",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "ginger",
+    "crop_slug": "ginger",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

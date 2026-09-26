@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "0fec5139-75bd-51f4-a293-ee195500a596",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Leaf Scorch of Strawberry — Pest Management Guidelines",
+  "crop": "strawberry",
+  "disease": "leaf scorch",
+  "content": "Strawberry leaf scorch (Diplocarpon earlianum) is managed with sanitation, resistant cultivars, cultural practices and fungicides. Remove and destroy infected leaves and crop debris, since the fungus overwinters in old foliage, and renovate plantings to reduce inoculum. Plant resistant or tolerant cultivars where available, avoid excessive plant density, and manage irrigation to reduce leaf wetness duration. Maintain balanced fertility and avoid plant stress, which increases susceptibility. When leaf scorch is severe, apply labelled protectant fungicides on a schedule through the susceptible period, alternating multi-site and single-site materials and rotating modes of action. Follow the label for rate, interval and pre-harvest interval for strawberry.",
+  "url": "https://ipm.ucanr.edu/agriculture/strawberry/leaf-scorch/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "diplocarpon",
+    "leaf-scorch",
+    "strawberry",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "strawberry leaf scorch",
+    "crop_slug": "strawberry",
+    "disease_slug": "leaf_scorch",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 77
+  }
+}

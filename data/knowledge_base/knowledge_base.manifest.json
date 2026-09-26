@@ -1,0 +1,48 @@
+{
+  "manifest_version": "1.0.0",
+  "kb_root": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base",
+  "total_classes": 89,
+  "total_crops": 34,
+  "categories": [
+    "diseases",
+    "treatment",
+    "fertilizer",
+    "plant_care",
+    "agriculture"
+  ],
+  "rag_category_aliases": {
+    "diseases": "diseases",
+    "treatment": "treatment",
+    "fertilizer": "fertilizer",
+    "plant_care": "plant care",
+    "agriculture": "agriculture"
+  },
+  "category_manifests": {
+    "diseases": {
+      "path": "diseases/_manifest.diseases.json",
+      "rag_category": "diseases",
+      "document_count": 58
+    },
+    "treatment": {
+      "path": "treatment/_manifest.treatment.json",
+      "rag_category": "treatment",
+      "document_count": 58
+    },
+    "fertilizer": {
+      "path": "fertilizer/_manifest.fertilizer.json",
+      "rag_category": "fertilizer",
+      "document_count": 34
+    },
+    "plant_care": {
+      "path": "plant_care/_manifest.plant_care.json",
+      "rag_category": "plant care",
+      "document_count": 34
+    },
+    "agriculture": {
+      "path": "agriculture/_manifest.agriculture.json",
+      "rag_category": "agriculture",
+      "document_count": 34
+    }
+  },
+  "total_documents_expected": 218
+}

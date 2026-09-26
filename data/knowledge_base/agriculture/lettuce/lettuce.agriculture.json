@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "99cfe3ac-ba18-5053-9a08-0768a2e455dd",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 9. Leafy Vegetable Production (Vegetable Production Handbook of Florida)",
+  "crop": "lettuce",
+  "disease": null,
+  "content": "Lettuce is a cool-season leafy vegetable grown for fresh-market salads and is one of the most important high-value vegetable crops in the world, produced on every continent and traded extensively both domestically and internationally. Commercial production is concentrated in cool coastal and temperate regions with mild temperatures: in the United States the dominant producing region is California, especially the Salinas and Imperial Valleys, with Arizona producing a large winter crop and Florida and other states contributing seasonal supply; the major world producers include China, the United States, India, Spain and Italy. Lettuce is produced as crisphead, romaine, leaf and butterhead types, and the type grown is closely tied to market and region. In Florida, leafy vegetables including lettuce are grown as cool-season crops on the state's sandy soils, and the Vegetable Production Handbook gives planting dates, cultivar recommendations and approved pesticide options for the state. Lettuce is a shallow-rooted crop with a short production cycle, grown from transplants or direct-seeded and commonly produced on raised beds with drip irrigation; it requires high, steady inputs of water and nutrients because the harvested product is the leaf and quality falls quickly under stress. Yields are high and the crop turns over rapidly, commonly producing on the order of 20-40 tonnes per hectare per crop with multiple crops per year in favourable regions, which contributes to its economic importance as a fresh-market salad crop and to its significance in diets. Lettuce is rotated with non-lettuce crops, including brassicas, root crops, cereals and legumes, to break disease cycles; cover crops improve soil health. Climate-adaptation pressures are acute because lettuce is sensitive to heat, which causes bolting, bitterness and tipburn, and production is already shifting and being protected by coastal fog belts, high tunnels and improved cultivars; principal disease and pest pressures include downy mildew, sclerotinia, aphids, thrips and leafminers.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV293",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "lettuce",
+    "leafy-vegetable",
+    "cool-season",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "lettuce",
+    "crop_slug": "lettuce",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

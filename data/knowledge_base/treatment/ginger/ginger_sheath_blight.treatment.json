@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ece880c0-d768-554d-b901-cface9aefc6f",
+  "category": "treatment",
+  "source": "University of Hawai'i at Manoa, College of Tropical Agriculture and Human Resources (CTAHR) — Hawaii Agricultural Experiment Station Circular 62",
+  "title": "Ginger Sheath Blight (Rhizoctonia solani) — Integrated Management",
+  "crop": "ginger",
+  "disease": "sheath blight",
+  "content": "Ginger sheath blight, associated with Rhizoctonia solani and other soil- and residue-borne fungi of ginger, is managed with sanitation, drainage, clean planting material, rotation and targeted fungicides rather than any single measure. Use disease-free rhizomes, remove and destroy infected plant debris, and avoid waterlogging by planting on raised, well-drained beds, since moist soil conditions favour the pathogen. Practice crop rotation with non-host crops and avoid excessive planting density that keeps the canopy humid. Apply a locally registered soil or foliar fungicide with Rhizoctonia activity at the label rate and interval when symptoms appear, rotating modes of action to slow resistance. Because product registrations differ by country, confirm approved fungicides and doses with your national or state plant-protection authority. CTAHR's Circular 62 (Trujillo 1964) is the underlying reference compilation of ginger diseases and their control for Hawaii; consult the current product label and local extension guidance before any application.",
+  "url": "https://cms.ctahr.hawaii.edu/Portals/43/C2-62.pdf",
+  "author": "E. E. Trujillo (1964), University of Hawai'i at Manoa, College of Tropical Agriculture and Human Resources (CTAHR), Hawaii Agricultural Experiment Station Circular 62",
+  "date": "1964-12-01",
+  "region": "global",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rhizoctonia",
+    "ginger",
+    "drainage",
+    "rotation",
+    "fungicide",
+    "ctahr"
+  ],
+  "metadata": {
+    "class_label": "ginger sheath blight",
+    "crop_slug": "ginger",
+    "disease_slug": "sheath_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "source_review": "URL replaced from untrusted spices.res.in to CTAHR Circular 62 (.edu, trusted 'extension' tier); resolves HTTP 200 application/pdf.",
+    "class_index": 50
+  }
+}

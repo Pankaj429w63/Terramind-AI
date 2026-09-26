@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c91474c3-1d0b-5826-a81f-47eb083e4676",
+  "category": "treatment",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Banana Fusarium Wilt (Panama Disease) — Prevention and Management",
+  "crop": "banana",
+  "disease": "panama disease",
+  "content": "Panama disease, caused by Fusarium oxysporum f. sp. cubense (including the Tropical Race 4 strain), is a soil-borne wilt for which there is no effective chemical cure; once a field is infested, the fungus persists in soil for many years. Management therefore relies on exclusion and containment: use certified disease-free planting material from tissue culture, quarantine affected farms and restrict movement of soil, water, plants and farm equipment, and disinfect tools, boots and machinery between blocks. Where Tropical Race 4 is present, the field should be fallowed or the crop rotated to a non-host; replant only with resistant or tolerant varieties. Improve drainage and avoid waterlogging and root wounding, which favour infection. Symptomatic plants should be destroyed (not composted) and not moved off site. Growers in affected regions should follow national plant-protection-authority regulations on movement and reporting.",
+  "url": "https://www.fao.org/3/i3269e/i3269e.pdf",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2014-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "fusarium",
+    "tr4",
+    "panama-disease",
+    "banana",
+    "quarantine",
+    "soil-borne",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "banana panama disease",
+    "crop_slug": "banana",
+    "disease_slug": "panama_disease",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 6
+  }
+}

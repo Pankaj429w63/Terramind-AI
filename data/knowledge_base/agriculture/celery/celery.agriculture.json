@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "0b33eed9-5b80-5008-8051-9403a94736be",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 1. Commercial Vegetable Production in Florida (Vegetable Production Handbook of Florida)",
+  "crop": "celery",
+  "disease": null,
+  "content": "Celery is a cool-season vegetable grown for its crisp petioles and is a relatively specialised crop with a long growing season, a shallow root system and a narrow set of adapted production regions. Commercial production is concentrated where the climate is cool and moist: in the United States the dominant producing state is California, with additional production in Florida, Michigan, Texas and Ohio, while the major world producers include the United States, Spain, Mexico, China, India, Italy and the Netherlands. UF/IFAS's Vegetable Production Handbook presents comprehensive vegetable production guidance for Florida, covering the general production practices, cultivar choice and pesticide options that apply across the state's commercial vegetable crops, of which celery is an established cool-season component grown on the state's sandy soils with raised, well-prepared beds and drip irrigation. Celery requires a fertile, high-organic-matter soil and a long, cool season that allows the crop to mature without heat stress; it needs a high, continuous supply of water and nutrients because the harvested product is the swollen petiole and any interruption of growth reduces quality and causes physiological disorders. Yields are high for a vegetable, with quality commercial crops commonly yielding on the order of 40-70 tonnes per hectare, and the crop is economically important both for the fresh market and for processing into soup, juice and dried products, and as a flavour base in many food products. Celery is normally rotated with non-apiaceous crops — it should not follow other members of the carrot family such as carrot or parsley, because of shared soil-borne disease and nematode problems — and it fits into rotation with cereals, legumes and brassicas, with cover crops used to build organic matter and protect soil. Climate-adaptation pressures include heat, which causes pithy, stringy and poorly flavoured petioles, and the crop requires irrigation or even evaporative cooling in hot conditions; principal disease pressures include aster yellows, fusarium yellows, septoria leaf blight, pink rot and celery mosaic virus.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV100",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "celery",
+    "cool-season",
+    "shallow-rooted",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "celery",
+    "crop_slug": "celery",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

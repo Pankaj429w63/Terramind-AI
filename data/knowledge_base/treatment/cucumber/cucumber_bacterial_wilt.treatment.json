@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "17747df1-4943-590d-b662-51eb92d3efbe",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Bacterial Wilt of Cucurbits — Pest Management Guidelines",
+  "crop": "cucumber",
+  "disease": "bacterial wilt",
+  "content": "Bacterial wilt of cucumber is caused by Erwinia tracheiphila, which overwinters in the gut of the striped and spotted cucumber beetles and is transmitted when beetles feed. Management therefore targets the vector: control cucumber beetles from crop emergence, because early-season feeding on young plants causes the most damaging infections. Use floating row covers over seedlings (removing them at flowering to allow pollination), apply labelled insecticides for beetle control when thresholds are reached, and use delayed or trap-cropping and perimeter treatments where locally recommended. Plant resistant or tolerant varieties and remove and destroy wilted plants to reduce inoculum. Once a plant wilts it cannot be cured. Follow label directions for all insecticide applications and observe pollinator protections during bloom.",
+  "url": "https://ipm.ucanr.edu/agriculture/cucurbits/bacterial-wilt/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "erwinia",
+    "cucumber",
+    "vector-control",
+    "cucumber-beetle",
+    "row-covers",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "cucumber bacterial wilt",
+    "crop_slug": "cucumber",
+    "disease_slug": "bacterial_wilt",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 40
+  }
+}

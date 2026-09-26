@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e2b09c28-4bc2-5391-a54b-0b7e7e11d783",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "zucchini",
+  "disease": null,
+  "content": "Zucchini and other summer squash are short-season, rapidly growing cucurbits that are harvested repeatedly while the plant continues to grow, so nutrition must sustain continuous flowering and fruit development. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook advises combining adequate fertilizer rates with irrigation scheduling and crop nutrient-status monitoring to keep nutrients in the root zone in sandy soils. Under plastic mulch with drip irrigation, phosphorus is generally applied before planting according to soil test because it is relatively immobile, while nitrogen and potassium are supplied as a target rate with split or fertigated applications through the harvest period, with supplemental applications allowed to compensate for leaching rains. Potassium is important for fruit size and quality, and nitrogen shortfalls appear quickly as reduced fruit set, smaller fruit and pale colour; however, excessive nitrogen encourages excessive vegetative growth, delays maturity and can reduce yield. Micronutrients such as boron and magnesium may be limiting on coarse, low-organic-matter or leached soils and should be checked with soil and tissue analysis. Even moisture through the season is essential because irregular water availability aggravates calcium-related fruit disorders such as blossom-end rot and reduces fruit quality. Maintain soil pH in the recommended range and follow published best-management practices.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "zucchini",
+    "summer-squash",
+    "potassium",
+    "fertigation",
+    "uf-ifas",
+    "bmp"
+  ],
+  "metadata": {
+    "class_label": "zucchini",
+    "crop_slug": "zucchini",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

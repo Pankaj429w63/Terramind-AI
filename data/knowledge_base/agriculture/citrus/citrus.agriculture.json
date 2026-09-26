@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "187764a0-f882-5792-a31a-a1d7dd1d69d4",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Citrus — Food and Agriculture Market Analysis (FAMA)",
+  "crop": "citrus",
+  "disease": null,
+  "content": "Citrus is grown in tropical and subtropical regions across more than 140 countries and is among the most important and most traded fruit groups in the world, comprising oranges, tangerines and mandarins, lemons and limes, grapefruit and other citrus. FAO notes that citrus fruit production is a major activity in several countries and that citrus is one of the leading traded fruits globally, with about half of global production entering international trade and a very large share of production going to processing for juice. The crop is adapted to warm subtropical and Mediterranean climates with mild winters and adequate irrigation, and production is concentrated in regions free of severe frost: the major producers include Brazil, China, India, the United States, Mexico, Spain, Egypt, Turkey, South Africa and Argentina, with Brazil and the United States historically dominant in orange production. FAO highlights the nutritional importance of citrus: it is one of the most important commercial sources of vitamin C and also supplies folate, potassium and dietary fibre, and it is a recommended component of diets aimed at preventing chronic disease, which underpins its economic importance both as a fresh fruit and as a processed product. Oranges are the largest component of the crop by volume, with a large share going to juice, while tangerines and mandarins have grown fastest in fresh trade and lemons and limes are significant for both fresh and processing markets. Yields vary by species, region and management but commonly reach on the order of 20-40 tonnes per hectare in well-managed mature groves. Citrus trees are perennial and evergreen, grown on long rotations with rootstock choice central to managing soil-borne disease; cover crops and mulches are used between rows and in the grove to improve soil health and reduce erosion. The sector faces serious climate and pest challenges: citrus greening or HLB has devastated production in Florida and parts of the Americas and Asia and has reshaped production, while freeze events, drought and heat affect yield and quality, driving adaptation through resistant rootstocks, protected culture and geographic shifts.",
+  "url": "https://www.fao.org/markets-and-trade/commodities-overview/food-and-agriculture-market-analysis-(FAMA)/citrus/en",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2023-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "citrus",
+    "subtropical",
+    "oranges",
+    "vitamin-c",
+    "trade",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "citrus",
+    "crop_slug": "citrus",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

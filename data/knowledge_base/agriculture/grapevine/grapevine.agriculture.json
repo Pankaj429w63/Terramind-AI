@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d96d7966-8b22-51e3-946c-9358d5f60d8e",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Backyard Grape Growing",
+  "crop": "grapevine",
+  "disease": null,
+  "content": "Grapevine is a long-lived, woody, climbing perennial and is one of the most ancient cultivated crops, grown on trellises or other supports in vineyards and, on a small scale, on arbors and fences. Vines are adapted to warm, dry summers and require good air drainage and sun exposure; Penn State Extension notes that a well-established grapevine adapted to its climate will produce fruit for many decades, which makes planting and training decisions long-lasting. Commercial grapevine culture is dominated by a few world regions for wine and table grapes, with China, Italy, Spain, France, the United States, Turkey and Argentina among the leading producers, while smaller plantings are found wherever suitable climate exists. The grapevine's growth habit is distinctive and determines its management: because grapes bear fruit on one-year-old wood, the vine must be trained to a permanent trunk and cordon or head system and then pruned each dormant season to set the bud number and therefore the crop. Penn State Extension explains that a mature grapevine naturally produces far more wood than it can support — much more than is necessary or desirable — and that typically about 90 percent of the new growth of a mature vine is removed during dormant pruning, most of it in the dormant months between December and March; balanced pruning in which roughly three to four buds are retained per foot of cordon matches the vine's vigour to its crop. Vines can be trained to a commercial trellis, an arbor or a fence, and the training system should be decided early because there is only one chance to train the vine correctly. Grapevines are grown on long rotations rather than annual ones, and cover crops between rows protect the soil, reduce erosion and support soil biology. Production risks include the mildews, black rot, berry moths and phylloxera, and climate adaptation centres on site selection, irrigation in dry regions and cultivar choice.",
+  "url": "https://extension.psu.edu/backyard-grape-growing/",
+  "author": "Barbara Goulart and Mark Chien, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-05-11",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "grapevine",
+    "perennial",
+    "trellis",
+    "pruning",
+    "vineyard",
+    "production"
+  ],
+  "metadata": {
+    "class_label": "grapevine",
+    "crop_slug": "grapevine",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

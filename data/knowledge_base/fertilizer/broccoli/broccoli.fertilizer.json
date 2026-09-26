@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a28be42e-d3fe-525e-b3a0-4bd59aa299aa",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Ecological Disease Management and Organic Fertility for Brassica Crops",
+  "crop": "broccoli",
+  "disease": null,
+  "content": "Broccoli is a heavy-feeding cole (brassica) crop with a high demand for nitrogen, because the harvested head is produced by rapid vegetative expansion. Penn State Extension guidance for brassica production calls for building soil organic matter with compost and manure before planting, maintaining soil pH at approximately 6.0-6.8 (broccoli is sensitive to clubroot and to acid soils, and liming to this range both improves nutrient availability and suppresses clubroot), and supplying nitrogen in split applications — a pre-plant and one or two side-dressings during active growth — rather than a single large dose. Bone meal, blood meal, composted manure and other organic nitrogen sources are used in organic systems and must be timed so nitrogen is available when the head is sizing. Broccoli also responds to adequate phosphorus and potassium supplied by soil test, and to boron, which is required in small quantities and can be deficient in coarse, low-organic-matter soils. Symptoms of nutrient shortage include pale, lower-quality heads and slow growth. Manage moisture evenly and avoid prolonged waterlogging. Ensure fertiliser applications comply with organic certification rules where applicable, and rotate brassicas to reduce soil-borne disease pressure.",
+  "url": "https://extension.psu.edu/ecological-disease-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "brassica",
+    "broccoli",
+    "organic",
+    "clubroot",
+    "lime"
+  ],
+  "metadata": {
+    "class_label": "broccoli",
+    "crop_slug": "broccoli",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

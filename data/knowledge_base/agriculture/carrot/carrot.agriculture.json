@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "fb1a0360-a6d8-5e3f-8c4c-3a1e696b1628",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Vegetable Production Handbook of Florida — Root and Bulb Crop Production",
+  "crop": "carrot",
+  "disease": null,
+  "content": "Carrot is a cool-season root crop grown for its edible taproot and is one of the most important and most widely consumed root vegetables in the world, produced on every continent and traded extensively both fresh and processed. Production is concentrated in regions with cool to moderate growing conditions and deep, stone-free soils: in the United States the leading producing states are California and Washington for the fresh market and Wisconsin, Washington and the Pacific Northwest for processing, while major world producers include China, Uzbekistan, the United States, Russia, Ukraine, Poland and Turkey. Carrot is grown as an annual from direct-sown seed, and because the harvested product is the root, it demands a deep, friable, well-prepared seedbed; the crop is commonly grown on raised beds, and in Florida it is produced as a cool-season crop on the state's sandy soils, with planting dates, cultivar recommendations and approved pesticide options given in the Vegetable Production Handbook. Carrot yields are high, commonly on the order of 30-70 tonnes per hectare under good commercial management, and the crop is economically important as a low-cost, nutritious root vegetable and as a processing crop for freezing, canning and juice. Carrots fit well into rotation with cereals, legumes and brassicas, which helps break the cycles of soil-borne disease and nematodes, and cover crops are widely used to protect soil and add organic matter; because the crop is harvested mechanically, uniform soil conditions are important. Climate-adaptation considerations include heat, which reduces root quality and causes poor colour, and drought, which causes splitting and forking; principal pest and disease pressures include carrot rust fly, carrot weevil, aster yellows, alternaria and cavity spot.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV100",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "carrot",
+    "root-crop",
+    "cool-season",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "carrot",
+    "crop_slug": "carrot",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

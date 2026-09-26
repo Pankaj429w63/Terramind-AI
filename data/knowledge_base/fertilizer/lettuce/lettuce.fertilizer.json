@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c3871dcc-1212-5238-953c-af84f25ca777",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "lettuce",
+  "disease": null,
+  "content": "Lettuce is a short-season, shallow-rooted leafy vegetable with a high nitrogen requirement but a small root system, which means nitrogen must be available in the immediate root zone and must be maintained continuously through the short crop cycle. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook emphasises that adequate fertilizer rates must be used together with irrigation scheduling and crop nutritional status monitoring so that nutrients are not leached below the shallow root zone in sandy soils. In commercial production on polyethylene mulch with drip irrigation, nitrogen and potassium are injected in split applications and their rates adjusted during the season for leaching rains; phosphorus is largely applied pre-plant based on soil test because it is relatively immobile. Lettuce quality is strongly influenced by nutrition: adequate calcium and boron, combined with even moisture, reduce the incidence of tipburn, a physiological disorder associated with calcium transport failure in rapidly growing heads, and potassium contributes to head weight and quality. Because lettuce is harvested whole, nitrogen applied too close to harvest can accumulate as nitrate in the tissue, and both crop quality and food-safety considerations favour matching nitrogen supply to crop demand rather than applying excessive amounts. Maintain soil pH in the recommended range and follow published best-management practices.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "lettuce",
+    "nitrogen",
+    "tipburn",
+    "calcium",
+    "uf-ifas",
+    "leafy-vegetable"
+  ],
+  "metadata": {
+    "class_label": "lettuce",
+    "crop_slug": "lettuce",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

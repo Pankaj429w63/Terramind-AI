@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "7c53976d-d907-5507-8e24-2517362e8deb",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 18. Tomato Production (Vegetable Production Handbook of Florida)",
+  "crop": "tomato",
+  "disease": null,
+  "content": "Tomato is the most widely grown and most economically important fruiting vegetable in the world, consumed fresh and processed into sauces, paste, juice and canned products. Tomatoes are adapted to warm conditions and are grown across temperate, subtropical and tropical regions in the open, under plasticulture and in protected culture; global production is dominated by China, India, the United States, Turkey, Egypt, Italy, Spain and Mexico, while in the United States commercial production is concentrated in California, which leads processing tomato production worldwide, and in Florida, Georgia and other states for fresh-market winter and spring supply. UF/IFAS's Vegetable Production Handbook describes tomato production in Florida as a major fresh-market industry with more than 40,000 acres harvested in the state at a gross sales value in excess of $580 million, grown throughout the state in five main regions — southeast around Homestead, east central at Fort Pierce, southwest at Immokalee, west central at Tampa and northwest at Quincy — which illustrates both the scale and the geographic concentration of fresh-market production. Tomato is grown from transplants, mostly on raised, fumigated beds with plastic mulch and drip irrigation, and the crop is a heavy feeder that requires closely managed water and nutrients; the handbook notes that tissue analysis is used on some soils in place of calibrated soil tests and that fertigation with a 4-0-8 or similar formula is initiated a few weeks after transplanting, with rates increased as plant biomass grows. Yields are high, commonly on the order of 40-80 tonnes per hectare in well-managed fields of California and Florida. Tomato rotates well with cereals, legumes and brassicas and away from solanaceous crops to reduce soil-borne disease; cover crops improve soil and, where residue is incorporated, reduce fertilizer requirements. The crop is economically important both fresh and processed, and its production risks include the silverleaf whitefly and the tomato yellow leaf curl virus it vectors, late blight, bacterial spot, fusarium wilt, tomato fruitworm and leafminer, with adaptation centred on resistant cultivars and protected culture.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV137",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tomato",
+    "fresh-market",
+    "plasticulture",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "tomato",
+    "crop_slug": "tomato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

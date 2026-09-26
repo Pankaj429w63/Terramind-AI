@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "42b4ae1d-bac1-50b8-b0d5-1bcc6704bde5",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Fruit Production and Harvesting — Tree and Small Fruit",
+  "crop": "cherry",
+  "disease": null,
+  "content": "Cherries are stone fruit that repay careful site selection and planting, because the trees are long-lived and early to bloom. Penn State Extension's fruit production guidance stresses that the first step is finding the right spot: most fruit crops, including cherry, require plenty of sunlight through the day to fuel fruit production, so choose a planting area that receives full sun for the majority of the day. Plant in early spring, and before planting make sure the soil is dry enough to crumble in your hand, since working wet soil damages its structure. Home orchards are advised to use dwarfing rootstocks, which keep trees manageable for pruning, spraying and harvest and bring the tree into bearing sooner. Penn State Extension notes that most tree fruits, and sweet cherries especially, set heavier crops when a second, compatible cultivar is planted nearby to supply pollen, so plan for pollination when choosing varieties, and give pollinisers and pollinators room for bloom-time bee activity. Because cherry blooms early, avoid frost pockets and be prepared to protect blossoms from late frost. Care through the season centres on maintaining an open canopy for air movement and light, watering during dry spells, and prompt removal of mummified fruit and infected wood. Ripening periods vary with variety, and Penn State Extension advises checking a few individual fruits for ripeness rather than judging by the calendar; access its resources on fruit maturity indicators and post-harvest handling to time harvest correctly. Handle harvested fruit gently and chill promptly, since tree fruit is perishable and quality falls quickly with rough handling or warm storage.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-04-10",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cherry",
+    "polliniser",
+    "brown-rot",
+    "fruit-cracking",
+    "harvest",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "cherry",
+    "crop_slug": "cherry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

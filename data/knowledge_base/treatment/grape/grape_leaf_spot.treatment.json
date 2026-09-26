@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "21dc0004-1a5a-5cd4-827d-9f79f5ffb687",
+  "category": "treatment",
+  "source": "Cornell University, New York State Integrated Pest Management Program",
+  "title": "Grape Leaf Spot Diseases — Management",
+  "crop": "grape",
+  "disease": "leaf spot",
+  "content": "Several fungi cause leaf spots on grape (for example angular leaf spot and other leaf-spotting pathogens), and management is largely cultural supported by protectant fungicides. Improve air movement with shoot positioning and leaf removal to reduce leaf wetness duration, avoid excessive nitrogen that produces dense, shaded canopies, and manage irrigation at the base rather than overhead. Reduce overwintering inoculum by removing and destroying fallen leaves and pruning debris. When leaf-spot diseases have caused significant defoliation in previous seasons, apply labelled protectant fungicides on a schedule through the susceptible period, tank-mixing or alternating multi-site and single-site materials and rotating modes of action. Follow the label for rate, timing and pre-harvest interval.",
+  "url": "https://nysipm.cornell.edu/agriculture/fruits/grapes/diseases/",
+  "author": "Cornell University, New York State Integrated Pest Management Program",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "leaf-spot",
+    "grape",
+    "canopy-management",
+    "sanitation",
+    "fungicide",
+    "nysipm"
+  ],
+  "metadata": {
+    "class_label": "grape leaf spot",
+    "crop_slug": "grape",
+    "disease_slug": "leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 54
+  }
+}

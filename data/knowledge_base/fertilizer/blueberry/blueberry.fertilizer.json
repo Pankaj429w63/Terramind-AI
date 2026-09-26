@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e373bc62-ea23-58af-b501-014bb60a9a71",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management for Acid-Loving Fruit Crops",
+  "crop": "blueberry",
+  "disease": null,
+  "content": "Blueberry is one of the most soil-sensitive fruit crops and cannot be managed with general vegetable fertility assumptions. It requires an acid soil, ideally pH 4.5-5.2, and Penn State Extension stresses that soil testing is the necessary first step because blueberries fail when planted into neutral or calcareous soil regardless of fertiliser rates. Within its correct pH range, nitrogen is the principal nutrient requiring annual input, applied in split doses — commonly one application at bud break and another about a month later — using ammonium-based nitrogen sources such as ammonium sulfate, which are preferred by this acid-loving crop. Phosphorus and potassium requirements are modest; excess phosphorus can induce micronutrient problems, so apply P and K only on soil-test recommendation. Blueberries are shallow-rooted with fine, fibrous roots that dry easily and are easily salt-injured, so light, frequent applications over the root zone rather than concentrated bands are advised, and plants must be watered in after fertilising. Iron is a frequent concern: at pH above the recommended range iron becomes unavailable and interveinal chlorosis develops. Correcting pH with elemental sulfur is generally the durable answer, and foliar iron chelate may be used short-term. Manage mulch and organic matter to keep moisture and pH stable.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "acid-soil",
+    "ammonium-sulfate",
+    "iron",
+    "blueberry",
+    "soil-ph",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "blueberry",
+    "crop_slug": "blueberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

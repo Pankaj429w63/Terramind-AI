@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d87c4473-effc-54c1-b637-45a85d9ea409",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "cucumber",
+  "disease": null,
+  "content": "Cucumber and other cucurbits are fast-growing, heavy-feeding vegetables usually grown on polyethylene mulch with drip irrigation, which allows nitrogen and potassium to be injected as the crop develops. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook explains that at field level, adequate fertilizer rates must be combined with irrigation scheduling, controlled-release materials and crop nutritional status monitoring such as soil tests and petiole sap testing to keep nutrients in the root zone and avoid leaching in sandy soils. Recommendations are given as a target fertilizer rate that serves as a starting point, with supplemental applications allowed to account for leaching rains and extended harvest periods. Phosphorus is generally applied pre-plant based on soil test because it is relatively immobile, while nitrogen and potassium are the nutrients most often split or fertigated through the season. Cucurbits benefit from adequate potassium for fruit quality and from boron and other micronutrients in small quantities, and magnesium can be limiting on sandy, highly leached soils. Maintain soil pH in the recommended range for commercial vegetable production and follow best-management practices for irrigation and nutrient application to protect water quality. Watch plant vigour and leaf colour to fine-tune rates in-season.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cucumber",
+    "cucurbit",
+    "fertigation",
+    "potassium",
+    "uf-ifas",
+    "bmp"
+  ],
+  "metadata": {
+    "class_label": "cucumber",
+    "crop_slug": "cucumber",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

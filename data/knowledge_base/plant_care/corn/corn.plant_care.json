@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "32f88d34-18a0-5cae-8d3a-afac570ba5c3",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Corn",
+  "crop": "corn",
+  "disease": null,
+  "content": "Corn is a warm-season grass crop and a heavy feeder that grows best in full sun on a well-drained, fertile soil. UC IPM advises preparing the soil with compost and a balanced fertilizer before planting and sowing seed directly once the soil has warmed, since corn germinates poorly in cold, wet soil; plant in blocks of several short rows rather than a single long row to ensure good wind pollination, because corn is a wind-pollinated crop and poor pollination produces ears with missing kernels. Space plants about 8-12 inches apart in rows 24-36 inches apart, and thin to a uniform stand. Corn has a high nitrogen requirement: side-dress with nitrogen when plants are about a foot tall and again as tassels appear, because nitrogen shortage during ear development reduces yield and kernel fill; inadequate water at silking and ear fill also causes poor kernel development, so maintain even moisture and water deeply during flowering and ear growth. Sweet corn should be isolated in time or space from field corn and from different sweet corn types, because cross-pollination reduces sweetness and eating quality. Scout weekly through the season for corn earworm, European corn borer, fall armyworm and aphids, checking the whorl and developing ears, and manage weeds early because corn is a poor competitor when young. Harvest sweet corn when the silks are brown and dry and the kernels are plump and release a milky juice when pressed with a thumbnail; corn quality declines very rapidly after harvest because the sugar converts to starch, so pick just before use, chill immediately and refrigerate, or blanch and freeze within hours of picking for best quality.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-corn/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "corn",
+    "wind-pollination",
+    "nitrogen",
+    "earworm",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "corn",
+    "crop_slug": "corn",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

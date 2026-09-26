@@ -1,0 +1,415 @@
+{
+  "category": "plant_care",
+  "rag_category": "plant care",
+  "total_documents": 34,
+  "crops": {
+    "apple": {
+      "crop": "apple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "apple.plant_care.json",
+          "document_id": "ae04fc19-d914-59c4-8d9e-9478ebaefec8",
+          "crop": "apple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "banana": {
+      "crop": "banana",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "banana.plant_care.json",
+          "document_id": "6c38f8b3-527b-558f-8bb9-c9a2e29b825c",
+          "crop": "banana",
+          "status": "sourced"
+        }
+      ]
+    },
+    "basil": {
+      "crop": "basil",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "basil.plant_care.json",
+          "document_id": "3b32af46-4bb6-526f-806e-f626290baa94",
+          "crop": "basil",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bean": {
+      "crop": "bean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bean.plant_care.json",
+          "document_id": "d5acbc3b-73fa-5e6c-ae0a-f07033474d65",
+          "crop": "bean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bell_pepper": {
+      "crop": "bell pepper",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bell_pepper.plant_care.json",
+          "document_id": "fdcc9ecc-0b78-5ddd-a2be-8a037a7aaa12",
+          "crop": "bell pepper",
+          "status": "sourced"
+        }
+      ]
+    },
+    "blueberry": {
+      "crop": "blueberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "blueberry.plant_care.json",
+          "document_id": "18f8ea42-1c0b-508f-9c1b-66925d7505e1",
+          "crop": "blueberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "broccoli": {
+      "crop": "broccoli",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "broccoli.plant_care.json",
+          "document_id": "c21b2f37-00dc-5396-9216-3db0f173f8d1",
+          "crop": "broccoli",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cabbage": {
+      "crop": "cabbage",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cabbage.plant_care.json",
+          "document_id": "1cd2155e-0621-565c-8cfb-5f25486887a7",
+          "crop": "cabbage",
+          "status": "sourced"
+        }
+      ]
+    },
+    "carrot": {
+      "crop": "carrot",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "carrot.plant_care.json",
+          "document_id": "f112c16e-efde-5458-aaf4-dfdeb7bb2fce",
+          "crop": "carrot",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cauliflower": {
+      "crop": "cauliflower",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cauliflower.plant_care.json",
+          "document_id": "c80ad0fc-fe07-5a57-87c2-212461fd5f7a",
+          "crop": "cauliflower",
+          "status": "sourced"
+        }
+      ]
+    },
+    "celery": {
+      "crop": "celery",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "celery.plant_care.json",
+          "document_id": "cb047193-b4e3-52bc-a02d-c90aa24be5a0",
+          "crop": "celery",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cherry": {
+      "crop": "cherry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cherry.plant_care.json",
+          "document_id": "42b4ae1d-bac1-50b8-b0d5-1bcc6704bde5",
+          "crop": "cherry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "citrus": {
+      "crop": "citrus",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "citrus.plant_care.json",
+          "document_id": "508292f3-7c76-50cf-a642-1bb6f742a2fc",
+          "crop": "citrus",
+          "status": "sourced"
+        }
+      ]
+    },
+    "coffee": {
+      "crop": "coffee",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "coffee.plant_care.json",
+          "document_id": "ba48464d-e44f-5f80-8508-14072f378458",
+          "crop": "coffee",
+          "status": "sourced"
+        }
+      ]
+    },
+    "corn": {
+      "crop": "corn",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "corn.plant_care.json",
+          "document_id": "32f88d34-18a0-5cae-8d3a-afac570ba5c3",
+          "crop": "corn",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cucumber": {
+      "crop": "cucumber",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cucumber.plant_care.json",
+          "document_id": "cb7a45cc-c8f0-5ad6-b8d4-68fa60cd2e2c",
+          "crop": "cucumber",
+          "status": "sourced"
+        }
+      ]
+    },
+    "eggplant": {
+      "crop": "eggplant",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "eggplant.plant_care.json",
+          "document_id": "dc39c139-061a-5b1d-8f59-634ac7891a5d",
+          "crop": "eggplant",
+          "status": "sourced"
+        }
+      ]
+    },
+    "garlic": {
+      "crop": "garlic",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "garlic.plant_care.json",
+          "document_id": "b64f0eab-b048-5ca7-829d-19f806ddb1df",
+          "crop": "garlic",
+          "status": "sourced"
+        }
+      ]
+    },
+    "ginger": {
+      "crop": "ginger",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "ginger.plant_care.json",
+          "document_id": "4e54cf92-14c8-5c13-900a-87a2ac4ac607",
+          "crop": "ginger",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grape": {
+      "crop": "grape",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grape.plant_care.json",
+          "document_id": "28e01f87-53a0-550f-b1c7-70c804aee175",
+          "crop": "grape",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grapevine": {
+      "crop": "grapevine",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grapevine.plant_care.json",
+          "document_id": "865dd98f-4c53-5ee2-bbfd-c68f6cbb29ad",
+          "crop": "grapevine",
+          "status": "sourced"
+        }
+      ]
+    },
+    "lettuce": {
+      "crop": "lettuce",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "lettuce.plant_care.json",
+          "document_id": "ef5aa24f-963a-546e-9a5f-4ef6dcf1f1f1",
+          "crop": "lettuce",
+          "status": "sourced"
+        }
+      ]
+    },
+    "maple": {
+      "crop": "maple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "maple.plant_care.json",
+          "document_id": "c8c37654-46cd-5823-ac65-dcd32e420ec5",
+          "crop": "maple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "peach": {
+      "crop": "peach",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "peach.plant_care.json",
+          "document_id": "8b5b7f96-de5e-5cd8-905a-9f8658a2c018",
+          "crop": "peach",
+          "status": "sourced"
+        }
+      ]
+    },
+    "plum": {
+      "crop": "plum",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "plum.plant_care.json",
+          "document_id": "7c63ce47-b0ec-5969-bf16-ad8f28b35b25",
+          "crop": "plum",
+          "status": "sourced"
+        }
+      ]
+    },
+    "potato": {
+      "crop": "potato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "potato.plant_care.json",
+          "document_id": "cf1aac41-eadb-572f-b0ed-3106680c5852",
+          "crop": "potato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "raspberry": {
+      "crop": "raspberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "raspberry.plant_care.json",
+          "document_id": "7dc7f3bd-9d91-56d8-b3ff-ddaee0ae12b7",
+          "crop": "raspberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "rice": {
+      "crop": "rice",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "rice.plant_care.json",
+          "document_id": "62b49fd4-6d66-5980-b102-f0b78097606e",
+          "crop": "rice",
+          "status": "sourced"
+        }
+      ]
+    },
+    "soybean": {
+      "crop": "soybean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "soybean.plant_care.json",
+          "document_id": "37effb36-cdc9-59d6-9ea1-4879b277e669",
+          "crop": "soybean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "squash": {
+      "crop": "squash",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "squash.plant_care.json",
+          "document_id": "76d2e2d4-a264-517f-8731-31374bc9de89",
+          "crop": "squash",
+          "status": "sourced"
+        }
+      ]
+    },
+    "strawberry": {
+      "crop": "strawberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "strawberry.plant_care.json",
+          "document_id": "6ea4cac2-12be-5dce-8ac6-9316906fbfa4",
+          "crop": "strawberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tobacco": {
+      "crop": "tobacco",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tobacco.plant_care.json",
+          "document_id": "ca9f521e-8ae8-5d05-89b6-454ac010e2e5",
+          "crop": "tobacco",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tomato": {
+      "crop": "tomato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tomato.plant_care.json",
+          "document_id": "e296668d-8ab3-5f49-83f0-1ba6870053a9",
+          "crop": "tomato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "zucchini": {
+      "crop": "zucchini",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "zucchini.plant_care.json",
+          "document_id": "6380eab1-0251-5d53-9adf-1bcd0c34f0ac",
+          "crop": "zucchini",
+          "status": "sourced"
+        }
+      ]
+    }
+  }
+}

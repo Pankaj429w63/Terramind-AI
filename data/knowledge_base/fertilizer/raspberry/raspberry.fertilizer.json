@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "df72e7b2-6580-5c1f-be10-3ad1c02794fb",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management and Fertilizing Small Fruit",
+  "crop": "raspberry",
+  "disease": null,
+  "content": "Raspberry is a cane fruit with a perennial root system and biennial canes, and its nutrient programme is aimed at maintaining healthy canes and a productive fruiting row rather than maximum vegetative growth. Penn State Extension home-garden guidance recommends beginning with a soil test, because brambles perform best in well-drained soil at pH 6.0-6.8, and because raspberry is intolerant of poorly drained sites and of high water tables, which cause root rot regardless of fertility. Phosphorus, potassium and lime are best incorporated before planting; once established, nitrogen is the nutrient most often needed, applied in early spring before growth begins and again lightly after harvest where growth has been weak. Raspberry responds to nitrogen mainly through cane growth, so the practical guide is cane length and vigour: excessive nitrogen produces long, soft canes that are more prone to winter injury and that lodge and shade fruit, reducing quality and inviting disease. Potassium is important for cane hardiness and fruit quality. Organic matter in the form of compost or rotted manure applied as mulch improves moisture retention and supplies nutrients slowly, but avoid excessive manure, which supplies surplus nitrogen and salt. Keep the row narrow and weed-free to reduce competition for nutrients and water.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "raspberry",
+    "bramble",
+    "nitrogen",
+    "cane-vigour",
+    "soil-ph",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "raspberry",
+    "crop_slug": "raspberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

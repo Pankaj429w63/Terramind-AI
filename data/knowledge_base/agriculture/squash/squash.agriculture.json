@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "61d7d002-47b2-5f7b-9c8b-8d70b7b6bf80",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 7. Cucurbit Production (Vegetable Production Handbook of Florida)",
+  "crop": "squash",
+  "disease": null,
+  "content": "Squash — both summer squash, harvested immature with edible rind, and winter squash, harvested mature with a hard rind — are warm-season cucurbits grown for fresh market and processing and are produced throughout the temperate and subtropical world. Squash require warm conditions and are limited by frost and cool weather, which cause poor fruit set and misshapen fruit, so production is concentrated in warm regions and in seasonal windows that avoid cold: in the United States the major producing states are Florida, Georgia, California, Michigan, New York and the Carolinas for summer squash, with substantial production of winter squash (pumpkins and others) in Illinois, New York, Michigan, Ohio and California, while major world producers include China, India, Ukraine, Russia, the United States and Mexico. In Florida, cucurbits including squash are grown as warm- and cool-season crops on sandy soils, and the Vegetable Production Handbook gives the state's planting dates, recommended cultivars and approved pesticide options. Squash are commonly produced on raised, often fumigated beds with plastic mulch and drip irrigation, which warm the soil, control moisture and reduce fruit rot; the crop can also be grown in high tunnels to extend the season and in the open on bare ground where the season is long. Yields are high in well-managed crops, commonly on the order of 15-40 tonnes per hectare depending on the crop and system. Cucurbits share pests and diseases and should be rotated away from other cucurbits, alternating with cereals, legumes and non-cucurbit vegetables to break disease cycles; cover crops are used before planting to improve soil and organic matter. Squash are economically important both as a fresh-market vegetable and as a processing crop, and their production risks include powdery and downy mildew, squash bug, squash vine borer, cucumber beetles and aphid-transmitted viruses, with adaptation centred on protected culture, resistant cultivars and warm-season timing.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV123",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "squash",
+    "cucurbit",
+    "summer-squash",
+    "winter-squash",
+    "rotation",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "squash",
+    "crop_slug": "squash",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

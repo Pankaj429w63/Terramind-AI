@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "6ea4cac2-12be-5dce-8ac6-9316906fbfa4",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Growing Strawberries in the Home Garden",
+  "crop": "strawberry",
+  "disease": null,
+  "content": "Strawberries are shallow-rooted, low-growing perennial plants and need full sun to produce maximum fruit — ten or more hours of sunlight a day is ideal, and they need at least six hours of direct sun — and they need a well-drained, fertile site, because they cannot tolerate wet feet or standing water. UMN Extension advises taking a soil test before planting to determine whether nutrients are needed, and working some well-rotted compost into the soil, which adds nutrients, improves drainage and increases microbial activity. Space plants 12 to 18 inches apart. Strawberries are self-fertile but require bees for pollination, and their flowers are vulnerable to frost, so protect the blossoms when frost is forecast. Set plants so that the crown sits at the soil surface, neither buried nor exposed, since planting too deeply causes crown rot and planting too shallowly exposes the roots to drying; dormant transplants may look dead on arrival but sprout quickly once planted, and fresh green growth appears within about a week of planting, so keep the plants moist and cool and plant them as soon as possible. Remove some of the runners throughout the season or the plants will take over the yard, and after removing flowers for a few weeks after planting, fruit can be picked later that same summer; one June-bearing plant can produce up to 120 new daughter plants in a single season. Varieties differ by ripening habit — June-bearing types produce fruit during a short window in late June to early July, while day-neutral types flower and fruit continuously when temperatures are moderate and typically produce from July through October — so choose varieties to suit the season and site. Water regularly through establishment, fruit development and after harvest, since the plants are shallow-rooted. Renovate June-bearing beds after harvest, thin plants within two weeks of harvest and apply compost to day-neutral plants if needed, then cover plants with straw mulch for overwintering in cold climates. Scout regularly for slugs, aphids, tarnished plant bug, spotted-wing drosophila and for the fruit rots and leaf diseases that follow wet conditions, and remove diseased foliage and overripe fruit. Harvest berries when they are fully coloured and firm, pick with the cap and a short stem attached, harvest frequently in warm weather, and cool berries promptly, since strawberries are very perishable.",
+  "url": "https://extension.umn.edu/gardening-minnesota/growing-strawberries-home-garden",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "strawberry",
+    "self-fertile",
+    "runners",
+    "frost-protection",
+    "renovation",
+    "harvest"
+  ],
+  "metadata": {
+    "class_label": "strawberry",
+    "crop_slug": "strawberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

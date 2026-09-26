@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "73aebe02-8e82-5dd4-808a-e84b820d0ae9",
+  "category": "treatment",
+  "source": "Cornell University, College of Agriculture and Life Sciences (Vegetable MD Online)",
+  "title": "Early Blight of Tomato (Alternaria solani) — Management",
+  "crop": "tomato",
+  "disease": "early blight",
+  "content": "Tomato early blight is managed with rotation, sanitation, resistant varieties, staking/mulching and a protectant fungicide program. Rotate away from tomato, potato and other solanaceous crops for at least two years and destroy crop residue and cull piles, which carry the fungus between seasons. Stake or cage plants and mulch to keep foliage off the soil and reduce rain splash, water at the base, and remove infected lower leaves to slow upward progress. Maintain balanced nitrogen, because stressed and older plants are most susceptible. Begin labelled fungicide sprays when symptoms first appear and continue on a 7- to 14-day schedule, alternating multi-site protectants with single-site FRAC-group materials (groups 7 and 11 with early-blight activity) and rotating modes of action. Follow the label for rate, interval and pre-harvest interval.",
+  "url": "https://vegetablemdonline.ppath.cornell.edu/factsheets/Tomato_EarlyBlight.htm",
+  "author": "Cornell University, College of Agriculture and Life Sciences, Plant Pathology (Vegetable MD Online)",
+  "date": "2020-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "early-blight",
+    "tomato",
+    "rotation",
+    "fungicide",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "tomato early blight",
+    "crop_slug": "tomato",
+    "disease_slug": "early_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 81
+  }
+}

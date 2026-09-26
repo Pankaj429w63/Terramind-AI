@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "86438258-e00a-5779-8944-c3945620d932",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Raspberry Production",
+  "crop": "raspberry",
+  "disease": null,
+  "content": "Raspberry is a temperate bramble fruit grown for fresh market, processing and, increasingly, for tunnel and greenhouse production, and it is one of the most valuable small fruits per unit area. Raspberries are grown as red, black, purple and yellow types, and in two fruiting habits: summer-bearing (floricane) types, which produce on second-year canes, and primocane-bearing (fall-bearing) types, which fruit on first-year canes and allow either one or two crops per season. Production is concentrated in cooler temperate regions with adequate chilling: Penn State Extension describes field production of red and black raspberries and notes that at maturity, about four years old, field plantings of red raspberries should produce roughly 5,000 pounds of fruit per acre, while black raspberry yields are about half those of red raspberries, and that high-tunnel production is at least double that of field production for both red and black raspberries; tunnel-grown primocane-fruiting raspberries may produce a viable harvest the same year they are planted if set out early in the spring. The leading world producers include Russia, Poland, Serbia, the United States, Mexico, Chile and Spain, while in the United States production is concentrated in California, Oregon, Washington and the Northeast, with high-tunnel and primocane systems extending the season. Raspberries require well-drained, fertile soils with good air movement because brambles are susceptible to root rots, and they are grown on raised beds or on flat ground with permanent trellis or a hedgerow row; rotations move bramble blocks periodically to fresh ground to avoid soil-borne disease, and cover crops precede plantings. Raspberry is economically important as a high-value fresh and processed fruit, and its production risks include spotted-wing drosophila, cane blights, phytophthora root rot and viruses, with harvest timing and rapid cooling critical to quality.",
+  "url": "https://extension.psu.edu/raspberry-production/",
+  "author": "Kathy Demchak, Senior Extension Associate, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2021-12-09",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "raspberry",
+    "brambles",
+    "primocane",
+    "high-tunnel",
+    "production",
+    "economics"
+  ],
+  "metadata": {
+    "class_label": "raspberry",
+    "crop_slug": "raspberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

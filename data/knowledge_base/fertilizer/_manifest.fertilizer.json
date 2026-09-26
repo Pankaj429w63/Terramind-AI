@@ -1,0 +1,415 @@
+{
+  "category": "fertilizer",
+  "rag_category": "fertilizer",
+  "total_documents": 34,
+  "crops": {
+    "apple": {
+      "crop": "apple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "apple.fertilizer.json",
+          "document_id": "5ba13e3c-0612-5d0d-be0e-bb54bb4c05c1",
+          "crop": "apple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "banana": {
+      "crop": "banana",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "banana.fertilizer.json",
+          "document_id": "1be06163-3219-5797-80af-159c0f95cb80",
+          "crop": "banana",
+          "status": "sourced"
+        }
+      ]
+    },
+    "basil": {
+      "crop": "basil",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "basil.fertilizer.json",
+          "document_id": "f02cc777-688d-513f-9476-5d6418c2be41",
+          "crop": "basil",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bean": {
+      "crop": "bean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bean.fertilizer.json",
+          "document_id": "4a91d147-4b05-5e2b-8db6-d461e28fa316",
+          "crop": "bean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "bell_pepper": {
+      "crop": "bell pepper",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "bell_pepper.fertilizer.json",
+          "document_id": "35f39742-69e0-599a-9e21-2e2fb537f035",
+          "crop": "bell pepper",
+          "status": "sourced"
+        }
+      ]
+    },
+    "blueberry": {
+      "crop": "blueberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "blueberry.fertilizer.json",
+          "document_id": "e373bc62-ea23-58af-b501-014bb60a9a71",
+          "crop": "blueberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "broccoli": {
+      "crop": "broccoli",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "broccoli.fertilizer.json",
+          "document_id": "a28be42e-d3fe-525e-b3a0-4bd59aa299aa",
+          "crop": "broccoli",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cabbage": {
+      "crop": "cabbage",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cabbage.fertilizer.json",
+          "document_id": "05a48252-556a-5bfb-bef7-32efaf8137ea",
+          "crop": "cabbage",
+          "status": "sourced"
+        }
+      ]
+    },
+    "carrot": {
+      "crop": "carrot",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "carrot.fertilizer.json",
+          "document_id": "5ef3d559-5c6e-53b4-ba8c-837ebd9ff985",
+          "crop": "carrot",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cauliflower": {
+      "crop": "cauliflower",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cauliflower.fertilizer.json",
+          "document_id": "9b074344-77e7-5808-9e7a-cc10646dffc0",
+          "crop": "cauliflower",
+          "status": "sourced"
+        }
+      ]
+    },
+    "celery": {
+      "crop": "celery",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "celery.fertilizer.json",
+          "document_id": "c8dbe805-a5a6-5d43-9459-a5483b4aed0c",
+          "crop": "celery",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cherry": {
+      "crop": "cherry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cherry.fertilizer.json",
+          "document_id": "4f84ec6b-882c-5e42-b767-ed91f53feb97",
+          "crop": "cherry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "citrus": {
+      "crop": "citrus",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "citrus.fertilizer.json",
+          "document_id": "712cadd1-f01f-54a9-aac8-90650765eefc",
+          "crop": "citrus",
+          "status": "sourced"
+        }
+      ]
+    },
+    "coffee": {
+      "crop": "coffee",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "coffee.fertilizer.json",
+          "document_id": "88e840b9-b06b-5828-88d6-e56f592e7c0d",
+          "crop": "coffee",
+          "status": "sourced"
+        }
+      ]
+    },
+    "corn": {
+      "crop": "corn",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "corn.fertilizer.json",
+          "document_id": "4976276f-859a-5cd0-b638-d509b6cc55d8",
+          "crop": "corn",
+          "status": "sourced"
+        }
+      ]
+    },
+    "cucumber": {
+      "crop": "cucumber",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "cucumber.fertilizer.json",
+          "document_id": "d87c4473-effc-54c1-b637-45a85d9ea409",
+          "crop": "cucumber",
+          "status": "sourced"
+        }
+      ]
+    },
+    "eggplant": {
+      "crop": "eggplant",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "eggplant.fertilizer.json",
+          "document_id": "81e1705c-9c3d-527f-806f-c3a71e178ddf",
+          "crop": "eggplant",
+          "status": "sourced"
+        }
+      ]
+    },
+    "garlic": {
+      "crop": "garlic",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "garlic.fertilizer.json",
+          "document_id": "b99ea6e5-631d-5a17-962f-d59af63b316b",
+          "crop": "garlic",
+          "status": "sourced"
+        }
+      ]
+    },
+    "ginger": {
+      "crop": "ginger",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "ginger.fertilizer.json",
+          "document_id": "fbd8376b-eef8-5c50-9317-e25df2599636",
+          "crop": "ginger",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grape": {
+      "crop": "grape",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grape.fertilizer.json",
+          "document_id": "226e8c83-1fc9-5344-8cab-f7e52a67356e",
+          "crop": "grape",
+          "status": "sourced"
+        }
+      ]
+    },
+    "grapevine": {
+      "crop": "grapevine",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "grapevine.fertilizer.json",
+          "document_id": "078bd1bd-e2c9-5e6e-9716-7fc60cd8c508",
+          "crop": "grapevine",
+          "status": "sourced"
+        }
+      ]
+    },
+    "lettuce": {
+      "crop": "lettuce",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "lettuce.fertilizer.json",
+          "document_id": "c3871dcc-1212-5238-953c-af84f25ca777",
+          "crop": "lettuce",
+          "status": "sourced"
+        }
+      ]
+    },
+    "maple": {
+      "crop": "maple",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "maple.fertilizer.json",
+          "document_id": "2281fc42-cd73-52e1-b8d4-52c604a34d3b",
+          "crop": "maple",
+          "status": "sourced"
+        }
+      ]
+    },
+    "peach": {
+      "crop": "peach",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "peach.fertilizer.json",
+          "document_id": "b06c899d-d334-5fb6-bf83-2918cb264ae5",
+          "crop": "peach",
+          "status": "sourced"
+        }
+      ]
+    },
+    "plum": {
+      "crop": "plum",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "plum.fertilizer.json",
+          "document_id": "9f0009bb-82bd-5f9f-9455-738b0c19e9fa",
+          "crop": "plum",
+          "status": "sourced"
+        }
+      ]
+    },
+    "potato": {
+      "crop": "potato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "potato.fertilizer.json",
+          "document_id": "cd4c6083-9022-5b9e-ab07-061d1f744e79",
+          "crop": "potato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "raspberry": {
+      "crop": "raspberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "raspberry.fertilizer.json",
+          "document_id": "df72e7b2-6580-5c1f-be10-3ad1c02794fb",
+          "crop": "raspberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "rice": {
+      "crop": "rice",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "rice.fertilizer.json",
+          "document_id": "759e9bfa-312a-50c6-a120-714adb1f3753",
+          "crop": "rice",
+          "status": "sourced"
+        }
+      ]
+    },
+    "soybean": {
+      "crop": "soybean",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "soybean.fertilizer.json",
+          "document_id": "3a944cad-0cac-5b67-9c2e-99b008ec3b60",
+          "crop": "soybean",
+          "status": "sourced"
+        }
+      ]
+    },
+    "squash": {
+      "crop": "squash",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "squash.fertilizer.json",
+          "document_id": "487b8b3e-812e-5f78-abfb-81dfbdef0086",
+          "crop": "squash",
+          "status": "sourced"
+        }
+      ]
+    },
+    "strawberry": {
+      "crop": "strawberry",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "strawberry.fertilizer.json",
+          "document_id": "c7346071-934e-5d44-8f4e-e0072658c0ab",
+          "crop": "strawberry",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tobacco": {
+      "crop": "tobacco",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tobacco.fertilizer.json",
+          "document_id": "83a179fd-0240-559a-9444-a4dde70cf8b8",
+          "crop": "tobacco",
+          "status": "sourced"
+        }
+      ]
+    },
+    "tomato": {
+      "crop": "tomato",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "tomato.fertilizer.json",
+          "document_id": "cd342949-e8cb-5291-9dc4-426c6f00c96d",
+          "crop": "tomato",
+          "status": "sourced"
+        }
+      ]
+    },
+    "zucchini": {
+      "crop": "zucchini",
+      "document_count": 1,
+      "documents": [
+        {
+          "file": "zucchini.fertilizer.json",
+          "document_id": "e2b09c28-4bc2-5391-a54b-0b7e7e11d783",
+          "crop": "zucchini",
+          "status": "sourced"
+        }
+      ]
+    }
+  }
+}

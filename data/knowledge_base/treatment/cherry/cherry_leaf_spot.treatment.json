@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "47b4a150-f045-53da-8804-8f52781a4de9",
+  "category": "treatment",
+  "source": "Michigan State University Extension",
+  "title": "Cherry Leaf Spot (Blumeriella jaapii) — Management",
+  "crop": "cherry",
+  "disease": "leaf spot",
+  "content": "Cherry leaf spot is managed with orchard sanitation, resistant or tolerant cultivars and a protectant fungicide program. The fungus overwinters in fallen leaves, so raking, shredding or destroying leaf litter in autumn and applying a urea spray to the orchard floor reduce the primary inoculum that initiates spring infections. Prune to open the canopy and improve airflow so foliage dries faster, and avoid excessive nitrogen. On susceptible sweet and tart cherry cultivars, apply labelled fungicides from petal fall through the post-harvest period (the fungus causes most defoliation after harvest), using multi-site protectants alternated with single-site FRAC-group materials (groups 3, 7 and 11 with cherry-leaf-spot activity) and rotating modes of action. Follow the label for rate, timing and pre-harvest interval.",
+  "url": "https://www.canr.msu.edu/news/cherry_leaf_spot_management",
+  "author": "Michigan State University Extension",
+  "date": "2021-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "blumeriella",
+    "leaf-spot",
+    "cherry",
+    "sanitation",
+    "fungicide",
+    "msu"
+  ],
+  "metadata": {
+    "class_label": "cherry leaf spot",
+    "crop_slug": "cherry",
+    "disease_slug": "leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 28
+  }
+}

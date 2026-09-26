@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b06c899d-d334-5fb6-bf83-2918cb264ae5",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Nutritional Requirements of Stone Fruit in Home Fruit Plantings",
+  "crop": "peach",
+  "disease": null,
+  "content": "Peach follows the standard stone-fruit fertility programme recommended by Penn State Extension. Shortly after planting, apply 8 ounces of 10-10-10 per plant, never placing fertilizer in the planting hole. In subsequent years broadcast 1/2 pound of 10-10-10 under each tree in the early spring and increase the amount applied by another 1/2 pound per year, up to a maximum of 5 pounds per tree regardless of age. Maintain soil pH at 6.0-6.5, adjusting with lime based on a soil test, and never fertilize after July 15, because late-season nitrogen stimulates succulent growth that does not harden off before winter and is injured by cold. Because peach is a relatively short-lived, heavy-cropping tree, the practical guide to nitrogen status is annual terminal shoot growth: about 12-18 inches of new shoot growth on bearing trees indicates adequate nitrogen, while excessive growth indicates too much and is associated with poorer fruit quality, increased susceptibility to bacterial spot and greater risk of winter injury. Peaches on sandy or shallow soils benefit from split nitrogen applications rather than one large dose, and potassium is important for fruit size and quality on cropping trees. Confirm phosphorus, potassium and pH status from a soil test before adjusting the programme.",
+  "url": "https://extension.psu.edu/nutritional-requirements-of-stone-fruit-in-home-fruit-plantings/",
+  "author": "Daniel Weber, Ph.D., Extension Educator, Horticulture, Penn State Extension",
+  "date": "2023-06-21",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "peach",
+    "stone-fruit",
+    "10-10-10",
+    "nitrogen",
+    "soil-ph",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "peach",
+    "crop_slug": "peach",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

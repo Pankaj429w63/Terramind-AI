@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2c0c4696-39fd-586b-b7da-b7bf2badc17a",
+  "category": "treatment",
+  "source": "Penn State Extension, Tree Fruit Production Team",
+  "title": "Cedar Apple Rust — Management on Apple",
+  "crop": "apple",
+  "disease": "rust",
+  "content": "Cedar apple rust (Gymnosporangium juniperi-virginianae) is managed by breaking the juniper-to-apple life cycle and by protectant fungicides. Where practical, remove nearby eastern red cedar and juniper host plants (especially within a few hundred metres of the orchard) to reduce the basidiospore inoculum that infects apple. Plant rust-resistant apple and crabapple cultivars. On susceptible cultivars, apply protective fungicides beginning at pink and continuing on a 7- to 10-day interval through two to three weeks after petal fall, matching applications to infection periods during wet spring weather. FRAC group 3 (DMI), group 7 (SDHI) and group 11 (QoI) materials with cedar-apple-rust activity are labelled; rotate modes of action. Follow the label for rate, interval and pre-harvest interval.",
+  "url": "https://extension.psu.edu/pome-fruit-disease-rust/",
+  "author": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "date": "2024-06-26",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "gymnosporangium",
+    "rust",
+    "apple",
+    "host-removal",
+    "fungicide",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "apple rust",
+    "crop_slug": "apple",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 3
+  }
+}

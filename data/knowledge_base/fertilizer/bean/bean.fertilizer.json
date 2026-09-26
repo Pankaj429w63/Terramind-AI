@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4a91d147-4b05-5e2b-8db6-d461e28fa316",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management and Fertilizing Vegetables",
+  "crop": "bean",
+  "disease": null,
+  "content": "Common bean is a legume and, when properly inoculated with the appropriate Rhizobium species, can fix most of its own nitrogen from the atmosphere, so nitrogen fertilizer is normally not required and can be counter-productive because high soil nitrate suppresses nodulation. Phosphorus is the nutrient that most often limits bean, particularly in cold soils, and it is applied at or before planting; potassium is also removed with the harvested pods and should be maintained by soil test. Penn State Extension emphasises that soil testing is the foundation of a vegetable fertility programme: it determines pH (maintain approximately 6.0-6.8 for bean, with a tolerance of slightly lower) as well as lime and fertilizer requirements, so that P and K levels are built to the optimum range and then maintained rather than applied blindly each year. Beans are sensitive to acidic soils and to low available molybdenum, which is more limited at low pH. Manure and compost supply P, K, secondary nutrients and micronutrients and improve soil organic matter; however, manure should be applied to the preceding crop rather than directly ahead of beans so that surplus nitrogen does not reduce fixation. Avoid fertilizer placed in direct contact with bean seed, because beans are very sensitive to salt injury from concentrated fertilizer bands.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen-fixation",
+    "rhizobium",
+    "phosphorus",
+    "bean",
+    "legume",
+    "soil-test"
+  ],
+  "metadata": {
+    "class_label": "bean",
+    "crop_slug": "bean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

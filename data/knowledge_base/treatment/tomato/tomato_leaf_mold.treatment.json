@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "7eb630bc-d414-534f-9f44-c86ada7857ce",
+  "category": "treatment",
+  "source": "Cornell University, College of Agriculture and Life Sciences (Vegetable MD Online)",
+  "title": "Leaf Mold of Tomato (Passalora fulva) — Management",
+  "crop": "tomato",
+  "disease": "leaf mold",
+  "content": "Tomato leaf mold, caused by Passalora fulva (formerly Fulvia fulva, Cladosporium fulvum), is primarily a greenhouse and high-tunnel disease favoured by high humidity. Management centres on humidity and airflow: increase ventilation, space and prune plants to improve air movement, use drip irrigation instead of overhead watering, and avoid prolonged leaf wetness. Grow resistant varieties carrying Cf resistance genes where available. Remove and destroy infected leaves and crop debris, and disinfect structures and tools between crops. When the disease is established, apply labelled fungicides (multi-site protectants alternated with single-site FRAC-group materials) on a protectant schedule and rotate modes of action to slow resistance. Follow the label for rate, interval and pre-harvest interval. Reducing humidity is the single most effective control.",
+  "url": "https://vegetablemdonline.ppath.cornell.edu/factsheets/Tomato_LeafMold.htm",
+  "author": "Cornell University, College of Agriculture and Life Sciences, Plant Pathology (Vegetable MD Online)",
+  "date": "2020-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "passalora",
+    "leaf-mold",
+    "tomato",
+    "humidity",
+    "resistant-varieties",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "tomato leaf mold",
+    "crop_slug": "tomato",
+    "disease_slug": "leaf_mold",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 84
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "49bd4f0e-2caa-5934-93c2-50bb64405a21",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Grapevine Leafroll Disease — Pest Management Guidelines",
+  "crop": "grapevine",
+  "disease": "leafroll disease",
+  "content": "Grapevine leafroll disease is caused by grapevine leafroll-associated viruses (GLRaVs) and has no chemical cure; management relies on clean planting material, vector control and removal of infected vines. Plant only certified virus-tested (clean) vines, since the viruses spread primarily through propagation of infected material. Where mealybugs and soft scales — the principal vectors — are present, manage them with an integrated program (monitoring, biological control, and labelled insecticides when justified) to slow secondary spread within a vineyard. Remove and destroy confirmed infected vines to reduce inoculum. Because infected vines cannot be cured, roguing and clean-stock programs are the foundation of control. Follow local regulations and the UC IPM guidelines for vector management.",
+  "url": "https://ipm.ucanr.edu/agriculture/grape/leafroll-disease/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "glrav",
+    "leafroll",
+    "grapevine",
+    "clean-stock",
+    "vector-control",
+    "mealybug",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "grapevine leafroll disease",
+    "crop_slug": "grapevine",
+    "disease_slug": "leafroll_disease",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 55
+  }
+}

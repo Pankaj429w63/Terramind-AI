@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9a6560ed-83f7-57da-b991-1e1b7387095e",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Leaf Blight of Garlic and Onion (Botrytis) — Pest Management Guidelines",
+  "crop": "garlic",
+  "disease": "leaf blight",
+  "content": "Botrytis leaf blight of garlic and onion is managed with cultural practices, sanitation and protectant fungicides. Rotate away from allium crops, remove and destroy crop debris, and avoid excessive plant density so foliage dries quickly. Manage irrigation to reduce leaf wetness, and time nitrogen to avoid lush, prolonged succulent growth. Apply labelled fungicides protectively when conditions favour Botrytis (cool, wet weather), using multi-site protectants and single-site FRAC-group materials and rotating modes of action to slow resistance. Because Botrytis readily develops resistance to single-site fungicides, do not rely on one chemistry. Follow the label for rate, interval and pre-harvest interval for garlic.",
+  "url": "https://ipm.ucanr.edu/agriculture/garlic/leaf-blight/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "botrytis",
+    "garlic",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "garlic leaf blight",
+    "crop_slug": "garlic",
+    "disease_slug": "leaf_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 46
+  }
+}

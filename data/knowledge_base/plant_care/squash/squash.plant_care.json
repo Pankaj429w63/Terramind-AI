@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "76d2e2d4-a264-517f-8731-31374bc9de89",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Squash",
+  "crop": "squash",
+  "disease": null,
+  "content": "Squash are warm-season vine crops grown for both summer (immature) and winter (mature) use, and they need warm weather and a sunny, well-drained site. UC IPM advises preparing a site with a well-drained, fertile soil high in organic matter, and planting after the soil has warmed, since squash are damaged by cold and set poorly in cool conditions; black plastic mulch and row covers help accumulate heat and protect young plants. Plant in hills or rows, spacing bush types about 2-3 feet apart and vining types 4-8 feet apart to allow for the mature spread of the vines, or train vining squash to a trellis where space is limited; a trellis also lifts the fruit off the ground, which reduces fruit rot and keeps fruit clean. Water regularly and deeply, about an inch per week, keeping moisture even because dry/wet cycles stress plants and can cause poor fruit set and quality; water at the base rather than over the foliage to reduce foliar disease. Squash are heavy feeders, so work compost and a balanced fertilizer into the bed before planting and side-dress lightly as the vines grow; excessive nitrogen produces abundant leaf and vine at the expense of fruit. Squash bear separate male and female flowers on the same plant and depend on bees for pollination, so avoid insecticide applications during bloom and plant flowers nearby to support pollinators; fruit set is poor in cool weather and when bee activity is low. Scout regularly for squash bug, squash vine borer, cucumber beetles and aphids, which also transmit disease, and for powdery and downy mildew on the leaves. For summer squash, harvest young fruit when it is tender and glossy and the skin can be nicked with a fingernail, picking every other day to keep plants producing; for winter squash, leave fruit on the vine until the rind is hard and the stem begins to shrivel, harvest with a short stem attached, and cure in a warm, dry place before storing at cool room temperature, since immature winter squash stores poorly.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-squash/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "squash",
+    "pollination",
+    "squash-bug",
+    "harvest",
+    "curing",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "squash",
+    "crop_slug": "squash",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

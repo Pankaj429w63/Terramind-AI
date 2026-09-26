@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4976276f-859a-5cd0-b638-d509b6cc55d8",
+  "category": "fertilizer",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Fertilizing Corn in Minnesota",
+  "crop": "corn",
+  "disease": null,
+  "content": "Nitrogen is the nutrient most likely to limit corn and is the one that requires the most careful management. University of Minnesota Extension presents nitrogen rate guidelines based on the Maximum Return To Nitrogen (MRTN) concept, in which the economic optimum rate reflects the ratio of nitrogen price to crop value: for corn following corn without irrigation, MRTN values range from about 200 lb N per acre when the price/value ratio is 0.075 down to about 165 lb N per acre at a ratio of 0.150, whereas corn following soybean ranges from about 155 to 135 lb N per acre across the same ratios. Legumes and previous crops leave nitrogen credits that must be subtracted: first-year corn following a good stand of alfalfa can need 40-80 lb N per acre on medium and fine soils or nothing at all on USDA-class II or better medium and fine soils, and second-year corn following alfalfa generally needs 0-80 lb N per acre depending on soil texture and whether alfalfa was terminated in fall or spring. Residual soil nitrate measured in the top two feet before planting also earns a credit ranging from zero at 0-6 ppm nitrate-N up to 155 lb N per acre above 18 ppm. Because Minnesota soils, climates and rotations differ, Extension advises implementing regional nitrogen best-management practices covering source, placement, timing and use of nitrification inhibitors to optimise nitrogen-use efficiency and reduce losses to nitrate leaching and denitrification. Phosphorus, potassium and zinc should be managed according to soil test rather than by habit.",
+  "url": "https://extension.umn.edu/nutrient-management/fertilizing-corn-minnesota",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2021-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "mrtn",
+    "corn",
+    "rotation-credit",
+    "nmprs",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "corn",
+    "crop_slug": "corn",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

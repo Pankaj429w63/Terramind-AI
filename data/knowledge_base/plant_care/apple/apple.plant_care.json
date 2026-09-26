@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ae04fc19-d914-59c4-8d9e-9478ebaefec8",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Growing Apples in Home Gardens",
+  "crop": "apple",
+  "disease": null,
+  "content": "Choose a sunny, well-drained site for apples, because fruit trees need full sun for good fruit set and bud development and standing water kills roots. Test the soil and adjust pH toward the 6.0-7.0 range before planting, and plant bare-root trees in early spring while they are still dormant, setting the graft union two to three inches above the soil line and spreading the roots over a cone of soil. Standard trees need about 20 feet between trees, semidwarf 12-15 feet and dwarf 6-10 feet; most home plantings use dwarf or semidwarf trees on size-controlling rootstocks. Apple cultivars are not self-fruitful in the main, so plant at least two different cultivars that bloom at the same time, or a suitable polliniser, to ensure cross-pollination by bees. Train young trees to a central-leader or modified-leader framework and prune annually in late winter to remove dead, damaged and crossing wood and to open the canopy; do not prune heavily in autumn. Water deeply and infrequently, roughly an inch per week including rainfall, focusing on the root zone rather than the trunk. Scout from bud break through harvest for insects and diseases, checking new growth, fruit and the undersides of leaves on a weekly schedule, and thin fruit to one apple per cluster about 6-8 inches apart to improve size and reduce limb breakage. Harvest when the background skin colour changes from green to yellow-green, the flesh is crisp and sweet, and the fruit separates easily from the spur; store in a cool, humid place near 32-35 F for longest life.",
+  "url": "https://extension.umn.edu/fruit/growing-apples",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "apple",
+    "planting",
+    "spacing",
+    "pruning",
+    "pollination",
+    "harvest"
+  ],
+  "metadata": {
+    "class_label": "apple",
+    "crop_slug": "apple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

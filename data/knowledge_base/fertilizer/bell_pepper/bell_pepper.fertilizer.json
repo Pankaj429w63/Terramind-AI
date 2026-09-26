@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "35f39742-69e0-599a-9e21-2e2fb537f035",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "A Summary of N, P, and K Research with Pepper in Florida",
+  "crop": "bell pepper",
+  "disease": null,
+  "content": "University of Florida IFAS summarises more than 60 years of pepper fertilization research. Modern pepper recommendations rest on the principle that rate is only one component of a sound programme: fertilizer material, placement and timing matter equally, and the single target rate is a starting point to be adjusted during the season for leaching rains and extended harvests. Screened and plastic-mulched production combined with drip irrigation and fertigation is standard, and nitrogen and potassium are applied as a target rate with split applications through the season because both are mobile and readily leached in Florida's sandy soils. A substantial portion of nitrogen and potassium is commonly injected through the drip system beginning at first flower and continuing through harvest, while phosphorus is less mobile and is largely applied pre-plant based on soil test. Drip irrigation must be managed carefully so that nutrients are not leached below the root zone. Soil pH for optimum commercial vegetable production is maintained in the acid range, and soil and plant tissue analyses are used to fine-tune rates. Unusually heavy rainfall or irrigation requires supplemental fertilizer; monitor plant nutrient status and adjust. Always follow locally recommended rates and BMPs that protect water quality.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV230",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-02-16",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "n-p-k",
+    "fertigation",
+    "drip",
+    "pepper",
+    "uf-ifas",
+    "bmp"
+  ],
+  "metadata": {
+    "class_label": "bell pepper",
+    "crop_slug": "bell_pepper",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

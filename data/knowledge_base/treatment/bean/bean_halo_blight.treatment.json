@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8612050b-7df6-570a-bc43-51159d046233",
+  "category": "treatment",
+  "source": "University of Wisconsin-Madison, Division of Extension",
+  "title": "Bean Halo Blight (Pseudomonas savastanoi pv. phaseolicola) — Management",
+  "crop": "bean",
+  "disease": "halo blight",
+  "content": "Halo blight, a bacterial disease, is managed with certified seed, rotation, resistant varieties and sanitation rather than with curative sprays. Use only certified disease-free seed, since the bacteria are seed-borne; in high-risk situations, treat seed and hot-water or use treated seed where locally recommended. Rotate away from beans for at least two to three years and avoid planting near old bean residue, because the pathogen survives in crop debris and on some weed hosts. Plant resistant or tolerant varieties. Avoid overhead irrigation and working in wet fields, which spread bacteria; do not cultivate when foliage is wet. Copper-based sprays may give limited suppression but cannot cure infected plants; their use is governed by local labels and should be integrated with the cultural measures above.",
+  "url": "https://ipcm.wisc.edu/download/pubs/Bean_Halo_Blight.pdf",
+  "author": "University of Wisconsin-Madison, Division of Extension, Integrated Pest and Crop Management",
+  "date": "2019-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "pseudomonas",
+    "bean",
+    "certified-seed",
+    "rotation",
+    "copper",
+    "wisc"
+  ],
+  "metadata": {
+    "class_label": "bean halo blight",
+    "crop_slug": "bean",
+    "disease_slug": "halo_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 9
+  }
+}

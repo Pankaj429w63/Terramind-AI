@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8dc2b3c1-18f8-53e2-b7c2-8bea5747d1a8",
+  "category": "treatment",
+  "source": "Cornell University, College of Agriculture and Life Sciences",
+  "title": "Basil Downy Mildew — Management Options",
+  "crop": "basil",
+  "disease": "downy mildew",
+  "content": "Basil downy mildew (Peronospora belbahrii) is best managed preventively because once symptoms (yellowing between veins with grey-purple sporulation on leaf undersides) appear the disease spreads quickly. Buy and plant only certified disease-free seed or transplants, and choose downy-mildew-resistant basil varieties where they are available. Provide good air movement, water at the base and keep foliage dry to limit leaf wetness. Remove and destroy infected plants promptly, and avoid working in a wet canopy. Protectant fungicides labelled for basil downy mildew (for example FRAC group M multi-site protectants and FRAC group 4/40 materials where locally labelled) must be rotated by mode of action to slow resistance, and every product must be used per its label — note that label availability differs by country and, in the United States, product registrations for basil are limited, so confirm crop registrations with your state extension service.",
+  "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/basil-downy-mildew/",
+  "author": "Cornell University, College of Agriculture and Life Sciences (Vegetables Program)",
+  "date": "2023-03-12",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "peronospora",
+    "basil",
+    "resistant-varieties",
+    "sanitation",
+    "fungicide",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "basil downy mildew",
+    "crop_slug": "basil",
+    "disease_slug": "downy_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 7
+  }
+}

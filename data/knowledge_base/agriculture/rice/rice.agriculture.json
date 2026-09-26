@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "93ce24a8-43a3-5fbf-8d93-e84d0b3c73c6",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO) / University of Arkansas Cooperative Extension Service",
+  "title": "Rice — Markets and Trade",
+  "crop": "rice",
+  "disease": null,
+  "content": "Rice is a semi-aquatic cereal and the staple food of more than half the world's population, making it one of the most important crops on Earth both nutritionally and economically. Rice is grown under flooded (lowland) and upland systems and is produced on every continent except Antarctica, but production is heavily concentrated in Asia, which accounts for the large majority of world output and consumption; the leading producers include China, India, Indonesia, Bangladesh, Vietnam, Thailand and Myanmar, with Brazil and the United States the principal producers outside Asia. FAO reports that world rice production continues to expand, reaching record levels in recent seasons on the back of gains in Bangladesh, Brazil, China, India and Indonesia, and that world rice trade is on the order of 60 million tonnes per year, centred on exports from India, Thailand, Vietnam, Pakistan and the United States. The United States produces a comparatively small share of world output but is a major exporter, with production concentrated in Arkansas, Louisiana, Mississippi, Missouri, Texas and California. Rice is grown as an annual crop, established by drilling into a prepared seedbed, broadcasting, or water-seeding onto a flooded field, and the crop is managed around water: a timely flood is established once the crop reaches the correct stage and held at a uniform depth through the season, then drained to permit harvest. Yields vary widely by system and region, commonly ranging from about 3 tonnes per hectare in low-input rainfed systems to 8-10 tonnes per hectare or more in well-managed irrigated systems. Rice fits into rotation with other crops where water and climate allow — in the U.S. South it is commonly rotated with soybean — and rotation helps manage weeds, diseases and soil fertility; flooding itself suppresses many weeds. Rice is economically vital as a staple food, as a source of livelihood for millions of smallholders and as an internationally traded commodity, and its production risks include the rice water weevil, rice stink bug, blast, sheath blight and other diseases, and increasingly water scarcity, salinity and climate-driven drought and flooding.",
+  "url": "https://www.fao.org/markets-and-trade/commodities/rice/",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2023-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "rice",
+    "cereal",
+    "flooded",
+    "staple",
+    "rotation",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "rice",
+    "crop_slug": "rice",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

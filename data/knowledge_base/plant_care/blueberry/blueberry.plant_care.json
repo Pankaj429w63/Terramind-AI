@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "18f8ea42-1c0b-508f-9c1b-66925d7505e1",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Blueberries in the Garden",
+  "crop": "blueberry",
+  "disease": null,
+  "content": "Blueberry is a long-lived perennial shrub that demands an acid, well-drained, high-organic-matter soil and will not thrive in ordinary garden conditions; Penn State Extension calls siting and soil preparation the most critical aspects of success. Take a soil test and amend the soil in the early autumn ahead of spring planting, aiming for an ideal pH of 4.5-5.0, and note that sulfur is added as iron or ammonium sulfate and not as aluminum sulfate, which is toxic to blueberries; because of these exacting requirements many gardeners build raised beds or use containers. A site where rhododendrons and azaleas thrive is a suitable site for blueberries: sunny with moist, porous, acidic soil. Plant before the soil warms and mulch with about four inches of organic matter such as aged sawdust, bark mulch or pine straw, keeping mulch clear of the crown and topping it up over time, because the shallow, fine roots dry out and die quickly and benefit from trickle irrigation during dry spells. Highbush blueberries can grow 5-8 feet tall and wide at maturity, so space them accordingly and allow for their full size; although they are largely self-pollinating, research shows that planting more than one cultivar produces larger berries and better crops, and selecting cultivars by ripening season can extend harvest from late June through September. Fertilize lightly in the establishment year — about a half-tablespoon of ammonium sulfate per plant in a circle about six inches from the stem, repeated about six weeks later — and top up nitrogen as needed rather than applying heavy doses at once, since low nitrogen is the deficiency most commonly seen. Keep a follow-up eye on soil pH, which creeps upward over time and will likely need further sulfur. Scout through the season for mummy berry, canker diseases and spotted-wing drosophila. Fruit turns blue three to four days before it is at its sweetest, so wait until berries are fully ripe before harvesting, because they will not ripen off the plant, and net against birds, which can strip a crop in a day; refrigerate or freeze promptly.",
+  "url": "https://extension.psu.edu/blueberries-in-the-garden-and-the-kitchen/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-02-15",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "blueberry",
+    "acid-soil",
+    "cross-pollination",
+    "pruning",
+    "harvest",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "blueberry",
+    "crop_slug": "blueberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

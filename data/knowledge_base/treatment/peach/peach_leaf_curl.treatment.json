@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "281176cb-3569-5353-afeb-f6f960c34c7b",
+  "category": "treatment",
+  "source": "Penn State Extension, Tree Fruit Production Team",
+  "title": "Peach Leaf Curl — Disease Management",
+  "crop": "peach",
+  "disease": "leaf curl",
+  "content": "Peach leaf curl (Taphrina deformans) is managed almost entirely with a single well-timed dormant fungicide application, because the fungus infects only during a narrow window as buds begin to swell and open. Apply a labelled fungicide (for example a copper-based product or a chlorothalonil or dodine product where registered for peach) at the dormant to delayed-dormant stage, before bud break, and repeat as the label directs; once leaves are expanded, sprays are ineffective. There is no useful in-season chemical control, so timing is critical. Growers should also maintain tree vigour, remove severely affected shoots where practical, and consult local extension for the exact recommended timing window in their region. Confirm current registrations, rates and timing with the product label and state extension guidance.",
+  "url": "https://extension.psu.edu/peach-leaf-curl",
+  "author": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "date": "2023-04-18",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "taphrina",
+    "leaf-curl",
+    "peach",
+    "dormant-spray",
+    "timing",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "peach leaf curl",
+    "crop_slug": "peach",
+    "disease_slug": "leaf_curl",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 62
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "1ad3c246-0a11-58de-8f80-a2a4b0cbe04e",
+  "category": "treatment",
+  "source": "University of Florida IFAS Extension (EDIS)",
+  "title": "Tomato Yellow Leaf Curl Virus — Management",
+  "crop": "tomato",
+  "disease": "yellow leaf curl virus",
+  "content": "Tomato yellow leaf curl virus (TYLCV) has no cure and is transmitted by the sweetpotato whitefly (Bemisia tabaci); management is based on resistant varieties, vector control and sanitation. Plant TYLCV-resistant or tolerant tomato varieties where available, and use certified clean transplants. Manage whitefly vectors with an integrated program: use reflective or floating-row covers and screens where practical, conserve natural enemies, and apply labelled insecticides when whitefly thresholds are reached, rotating modes of action to manage resistance. Remove and destroy infected plants early, and manage weeds and volunteer plants that host whiteflies and the virus. Rotate crops and coordinate whitefly management area-wide where possible. Because the virus cannot be cured, prevention of infection through resistance and vector management is essential.",
+  "url": "https://edis.ifas.ufl.edu/publication/PP313",
+  "author": "University of Florida Institute of Food and Agricultural Sciences (UF/IFAS), EDIS",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "tylcv",
+    "whitefly-vectored",
+    "tomato",
+    "resistant-varieties",
+    "vector-control",
+    "ufl"
+  ],
+  "metadata": {
+    "class_label": "tomato yellow leaf curl virus",
+    "crop_slug": "tomato",
+    "disease_slug": "yellow_leaf_curl_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 87
+  }
+}

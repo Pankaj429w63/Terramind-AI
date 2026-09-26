@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "eae0187b-9ff3-551b-b3b5-3612e2333db8",
+  "category": "treatment",
+  "source": "University of Wisconsin-Madison, Division of Extension",
+  "title": "Potato Early Blight (Alternaria solani) — Management",
+  "crop": "potato",
+  "disease": "early blight",
+  "content": "Potato early blight is managed with crop rotation, resistant varieties, sanitation, balanced fertility and a protectant fungicide program. Rotate away from potato and tomato for two to three years and destroy infected crop residue and cull piles that carry the fungus. Plant varieties with early-blight tolerance where available, and maintain balanced nitrogen, since stressed and senescing plants are more susceptible. Begin fungicide applications when symptoms first appear and continue on a 7- to 14-day schedule (adjusted to weather and label), tank-mixing or alternating multi-site protectants with single-site materials (FRAC groups 7 and 11 with early-blight activity) and rotating modes of action. Follow the label for rate, timing, and pre-harvest interval. Good vine coverage is essential for control.",
+  "url": "https://ipcm.wisc.edu/download/pubs/Potato_Early_Blight.pdf",
+  "author": "University of Wisconsin-Madison, Division of Extension, Integrated Pest and Crop Management",
+  "date": "2019-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "alternaria",
+    "early-blight",
+    "potato",
+    "rotation",
+    "fungicide",
+    "wisc"
+  ],
+  "metadata": {
+    "class_label": "potato early blight",
+    "crop_slug": "potato",
+    "disease_slug": "early_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 65
+  }
+}

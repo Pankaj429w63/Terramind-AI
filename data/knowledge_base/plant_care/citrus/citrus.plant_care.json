@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "508292f3-7c76-50cf-a642-1bb6f742a2fc",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Citrus",
+  "crop": "citrus",
+  "disease": null,
+  "content": "Citrus is a long-lived evergreen subtropical tree that needs full sun, a well-drained soil and protection from freezing temperatures. UC IPM advises planting in spring in a site with good air drainage where frost is least likely, setting the tree so that the graft union is well above the soil line and the root flare is exposed, and spacing trees according to rootstock and species — typically about 12-15 feet apart for standard trees. Citrus grows on a broad range of soils but dislikes poor drainage and standing water, so improve heavy soils with organic matter and avoid planting in low spots. Water deeply and infrequently to encourage deep rooting, allowing the soil to dry slightly between irrigations, and reduce or withhold irrigation in late autumn and winter to help the tree harden against cold; in containers and sandy soils more frequent watering is needed. Fertilize with a citrus-specific or balanced fertilizer containing nitrogen plus zinc, iron and manganese and, on sandy soils, magnesium, applying small amounts frequently through the warm growing season and stopping in late autumn. Iron and zinc deficiencies are common on high-pH soils and cause interveinal chlorosis of new leaves, which is managed by correcting pH and using chelated iron or foliar micronutrients rather than by adding more macronutrients. Citrus is self-fruitful and requires no polleniser; bees are the main pollinators but most common cultivars set fruit with little cross-pollination. Prune lightly to remove dead, damaged and crossing wood and to maintain a strong framework, avoiding heavy pruning that removes fruiting wood. Scout through the season for aphids, scale, citrus leafminer, thrips and Asian citrus psyllid, and for the diseases these can vector. Harvest when fruit reaches full colour and flavour, testing a fruit before picking the crop; citrus fruit holds well on the tree for weeks after colouring, and harvested fruit stores at about 45-50 F.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-citrus/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "citrus",
+    "evergreen",
+    "micronutrients",
+    "frost",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "citrus",
+    "crop_slug": "citrus",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

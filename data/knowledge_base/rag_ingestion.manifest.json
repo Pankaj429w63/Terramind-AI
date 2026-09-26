@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "description": "Ingestion source list consumable by KnowledgePipeline.ingest([]).",
+  "sources": [
+    {
+      "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases",
+      "category": "diseases",
+      "format": "folder_of_json",
+      "loader_note": "Each JSON file follows _schemas/knowledge-document-v1.schema.json; the `content` field must be concatenated/embedded into the Document.text field together with title/crop/disease for retrieval."
+    },
+    {
+      "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment",
+      "category": "treatment",
+      "format": "folder_of_json",
+      "loader_note": "Each JSON file follows _schemas/knowledge-document-v1.schema.json; the `content` field must be concatenated/embedded into the Document.text field together with title/crop/disease for retrieval."
+    },
+    {
+      "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer",
+      "category": "fertilizer",
+      "format": "folder_of_json",
+      "loader_note": "Each JSON file follows _schemas/knowledge-document-v1.schema.json; the `content` field must be concatenated/embedded into the Document.text field together with title/crop/disease for retrieval."
+    },
+    {
+      "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care",
+      "category": "plant care",
+      "format": "folder_of_json",
+      "loader_note": "Each JSON file follows _schemas/knowledge-document-v1.schema.json; the `content` field must be concatenated/embedded into the Document.text field together with title/crop/disease for retrieval."
+    },
+    {
+      "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture",
+      "category": "agriculture",
+      "format": "folder_of_json",
+      "loader_note": "Each JSON file follows _schemas/knowledge-document-v1.schema.json; the `content` field must be concatenated/embedded into the Document.text field together with title/crop/disease for retrieval."
+    }
+  ]
+}

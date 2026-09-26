@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "880dcd92-23ff-58fc-9463-ea15cc421330",
+  "category": "treatment",
+  "source": "University of Wisconsin-Madison, Division of Extension",
+  "title": "Carrot Cavity Spot — Management",
+  "crop": "carrot",
+  "disease": "cavity spot",
+  "content": "Carrot cavity spot, caused by soil-borne Pythium species, is a root disorder managed by irrigation, soil management and fungicide timing rather than by rescue treatment. Because Pythium is favoured by saturated soil, use well-drained fields, avoid over-irrigation and manage compaction and organic-matter to reduce periods of waterlogged soil that promote infection of the developing roots. Avoid excess and uneven soil moisture, which increases symptom severity. Where the disease has been a problem, a labelled soil or post-emergence fungicide (for example a FRAC group 4 mefenoxam-type material where registered for carrots) applied during the early root-development window can reduce losses; product availability and timing vary, so confirm current registrations with your state extension service. Longer rotations away from carrots help reduce soil inoculum.",
+  "url": "https://ipcm.wisc.edu/download/pubs/Vegetable_Carrot_Cavity_Spot.pdf",
+  "author": "University of Wisconsin-Madison, Division of Extension, Integrated Pest and Crop Management",
+  "date": "2019-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "pythium",
+    "carrot",
+    "irrigation",
+    "soil-management",
+    "fungicide",
+    "wisc"
+  ],
+  "metadata": {
+    "class_label": "carrot cavity spot",
+    "crop_slug": "carrot",
+    "disease_slug": "cavity_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 21
+  }
+}

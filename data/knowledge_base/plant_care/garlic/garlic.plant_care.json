@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b64f0eab-b048-5ca7-829d-19f806ddb1df",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Growing Garlic in Home Gardens",
+  "crop": "garlic",
+  "disease": null,
+  "content": "Garlic is a cool-season bulb crop grown from cloves rather than seed, and UMN Extension advises planting in full sun on a well-drained soil that has been generously amended with compost or well-rotted manure, because garlic does not tolerate waterlogged ground and heavy clay soils should be improved or mounded before planting. In cold-winter climates plant hardneck garlic in autumn, about four to six weeks before the ground freezes so that cloves establish roots but do not produce top growth, setting cloves pointed end up about two inches deep and about four to six inches apart in rows 12 inches apart, and mulch heavily after planting to prevent winter heaving and to keep the soil cool and moist. Softneck garlic, which stores better and is usually the type grown in milder climates, can also be spring planted. Water regularly through spring and early summer while leaves and bulbs are developing, then stop watering as the plants begin to mature, since too much water late in the season causes bulbs to split and rot. Garlic is a modest feeder and generally needs little beyond the organic matter worked in at planting; avoid excess nitrogen, which produces lush top growth at the expense of bulb size and delays maturity. Keep the planting weed-free, because garlic is a poor competitor and because weeds harbour the diseases and insects that attack the crop. Scout through the season for onion thrips tearing the leaves and, in poorly drained ground, for the soil-borne rots that cause yellowing and collapse. Harvest when the lower leaves turn brown but about half the leaves are still green and the bulb is well formed, loosening the soil with a fork rather than pulling, and cure the bulbs in a warm, dry, airy place out of direct sun before trimming and storing; cured garlic stores for months in a cool, dry, dark location.",
+  "url": "https://extension.umn.edu/vegetables/growing-garlic",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "garlic",
+    "cloves",
+    "autumn-planting",
+    "curing",
+    "thrips",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "garlic",
+    "crop_slug": "garlic",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

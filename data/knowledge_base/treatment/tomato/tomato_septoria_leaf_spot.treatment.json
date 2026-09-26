@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d7824ebe-e7e1-524d-aa67-29bce65d6bd7",
+  "category": "treatment",
+  "source": "Cornell University, College of Agriculture and Life Sciences (Vegetable MD Online)",
+  "title": "Septoria Leaf Spot of Tomato — Management",
+  "crop": "tomato",
+  "disease": "septoria leaf spot",
+  "content": "Septoria leaf spot (Septoria lycopersici) is managed with rotation, sanitation, cultural practices and protectant fungicides. Rotate away from tomato for at least two years and destroy crop residue, cull piles and volunteer tomato plants, because the fungus overwinters in infested debris. Stake or cage plants, mulch to prevent rain splash from soil, water at the base, and remove infected lower leaves to slow the disease. Maintain balanced fertility, as stressed plants are more susceptible. Begin labelled fungicide applications when symptoms first appear and continue on a 7- to 14-day schedule, alternating multi-site protectants with single-site FRAC-group materials and rotating modes of action. Follow the label for rate, interval and pre-harvest interval.",
+  "url": "https://vegetablemdonline.ppath.cornell.edu/factsheets/Tomato_Septoria.htm",
+  "author": "Cornell University, College of Agriculture and Life Sciences, Plant Pathology (Vegetable MD Online)",
+  "date": "2020-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "septoria",
+    "septoria-leaf-spot",
+    "tomato",
+    "sanitation",
+    "fungicide",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "tomato septoria leaf spot",
+    "crop_slug": "tomato",
+    "disease_slug": "septoria_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 86
+  }
+}

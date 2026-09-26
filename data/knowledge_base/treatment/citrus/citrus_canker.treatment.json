@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "353a8b2f-fe42-5ed9-b5ba-cdc215ea83b3",
+  "category": "treatment",
+  "source": "University of Florida IFAS Extension (EDIS)",
+  "title": "Citrus Canker — Management",
+  "crop": "citrus",
+  "disease": "canker",
+  "content": "Citrus canker (Xanthomonas citri subsp. citri) is a bacterial disease managed with exclusion, sanitation, windbreaks and copper sprays, subject to strict regulatory control. Because the bacterium spreads in wind-driven rain and on contaminated tools, equipment and people, establish windbreaks where practical, disinfect tools and equipment between blocks and after working in affected areas, and avoid moving fruit, leaves and nursery stock from infested to clean sites. Remove and destroy severely affected trees as required by state or national regulations, and report suspect symptoms to the plant-protection authority. Copper-based bactericides applied on a protectant schedule, especially during flushes and following storms, reduce spread on foliage and fruit but do not cure infected trees. Follow local regulatory requirements and label directions; canker management is legally mandated in many citrus regions.",
+  "url": "https://edis.ifas.ufl.edu/publication/PP323",
+  "author": "University of Florida Institute of Food and Agricultural Sciences (UF/IFAS), EDIS",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "xanthomonas",
+    "canker",
+    "citrus",
+    "sanitation",
+    "copper",
+    "quarantine",
+    "ufl"
+  ],
+  "metadata": {
+    "class_label": "citrus canker",
+    "crop_slug": "citrus",
+    "disease_slug": "canker",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 30
+  }
+}

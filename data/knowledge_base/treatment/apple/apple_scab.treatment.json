@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "63817669-466e-5ebd-9e36-2be626441067",
+  "category": "treatment",
+  "source": "Penn State Extension, Tree Fruit Production Team",
+  "title": "Apple Scab — Disease Management",
+  "crop": "apple",
+  "disease": "scab",
+  "content": "Apple scab (Venturia inaequalis) control integrates orchard-floor sanitation, resistant cultivars and a season-long fungicide program. In autumn, shred fallen leaves or apply urea (5% solution) to the orchard floor to accelerate leaf decomposition and reduce the ascospore inoculum responsible for primary infections the following spring. Where feasible, plant scab-resistant cultivars. Start protectant fungicide sprays at green tip and continue through the primary infection period (green tip to about two weeks after petal fall), timed to Mills-table infection periods using local disease-warning models; switch to extended-interval cover sprays for secondary control later in the season. Multi-site protectants (captan, mancozeb) are tank-mixed or alternated with single-site materials (FRAC 3 DMI, FRAC 7 SDHI, FRAC 11 QoI) to slow resistance. Observe label rates, pre-harvest intervals and restricted-entry intervals.",
+  "url": "https://extension.psu.edu/apple-disease-apple-scab/",
+  "author": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "date": "2023-05-30",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "venturia",
+    "apple-scab",
+    "sanitation",
+    "resistant-cultivars",
+    "fungicide",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "apple scab",
+    "crop_slug": "apple",
+    "disease_slug": "scab",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 4
+  }
+}

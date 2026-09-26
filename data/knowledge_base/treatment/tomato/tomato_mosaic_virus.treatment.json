@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "6d555945-1d5f-5be8-b8a4-bffc044fd843",
+  "category": "treatment",
+  "source": "Cornell University, College of Agriculture and Life Sciences (Vegetable MD Online)",
+  "title": "Tomato Mosaic Virus and Tobacco Mosaic Virus — Management",
+  "crop": "tomato",
+  "disease": "mosaic virus",
+  "content": "Tomato mosaic virus (ToMV) and tobacco mosaic virus (TMV) are very stable and spread mechanically by contact, tools and hands; there is no chemical cure. Plant resistant varieties carrying the Tm-2 or Tm-2^2 resistance genes, and use certified clean seed and transplants. Never smoke or handle tobacco products around plants, as cured tobacco carries TMV. Wash hands and disinfect tools and trays frequently, especially between working with different plants or blocks. Remove and destroy infected plants promptly, and control weeds and volunteer plants that may harbour the virus. Rotate away from tomato and other solanaceous crops. Prevention through resistant varieties and rigorous sanitation is the only effective management.",
+  "url": "https://vegetablemdonline.ppath.cornell.edu/factsheets/Virus_Dis_Tomato.htm",
+  "author": "Cornell University, College of Agriculture and Life Sciences, Plant Pathology (Vegetable MD Online)",
+  "date": "2020-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "tomv",
+    "tmv",
+    "tomato",
+    "resistant-varieties",
+    "sanitation",
+    "cornell"
+  ],
+  "metadata": {
+    "class_label": "tomato mosaic virus",
+    "crop_slug": "tomato",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 85
+  }
+}

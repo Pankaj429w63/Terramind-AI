@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d3662472-fa9b-5153-9033-43182c815a78",
+  "category": "treatment",
+  "source": "University of Wisconsin-Madison, Division of Extension",
+  "title": "Bean Common Mosaic Virus and Bean Yellow Mosaic Virus — Management",
+  "crop": "bean",
+  "disease": "mosaic virus",
+  "content": "Bean mosaic viruses have no chemical cure; control depends on clean seed, resistant varieties and vector management. Plant certified disease-free seed and resistant varieties wherever possible, since bean common mosaic virus is seed-borne as well as aphid-transmitted. Control aphid vectors with an integrated approach (avoid excessive nitrogen, conserve natural enemies, and use labelled insecticides only when aphid populations justify treatment) because aphids transmit the virus non-persistently. Remove and destroy infected plants early to reduce the reservoir for spread. Rotate crops and manage weed hosts. Once a plant is infected it cannot be cured, so preventive measures are essential.",
+  "url": "https://ipcm.wisc.edu/download/pubs/Bean_Mosaic_Virus.pdf",
+  "author": "University of Wisconsin-Madison, Division of Extension, Integrated Pest and Crop Management",
+  "date": "2019-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "aphid-vectored",
+    "bean",
+    "certified-seed",
+    "resistant-varieties",
+    "vector-control",
+    "wisc"
+  ],
+  "metadata": {
+    "class_label": "bean mosaic virus",
+    "crop_slug": "bean",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 11
+  }
+}

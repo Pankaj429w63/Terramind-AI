@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8b5b7f96-de5e-5cd8-905a-9f8658a2c018",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Fruit Production and Harvesting — Tree Fruit",
+  "crop": "peach",
+  "disease": null,
+  "content": "Peaches and nectarines require a sunny site with deep, well-drained soil and good air movement, and because they bloom early they should not be planted in low, frosty pockets where blossoms can be killed. Penn State Extension's fruit production guidance stresses that the first step to a productive orchard is finding the right spot, since most fruit crops need plenty of sunlight through the day to fuel fruit production, and that orchard soil should be tested and amended well in advance of planting because established trees are difficult and slow to correct. Plant trees in early spring while dormant, and Penn State Extension advises using dwarfing rootstocks in home plantings, because rootstocks keep the tree to a manageable size for pruning, spraying and harvest and bring it into bearing sooner. Penn State Extension emphasises thinning and pruning as the core of crop-load management: trees often set more fruit than they can support, and leaving too much fruit weakens the tree and makes it more susceptible to pests, so thinning is described as a highly effective crop-load management tool for stone fruit and apple growers that improves fruit size, reduces the spread of disease and promotes return bloom the following season; pruning develops the desired tree shape, improves air circulation and increases produce quality. Ripening periods vary with cultivar, so check a few individual fruits for ripeness rather than judging by the calendar, and use the maturity indicators described by Penn State Extension to time harvest. Scout through the season for peach leaf curl, brown rot, bacterial spot and oriental fruit moth, and remove and destroy mummified fruit and cankered wood. Handle harvested fruit gently, since peaches bruise readily, and refrigerate promptly.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Jayson K. Harper, Ph.D., Tara Baugher, Ph.D., and Melanie Schupp, Penn State Extension",
+  "date": "2023-04-10",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "peach",
+    "thinning",
+    "pruning",
+    "rootstock",
+    "maturity",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "peach",
+    "crop_slug": "peach",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

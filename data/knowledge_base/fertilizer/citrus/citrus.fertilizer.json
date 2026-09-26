@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "712cadd1-f01f-54a9-aac8-90650765eefc",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Plant Nutrients for Citrus Trees (SL 200 / SS419)",
+  "crop": "citrus",
+  "disease": null,
+  "content": "UF/IFAS guidance describes citrus nutrition as an integrated programme in which nutrient availability directly determines growth, yield and fruit quality, and in which a single deficient element can limit crop performance even when all others are adequate. The essential nutrients are grouped by the amounts required: nitrogen, phosphorus and potassium are needed in relatively large amounts and most often limit production, but calcium, magnesium, sulfur and micronutrients such as zinc, manganese, iron, boron and copper must also be balanced. Nitrogen, potassium, magnesium, zinc, manganese and boron can be applied to the foliage as a supplement to soil application; foliar feeding is particularly useful when the root system cannot meet crop demand — during prolonged wet or dry soil conditions, on calcareous soils, or in cold weather — and is the fastest way to correct a diagnosed micronutrient deficiency, though it should not replace soil-applied macronutrient fertilisation. Foliar micronutrient sprays give a more rapid response and are more effective than soil application for zinc, manganese, copper and boron, with the exception of iron, for which soil-applied chelates are generally the most effective correction. Always base rates on soil and leaf analysis, and follow best-management practices to protect groundwater.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS419",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "citrus",
+    "micronutrients",
+    "foliar",
+    "iron",
+    "uf-ifas",
+    "n-p-k"
+  ],
+  "metadata": {
+    "class_label": "citrus",
+    "crop_slug": "citrus",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

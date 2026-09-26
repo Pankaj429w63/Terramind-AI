@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "7c63ce47-b0ec-5969-bf16-ad8f28b35b25",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Fruit Production and Harvesting — Tree Fruit",
+  "crop": "plum",
+  "disease": null,
+  "content": "Plums and prunes need a sunny site with deep, well-drained soil and adequate space, and because they bloom early the site should avoid low, frosty pockets where blossoms can be killed. Penn State Extension's fruit production guidance stresses that site selection is the first and most important decision, because most fruit crops need plenty of sunlight through the day to produce well, and that soil should be tested and amended before planting since correction afterwards is slow and difficult. Plant dormant trees in early spring and, in home plantings, choose trees on dwarfing rootstocks where available, because rootstocks keep the tree to a manageable size for pruning, spraying and harvest and bring it into bearing sooner. Penn State Extension describes pruning and thinning as the central crop-management practices for tree fruit: fruit trees often set more fruit than they can support, and leaving too much fruit weakens the tree and makes it more susceptible to pests, so thinning improves fruit size, reduces disease spread and promotes return bloom, while pruning develops the desired tree shape, improves air circulation and increases produce quality. Because ripening periods differ among cultivars, Penn State Extension advises checking individual fruits for ripeness rather than relying on the calendar, and provides maturity indicators and post-harvest handling guidance to time harvest correctly. Scout through the season for black knot, brown rot, bacterial spot and plum curculio, and remove and destroy black knots and mummified fruit promptly. Handle harvested fruit gently and refrigerate promptly, since plums soften quickly after harvest.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Jayson K. Harper, Ph.D., Tara Baugher, Ph.D., and Melanie Schupp, Penn State Extension",
+  "date": "2023-04-10",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "plum",
+    "thinning",
+    "pruning",
+    "black-knot",
+    "maturity",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "plum",
+    "crop_slug": "plum",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

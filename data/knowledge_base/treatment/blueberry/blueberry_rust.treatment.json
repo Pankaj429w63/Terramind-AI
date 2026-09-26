@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ab84636f-e24a-5dfd-8986-14408f44dd64",
+  "category": "treatment",
+  "source": "Michigan State University Extension",
+  "title": "Blueberry Rust — Identification and Management",
+  "crop": "blueberry",
+  "disease": "rust",
+  "content": "Several rust fungi (for example Pucciniastrum and Naohidemyces spp.) cause leaf rust on blueberry and alternate between blueberry and other hosts such as hemlock or fir. Management is preventive: plant in sites away from alternate hosts where practical, provide good air movement and avoid prolonged leaf wetness by using drip or furrow rather than overhead irrigation. Remove and destroy infected leaves and debris, and keep bushes pruned to improve airflow. Fungicides labelled for blueberry rust (for example FRAC group 11 QoI and FRAC group 3 DMI materials, plus multi-site protectants) are applied during the high-risk period according to the label, rotating modes of action to manage resistance. Confirm product registrations and application timing with your state extension service.",
+  "url": "https://www.canr.msu.edu/news/blueberry_rust_identification_and_management",
+  "author": "Michigan State University Extension",
+  "date": "2020-07-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rust",
+    "blueberry",
+    "air-flow",
+    "fungicide",
+    "msu"
+  ],
+  "metadata": {
+    "class_label": "blueberry rust",
+    "crop_slug": "blueberry",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 16
+  }
+}

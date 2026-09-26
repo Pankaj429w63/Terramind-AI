@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "1135e756-8c82-5cd8-a79b-29335e4dc85a",
+  "category": "treatment",
+  "source": "International Rice Research Institute (IRRI) — Rice Knowledge Bank",
+  "title": "Rice Sheath Blight — Management",
+  "crop": "rice",
+  "disease": "sheath blight",
+  "content": "Rice sheath blight (Rhizoctonia solani) is managed with cultural practices, resistant or tolerant varieties, balanced nutrition and fungicides. Plant varieties with sheath-blight tolerance where available, and use clean seed. Reduce plant density and avoid excessive nitrogen, which create a dense, humid canopy that favours the disease; split nitrogen applications. Manage water carefully, and remove or incorporate crop residue and destroy sclerotia-bearing debris to reduce soil-borne inoculum. Rotate with non-host crops where possible. When the disease is progressing and conditions are favourable, apply a recommended fungicide (for example a locally registered product with Rhizoctonia activity) at the label rate and timing; rotate modes of action to avoid resistance. Confirm approved products and doses with your national plant-protection authority.",
+  "url": "https://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/sheath-blight",
+  "author": "International Rice Research Institute (IRRI) — Rice Knowledge Bank",
+  "date": "2018-01-01",
+  "region": "asia",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "rhizoctonia",
+    "sheath-blight",
+    "rice",
+    "nitrogen-management",
+    "fungicide",
+    "irri"
+  ],
+  "metadata": {
+    "class_label": "rice sheath blight",
+    "crop_slug": "rice",
+    "disease_slug": "sheath_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 71
+  }
+}

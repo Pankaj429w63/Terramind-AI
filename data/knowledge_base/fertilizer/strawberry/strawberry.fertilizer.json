@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c7346071-934e-5d44-8f4e-e0072658c0ab",
+  "category": "fertilizer",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Strawberry Nutrient Management",
+  "crop": "strawberry",
+  "disease": null,
+  "content": "Strawberry nutrient management depends on the production system — June-bearing versus day-neutral — as well as soil type, crop history, nutrient sources and nutrient delivery system, and all strawberry plants need nitrogen, phosphorus, potassium and other nutrients for vigorous vegetative growth and fruit production. University of Minnesota Extension advises taking soil samples in the field a year before planting and having them tested, paying particular attention to pH: if soil pH is below 5.5 or above 7.5, apply lime or sulfur respectively in the year before planting, because the soil may take up to a year to change after amendment. In general, phosphorus, potassium and part of the nitrogen should be applied at or before planting, with subsequent applications timed to the production system and adjusted using foliar testing. For established June-bearing plantings, nitrogen is best applied after harvest during renovation, because nitrogen promotes leaf and runner growth and can reduce fruit quality if applied before or during harvest in medium or heavy soils; apply nitrogen again during runner production and take care not to over-apply, since surplus nitrogen both reduces yield and pushes late-season growth that fails to harden off for winter, and also moves readily in the soil and can contribute to nitrate pollution. Growers with drip tape can use fertigation, and foliar feeding is best used only as a supplement when foliar nutrient tests indicate a specific need, as current research shows no yield benefit from foliar programmes applied without a demonstrated deficiency. Strawberry is shallow-rooted, with most roots in the top 6-12 inches, so irrigation and soil drainage usually limit yield more than fertilizer does.",
+  "url": "https://extension.umn.edu/strawberry-farming/strawberry-nutrient-management",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2021-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "strawberry",
+    "nitrogen",
+    "renovation",
+    "soil-ph",
+    "fertigation",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "strawberry",
+    "crop_slug": "strawberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

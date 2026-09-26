@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e6ba4250-7a8c-576e-9ecc-d4442ff616f8",
+  "category": "treatment",
+  "source": "University of Minnesota Extension",
+  "title": "Black Rot of Apple — Management",
+  "crop": "apple",
+  "disease": "black rot",
+  "content": "Black rot (Botryosphaeria obtusa) management in apple combines sanitation, cultural control and a protectant fungicide program. Sanitation is the primary tactic: prune out and destroy dead wood, cankers, and fire-blight strikes during the dormant season, remove mummified fruit from the tree and orchard floor, and avoid leaving pruning stubs that the fungus colonises. Maintain tree vigour but avoid excessive nitrogen, which promotes the succulent growth most susceptible to infection. Fungicides applied from pink through harvest protect leaves and fruit; in high-pressure blocks, summer cover sprays are needed in addition to the early-season scab program. FRAC group M (multi-site protectants such as captan and mancozeb) and FRAC group 3 (DMI) and group 11 (QoI) materials are used; rotated modes of action are essential to manage resistance. Always follow the current product label for rate, timing, pre-harvest interval and restricted-entry interval.",
+  "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/black-rot-of-apple",
+  "author": "University of Minnesota Extension",
+  "date": "2023-05-03",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "botryosphaeria",
+    "apple",
+    "sanitation",
+    "fungicide",
+    "ipm",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "apple black rot",
+    "crop_slug": "apple",
+    "disease_slug": "black_rot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 0
+  }
+}

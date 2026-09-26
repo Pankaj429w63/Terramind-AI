@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b99ea6e5-631d-5a17-962f-d59af63b316b",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management and Fertilizing Vegetables",
+  "crop": "garlic",
+  "disease": null,
+  "content": "Garlic is a long-season bulb crop whose quality depends on nitrogen being available during leaf growth but tapering off as the bulb matures. Penn State Extension's home-garden soil-management guidance applies directly: begin with a soil test to determine pH and the lime and fertilizer requirement, because garlic performs best in well-drained soil with pH near 6.0-7.0 where nutrient availability is greatest. Phosphorus and potassium, together with lime, are best worked into the soil before planting in the autumn, since garlic roots establish in autumn and the crop overwinters; phosphorus supports root and bulb development while potassium contributes to bulb size, dry matter and storage quality. Nitrogen is applied in spring as growth resumes and again during active leaf growth, since nitrogen applied too late in the season delays bulb maturity and reduces storage life. Garlic, like other alliums, has a relatively shallow root system and benefits from even moisture and from organic matter supplied by compost; excessive nitrogen late in the season and irregular watering both promote splitting and poorer storage. Sulfur nutrition affects pungency and flavour compounds in alliums and is usually adequate unless soils are very low in organic matter. Avoid fresh manure just before planting because of salt injury and food-safety considerations.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "garlic",
+    "allium",
+    "bulb",
+    "potassium",
+    "sulfur",
+    "soil-test"
+  ],
+  "metadata": {
+    "class_label": "garlic",
+    "crop_slug": "garlic",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

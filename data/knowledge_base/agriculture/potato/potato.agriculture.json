@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9f4f4de5-9e1b-58e9-ab05-5a4f6927677c",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 14. Potato Production (Vegetable Production Handbook of Florida)",
+  "crop": "potato",
+  "disease": null,
+  "content": "Potato is the world's most important non-cereal food crop and one of the most widely grown and traded vegetables, produced across temperate, subtropical and tropical highland regions and consumed fresh and in processed forms such as chips, fries and dehydrated products. Potatoes are adapted to cool growing conditions and are grown in two main production systems: a summer crop in temperate regions with a single growing season, and winter and spring crops in warm-climate regions where potatoes are grown during the cooler months. The major world producers include China, India, Russia, Ukraine, the United States, Germany, Bangladesh and Poland, while in the United States production is concentrated in Idaho, Washington, Wisconsin, North Dakota, Maine and Colorado for processing and fresh market, with significant winter and spring production in Florida and Texas. UF/IFAS's Vegetable Production Handbook describes potato production in Florida as a winter and spring crop: potatoes are grown in all 50 states, but the Florida crop is planted in spring in the Hastings area of St. Johns, Flagler and Putnam counties, where half the crop is used for chips, and in winter to the south near Immokalee for table stock. The chapter gives planting dates, cultivar recommendations, and the yield and specific-gravity classes by which potatoes are graded, with total yields classed as high above 300 cwt per acre, medium-high 250-299, medium 200-249 and low-medium 150-199, and tuber specific gravity classed as high above 1.075 and low below 1.064. Potato is grown as an annual from certified seed tubers on well-drained, friable soils, commonly on raised beds and increasingly under irrigation; certified seed is central because potatoes are propagated vegetatively and seed-borne disease reduces yield and marketability. Potatoes fit well into rotation with cereals, legumes and brassicas, and rotation away from other solanaceous crops and other potatoes is a core practice for managing soil-borne disease including nematodes, verticillium wilt and rhizoctonia, while cover crops and green manures protect soil and reduce erosion. The crop is economically important both as a staple food and as a high-value processed commodity, and its production risks include late blight, early blight, potato cyst nematodes, aphid-vectored viruses and the Colorado potato beetle, while climate adaptation centres on irrigation, cultivar choice and shifting production windows.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV131",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "potato",
+    "seed-tubers",
+    "rotation",
+    "processing",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "potato",
+    "crop_slug": "potato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

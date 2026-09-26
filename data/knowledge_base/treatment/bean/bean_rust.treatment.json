@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "adfb28c3-8a05-5ba2-bf1f-c2198fe08989",
+  "category": "treatment",
+  "source": "University of Nebraska–Lincoln, CropWatch",
+  "title": "Bean Rust (Uromyces appendiculatus) — Management",
+  "crop": "bean",
+  "disease": "rust",
+  "content": "Bean rust is managed with resistant varieties, rotation and timely fungicide application when warranted. Plant resistant varieties and crop-types adapted to your region, and avoid very susceptible varieties under high disease pressure. Rotate away from previous bean crops and manage volunteer and weed hosts that can carry the fungus; the rust pathogen does not typically overwinter in cold climates except on living tissue. Scout fields regularly, and when rust is detected early and conditions favour spread, apply a labelled fungicide (contact and/or systemic FRAC-group products with bean-rust activity), rotating modes of action and respecting the pre-harvest interval. Early detection is critical because rust can spread rapidly once established.",
+  "url": "https://cropwatch.unl.edu/plant-disease/corn/common-rust/",
+  "author": "University of Nebraska–Lincoln, Institute of Agriculture and Natural Resources (CropWatch)",
+  "date": "2021-07-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "uromyces",
+    "rust",
+    "bean",
+    "resistant-varieties",
+    "scouting",
+    "fungicide",
+    "unl"
+  ],
+  "metadata": {
+    "class_label": "bean rust",
+    "crop_slug": "bean",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 12
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "320ed4b4-4a40-59c6-9c6f-76b16cfd76e9",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Pepper Production",
+  "crop": "bell pepper",
+  "disease": null,
+  "content": "Peppers are warm-season solanaceous vegetables, and bell and other sweet pepper types are an important fresh-market and processing crop grown across temperate and tropical regions worldwide. Peppers are grown both as field crops and under high tunnels, and they are widely grown in the open in warm, long-season regions; in the United States commercial production is concentrated in California, Florida, Georgia, Texas and the Southwest for fresh market, with additional acreage for processing and for protected-culture production that extends the season in cooler areas. Peppers grow on a wide range of soils but prefer well-drained, fertile ground with a pH for peppers of about 6.0-6.8, and they are commonly produced on polyethylene mulch with drip irrigation, which allows precise moisture and nutrient management and reduces fruit rot. Yields vary with type, region and management, ranging from several tonnes per hectare in field production to considerably higher in intensive, mulched and fertigated systems; bell pepper is a high-value crop per unit area, which makes it attractive for diversified vegetable farms. As a solanaceous crop, pepper shares diseases with tomato and other nightshades, so crop rotation away from solanaceous crops for at least two to three years is a core management practice; peppers rotate well with cereals, legumes and brassicas, and cover crops are used to build organic matter and suppress weeds before planting. Peppers are not frost tolerant and yields fall when temperatures are too cool or too hot, so adaptation relies choice, transplanting into warm soil, plasticulture to warm soil, shading in extreme heat and irrigation for drought. Principal disease and pest pressures include bacterial spot, phytophthora, powdery mildew, aphids and thrips, the latter important as virus vectors.",
+  "url": "https://extension.psu.edu/pepper-production",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bell-pepper",
+    "solanaceous",
+    "polyethylene-mulch",
+    "rotation",
+    "production",
+    "economics"
+  ],
+  "metadata": {
+    "class_label": "bell pepper",
+    "crop_slug": "bell_pepper",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

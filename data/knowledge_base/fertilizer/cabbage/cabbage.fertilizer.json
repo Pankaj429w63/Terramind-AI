@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "05a48252-556a-5bfb-bef7-32efaf8137ea",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Ecological Disease Management and Organic Fertility for Brassica Crops",
+  "crop": "cabbage",
+  "disease": null,
+  "content": "Cabbage is a heavy feeder and produces its best heads when nitrogen is continuously available through the long vegetative period. Penn State Extension guidance for cole crops recommends a fertile, well-drained soil with pH maintained at about 6.0-6.8; liming to this range both maximises nutrient availability and helps suppress clubroot caused by Plasmodiophora brassicae, which is more severe in acidic soil. Nitrogen is the key nutrient and should be split — a pre-plant application plus one or two side-dressings — so that the crop does not run short during head formation; excessive nitrogen late in the season, however, can delay maturity and reduce storage quality. Phosphorus is applied before planting based on soil test, and potassium is required in quantity because it is removed with the heads and improves storage and shipping quality. Boron can be deficient in sandy, low-organic-matter soils and its shortage causes hollow stem and poor heart development, so boron status should be checked on a soil or tissue test. Compost and manure improve organic matter and supply secondary nutrients and micronutrients. Maintain even moisture and avoid stress during heading, which causes splitting and quality loss. Heat stress near harvest also increases splitting, so time plantings carefully.",
+  "url": "https://extension.psu.edu/ecological-disease-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "boron",
+    "cabbage",
+    "brassica",
+    "clubroot",
+    "potassium"
+  ],
+  "metadata": {
+    "class_label": "cabbage",
+    "crop_slug": "cabbage",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

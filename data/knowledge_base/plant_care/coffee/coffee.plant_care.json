@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "ba48464d-e44f-5f80-8508-14072f378458",
+  "category": "plant care",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Coffee Cultivation and Crop Management (FAO Ecocrop / Good Agricultural Practices)",
+  "crop": "coffee",
+  "disease": null,
+  "content": "Coffee is a perennial evergreen shrub or small tree of tropical highlands and is grown over a wide range of smallholder and estate systems. FAO guidance stresses that coffee performs best on deep, well-drained, fertile soils with good organic matter, usually of volcanic origin, and at altitudes where temperatures are moderate rather than extreme, since coffee is damaged by frost and by prolonged heat and drought. Propagation is by seed planted in shaded nurseries and transplanted as young seedlings at the onset of the rainy season, with shade trees or shade cloth used to protect young plants and, in many systems, to moderate temperatures and reduce stress on mature plants; planting density and spacing vary with species, cultivar and whether trees are kept as single-stem or multi-stem systems. Pruning is central to coffee management: it removes dead and unproductive wood, controls tree height for ease of harvest, regulates the number of bearing nodes and, in some systems, rejuvenates trees through stumping or by allowing suckers to replace old stems, which maintains yields over the life of the plantation. Weed control, mulching and, where necessary, terracing on slopes protect the soil from erosion and conserve moisture. Nutrient supply should follow soil and leaf analysis, with nitrogen, phosphorus, potassium, magnesium and boron the elements most often limiting, applied in split applications timed to the rains so that nutrients reach the root zone. Scout through the season for the major pests and diseases of the region, including coffee berry borer, leaf rust, coffee leaf miner and root-knot nematodes. Harvest selectively when berries turn fully red, picking only ripe cherries to protect quality, and process promptly by the wet or dry method; green beans store best when dried to a safe moisture content and kept cool and dry.",
+  "url": "https://www.fao.org/4/x6939e/x6939e00.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "coffee",
+    "perennial",
+    "shade",
+    "pruning",
+    "selective-harvest",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "coffee",
+    "crop_slug": "coffee",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

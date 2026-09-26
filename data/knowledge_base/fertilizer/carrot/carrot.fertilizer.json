@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "5ef3d559-5c6e-53b4-ba8c-837ebd9ff985",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management and Fertilizing Vegetables",
+  "crop": "carrot",
+  "disease": null,
+  "content": "Carrot is a root crop whose marketable yield is the taproot, so nutrient management aims at steady, moderate growth without the excess nitrogen that produces forked, split or overly fibrous roots. Penn State Extension emphasises soil testing as the basis of any vegetable fertility programme: it establishes pH and lime requirement and the need for phosphorus and potassium, which should be built to optimum levels and maintained rather than reapplied heavily each season. Carrots perform best in deep, loose, well-drained soil with pH near 6.0-6.8; stones, compaction and fresh manure incorporated immediately before planting cause distorted roots, so manure or compost is best applied to the preceding crop. Potassium is particularly important for carrot quality, contributing to root size and storage life, and phosphorus supports early root development; both are best banded or incorporated where the roots will grow. Excess nitrogen produces large, lush top growth at the expense of root fill and encourages forking, so nitrogen should be modest and applied early. Boron deficiency causes a dark, sunken disorder in the root, and carrots grown on sandy, low-organic-matter soils are most at risk. Keep moisture even to prevent splitting and to maintain root quality, and avoid salinity build-up in the seedbed.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "potassium",
+    "root-crop",
+    "carrot",
+    "soil-test",
+    "boron",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "carrot",
+    "crop_slug": "carrot",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

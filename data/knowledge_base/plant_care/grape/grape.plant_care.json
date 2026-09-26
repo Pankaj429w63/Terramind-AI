@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "28e01f87-53a0-550f-b1c7-70c804aee175",
+  "category": "plant care",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Backyard Grape Growing",
+  "crop": "grape",
+  "disease": null,
+  "content": "Grapes are long-lived woody vines and are one of the most ancient crops known to humans, eaten fresh as table grapes or processed into juice, jelly, raisins and wine. Penn State Extension advises testing and amending the soil according to the soil test directions a year before planting, and notes that a well-established grapevine adapted to its climate will produce fruit for many decades, so the first year's goal is to establish the plant rather than to crop it. Plant vines in a hole a few inches deeper than the longest roots, trimming roots to 6-12 inches and soaking the vines in water before planting, and orient rows north-south to capture the most sunlight. While the vine is dormant, prune back to one or two canes leaving only two to three nodes per cane; after growth begins and frost danger has passed, remove all but the two strongest shoots, tie the shoots loosely to a training stake to build a straight trunk, and remove all flower clusters in the first year. Keep the new vines watered and weeded, and keep deer and rabbits away from the tender shoots. A standard commercial trellis is about 6 feet tall with supporting wires, and it can be erected in the first or second year, since the vine's form should be decided early because there is only one chance to train it correctly. Nutrition should follow a soil test: apply 2 ounces of 33-0-0 two to three weeks after planting, keeping fertilizer a foot from the vine, and in subsequent years 4, 6 or 8 ounces of 33-0-0 or 1-2 pounds of 10-10-10 per plant before buds swell in spring; if vines are too vigorous, omit nitrogen for one to two years, and maintain soil pH between 5.5 and 7.0. Prune in the dormant months between December and March, since pruning sets the bud number and therefore the crop; typically about 90 percent of a mature vine's new growth is removed, and grapes bear fruit on one-year-old wood. Monitor and control insect and disease pests, and harvest fruit when fully coloured and flavoured.",
+  "url": "https://extension.psu.edu/backyard-grape-growing/",
+  "author": "Barbara Goulart and Mark Chien, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-05-11",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "grape",
+    "trellis",
+    "pruning",
+    "establishment",
+    "harvest",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "grape",
+    "crop_slug": "grape",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "3a944cad-0cac-5b67-9c2e-99b008ec3b60",
+  "category": "fertilizer",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Soybean Fertilizer Guidelines",
+  "crop": "soybean",
+  "disease": null,
+  "content": "Soybean is a legume and, if properly inoculated, can use atmospheric nitrogen through fixation in root nodules, so nitrogen fertilizer is generally unnecessary. University of Minnesota Extension explains that the amount of fixation is inversely related to soil nitrate-nitrogen: when soil nitrate is high, fixation in the nodules is small, and when soil nitrate is low, fixation quickly increases to meet the greater nitrogen demand. Because of this, the focus of soybean fertility is phosphorus, potassium, sulfur and micronutrients rather than nitrogen, and rates are set from a soil test. Manure is an excellent source of phosphorus, potassium, secondary nutrients and micronutrients, and Minnesota research across ten sites found that soybean actually removes more nitrogen than corn, so manure application rates should be limited to the amount of nitrogen removed by the crop; where manure nitrogen was applied at rates below crop removal, nodulation resumed quickly in mid-season and final nitrogen removal was similar to non-manured fields. Manure consistently improved soybean grain yield but also increased vegetative growth, which led to more lodging in some varieties and provided a more favourable environment for white mold, so variety selection should account for this. Soybean seed is very sensitive to salt injury, so fertilizer should never be placed in contact with seed; banded placement must leave at least one inch of soil between fertilizer and seed. In no-till production, research shows that yield responses to phosphate are similar for banded and broadcast applications, provided the fertilizer is adequately incorporated by the planting operation.",
+  "url": "https://extension.umn.edu/crop-specific-needs/soybean-fertilizer-guidelines",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2021-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "soybean",
+    "nitrogen-fixation",
+    "manure",
+    "salt-injury",
+    "phosphate",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "soybean",
+    "crop_slug": "soybean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

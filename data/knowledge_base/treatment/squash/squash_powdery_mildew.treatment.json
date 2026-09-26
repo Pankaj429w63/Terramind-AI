@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c8cff3dc-a3fb-5480-b5a6-788cee64dbdc",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Powdery Mildew of Squash and Cucurbits — Pest Management Guidelines",
+  "crop": "squash",
+  "disease": "powdery mildew",
+  "content": "Powdery mildew of squash (Podosphaera xanthii and Erysiphe cichoracearum) is managed with resistant varieties, cultural practices and fungicides. Plant powdery-mildew-resistant squash varieties where available, space plants and manage the canopy for airflow, avoid excessive nitrogen, and irrigate at the base to keep foliage dry. Apply protectant fungicides preventively once the disease is first detected or forecast, using multi-site materials (for example sulfur or potassium bicarbonate where labelled) alternated with single-site FRAC-group materials (including groups 3, 7, 11 and U6 with cucurbit powdery-mildew activity), and rotate modes of action because the pathogen readily develops resistance. Follow label rates and pre-harvest intervals, and note temperature restrictions on some sulfur and oil products.",
+  "url": "https://ipm.ucanr.edu/agriculture/cucurbits/powdery-mildew/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "podosphaera",
+    "powdery-mildew",
+    "squash",
+    "resistant-varieties",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "squash powdery mildew",
+    "crop_slug": "squash",
+    "disease_slug": "powdery_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 74
+  }
+}

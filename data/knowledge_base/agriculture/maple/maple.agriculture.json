@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4888bab2-041c-5239-a0fb-a6c34f5ebe29",
+  "category": "agriculture",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Homemade Maple Syrup",
+  "crop": "maple",
+  "disease": null,
+  "content": "Maple syrup production is based on the sap of sugar, black, red and silver maples and is a distinctive seasonal agro-forestry enterprise in the northeastern United States and eastern Canada, where it is economically and culturally important. UMN Extension notes that four species of maple can be used for sap production in Minnesota, with sugar maple the popular choice for its sweet sap; the sugar maple is the state tree of several states and dominates commercial syrup production, while red maple and boxelder are used where sugar maple is scarce. Maple syrup production is concentrated in the northern United States and eastern Canada, with Quebec by far the largest producer, followed by Vermont, Maine, New York, Ontario, Wisconsin and New Hampshire; collectively these regions supply the great majority of the world's syrup and are the source of a substantial export trade. The resource is managed as woodland rather than as an annual crop rotation: for best sap production a tree should have a short trunk topped with abundant foliage, and UMN Extension stresses that the key to good grove management is cutting practices that favour the development and retention of such trees, which makes sustainable forest management central to the enterprise. Tapping is done in late winter: UMN Extension advises completing tapping by mid-February in central and southern Minnesota and by the second week of March in the northern part of the state, and tapping only trees at least 10 inches in diameter at 4 feet above the ground, with no more than two taps in trees greater than 20 inches. Sap runs when a rapid warming trend follows a freezing night, and a single taphole normally yields between one quart and one gallon of sap per flow period, accumulating 10-12 gallons in a season. Climate change is a serious adaptation concern because syrup production depends on the freeze-thaw cycle, and warming winters are altering the timing and length of the sap season and shifting the suitable range of sugar maple northward; production risks also include forest pests and diseases such as the Asian longhorned beetle and sugar maple decline.",
+  "url": "https://extension.umn.edu/gathering-wild-grown-plants-and-fungi/homemade-maple-syrup",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "maple",
+    "syrup",
+    "agroforestry",
+    "sugar-maple",
+    "climate",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "maple",
+    "crop_slug": "maple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

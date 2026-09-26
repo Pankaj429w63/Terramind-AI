@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4e975116-ae1e-5697-bac1-7271a2b3eb24",
+  "category": "agriculture",
+  "source": "USDA Economic Research Service (United States Department of Agriculture) / Penn State Extension",
+  "title": "Fruit and Tree Nuts — Grape Production",
+  "crop": "grape",
+  "disease": null,
+  "content": "Grape is a temperate and subtropical perennial vine grown for fresh table fruit, raisins and, above all, wine, and it is one of the highest-value fruit crops in the world. Grapes are adapted to Mediterranean and continental climates with warm, dry summers and cool winters, and production is heavily concentrated in a small number of regions: the largest world producers include China, Italy, Spain, France, the United States, Turkey and Argentina, with wine-grape production concentrated in Europe and the Americas and table-grape and raisin production concentrated in Turkey, India, the United States and Chile. In the United States, commercial grape production is dominated by California for both wine and table grapes, with significant juice-grape production in New York, Pennsylvania, Washington and Michigan. Yields vary enormously with type, region and management, ranging from a few tonnes per hectare in premium wine-grape blocks, where yield is deliberately restricted to improve quality, to 20-30 tonnes per hectare or more in high-yielding table and raisin vineyards. Grape is a long-lived perennial grown on a trellis and managed by annual dormant pruning that sets the crop for the coming season; because it is a perennial crop, rotation as practised in annual cropping does not apply, but growers use cover crops between rows and resident vegetation to protect soil, reduce erosion, support machinery and improve soil biology. Grapes command very high value per hectare and the wine sector is economically important to many rural economies and to international trade, while the table-grape and raisin sectors are significant export commodities. Climate-adaptation pressures include drought, heat and smoke taint from wildfires, and shifts that are already moving suitable wine-grape production zones; principal pest and disease pressures include powdery and downy mildew, black rot, grape berry moth, phylloxera and, in some regions, Pierce's disease and the glassy-winged sharpshooter.",
+  "url": "https://www.ers.usda.gov/topics/crops/fruit-tree-nuts/",
+  "author": "USDA Economic Research Service (United States Department of Agriculture)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "grape",
+    "vineyard",
+    "wine",
+    "table-grape",
+    "perennial",
+    "usda-ers"
+  ],
+  "metadata": {
+    "class_label": "grape",
+    "crop_slug": "grape",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

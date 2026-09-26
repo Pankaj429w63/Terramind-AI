@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "fbd8376b-eef8-5c50-9317-e25df2599636",
+  "category": "fertilizer",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Fertilizer Use and Plant Nutrition for Root and Tuber Crops (FAO)",
+  "crop": "ginger",
+  "disease": null,
+  "content": "Ginger is a tropical rhizomatous root crop with a relatively long growing season and a moderate but steady nutrient demand. FAO guidance on root and tuber crop nutrition notes that these crops are commonly grown on weathered, intensively cropped tropical soils and that both organic matter and balanced mineral nutrition are needed to sustain yields. Nitrogen supports leaf and pseudostem development, which determines the photosynthetic capacity that fills the rhizome; potassium is the nutrient most closely associated with rhizome size, dry-matter content and quality, and is required in larger amounts than phosphorus; phosphorus supports root development and rhizome initiation. Because ginger is grown for its underground rhizome, nutrient supply must not taper prematurely — shortages during rhizome bulking directly reduce yield and grade. Fertilizer is usually applied in split doses placed around rather than directly beneath the seed rhizome to avoid injury to the developing roots, and applications are timed to the rainy season so nutrients move into the root zone. Mulching is widely practised and returns organic matter, conserves moisture and reduces weed competition. Soil pH should be maintained around 5.5-6.5, and organic amendments such as well-rotted manure or compost improve the structure and water-holding capacity that ginger requires. Confirm rates with soil analysis for the local soil type.",
+  "url": "https://www.fao.org/4/t0207e/T0207E01.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "ginger",
+    "rhizome",
+    "potassium",
+    "tropical",
+    "fao",
+    "root-crop"
+  ],
+  "metadata": {
+    "class_label": "ginger",
+    "crop_slug": "ginger",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

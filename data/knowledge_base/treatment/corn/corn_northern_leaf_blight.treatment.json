@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "7c11d2be-8a99-5bf1-9ec4-8debb7a1453a",
+  "category": "treatment",
+  "source": "Crop Protection Network",
+  "title": "Northern Corn Leaf Blight — Management",
+  "crop": "corn",
+  "disease": "northern leaf blight",
+  "content": "Northern corn leaf blight (Exserohilum turcicum) is controlled with resistant hybrids, crop rotation, residue management and fungicide application when warranted. Choose hybrids with good resistance (both qualitative and quantitative resistance is available), rotate away from corn, and manage residue in reduced-till fields where the fungus overwinters. Scout fields and use local disease forecasts; when lesions develop before tasselling on susceptible hybrids, apply a labelled fungicide (FRAC 3, 7 or 11 chemistry with northern-leaf-blight activity) at the recommended stage, rotating modes of action. Applying fungicides to resistant hybrids is seldom economical, so base the decision on resistance rating, disease severity and weather outlook. Observe label rates, timing and pre-harvest intervals.",
+  "url": "https://cropprotectionnetwork.org/publications/northern-corn-leaf-blight",
+  "author": "Crop Protection Network (CPN), a collaboration of U.S. land-grant universities",
+  "date": "2020-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "exserohilum",
+    "corn",
+    "resistant-hybrids",
+    "rotation",
+    "fungicide",
+    "cpn"
+  ],
+  "metadata": {
+    "class_label": "corn northern leaf blight",
+    "crop_slug": "corn",
+    "disease_slug": "northern_leaf_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 36
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "37effb36-cdc9-59d6-9ea1-4879b277e669",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Soybean Growth Stages and Management",
+  "crop": "soybean",
+  "disease": null,
+  "content": "Soybean is a warm-season legume grown for seed and is managed through clearly defined growth stages. UMN Extension explains that the soybean plant progresses from emergence through a vegetative phase, during which trifoliolate leaves are produced and nodes are formed on the main stem, into a reproductive phase that begins at flowering and continues through pod formation and seed fill to physiological maturity. Vegetative stages are named by the number of fully developed trifoliolate leaves on the main stem (V1, V2, and so on), while reproductive stages are designated R1 (beginning bloom) through R8 (full maturity). UMN Extension stresses that seeding at the right time and rate establishes the stand that carries the crop, and that soybeans should be planted when soil conditions allow into a firm, well-prepared seedbed; plant only high-quality, properly treated seed because soybean seed is sensitive to cold, wet soils and soil-borne disease. After establishment, cultural management focuses on planting soybean after the main flush of weeds in a well-planned rotation, using tillage and pre-emergence herbicides as needed to control weeds during the critical early period before the canopy closes, and scouting through the season for the insects, diseases and weeds that vary with the year. UMN Extension notes that maximum soybean yield is associated with the accumulation of 1,875 growing degree days before a killing frost. Scout fields at key stages, harvest when the grain has matured and the seed is at harvest moisture, and adjust the combine to minimise harvest losses, since properly timed harvest and machine adjustment protect both yield and seed quality.",
+  "url": "https://extension.umn.edu/growing-soybean/soybean-growth-stages",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2021-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "soybean",
+    "growth-stages",
+    "seedbed",
+    "rotation",
+    "harvest",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "soybean",
+    "crop_slug": "soybean",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

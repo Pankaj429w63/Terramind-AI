@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cf1aac41-eadb-572f-b0ed-3106680c5852",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Potatoes",
+  "crop": "potato",
+  "disease": null,
+  "content": "Potatoes are cool-season root crops grown from seed tubers, and they need a loose, well-drained soil rich in organic matter so that the developing tubers can size without distortion. UC IPM advises planting certified disease-free seed potatoes rather than supermarket potatoes, in full sun, in early spring for a summer crop or in late summer for an autumn crop; cut large tubers into pieces each bearing at least one or two eyes and allow the cut surfaces to suberise (dry and skin over) for a day or two before planting. Plant seed pieces about 4 inches deep and about 10-12 inches apart in rows 24-36 inches apart, and as the plants grow, hill soil up around the stems or grow the crop under a thick mulch, which keeps the tubers covered. Covering is essential because tubers exposed to light turn green and develop solanine, which is toxic and makes them unfit to eat. Water regularly and evenly through the season, since potatoes need steady moisture for good tuber size but are prone to rot in waterlogged soil; drip or furrow irrigation and good drainage are preferred. Potatoes are moderate feeders that benefit from a soil test: phosphorus and potassium applied before planting support tuber development, and nitrogen should be adequate early but not excessive, because too much nitrogen produces large tops and small tubers. Scout through the season for Colorado potato beetle, aphids, flea beetles and leafhoppers, and for the late blight and early blight that are the major foliar diseases of potato. Harvest new potatoes when the plants begin to flower, and harvest the main crop after the vines have died back and the skins have set, lifting carefully with a fork to avoid cutting tubers; cure the crop in a cool, dark, humid place for a week or two before storing at about 40 F in the dark, discarding any green, cut or rotting tubers.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "potato",
+    "seed-tubers",
+    "hilling",
+    "greening",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "potato",
+    "crop_slug": "potato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

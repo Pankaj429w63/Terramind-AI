@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a0040fd2-e63d-5f58-9333-88ba7f104497",
+  "category": "agriculture",
+  "source": "USDA Economic Research Service (United States Department of Agriculture) / Penn State Extension",
+  "title": "Tobacco Production and Farm Economics",
+  "crop": "tobacco",
+  "disease": null,
+  "content": "Tobacco is a warm-season specialty field crop grown for its leaves and is one of the most economically valuable crops per unit area in the regions where it is produced, though its cultivation and trade are shaped by health policy and global demand trends. Tobacco is grown in temperate and subtropical regions and is divided into types by curing method and use — flue-cured, burley, dark air-cured, fire-cured and cigar types — each with distinctive production and marketing requirements. The major world producers include China, which dominates world output, followed by India, Brazil, the United States, Indonesia, Turkey and Zimbabwe, while in the United States production is concentrated in North Carolina, Kentucky, Virginia, Tennessee, South Carolina, Pennsylvania and Georgia. Penn State Extension describes tobacco production in Pennsylvania, where about 7,000 acres produce the local Lancaster County type 41 variety used for cigar wrappers, and notes that tobacco has been grown there since colonial times. Tobacco is grown from transplants rather than direct-seeded and is traditionally cultivated numerous times through the season to eliminate weeds and competition and loosen the soil; Penn State Extension describes how this cultivation leaves the soil loose and prone to erosion and nutrient loss on sloping ground, and therefore promotes no-till transplanting into a cover crop such as clover, rye or wheat, which protects the soil with a residue mat, increases soil health and reduces runoff, erosion and nutrient pollution while producing uniform, high-quality crops. Because tobacco is a high-value crop it is often grown on smaller acreages and is economically important to farm income in producing regions and to the economies of some states and countries, and it is also a significant world export commodity. Production risks include black shank, granville wilt, tobacco mosaic virus, hornworms, aphids and flea beetles, and adaptation in producing regions centres on rotation, resistant varieties and integrated pest and soil management.",
+  "url": "https://extension.psu.edu/no-till-innovations-in-tobacco-video/",
+  "author": "Jeffrey Graybill, Penn State Extension (College of Agricultural Sciences)",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tobacco",
+    "specialty-crop",
+    "transplanting",
+    "no-till",
+    "economics",
+    "production"
+  ],
+  "metadata": {
+    "class_label": "tobacco",
+    "crop_slug": "tobacco",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cd342949-e8cb-5291-9dc4-426c6f00c96d",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "tomato",
+  "disease": null,
+  "content": "Tomato is a long-season, heavy-feeding solanaceous crop, and UF/IFAS guidance stresses that a sound nutrient programme considers rate together with fertilizer material, placement and timing, and links these to irrigation scheduling and crop nutritional status monitoring — soil tests, leaf analysis and petiole sap testing — so that nutrients remain available to the crop without being leached from sandy soils. In commercial production on polyethylene mulch with drip irrigation, a target fertilizer rate is used as a starting point, with nitrogen and potassium applied in split applications through the season and phosphorus applied largely pre-plant because it is relatively immobile in soil. Rate adjustments are expected during the season to account for leaching rains and for an extended harvest period when market conditions are favourable. Potassium is important for fruit size, colour and flavour as well as for plant vigour; nitrogen sustains the long fruiting period but excessive nitrogen delays maturity and reduces fruit quality and pest resistance. Calcium and boron, combined with even moisture, are important because blossom-end rot is a calcium-related disorder aggravated by irregular water supply rather than simply low soil calcium. Maintain soil pH in the recommended range and follow published best-management practices for irrigation and fertilizer application to protect water quality.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tomato",
+    "n-p-k",
+    "blossom-end-rot",
+    "fertigation",
+    "uf-ifas",
+    "petiole-test"
+  ],
+  "metadata": {
+    "class_label": "tomato",
+    "crop_slug": "tomato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

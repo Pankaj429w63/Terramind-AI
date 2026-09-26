@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4ab23a7f-beb3-5be8-8988-ba0143d1f93f",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Powdery Mildew of Cucurbits — Pest Management Guidelines",
+  "crop": "cucumber",
+  "disease": "powdery mildew",
+  "content": "Powdery mildew of cucumber and other cucurbits (Podosphaera xanthii and Erysiphe cichoracearum) is managed with resistant varieties, cultural practices and fungicides. Plant powdery-mildew-resistant varieties where available, space plants and prune for airflow, avoid excessive nitrogen that produces dense, susceptible foliage, and irrigate at the base to keep leaves dry. Apply protectant fungicides preventively once the disease is forecast or first detected, using multi-site materials (for example sulfur or potassium-bicarbonate products where labelled) alternated with single-site FRAC-group materials (including group 3, 7, 11 and U6 products with cucurbit powdery-mildew activity); rotate modes of action, as the pathogen readily develops resistance. Follow label rates and pre-harvest intervals; note that some materials have temperature restrictions.",
+  "url": "https://ipm.ucanr.edu/agriculture/cucurbits/powdery-mildew/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "podosphaera",
+    "powdery-mildew",
+    "cucumber",
+    "resistant-varieties",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "cucumber powdery mildew",
+    "crop_slug": "cucumber",
+    "disease_slug": "powdery_mildew",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 42
+  }
+}

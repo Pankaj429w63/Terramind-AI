@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "4f84ec6b-882c-5e42-b767-ed91f53feb97",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Nutritional Requirements of Stone Fruit in Home Fruit Plantings",
+  "crop": "cherry",
+  "disease": null,
+  "content": "Sweet and tart cherry follow the same simple stone-fruit fertility programme described by Penn State Extension. Shortly after planting, apply 8 ounces of 10-10-10 per plant, taking care never to put fertilizer into the planting hole. In subsequent years broadcast 1/2 pound of 10-10-10 under each tree in the early spring, and increase the amount applied by another 1/2 pound per year up to a maximum of 5 pounds per tree regardless of age. Maintain soil pH at 6.0-6.5 and never fertilize after July 15, because late-season nitrogen pushes soft growth that fails to harden off and is injured by winter cold. The best practical guide to nitrogen status in bearing cherry trees is annual terminal shoot growth; excessive growth indicates too much nitrogen and predisposes the tree to problems including poor fruit quality, while insufficient growth indicates a need for more. Stone fruits on the whole require only low to moderate nutrient inputs once established, and over-fertilisation is a more common fault than under-fertilisation. Have the soil tested before planting to establish the lime requirement, since cherry is sensitive to poor drainage and to acidic soils, and confirm phosphorus and potassium adequacy with the same test rather than guessing.",
+  "url": "https://extension.psu.edu/nutritional-requirements-of-stone-fruit-in-home-fruit-plantings/",
+  "author": "Daniel Weber, Ph.D., Extension Educator, Horticulture, Penn State Extension",
+  "date": "2023-06-21",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "10-10-10",
+    "soil-ph",
+    "stone-fruit",
+    "cherry",
+    "nitrogen",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "cherry",
+    "crop_slug": "cherry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

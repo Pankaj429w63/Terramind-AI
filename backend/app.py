@@ -29,6 +29,7 @@ from ml.multimodal.runtime import (  # noqa: E402
 from backend.repositories import repository  # noqa: E402
 from backend.supabase_client import CONFIG as SUPABASE_CONFIG  # noqa: E402
 from backend.supabase_client import get_authenticated_user  # noqa: E402
+from backend.model_artifacts import resolve_model_checkpoint  # noqa: E402
 from rag.pipelines.knowledge import pipeline as rag_pipeline  # noqa: E402
 from agents.workflow import ChatSupervisorAgent, SupervisorAgent  # noqa: E402
 
@@ -61,7 +62,7 @@ async def lifespan(app: FastAPI):
     t0 = time.perf_counter()
     log.info("Starting TerraMind AI backend — loading inference service...")
     try:
-        PREDICTOR = Predictor(device="cpu")
+        PREDICTOR = Predictor(model_path=resolve_model_checkpoint(), device="cpu")
         SUPERVISOR = SupervisorAgent(PREDICTOR, rag_pipeline)
         CHAT_SUPERVISOR = ChatSupervisorAgent(rag_pipeline)
         log.info("Predictor ready (%.1fs). Starting API.", time.perf_counter() - t0)
@@ -73,6 +74,22 @@ async def lifespan(app: FastAPI):
         log.info("Multimodal module unavailable: %s", MULTIMODAL_ERROR)
     else:
         log.info("Validated multimodal checkpoint loaded (%d latent dimensions).", MULTIMODAL_RUNTIME.model.config.latent_dim)
+    if os.getenv("TERRAMIND_RAG_AUTO_INGEST", "false").strip().lower() in {"1", "true", "yes"}:
+        try:
+            if int(rag_pipeline.stats().get("total_points") or 0) == 0:
+                kb_root = PROJECT_ROOT / "data" / "knowledge_base"
+                sources = [
+                    {"source": str(kb_root / folder), "category": category}
+                    for folder, category in (("diseases", "diseases"), ("treatment", "treatment"),
+                                             ("fertilizer", "fertilizer"), ("plant_care", "plant care"),
+                                             ("agriculture", "agriculture"))
+                    if (kb_root / folder).is_dir()
+                ]
+                if sources:
+                    result = rag_pipeline.ingest(sources)
+                    log.info("Seeded bundled RAG knowledge base (%s documents, %s chunks).", result["documents"], result["chunks"])
+        except Exception as error:
+            log.exception("Bundled RAG initialization failed; service will continue with its available fallback: %s", error)
     yield
     log.info("Shutting down TerraMind AI backend.")
 
@@ -84,11 +101,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-_CORS = os.getenv("TERRAMIND_CORS_ORIGINS", "*").split(",")
+_CORS = os.getenv("TERRAMIND_CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[c.strip() for c in _CORS if c.strip()],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

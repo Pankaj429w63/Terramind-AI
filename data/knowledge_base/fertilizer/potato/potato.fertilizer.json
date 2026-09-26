@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cd4c6083-9022-5b9e-ab07-061d1f744e79",
+  "category": "fertilizer",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Nutrient Management for Minnesota Crops",
+  "crop": "potato",
+  "disease": null,
+  "content": "Potato is a high-value root crop with a large and carefully timed nutrient requirement. Nitrogen management is critical: too little nitrogen limits canopy development and yield, while excessive nitrogen, particularly late in the season, delays tuber maturity, reduces specific gravity and dry matter, and increases susceptibility to disease and to poor storage. University of Minnesota Extension nutrient-management guidance for Minnesota crops recommends establishing phosphorus, potassium and pH requirements from a soil test before planting, then applying phosphorus and potassium pre-plant or at planting because both are relatively immobile in soil and potato has a shallow, inefficient root system; banded placement near the seed piece is efficient but rates must respect the crop's sensitivity to salt injury. Potassium is required in especially large amounts by potato, and adequate potassium improves tuber size, specific gravity and storage quality, while insufficient potassium reduces yield and quality. Magnesium can be limiting on sandy, acid soils, and micronutrients such as boron, manganese and zinc may need attention on some soils. Nitrogen is usually split, with some applied at planting and the balance applied during the season, often through irrigation (fertigation) or as sidedress, and applications stop in time to allow tuber skin set and maturation before harvest. Follow regional best-management practices to protect groundwater.",
+  "url": "https://extension.umn.edu/crop-production/nutrient-management-minnesota-crops",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2021-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "potato",
+    "nitrogen",
+    "potassium",
+    "specific-gravity",
+    "fertigation",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "potato",
+    "crop_slug": "potato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "2281fc42-cd73-52e1-b8d4-52c604a34d3b",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Home Garden Soil Management and Fertilizing Landscape Trees",
+  "crop": "maple",
+  "disease": null,
+  "content": "Maple, whether grown as a landscape shade tree or tapped for syrup, has a modest nutrient requirement once established, and the primary management objective for landscape maples is to maintain an appropriate soil pH rather than to apply heavy fertilizer. Penn State Extension guidance for trees and home plantings recommends starting with a soil test, since maples generally perform best in slightly acid to neutral soil and since nutrient availability, particularly of iron and manganese, is strongly affected by pH; iron chlorosis with interveinal yellowing on high-pH soils is a common maple problem that liming or fertilising cannot correct and that may require acidification or an iron treatment instead. Excess nitrogen applied to established trees stimulates soft, fast growth that is prone to breakage, insect attack and, in sugar maples tapped for syrup, can reduce sap sugar concentration and delay the hardening-off required for winter survival. Where growth is poor and a soil test confirms a deficiency, apply a balanced or nitrogen-focused fertiliser in early spring, spread over the root zone out to the drip line rather than concentrated at the trunk, and water it in. Maintain a mulch ring and avoid mechanical injury to the trunk. For sugar maple, sap sugar content is influenced mainly by genetics, tree health and site, so avoid over-fertilisation and keep trees vigorous but not excessive.",
+  "url": "https://extension.psu.edu/trees-lawns-and-landscaping/home-gardening/soil-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "maple",
+    "soil-ph",
+    "iron-chlorosis",
+    "tree",
+    "sugar-maple",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "maple",
+    "crop_slug": "maple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

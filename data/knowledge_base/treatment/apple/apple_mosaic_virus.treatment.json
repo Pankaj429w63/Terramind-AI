@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "972e07f8-9875-59cc-bf11-acb4bd8fcac8",
+  "category": "treatment",
+  "source": "Penn State Extension, Tree Fruit Production Team",
+  "title": "Apple Viruses — Disease Management",
+  "crop": "apple",
+  "disease": "mosaic virus",
+  "content": "There is no chemical cure for apple mosaic virus (ApMV); management depends entirely on exclusion and sanitation. Plant only certified virus-tested (virus-indexed) nursery stock and never graft with budwood of unknown status. Test budwood and scion wood with ELISA or RT-PCR before propagation. In young plantings, remove and destroy any tree confirmed infected to prevent it becoming a reservoir; disinfect pruning tools between trees. Because ApMV spreads primarily through propagation rather than a vector, the most effective control is a rigorous clean-stock certification program. Sensitive cultivars (for example Golden Delicious and Cox's Orange Pippin) show the strongest symptoms and should be sourced only from indexed material.",
+  "url": "https://extension.psu.edu/apple-viruses/",
+  "author": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "date": "2024-01-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "apple",
+    "certified-stock",
+    "sanitation",
+    "no-cure",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "apple mosaic virus",
+    "crop_slug": "apple",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 2
+  }
+}

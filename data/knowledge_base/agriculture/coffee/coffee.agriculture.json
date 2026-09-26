@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b3035e0f-0a74-5f3f-b464-70b085768bdd",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Coffee Commodity Overview",
+  "crop": "coffee",
+  "disease": null,
+  "content": "Coffee is one of the most widely traded agricultural commodities in the world and is grown in the tropical and subtropical highlands of Africa, Asia and Latin America, principally by smallholders. Production is concentrated where temperatures are moderate and rainfall is well distributed, typically at elevations of roughly 600-2,000 metres depending on species and latitude; arabica, which dominates the higher-quality trade, prefers cooler highland conditions, while robusta is grown at lower elevations and is more heat and disease tolerant. The leading producers include Brazil, Vietnam, Colombia, Indonesia and Ethiopia, with Brazil and Vietnam together accounting for a very large share of world supply, and other significant producers across Central America, Africa and Asia. Yields vary widely with system, species, elevation and management, commonly reaching on the order of 1-3 tonnes per hectare of green coffee in well-managed plantations and considerably less in low-input smallholder stands. Coffee is a perennial tree crop managed on long cycles through pruning and rejuvenation rather than annual rotation; shade trees are widely used to moderate temperature, improve soil and diversify income, and cover crops and mulch are used to protect soil on sloping land. The crop is economically vital: it is a major source of foreign exchange for producing countries and supports the livelihoods of an estimated 25 million smallholder households, and it is one of the most valuable exports of many developing economies. The sector faces acute climate-adaptation pressure because the crop is sensitive to rising temperatures, changing rainfall and drought, which are already shifting suitable production zones and driving adaptation through shade management, irrigation, resistant varieties and migration of production to higher elevations; coffee leaf rust has caused severe losses in Central America and elsewhere, and pests including the coffee berry borer remain major constraints.",
+  "url": "https://www.fao.org/markets-and-trade/commodities-overview/beverages/coffee/en",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2023-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "coffee",
+    "tropical-highland",
+    "arabica",
+    "robusta",
+    "smallholder",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "coffee",
+    "crop_slug": "coffee",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

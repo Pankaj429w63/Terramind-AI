@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "bbecff59-614b-5a50-9ea4-978856f33afa",
+  "category": "treatment",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Coffee Leaf Rust (Hemileia vastatrix) — Management",
+  "crop": "coffee",
+  "disease": "leaf rust",
+  "content": "Coffee leaf rust is managed with resistant cultivars, shade and nutrition management, sanitation and fungicides. Plant rust-resistant coffee varieties where they are available and suited to the locality, and maintain adequate but not excessive shade, since microclimate affects disease development. Maintain balanced plant nutrition (adequate nitrogen and potassium) and good soil fertility, because well-nourished trees tolerate rust better. Prune to improve airflow and light penetration within the canopy, and remove heavily infected leaves and debris where practical to reduce inoculum. When rust pressure is high, apply a recommended fungicide (for example a copper-based protectant or a locally registered systemic product) at the label rate and timing, following the spray calendar for your region and rotating chemistries. Confirm registered products and doses with your national coffee research institute or plant-protection authority.",
+  "url": "https://www.fao.org/3/ca3638en/ca3638en.pdf",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2019-01-01",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "hemileia",
+    "leaf-rust",
+    "coffee",
+    "resistant-varieties",
+    "nutrition",
+    "fungicide",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "coffee leaf rust",
+    "crop_slug": "coffee",
+    "disease_slug": "leaf_rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 33
+  }
+}

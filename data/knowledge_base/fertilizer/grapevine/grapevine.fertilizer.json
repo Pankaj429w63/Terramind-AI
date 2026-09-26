@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "078bd1bd-e2c9-5e6e-9716-7fc60cd8c508",
+  "category": "fertilizer",
+  "source": "UC Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Establishment, Vine Vigour and Nutrient Management in Grapes",
+  "crop": "grapevine",
+  "disease": null,
+  "content": "Managing nutrition in the grapevine is above all a question of balance, because vine vigour, canopy density and fruit quality are tightly linked and because a vine that is pushed with nitrogen produces more shade and leaf at the expense of fruit. UC IPM guidance advises avoiding excessive fertilization and rich soil, since these contribute to excessive vine vigour and can reduce fruit set or fruit quality or both, and notes that fertilizer may rarely be needed in some areas with rich soil. During vineyard establishment, phosphorus supports root development and potassium is required for trunk and cane development, so both should be established from a soil test before planting and maintained thereafter; nitrogen during the early years is kept moderate to encourage a balanced framework rather than excessive vegetative growth. Zinc deficiency is a recurrent problem in many vineyards and is corrected by a foliar spray of basic or neutral zinc sulfate at 0.1 pound per gallon applied about a week before bloom or at full bloom, and never after bloom. Where potassium is deficient, potassium sulfate is applied to the soil about 18 inches from the trunk at a depth of 6 inches, at roughly 3 pounds per vine for a mild deficiency rising to 5-6 pounds for a severe one, and irrigated in afterwards. Nutrient status is monitored by soil analysis together with seasonal petiole or leaf-blade sampling, and nitrogen is judged mainly from vine vigour and canopy fill.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/grape-fertilization-guide/",
+  "author": "UC Statewide IPM Program (University of California ANR)",
+  "date": "2024-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "grapevine",
+    "nitrogen",
+    "vine-vigour",
+    "potassium",
+    "zinc",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "grapevine",
+    "crop_slug": "grapevine",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

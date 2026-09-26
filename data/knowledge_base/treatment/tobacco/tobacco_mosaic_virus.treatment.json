@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a4c8d945-ec2e-5167-a3b7-cd0894eca96f",
+  "category": "treatment",
+  "source": "University of Kentucky, College of Agriculture, Food and Environment (Extension)",
+  "title": "Tobacco Mosaic Virus — Management",
+  "crop": "tobacco",
+  "disease": "mosaic virus",
+  "content": "Tobacco mosaic virus (TMV) is extremely stable and spreads mechanically and by contact, so management depends on sanitation, resistant varieties and clean seed/transplants rather than chemical control. Use TMV-resistant varieties and certified clean transplants, and never smoke or use tobacco products while handling plants, because the virus is carried on cured tobacco and hands. Disinfect tools, trays and benches, and wash hands thoroughly before working with plants. Remove and destroy infected plants promptly, and avoid handling healthy plants after touching infected ones. Rotate away from tobacco and other solanaceous hosts, and control weeds that can harbour the virus. There is no chemical cure; prevention through sanitation and resistance is the only effective strategy.",
+  "url": "https://www.uky.edu/Ag/KPN/kyblue/tobmv.html",
+  "author": "University of Kentucky, College of Agriculture, Food and Environment, Cooperative Extension Service",
+  "date": "2020-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "virus",
+    "tmv",
+    "tobacco",
+    "sanitation",
+    "resistant-varieties",
+    "mechanical-transmission",
+    "uky"
+  ],
+  "metadata": {
+    "class_label": "tobacco mosaic virus",
+    "crop_slug": "tobacco",
+    "disease_slug": "mosaic_virus",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 79
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b0c97e84-0186-5f16-af4a-7f78bf749f46",
+  "category": "treatment",
+  "source": "University of Florida IFAS Extension (EDIS)",
+  "title": "Huanglongbing (Citrus Greening) — Management",
+  "crop": "citrus",
+  "disease": "greening disease",
+  "content": "Huanglongbing (citrus greening), caused by the bacterium Candidatus Liberibacter asiaticus, has no cure; management is integrated and long-term, targeting the Asian citrus psyllid vector and tree health. Plant certified disease-free nursery trees, and where infected trees are found remove them as recommended to reduce inoculum. Control the psyllid vector with an integrated program (monitoring, biological control where effective, and labelled insecticides timed to flushing and psyllid activity), while managing resistance with rotation of insecticide modes of action. Maintain tree health with optimal nutrition and irrigation to extend the productive life of affected trees. Coordinate area-wide with neighbours and follow state or national regulations on movement of plant material, since the disease spreads on infected propagation material and by the vector. No chemical treatment can cure an infected tree.",
+  "url": "https://edis.ifas.ufl.edu/publication/PP332",
+  "author": "University of Florida Institute of Food and Agricultural Sciences (UF/IFAS), EDIS",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "liberibacter",
+    "huanglongbing",
+    "citrus-greening",
+    "vector-control",
+    "psyllid",
+    "tree-health",
+    "ufl"
+  ],
+  "metadata": {
+    "class_label": "citrus greening disease",
+    "crop_slug": "citrus",
+    "disease_slug": "greening_disease",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 31
+  }
+}

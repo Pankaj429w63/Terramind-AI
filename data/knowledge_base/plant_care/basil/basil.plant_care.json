@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "3b32af46-4bb6-526f-806e-f626290baa94",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Basil",
+  "crop": "basil",
+  "disease": null,
+  "content": "Basil is a warm-season annual grown for its aromatic foliage. UC IPM advises choosing a site in full sun with a well-drained, fertile soil, and starting plants from seed or transplants after the soil has warmed and all danger of frost has passed, since basil is injured by cold. Space plants about 8-12 inches apart in rows 12-18 inches apart; closer spacing is used where the crop is cut repeatedly. Basil has a shallow, modest root system, so water regularly and keep the soil evenly moist but never waterlogged, because waterlogged soil quickly causes the root and crown rots to which this crop is prone. Work compost or a balanced fertilizer into the bed before planting and side-dress lightly through the season; avoid excess nitrogen, which produces lush growth, reduces flavour and encourages disease. Basil is largely self-pollinating but attracts bees and other pollinators when allowed to flower, and flowers should generally be removed to keep the plant producing tender leaves. Scout plants weekly for downy mildew, fusarium wilt and for chewing and sucking insects, including aphids and Japanese beetles, examining the underside of leaves where downy mildew first appears as yellowing bounded by veins. Begin harvesting when plants have six to eight true leaves by pinching or cutting stems back to just above a leaf pair, which keeps plants bushy and delays flowering; harvest in the morning and use or refrigerate promptly, because basil leaves blacken after chilling injury and bruise easily.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-basil/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "basil",
+    "herb",
+    "spacing",
+    "downy-mildew",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "basil",
+    "crop_slug": "basil",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

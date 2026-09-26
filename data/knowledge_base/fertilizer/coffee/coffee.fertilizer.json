@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "88e840b9-b06b-5828-88d6-e56f592e7c0d",
+  "category": "fertilizer",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Fertilizer Use and Plant Nutrition for Perennial Tree Crops (FAO)",
+  "crop": "coffee",
+  "disease": null,
+  "content": "Coffee is a perennial tree crop with a nutrient demand that follows the annual cycle of vegetative flushing, flowering and berry fill. Nitrogen supports leaf and shoot growth and the yield of the following season; potassium is heavily involved in berry development, bean size and quality and in the tree's tolerance of drought and disease; phosphorus is important for root development, flowering and fruit set. FAO guidance on fertilizer use for tree crops emphasises that nutrient removal with the harvested crop is substantial and must be replaced to avoid declining yields and quality over the life of the plantation, and that nutrient depletion is a leading cause of declining productivity in ageing coffee stands. Because coffee is grown on a wide range of soils, from acid, high-organic-matter volcanic soils to leached tropical soils, a soil test and tissue analysis should establish the lime requirement and the rates of nitrogen, phosphorus, potassium and, where relevant, magnesium and boron. Applications are usually split across the season to match uptake, applied in a ring around the tree canopy rather than at the trunk, and timed to the onset of rains so that nutrients are moved into the root zone. Mulch, shade-tree litter and recycling of coffee pulp and husk return organic matter and nutrients where crop residues have been properly composted.",
+  "url": "https://www.fao.org/4/w3647e/w3647e03.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "coffee",
+    "potassium",
+    "perennial",
+    "fao",
+    "tree-crop",
+    "nutrient-removal"
+  ],
+  "metadata": {
+    "class_label": "coffee",
+    "crop_slug": "coffee",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

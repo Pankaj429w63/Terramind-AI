@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c8dbe805-a5a6-5d43-9459-a5483b4aed0c",
+  "category": "fertilizer",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+  "crop": "celery",
+  "disease": null,
+  "content": "Celery is a high-value, shallow-rooted vegetable with a long growing season and a large, continuous requirement for nutrients, particularly nitrogen and potassium. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook stresses that at field level adequate fertilizer rates must be combined with irrigation scheduling and crop nutrient-status monitoring — soil tests, leaf analysis and petiole sap testing — to ensure nutrients remain in the root zone and are not leached. In Florida celery production, drip irrigation with fertigation is widely used so that nitrogen and potassium can be applied in split doses through the season as the crop grows; this improves efficiency and reduces leaching losses in sandy soils. Phosphorus is less mobile and is largely applied pre-plant according to soil test. Controlled-release fertilizers and composts can help retain nutrients in the soil while supplying crop needs. Celery is sensitive to nutrient imbalance, and conditions such as blackheart are associated with calcium deficiency, which is aggravated by irregular moisture and high salinity, so attention to water management and soil calcium status is important. Maintain the recommended soil pH for commercial vegetable production and follow published BMPs to protect water quality.",
+  "url": "https://edis.ifas.ufl.edu/publication/SS639",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2021-03-05",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "fertigation",
+    "calcium",
+    "celery",
+    "uf-ifas",
+    "bmp"
+  ],
+  "metadata": {
+    "class_label": "celery",
+    "crop_slug": "celery",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

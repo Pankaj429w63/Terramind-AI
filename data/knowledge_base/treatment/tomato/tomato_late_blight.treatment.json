@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "f1d1ff21-ff3e-5171-a5df-c3be7b3307fd",
+  "category": "treatment",
+  "source": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "title": "Tomato-Potato Late Blight — Management in the Home Garden and Field",
+  "crop": "tomato",
+  "disease": "late blight",
+  "content": "Late blight (Phytophthora infestans) is a fast-moving water-mould disease managed with sanitation, resistant varieties and preventive fungicides. Remove and destroy infected plants and cull piles immediately — do not compost them — and destroy volunteer tomato and potato plants, which harbour the pathogen between crops. Plant late-blight-resistant tomato varieties where available and use certified seed. Keep foliage dry with drip irrigation and stake plants for airflow. In gardens and fields, apply protectant fungicides (multi-site materials such as chlorothalonil or mancozeb where labelled) before infection periods during cool, wet weather, switching to specific products with Phytophthora activity (FRAC group 4 or 40) if the disease is present; rotate modes of action and follow the label. Copper-based products are an option for organic production but provide only partial control.",
+  "url": "https://extension.psu.edu/tomato-potato-late-blight-in-the-home-garden",
+  "author": "Penn State Extension, Department of Plant Pathology & Environmental Microbiology",
+  "date": "2024-07-25",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "oomycete",
+    "phytophthora",
+    "late-blight",
+    "tomato",
+    "sanitation",
+    "fungicide",
+    "psu"
+  ],
+  "metadata": {
+    "class_label": "tomato late blight",
+    "crop_slug": "tomato",
+    "disease_slug": "late_blight",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 82
+  }
+}

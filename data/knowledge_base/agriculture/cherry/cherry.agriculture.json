@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "eede0e38-3c85-5fbd-94a6-df9b23c2e7fc",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Fruit Production and Harvesting — Tree Fruit",
+  "crop": "cherry",
+  "disease": null,
+  "content": "Cherry is a temperate stone fruit grown as both sweet cherries, which are eaten mostly fresh, and tart (sour) cherries, which are mainly processed for pies, juice and preserves. Cherry production is limited to regions with cold winters, moderate summers and adequate chill and, critically, sites that avoid spring frost, because the crop blooms early and the flowers and young fruit are highly vulnerable to frost. Penn State Extension's fruit production guidance stresses that site selection is the first and most important decision, because most fruit crops need plenty of sunlight through the day to produce well, and that orchard soil should be tested and amended before planting since correction afterwards is slow and difficult. The major world producers include Turkey, the United States, Russia, Poland, Ukraine, Iran, Italy and Chile, while in the United States sweet cherries are dominated by Washington, California and Oregon and tart cherries by Michigan and Wisconsin. Sweet cherries require cross-pollination with a compatible polleniser cultivar and are increasingly grown on dwarfing rootstocks in high-density plantings, which Penn State Extension recommends for home and small-scale plantings because rootstocks keep trees manageable for pruning, spraying and harvest and bring them into bearing sooner; tart cherries are frequently self-fruitful. Yield varies widely with type, age, rootstock and region, ranging from a few tonnes per hectare in young or low-density blocks to substantially more in mature, well-managed high-density orchards. As a perennial crop, cherry is not rotated annually; instead, orchard blocks are managed on long cycles, with cover crops and resident grass or legume alleys used to maintain soil health, support machinery and provide habitat for beneficials. Cherry is economically important for fresh export and for the processing industry, and its fruit commands premium prices when quality is high. Climate-adaptation challenges include spring frost, rain-induced fruit cracking, insufficient winter chill and heat stress; principal disease and pest pressures include brown rot, cherry leaf spot, black knot, cherry fruit fly and spotted-wing drosophila.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Jayson K. Harper, Ph.D., Tara Baugher, Ph.D., and Melanie Schupp, Penn State Extension",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cherry",
+    "temperate",
+    "stone-fruit",
+    "frost-risk",
+    "processing",
+    "production"
+  ],
+  "metadata": {
+    "class_label": "cherry",
+    "crop_slug": "cherry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "62b49fd4-6d66-5980-b102-f0b78097606e",
+  "category": "plant care",
+  "source": "University of Arkansas System Division of Agriculture, Cooperative Extension Service",
+  "title": "2025 Arkansas Rice Quick Facts",
+  "crop": "rice",
+  "disease": null,
+  "content": "Rice is grown in flooded or intermittently flooded paddies and its cultural management is organised around establishing a uniform stand and then managing water carefully through the season. Arkansas Cooperative Extension guidance sets out the key culture points. Seed germination requires moisture, oxygen and temperatures above 50 F, and emergence occurs in 5-28 days depending on the environment; plants progress through pre-tillering and tillering, then panicle initiation and differentiation, 50% heading, and finally grain fill to maturity, which takes 30-45 days and is reached at approximately 20% grain moisture. Ideally rice is planted when the soil reaches 60 F at 4 inches depth, with good seed-to-soil contact and seed placed 1/4 to 1 1/2 inches deep; optimum seeding dates run from about April 1 (central Arkansas) or April 10 (northern Arkansas), and drilling at roughly 30 seeds per square foot for varieties and 10 seeds per square foot for hybrids is typical, with seeding rate increased for broadcast or water-seeded methods and for poorer seedbeds. Recommended drill row widths are 4-10 inches, with 7.5 inches most common, and the desired final stand is 12-18 plants per square foot for varieties and 6-10 for hybrids, since stand uniformity matters as much as the count. Water management is central: apply the permanent flood around the 5th leaf or 1st tiller stage, use levee gates high enough to store rainfall but still prevent washouts, and design multiple-inlet rice irrigation for efficiency. Drain the field based on both time and maturity - 25-30 days past 50% heading (25 days for long grain, 30 for medium grain) and two-thirds straw-coloured kernels on silt loam or one-third on clay soils. Scout through the season for weeds, insects and diseases including the rice water weevil, rice stink bug and the stalk and panicle diseases common to the region, and manage nitrogen in two applications (preflood and at late boot) for hybrids or as a preflood or two-way split for varieties. Harvest when the grain has matured and dried, then dry promptly to safe storage moisture, because improper moisture management causes head rice loss and quality reduction.",
+  "url": "https://uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/2025%20Arkansas%20Rice%20Quick%20Facts.pdf",
+  "author": "Jarrod Hardke, Rice Extension Agronomist, and Ralph Mazzanti, Program Associate, Rice Verification, University of Arkansas System Division of Agriculture",
+  "date": "2025-06-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "rice",
+    "seeding-dates",
+    "flood-irrigation",
+    "stand-count",
+    "drainage",
+    "arkansas-extension"
+  ],
+  "metadata": {
+    "class_label": "rice",
+    "crop_slug": "rice",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "b567d9cc-c33c-5cf3-be30-8fd6e946e3be",
+  "category": "treatment",
+  "source": "University of Wisconsin-Madison, Division of Extension",
+  "title": "Angular Leaf Spot of Cucumber (Pseudomonas syringae pv. lachrymans) — Management",
+  "crop": "cucumber",
+  "disease": "angular leaf spot",
+  "content": "Angular leaf spot, a bacterial disease, is managed with clean seed, rotation, resistant varieties and sanitation; copper may provide limited suppression. Use certified disease-free seed and, where recommended, hot-water or chemical seed treatment, because the bacteria are seed-borne. Rotate away from cucurbits for at least two to three years, avoid working in wet foliage, and remove crop residue after harvest. Plant resistant or tolerant cucumber varieties where available. Avoid overhead irrigation, which spreads bacteria in splash droplets and extends leaf wetness. Copper-based sprays can reduce spread when applied preventively but cannot cure infected plants and are subject to local label restrictions.",
+  "url": "https://ipcm.wisc.edu/download/pubs/Vegetable_Cucumber_Angular_Leaf_Spot.pdf",
+  "author": "University of Wisconsin-Madison, Division of Extension, Integrated Pest and Crop Management",
+  "date": "2019-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "bacterial",
+    "pseudomonas",
+    "cucumber",
+    "certified-seed",
+    "rotation",
+    "copper",
+    "wisc"
+  ],
+  "metadata": {
+    "class_label": "cucumber angular leaf spot",
+    "crop_slug": "cucumber",
+    "disease_slug": "angular_leaf_spot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 39
+  }
+}

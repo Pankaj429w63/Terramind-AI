@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "cb7a45cc-c8f0-5ad6-b8d4-68fa60cd2e2c",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Growing Cucumbers in Home Gardens",
+  "crop": "cucumber",
+  "disease": null,
+  "content": "Cucumbers are warm-season vining crops that grow best in warm weather and are damaged by cold. UMN Extension advises starting seeds indoors in late April for transplants, or sowing seed directly in the garden after the soil has warmed, usually in May in Minnesota, and using plastic mulch and row covers to allow earlier planting and to protect plants from cold; cucumbers are among the most cold-sensitive of the common vegetables. Choose a sunny site with a well-drained, fertile soil high in organic matter, and space plants about 12 inches apart in rows 36-60 inches apart, or plant in hills. Cucumbers may be grown on the ground or trained up trellises and fences; vertical training saves space, keeps fruit clean and straight, improves air movement and makes harvest easier. Water regularly and deeply, about an inch per week, keeping moisture even because irregular watering produces bitter, misshapen fruit, and water at the base to keep foliage dry and reduce foliar disease. Cucumbers are heavy feeders: work compost and a balanced fertilizer into the bed before planting and side-dress lightly as vines begin to run, but avoid excessive nitrogen, which produces abundant vine growth and few fruit. Cucumbers bear separate male and female flowers on the same plant and depend on bees for pollination, so avoid insecticide applications during bloom and plant flowers nearby to attract pollinators; parthenocarpic (all-female) types grown under row covers set fruit without pollination. Scout regularly for cucumber beetles, which both feed on plants and transmit bacterial wilt, and for squash bugs, aphids and for powdery and downy mildew on the foliage. Harvest slicing cucumbers when they are 6-8 inches long, firm and uniformly green, and pickling types at 2-4 inches, harvesting every few days to keep vines productive; do not allow fruit to over-mature, and store cucumbers at about 50 F rather than at refrigerator temperatures, which cause chilling injury.",
+  "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-cucumbers",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cucumber",
+    "trellis",
+    "pollination",
+    "cucumber-beetle",
+    "harvest",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "cucumber",
+    "crop_slug": "cucumber",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

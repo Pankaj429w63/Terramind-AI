@@ -1,4 +1,7 @@
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8001";
+// In production, leave this empty and let Next.js rewrite same-origin API
+// requests to TERRAMIND_BACKEND_API_URL. Local development can set the public
+// override to the localhost FastAPI server.
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 export async function apiRequest<T>(path: string, init?: RequestInit): Promise<T> {
   let token: string | undefined;

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "eaeb38dc-d630-5db1-8c77-fa857229d8b9",
+  "category": "treatment",
+  "source": "Crop Protection Network",
+  "title": "Common Rust of Corn — Management",
+  "crop": "corn",
+  "disease": "rust",
+  "content": "Common rust (Puccinia sorghi) is managed primarily with resistant hybrids and, when necessary, fungicides. Plant hybrids with good common-rust resistance; resistant hybrids rarely require a fungicide. Scout from mid-season, because rust can develop rapidly under cool, humid conditions, and treat when rust is detected early on a susceptible hybrid and weather is favourable for continued spread. Labelled fungicides (FRAC group 3 DMI, group 7 SDHI and group 11 QoI products with corn-rust activity) applied at the recommended growth stage provide control; rotate modes of action to slow resistance. Follow the label for rate, timing and pre-harvest interval. Southern rust, a more aggressive species present in warmer regions, follows the same management principles but requires more vigilant scouting.",
+  "url": "https://cropprotectionnetwork.org/publications/common-rust-of-corn",
+  "author": "Crop Protection Network (CPN), a collaboration of U.S. land-grant universities",
+  "date": "2020-06-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "puccinia",
+    "rust",
+    "corn",
+    "resistant-hybrids",
+    "fungicide",
+    "cpn"
+  ],
+  "metadata": {
+    "class_label": "corn rust",
+    "crop_slug": "corn",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 37
+  }
+}

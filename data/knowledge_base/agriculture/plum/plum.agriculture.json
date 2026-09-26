@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d3d00fd5-ae56-5e4e-bde7-0e8690c2ec7e",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Fruit Production and Harvesting — Tree Fruit and Stone Fruit",
+  "crop": "plum",
+  "disease": null,
+  "content": "Plum and prune are temperate stone fruits grown for fresh market, drying and processing, and they are important both as a fresh fruit and as a dried commodity in world trade. Plums are grouped into Japanese types, which are generally larger, softer and suited to fresh market, and European types, which are firmer and are the principal source of prunes and processed products. Production is concentrated in regions with adequate winter chilling and moderate summers: the leading world producers include China, Romania, Serbia, the United States, Turkey, Italy, Spain and Chile, and within the United States commercial plum production is dominated by California, with additional production in Michigan, Oregon, Washington and the Pacific Northwest for fresh and processed markets. Penn State Extension's fruit production guidance stresses that site selection and pre-plant soil testing are decisive, because most fruit crops need plenty of sunlight through the day to produce well and because established trees are difficult to correct. Penn State Extension describes pruning and thinning as the central crop-management practices for tree fruit: fruit trees often set more fruit than they can support, and leaving too much fruit weakens the tree and makes it more susceptible to pests, so thinning improves fruit size, reduces disease spread and promotes return bloom, while pruning develops the desired tree shape, improves air circulation and increases produce quality. Yields vary by type, region, age and management, commonly reaching on the order of 10-25 tonnes per hectare in mature, well-managed orchards. As a perennial crop, plum is not rotated annually; instead orchard blocks are managed on long cycles with cover crops and grass or legume alleys supporting soil health. Production risks include black knot, brown rot, bacterial spot and plum curculio, and climate adaptation centres on cultivar choice matched to local chill, frost avoidance and irrigation.",
+  "url": "https://extension.psu.edu/forage-and-food-crops/fruit/production-and-harvesting",
+  "author": "Jayson K. Harper, Ph.D., Tara Baugher, Ph.D., and Melanie Schupp, Penn State Extension",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "plum",
+    "stone-fruit",
+    "prune",
+    "thinning",
+    "production",
+    "processing"
+  ],
+  "metadata": {
+    "class_label": "plum",
+    "crop_slug": "plum",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

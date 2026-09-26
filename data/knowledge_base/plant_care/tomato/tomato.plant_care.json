@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "e296668d-8ab3-5f49-83f0-1ba6870053a9",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Tomato",
+  "crop": "tomato",
+  "disease": null,
+  "content": "Tomatoes are warm-season fruiting vegetables and are the most commonly grown home-garden crop, but they require warmth and careful water management to perform well. UC IPM advises planting in full sun on a well-drained, fertile soil high in organic matter, and setting transplants only after the soil has warmed thoroughly and all danger of frost has passed, since tomatoes are injured by cold and set poorly in cool weather; in cool coastal areas choose early, cool-tolerant varieties. Space plants about 2-3 feet apart in rows 3-4 feet apart, and train or stake them: staking or caging keeps fruit and foliage off the ground, improves air movement, reduces fruit rots and makes harvest easier, while allowing plants to sprawl invites disease and fruit rot. Water deeply and evenly, wetting the soil rather than the foliage, and maintain consistent moisture because irregular supply — especially alternating drought and heavy water — is the main cause of blossom-end rot, a calcium-related disorder of the fruit; drip irrigation with mulch is the most reliable system for even moisture and dry foliage. Tomatoes are heavy feeders: work compost and a balanced fertilizer into the bed before planting and side-dress after the first fruit sets, avoiding excess nitrogen, which produces large vines and few fruit. Tomatoes self-pollinate within each flower, and fruit set is poor when day temperatures exceed about 90 F or night temperatures are very warm or very cool. Scout weekly for hornworms, fruitworms, aphids, whiteflies and spider mites, and for the fungal and bacterial diseases of foliage and fruit that dominate tomato production, removing affected leaves and fruit promptly. Harvest fruit when it is fully coloured and slightly soft, ripening fruit on the vine for best flavour, or pick at the breaker stage and ripen indoors at room temperature (not in the refrigerator, which damages flavour and texture) when birds or splitting are a problem; store mature fruit cool but not cold.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-tomato/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "tomato",
+    "staking",
+    "blossom-end-rot",
+    "fruit-set",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "tomato",
+    "crop_slug": "tomato",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

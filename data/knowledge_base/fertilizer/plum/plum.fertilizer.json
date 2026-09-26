@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9f0009bb-82bd-5f9f-9455-738b0c19e9fa",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Nutritional Requirements of Stone Fruit in Home Fruit Plantings",
+  "crop": "plum",
+  "disease": null,
+  "content": "Plum is managed with the same simple stone-fruit programme Penn State Extension recommends for peach and cherry. Shortly after planting, apply 8 ounces of 10-10-10 per plant, taking care never to place fertilizer in the planting hole. In following years, broadcast 1/2 pound of 10-10-10 under each tree in the early spring and increase the application by another 1/2 pound each year, up to a maximum of 5 pounds per tree regardless of age. Maintain soil pH at 6.0-6.5 and never fertilize after July 15, because late nitrogen produces soft growth that fails to harden off and is damaged by winter cold. Established stone fruit trees, including plum, generally require only modest inputs, and over-fertilisation is a more frequent error than under-fertilisation: excessive nitrogen encourages excessive vegetative growth, shades fruit, delays maturity, reduces fruit colour and quality and increases susceptibility to some diseases. Judge nitrogen status by annual terminal shoot growth and by tree vigour rather than by applying a fixed annual amount, and have the soil tested before planting to establish the lime requirement and the adequacy of phosphorus and potassium. Japanese and European plums differ in disease susceptibility but share these basic nutritional requirements.",
+  "url": "https://extension.psu.edu/nutritional-requirements-of-stone-fruit-in-home-fruit-plantings/",
+  "author": "Daniel Weber, Ph.D., Extension Educator, Horticulture, Penn State Extension",
+  "date": "2023-06-21",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "plum",
+    "stone-fruit",
+    "10-10-10",
+    "nitrogen",
+    "soil-ph",
+    "extension"
+  ],
+  "metadata": {
+    "class_label": "plum",
+    "crop_slug": "plum",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

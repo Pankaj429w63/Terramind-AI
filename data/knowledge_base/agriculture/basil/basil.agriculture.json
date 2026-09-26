@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "31a23d5d-738d-5b78-aca8-ed56a96e51cf",
+  "category": "agriculture",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Basil — Gardening Solutions",
+  "crop": "basil",
+  "disease": null,
+  "content": "Basil is a warm-season annual culinary herb in the mint family, grown both for fresh-market sales and for processing, and it occupies a fast-turnover niche in vegetable and herb production. It is native to tropical Asia and produced widely in warm, frost-free conditions under field culture, in high tunnels and in greenhouses, with the United States, Italy, Mexico, India and Egypt among the significant growing regions; in the United States basil is an important fresh-market herb and is also grown for pesto and dried herb products. Basil has a short production cycle — crops can be harvested only 30-60 days from transplanting and fields are often planted, cut and replanted or succession-sown through the frost-free season to maintain a steady supply, which makes it a good candidate for rotation with other short-season vegetables. UF/IFAS Gardening Solutions notes that basil grows best in full sun in rich, moist, well-drained soil and is best planted in the garden after the last frost, with pinch-pruning to keep plants bushy and productive. Typical fresh basil yields run on the order of several tonnes per hectare per cutting over a season, with high tunnel and greenhouse production achieving higher and more consistent yields and better leaf quality because the crop is protected from rain, wind and cold. Basil fits well into vegetable rotations and benefits from a preceding legume or a well-manured crop, and because it is harvested repeatedly for foliage it is a heavy nitrogen user; cover-cropping with grasses and legumes before planting helps build organic matter and manage nitrogen. Its production is economically attractive to small farms because the value per unit area is high, though the crop is perishable and requires careful post-harvest handling and rapid cooling. The principal production risks are downy mildew, which can devastate crops and is strongly weather-driven, and root and crown rots in poorly drained or overwatered soils; cultivar resistance to downy mildew has therefore become central to commercial variety choice, and climate adaptation focuses on protected culture and improved varieties.",
+  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/basil/",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "basil",
+    "herb",
+    "fresh-market",
+    "downy-mildew",
+    "protected-culture",
+    "economics"
+  ],
+  "metadata": {
+    "class_label": "basil",
+    "crop_slug": "basil",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

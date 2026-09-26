@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c21b2f37-00dc-5396-9216-3db0f173f8d1",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Broccoli",
+  "crop": "broccoli",
+  "disease": null,
+  "content": "Broccoli is a cool-season cole crop that produces its best heads in cool weather and turns bitter or bolts when it matures in heat. UC IPM advises planting in full sun on a well-drained, fertile soil well supplied with organic matter, and setting transplants or sowing seed so that the crop matures before hot weather; in mild coastal areas broccoli can be grown almost year-round, while inland plantings are best in spring and autumn. Space plants about 12-18 inches apart in rows 24-36 inches apart, and water regularly to keep the soil evenly moist, because moisture stress reduces head size and quality; drip or furrow irrigation keeps foliage dry and reduces disease. Broccoli has a high nitrogen requirement and responds to a fertile soil with added compost or a balanced fertilizer before planting plus one or two side-dressings during growth; adequate phosphorus and potassium from a soil test support strong head development, and boron should be adequate because its shortage causes hollow stem. Rotate cole crops away from other brassicas to reduce soil-borne disease including clubroot, and maintain pH near 6.0-6.8, which both improves nutrient availability and suppresses clubroot. Scout weekly for cabbage aphid, cabbageworm caterpillars, flea beetles and diamondback moth, checking the growing point and the undersides of leaves where aphids cluster. Harvest the central head while buds are tight, deep green and about 4-8 inches across and before any yellow flowers open, cutting with several inches of stalk; side shoots then produce smaller secondary heads. Cool harvested heads quickly after cutting and store near 32 F and high humidity to preserve quality and vitamin content.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-broccoli/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "broccoli",
+    "cool-season",
+    "spacing",
+    "nitrogen",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "broccoli",
+    "crop_slug": "broccoli",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

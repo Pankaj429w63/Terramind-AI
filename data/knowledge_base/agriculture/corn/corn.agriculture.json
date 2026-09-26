@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "48611f34-e55c-5c3d-a78f-6b9c7884a8f9",
+  "category": "agriculture",
+  "source": "USDA Economic Research Service (United States Department of Agriculture)",
+  "title": "Crops — Corn and Other Feed Grains",
+  "crop": "corn",
+  "disease": null,
+  "content": "Corn (maize) is the largest crop by volume in the United States and one of the most important cereal crops in the world, used for animal feed, food, ethanol and industrial products, and it dominates the agricultural landscape of the U.S. Midwest. USDA's Economic Research Service notes that the U.S. feed grain sector — corn, sorghum, barley and oats — is the largest segment of U.S. field crops, representing nearly one-third of all cash receipts for field and miscellaneous crops, nearly one-third of area planted to principal crops, and about one-tenth of U.S. agricultural export value, and that corn's use as an ethanol feedstock has reshaped U.S. feed-grain demand and markets. Corn is a warm-season crop adapted to a wide range of temperate and subtropical environments, and in the United States the leading producing states form the Corn Belt — Iowa, Illinois, Nebraska, Minnesota, Indiana, Kansas, Missouri and South Dakota — with additional production in the Great Lakes, Plains and eastern states; globally the leading producers are the United States, China, Brazil, the European Union, Argentina, Ukraine and India. Corn production is highly concentrated in rainfed regions that receive adequate summer rainfall, with irrigation important in areas such as Nebraska and Kansas, and yields vary widely with region, hybrid and management: irrigated and high-yield rainfed areas in the U.S. Corn Belt commonly reach on the order of 11-13 tonnes per hectare, while average global yields are much lower. Corn is an outstanding rotation partner and is almost always grown in rotation with soybean, which supplies nitrogen by fixation and breaks pest and disease cycles; corn ground is also widely planted to cereal rye and other cover crops over winter to protect soil and reduce erosion and nitrate loss. Corn is economically central to U.S. agriculture and to the economies of producing regions, underpinning the livestock, ethanol and food industries, and it is also a major export commodity for the United States, Brazil, Argentina and Ukraine. Climate-adaptation pressures include drought, heat during pollination (which sharply reduces yield), changes in growing-season length and increasing rainfall extremes; principal pest and disease pressures include the European corn borer, corn rootworm, corn earworm, and foliar and ear diseases such as grey leaf spot and mycotoxin-producing ear rots.",
+  "url": "https://www.ers.usda.gov/topics/crops",
+  "author": "USDA Economic Research Service (United States Department of Agriculture)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "corn",
+    "maize",
+    "corn-belt",
+    "soybean-rotation",
+    "ethanol",
+    "usda-ers"
+  ],
+  "metadata": {
+    "class_label": "corn",
+    "crop_slug": "corn",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "f112c16e-efde-5458-aaf4-dfdeb7bb2fce",
+  "category": "plant care",
+  "source": "University of California Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Cultural Tips for Growing Carrots",
+  "crop": "carrot",
+  "disease": null,
+  "content": "Carrots are cool-season root crops that need a deep, loose, stone-free soil to produce long, straight roots; heavy or compacted ground causes forked and stunted carrots. UC IPM advises preparing the bed to a fine tilth by double-digging and working in organic matter, and sowing seed directly where the crop is to grow, because carrots transplant poorly. Sow seed in early spring or late summer for autumn harvest, planting thinly and covering lightly, and keep the seedbed moist with frequent light watering until seedlings emerge; carrots germinate slowly and a crusted surface prevents emergence. Thin seedlings to stand about 2-4 inches apart in rows 12-18 inches apart, because crowded carrots remain small and misshapen. Maintain even moisture through the season, because fluctuating water causes roots to split, and keep the soil surface covered with a light mulch to conserve moisture and moderate soil temperature. Carrots benefit from a soil with adequate potassium for root quality and adequate but not excessive nitrogen, since too much nitrogen produces large tops and small roots and can cause branching; avoid fresh manure, which can also cause forking and hairy roots. Scout through the season for carrot rust fly and for foliar disease, and watch for the dark, sunken boron-deficiency disorder in the root on sandy soils. Harvest when roots reach the desired size, pulling a test root to check, and harvest before the roots become over-mature and woody or split; a light frost improves flavour. Twist off the tops immediately, leaving a short stub, and store roots near 32 F and high humidity, since warm storage rapidly reduces quality.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-carrot/",
+  "author": "University of California Statewide IPM Program (UC ANR)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "carrot",
+    "root-crop",
+    "thinning",
+    "soil-tilth",
+    "harvest",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "carrot",
+    "crop_slug": "carrot",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

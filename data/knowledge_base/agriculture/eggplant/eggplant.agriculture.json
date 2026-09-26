@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "379e3aab-7cd6-5cd7-aa3b-5389e2a10223",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 8. Eggplant Production (Vegetable Production Handbook of Florida)",
+  "crop": "eggplant",
+  "disease": null,
+  "content": "Eggplant is a warm-season solanaceous fruit vegetable grown for fresh market and, to a lesser extent, processing, and it is produced throughout the tropical and temperate world wherever a long, warm season is available. It is more heat-tolerant than tomato or pepper and is well suited to warm regions, with major world producers including China, India, Egypt, Turkey, Iran, Italy and Indonesia; in the United States commercial production is concentrated in Florida, California, Georgia, New Jersey and Texas, with Florida and other southern states supplying winter and spring windows. The Vegetable Production Handbook gives Florida's recommended eggplant production practices, including cultivar choice, planting dates and the pesticide options approved for the state. Eggplant grows best on well-drained, fertile soil with adequate organic matter and is very commonly produced on raised, fumigated beds with plastic mulch and drip irrigation, which warms the soil, controls moisture and reduces fruit rot; the crop is grown from transplants and requires a long frost-free season to bear its full yield. Yields vary with system and region, commonly on the order of 20-40 tonnes per hectare in well-managed field production, and the crop is economically important as a fresh-market vegetable with strong demand in Mediterranean, Middle Eastern, Asian and specialty markets. As a solanaceous crop, eggplant should be rotated away from tomato, pepper and potato for at least two to three years to reduce soil-borne diseases including verticillium wilt and to break pest cycles, and it rotates well with cereals, legumes and brassicas; cover crops build organic matter. Climate adaptation relies on warm-season timing, plasticulture and irrigation, and the principal pest pressures include flea beetles, Colorado potato beetle, aphids, spider mites and eggplant fruit and shoot borer.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV124",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "eggplant",
+    "solanaceous",
+    "heat-loving",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "eggplant",
+    "crop_slug": "eggplant",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

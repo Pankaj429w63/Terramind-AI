@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "96615309-e2d7-5ac7-ad86-e97af13cf172",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 16. Strawberry Production (Vegetation Production Handbook of Florida)",
+  "crop": "strawberry",
+  "disease": null,
+  "content": "Strawberry is a high-value small fruit grown for fresh market and processing and is one of the most economically important berry crops in the world, with production concentrated in regions with mild winters and long, warm spring seasons. Production systems differ by region: in California, which dominates U.S. and much of world production, strawberries are grown as an annual hill crop using transplants on raised beds with drip irrigation and plastic mulch, while Florida produces a winter crop under the same intensive system that supplies fresh berries to eastern markets during winter and spring. The leading world producers include China, the United States, Egypt, Mexico, Turkey, Spain and Poland, and in the United States California and Florida account for the large majority of production, with additional acreage in the Pacific Northwest, the Midwest and the Northeast for summer and processing crops. Strawberry is produced as a perennial or short-cycle crop depending on system: annual hill production in California and Florida uses fresh-dug plants set on fumigated, plastic-mulched beds, while matted-row systems, more common in cooler regions, maintain a perennial planting for several seasons. Yields vary enormously with system and region, commonly reaching on the order of 30-70 tonnes per hectare in intensive California and Florida hill culture but far less in matted-row systems. Strawberry is grown on high-organic-matter, well-drained soils and is very dependent on precise water and nutrient management because the plants are shallow-rooted and the fruit is perishable; crop rotation and fumigation are used between cycles to manage soil-borne disease, and cover crops are used to improve soil between strawberry crops. The crop is economically important as a premium fresh-market fruit and as a processed product, and its production risks include botrytis, anthracnose, phytophthora crown rot, two-spotted spider mite, thrips, aphids and spotted-wing drosophila, with adaptation centred on cultivar selection and protected culture.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV134",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "strawberry",
+    "annual-hill",
+    "plastic-mulch",
+    "production",
+    "botrytis",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "strawberry",
+    "crop_slug": "strawberry",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

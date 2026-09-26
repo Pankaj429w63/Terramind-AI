@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d585e97d-c830-5534-a2ad-6d1e38d926aa",
+  "category": "agriculture",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Tropical Root and Tuber Crops — Ginger Production and Utilisation",
+  "crop": "ginger",
+  "disease": null,
+  "content": "Ginger is a herbaceous perennial grown as an annual crop for its aromatic rhizome and is produced throughout the humid tropics and subtropics, where it is an important cash crop and a widely used spice and medicinal plant. Production is concentrated in warm, humid regions with well-distributed rainfall: the major producers include India, China, Nigeria, Nepal, Indonesia, Thailand and, in the Americas, Brazil, Peru and Jamaica, and ginger is traded internationally in fresh, dried, powdered, pickled and essential-oil forms. Ginger is propagated vegetatively from seed rhizomes rather than true seed, and this makes clean, disease-free planting material a central production requirement; the crop requires a long, warm, frost-free growing season, typically spanning most of a year, and is grown on well-drained, fertile soils high in organic matter, usually on raised beds or ridges with heavy mulching. Yields vary widely with system, cultivar and region, commonly on the order of 15-30 tonnes per hectare of fresh rhizome under good management but considerably less in low-input systems. Ginger fits well into tropical rotations and mixed cropping systems, where it is often grown with other cash and food crops, and the long fallow periods traditionally used in ginger-growing areas are important for managing soil-borne disease and soil fertility, while mulches and cover crops protect soil on sloping ground and return organic matter. The crop is economically significant as a smallholder cash crop, a source of export revenue and a widely traded commodity, and its production risks include bacterial wilt, rhizome rots, fusarium yellows, nematodes and the shoot borer, all of which are worsened by poor drainage and by reusing infected seed, so adaptation centres on clean seed, rotation and drainage.",
+  "url": "https://www.fao.org/4/t0207e/T0207E01.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "ginger",
+    "rhizome",
+    "tropical",
+    "smallholder",
+    "rotation",
+    "fao"
+  ],
+  "metadata": {
+    "class_label": "ginger",
+    "crop_slug": "ginger",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

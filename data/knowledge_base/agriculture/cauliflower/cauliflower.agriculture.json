@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "8661e37f-7e55-5565-a772-61fda9f9faaa",
+  "category": "agriculture",
+  "source": "UF/IFAS Extension (University of Florida, Electronic Data Information Source)",
+  "title": "Chapter 6. Cole Crop Production (Vegetable Production Handbook of Florida)",
+  "crop": "cauliflower",
+  "disease": null,
+  "content": "Cauliflower is a cool-season cole crop grown for its edible curd and is the most exacting and least widely adapted of the commercially important brassicas. Production is concentrated in regions with long, cool, evenly moist growing seasons, and because the crop is sensitive to heat it is grown mostly in coastal and temperate areas: the leading producing countries include China, India, Spain, Mexico, Italy, France and the United States, while within the United States California dominates production with additional acreage in Arizona, New York and other states and winter production in Florida and Texas. In Florida, cauliflower is grown as a winter cole crop on sandy soils, and the Vegetable Production Handbook gives the crop's planting dates, recommended cultivars and approved pesticide options. Cauliflower is grown from transplants on well-prepared, fertile, well-drained beds with drip irrigation, and it has a high nutrient and water demand and no tolerance for stress: nutrient or moisture shortage at curd initiation causes buttoning and small, poor-quality curds, and the curd must be protected from sunlight by tying the wrapper leaves over the head. Yields are lower and more variable than cabbage or broccoli, commonly on the order of 10-30 tonnes per hectare, but the crop is high-value in fresh markets and increasingly important as a component of the processed and frozen vegetable trade and as a low-carbohydrate food. As a cole crop, cauliflower must be rotated away from other brassicas to manage clubroot and other soil-borne diseases, and it rotates well with cereals, legumes and non-brassica vegetables; cover cropping supports soil health and reduces erosion. Climate adaptation is essentially a matter of timing to cool seasons; principal pest pressures include caterpillars, aphids, flea beetles and root maggots.",
+  "url": "https://edis.ifas.ufl.edu/publication/CV122",
+  "author": "UF/IFAS Extension (University of Florida)",
+  "date": "2023-08-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "cauliflower",
+    "cole-crop",
+    "cool-season",
+    "rotation",
+    "production",
+    "uf-ifas"
+  ],
+  "metadata": {
+    "class_label": "cauliflower",
+    "crop_slug": "cauliflower",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

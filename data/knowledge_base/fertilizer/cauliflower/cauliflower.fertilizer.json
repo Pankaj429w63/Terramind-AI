@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "9b074344-77e7-5808-9e7a-cc10646dffc0",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Ecological Disease Management and Organic Fertility for Brassica Crops",
+  "crop": "cauliflower",
+  "disease": null,
+  "content": "Cauliflower is the most demanding of the cole crops and is less forgiving than cabbage or broccoli of nutrient stress. Penn State Extension guidance for brassicas recommends a well-drained, fertile soil with pH around 6.0-6.8; liming into this range improves nutrient availability and reduces clubroot risk. Because cauliflower has a shallow, relatively inefficient root system, nitrogen must be available continuously and is best supplied through a pre-plant application plus one or two side-dressings during vegetative growth, using compost, composted manure or soluble nitrogen sources as appropriate to the system. Any interruption in nitrogen supply, particularly just before curd initiation and development, causes small 'button' curds or ricey, poor-quality heads, and this crop also performs poorly under drought stress, so even moisture is essential. Phosphorus is applied before planting based on soil test, and potassium is needed in quantity for good curd quality. Boron deficiency can cause hollow stem and brown curd, and molybdenum deficiency on acid soils causes whiptail, so pH correction and trace-element status should be confirmed by soil or tissue test. Because cauliflower has a long season, plan a fertility programme that maintains supply through curd initiation and development.",
+  "url": "https://extension.psu.edu/ecological-disease-management/",
+  "author": "Penn State Extension (College of Agricultural Sciences)",
+  "date": "2023-07-20",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "boron",
+    "molybdenum",
+    "cauliflower",
+    "brassica",
+    "curd"
+  ],
+  "metadata": {
+    "class_label": "cauliflower",
+    "crop_slug": "cauliflower",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

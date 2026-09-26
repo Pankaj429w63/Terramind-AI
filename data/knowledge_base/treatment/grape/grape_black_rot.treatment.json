@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "d2887a2a-f18c-5bf2-bc6f-970c6dd2b76c",
+  "category": "treatment",
+  "source": "Cornell University, New York State Integrated Pest Management Program",
+  "title": "Grape Black Rot — Disease Management",
+  "crop": "grape",
+  "disease": "black rot",
+  "content": "Grape black rot (Guignardia bidwellii) is managed with vineyard sanitation, canopy management and a protectant fungicide program. The primary tactic is sanitation: remove and destroy mummified berries and infected canes during dormant pruning, and destroy or bury fallen leaves and mummies so they cannot release spores the following spring. Open the canopy (shoot positioning, leaf removal around the fruit zone, and balanced vigour) to speed drying and reduce leaf wetness. Begin fungicide applications early, from bud break through the pre-bloom and bloom period when the fruit is most susceptible, using multi-site protectants alternated with single-site FRAC-group materials (group 3, 7, 11) and rotating modes of action. Follow the label for rate, timing, and pre-harvest interval.",
+  "url": "https://nysipm.cornell.edu/agriculture/fruits/grapes/diseases/grape-black-rot/",
+  "author": "Cornell University, New York State Integrated Pest Management Program",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "guignardia",
+    "black-rot",
+    "grape",
+    "sanitation",
+    "canopy-management",
+    "fungicide",
+    "nysipm"
+  ],
+  "metadata": {
+    "class_label": "grape black rot",
+    "crop_slug": "grape",
+    "disease_slug": "black_rot",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 51
+  }
+}

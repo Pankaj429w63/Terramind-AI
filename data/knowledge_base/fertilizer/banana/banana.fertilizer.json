@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "1be06163-3219-5797-80af-159c0f95cb80",
+  "category": "fertilizer",
+  "source": "Food and Agriculture Organization of the United Nations (FAO)",
+  "title": "Banana and Plantain Nutrition and Nutrient Removal (Tropical Feeds)",
+  "crop": "banana",
+  "disease": null,
+  "content": "Banana and plantain are heavy, continuously feeding crops that remove large quantities of nutrients with every harvested bunch. FAO compositional data for banana plants show that of a total plant dry matter of about 7.7 kg, the fruit accounts for roughly 3.0 kg (39 percent), the pseudostem 4.2 kg (54.5 percent) and leaves 0.5 kg, which illustrates how much biomass and therefore nutrients leave the field at harvest and must be replaced. Potassium is the dominant nutrient in banana nutrition: it governs bunch size, finger filling, pseudostem strength and resistance to lodging, and K removal is typically several times that of phosphorus. Nitrogen drives vegetative growth, leaf production and ratoon vigour, while phosphorus is needed for root development, flowering and fruit set. Apply fertilizer in split doses placed in a ring or band around the mat rather than against the corm, and time applications to periods of active growth and adequate soil moisture; irrigation or rainfall is required to move nutrients into the root zone. Maintain soil pH near 6.0-7.0 for maximum nutrient availability. Recycling pseudostems, leaves and corms back into the mat, using mulch and applying animal manure or compost, returns substantial K and organic matter and reduces mineral fertilizer requirements. Confirm rates with a soil and leaf analysis for local conditions.",
+  "url": "https://www.fao.org/4/w3647e/w3647e03.htm",
+  "author": "Food and Agriculture Organization of the United Nations (FAO)",
+  "date": "2015-11-04",
+  "region": "global",
+  "reliability": "government",
+  "language": "en",
+  "tags": [
+    "potassium",
+    "nitrogen",
+    "banana",
+    "tropical",
+    "fao",
+    "nutrient-removal"
+  ],
+  "metadata": {
+    "class_label": "banana",
+    "crop_slug": "banana",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c8c37654-46cd-5823-ac65-dcd32e420ec5",
+  "category": "plant care",
+  "source": "University of Minnesota Extension (College of Food, Agricultural and Natural Resource Sciences)",
+  "title": "Homemade Maple Syrup",
+  "crop": "maple",
+  "disease": null,
+  "content": "Maples are used for shade, ornamental and syrup production, and their care depends on the species and purpose. UMN Extension notes that four species of maple can be used for sap production in Minnesota, with sugar maple the popular choice for its sweet sap. For syrup production, complete tapping by mid-February in central and southern Minnesota and by the second week of March in the northern part of the state to catch the earliest sap runs, and tap only trees with a trunk diameter of at least 10 inches measured at 4 feet above the ground, with no more than two taps in any tree greater than 20 inches in diameter; for best sap production a tree should have a short trunk topped with abundant foliage, and the key to good grove management is cutting practices that favour the development and retention of such trees. Select a spot on the trunk 2-4 feet above the ground with sound wood, drill a hole 2 inches into the wood slanting slightly upward so sap can flow downward, lightly tap in the collection spout, and attach a bucket, plastic bag or tubing line, covering open buckets so rain and debris stay out. Sap does not flow every day: it runs when there is a rapid warming trend in early to mid-morning following a night when the temperature drops below freezing, and a single taphole normally produces between one quart and one gallon of sap per flow period, accumulating 10-12 gallons in a season. More broadly, plant and maintain maples with attention to site and soil, because many maples perform poorly on alkaline soil or in poorly drained, compacted ground; keep mulch clear of the trunk and protect the shallow root zone from disturbance.",
+  "url": "https://extension.umn.edu/gathering-wild-grown-plants-and-fungi/homemade-maple-syrup",
+  "author": "University of Minnesota Extension (CFANS)",
+  "date": "2023-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "maple",
+    "tapping",
+    "sap",
+    "sugar-maple",
+    "grove-management",
+    "umn"
+  ],
+  "metadata": {
+    "class_label": "maple",
+    "crop_slug": "maple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

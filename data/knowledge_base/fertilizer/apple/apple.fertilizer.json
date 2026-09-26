@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "5ba13e3c-0612-5d0d-be0e-bb54bb4c05c1",
+  "category": "fertilizer",
+  "source": "Penn State Extension (College of Agricultural Sciences)",
+  "title": "Nutritional Requirements of Apples in Home Fruit Plantings",
+  "crop": "apple",
+  "disease": null,
+  "content": "Apple nutrition is driven mainly by nitrogen, and the best guide to N status is annual shoot growth rather than a fixed prescription. Penn State Extension recommends broadcasting 8 ounces of 10-10-10 over a 2-foot circle about one month after planting, keeping fertilizer 6 inches away from the trunk and never placing fertilizer in the planting hole. In June of the planting year, broadcast a second 8 ounces of 10-10-10 around the tree, then increase the amount applied by 0.25 pound per year up to a maintenance ceiling of about 2.5 pounds per tree for a dwarf tree, 5 pounds for a semidwarf and 10 pounds for a standard tree. Nitrogen is normally the only nutrient that needs annual addition once trees are mature; phosphorus and potassium matter most while the tree is young. Maintain soil pH between 6.0 and 6.5, correcting with lime or sulfur based on a soil test. Judge N sufficiency by terminal growth: non-bearing young trees should extend 12-18 inches per season and bearing trees 8-12 inches. Excess nitrogen drives lush, succulent growth that is more susceptible to fire blight and reduces fruit quality, so back off if growth exceeds these rates. Have soil and leaf tissue analysed periodically to confirm phosphorus, potassium, calcium, magnesium, boron and zinc are adequate.",
+  "url": "https://extension.psu.edu/nutritional-requirements-of-apples-in-home-fruit-plantings/",
+  "author": "Daniel Weber, Ph.D., Extension Educator, Horticulture, Penn State Extension",
+  "date": "2023-06-21",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "nitrogen",
+    "10-10-10",
+    "soil-ph",
+    "apple",
+    "extension",
+    "penn-state"
+  ],
+  "metadata": {
+    "class_label": "apple",
+    "crop_slug": "apple",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

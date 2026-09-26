@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "a842d97c-ef85-51fd-8efc-2d0171baace8",
+  "category": "treatment",
+  "source": "University of California Agriculture and Natural Resources, Statewide IPM Program",
+  "title": "Rust of Garlic and Onion — Pest Management Guidelines",
+  "crop": "garlic",
+  "disease": "rust",
+  "content": "Garlic rust (Puccinia allii) is managed with sanitation, rotation, resistant varieties and protectant fungicides. Remove and destroy infected crop residue and volunteer alliums that can carry the fungus between crops, and rotate away from allium hosts. Plant varieties with rust tolerance where available, and provide good air movement. Scout regularly, because rust can spread rapidly under cool, moist conditions; where the disease is detected early, apply labelled fungicides (multi-site protectants and single-site FRAC-group materials with rust activity) on a protectant schedule and rotate modes of action. Follow the label for rate, interval and pre-harvest interval for garlic.",
+  "url": "https://ipm.ucanr.edu/agriculture/garlic/rust/",
+  "author": "University of California Agriculture and Natural Resources (UC ANR) Statewide IPM Program",
+  "date": "2022-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "puccinia",
+    "rust",
+    "garlic",
+    "sanitation",
+    "fungicide",
+    "uc-ipm"
+  ],
+  "metadata": {
+    "class_label": "garlic rust",
+    "crop_slug": "garlic",
+    "disease_slug": "rust",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 47
+  }
+}

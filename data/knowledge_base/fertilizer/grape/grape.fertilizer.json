@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "226e8c83-1fc9-5344-8cab-f7e52a67356e",
+  "category": "fertilizer",
+  "source": "UC Statewide IPM Program (University of California Agriculture and Natural Resources)",
+  "title": "Grape Fertilization Guide",
+  "crop": "grape",
+  "disease": null,
+  "content": "UC IPM's grape fertilization guidance starts from an important principle: adequate nutrition is necessary for high-quality grapes, but excessive fertilization and overly rich soil contribute to excessive vine vigour, which can reduce fruit set, fruit quality or both. Because of this, fertilizer may rarely be needed on fertile sites, and the table provided serves as a guide only. Nitrogen is the nutrient most often applied: roughly 1 pound of ammonium sulfate, 0.75 pound of ammonium nitrate or 0.5 pound of urea per vine, applied at berry set (when berries reach about 0.25 inch diameter) or following bloom, or mixed fertilizers according to label. Animal manures — poultry, rabbit, steer or cow at 5-20 pounds per vine — are applied in January or February, but poultry manure may induce zinc deficiency on light sandy soils. Zinc can be supplied as basic or neutral zinc sulfate at 0.1 pound per gallon applied to the foliage one week prior to bloom or at full bloom, and should not be applied after bloom. Where potassium is deficient, potassium sulfate (44 percent K) is applied to the soil at roughly 3 pounds per vine for a mild deficiency, 4 pounds for moderate and 5-6 pounds for severe, placed 6 inches deep and 18 inches from the trunk and concentrated at the vine, then irrigated in. Always take a soil and petiole or blade analysis before applying nutrients.",
+  "url": "https://ipm.ucanr.edu/home-and-landscape/grape-fertilization-guide/",
+  "author": "UC Statewide IPM Program (University of California ANR)",
+  "date": "2024-01-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "grape",
+    "nitrogen",
+    "zinc",
+    "potassium",
+    "vine-vigour",
+    "uc-anr"
+  ],
+  "metadata": {
+    "class_label": "grape",
+    "crop_slug": "grape",
+    "disease_slug": "",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22"
+  }
+}

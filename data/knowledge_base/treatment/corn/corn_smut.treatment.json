@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "c36d8b52-6cb6-5cf8-8143-c0b740861ac6",
+  "category": "treatment",
+  "source": "University of Nebraska–Lincoln, CropWatch",
+  "title": "Common Smut of Corn — Management",
+  "crop": "corn",
+  "disease": "smut",
+  "content": "Common smut (Ustilago maydis) cannot be controlled by fungicides; management is cultural and preventive. Plant resistant hybrids, since hybrid resistance is the most reliable control and smut severity differs markedly among hybrids. Avoid mechanical injury to young, rapidly growing tissue — cultivation wounding, hail, insect feeding and herbicide injury all create infection courts, so reduce tillage operations that wound plants during the rapid-growth stage and manage insects. Maintain balanced fertility; excessive nitrogen and manure, and high plant populations, are associated with increased smut. Remove and destroy galls before they rupture and release spores to reduce inoculum for following seasons. Crop rotation and residue management provide limited additional benefit because the fungus survives in soil and residue.",
+  "url": "https://cropwatch.unl.edu/plant-disease/common-smut-corn",
+  "author": "University of Nebraska–Lincoln, Institute of Agriculture and Natural Resources (CropWatch)",
+  "date": "2021-07-01",
+  "region": "north_america",
+  "reliability": "extension",
+  "language": "en",
+  "tags": [
+    "fungal",
+    "ustilago",
+    "smut",
+    "corn",
+    "resistant-hybrids",
+    "wound-avoidance",
+    "unl"
+  ],
+  "metadata": {
+    "class_label": "corn smut",
+    "crop_slug": "corn",
+    "disease_slug": "smut",
+    "status": "sourced",
+    "placeholder_replaced": "true",
+    "last_reviewed": "2026-09-22",
+    "class_index": 38
+  }
+}
