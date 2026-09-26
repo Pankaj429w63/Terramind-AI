@@ -53,3 +53,15 @@ def get_supabase() -> Optional[Client]:
     if _CLIENT is None:
         _CLIENT = create_client(CONFIG.url, CONFIG.key)
     return _CLIENT
+
+
+def get_authenticated_user(token: str) -> dict[str, Any]:
+    """Validate a user access token with Supabase Auth; never trust a submitted user_id."""
+    client = get_supabase()
+    if client is None:
+        raise RuntimeError("Supabase authentication is unavailable.")
+    response = client.auth.get_user(token)
+    user = getattr(response, "user", None) or getattr(getattr(response, "data", None), "user", None)
+    if user is None:
+        raise ValueError("Invalid or expired access token.")
+    return {"id": str(user.id), "email": getattr(user, "email", None), "user": user}

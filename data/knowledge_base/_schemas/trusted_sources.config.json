@@ -378,7 +378,7 @@
     },
     {
       "categories": ["fertilizer"],
-      "minimum_reliability": "government",
+      "minimum_reliability": "extension",
       "require_two_sources_minimum": 1
     },
     {

@@ -1,24 +1,12 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
-import { API_BASE_URL } from "../services/api";
-import { Diagnosis, Prediction } from "../services/diagnosis";
+import { Diagnosis, Prediction, ExpertReview, submitExpertReview } from "../services/diagnosis";
 import { useDiagnosis } from "../hooks/useDiagnosis";
 import { askTerraMind, ChatMessage, ChatResponse } from "../services/chat";
 import { getDiagnosisById, listDiagnosisHistory, LocalHistoryItem } from "../services/history";
 import { ReportRecord, formatBytes, formatTimestamp, listReports, getReportDownloadUrl } from "../services/reports";
-import {
-  FinalConfig,
-  FullReport,
-  ModelSummary,
-  ClassMetric,
-  formatScalar,
-  getAnalyticsFinalConfig,
-  getAnalyticsFullReport,
-  getAnalyticsSummary,
-  getGraphUrl,
-  pct,
-} from "../services/analytics";
+import { getGraphUrl, pct } from "../services/analytics";
 import {
   AgentStatus,
   DashboardAggregate,
@@ -28,29 +16,39 @@ import {
   getRagStats,
   mapCategoryCounts,
 } from "../services/dashboard";
+import { getHealth, getServingModelInfo, getSupabaseStatus, HealthResponse, ServingModelInfo, SupabaseStatus } from "../services/system";
+import { supabase } from "../services/supabase";
+import { signOut } from "../services/auth";
+import {
+  AgentToolsPage,
+  MultimodalPage,
+  ProfilePage,
+  RagKnowledgeBasePage,
+  RecommendationPage,
+  ServedModelInsightsPage,
+  ServedModelPerformancePage,
+  SettingsPage,
+  SystemStatusPage,
+} from "./live-pages";
 
 const nav = [
   { group: "MAIN", items: [["Dashboard", "▦"], ["Plant Diagnosis", "⌁"]] },
   { group: "DIAGNOSIS", items: [["Upload Image", "↥"], ["Batch Detection", "▤"], ["Live Detection", "◉"]] },
   { group: "AI ASSISTANT", items: [["AI Chat Assistant", "✧"]] },
   { group: "RECOMMENDATIONS", items: [["Treatment Advisor", "♧"], ["Fertilizer Guide", "✚"], ["Care Recommendations", "♡"]] },
-  { group: "KNOWLEDGE & AI", items: [["RAG Knowledge Base", "▱"], ["Agent Orchestrator", "⌘"], ["Agent Workflow", "⌘"]] },
-  { group: "ANALYTICS", items: [["Model Performance", "◒"], ["Model Insights", "⌗"], ["System Architecture", "◇"]] },
+  { group: "KNOWLEDGE & AI", items: [["RAG Knowledge Base", "▱"], ["Agent Orchestrator", "⌘"], ["Agent Workflow", "⌘"], ["Multimodal AI", "?"]] },
+  { group: "ANALYTICS", items: [["Model Performance", "◒"], ["Model Insights", "⌗"], ["System Status", "◇"]] },
   { group: "HISTORY & REPORTS", items: [["History", "◴"], ["Reports", "▤"]] },
   { group: "SETTINGS", items: [["Settings", "⚙"], ["Profile", "♙"]] },
 ];
 
 function Icon({ children }: { children: React.ReactNode }) { return <span className="icon">{children}</span>; }
-function Button({ children, primary = false, onClick, type = "button" }: { children: React.ReactNode; primary?: boolean; onClick?: () => void; type?: "button" | "submit" }) {
-  return <button type={type} onClick={onClick} className={primary ? "button primary" : "button"}>{children}</button>;
+function Button({ children, primary = false, onClick, type = "button", disabled = false }: { children: React.ReactNode; primary?: boolean; onClick?: () => void; type?: "button" | "submit"; disabled?: boolean }) {
+  return <button type={type} onClick={onClick} disabled={disabled} className={primary ? "button primary" : "button"}>{children}</button>;
 }
 function Card({ children, className = "", style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) { return <section className={`card ${className}`} style={style}>{children}</section>; }
-function Sparkline({ color = "#65d879", points = "0,28 18,23 35,26 51,12 68,19 84,8 102,17" }: { color?: string; points?: string }) {
-  return <svg className="sparkline" viewBox="0 0 102 32" preserveAspectRatio="none"><polyline points={points} fill="none" stroke={color} strokeWidth="2" /></svg>;
-}
-
 function Metric({ title, value, change, tone, icon }: { title: string; value: string; change: string; tone: string; icon: string }) {
-  return <Card className="metric"><div className="metric-top"><span>{title}</span><span className={`metric-icon ${tone}`}>{icon}</span></div><strong>{value}</strong><small className={change.startsWith("↓") ? "down" : ""}>{change} <em>from last month</em></small><Sparkline color={tone === "red" ? "#ef645d" : tone === "gold" ? "#e9b83e" : tone === "blue" ? "#5ba7e6" : "#65d879"} /></Card>;
+  return <Card className="metric"><div className="metric-top"><span>{title}</span><span className={`metric-icon ${tone}`}>{icon}</span></div><strong>{value}</strong><small className={change.startsWith("↓") ? "down" : ""}>{change}</small></Card>;
 }
 
 function buildTrendPath(
@@ -92,7 +90,7 @@ function buildAreaPath(values: number[], width: number, height: number): string 
 }
 
 function Dashboard({ go }: { go: (page: string) => void }) {
-  const [modelSummary, setModelSummary] = useState<ModelSummary | null>(null);
+  const [modelSummary, setModelSummary] = useState<ServingModelInfo | null>(null);
   const [modelLoading, setModelLoading] = useState(true);
   const [modelError, setModelError] = useState<string | null>(null);
 
@@ -107,6 +105,9 @@ function Dashboard({ go }: { go: (page: string) => void }) {
   const [agentStatus, setAgentStatus] = useState<AgentStatus | null>(null);
   const [agentLoading, setAgentLoading] = useState(true);
   const [agentError, setAgentError] = useState<string | null>(null);
+  const [apiHealth, setApiHealth] = useState<HealthResponse | null>(null);
+  const [supabaseStatus, setSupabaseStatus] = useState<SupabaseStatus | null>(null);
+  const [matrixUnavailable, setMatrixUnavailable] = useState(false);
 
   const [todayLabel] = useState(() =>
     new Date().toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })
@@ -117,16 +118,18 @@ function Dashboard({ go }: { go: (page: string) => void }) {
 
   async function loadDashboard(abort?: AbortSignal) {
     setLastUpdated(new Date().toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" }));
-    const pModel = getAnalyticsSummary();
+    const pModel = getServingModelInfo();
     const pHistory = listDiagnosisHistory(undefined, 500);
     const pRag = getRagStats();
     const pAgent = getAgentStatus();
+    const pHealth = getHealth();
+    const pSupabase = getSupabaseStatus();
     setModelLoading(true);
     setHistoryLoading(true);
     setRagLoading(true);
     setAgentLoading(true);
     try {
-      const [m, h, r, a] = await Promise.all([
+      const [m, h, r, a, liveHealth, dbStatus] = await Promise.all([
         pModel.catch((cause) => {
           if (!abort?.aborted) setModelError(cause instanceof Error ? cause.message : "Unavailable");
           return null;
@@ -143,6 +146,8 @@ function Dashboard({ go }: { go: (page: string) => void }) {
           if (!abort?.aborted) setAgentError(cause instanceof Error ? cause.message : "Unavailable");
           return null;
         }),
+        pHealth.catch(() => null),
+        pSupabase.catch(() => null),
       ]);
       if (abort?.aborted) return;
       if (m) {
@@ -161,6 +166,8 @@ function Dashboard({ go }: { go: (page: string) => void }) {
         setAgentStatus(a);
         setAgentError(null);
       }
+      if (liveHealth) setApiHealth(liveHealth);
+      if (dbStatus) setSupabaseStatus(dbStatus);
     } finally {
       if (!abort?.aborted) {
         setModelLoading(false);
@@ -179,14 +186,17 @@ function Dashboard({ go }: { go: (page: string) => void }) {
 
   const agg: DashboardAggregate = useMemo(() => aggregateHistory(historyItems), [historyItems]);
   const ragCounts = useMemo(() => mapCategoryCounts(ragStats?.by_category), [ragStats]);
+  const latestAgentRun = historyItems.find((item) => Array.isArray((item as LocalHistoryItem & { agent_events?: unknown[] }).agent_events));
+  const latestAgentEvents = Array.isArray((latestAgentRun as (LocalHistoryItem & { agent_events?: unknown[] }) | undefined)?.agent_events)
+    ? (latestAgentRun as LocalHistoryItem & { agent_events: { agent_name: string; status: string }[] }).agent_events
+    : [];
+  const readyServices = [agentStatus?.supervisor.ready, agentStatus?.supervisor.chat_ready, agentStatus?.supervisor.inference_ready, ragStats?.indexed].filter(Boolean).length;
 
-  const ringValue = modelSummary
-    ? (modelSummary.test_accuracy ?? modelSummary.val_accuracy ?? modelSummary.train_accuracy ?? 0)
-    : 0.6002;
+  const ringValue = modelSummary?.test_acc ?? 0;
   const ringPercent = Math.round(ringValue * 10000) / 100;
 
-  const totalDiagnoses = Math.max(agg.total, agentStatus?.diagnoses.total ?? 0, agentStatus?.diagnoses.local_reports ?? 0);
-  const totalReports = Math.max(agg.reports_count, agentStatus?.reports.supabase_reports ?? 0, totalDiagnoses);
+  const totalDiagnoses = agg.total;
+  const totalReports = agg.reports_count;
   const avgConfidencePct = Math.round(agg.avg_confidence * 10000) / 100;
 
   const healthyChange = historyLoading || !agg.total ? "—" : `${agg.healthy} tracked`;
@@ -206,7 +216,7 @@ function Dashboard({ go }: { go: (page: string) => void }) {
       <div className="welcome">
         <div>
           <h1>
-            Welcome back, Pankaj! <span>👋</span>
+            Welcome back! <span>👋</span>
           </h1>
           <p>Here&apos;s what&apos;s happening with your farm today.</p>
         </div>
@@ -243,8 +253,8 @@ function Dashboard({ go }: { go: (page: string) => void }) {
         />
         <Metric
           title="Avg. Confidence"
-          value={historyLoading ? "…" : `${avgConfidencePct.toFixed(1)}%`}
-          change={confChange}
+          value={historyLoading ? "…" : agg.total ? `${avgConfidencePct.toFixed(1)}%` : "—"}
+          change={agg.total ? confChange : "No diagnoses yet"}
           tone={historyError ? "gold" : confTone}
           icon="▥"
         />
@@ -267,7 +277,7 @@ function Dashboard({ go }: { go: (page: string) => void }) {
           {historyLoading ? (
             <p className="loading-state">Loading recent diagnoses…</p>
           ) : historyError ? (
-            <p className="error">Could not load history: {historyError}</p>
+            <><p className="error">Could not load history: {historyError}</p>{historyError.startsWith("Sign in") && <Button onClick={() => go("Profile")}>Sign in</Button>}</>
           ) : agg.recent.length === 0 ? (
             <p className="subtle" style={{ padding: 24 }}>
               No diagnoses yet. Run a plant image upload to populate history.
@@ -387,23 +397,23 @@ function Dashboard({ go }: { go: (page: string) => void }) {
               <div className="stats">
                 <p>
                   <span>Validation Accuracy</span>
-                  <b>{pct(modelSummary?.val_accuracy, 2)}</b>
+                  <b>{pct(modelSummary?.best_val_acc ?? undefined, 2)}</b>
                 </p>
                 <p>
                   <span>Test Macro F1</span>
-                  <b>{pct(modelSummary?.test_macro_f1 ?? modelSummary?.test_weighted_f1, 2)}</b>
+                  <b>{pct(modelSummary?.test_macro_f1 ?? undefined, 2)}</b>
                 </p>
                 <p>
                   <span>Val Macro F1</span>
-                  <b>{pct(modelSummary?.val_macro_f1 ?? modelSummary?.val_weighted_f1, 2)}</b>
+                  <b>{pct(modelSummary?.best_val_macro_f1 ?? undefined, 2)}</b>
                 </p>
                 <p>
                   <span>Total Classes</span>
-                  <b>{String(modelSummary?.num_classes ?? 89)}</b>
+                <b>{String(modelSummary?.num_classes ?? "—")}</b>
                 </p>
               </div>
               <small className="model-label">
-                ● Model: {modelSummary?.backbone ?? modelSummary?.model_name ?? "EfficientNet-B0 v3"}
+                ● Model: {modelSummary?.backbone ?? "Unavailable"}
               </small>
             </>
           )}
@@ -420,19 +430,11 @@ function Dashboard({ go }: { go: (page: string) => void }) {
             alt="Confusion Matrix"
             src={getGraphUrl("confusion_matrix")}
             style={{ width: "100%", height: "auto", borderRadius: 6, background: "transparent", padding: 4 }}
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.display = "none";
-              const fallback = (e.currentTarget as HTMLImageElement).nextElementSibling as HTMLDivElement | null;
-              if (fallback) fallback.style.display = "grid";
-            }}
+            onError={() => setMatrixUnavailable(true)}
           />
-          <div className="matrix-box" style={{ display: "none" }}>
-            {Array.from({ length: 64 }).map((_, i) => (
-              <i key={i} style={{ opacity: ((i * 17) % 10) / 12 + 0.12 }} />
-            ))}
-          </div>
+          {matrixUnavailable && <p className="subtle">Confusion matrix is unavailable from the analytics API.</p>}
           <div className="matrix-axis">
-            1　 2　 3　 4　 5　　　　　　　　　{modelSummary?.num_classes ?? 89}
+            {modelSummary?.num_classes ? `${modelSummary.num_classes} classes` : ""}
           </div>
         </Card>
 
@@ -456,52 +458,15 @@ function Dashboard({ go }: { go: (page: string) => void }) {
             <p className="loading-state">Loading agent system status…</p>
           ) : (
             <>
-              <p className="subtle">
-                Supervisor Agent Status: <b>{agentStatus?.supervisor.state === "active" ? "Active" : agentStatus?.supervisor.state === "standby" ? "Standby" : agentError ? "Error" : "Idle"}</b>
-              </p>
-              <div className="agent-flow">
-                <b>♧ Supervisor Agent</b>
-                <div>
-                  <span>
-                    ◉
-                    <small>
-                      Vision Agent
-                      <br />
-                      {agentStatus?.supervisor.inference_ready ? "Active" : "Waiting"}
-                    </small>
-                  </span>
-                  <span>
-                    ▱
-                    <small>
-                      Research Agent
-                      <br />
-                      {ragLoading ? "…" : ragStats?.indexed ? "Active" : "Idle"}
-                    </small>
-                  </span>
-                  <span>
-                    ♧
-                    <small>
-                      Treatment Agent
-                      <br />
-                      {agentStatus?.supervisor.ready ? "Active" : "Idle"}
-                    </small>
-                  </span>
-                  <span>
-                    ▤
-                    <small>
-                      Report Agent
-                      <br />
-                      {totalReports > 0 ? "Active" : "Idle"}
-                    </small>
-                  </span>
-                </div>
-              </div>
+              <p className="subtle">Supervisor: <b>{agentStatus?.supervisor.state ?? "Unavailable"}</b></p>
+              {latestAgentEvents.length ? <div className="agent-event-list">{latestAgentEvents.map((event, index) => <div className="agent-event" key={`${event.agent_name}-${index}`}>
+                <span className={event.status === "completed" ? "event-ok" : event.status === "failed" ? "event-failed" : "event-running"}>{event.status === "completed" ? "?" : event.status === "failed" ? "!" : "?"}</span>
+                <div><b>{event.agent_name}</b><small>{event.status}</small></div>
+              </div>)}</div> : <p className="subtle">No executed agent workflow is recorded in recent diagnosis history.</p>}
               <div className="progress-line">
-                <span>Workflow Status</span>
-                <i>
-                  <b style={{ width: `${agentStatus?.progress.percent ?? 0}%` }} />
-                </i>
-                <strong>{agentStatus?.progress.percent ?? 0}%</strong>
+                <span>Services Ready</span>
+                <i><b style={{ width: `${(readyServices / 4) * 100}%` }} /></i>
+                <strong>{readyServices}/4</strong>
               </div>
               {agentStatus?.agent_runs.recorded_supabase ? (
                 <small className="subtle">{agentStatus.agent_runs.recorded_supabase} agent runs recorded</small>
@@ -522,17 +487,19 @@ function Dashboard({ go }: { go: (page: string) => void }) {
                 !modelLoading && !modelError && modelSummary ? "connected" : undefined
               }
             >
-              {modelLoading ? "Loading…" : modelError ? "Unavailable" : modelSummary?.backbone ?? modelSummary?.model_name ?? "EfficientNet-B0"}
+              {modelLoading ? "Loading…" : modelError ? "Unavailable" : modelSummary?.backbone ?? "Unavailable"}
             </small>
           </p>
           <p>
             <span>◉　API Server</span>
-            <small className="connected">Active</small>
+            <small className={apiHealth?.status === "ok" ? "connected" : undefined}>
+              {apiHealth ? (apiHealth.status === "ok" ? "Operational" : apiHealth.status) : "Unavailable"}
+            </small>
           </p>
           <p>
             <span>◉　Database</span>
-            <small className={agentStatus?.backend.supabase_enabled ? "connected" : undefined}>
-              {agentLoading ? "…" : agentStatus?.backend.supabase_enabled ? "Connected" : "Local only"}
+            <small className={supabaseStatus?.configured ? "connected" : undefined}>
+              {agentLoading ? "…" : supabaseStatus ? (supabaseStatus.configured ? "Configured" : "Local only") : "Unavailable"}
             </small>
           </p>
           <p>
@@ -548,7 +515,7 @@ function Dashboard({ go }: { go: (page: string) => void }) {
             </small>
           </p>
           <small className="updated">
-            Last Updated: {todayLabel} {lastUpdated}　⟳
+            Last checked: {todayLabel} {lastUpdated}　⟳
           </small>
         </Card>
 
@@ -584,7 +551,7 @@ function Dashboard({ go }: { go: (page: string) => void }) {
           {historyLoading ? (
             <p className="loading-state">Loading reports…</p>
           ) : historyError ? (
-            <p className="error">Could not load reports: {historyError}</p>
+            <><p className="error">Could not load reports: {historyError}</p>{historyError.startsWith("Sign in") && <Button onClick={() => go("Profile")}>Sign in</Button>}</>
           ) : agg.recent.length === 0 ? (
             <p className="subtle" style={{ padding: 24 }}>
               Run a diagnosis to generate a report.
@@ -599,9 +566,6 @@ function Dashboard({ go }: { go: (page: string) => void }) {
                 top.prediction?.confidence_pct ??
                 (Array.isArray(top.top5) && top.top5.length ? top.top5[0].confidence : 0);
               const ts = formatTimestamp(top.timestamp);
-              const rough = Math.max(1024, Math.round(JSON.stringify(top).length));
-              const sizeKb = Math.round(rough / 1024);
-              const sizeStr = sizeKb > 1024 ? `${(sizeKb / 1024).toFixed(1)} MB` : `${sizeKb} KB`;
               return (
                 <div className="report-preview">
                   <span>{lbl.label.toLowerCase().includes("healthy") ? "🌿" : "🍂"}</span>
@@ -611,7 +575,7 @@ function Dashboard({ go }: { go: (page: string) => void }) {
                       {ts.date} · {ts.time}
                     </small>
                     <small>
-                      JSON · {sizeStr} · {(topConf * 100).toFixed(1)}% conf.
+                      JSON · {(topConf * 100).toFixed(1)}% confidence
                     </small>
                   </div>
                   <button title="Download JSON" onClick={() => go("Reports")}>
@@ -650,13 +614,13 @@ function Dashboard({ go }: { go: (page: string) => void }) {
                   <b>
                     {item.key}
                     <small>
-                      {item.count || ragCounts.other ? `${item.count + (i === 3 ? ragCounts.other : 0)} Chunks　›` : "Indexed　›"}
+                      {`${item.count + (i === 3 ? ragCounts.other : 0)} chunks`}
                     </small>
                   </b>
                 </div>
               ))}
               <p className="subtle" style={{ marginTop: 6, padding: "0 4px" }}>
-                {ragStats?.total_points || 0} chunks · {ragStats?.sources_indexed || 0} sources ·{" "}
+                {ragStats?.total_points ?? 0} chunks · {ragStats?.sources_indexed ?? 0} sources ·{" "}
                 {formatBytes(ragStats?.tfidf_size_bytes)}
               </p>
             </>
@@ -667,19 +631,78 @@ function Dashboard({ go }: { go: (page: string) => void }) {
   );
 }
 
-function Upload({ batch = false }: { batch?: boolean }) {
-  const [files, setFiles] = useState<File[]>([]); const [previews, setPreviews] = useState<string[]>([]);
-  const { result, loading, error, run } = useDiagnosis();
-  const select = (e: ChangeEvent<HTMLInputElement>) => {
-    const selected = Array.from(e.target.files || []);
+function Upload({ batch = false, live = false }: { batch?: boolean; live?: boolean }) {
+  const [files, setFiles] = useState<File[]>([]);
+  const [previews, setPreviews] = useState<string[]>([]);
+  const { result, loading, error, partialErrors, run } = useDiagnosis();
+
+  function select(event: ChangeEvent<HTMLInputElement>) {
+    const selected = Array.from(event.target.files || []);
     previews.forEach((preview) => URL.revokeObjectURL(preview));
     setFiles(selected);
     setPreviews(selected.map((file) => URL.createObjectURL(file)));
-  };
+  }
+
   useEffect(() => () => previews.forEach((preview) => URL.revokeObjectURL(preview)), [previews]);
-  function submit(e: FormEvent) { e.preventDefault(); void run(files, batch); }
+  function submit(event: FormEvent) { event.preventDefault(); void run(files, batch); }
   const list = result ? (Array.isArray(result) ? result : [result]) : [];
-  return <div className="page-content inner-page"><div className="section-title"><div><h1>{batch ? "Batch Detection" : "Plant Diagnosis"}</h1><p>{batch ? "Analyze multiple plant images in one real inference request." : "Upload a clear plant image for an AI-powered diagnosis."}</p></div></div><Card className="upload-card"><form onSubmit={submit}><label className="dropzone"><input type="file" accept="image/*" multiple={batch} onChange={select} /><span className="upload-icon">↥</span><b>{files.length ? `${files.length} image${files.length > 1 ? "s" : ""} selected` : "Drop your plant image here"}</b><small>or click to browse · JPG, PNG, WEBP up to 16 MB</small></label>{files.length > 0 && <div className="file-list">{files.map((f, i) => <span key={`${f.name}-${i}`}>{previews[i] && <img src={previews[i]} alt="" />} ◉ {f.name}</span>)}</div>}<Button primary type="submit">{loading ? "Analyzing…" : batch ? "Run Batch Detection" : "Analyze Image"}</Button>{error && <p className="error">API error: {error}</p>}</form></Card>{loading && <Card className="loading-state">Running real MobileNetV3 inference…</Card>}{list.length > 0 && <div className="result-grid">{list.map((d, i) => <Card className="prediction-card" key={`${d.id}-${i}`}>{previews[i] && <img className="result-image" src={previews[i]} alt={d.source_filename || "Uploaded plant"} />}<div className="card-heading"><h3>{d.source_filename || `Image ${i + 1}`}</h3><span className="confidence">{(d.predicted_class.confidence * 100).toFixed(2)}%</span></div>{d.low_confidence && <p className="low-confidence">Low confidence result — try a clearer, closer leaf image.</p>}<h2>{d.predicted_class.label}</h2><p className="subtle">Real model inference · {d.inference_ms} ms</p><div className="model-info"><b>{d.model_info.backbone}</b><span>{d.model_info.num_classes} classes · {d.model_info.img_size}px input</span></div><div className="top-list">{d.top5.map((p, n) => <p key={p.label}><span>{n + 1}. {p.label}</span><b>{(p.confidence * 100).toFixed(2)}%</b><i><em style={{ width: `${p.confidence * 100}%` }} /></i></p>)}</div></Card>)}</div>}</div>;
+  const title = live ? "Live Detection" : batch ? "Batch Detection" : "Plant Diagnosis";
+
+  return (
+    <div className="page-content inner-page">
+      <div className="section-title"><div><h1>{title}</h1><p>{batch ? "Analyze up to 64 images with the served model." : live ? "Capture or choose a plant image and send it through live model inference." : "Upload a clear plant image for an AI-powered diagnosis."}</p></div></div>
+      <Card className="upload-card">
+        <form onSubmit={submit}>
+          <label className="dropzone">
+            <input type="file" accept="image/*" capture={live ? "environment" : undefined} multiple={batch} onChange={select} />
+            <span className="upload-icon">↥</span>
+            <b>{files.length ? `${files.length} image${files.length > 1 ? "s" : ""} selected` : "Drop your plant image here"}</b>
+            <small>{batch ? "Up to 64 JPG, PNG, WEBP images · 16 MB each" : "or click to browse · JPG, PNG, WEBP up to 16 MB"}</small>
+          </label>
+          {files.length > 0 && <div className="file-list">{files.map((file, index) => <span key={`${file.name}-${index}`}>{previews[index] && <img src={previews[index]} alt="" />} ◉ {file.name}</span>)}</div>}
+          <Button primary type="submit">{loading ? "Analyzing…" : batch ? "Run Batch Detection" : "Analyze Image"}</Button>
+          {error && <p className="error">API error: {error}</p>}
+        </form>
+      </Card>
+      {loading && <Card className="loading-state">Running image inference through the active model…</Card>}
+      {partialErrors.map((message) => <Card key={message}><p className="error">{message}</p></Card>)}
+      {!loading && !error && list.length === 0 && files.length > 0 && <Card className="subtle">No prediction was returned for the selected image.</Card>}
+      {list.length > 0 && <div className="result-grid">{list.map((diagnosis, index) => (
+        <Card className="prediction-card" key={`${diagnosis.id}-${index}`}>
+          {previews[index] && <img className="result-image" src={previews[index]} alt={diagnosis.source_filename || "Uploaded plant"} />}
+          <div className="card-heading"><h3>{diagnosis.source_filename || `Image ${index + 1}`}</h3><span className="confidence">{(diagnosis.predicted_class.confidence * 100).toFixed(2)}%</span></div>
+          {diagnosis.low_confidence && <><p className="low-confidence">Low confidence result — try a clearer, closer leaf image.</p><ExpertReviewForm diagnosis={diagnosis} /></>}
+          <h2>{diagnosis.predicted_class.label}</h2>
+          <p className="subtle">Inference time · {diagnosis.inference_ms.toFixed(1)} ms</p>
+          <div className="model-info"><b>{diagnosis.model_info.backbone}</b><span>{diagnosis.model_info.num_classes} classes · {diagnosis.model_info.img_size}px input</span></div>
+          <div className="top-list">{diagnosis.top5.map((prediction, rank) => <p key={`${prediction.class_id}-${prediction.label}`}><span>{rank + 1}. {prediction.label}</span><b>{(prediction.confidence * 100).toFixed(2)}%</b><i><em style={{ width: `${prediction.confidence * 100}%` }} /></i></p>)}</div>
+        </Card>
+      ))}</div>}
+    </div>
+  );
+}
+
+function ExpertReviewForm({ diagnosis }: { diagnosis: Diagnosis }) {
+  const [decision, setDecision] = useState("confirmed");
+  const [corrected, setCorrected] = useState("");
+  const [notes, setNotes] = useState("");
+  const [review, setReview] = useState<ExpertReview | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function submit(event: FormEvent) {
+    event.preventDefault(); setBusy(true); setError(null);
+    try { setReview(await submitExpertReview({ diagnosis_id: diagnosis.id, reviewer_decision: decision, corrected_disease: corrected.trim() || null, notes: notes.trim() || null })); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : "Could not save expert review."); }
+    finally { setBusy(false); }
+  }
+  return <div className="expert-review"><h3>Expert Review Recommended</h3><p className="subtle">Record a human review. This feedback is stored for review and does not change the EfficientNet-B0 model.</p>
+    {review ? <p className="live">Review saved · {new Date(review.created_at).toLocaleString()}</p> : <form className="query-form" onSubmit={submit}>
+      <label>Diagnosis<input value={diagnosis.predicted_class.label} readOnly /></label><label>Confidence<input value={`${(diagnosis.predicted_class.confidence * 100).toFixed(2)}%`} readOnly /></label>
+      <label>Reviewer decision<select value={decision} onChange={(event) => setDecision(event.target.value)}><option value="confirmed">Confirmed</option><option value="incorrect">Incorrect</option><option value="uncertain">Uncertain</option></select></label>
+      <label>Corrected disease / class<input value={corrected} onChange={(event) => setCorrected(event.target.value)} placeholder="Optional correction" /></label>
+      <label>Notes<textarea value={notes} onChange={(event) => setNotes(event.target.value)} maxLength={5000} /></label>
+      <Button primary type="submit" disabled={busy}>{busy ? "Saving review…" : "Save review"}</Button>
+    </form>}{error && <p className="error">{error}</p>}</div>;
 }
 
 function ChatAssistant() {
@@ -1000,7 +1023,6 @@ function ReportsPage({ go }: { go: (page: string) => void }) {
       title: top.replace(/[_-]/g, " "),
       sub: `${d.source_filename || d.id.slice(0, 8)} · ${pct.toFixed(1)}%`,
       type: "JSON",
-      size: 4096,
     };
   }
 
@@ -1162,371 +1184,89 @@ function ReportsPage({ go }: { go: (page: string) => void }) {
   );
 }
 
-function ModelPerformancePage({ go }: { go: (page: string) => void }) {
-  const [summary, setSummary] = useState<ModelSummary | null>(null);
-  const [config, setConfig] = useState<FinalConfig | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [graphError, setGraphError] = useState<{ training?: boolean; confusion?: boolean }>({});
-
-  async function load() {
-    setLoading(true);
-    setError(null);
-    try {
-      const [s, c] = await Promise.all([getAnalyticsSummary(), getAnalyticsFinalConfig()]);
-      setSummary(s);
-      setConfig(c);
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Could not load analytics data.");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => { void load(); }, []);
-
-  const backbone = summary?.backbone ?? config?.backbone ?? summary?.model_name ?? config?.model_name ?? "EfficientNet-B0 v3";
-  const trainAcc = summary?.train_accuracy;
-  const valAcc = summary?.val_accuracy;
-  const testAcc = summary?.test_accuracy;
-  const trainLoss = summary?.train_loss;
-  const valLoss = summary?.val_loss;
-  const testLoss = summary?.test_loss;
-  const trainF1 = summary?.train_macro_f1 ?? summary?.train_weighted_f1;
-  const valF1 = summary?.val_macro_f1 ?? summary?.val_weighted_f1;
-  const testF1 = summary?.test_macro_f1 ?? summary?.test_weighted_f1;
-
-  return (
-    <div className="page-content inner-page">
-      <div className="section-title">
-        <div>
-          <h1>Model Performance</h1>
-          <p>Real evaluation metrics from the archived {backbone} model. All values are computed from the test/validation splits.</p>
-        </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <Button onClick={() => void load()}>⟳ Refresh</Button>
-          <Button onClick={() => go("Model Insights")}>⌗ Class-level Insights</Button>
-        </div>
-      </div>
-
-      {loading && (
-        <Card className="loading-state"><p>Loading model performance analytics…</p></Card>
-      )}
-
-      {!loading && error && (
-        <Card>
-          <p className="error">Failed to load analytics: {error}</p>
-          <Button onClick={() => void load()}>Retry</Button>
-        </Card>
-      )}
-
-      {!loading && !error && summary && (
-        <>
-          <div className="metrics" style={{ gridTemplateColumns: "repeat(3,1fr)", marginBottom: 10 }}>
-            <Metric title="Train Accuracy" value={pct(trainAcc)} change={formatScalar(trainLoss, 4)} tone="green" icon="▥" />
-            <Metric title="Validation Accuracy" value={pct(valAcc)} change={formatScalar(valLoss, 4)} tone="gold" icon="▥" />
-            <Metric title="Test Accuracy" value={pct(testAcc)} change={formatScalar(testLoss, 4)} tone="blue" icon="▥" />
-            <Metric title="Train Macro F1" value={pct(trainF1)} change={trainF1 ? "Macro averaged" : "—"} tone="green" icon="✦" />
-            <Metric title="Validation Macro F1" value={pct(valF1)} change={valF1 ? "Macro averaged" : "—"} tone="gold" icon="✦" />
-            <Metric title="Test Macro F1" value={pct(testF1)} change={testF1 ? "Macro averaged" : "—"} tone="blue" icon="✦" />
-          </div>
-
-          <div className="dashboard-grid">
-            <Card>
-              <div className="card-heading">
-                <h3>Training &amp; Validation Curves</h3>
-                <small className="subtle">{config?.epochs ? `${config.epochs} epochs` : "—"} · best epoch {String(summary?.best_epoch ?? "—")}</small>
-              </div>
-              {graphError.training
-                ? <p className="error">Training curves image is unavailable.</p>
-                : (
-                  <img
-                    alt="Training Curves"
-                    src={getGraphUrl("training_curves")}
-                    style={{ width: "100%", height: "auto", borderRadius: 6, display: "block", marginTop: 4 }}
-                    onError={() => setGraphError((g) => ({ ...g, training: true }))}
-                  />
-                )}
-            </Card>
-
-            <Card>
-              <div className="card-heading">
-                <h3>Confusion Matrix (89 Classes)</h3>
-                <small className="subtle">Dataset: {summary?.dataset ?? config?.dataset ?? "PlantWild"}</small>
-              </div>
-              {graphError.confusion
-                ? <p className="error">Confusion matrix image is unavailable.</p>
-                : (
-                  <img
-                    alt="Confusion Matrix"
-                    src={getGraphUrl("confusion_matrix")}
-                    style={{ width: "100%", height: "auto", borderRadius: 6, display: "block", marginTop: 4 }}
-                    onError={() => setGraphError((g) => ({ ...g, confusion: true }))}
-                  />
-                )}
-            </Card>
-
-            <Card style={{ gridColumn: "1 / -1" }}>
-              <div className="card-heading"><h3>Summary Metrics</h3><small className="subtle">All splits combined</small></div>
-              <div className="table">
-                <div className="table-head">
-                  <span>Split</span>
-                  <span>Accuracy</span>
-                  <span>Macro F1</span>
-                  <span>Weighted F1</span>
-                  <span>Loss</span>
-                  <span>Samples</span>
-                </div>
-                {[
-                  ["Train", trainAcc, summary?.train_macro_f1, summary?.train_weighted_f1, trainLoss, summary?.train_samples],
-                  ["Validation", valAcc, summary?.val_macro_f1, summary?.val_weighted_f1, valLoss, summary?.val_samples],
-                  ["Test", testAcc, summary?.test_macro_f1, summary?.test_weighted_f1, testLoss, summary?.test_samples],
-                ].map((row) => (
-                  <div className="table-row" key={String(row[0])} style={{ gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr" }}>
-                    <b>{String(row[0])}</b>
-                    <span>{pct(row[1] as number | undefined)}</span>
-                    <span>{pct(row[2] as number | undefined)}</span>
-                    <span>{pct(row[3] as number | undefined)}</span>
-                    <span>{formatScalar(row[4] as number | undefined, 4)}</span>
-                    <span>{row[5] !== undefined ? String(row[5]) : "—"}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-
-            <Card>
-              <div className="card-heading"><h3>Model &amp; Dataset</h3></div>
-              <p><span>Backbone</span><b>{backbone}</b></p>
-              <p><span>Total Classes</span><b>{String(summary?.num_classes ?? config?.num_classes ?? 89)}</b></p>
-              <p><span>Input Size</span><b>{String(summary?.img_size ?? config?.img_size ?? "?")} px</b></p>
-              <p><span>Best Epoch</span><b>{String(summary?.best_epoch ?? "—")}</b></p>
-              <p><span>Train Samples</span><b>{String(summary?.train_samples ?? "—")}</b></p>
-              <p><span>Val Samples</span><b>{String(summary?.val_samples ?? "—")}</b></p>
-              <p><span>Test Samples</span><b>{String(summary?.test_samples ?? "—")}</b></p>
-              <p><span>Trainable Params</span><b>{summary?.total_trainable_params ? `${(summary.total_trainable_params / 1_000_000).toFixed(2)} M` : "—"}</b></p>
-            </Card>
-
-            <Card>
-              <div className="card-heading"><h3>Training Config</h3></div>
-              <p><span>Optimizer</span><b>{config?.optimizer ?? "—"}</b></p>
-              <p><span>Learning Rate</span><b>{config?.learning_rate ? formatScalar(config.learning_rate, 6) : "—"}</b></p>
-              <p><span>Batch Size</span><b>{String(config?.batch_size ?? "—")}</b></p>
-              <p><span>Max Epochs</span><b>{String(config?.epochs ?? "—")}</b></p>
-              <p><span>Loss Function</span><b>{config?.loss_function ?? "—"}</b></p>
-              <p><span>Scheduler</span><b>{config?.scheduler ?? "—"}</b></p>
-              <p><span>Weight Decay</span><b>{config?.weight_decay ? formatScalar(config.weight_decay, 6) : "—"}</b></p>
-              <p><span>Augmentation</span><b>{config?.use_augmentation ? "Enabled" : "—"}</b></p>
-              <p><span>Seed</span><b>{String(config?.seed ?? "—")}</b></p>
-              <p><span>Device</span><b>{config?.device ?? "—"}</b></p>
-            </Card>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function ClassMetricRow({ cls, rank }: { cls: ClassMetric; rank: number }) {
-  const className = cls.class ?? cls.label ?? "Unknown";
-  const support = cls.support ?? cls.samples ?? 0;
-  const p = cls.precision;
-  const r = cls.recall;
-  const f1 = cls.f1 ?? cls.f1_score;
-  return (
-    <div className="table-row" style={{ gridTemplateColumns: "40px 2fr 1fr 1fr 1fr 80px" }}>
-      <b style={{ color: "#5ed36f" }}>{rank}</b>
-      <span style={{ fontWeight: 500 }}>{className.replace(/[_-]/g, " ")}</span>
-      <span>{pct(p)}</span>
-      <span>{pct(r)}</span>
-      <span>{pct(f1)}</span>
-      <b style={{ color: "#79bd84" }}>{support}</b>
-    </div>
-  );
-}
-
-function ModelInsightsPage({ go }: { go: (page: string) => void }) {
-  const [report, setReport] = useState<FullReport | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<"f1" | "precision" | "recall" | "support">("f1");
-  const [filter, setFilter] = useState("");
-  const [showWorst, setShowWorst] = useState(false);
-  const [graphError, setGraphError] = useState(false);
-
-  async function load() {
-    setLoading(true);
-    setError(null);
-    try {
-      setReport(await getAnalyticsFullReport());
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Could not load per-class insights.");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => { void load(); }, []);
-
-  const perClass: ClassMetric[] = useMemo(() => {
-    if (!report) return [];
-    if (Array.isArray(report.per_class) && report.per_class.length > 0) {
-      return report.per_class.map((c) => ({ ...c, class: c.class ?? c.label ?? "", support: c.support ?? c.samples, f1: c.f1 ?? c.f1_score }));
-    }
-    if (report.classification_report) {
-      return Object.entries(report.classification_report)
-        .filter(([k]) => !["accuracy", "macro avg", "weighted avg"].includes(k))
-        .map(([klass, v]) => ({ class: klass, label: klass, ...v, support: v.support, f1: v.f1 ?? v.f1_score }));
-    }
-    return [];
-  }, [report]);
-
-  const processed: ClassMetric[] = useMemo(() => {
-    const filtered = filter
-      ? perClass.filter((c) => (c.class ?? "").toLowerCase().includes(filter.toLowerCase()))
-      : perClass.slice();
-    filtered.sort((a, b) => {
-      const av = sortBy === "f1" ? (a.f1 ?? a.f1_score ?? 0) : sortBy === "precision" ? (a.precision ?? 0) : sortBy === "recall" ? (a.recall ?? 0) : (a.support ?? a.samples ?? 0);
-      const bv = sortBy === "f1" ? (b.f1 ?? b.f1_score ?? 0) : sortBy === "precision" ? (b.precision ?? 0) : sortBy === "recall" ? (b.recall ?? 0) : (b.support ?? b.samples ?? 0);
-      return showWorst ? av - bv : bv - av;
-    });
-    return filtered;
-  }, [perClass, sortBy, filter, showWorst]);
-
-  const headCounts = useMemo(() => {
-    if (perClass.length === 0) return { above80: 0, above60: 0, below40: 0, avgF1: 0, zeroF1: 0 };
-    let above80 = 0;
-    let above60 = 0;
-    let below40 = 0;
-    let zeroF1 = 0;
-    let sum = 0;
-    for (const c of perClass) {
-      const v = (c.f1 ?? c.f1_score ?? 0) * 100;
-      if (v <= 0) zeroF1++;
-      if (v >= 80) above80++;
-      if (v >= 60) above60++;
-      if (v < 40) below40++;
-      sum += v;
-    }
-    return { above80, above60, below40, avgF1: sum / perClass.length, zeroF1 };
-  }, [perClass]);
-
-  return (
-    <div className="page-content inner-page">
-      <div className="section-title">
-        <div>
-          <h1>Model Insights</h1>
-          <p>Per-class precision, recall, and F1 — identify which classes your model nails and which need more data.</p>
-        </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <Button onClick={() => void load()}>⟳ Refresh</Button>
-          <Button onClick={() => go("Model Performance")}>◒ Overview</Button>
-        </div>
-      </div>
-
-      {loading && (
-        <Card className="loading-state"><p>Loading per-class model insights…</p></Card>
-      )}
-
-      {!loading && error && (
-        <Card>
-          <p className="error">Failed to load insights: {error}</p>
-          <Button onClick={() => void load()}>Retry</Button>
-        </Card>
-      )}
-
-      {!loading && !error && report && (
-        <>
-          <div className="metrics" style={{ gridTemplateColumns: "repeat(5,1fr)", marginBottom: 10 }}>
-            <Metric title="Classes Evaluated" value={String(perClass.length)} change={perClass.length ? "Per-class report" : "—"} tone="green" icon="⌗" />
-            <Metric title="Avg. Per-Class F1" value={`${headCounts.avgF1.toFixed(1)}%`} change="Unweighted mean" tone="blue" icon="✦" />
-            <Metric title="Classes ≥ 80% F1" value={String(headCounts.above80)} change={`${perClass.length ? ((headCounts.above80 / perClass.length) * 100).toFixed(0) : 0}% of set`} tone="green" icon="♧" />
-            <Metric title="Classes ≥ 60% F1" value={String(headCounts.above60)} change={`${perClass.length ? ((headCounts.above60 / perClass.length) * 100).toFixed(0) : 0}% of set`} tone="gold" icon="▥" />
-            <Metric title="Classes &lt; 40% F1" value={String(headCounts.below40)} change={`${headCounts.zeroF1} with 0% F1`} tone="red" icon="✣" />
-          </div>
-
-          <div className="dashboard-grid">
-            <Card style={{ gridColumn: "1 / -1" }}>
-              <div className="card-heading">
-                <h3>Confusion Matrix (Full)</h3>
-                <small className="subtle">Diagonal elements = correct predictions</small>
-              </div>
-              {graphError
-                ? <p className="error">Confusion matrix image is unavailable.</p>
-                : (
-                  <img
-                    alt="Confusion Matrix Full"
-                    src={getGraphUrl("confusion_matrix")}
-                    style={{ width: "100%", height: "auto", borderRadius: 6, display: "block", marginTop: 4 }}
-                    onError={() => setGraphError(true)}
-                  />
-                )}
-            </Card>
-
-            <Card style={{ gridColumn: "1 / -1" }}>
-              <div className="card-heading">
-                <h3>Per-Class Performance ({processed.length} of {perClass.length})</h3>
-                <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
-                  <input
-                    placeholder="Search class…"
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    style={{ padding: "6px 10px", borderRadius: 4, border: "1px solid #274c37", background: "#0c1d13", color: "#d6e9db", fontSize: 12 }}
-                  />
-                  <select
-                    className="button"
-                    style={{ cursor: "pointer" }}
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  >
-                    <option value="f1">Sort by F1</option>
-                    <option value="precision">Sort by Precision</option>
-                    <option value="recall">Sort by Recall</option>
-                    <option value="support">Sort by Support</option>
-                  </select>
-                  <button
-                    className={showWorst ? "button primary" : "button"}
-                    onClick={() => setShowWorst((v) => !v)}
-                  >
-                    {showWorst ? "Worst ↑" : "Best ↓"}
-                  </button>
-                </div>
-              </div>
-              {processed.length === 0 ? (
-                <p className="subtle">No classes match your filter.</p>
-              ) : (
-                <div className="table">
-                  <div className="table-head">
-                    <span>#</span>
-                    <span>Class</span>
-                    <span>Precision</span>
-                    <span>Recall</span>
-                    <span>F1</span>
-                    <span>Support</span>
-                  </div>
-                  {processed.slice(0, 89).map((cls, rank) => (
-                    <ClassMetricRow cls={cls} rank={rank + 1} key={cls.class ?? rank} />
-                  ))}
-                </div>
-              )}
-              {processed.length > 89 && (
-                <p className="subtle" style={{ marginTop: 8 }}>Showing top 89 of {processed.length} classes.</p>
-              )}
-            </Card>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function GenericPage({ name, go }: { name: string; go: (x: string) => void }) {
-  const descriptions: Record<string, string> = { "AI Chat Assistant": "Ask TerraMind about plant health, treatment, and farm care.", "Treatment Advisor": "Evidence-based treatment guidance will be grounded in your diagnosis.", "Fertilizer Guide": "Find nutrient plans tailored to crop and growth stage.", "Care Recommendations": "Practical care recommendations for healthier plants.", "RAG Knowledge Base": "Trusted agricultural documents and retrieval sources.", "Agent Orchestrator": "Coordinate specialized TerraMind agents in one workflow.", "Agent Workflow": "Monitor the active diagnosis workflow from vision to report.", "Model Performance": "Real evaluation metrics from the archived EfficientNet-B0 v3 model.", "Model Insights": "Explore class-level performance and inference insights.", "System Architecture": "TerraMind service health and component architecture.", History: "Your saved real diagnosis history.", Reports: "Generated diagnosis reports and downloadable summaries.", Settings: "Manage API connection and application preferences.", Profile: "Pankaj Yadav · Premium Plan", "Live Detection": "Camera-based real-time detection is ready for a connected stream." };
-  return <div className="page-content inner-page"><div className="section-title"><div><h1>{name}</h1><p>{descriptions[name] || "TerraMind AI workspace"}</p></div></div><Card className="empty-state"><span className="empty-icon">◇</span><h2>{name === "History" ? "No recent history in this workspace" : `${name} workspace`}</h2><p>Connect this view to the live TerraMind API as data becomes available. Your existing backend and model remain unchanged.</p></Card></div>;
-}
-
 export default function Home() {
-  const [page, setPage] = useState("Dashboard"); const [menu, setMenu] = useState(false); const [health, setHealth] = useState("Checking");
-  useEffect(() => { fetch(`${API_BASE_URL}/health`).then((r) => r.ok ? setHealth("Operational") : setHealth("Offline")).catch(() => setHealth("Offline")); }, []);
-  const content = useMemo(() => page === "Dashboard" ? <Dashboard go={setPage} /> : page === "Upload Image" ? <Upload /> : page === "Batch Detection" ? <Upload batch /> : page === "AI Chat Assistant" ? <ChatAssistant /> : page === "History" ? <HistoryPage go={setPage} /> : page === "Reports" ? <ReportsPage go={setPage} /> : page === "Model Performance" ? <ModelPerformancePage go={setPage} /> : page === "Model Insights" ? <ModelInsightsPage go={setPage} /> : <GenericPage name={page} go={setPage} />, [page]);
-  return <main className="app-shell"><aside className={`sidebar ${menu ? "open" : ""}`}><div className="brand"><span>✦</span><b>TerraMind <em>AI</em></b></div><div className="nav">{nav.map((section) => <div key={section.group}><label>{section.group}</label>{section.items.map(([name, icon]) => <button className={page === name ? "active" : ""} key={name} onClick={() => { setPage(name === "Plant Diagnosis" ? "Upload Image" : name); setMenu(false); }}><Icon>{icon}</Icon>{name}{name === "Plant Diagnosis" && <small>⌄</small>}</button>)}</div>)}</div><div className="sidebar-status"><span>◉</span><div><b>System Status</b><small>{health === "Operational" ? "All Systems Operational" : health}</small></div></div><footer>v1.0.0</footer></aside>{menu && <button className="sidebar-backdrop" aria-label="Close navigation" onClick={() => setMenu(false)} />}<div className="workspace"><header className="topbar"><button className="hamburger" aria-label="Toggle navigation" aria-expanded={menu} onClick={() => setMenu(!menu)}>☰</button><label className="search"><span aria-hidden="true">⌕</span><input aria-label="Search" placeholder="Search anything…" /><kbd>Ctrl + K</kbd></label><div className="top-actions"><button aria-label="Notifications">♧<sup>3</sup></button><button aria-label="Toggle theme">☾</button><button aria-label="Enter fullscreen">⛶</button><div className="user-avatar">P</div><div className="user-name"><b>Pankaj Yadav</b><small>Premium Plan⌄</small></div></div></header>{content}<div className="copyright">© 2025 TerraMind AI, all rights reserved.<span>Built with <b>♥</b> for Smarter Agriculture ✦</span></div></div></main>;
+  const [page, setPage] = useState("Dashboard");
+  const [menu, setMenu] = useState(false);
+  const [health, setHealth] = useState<HealthResponse | null>(null);
+  const [healthError, setHealthError] = useState<string | null>(null);
+  const [userName, setUserName] = useState("Guest");
+  const [signedIn, setSignedIn] = useState(false);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    let active = true;
+    const refreshHealth = () => getHealth().then((value) => {
+      if (active) { setHealth(value); setHealthError(null); }
+    }).catch((error: unknown) => {
+      if (active) setHealthError(error instanceof Error ? error.message : "Backend unavailable");
+    });
+    void refreshHealth();
+    const timer = window.setInterval(() => void refreshHealth(), 30000);
+    if (supabase) {
+      void supabase.auth.getSession().then(({ data }) => {
+        if (active && data.session?.user) {
+          const user = data.session.user;
+          setSignedIn(true);
+          setUserName(String(user.user_metadata?.full_name || user.user_metadata?.name || user.email || "Guest"));
+        }
+      }).catch(() => undefined);
+      const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+        const user = session?.user;
+        setSignedIn(Boolean(user));
+        setUserName(user ? String(user.user_metadata?.full_name || user.user_metadata?.name || user.email || "Guest") : "Guest");
+      });
+      return () => { active = false; window.clearInterval(timer); data.subscription.unsubscribe(); };
+    }
+    return () => { active = false; window.clearInterval(timer); };
+  }, []);
+
+  const content = useMemo(() => {
+    if (page === "Dashboard") return <Dashboard go={setPage} />;
+    if (page === "Upload Image" || page === "Plant Diagnosis") return <Upload />;
+    if (page === "Live Detection") return <Upload live />;
+    if (page === "Batch Detection") return <Upload batch />;
+    if (page === "AI Chat Assistant") return <ChatAssistant />;
+    if (page === "History") return <HistoryPage go={setPage} />;
+    if (page === "Reports") return <ReportsPage go={setPage} />;
+    if (page === "Treatment Advisor" || page === "Fertilizer Guide" || page === "Care Recommendations") return <RecommendationPage name={page} />;
+    if (page === "RAG Knowledge Base") return <RagKnowledgeBasePage />;
+    if (page === "Agent Orchestrator") return <AgentToolsPage mode="orchestrator" />;
+    if (page === "Agent Workflow") return <AgentToolsPage mode="workflow" />;
+    if (page === "Multimodal AI") return <MultimodalPage />;
+    if (page === "Model Performance") return <ServedModelPerformancePage go={setPage} />;
+    if (page === "Model Insights") return <ServedModelInsightsPage />;
+    if (page === "System Status") return <SystemStatusPage />;
+    if (page === "Settings") return <SettingsPage />;
+    if (page === "Profile") return <ProfilePage />;
+    return <Dashboard go={setPage} />;
+  }, [page]);
+
+  const executeSearch = (event: FormEvent) => {
+    event.preventDefault();
+    const query = search.trim().toLowerCase();
+    if (!query) return;
+    const item = nav.flatMap((section) => section.items).find(([name]) => name.toLowerCase().includes(query));
+    if (item) { setPage(item[0] === "Plant Diagnosis" ? "Upload Image" : item[0]); setSearch(""); }
+  };
+  const healthy = health?.status === "ok";
+  const avatar = userName.trim().charAt(0).toUpperCase() || "G";
+  async function logout() { try { await signOut(); setPage("Profile"); } catch { setPage("Profile"); } }
+
+  return <main className="app-shell">
+    <aside className={`sidebar ${menu ? "open" : ""}`}>
+      <div className="brand"><span>?</span><b>TerraMind <em>AI</em></b></div>
+      <div className="nav">{nav.map((section) => <div key={section.group}><label>{section.group}</label>{section.items.map(([name, icon]) => <button className={page === name || (name === "Plant Diagnosis" && page === "Upload Image") ? "active" : ""} key={name} onClick={() => { setPage(name === "Plant Diagnosis" ? "Upload Image" : name); setMenu(false); }}><Icon>{icon}</Icon>{name}{name === "Plant Diagnosis" && <small>?</small>}</button>)}</div>)}</div>
+      <div className="sidebar-status"><span>?</span><div><b>System Status</b><small>{healthError ? "Backend unavailable" : healthy ? "All Systems Operational" : health ? `Service ${health.status}` : "Checking backend?"}</small></div></div>
+      <footer>{health?.version ? `API ${health.version}` : "TerraMind AI"}</footer>
+    </aside>
+    {menu && <button className="sidebar-backdrop" aria-label="Close navigation" onClick={() => setMenu(false)} />}
+    <div className="workspace">
+      <header className="topbar"><button className="hamburger" aria-label="Toggle navigation" aria-expanded={menu} onClick={() => setMenu(!menu)}>?</button>
+        <form className="search" onSubmit={executeSearch}><span aria-hidden="true">?</span><input aria-label="Search pages" placeholder="Search diseases, treatments, fertilizers, or pages?" value={search} onChange={(event) => setSearch(event.target.value)} /><kbd>Enter</kbd></form>
+        <div className="top-actions"><div className="user-avatar" aria-hidden="true">{avatar}</div><div className="user-name"><b>{userName}</b><small>{supabase ? (signedIn ? "TerraMind account" : "Sign in for saved data") : "Local workspace"}</small></div>{signedIn && <button className="button" onClick={() => void logout()}>Sign out</button>}{!signedIn && <button className="button" onClick={() => setPage("Profile")}>Sign in</button>}</div>
+      </header>
+      {content}
+      <div className="copyright">? {new Date().getFullYear()} TerraMind AI<span>Plant health and agricultural guidance</span></div>
+    </div>
+  </main>;
 }

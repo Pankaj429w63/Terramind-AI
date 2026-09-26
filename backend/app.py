@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile, Request
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile, Request, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
@@ -20,8 +20,15 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 from ml.serving.predictor import InferenceResult, Predictor  # noqa: E402
+from ml.multimodal.runtime import (  # noqa: E402
+    DEFAULT_MULTIMODAL_CHECKPOINT,
+    MultimodalRuntime,
+    load_runtime_if_available,
+    multimodal_status,
+)
 from backend.repositories import repository  # noqa: E402
 from backend.supabase_client import CONFIG as SUPABASE_CONFIG  # noqa: E402
+from backend.supabase_client import get_authenticated_user  # noqa: E402
 from rag.pipelines.knowledge import pipeline as rag_pipeline  # noqa: E402
 from agents.workflow import ChatSupervisorAgent, SupervisorAgent  # noqa: E402
 
@@ -43,11 +50,14 @@ log = logging.getLogger("terramind.api")
 PREDICTOR: Optional[Predictor] = None
 SUPERVISOR: Optional[SupervisorAgent] = None
 CHAT_SUPERVISOR: Optional[ChatSupervisorAgent] = None
+MULTIMODAL_RUNTIME: Optional[MultimodalRuntime] = None
+MULTIMODAL_ERROR: Optional[str] = None
+MULTIMODAL_CHECKPOINT = Path(os.getenv("TERRAMIND_MULTIMODAL_CHECKPOINT", str(DEFAULT_MULTIMODAL_CHECKPOINT)))
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global PREDICTOR, SUPERVISOR, CHAT_SUPERVISOR
+    global PREDICTOR, SUPERVISOR, CHAT_SUPERVISOR, MULTIMODAL_RUNTIME, MULTIMODAL_ERROR
     t0 = time.perf_counter()
     log.info("Starting TerraMind AI backend — loading inference service...")
     try:
@@ -58,6 +68,11 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         log.exception("Failed to load predictor: %s", e)
         PREDICTOR = None
+    MULTIMODAL_RUNTIME, MULTIMODAL_ERROR = load_runtime_if_available(PREDICTOR, MULTIMODAL_CHECKPOINT)
+    if MULTIMODAL_RUNTIME is None:
+        log.info("Multimodal module unavailable: %s", MULTIMODAL_ERROR)
+    else:
+        log.info("Validated multimodal checkpoint loaded (%d latent dimensions).", MULTIMODAL_RUNTIME.model.config.latent_dim)
     yield
     log.info("Shutting down TerraMind AI backend.")
 
@@ -97,6 +112,56 @@ def _require_predictor() -> Predictor:
     if PREDICTOR is None:
         raise HTTPException(status_code=503, detail="Inference service not available. Model failed to load.")
     return PREDICTOR
+
+
+def _current_user(authorization: Optional[str], required: bool = True) -> Optional[Dict]:
+    if not authorization:
+        if required:
+            raise HTTPException(status_code=401, detail="Sign in to access personal data.")
+        return None
+    scheme, _, token = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not token:
+        raise HTTPException(status_code=401, detail="A valid Bearer access token is required.")
+    try:
+        return get_authenticated_user(token)
+    except Exception as error:
+        log.info("Supabase token validation failed: %s", error)
+        raise HTTPException(status_code=401, detail="Invalid or expired access token.") from error
+
+
+def _confidence_threshold(value: Optional[float]) -> float:
+    threshold = value if value is not None else float(os.getenv("TERRAMIND_LOW_CONFIDENCE_THRESHOLD", "0.35"))
+    if not 0.05 <= threshold <= 0.95:
+        raise HTTPException(status_code=500, detail="TERRAMIND_LOW_CONFIDENCE_THRESHOLD must be between 0.05 and 0.95.")
+    return threshold
+
+
+def _owned_local_report(diagnosis_id: str, user_id: str) -> Dict:
+    path = REPORTS / f"{diagnosis_id}.json"
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Diagnosis not found.")
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as error:
+        raise HTTPException(status_code=500, detail="Could not read diagnosis.") from error
+    if payload.get("user_id") != user_id:
+        raise HTTPException(status_code=404, detail="Diagnosis not found.")
+    return payload
+
+
+def _owned_diagnosis(diagnosis_id: str, user_id: str) -> Dict:
+    try:
+        return _owned_local_report(diagnosis_id, user_id)
+    except HTTPException as local_error:
+        if repository.enabled:
+            try:
+                row = repository.get_diagnosis(diagnosis_id, user_id)
+                predictions = sorted(row.get("predictions", []), key=lambda item: item.get("rank", 999))
+                top = [{"class_id": p["class_id"], "label": p["label"], "confidence": p["confidence"], "score": p["confidence"]} for p in predictions]
+                return {**row, "prediction": top[0] if top else {}, "predicted_class": top[0] if top else {}, "top5": top}
+            except Exception:
+                pass
+        raise local_error
 
 
 ALLOWED_EXT = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff"}
@@ -178,19 +243,74 @@ def model_labels() -> Dict:
     return {"num_classes": len(p.label_list()), "labels": p.label_list()}
 
 
+@app.get("/api/multimodal/status", tags=["multimodal"])
+def multimodal_module_status() -> Dict:
+    status = multimodal_status(MULTIMODAL_CHECKPOINT)
+    ready = MULTIMODAL_RUNTIME is not None
+    status.update(
+        status="ready" if ready else "unavailable",
+        trained=ready,
+        checkpoint_valid=ready,
+        training_completed=ready,
+        message=None if ready else MULTIMODAL_ERROR or status["message"],
+    )
+    if ready:
+        status["architecture"] = MULTIMODAL_RUNTIME.model.architecture_info()
+    return status
+
+
+@app.post("/api/multimodal/analyze", tags=["multimodal"])
+async def multimodal_analyze(file: UploadFile = File(..., description="Plant image for multimodal analysis")) -> Dict:
+    if MULTIMODAL_RUNTIME is None:
+        raise HTTPException(
+            status_code=503,
+            detail=MULTIMODAL_ERROR or "Multimodal model is not trained and validated; analysis is unavailable.",
+        )
+    predictor = _require_predictor()
+    data = _validated_image_bytes(file)
+    try:
+        diagnosis = predictor.predict(data)
+        image = predictor._to_pil(data)
+        image_tensor = predictor.transform(image).unsqueeze(0)
+        fused = MULTIMODAL_RUNTIME.encode(image_tensor, diagnosis.predicted_class.label)
+        try:
+            guidance = rag_pipeline.retrieve(
+                f"plant disease treatment and care guidance for {diagnosis.predicted_class.label}", limit=5
+            )
+        except Exception as error:
+            log.warning("Multimodal analysis completed but RAG guidance was unavailable: %s", error)
+            guidance = {"retrieved": 0, "sources": [], "error": "RAG guidance is unavailable."}
+        return {
+            "diagnosis": diagnosis.to_dict(),
+            "metadata_text": fused["metadata_text"],
+            "fused_representation": {"dimension": fused["dimension"], "vector": fused["vector"]},
+            "guidance": guidance,
+            "production_classifier": "EfficientNet-B0",
+            "multimodal_training_state": "completed and validation-gated checkpoint",
+        }
+    except HTTPException:
+        raise
+    except Exception as error:
+        log.exception("Multimodal analysis failed: %s", error)
+        raise HTTPException(status_code=500, detail=f"Multimodal analysis failed: {error}") from error
+
+
 # ==============================
 #  Diagnosis (single & batch)
 # ==============================
 @app.post("/api/diagnosis/predict", tags=["diagnosis"])
 async def predict_single(
     file: UploadFile = File(..., description="Plant leaf or canopy image"),
-    low_confidence_threshold: float = Form(
-        default=0.35, ge=0.05, le=0.95, description="Confidence below this marks prediction as risky"
+    low_confidence_threshold: Optional[float] = Form(
+        default=None, ge=0.05, le=0.95, description="Confidence below this marks prediction as risky"
     ),
     top_k: int = Form(default=5, ge=1, le=89),
-    user_id: Optional[str] = Form(default=None),
+    authorization: Optional[str] = Header(default=None),
     note: Optional[str] = Form(default=None),
 ):
+    user = _current_user(authorization, required=False)
+    user_id = user["id"] if user else None
+    threshold = _confidence_threshold(low_confidence_threshold)
     p = _require_predictor()
     data = _validated_image_bytes(file)
     try:
@@ -206,7 +326,7 @@ async def predict_single(
         "user_id": user_id,
         "note": note,
         "source_filename": file.filename,
-        **_prediction_to_dict(res, low_confidence_threshold),
+        **_prediction_to_dict(res, threshold),
     }
     try:
         (REPORTS / f"{diag_id}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -229,10 +349,13 @@ class BatchOutcome(BaseModel):
 @app.post("/api/diagnosis/batch", tags=["diagnosis"])
 async def predict_batch(
     files: List[UploadFile] = File(..., description="Multiple plant images (real batch inference)"),
-    low_confidence_threshold: float = Form(default=0.35, ge=0.05, le=0.95),
+    low_confidence_threshold: Optional[float] = Form(default=None, ge=0.05, le=0.95),
     top_k: int = Form(default=5, ge=1, le=89),
-    user_id: Optional[str] = Form(default=None),
+    authorization: Optional[str] = Header(default=None),
 ):
+    user = _current_user(authorization, required=False)
+    user_id = user["id"] if user else None
+    threshold = _confidence_threshold(low_confidence_threshold)
     p = _require_predictor()
     if len(files) == 0:
         raise HTTPException(status_code=400, detail="No files uploaded.")
@@ -261,7 +384,7 @@ async def predict_batch(
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "user_id": user_id,
                 "source_filename": meta["filename"],
-                **_prediction_to_dict(res, low_confidence_threshold),
+                **_prediction_to_dict(res, threshold),
             }
             try:
                 (REPORTS / f'{meta["id"]}.json').write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -286,8 +409,10 @@ async def predict_batch(
 async def agentic_diagnosis(
     file: UploadFile = File(..., description="Plant image for the agent workflow"),
     query: Optional[str] = Form(default=None),
-    user_id: Optional[str] = Form(default=None),
+    authorization: Optional[str] = Header(default=None),
 ):
+    user = _current_user(authorization, required=False)
+    user_id = user["id"] if user else None
     if SUPERVISOR is None:
         raise HTTPException(status_code=503, detail="Agent workflow is not available.")
     data = _validated_image_bytes(file)
@@ -336,50 +461,118 @@ async def agentic_diagnosis(
 
 
 @app.get("/api/diagnosis/history", tags=["diagnosis"])
-def diagnosis_history(limit: int = 50):
+def diagnosis_history(limit: int = 50, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
     limit = max(1, min(limit, 500))
-    items = []
-    for p in sorted(REPORTS.glob("*.json"), key=lambda x: x.stat().st_mtime, reverse=True)[:limit]:
-        try:
-            items.append(json.loads(p.read_text(encoding="utf-8")))
-        except Exception:
-            continue
+    items = _local_report_items(limit=limit, user_id=user["id"])
     return {"count": len(items), "items": items}
 
 
 @app.get("/api/diagnosis/history/database", tags=["diagnosis"])
-def database_diagnosis_history(user_id: str, limit: int = 50):
-    if not repository.enabled:
-        raise HTTPException(status_code=503, detail="Supabase is not configured.")
+def database_diagnosis_history(limit: int = 50, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
+    user_id = user["id"]
+    limit = max(1, min(limit, 500))
     try:
-        items = repository.list_history(user_id, max(1, min(limit, 500)))
-        return {"count": len(items), "items": items}
+        if repository.enabled:
+            items = repository.list_history(user_id, limit)
+            return {"count": len(items), "items": items, "source": "supabase"}
     except Exception as e:
-        log.exception("Supabase history query failed: %s", e)
-        raise HTTPException(status_code=502, detail="Could not query Supabase diagnosis history.")
+        log.warning("Supabase history query failed; using local reports: %s", e)
+    items = _local_report_items(limit=limit, user_id=user_id)
+    return {"count": len(items), "items": items, "source": "local"}
 
 
 @app.get("/api/reports/database", tags=["reports"])
-def database_reports(user_id: str, limit: int = 50):
-    if not repository.enabled:
-        raise HTTPException(status_code=503, detail="Supabase is not configured.")
+def database_reports(limit: int = 50, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
+    user_id = user["id"]
+    limit = max(1, min(limit, 500))
     try:
-        items = repository.list_reports(user_id, max(1, min(limit, 500)))
-        return {"count": len(items), "items": items}
+        if repository.enabled:
+            items = repository.list_reports(user_id, limit)
+            return {"count": len(items), "items": items, "source": "supabase"}
     except Exception as e:
-        log.exception("Supabase reports query failed: %s", e)
-        raise HTTPException(status_code=502, detail="Could not query Supabase reports.")
+        log.warning("Supabase reports query failed; using local reports: %s", e)
+    items = _local_report_items(limit=limit, user_id=user_id)
+    return {"count": len(items), "items": items, "source": "local"}
+
+
+def _local_report_items(limit: int = 50, user_id: str | None = None) -> list[Dict]:
+    items = []
+    for path in sorted(REPORTS.glob("*.json"), key=lambda item: item.stat().st_mtime, reverse=True):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if user_id is not None and payload.get("user_id") != user_id:
+            continue
+        items.append(payload)
+        if len(items) >= limit:
+            break
+    return items
 
 
 @app.get("/api/diagnosis/{diagnosis_id}", tags=["diagnosis"])
-def get_diagnosis(diagnosis_id: str):
-    p = REPORTS / f"{diagnosis_id}.json"
-    if not p.exists():
-        raise HTTPException(status_code=404, detail="Diagnosis not found.")
+def get_diagnosis(diagnosis_id: str, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
     try:
-        return json.loads(p.read_text(encoding="utf-8"))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Could not read diagnosis: {e}")
+        return _owned_diagnosis(diagnosis_id, user["id"])
+    except HTTPException as local_error:
+        raise local_error
+
+
+class ExpertReviewRequest(BaseModel):
+    diagnosis_id: str
+    reviewer_decision: str = Field(..., min_length=2, max_length=100)
+    corrected_disease: Optional[str] = Field(default=None, max_length=200)
+    notes: Optional[str] = Field(default=None, max_length=5000)
+
+
+@app.post("/api/reviews", tags=["reviews"])
+def create_expert_review(req: ExpertReviewRequest, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
+    diagnosis = _owned_diagnosis(req.diagnosis_id, user["id"])
+    if not diagnosis.get("low_confidence"):
+        raise HTTPException(status_code=422, detail="Expert review is available for low-confidence diagnoses only.")
+    record = {
+        "diagnosis_id": req.diagnosis_id,
+        "user_id": user["id"],
+        "diagnosis": diagnosis.get("prediction", {}).get("label") or diagnosis.get("predicted_class", {}).get("label"),
+        "confidence": diagnosis.get("prediction", {}).get("score") or diagnosis.get("predicted_class", {}).get("confidence"),
+        "reviewer_decision": req.reviewer_decision,
+        "corrected_disease": req.corrected_disease,
+        "notes": req.notes,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+    try:
+        saved = repository.save_review(record)
+    except Exception as error:
+        log.warning("Expert review database write failed; preserving local review: %s", error)
+        saved = record
+    review_file = REPORTS / f"{req.diagnosis_id}.reviews.json"
+    try:
+        current = json.loads(review_file.read_text(encoding="utf-8")) if review_file.exists() else []
+        current.append(saved)
+        review_file.write_text(json.dumps(current, indent=2), encoding="utf-8")
+    except Exception as error:
+        log.exception("Could not persist local expert review: %s", error)
+        raise HTTPException(status_code=500, detail="Could not save expert review locally.") from error
+    return saved
+
+
+@app.get("/api/reviews/{diagnosis_id}", tags=["reviews"])
+def list_expert_reviews(diagnosis_id: str, authorization: Optional[str] = Header(default=None)):
+    user = _current_user(authorization)
+    _owned_diagnosis(diagnosis_id, user["id"])
+    try:
+        if repository.enabled:
+            return {"items": repository.list_reviews(diagnosis_id, user["id"]), "source": "supabase"}
+    except Exception as error:
+        log.warning("Could not load reviews from Supabase; using local: %s", error)
+    path = REPORTS / f"{diagnosis_id}.reviews.json"
+    items = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    return {"items": [item for item in items if item.get("user_id") == user["id"]], "source": "local"}
 
 
 # ==============================
@@ -396,6 +589,9 @@ def _safe_json(path: Path) -> Optional[Dict]:
 
 @app.get("/api/analytics/summary", tags=["analytics"])
 def analytics_summary() -> Dict:
+    # The serving model's companion metrics are the source of truth for the
+    # currently deployed checkpoint. OUTPUTS/metrics.json may describe an older run.
+    predictor_info = _require_predictor().info()
     metrics = _safe_json(OUTPUTS / "metrics.json") or {}
     full = _safe_json(OUTPUTS / "full_report.json") or {}
     cfg = _safe_json(OUTPUTS / "final_config.json") or {}
@@ -410,12 +606,12 @@ def analytics_summary() -> Dict:
                 return default
         return cur
 
-    def f3(x):
-        return round(float(x) * 100, 2) if isinstance(x, (int, float)) else None
+    def f3(x, digits=2):
+        return round(float(x) * 100, digits) if isinstance(x, (int, float)) else None
 
-    test_acc = f3(_g(metrics, ["test_acc"]) or _g(full, ["test_acc"]))
+    test_acc = f3(predictor_info.get("test_acc"), 4)
     val_acc = f3(_g(metrics, ["best_val_acc"]) or _g(full, ["best_val_acc"]) or _g(metrics, ["val_acc_final_eval"]))
-    macro_f1 = f3(_g(metrics, ["test_macro_f1"]) or _g(full, ["test_macro_f1"]))
+    macro_f1 = f3(predictor_info.get("test_macro_f1"), 4)
     w_f1 = f3(_g(metrics, ["test_weighted_f1"]) or _g(full, ["test_weighted_f1"]))
     overfit = _g(metrics, ["overfitting"]) or _g(full, ["overfitting"]) or {}
     epochs_ran = _g(full, ["epochs_ran"]) or _g(full, ["best_epoch"])
@@ -426,9 +622,10 @@ def analytics_summary() -> Dict:
             "validation_accuracy_pct": val_acc,
             "test_macro_f1_pct": macro_f1,
             "test_weighted_f1_pct": w_f1,
-            "num_classes": 89,
+            "num_classes": predictor_info.get("num_classes", 89),
             "epochs_ran": epochs_ran,
-            "best_epoch": _g(full, ["best_epoch"]),
+            "best_epoch": predictor_info.get("best_epoch"),
+            "best_val_macro_f1_pct": f3(predictor_info.get("best_val_macro_f1"), 4),
             "best_val_loss": _g(full, ["best_val_loss"]),
             "test_loss": _g(metrics, ["test_loss"]) or _g(full, ["test_loss"]),
         },
@@ -620,17 +817,13 @@ def agent_status() -> Dict:
 
 
 @app.post("/api/chat", tags=["chat"])
-async def chat(req: ChatRequest):
+async def chat(req: ChatRequest, authorization: Optional[str] = Header(default=None)):
     if CHAT_SUPERVISOR is None:
         raise HTTPException(status_code=503, detail="Chat supervisor is not available.")
     diag_ctx = None
     if req.diagnosis_id:
-        diag_path = REPORTS / f"{req.diagnosis_id}.json"
-        if diag_path.exists():
-            try:
-                diag_ctx = json.loads(diag_path.read_text(encoding="utf-8"))
-            except Exception:
-                diag_ctx = None
+        user = _current_user(authorization)
+        diag_ctx = _owned_local_report(req.diagnosis_id, user["id"])
     last_user = next((m.content for m in reversed(req.messages) if m.role == "user"), "")
     if not last_user.strip():
         raise HTTPException(status_code=422, detail="At least one non-empty user message is required.")
@@ -641,6 +834,27 @@ async def chat(req: ChatRequest):
     except Exception as error:
         log.exception("Chat workflow failed: %s", error)
         raise HTTPException(status_code=400, detail=f"Chat workflow failed: {error}")
+    user = _current_user(authorization, required=False)
+    if user:
+        chat_event = {
+                "user_id": user["id"], "workflow_id": chat_context.workflow_id,
+                "query": last_user, "response": chat_context.response,
+                "events": chat_context.events,
+                "created_at": datetime.now(timezone.utc).isoformat(),
+            }
+        try:
+            repository.record_chat_event(chat_event)
+        except Exception as error:
+            log.warning("Chat event persistence unavailable: %s", error)
+            local_events = REPORTS / "chat-events"
+            try:
+                local_events.mkdir(parents=True, exist_ok=True)
+                event_file = local_events / f"{user['id']}.json"
+                events = json.loads(event_file.read_text(encoding="utf-8")) if event_file.exists() else []
+                events.append(chat_event)
+                event_file.write_text(json.dumps(events, indent=2), encoding="utf-8")
+            except Exception as local_error:
+                log.warning("Local chat event fallback unavailable: %s", local_error)
     return {
         "response": chat_context.response,
         "diagnosis_context": diag_ctx,

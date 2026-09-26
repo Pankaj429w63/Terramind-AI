@@ -49,8 +49,20 @@ class VectorStore:
             except Exception:
                 self.client = None
                 connected = False
-        if not connected:
-            self._load_local()
+        # Keep the durable local index available even while Qdrant is active.
+        # A newly-created/empty Qdrant collection must not hide a populated
+        # local fallback index.
+        self._load_local()
+        if connected:
+            try:
+                if not self.client.collection_exists(self.collection):
+                    self.client = None
+                else:
+                    info = self.client.get_collection(self.collection)
+                    if getattr(info, "points_count", None) == 0 and self._points:
+                        self.client = None
+            except Exception:
+                self.client = None
 
     @property
     def backend(self) -> str:
@@ -129,7 +141,7 @@ class VectorStore:
                             break
             except Exception:
                 pass
-            return payloads
+            return payloads or [dict(p.get("payload") or {}) for p in self._points]
         return [dict(p.get("payload") or {}) for p in self._points]
 
     def clear(self) -> None:
@@ -149,30 +161,34 @@ class VectorStore:
         if len(chunks) != len(vectors) or not chunks:
             raise ValueError("Chunks and vectors must be non-empty and have equal length.")
         if self.client:
-            models = self._models
-            size = len(vectors[0])
-            if not self.client.collection_exists(self.collection):
-                self.client.create_collection(
-                    self.collection,
-                    vectors_config=models["VectorParams"](size=size, distance=models["Distance"].COSINE),
-                )
-            points = [
-                models["PointStruct"](
-                    id=self.point_id_for_chunk(chunk.chunk_id),
-                    vector=vector,
-                    payload={
-                        "text": chunk.text,
-                        "chunk_id": chunk.chunk_id,
-                        "source": chunk.source,
-                        "title": chunk.title,
-                        "category": chunk.category,
-                        "metadata": chunk.metadata,
-                    },
-                )
-                for chunk, vector in zip(chunks, vectors)
-            ]
-            self.client.upsert(self.collection, points=points, wait=True)
-            return len(chunks)
+            try:
+                models = self._models
+                size = len(vectors[0])
+                if not self.client.collection_exists(self.collection):
+                    self.client.create_collection(
+                        self.collection,
+                        vectors_config=models["VectorParams"](size=size, distance=models["Distance"].COSINE),
+                    )
+                points = [
+                    models["PointStruct"](
+                        id=self.point_id_for_chunk(chunk.chunk_id),
+                        vector=vector,
+                        payload={
+                            "text": chunk.text,
+                            "chunk_id": chunk.chunk_id,
+                            "source": chunk.source,
+                            "title": chunk.title,
+                            "category": chunk.category,
+                            "metadata": chunk.metadata,
+                        },
+                    )
+                    for chunk, vector in zip(chunks, vectors)
+                ]
+                self.client.upsert(self.collection, points=points, wait=True)
+                return len(chunks)
+            except Exception:
+                self.client = None
+                return self.upsert(chunks, vectors)
         # local-memory: deduplicate in-place by chunk_id (update existing or append)
         by_id: dict[str, int] = {}
         for i, p in enumerate(self._points):
@@ -206,12 +222,20 @@ class VectorStore:
     def search(self, vector: list[float], limit: int = 8) -> list[dict[str, Any]]:
         if self.client:
             try:
-                return [
+                results = [
                     {"score": getattr(item, "score", 0.0), **(getattr(item, "payload", None) or {})}
                     for item in self.client.search(self.collection, query_vector=vector, limit=limit)
                 ]
             except Exception:
-                return []
+                self.client = None
+            else:
+                if results:
+                    return results
+                if not self._points:
+                    return []
+        return self._search_local(vector, limit)
+
+    def _search_local(self, vector: list[float], limit: int) -> list[dict[str, Any]]:
         import numpy as np
         query = np.asarray(vector, dtype=float)
         scored: list[dict[str, Any]] = []
@@ -245,21 +269,25 @@ class VectorStore:
                     src = str(payload.get("source") or "unknown")
                     by_source[src] = by_source.get(src, 0) + 1
                 total_points = int(total) if isinstance(total, int) else len(payloads)
-                return {
-                    "backend": self.backend,
-                    "collection": self.collection,
-                    "total_points": total_points,
-                    "by_category": by_category,
-                    "by_source_count": len(by_source),
-                }
+                if total_points > 0 or not self._points:
+                    return {
+                        "backend": self.backend,
+                        "collection": self.collection,
+                        "total_points": total_points,
+                        "by_category": by_category,
+                        "by_source_count": len(by_source),
+                    }
+                self.client = None
             except Exception:
-                return {
-                    "backend": self.backend,
-                    "collection": self.collection,
-                    "total_points": 0,
-                    "by_category": {},
-                    "by_source_count": 0,
-                }
+                if not self._points:
+                    return {
+                        "backend": self.backend,
+                        "collection": self.collection,
+                        "total_points": 0,
+                        "by_category": {},
+                        "by_source_count": 0,
+                    }
+                self.client = None
         by_category: dict[str, int] = {}
         by_source: set[str] = set()
         for point in self._points:

@@ -13,6 +13,26 @@ class KnowledgePipeline:
     def __init__(self, embeddings: TfidfEmbeddings | None = None, store: VectorStore | None = None) -> None:
         self.embeddings = embeddings or TfidfEmbeddings()
         self.store = store or VectorStore()
+        if self.embeddings.recovered_model and self.embeddings.is_fitted:
+            # Cached vectors were produced by the pickle's original vocabulary.
+            # Re-encode their payload text after a compatibility refit so cosine
+            # scores and lexical reranking operate on the same feature space.
+            payloads = self.store.enumerate_payloads()
+            chunks = [
+                Chunk(
+                    text=item["text"],
+                    chunk_id=item["chunk_id"],
+                    source=item.get("source") or "unknown",
+                    title=item.get("title") or item["chunk_id"],
+                    category=item.get("category") or "uncategorized",
+                    metadata=item.get("metadata") or {},
+                )
+                for item in payloads
+                if isinstance(item.get("text"), str) and isinstance(item.get("chunk_id"), str)
+            ]
+            if chunks:
+                vectors = self.embeddings.encode([chunk.text for chunk in chunks])
+                self.store.upsert(chunks, vectors)
         self.indexed = self.embeddings.is_fitted and self.store.stats()["total_points"] > 0
 
     def ingest(self, sources: list[dict[str, str]]) -> dict[str, Any]:

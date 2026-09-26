@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 import uuid
+import logging
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Callable
@@ -9,6 +10,8 @@ from typing import Any, Callable
 from backend.repositories import repository
 from ml.serving.predictor import InferenceResult, Predictor
 from rag.pipelines.knowledge import KnowledgePipeline
+
+log = logging.getLogger("terramind.agents")
 
 
 def now() -> str:
@@ -60,17 +63,20 @@ class Agent:
     def _persist(self, context: WorkflowContext, event: dict[str, Any]) -> None:
         if not context.persist_events:
             return
-        repository.record_agent_execution({
-            "diagnosis_id": context.diagnosis_id,
-            "user_id": context.user_id,
-            "agent_name": event["agent_name"],
-            "status": event["status"],
-            "input": event["input"],
-            "output": event.get("output", {}),
-            "error": event.get("error"),
-            "started_at": event["started_at"],
-            "completed_at": event.get("completed_at"),
-        })
+        try:
+            repository.record_agent_execution({
+                "diagnosis_id": context.diagnosis_id,
+                "user_id": context.user_id,
+                "agent_name": event["agent_name"],
+                "status": event["status"],
+                "input": event["input"],
+                "output": event.get("output", {}),
+                "error": event.get("error"),
+                "started_at": event["started_at"],
+                "completed_at": event.get("completed_at"),
+            })
+        except Exception as error:
+            log.warning("Could not persist %s agent event; continuing locally: %s", self.name, error)
 
 
 class VisionAgent(Agent):
@@ -257,7 +263,10 @@ class ChatSupervisorAgent:
         context.specialist = specialist_name
         retrieval_query = context.query
         if diagnosis_context:
-            predicted = diagnosis_context.get("predicted_class", {}).get("label")
+            predicted = (
+                diagnosis_context.get("predicted_class", {}).get("label")
+                or diagnosis_context.get("prediction", {}).get("label")
+            )
             if predicted:
                 retrieval_query = f"{predicted} {context.query}"
         try:

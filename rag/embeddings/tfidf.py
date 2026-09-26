@@ -36,6 +36,7 @@ class TfidfEmbeddings:
         )
         self._fitted = False
         self._corpus: dict[str, str] = {}
+        self.recovered_model = False
         self._load()
 
     # ---------------------------
@@ -56,6 +57,20 @@ class TfidfEmbeddings:
                     self._corpus = {str(k): str(v) for k, v in raw.items()}
             except Exception:
                 self._corpus = {}
+
+        # Pickles are not stable across scikit-learn versions. A model can
+        # deserialize successfully but still fail on transform (for example,
+        # with an unfitted idf vector). Refit from the persisted text corpus so
+        # local RAG remains usable without changing any knowledge documents.
+        if self._fitted:
+            try:
+                self.vectorizer.transform(["terramind retrieval readiness"])
+            except Exception:
+                self._fitted = False
+                if self._corpus:
+                    corpus_ids = list(self._corpus)
+                    self.fit([self._corpus[key] for key in corpus_ids], corpus_ids)
+                    self.recovered_model = True
 
     def _save_model(self) -> None:
         try:

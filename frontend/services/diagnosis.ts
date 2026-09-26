@@ -6,6 +6,12 @@ export type Diagnosis = { id: string; source_filename?: string; predicted_class:
 export type BatchResult = { id: string; filename: string; error: string | null; prediction: Diagnosis | null };
 export type BatchResponse = { batch_id: string; count: number; errors: number; results: BatchResult[] };
 
+export type ExpertReview = { id?: string; diagnosis_id: string; diagnosis: string; confidence: number; reviewer_decision: string; corrected_disease?: string | null; notes?: string | null; created_at: string };
+
+export function submitExpertReview(review: Pick<ExpertReview, "diagnosis_id" | "reviewer_decision" | "corrected_disease" | "notes">): Promise<ExpertReview> {
+  return apiRequest<ExpertReview>("/api/reviews", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(review) });
+}
+
 function finiteConfidence(prediction: Prediction): number {
   const candidates = [prediction.confidence, prediction.score, prediction.confidence_pct];
   for (const candidate of candidates) {
@@ -29,17 +35,19 @@ function normalizeDiagnosis(value: Diagnosis): Diagnosis {
   };
 }
 
-export function predictImage(file: File, topK = 5): Promise<Diagnosis> {
+export function predictImage(file: File, topK = 5, lowConfidenceThreshold = 0.35): Promise<Diagnosis> {
   const form = new FormData();
   form.append("file", file);
   form.append("top_k", String(topK));
+  form.append("low_confidence_threshold", String(lowConfidenceThreshold));
   return apiRequest<Diagnosis>("/api/diagnosis/predict", { method: "POST", body: form }).then(normalizeDiagnosis);
 }
 
-export function predictBatch(files: File[], topK = 5): Promise<BatchResponse> {
+export function predictBatch(files: File[], topK = 5, lowConfidenceThreshold = 0.35): Promise<BatchResponse> {
   const form = new FormData();
   files.forEach((file) => form.append("files", file));
   form.append("top_k", String(topK));
+  form.append("low_confidence_threshold", String(lowConfidenceThreshold));
   return apiRequest<BatchResponse>("/api/diagnosis/batch", { method: "POST", body: form }).then((response) => ({
     ...response,
     results: response.results.map((item) => ({ ...item, prediction: item.prediction ? normalizeDiagnosis(item.prediction) : null })),

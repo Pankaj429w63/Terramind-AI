@@ -10,6 +10,7 @@ export type RagStats = {
   sources_indexed: number;
   tfidf_size_bytes: number;
   by_category: Record<string, number>;
+  embeddings?: { backend?: string; vector_size?: number; vocabulary_size?: number; corpus_chunks_tracked?: number; model_size_bytes?: number; fitted?: boolean };
 };
 
 export type AgentStatus = {
@@ -42,7 +43,17 @@ export type DashboardAggregate = {
 };
 
 export async function getRagStats(): Promise<RagStats> {
-  return apiRequest<RagStats>("/api/rag/stats");
+  const raw = await apiRequest<Partial<RagStats> & { by_source_count?: number; embeddings?: RagStats["embeddings"] }>("/api/rag/stats");
+  return {
+    indexed: Boolean(raw.indexed),
+    backend: raw.backend,
+    collection: raw.collection,
+    total_points: Number(raw.total_points) || 0,
+    sources_indexed: Number(raw.sources_indexed ?? raw.by_source_count) || 0,
+    tfidf_size_bytes: Number(raw.tfidf_size_bytes ?? raw.embeddings?.model_size_bytes) || 0,
+    by_category: raw.by_category ?? {},
+    embeddings: raw.embeddings,
+  };
 }
 
 export async function getAgentStatus(): Promise<AgentStatus> {

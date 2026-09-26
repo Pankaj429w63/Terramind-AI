@@ -120,6 +120,47 @@ def slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", s.strip().lower()).strip("_")
 
 
+# Canonical crop token for every PlantWild class prefix, longest-first so that
+# multi-word crops (e.g. "bell pepper") are matched before single words ("bell").
+# This is what keeps `bell pepper leaf spot` (class 14) grouped under the
+# `bell pepper` crop instead of a spurious `bell pepper spot` crop.
+CANONICAL_CROPS = [
+    "bell pepper", "apple", "banana", "basil", "bean", "blueberry", "broccoli",
+    "cabbage", "carrot", "cauliflower", "celery", "cherry", "citrus", "coffee",
+    "corn", "cucumber", "eggplant", "garlic", "ginger", "grape", "grapevine",
+    "lettuce", "maple", "peach", "plum", "potato", "raspberry", "rice", "soybean",
+    "squash", "strawberry", "tobacco", "tomato", "zucchini",
+]
+
+
+def split_crop_and_disease(label: str) -> tuple[str, str | None, str]:
+    """Split a PlantWild class label into (crop, disease, class_type).
+
+    Healthy classes end in a bare `leaf` (e.g. `apple leaf`) or belong to the
+    `bell pepper leaf spot` healthy class; every other class is a disease whose
+    text after the canonical crop prefix is the disease name.
+    """
+    lowered = label.strip().lower()
+    # Healthy-leaf classes are the bare `<crop> leaf` labels.
+    if lowered.endswith(" leaf"):
+        prefix = lowered[: -len(" leaf")].strip()
+        for crop in CANONICAL_CROPS:
+            if prefix == crop:
+                return crop, None, "healthy_leaf"
+    # Find the canonical crop prefix for this label.
+    for crop in CANONICAL_CROPS:
+        if lowered == crop or lowered.startswith(crop + " "):
+            remainder = lowered[len(crop):].strip()
+            # `bell pepper leaf spot` is a healthy class in PlantWild.
+            if crop == "bell pepper" and remainder == "leaf spot":
+                return crop, None, "healthy_leaf"
+            if not remainder:
+                return crop, None, "healthy_leaf"
+            return crop, remainder, "disease"
+    # Fallback: no canonical crop matched — keep the label as crop, no disease.
+    return label.strip(), None, "healthy_leaf"
+
+
 def parse_classes() -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for line in CLASSES_RAW.splitlines():
@@ -127,52 +168,7 @@ def parse_classes() -> list[dict[str, Any]]:
             continue
         idx_str, label = line.strip().split(maxsplit=1)
         idx = int(idx_str)
-        tokens = label.split()
-        is_healthy = tokens[-1] == "leaf" and len(tokens) <= 2
-        if is_healthy:
-            crop = " ".join(tokens[:-1]).strip() or tokens[0]
-            disease = None
-            class_type = "healthy_leaf"
-        else:
-            if tokens[-1] in {"leaf"} and len(tokens) > 2:
-                crop = " ".join(tokens[:-1])
-                disease = None
-                class_type = "healthy_leaf"
-            else:
-                crop_tokens: list[str] = []
-                disease_tokens: list[str] = []
-                crop_keywords = {"apple", "banana", "basil", "bean", "bell", "blueberry",
-                                 "broccoli", "cabbage", "carrot", "cauliflower", "celery",
-                                 "cherry", "citrus", "coffee", "corn", "cucumber", "eggplant",
-                                 "garlic", "ginger", "grape", "grapevine", "lettuce", "maple",
-                                 "peach", "plum", "potato", "raspberry", "rice", "soybean",
-                                 "squash", "strawberry", "tobacco", "tomato", "zucchini"}
-                hit_crop = False
-                for t in tokens:
-                    if t.lower() in crop_keywords or (hit_crop and t.lower() == "pepper"):
-                        crop_tokens.append(t)
-                        if t.lower() in {"bell"}:
-                            pass
-                        else:
-                            hit_crop = True
-                    else:
-                        if hit_crop:
-                            disease_tokens.append(t)
-                        else:
-                            crop_tokens.append(t)
-                crop = " ".join(crop_tokens).strip()
-                disease = " ".join(disease_tokens).strip() or None
-                class_type = "disease" if disease else "healthy_leaf"
-                if not disease and class_type == "healthy_leaf":
-                    pass
-        if not disease and class_type != "healthy_leaf":
-            class_type = "healthy_leaf"
-        if not disease:
-            crop = label.replace(" leaf", "").strip()
-            if crop == label:
-                parts = label.split()
-                if len(parts) == 2 and parts[1] == "leaf":
-                    crop = parts[0]
+        crop, disease, class_type = split_crop_and_disease(label)
         rows.append({
             "class_index": idx,
             "class_label": label,

@@ -3,7 +3,7 @@ import { supabase, requireSupabase } from "./supabase";
 import { LocalHistoryItem } from "./history";
 
 export type ReportRecord = { id: string; diagnosis_id: string | null; bucket: string; storage_path: string | null; report_type: string; created_at: string };
-export type ReportResponse = { count: number; items: ReportRecord[] };
+export type ReportResponse = { count: number; items: ReportRecord[]; source?: "supabase" | "local" };
 
 export async function getReports(limit = 50): Promise<ReportRecord[]> {
   const { data, error } = await requireSupabase()
@@ -16,20 +16,16 @@ export async function getReports(limit = 50): Promise<ReportRecord[]> {
 }
 
 export async function getSupabaseReports(userId: string, limit = 50): Promise<ReportResponse> {
-  return apiRequest<ReportResponse>(`/api/reports/database?user_id=${encodeURIComponent(userId)}&limit=${limit}`);
+  void userId;
+  return apiRequest<ReportResponse>(`/api/reports/database?limit=${limit}`);
 }
 
 export async function listReports(userId?: string, limit = 50): Promise<{ items: (ReportRecord | LocalHistoryItem)[]; source: "supabase" | "local"; count: number }> {
-  if (userId && supabase) {
-    try {
-      const res = await getSupabaseReports(userId, limit);
-      return { items: res.items, source: "supabase", count: res.count };
-    } catch {
-      // fall through to local reports (diagnosis json files)
-    }
-  }
-  const res = await apiRequest<{ count: number; items: LocalHistoryItem[] }>(`/api/diagnosis/history?limit=${limit}`);
-  return { items: res.items, source: "local", count: res.count };
+  const session = await supabase?.auth.getSession();
+  const authenticatedId = session?.data.session?.user.id;
+  if (!authenticatedId) throw new Error("Sign in to view your reports.");
+  const res = await getSupabaseReports(userId || authenticatedId, limit);
+  return { items: res.items, source: res.source === "local" ? "local" : "supabase", count: res.count };
 }
 
 export async function getReportDownloadUrl(report: ReportRecord, expiresIn = 3600): Promise<string> {
