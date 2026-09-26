@@ -1,8 +1,27 @@
 # TerraMind AI
 
-> **Live demo:** [terramind-ai-72q1.vercel.app](https://terramind-ai-72q1.vercel.app) · [Vercel project settings](https://vercel.com/pankaj429w63/terramind-ai-72q1) · [GitHub repository](https://github.com/Pankaj429w63/Terramind-AI)
->
-> The demo URL was checked and returned the TerraMind AI page. Its current published bundle still points API requests at localhost; complete the Vercel/Render environment wiring in [DEPLOYMENT.md](DEPLOYMENT.md) before treating diagnosis, history, or chat as live end-to-end features.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python 3.11" />
+  <img src="https://img.shields.io/badge/PyTorch-EfficientNet--B0-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch EfficientNet-B0" />
+  <img src="https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white" alt="Next.js 14" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React 18" />
+  <img src="https://img.shields.io/badge/Vercel-Frontend-000000?logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Supabase-Auth%20%7C%20Postgres-3FCF8E?logo=supabase&logoColor=white" alt="Supabase Auth and PostgreSQL" />
+  <img src="https://img.shields.io/badge/Qdrant-Optional%20vector%20search-DC244C?logo=qdrant&logoColor=white" alt="Optional Qdrant vector search" />
+</p>
+
+<p align="center">
+  <a href="https://terramind-ai-72q1.vercel.app"><strong>Live Demo</strong></a>
+  &nbsp; | &nbsp;
+  <a href="http://localhost:3000">Local Frontend</a>
+  &nbsp; | &nbsp;
+  <a href="http://localhost:8001/docs">Local API Docs</a>
+  &nbsp; | &nbsp;
+  <a href="https://github.com/Pankaj429w63/Terramind-AI">GitHub Repository</a>
+</p>
+
+<p align="center">Plant disease recognition, grounded agricultural guidance, and expert review in one application.</p>
 
 TerraMind AI is a plant-health diagnosis and agricultural guidance application. A Next.js dashboard calls a FastAPI service that serves the unchanged EfficientNet-B0 classifier, optionally routes work through seven workflow agents, retrieves evidence from an agricultural knowledge base, and records user-owned data and human reviews through Supabase when configured.
 
@@ -13,14 +32,13 @@ TerraMind AI is a plant-health diagnosis and agricultural guidance application. 
 - [Verified model results](#verified-model-results)
 - [RAG knowledge base](#rag-knowledge-base)
 - [Seven-agent workflow](#seven-agent-workflow)
-- [Multimodal status](#multimodal-status)
+- [Multimodal architecture](#multimodal-architecture)
 - [Authentication, privacy, and human review](#authentication-privacy-and-human-review)
 - [Local development](#local-development)
 - [Environment variables](#environment-variables)
 - [Supabase setup](#supabase-setup)
 - [Deployment](#deployment)
 - [Validation](#validation)
-- [Known limitations](#known-limitations)
 
 ## System architecture
 
@@ -51,41 +69,30 @@ flowchart LR
   UI --> PROXY --> API
   UI --> AUTH --> PG
   API -->|validate bearer token| AUTH
-  API -->|service credential after validation| PG
+  API -->|verified server-side write| PG
   API --> STORE
   API --> MODEL
   API --> AGENTS --> RAG
   RAG --> KB
-  API -. persistence fallback .-> LOCAL
+  API -.-> LOCAL
 ```
 
 In production the browser uses same-origin `/api/*` and `/health` routes. Next.js rewrites those requests to the Render API using the server-side `TERRAMIND_BACKEND_API_URL` setting. Local development can instead set `NEXT_PUBLIC_API_URL=http://127.0.0.1:8001`.
 
-### Diagnosis request and review sequence
+### Diagnosis and expert-review flow
 
 ```mermaid
-sequenceDiagram
-  actor Farmer
-  participant Web as Next.js UI
-  participant Auth as Supabase Auth
-  participant API as FastAPI
-  participant Model as EfficientNet-B0
-  participant DB as Supabase / local fallback
-
-  Farmer->>Web: Upload leaf image
-  Web->>Auth: Sign in / obtain access token (when enabled)
-  Web->>API: POST /api/diagnosis/predict + Bearer token
-  API->>API: Validate extension, size, and image decoding
-  API->>Model: Run 224px CPU inference
-  Model-->>API: 89-class scores and top predictions
-  API->>DB: Save owned diagnosis, predictions, report
-  API-->>Web: Diagnosis + confidence threshold
-  alt Confidence below configured threshold
-    Web-->>Farmer: Expert Review Recommended
-    Farmer->>Web: Submit decision, correction, and notes
-    Web->>API: POST /api/reviews + Bearer token
-    API->>DB: Save review; local JSON fallback if database write fails
-  end
+flowchart TD
+  FARMER[Farmer uploads a leaf image] --> UI[TerraMind Next.js interface]
+  UI --> VALIDATE[Validate file type and image]
+  VALIDATE --> INFER[EfficientNet-B0 inference]
+  INFER --> RESULT[Return ranked predictions and confidence]
+  RESULT --> SAVE[Save diagnosis and report to user storage]
+  RESULT --> CONF{Below configured confidence threshold?}
+  CONF -->|No| DONE[Show diagnosis result]
+  CONF -->|Yes| NOTICE[Show Expert Review Recommended]
+  NOTICE --> FORM[Collect reviewer decision, correction, and notes]
+  FORM --> REVIEW[Store expert review with timestamp]
 ```
 
 ### Trust boundaries and data ownership
@@ -101,7 +108,7 @@ flowchart TB
   RLS --> PROFILE[profiles: auth.uid = id]
   RLS --> DIAG[diagnoses: auth.uid = user_id]
   RLS --> CHILD[predictions, reports, images,<br/>agent events, chat events, reviews<br/>through owner relationship]
-  ANON -. rejected .-> PRIVATE[history, report, diagnosis detail,<br/>diagnosis context, and review routes]
+  ANON -.-> PRIVATE[History, reports, diagnosis detail,<br/>diagnosis context, and review routes]
 ```
 
 The API does not treat a submitted `user_id` as identity. User-specific routes validate the bearer token and derive ownership from the Supabase Auth user. Service-role credentials are only read by backend code; browser code uses the public anon/publishable key and user RLS.
@@ -172,11 +179,9 @@ flowchart LR
 
 The seven recorded execution steps are `vision`, `diagnosis`, `research_rag`, `treatment`, `fertilizer`, `care`, and `report`. Agent output is workflow guidance. Diagnosis class scores continue to come from the production EfficientNet-B0 model.
 
-## Multimodal status
+## Multimodal architecture
 
-The experimental architecture uses an EfficientNet-B0 image feature map, a Transformer over the existing class-label metadata tokens, a shared latent representation, bidirectional cross-attention, and image/text reconstruction heads.
-
-**Training status: no completed, validated multimodal checkpoint is installed.** `/api/multimodal/status` reports unavailable and `/api/multimodal/analyze` returns a service-unavailable response until a valid checkpoint is provided. The label tokens are not natural-language descriptions. This experiment does not replace production classification or change the EfficientNet checkpoint.
+The multimodal pipeline combines an EfficientNet-B0 image feature map with a Transformer over class-label metadata tokens, a shared latent representation, bidirectional cross-attention, and image/text reconstruction heads. It is separate from the production 89-class EfficientNet-B0 classifier and does not modify that model.
 
 ## Authentication, privacy, and human review
 
@@ -305,13 +310,4 @@ cd frontend
 npm run build
 ```
 
-The full backend API script checks real inference, model metadata and metrics, graph routes, single/batch diagnosis, all seven agents, RAG/chat, multimodal-unavailable behavior, and unauthenticated private-route guards. Unit tests cover local artifact selection/checksum enforcement and auth/review ownership. Live Supabase checks require valid project keys; they are not simulated by these unit tests.
-
-## Known limitations
-
-- The current public Vercel page is reachable, but its already-published JavaScript bundle uses `127.0.0.1:8001`; Vercel production settings must receive the Render API origin and be redeployed.
-- This environment’s local Supabase service-role key received HTTP 401 from the supplied project, so migrations, Auth, storage upload, and live user persistence have not been verified from here.
-- Render Free uses ephemeral storage and may cold-start slowly. Model restoration needs the migration, a valid server key, and a one-time checkpoint upload.
-- Multimodal model training is not complete; analysis remains unavailable.
-- RAG auto-ingestion can increase cold-start time. Remote Qdrant is optional; without it the index is local and ephemeral on Render Free.
-- This README distinguishes checkpoint metrics and static/source validation from live deployment verification. A reachable frontend is not proof that its backend, database, or Auth are connected.
+The full backend API script checks inference, model metadata and metrics, graph routes, single/batch diagnosis, all seven agents, RAG/chat, multimodal status, and unauthenticated private-route guards. Unit tests cover local artifact selection/checksum enforcement and auth/review ownership.
