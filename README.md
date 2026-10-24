@@ -34,6 +34,7 @@ TerraMind AI is a plant-health diagnosis and agricultural guidance application. 
 - [RAG knowledge base](#rag-knowledge-base)
 - [Seven-agent workflow](#seven-agent-workflow)
 - [Multimodal architecture](#multimodal-architecture)
+- [Fusion models (early, intermediate, late)](#fusion-models-early-intermediate-late)
 - [Authentication, privacy, and human review](#authentication-privacy-and-human-review)
 - [Local development](#local-development)
 - [Environment variables](#environment-variables)
@@ -129,18 +130,18 @@ The API does not treat a submitted `user_id` as identity. User-specific routes v
 
 ## Verified model results
 
-These metrics were read from the currently served EfficientNet-B0 checkpoint and its companion result file and were asserted by the backend API validation script. They are checkpoint evaluation results, not a promise of field performance.
+There are multiple persisted evaluation records for the unchanged production checkpoint. They have different recorded protocols and must not be silently combined. The stored companion record does not include its sample count; independent evaluation measured the checkpoint over all official test rows and over the duplicate-free eligible subset. The candidate comparison below is the fair, same-subset comparison.
 
-| Measure | Verified value |
-|---|---:|
-| Backbone | EfficientNet-B0 |
-| PlantWild output classes | 89 |
-| Input resolution | 224 × 224 |
-| Test accuracy | **60.0218%** |
-| Test macro F1 | **56.6969%** |
-| Best validation macro F1 | **56.5659%** |
-| Best epoch | **20** |
+| Model / evaluation | N | Accuracy | Macro-F1 | Weighted-F1 | Top-3 |
+|---|---:|---:|---:|---:|---:|
+| Stored production result artifact | Not recorded | 60.0218% | 56.6969% | Unavailable | Unavailable |
+| Independent production eval, all official test rows | 3,677 | 59.72% | 56.50% | 59.32% | 79.93% |
+| Production baseline, duplicate-free official subset | 3,545 | 60.68% | 57.40% | 60.32% | 80.45% |
+| One-epoch weighted-loss candidate, same subset | 3,545 | 60.93% | 57.90% | 60.94% | 80.82% |
 
+The candidate is experimental, unpromoted, and not loaded for inference. The discrepancy among stored and independent production values is retained in [the generated report](outputs/research/final_report.md); the stored artifact lacks enough evaluation detail to reconcile it. Early, intermediate, and late fusion are implemented but untrained because valid paired, non-label-derived text is unavailable; they have no performance metrics.
+
+Training selects on validation macro-F1, never on test metrics. The official split has 13,045 train, 1,820 validation, and 3,677 test rows; duplicate filtering leaves 12,544, 1,751, and 3,545 eligible images. These are benchmark results, not a promise of field performance or a confirmed disease diagnosis.
 The checkpoint is intentionally not committed by default. Its file is not changed by this project’s auth, review, or deployment code. See [private checkpoint setup](DEPLOYMENT.md#model-checkpoint-on-render-free) for a checksum-verified Supabase Storage option for Render’s ephemeral filesystem.
 
 ## RAG knowledge base
@@ -183,6 +184,55 @@ The seven recorded execution steps are `vision`, `diagnosis`, `research_rag`, `t
 ## Multimodal architecture
 
 The multimodal pipeline combines an EfficientNet-B0 image feature map with a Transformer over class-label metadata tokens, a shared latent representation, bidirectional cross-attention, and image/text reconstruction heads. It is separate from the production 89-class EfficientNet-B0 classifier and does not modify that model.
+
+**Research validity:** PlantWild class labels and GPT-generated class prompts are class-conditioned, not independent paired observations. They are not valid disease-classifier text inputs at test time. The current autoencoder has not been trained and is not an evaluated early/intermediate/late fusion classifier. `/api/multimodal/status` reports the three fusion classifiers as unavailable until a valid paired text modality and trained checkpoints exist. See [the evidence-based research report](outputs/research/final_report.md) and [repository implementation plan](implementation_plan.md).
+
+## Fusion models (early, intermediate, late)
+
+Three **separately selectable** fusion architectures are implemented in `ml/fusion/` and served by `ml/fusion/inference.py`. They are not renamed copies: early fusion projects and combines both modalities before the shared head, intermediate fusion uses a learned gate over a joint projection so both modalities influence the representation, and late fusion keeps separate image and text classifiers combined by a validation-tuned weight.
+
+**Current status: implemented, executable, and unit-tested — but not trained and not evaluated.** No fusion checkpoint is installed under `outputs/fusion/`. Training is gated on data validation: it refuses to start unless a registered text origin is present, the sample IDs are eligible under `outputs/research/fusion_eligibility_manifest.json`, and **both the train and validation splits contain paired text**. Today only the train split has paired text, and it is model-generated, so the gates do not pass. There are therefore no fusion metrics; see [the implementation report](outputs/research/three_fusion_models_implementation_report.md).
+
+### Commands
+
+```powershell
+# 1. Validate official splits, the eligibility manifest, and paired-text coverage
+python -m scripts.validate_fusion_dataset --paired-csv data/paired_model_observations.csv
+
+# 2. Train one model per architecture (gates must pass first)
+python -m ml.fusion.train --kind early        --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+python -m ml.fusion.train --kind intermediate --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+python -m ml.fusion.train --kind late         --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+
+# 3. Text-only baseline
+python -m ml.fusion.text_only --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+
+# 4. Final test evaluation, then the measured-only comparison report
+python -m ml.fusion.evaluate --checkpoint outputs/fusion/early/best_model.pth        --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+python -m ml.fusion.evaluate --checkpoint outputs/fusion/intermediate/best_model.pth --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+python -m ml.fusion.evaluate --checkpoint outputs/fusion/late/best_model.pth         --paired-data data/paired_model_observations.csv --eligibility-manifest outputs/research/fusion_eligibility_manifest.json
+python -m scripts.fusion_comparison_report
+```
+
+### Selecting a model in the application
+
+`GET /api/fusion/status` lists the three kinds with their availability. `POST /api/fusion/analyze` takes a multipart form with `file`, `kind` (`early` | `intermediate` | `late`), optional `paired_text`, and `top_k`. The response reports `modalities_used`, `multimodal`, and `image_only_fallback`.
+
+- Early and intermediate fusion require text; a missing-text request returns `422`.
+- Late fusion has a genuine image-only branch. Without text it returns `modalities_used: ["image"]` with `image_only_fallback: true` and a notice that the result **is not multimodal**.
+- A missing checkpoint returns `503`; an unknown kind returns `422`.
+- The production image-only EfficientNet-B0 classifier remains the default and is unaffected.
+
+## Reproduce the current retrieval evaluation and report
+
+```powershell
+python scripts/evaluate_rag_retrieval.py
+python scripts/compare_efficientnet_experiments.py
+python scripts/render_efficientnet_artifacts.py
+python scripts/generate_research_report.py
+```
+
+These commands evaluate the existing manually labeled ten-query RAG set and regenerate comparison/error plots and the report from saved predictions and metrics. Final report and comparison files are written under `outputs/research/`; the experiment comparison is baseline versus candidate, with fusion rows marked unavailable. `scripts/analyze_efficientnet_errors.py` reruns image-level error analysis and requires the local PlantWild dataset.
 
 ## Authentication, privacy, and human review
 
@@ -245,9 +295,13 @@ Keep these environments separate. Do not copy the backend service-role key into 
 | `TERRAMIND_RAG_AUTO_INGEST` | Render: `true` | Index bundled JSON records when the vector store is empty |
 | `TERRAMIND_CORS_ORIGINS` | No | Explicit comma-separated frontend and local development origins |
 | `TERRAMIND_LOW_CONFIDENCE_THRESHOLD` | No | Default threshold in `[0.05, 0.95]`; defaults to `0.35` |
+| `TERRAMIND_TORCH_THREADS` | No | CPU inference thread cap; defaults to `1` for memory-constrained hosts |
+| `TERRAMIND_LLM_BASE_URL`, `TERRAMIND_LLM_MODEL` | No | Optional OpenAI-compatible generation provider; absent uses cited evidence templates |
+| `TERRAMIND_LLM_API_KEY` | No | Optional server-only provider credential |
 | `QDRANT_URL`, `QDRANT_API_KEY` | No | Optional remote Qdrant endpoint and credential |
 | `QDRANT_PATH` | No | Optional local Qdrant data path; ephemeral on Render Free |
 | `TERRAMIND_MULTIMODAL_CHECKPOINT` | No | Experimental checkpoint path; unset means unavailable |
+| `TERRAMIND_FUSION_DEVICE` | No | Device for fusion inference; defaults to `cuda` and falls back to CPU when CUDA is unavailable |
 
 Root [.env.example](.env.example) contains backend variables only.
 
@@ -303,9 +357,10 @@ Run from the repository root (the API test requires the model and sample image a
 python -m compileall -q backend tests scripts
 python scripts/test_backend_api.py
 python scripts/test_rag_json_loader.py
-python -m unittest tests.test_multimodal
-python tests/test_auth_reviews.py
-python tests/test_model_artifacts.py
+python -m unittest discover -s tests -p "test_multimodal.py"
+python -m unittest discover -s tests -p "test_fusion_inference.py"
+python -m unittest discover -s tests -p "test_auth_reviews.py"
+python -m unittest discover -s tests -p "test_model_artifacts.py"
 git diff --check
 cd frontend
 npm run build

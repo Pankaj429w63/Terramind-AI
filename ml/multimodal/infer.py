@@ -11,8 +11,9 @@ from .runtime import DEFAULT_MULTIMODAL_CHECKPOINT, MultimodalRuntime
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run production EfficientNet diagnosis plus a validated multimodal fused representation.")
+    parser = argparse.ArgumentParser(description="Run EfficientNet diagnosis plus a multimodal representation using observed paired text.")
     parser.add_argument("image", type=Path, help="Plant image file")
+    parser.add_argument("--paired-text", required=True, help="Observed non-label-derived text paired with this image")
     parser.add_argument("--production-checkpoint", type=Path, default=None)
     parser.add_argument("--multimodal-checkpoint", type=Path, default=DEFAULT_MULTIMODAL_CHECKPOINT)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -25,7 +26,7 @@ def main() -> None:
     diagnosis = predictor.predict(args.image)
     image = predictor._to_pil(args.image)
     image_tensor = predictor.transform(image).unsqueeze(0)
-    fused = runtime.encode(image_tensor, diagnosis.predicted_class.label)
+    fused = runtime.encode(image_tensor, args.paired_text)
     print(json.dumps({
         "diagnosis": diagnosis.to_dict(),
         "metadata_text": fused["metadata_text"],

@@ -18,6 +18,8 @@ export type MultimodalStatus = {
     paired_natural_language_descriptions: boolean;
   };
   production_diagnosis: string;
+  model_availability: { name: string; status: string; trained: boolean; requires_text: boolean }[];
+  text_modality_gate: string;
   message: string | null;
 };
 
@@ -34,8 +36,9 @@ export function getMultimodalStatus(): Promise<MultimodalStatus> {
   return apiRequest<MultimodalStatus>("/api/multimodal/status");
 }
 
-export function analyzeMultimodalImage(file: File): Promise<MultimodalAnalysis> {
+export function analyzeMultimodalImage(file: File, pairedText: string): Promise<MultimodalAnalysis> {
   const form = new FormData();
   form.append("file", file);
+  form.append("paired_text", pairedText);
   return apiRequest<MultimodalAnalysis>("/api/multimodal/analyze", { method: "POST", body: form });
 }

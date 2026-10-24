@@ -1,0 +1,397 @@
+{
+  "store": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\annotation\\model_generated\\generation_records.csv",
+  "records": 7239,
+  "status_counts": {
+    "generated": 7238,
+    "flagged_for_review": 1,
+    "unreadable_image": 0,
+    "failed": 0
+  },
+  "eligible_samples": 17870,
+  "missing_generations": 10631,
+  "successful_generated": 7238,
+  "flagged_uncertain": 1,
+  "failed": 0,
+  "unreadable_or_changed_images": 0,
+  "duplicate_description_groups": 598,
+  "duplicate_description_rows": 5698,
+  "duplicate_description_examples": [
+    {
+      "text": "a close - up view of the plant surface showing the fruit on the tree",
+      "sample_ids": [
+        "apple black rot/11.jpg",
+        "apple black rot/12.jpg",
+        "apple black rot/147.jpg",
+        "apple black rot/149.jpg",
+        "apple black rot/3.jpg"
+      ],
+      "size": 92
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the bark",
+      "sample_ids": [
+        "apple black rot/14.jpg",
+        "apple black rot/17.jpg",
+        "apple black rot/171.jpg",
+        "apple black rot/58.jpg",
+        "apple black rot/67.jpg"
+      ],
+      "size": 10
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit and the fruit on the tree",
+      "sample_ids": [
+        "apple black rot/144.jpg",
+        "apple black rot/6.jpg",
+        "apple black rot/google_0090.jpg",
+        "apple black rot/google_0115.jpg",
+        "apple rust/156.jpg"
+      ],
+      "size": 12
+    },
+    {
+      "text": "a close - up view of the plant surface showing the leaves and flowers",
+      "sample_ids": [
+        "apple black rot/148.jpg",
+        "apple leaf/117.jpg",
+        "apple leaf/google_0423.jpg",
+        "apple mosaic virus/15.jpg",
+        "apple mosaic virus/22.jpg"
+      ],
+      "size": 53
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit and the fruit on the plant",
+      "sample_ids": [
+        "apple black rot/15.jpg",
+        "apple black rot/38 - copy.jpg",
+        "apple scab/27.jpg",
+        "apple scab/43 - copy.jpg",
+        "apple scab/google_0297.jpg"
+      ],
+      "size": 12
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the trunk",
+      "sample_ids": [
+        "apple black rot/152.jpg",
+        "banana panama disease/google_0063 - copy (2).jpg"
+      ],
+      "size": 2
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the roots",
+      "sample_ids": [
+        "apple black rot/155.jpg",
+        "banana panama disease/google_0030.jpg"
+      ],
+      "size": 2
+    },
+    {
+      "text": "a close - up view of the plant surface showing the brown substance",
+      "sample_ids": [
+        "apple black rot/16.jpg",
+        "citrus canker/237.jpg"
+      ],
+      "size": 2
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit",
+      "sample_ids": [
+        "apple black rot/167.jpg",
+        "apple black rot/google_0026.jpg",
+        "apple black rot/google_0031.jpg",
+        "apple black rot/google_0033.jpg",
+        "apple black rot/google_0046.jpg"
+      ],
+      "size": 48
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the bark on a tree",
+      "sample_ids": [
+        "apple black rot/20.jpg",
+        "apple black rot/21.jpg"
+      ],
+      "size": 2
+    }
+  ],
+  "checks": {
+    "empty_or_malformed": {
+      "count": 0,
+      "blocking": false,
+      "note": "empty, too short, or boilerplate-only text",
+      "examples": []
+    },
+    "class_label_leakage": {
+      "count": 2,
+      "blocking": false,
+      "note": "text contains a PlantWild class name",
+      "examples": [
+        {
+          "sample_id": "apple scab/google_0074.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "coffee leaf rust/google_0056.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        }
+      ]
+    },
+    "unsupported_disease_claim": {
+      "count": 68,
+      "blocking": false,
+      "note": "text asserts a cause/disease/treatment beyond visible evidence",
+      "examples": [
+        {
+          "sample_id": "apple mosaic virus/google_0063.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple rust/43.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease', 'infect']"
+        },
+        {
+          "sample_id": "apple rust/google_0120.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple rust/google_0244.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple rust/google_0245.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple scab/22.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/29.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/google_0041.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/google_0240.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "banana panama disease/31.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        }
+      ]
+    },
+    "metadata_echo": {
+      "count": 0,
+      "blocking": false,
+      "note": "text repeats paths, ids, or URLs instead of visible evidence",
+      "examples": []
+    },
+    "missing_or_invalid_provenance": {
+      "count": 0,
+      "blocking": true,
+      "note": "provenance/source_reference failed validation",
+      "examples": []
+    },
+    "invalid_model_metadata": {
+      "count": 0,
+      "blocking": true,
+      "note": "model, version, backend, or prompt metadata is missing/inconsistent",
+      "examples": []
+    },
+    "image_identity_or_corruption": {
+      "count": 0,
+      "blocking": true,
+      "note": "image missing, changed, or not matching the manifest hash",
+      "examples": []
+    },
+    "duplicate_records": {
+      "count": 0,
+      "blocking": true,
+      "note": "more than one record for the same sample_id",
+      "examples": []
+    },
+    "duplicate_descriptions": {
+      "count": 10,
+      "blocking": false,
+      "note": "identical text across different images (not image-specific)",
+      "examples": [
+        {
+          "sample_id": "apple black rot/11.jpg",
+          "detail": "text shared by 92 images"
+        },
+        {
+          "sample_id": "apple black rot/14.jpg",
+          "detail": "text shared by 10 images"
+        },
+        {
+          "sample_id": "apple black rot/144.jpg",
+          "detail": "text shared by 12 images"
+        },
+        {
+          "sample_id": "apple black rot/148.jpg",
+          "detail": "text shared by 53 images"
+        },
+        {
+          "sample_id": "apple black rot/15.jpg",
+          "detail": "text shared by 12 images"
+        },
+        {
+          "sample_id": "apple black rot/152.jpg",
+          "detail": "text shared by 2 images"
+        },
+        {
+          "sample_id": "apple black rot/155.jpg",
+          "detail": "text shared by 2 images"
+        },
+        {
+          "sample_id": "apple black rot/16.jpg",
+          "detail": "text shared by 2 images"
+        },
+        {
+          "sample_id": "apple black rot/167.jpg",
+          "detail": "text shared by 48 images"
+        },
+        {
+          "sample_id": "apple black rot/20.jpg",
+          "detail": "text shared by 2 images"
+        }
+      ]
+    },
+    "missing_generations": {
+      "count": 10,
+      "blocking": false,
+      "note": "10631 eligible image(s) have no record",
+      "examples": [
+        {
+          "sample_id": "apple black rot/109.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/111.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/143.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/150.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/151.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/156.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/164.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/168.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/18.jpg",
+          "detail": "no generation record"
+        },
+        {
+          "sample_id": "apple black rot/187.jpg",
+          "detail": "no generation record"
+        }
+      ]
+    }
+  },
+  "clean_records": 7169,
+  "records_requiring_human_verification": 70,
+  "integrity_blocked": false,
+  "emittable": true,
+  "decision": "EMITTABLE",
+  "limitations": [
+    "Automated checks are structural and lexical; they do not prove that a description semantically matches its image.",
+    "Records excluded here are excluded, never rewritten or replaced.",
+    "Only store-integrity checks halt emission outright; other checks exclude the individual offending records and report the counts.",
+    "Text/vocabulary overlap between generated descriptions and class labels is checked only for exact class-name phrases, not for paraphrases."
+  ],
+  "excluded_records": [
+    {
+      "sample_id": "apple mosaic virus/google_0063.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/43.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0120.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0244.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0245.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/22.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/29.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0041.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0074.jpg",
+      "reasons": [
+        "class-label leakage"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0240.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    }
+  ],
+  "clean_sample_examples": [
+    "apple black rot/1.jpg",
+    "apple black rot/100.jpg",
+    "apple black rot/11.jpg",
+    "apple black rot/12.jpg",
+    "apple black rot/14.jpg",
+    "apple black rot/144.jpg",
+    "apple black rot/145.jpg",
+    "apple black rot/147.jpg",
+    "apple black rot/148.jpg",
+    "apple black rot/149.jpg"
+  ]
+}

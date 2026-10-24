@@ -38,7 +38,9 @@ def build_efficientnet_b0_preprocessing(
         raise ValueError(f"EfficientNet-B0 v3 inference requires {EFFICIENTNET_B0_CROP_SIZE}px crops, got {image_size}")
     return transforms.Compose(
         [
-            transforms.Resize((EFFICIENTNET_B0_EVAL_RESIZE, EFFICIENTNET_B0_EVAL_RESIZE)),
+            # Match mvpdr.train_efficientnet_b0.build_eval_transform exactly:
+            # shorter-edge resize with bicubic interpolation before center crop.
+            transforms.Resize(EFFICIENTNET_B0_EVAL_RESIZE, interpolation=transforms.InterpolationMode.BICUBIC),
             transforms.CenterCrop((EFFICIENTNET_B0_CROP_SIZE, EFFICIENTNET_B0_CROP_SIZE)),
             transforms.ToTensor(),
             transforms.Normalize(mean=list(mean), std=list(std)),

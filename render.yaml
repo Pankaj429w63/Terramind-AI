@@ -13,6 +13,12 @@ services:
         value: 3.11.11
       - key: TERRAMIND_RAG_AUTO_INGEST
         value: "true"
+      - key: TERRAMIND_TORCH_THREADS
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
       - key: TERRAMIND_MODEL_BUCKET
         value: model-artifacts
       - key: TERRAMIND_MODEL_OBJECT

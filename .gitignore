@@ -100,3 +100,5 @@ Thumbs.db
 
 # Stray OS / shell cache directories that leaked into project root
 Microsoft/
+*.bak
+

@@ -28,6 +28,7 @@ class ClassPrediction:
     label: str
     score: float
     confidence_pct: float
+    raw_score: float
 
 
 @dataclass
@@ -49,6 +50,7 @@ def _to_class_prediction(item) -> ClassPrediction:
         label=str(item.label),
         score=score,
         confidence_pct=round(score * 100.0, 2),
+        raw_score=float(getattr(item, "raw_score", score)),
     )
 
 

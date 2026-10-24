@@ -9,7 +9,7 @@ Target topology: Next.js on Vercel Hobby, FastAPI + CPU inference on Render Free
 - Existing Render service: <https://dashboard.render.com/web/srv-das1f90jo6nc739r5k6g/logs?t=app&r=1h>
 - Supabase project: <https://supabase.com/dashboard/project/vrdrkxrowjumhikirkyd>
 
-The frontend URL responded with HTTP 200 and an HTML title of “TerraMind AI” during this validation. Its published bundle currently embeds `http://127.0.0.1:8001` for API calls. A working frontend response alone does not verify that the hosted API is connected.
+The Vercel URL and Render dashboard above are deployment references. The public Render origin is not stored in this repository, and Vercel/Render environment settings are not available to local builds. A live frontend or API connection is therefore not claimed as verified by local checks.
 
 ## 1. Apply Supabase migrations
 
@@ -76,6 +76,7 @@ Add these environment values in the Render dashboard. Render keeps secret values
 | `TERRAMIND_MODEL_SHA256` | Checksum printed by the upload script |
 | `TERRAMIND_RAG_AUTO_INGEST` | `true` |
 | `TERRAMIND_LOW_CONFIDENCE_THRESHOLD` | `0.35` |
+| `TERRAMIND_TORCH_THREADS` | `1` |
 | `TERRAMIND_CORS_ORIGINS` | `https://terramind-ai-72q1.vercel.app,http://localhost:3000,http://127.0.0.1:3000` |
 
 `QDRANT_URL`, `QDRANT_API_KEY`, and `QDRANT_PATH` are optional. Leave them unset to keep the local fallback. On Render Free the filesystem and local RAG index are ephemeral, so the bundled 218 documents are re-indexed at startup. Local report/review JSON fallback on Render is also temporary; use the configured Supabase tables for durable account data.
@@ -115,7 +116,8 @@ These are post-deployment verification steps, not claims that live tests have al
 
 - Render Free spins down after 15 minutes without inbound traffic and has an ephemeral filesystem. The first request after idle can take about a minute; cold starts restore the model and rebuild the local RAG index.
 - Free Render should be treated as a demo tier. PyTorch inference, model restore, and RAG indexing can exceed resource or startup limits; check Render logs and memory after deployment.
-- Vercel Hobby builds Next.js from the `frontend` root. The project currently has that frontend URL live, but the backend origin must be set explicitly as described above.
+- A local Windows API startup measurement with the one-thread inference setting was approximately 470 MiB RSS. This is not a Render/Linux measurement, but leaves little headroom against the Free instance's 512 MB RAM; the Free plan is not a verified fit. See [Render compute plans](https://render.com/docs/compute-plans).
+- Vercel Hobby builds Next.js from the `frontend` root. The repository documents a Vercel URL, but the hosted environment variables and live frontend/backend connection were not verifiable from this local environment. Set the backend origin explicitly as described above.
 - Supabase free-tier account/storage/database quotas and policies apply. The app does not silently substitute an invented auth, database, review, or model result if a hosted service is unavailable.
 
 Official platform references: [Render FastAPI deploy](https://render.com/docs/deploy-fastapi), [Render Free limitations](https://render.com/docs/free), [Render Python version](https://render.com/docs/python-version), [Render Blueprint reference](https://render.com/docs/blueprint-spec), [Vercel monorepo root directory](https://vercel.com/docs/builds/configure-a-build#root-directory), and [Supabase `db push`](https://supabase.com/docs/reference/cli/supabase-db-push).

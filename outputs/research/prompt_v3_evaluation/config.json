@@ -1,0 +1,21 @@
+{
+  "model_id": "Salesforce/blip-image-captioning-base",
+  "model_backend": "local (CPU)",
+  "max_new_tokens": 48,
+  "sample_size": 89,
+  "classes_count": 89,
+  "seed": 42,
+  "prompts": {
+    "v1": {
+      "text": "a close-up view of the plant surface showing",
+      "style": "caption_prefix",
+      "sha256": "3e7606a661d57f5a"
+    },
+    "v3": {
+      "text": "symptoms visible on this leaf include",
+      "style": "caption_prefix",
+      "sha256": "a69bc092eeaabf9f"
+    }
+  },
+  "prefix_stripping": "regex-based normalization handling spacing, hyphens, and punctuation variations"
+}

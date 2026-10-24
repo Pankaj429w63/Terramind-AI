@@ -1,0 +1,695 @@
+{
+  "evaluation": "manually labeled retrieval smoke set",
+  "labeling": "one manually selected relevant KB source basename per query; source was checked against the query and KB title/content before running retrieval",
+  "k": 5,
+  "query_count": 10,
+  "metrics": {
+    "hit_rate_at_5": 0.9,
+    "precision_at_5": 0.18,
+    "recall_at_5": 0.9,
+    "mean_reciprocal_rank": 0.7833333333333333,
+    "citation_presence_rate": 0.9
+  },
+  "index": {
+    "backend": "local-memory",
+    "collection": "terramind_knowledge",
+    "total_points": 251,
+    "by_category": {
+      "diseases": 91,
+      "treatment": 58,
+      "fertilizer": 34,
+      "plant care": 34,
+      "agriculture": 34
+    },
+    "by_source_count": 218,
+    "local_fallback_persisted": true,
+    "local_fallback_bytes": 7024161,
+    "indexed": true,
+    "embeddings": {
+      "backend": "tfidf",
+      "vector_size": 4096,
+      "vocabulary_size": 4096,
+      "corpus_chunks_tracked": 364,
+      "model_size_bytes": 922484,
+      "fitted": true
+    }
+  },
+  "cases": [
+    {
+      "id": "disease_apple_scab",
+      "category": "diseases",
+      "query": "apple scab leaf lesions disease",
+      "k": 5,
+      "relevant_sources": [
+        "apple_scab.diseases.json"
+      ],
+      "retrieved_sources": [
+        "apple_scab.diseases.json",
+        "apple_rust.diseases.json",
+        "apple_mosaic_virus.diseases.json",
+        "apple_black_rot.diseases.json",
+        "eggplant_cercospora_leaf_spot.diseases.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Apple Scab (Venturia inaequalis) Management Based on the Mills Infection Period Model Crop: apple Disease: scab Apple scab, caused by the ascomycete Venturia inaequalis (anamorph Fusicladium pomi), is the most important apple disease in cool humid production regions (north-central Europe, eastern North America, southern Chile, New Zealand, southeastern Australia, cool highlands of Asia, Africa, and South America). On susceptible cultivars total crop loss can occur in rainy springs without sprays. Primary lesions are velvety olive-green to brown spots on leaves, petioles, blossoms, and fruit; older foliar lesions become brown and corky; fruit lesions are scabby, russeted, cracked, and permit secondary Penicillium and Botrytis rots. The pathogen overwinters as pseudothecia in fallen orchard-floor leaves undergoing meiotic development through winter; in spring after rains, mature asci forcibly eject 8-celled ascospores at temperatures >= 6 C, with peak discharge during green tip through petal fall. Discharged ascospores directly penetrate the cuticle of wet susceptible tissue after a Mills-table infection period (temperature + leaf wetness hours). Lesions appear after 9-17 days and produce conidia for secondary cycles repeating every 8-14 days throughout the growing season at 15-24 C with >6 hours wetness. Integrated management combines: leaf-litter shredding / urea application in autumn to reduce primary ascospore load by 50-90%; resistant cultivars carrying Rvi (Vf) genes (Liberty, Enterprise, Prima, Topaz, Rewena, Florina); protectant fungicide programs from green tip through terminal bud set using FRAC M3/M4 (captan, mancozeb) multi-site materials tank-mixed with low-risk FRAC 3 (DMI), FRAC 7 (SDHI), and FRAC 11 (QoI) materials rotated by label guidance to prevent resistance; curative DMI kickback sprays within 72-96 hours after missed-coverage infection events; and resistance monitoring for DMI, SDHI, and QoI reduced sensitivities in local populations.",
+          "excerpt": "Apple Scab (Venturia inaequalis) Management Based on the Mills Infection Period Model Crop: apple Disease: scab Apple scab, caused by the ascomycete Venturia inaequalis (anamorph Fusicladium pomi), is the most important apple disease in cool humid production regions (north-central Europe, eastern North America, southern Chile, New Zealand, southeastern Australia, cool highlands of Asia, Africa, and South America). On susceptible cultivars total crop loss can occur in rainy springs without sprays…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_scab.diseases.json",
+          "title": "Apple Scab (Venturia inaequalis) Management Based on the Mills Infection Period Model",
+          "category": "diseases",
+          "score": 0.54172,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_scab.diseases.json#chunk-0",
+          "raw_score": 0.3453149180088073,
+          "relevance_rank": null
+        },
+        {
+          "text": "Cedar Apple Rust (Gymnosporangium juniperi-virginianae) on Apple Crop: apple Disease: rust Cedar apple rust (CAR) is the most important of three Gymnosporangium rust diseases of apple in eastern North America, caused by the heteroecious demicyclic basidiomycete G. juniperi-virginianae alternating between apple/crabapple (Malus, aecia & spermagonia) and eastern red cedar / Rocky Mountain juniper (Juniperus virginiana, J. scopulorum, telia & basidiospores). On apple, symptoms appear 1-3 weeks after petal fall as small pale yellow chlorotic spots that enlarge to bright orange-yellow lesions with red borders and tiny spermagonial dots on the upper surface; by late summer, cylindrical tube-like aecia (0.5-1 cm) erupt from the lower leaf surface and release aeciospores. Similar fruit lesions near the calyx end are larger, corky, and distorted. Severe infection causes premature defoliation and vigor decline. On juniper, distinctive green-brown spherical galls (1-4 cm) produce orange gelatinous telial horns after spring soaking rains that forcibly discharge basidiospores wind-carried 5-10 km during 4+ hour leaf wetness periods at 10-24 C. The full 24-month life cycle has no repeating uredinial stage. Management: remove nearby junipers within 1-2 km where practical; plant resistant cultivars (Freedom, Liberty, Enterprise, Priscilla); apply protective sprays on a 7-10 day schedule from pink through 2-3 weeks post-petal fall using FRAC 3, 7, and 11 materials timed with CAR warning infection-period models.",
+          "excerpt": "Cedar Apple Rust (Gymnosporangium juniperi-virginianae) on Apple Crop: apple Disease: rust Cedar apple rust (CAR) is the most important of three Gymnosporangium rust diseases of apple in eastern North America, caused by the heteroecious demicyclic basidiomycete G. juniperi-virginianae alternating between apple/crabapple (Malus, aecia & spermagonia) and eastern red cedar / Rocky Mountain juniper (Juniperus virginiana, J. scopulorum, telia & basidiospores). On apple, symptoms appear 1-3 weeks afte…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_rust.diseases.json",
+          "title": "Cedar Apple Rust (Gymnosporangium juniperi-virginianae) on Apple",
+          "category": "diseases",
+          "score": 0.419865,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_rust.diseases.json#chunk-0",
+          "raw_score": 0.2569505352625322,
+          "relevance_rank": null
+        },
+        {
+          "text": "Apple Mosaic Virus (ApMV, Ilarvirus, Bromoviridae) Pathogen Profile Crop: apple Disease: mosaic virus Apple mosaic virus (ApMV) is a tripartite positive-sense RNA ilarvirus with worldwide distribution on apple, pear, quince, peach, plum, cherry, almond, apricot, hop, and strawberry. On sensitive apple cultivars (Golden Delicious, Bramley, Cox's Orange Pippin), leaves develop bright yellow or cream-colored mosaic / ringspot patterns 1-10 mm across; tolerant cultivars (Red Delicious, most scab-resistant cultivars) show few or no symptoms. ApMV does not cause fruit symptoms, but heavy foliar necrosis can reduce photosynthesis, fruit set, and yields by 25-50% in unmanaged high-incidence blocks. Transmission is exclusively via graft propagation using infected budwood or rootstock; no confirmed arthropod vector is known in apple orchards. Diagnosis uses DAS-ELISA or RT-PCR on early-spring leaf or bark samples. Management relies entirely on certification programs: plant only virus-indexed nursery stock from approved sources, test budwood before grafting, rogue infected trees from foundation blocks, and use heat therapy combined with meristem tip culture to sanitize elite selections. No curative treatments exist.",
+          "excerpt": "Apple Mosaic Virus (ApMV, Ilarvirus, Bromoviridae) Pathogen Profile Crop: apple Disease: mosaic virus Apple mosaic virus (ApMV) is a tripartite positive-sense RNA ilarvirus with worldwide distribution on apple, pear, quince, peach, plum, cherry, almond, apricot, hop, and strawberry. On sensitive apple cultivars (Golden Delicious, Bramley, Cox's Orange Pippin), leaves develop bright yellow or cream-colored mosaic / ringspot patterns 1-10 mm across; tolerant cultivars (Red Delicious, most scab-res…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_mosaic_virus.diseases.json",
+          "title": "Apple Mosaic Virus (ApMV, Ilarvirus, Bromoviridae) Pathogen Profile",
+          "category": "diseases",
+          "score": 0.410863,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_mosaic_virus.diseases.json#chunk-0",
+          "raw_score": 0.24408964182097834,
+          "relevance_rank": null
+        },
+        {
+          "text": "Apple Black Rot (Botryosphaeria obtusa) and Botryosphaeria Canker Complex Crop: apple Disease: black rot Black rot of apple, caused by the ascomycete Botryosphaeria obtusa (syn. Diplodia seriata; Physalospora obtusa), produces three distinct syndromes: (1) frogeye leaf spot on leaves (2-5 mm circular lesions with purple margins and tan centers speckled with pycnidia); (2) slightly sunken target-like cankers on woody branches, pruning stubs, and fire-blighted wood; (3) firm, black, leathery fruit decay originating at blossom end or wound sites with concentric rings of pycnidia. The pathogen overwinters in mummified fruit, cankers, and dead wood; ascospores and conidia are released during spring rains and disseminated by rain splash to infect young leaves, fruit, and wounded wood when temperatures are 20-27 C with >6 hours of leaf wetness. Management combines dormant removal of mummies and cankered wood, protection of pruning cuts, vigor management, and protectant fungicide programs from tight cluster through first cover with additional summer sprays in high-pressure orchards. Black rot is differentiated from bitter rot (Colletotrichum) by the absence of salmon-colored spore masses and from white rot by the darker, more leathery fruit lesions.",
+          "excerpt": "Apple Black Rot (Botryosphaeria obtusa) and Botryosphaeria Canker Complex Crop: apple Disease: black rot Black rot of apple, caused by the ascomycete Botryosphaeria obtusa (syn. Diplodia seriata; Physalospora obtusa), produces three distinct syndromes: (1) frogeye leaf spot on leaves (2-5 mm circular lesions with purple margins and tan centers speckled with pycnidia); (2) slightly sunken target-like cankers on woody branches, pruning stubs, and fire-blighted wood; (3) firm, black, leathery fruit…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_black_rot.diseases.json",
+          "title": "Apple Black Rot (Botryosphaeria obtusa) and Botryosphaeria Canker Complex",
+          "category": "diseases",
+          "score": 0.341094,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\apple\\apple_black_rot.diseases.json#chunk-0",
+          "raw_score": 0.14442019134187198,
+          "relevance_rank": null
+        },
+        {
+          "text": "Cercospora Leaf Spot and Fruit Rot of Eggplant (Cercospora melongenae / C. solani-melongenae) Crop: eggplant Disease: cercospora leaf spot Cercospora leaf spot and phoma blight complex is the most common foliar disease of eggplant (Solanum melongena L.) in warm humid production areas worldwide including the southeastern USA, Caribbean basin, Latin America, India, Southeast Asia, West Africa, and northern Australia. The primary causal organism is the ascomycete fungus Cercospora melongenae (teleomorph Mycosphaerella melongenae, now Pseudocercospora melongenae; C. solani-melongenae, C. dalbergiae, and C. viperis also occur as secondary components in the Cercospora leaf-blight complex on solanaceous crops). The disease can cause 15-45% yield reductions by reducing photosynthetic leaf area and causing premature defoliation, and by producing direct blemishes and necrotic fruit rot lesions that render eggplant fruit unmarketable for fresh-market retail sale. Symptoms occur on all above-ground parts but are most obvious on leaves. On leaves, symptoms begin as small (1-4 mm), circular to slightly irregular, chlorotic yellow-green flecks on the lower surface of older, mature leaves. As lesions expand to 5-15 mm in diameter they become light tan to gray in the center, usually with a distinct narrow yellow chlorotic halo (halo is most diagnostic when seen with transmitted light); with age the central lesion portion becomes grayish-brown to brown with a slightly sunken papery texture. The lesions often coalesce into large irregularly shaped necrotic areas 2-5 cm across that cause severe leaf blade blight. On the underside of lesions, a close examination with a 10x hand lens reveals the diagnostic fasciculate bundles of dark, 3-8 septate, geniculate conidiophores that emerge through the stomata, each bearing a single long, slender, multi-septate, hyaline to pale olivaceous, obclavate-cylindrical Cercospora conidium measuring 30-150 x 3-5 um with 4-20 transverse septa. On leaf petioles and young stems, lesions are elongated, sunken, dark brown cankers 5-20 mm long that may girdle and kill young branches. On eggplant fruit, which is the major economic loss component, slightly sunken, circular, dark brown to black leathery lesions develop, typically 5-30 mm in diameter with a well-defined slightly raised margin. Lesions may be covered with a dark velvety layer of conidiophores and conidia under humid conditions, and they can expand to large patches of superficial necrotic skin tissue with shallow 3-6 mm depth necrosis of the fruit flesh. Secondary Alternaria and Colletotrichum organisms often enter through these Cercospora lesions causing a deep wet fruit rot. The pathogen overwinters as mycelium, pseudothecia, and stromata on infected eggplant crop debris on the soil surface, in solanaceous weed hosts (Solanum nigrum, S. ptycanthum, S. carolinense, S. torvum, S. aculeatissimum), and in/on eggplant seeds (both external conidia on the seed coat and internal mycelium in the cotyledon layer). Seed infestation rates of up to 15% have been documented in commercial hybrid lots from tropical seed multiplication fields. Initial lesions develop on lower leaves from wind-dispersed ascospores released from pseudothecia on overwintered debris or from conidia splash-dispersed from infected seedling cotyledons; secondary polycyclic spread is primarily by rain splash droplets and overhead irrigation carrying conidia from primary lesions upward through the canopy; insects (thrips, mites, flea beetles, cotton aphids) also carry conidia short distances; workers' hands and equipment spread inoculum when canopies are wet. Infection is favored by high temperatures (25-32 C / 77-90 F), high RH (> 85%), and frequent rainfall or overhead sprinkler irrigation providing 8-12 hours of continuous leaf wetness per infection event; incubation period is 5-8 days. Management: (1) seed health and seed treatment: use Cercospora-indexed seed produced in low-humidity seed-increase regions; hot water seed treatment at 51 C for 30 minutes; slurry seed treatment with captan + thiram + benomyl or prothioconazole reduces initial seedling infection. (2) field crop rotation of 2-3 years with non-solanaceous crops (grasses, cucurbits, legumes) to reduce soil-surface residue inoculum; prompt deep incorporation of eggplant vines after harvest with a moldboard plow. (3) solanaceous weed management especially of horsenettle (S. carolinense), black nightshade (S. nigrum), and tropical soda apple (S. viarum) in field borders. (4) cultural practices: use wide row spacing (0.9-1.2 m between plants) and raised, plastic-mulched beds with drip irrigation to improve air movement and reduce leaf wetness; avoid overhead sprinkler irrigation; use white or aluminized plastic mulches to repel aphid and thrips vectors. (5) resistant cultivars are not widely available in commercial eggplant hybrids, though the tropical landraces 'S. melongena var. insanum', 'Pusa Purple Cluster', 'Manjri Gota', 'Arka Nidhi', and Solanum gilo x S. melongena introgression lines (IL-EP-10, IL-EP-26) carry polygenic quantitative resistance being incorporated by public breeding programs. (6) fungicide programs: protectant sprays initiated at first symptoms and continued on 10-14 day intervals through harvest, alternating between FRAC M3 multi-site (mancozeb, chlorothalonil, maneb), FRAC M1 copper (copper hydroxide, copper oxychloride, Bordeaux), FRAC 3 DMI (tebuconazole, difenoconazole, prothioconazole, tetraconazole), FRAC 11 QoI (azoxystrobin, pyraclostrobin, trifloxystrobin - always tank-mix with multi-site to prevent QoI resistance), FRAC 7+11 SDHI + QoI premixes (fluxapyroxad + pyraclostrobin, pydiflumetofen + difenoconazole), and FRAC 2 (dicarboximide iprodione, vinclozolin). Organic production programs rely on copper, potassium bicarbonate, neem oil, and Bacillus amyloliquefaciens QST 713 rotations but provide only 50-60% reduction compared to synthetic programs in UF IFAS GCREC trials.",
+          "excerpt": "Cercospora Leaf Spot and Fruit Rot of Eggplant (Cercospora melongenae / C. solani-melongenae) Crop: eggplant Disease: cercospora leaf spot Cercospora leaf spot and phoma blight complex is the most common foliar disease of eggplant (Solanum melongena L.) in warm humid production areas worldwide including the southeastern USA, Caribbean basin, Latin America, India, Southeast Asia, West Africa, and northern Australia. The primary causal organism is the ascomycete fungus Cercospora melongenae (teleo…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\eggplant\\eggplant_cercospora_leaf_spot.diseases.json",
+          "title": "Cercospora Leaf Spot and Fruit Rot of Eggplant (Cercospora melongenae / C. solani-melongenae)",
+          "category": "diseases",
+          "score": 0.328136,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\eggplant\\eggplant_cercospora_leaf_spot.diseases.json#chunk-0",
+          "raw_score": 0.12590854294334705,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "disease_tomato_late_blight",
+      "category": "diseases",
+      "query": "tomato late blight symptoms lesions",
+      "k": 5,
+      "relevant_sources": [
+        "tomato_late_blight.diseases.json"
+      ],
+      "retrieved_sources": [
+        "potato_late_blight.diseases.json",
+        "tomato_late_blight.diseases.json",
+        "potato_late_blight.diseases.json",
+        "potato_early_blight.diseases.json",
+        "potato_late_blight.diseases.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Potato Late Blight (Phytophthora infestans, Oomycota Peronosporaceae) - Irish Potato Famine Pathogen Crop: potato Disease: late blight Potato late blight, caused by the heterothallic, hemibiotrophic oomycete Phytophthora infestans (Mont.) de Bary (phylum Oomycota, order Peronosporales, family Peronosporaceae, kingdom Stramenopiles, SAR supergroup) is historically the most notorious and agriculturally devastating plant disease in modern human history. It was the causal agent of the Great Irish Potato Famine (Gorta Mor / Great Hunger) of 1845-1851, which caused the death by starvation and disease of approximately 1.1 million people in Ireland, the emigration of an additional 1.5-2 million Irish people to the United States, Canada, Australia, and Britain, and the permanent sociopolitical, demographic, and economic transformation of an entire island nation. Today, late blight remains the single most destructive and economically costly disease of cultivated potato (Solanum tuberosum L.) and tomato (Solanum lycopersicum L.) worldwide, occurring in every major potato- and tomato-growing region of the globe. Annual global economic costs of potato late blight (direct yield losses + cost of fungicide applications + post-harvest storage losses) are estimated at US$ 6.7-10.0 billion (2023 USD); approximately 10-15% of the entire global potato fungicide expenditure (approximately $1-3 billion annually) is targeted specifically at late blight control. Yield losses of 50-100% can occur in unsprayed susceptible potato cultivars within 2-3 weeks under ideal cool, wet, late-blight-favorable weather conditions; even with the most intensive state-of-the-art fungicide programs in developed-country commercial production, late blight still consistently causes 5-15% annual potato and tomato yield losses. The pathogen has a very narrow primary host range, confined almost exclusively to the genus Solanum section Petota (potatoes) and section Lycopersicum (tomatoes), but can also naturally infect cultivated eggplant (Solanum melongena, rarely), pepino (S. muricatum), and approximately 200+ wild Solanum species, including the important agricultural weeds horsenettle (S. carolinense), bittersweet nightshade (S. dulcamara), black nightshade (S. nigrum), hairy nightshade (S. sarrachoides, S. physalifolium), and jimsonweed (Datura stramonium, rarely, under experimental inoculation). Late blight attacks all above-ground green plant parts (leaves, stems, petioles, inflorescences, pedicels, green tomato fruit), as well as below-ground potato tubers; it does not infect true potato seed (TPS) or mature, dormant tomato seed. The diagnostic symptoms of late blight on potato and tomato foliage are distinctive and different from early blight (Alternaria solani). On potato leaves, the first visible lesions typically appear on the lower (basal) canopy or in the upper canopy after extended wet periods: small, irregular to circular, dark green to black, water-soaked ('greasy') necrotic lesions 5-20 mm in diameter, usually located at or near the leaf tip and margins where water droplets collect. Under humid, cool (16-22 C) conditions, these lesions expand rapidly (2-5 cm per day) into large, dark brown to black, irregularly shaped blighted areas with a faint, pale yellow-green chlorotic 'water-soaked' border or halo at the lesion edge; the 'greasy' or 'water-soaked' appearance of the lesion margin is the most important diagnostic feature distinguishing late blight from early blight (which has dry, target-zonate lesions with sharp margins). Under high-humidity conditions (RH > 90%, still air, cool nights, dewy mornings), diagnostic thin, delicate, white-to-grayish, downy, felt-like sporangiophores and lemon-shaped sporangia (the 'sporulating lesion' stage) appear on the LOWER (abaxial) leaf surface directly beneath the necrotic lesion (this white downy sporulation is best observed in the early morning with a 10x hand lens on leaves collected while still dewy). Late blight leaf lesions are not zonate (no target-board rings), unlike early blight; they turn brittle, papery, and light brown when dry, but when held under a moist plastic bag for 24-48 hours at room temperature will produce the characteristic white sporulation on the lower surface (this is the 'moist chamber incubation' diagnostic field test). On potato and tomato stems, petioles, and pedicels, late blight lesions are elongated, dark brown to black, slightly sunken, water-soaked stem cankers 1-10 cm long; under humid conditions, white downy sporangiophores and sporangia emerge in a ring around the stem canker. Severe stem girdling cankers near the soil line ('collar rot' or 'late blight black leg') will cause rapid wilting, collapse, and death of entire potato or tomato vines. On green and ripe tomato fruit, late blight produces irregularly shaped, slightly sunken, grayish-brown to dark brown, firm, leathery, 'greasy-appearing' lesions (5-50 mm) that expand rapidly and often develop white downy sporulation (P. infestans sporangia) on the fruit surface under humid conditions; entire tomato fruit clusters can rot within 3-5 days. On potato tubers, infection occurs when sporangia and zoospores are washed from blighted leaves and vine debris down through the soil profile (during rain or overhead irrigation) and come in contact with developing daughter tubers; tuber lesions are slightly depressed, irregular, dark reddish-brown to purple-brown discolorations of the tuber skin 10-60 mm across; when cut transversely, the underlying tuber flesh shows a characteristic shallow (3-15 mm deep), firm, dry, granular, reddish-brown to copper-colored necrotic 'marbling' or 'granulation' in the outer perimedullary cortex region immediately beneath the periderm (this reddish-brown granulation distinguishes late blight tuber rot from Erwinia bacterial soft rot [watery, mushy, smelly], early blight tuber rot [darker brown, dry, sharply defined corky lesion], Fusarium dry rot [cavities lined with white, pink, or orange mycelium], and Rhizoctonia black scurf [superficial black sclerotia on skin surface only]). Secondary infection by soft-rot Pectobacterium and Erwinia bacteria commonly enters through late blight tuber lesions and causes mushy, foul-smelling wet tuber rot in both the field and in storage, often leading to complete breakdown of entire",
+          "excerpt": "Potato Late Blight (Phytophthora infestans, Oomycota Peronosporaceae) - Irish Potato Famine Pathogen Crop: potato Disease: late blight Potato late blight, caused by the heterothallic, hemibiotrophic oomycete Phytophthora infestans (Mont.) de Bary (phylum Oomycota, order Peronosporales, family Peronosporaceae, kingdom Stramenopiles, SAR supergroup) is historically the most notorious and agriculturally devastating plant disease in modern human history. It was the causal agent of the Great Irish Po…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json",
+          "title": "Potato Late Blight (Phytophthora infestans, Oomycota Peronosporaceae) - Irish Potato Famine Pathogen",
+          "category": "diseases",
+          "score": 0.611589,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json#chunk-0",
+          "raw_score": 0.4451269889381975,
+          "relevance_rank": null
+        },
+        {
+          "text": "Tomato-Potato Late Blight in the Home Garden Crop: tomato Disease: late blight Tomato late blight is caused by the water mold Phytophthora infestans. Penn State Extension describes pale-green to brown lesions on infected plants, downy white growth under suitable conditions, and greasy-appearing spots on fruit. The source emphasizes that the disease can affect both tomato and potato.",
+          "excerpt": "Tomato-Potato Late Blight in the Home Garden Crop: tomato Disease: late blight Tomato late blight is caused by the water mold Phytophthora infestans. Penn State Extension describes pale-green to brown lesions on infected plants, downy white growth under suitable conditions, and greasy-appearing spots on fruit. The source emphasizes that the disease can affect both tomato and potato.",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\tomato\\tomato_late_blight.diseases.json",
+          "title": "Tomato-Potato Late Blight in the Home Garden",
+          "category": "diseases",
+          "score": 0.585831,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\tomato\\tomato_late_blight.diseases.json#chunk-0",
+          "raw_score": 0.49404371973796857,
+          "relevance_rank": null
+        },
+        {
+          "text": "government-inspected, late-blight-indexed potato seed tubers produced in low-disease-pressure arid seed-increase zones (this eliminates the #1 source of primary inoculum in most regions); follow all national and international seed potato quarantine regulations (USDA APHIS, EU Plant Health Directive, NPPO requirements) preventing movement of untested seed potatoes; plant only certified disease-free tomato transplants produced in screened, soilless transplant houses with no late blight history; do not plant saved 'home-saved' potato tubers or tomato seed from a late-blight-affected crop as primary inoculum sources. (2) Cultural practices: (a) eliminate all overwintering inoculum sources before planting: destroy all volunteer potato plants (ground keepers) growing in or near potato and tomato fields by disking, herbicide application, or hand removal in early spring; remove wild Solanum weed reservoirs (Solanum dulcamara, S. nigrum, S. sarrachoides, S. carolinense) from field borders, irrigation ditches, fence rows, and transplant production facilities; (b) cull and destroy (hot-compost, landfill, or bury > 1 m deep) all visibly infected potato seed pieces and seed tubers at planting time; (c) use hilled-up rows, well-drained soils, and raised beds to minimize tuber contact with sporangia-laden surface water; (d) use wide plant spacing, open-canopy planting patterns, avoid excessive nitrogen fertilization (promotes lush succulent susceptible growth), and orient planting rows parallel to prevailing winds to maximize air movement and accelerate canopy drying; (e) avoid overhead sprinkler irrigation wherever practical, especially during late evening and overnight hours which extend leaf wetness periods; use furrow, drip, or subsurface irrigation; (f) when late blight is first detected in a small area of a field, remove and destroy (burn, bury) all visibly infected plants ('roguing' or 'removal of foci') and immediately apply a curative fungicide treatment to the entire surrounding 50 m buffer zone; (g) implement a 'vine-kill' program 2-3 weeks prior to mechanical harvest by applying desiccants (diquat, paraquat, carfentrazone) or using mechanical flailing or undercutting to kill potato vines before harvest; this prevents sporulating late blight lesions on vines from depositing sporangia onto the soil surface where they can infect daughter tubers during the digging operation. (3) Predictive forecasting / decision-support systems are mandatory for economical, environmentally responsible late blight control. The most widely used models (BLITECAST, SimCast, LATEBLIGHT, WISDOM, USAblight, IBLIGHT, EuroBlight) calculate daily risk values from real-time meteorological data (air temperature, relative humidity, rainfall duration, leaf wetness duration, wind speed) and schedule fungicide applications only when late-blight-favorable weather (infection periods) are predicted. Forecasting systems typically reduce fungicide use by 30-60% compared to rigid calendar-based 7-day protectant schedules while maintaining equivalent or better late blight control. (4) Genetic resistance is the most promising, sustainable, long-term late blight management strategy. Two complementary classes of genetic resistance exist in Solanum spp.: (a) Major, dominant, race-specific vertical (R) resistance genes (Rpi = Resistance to P. infestans), originally identified in the Mexican hexaploid wild potato species Solanum demissum (R1-R11 genes); > 60 new Rpi genes have now been characterized from > 20 different wild Solanum species (S. bulbocastanum, S. venturii, S. stoloniferum, S. verrucosum, S. microdontum, S. paucissectum, S. chacoense, S. jamesii, S. schenckii). R genes typically confer near-complete immunity to specific races of P. infestans carrying the matching Avirulence (Avr) effector gene, but are frequently overcome by new virulent P. infestans races in 3-10 years due to pathogen evolution and strong selection pressure from monogenic deployment. (b) Quantitative, partial, horizontal (field) polygenic resistance (QR), typically mediated by multiple QTLs (quantitative trait loci) with minor individual effects, reduces but does not eliminate infection, lesion expansion rate, and sporulation capacity; QR is generally race-nonspecific and considered more durable over time. Cultivars combining stacked (pyramided) multiple Rpi genes (via marker-assisted breeding and cisgenic/transgenic approaches) with high levels of polygenic QR are the current industry breeding goal. Late-blight-resistant commercial potato cultivars currently available include: 'Defender' (Rpi-blb2 + QR), 'Jacqueline Lee' (R1 + QR), 'Altaros', 'Bionica', 'Toluca' (Rpi-blb1 + Rpi-blb2), 'Sarpo Mira', 'Sarpo Axona' (R3a + R3b + multiple QTLs - extremely high resistance to all known EU races), 'Yukon Gem' (Rpi-sto1), 'Palisade Russet' (moderate QR). A landmark 2014 landmark cisgenic 'potato late blight resistant' event (developed by Wageningen UR and the Sainsbury Laboratory) stacking three Rpi genes ('Rpi-sto1, Rpi-vnt1.1, Rpi-blb3') has shown > 99% late blight resistance across 4 years of EU field trials with zero fungicide input. In tomato, major genes Ph-1, Ph-2, Ph-3, Ph-4, Ph-5 from S. pimpinellifolium and S. habrochaites provide varying levels of late blight resistance; 'Mountain Merit', 'Iron Lady', 'Defiant PhR', 'Jasper', 'Matt's Wild Cherry' combine multiple Ph genes with good agronomic traits. (5) Chemical fungicide programs are the primary late blight control tool in most commercial potato and tomato production. The most important fungicide groups for late blight (all target the oomycete, Stramenopile-specific biochemical pathways, and are ineffective against ascomycete/basidiomycete fungi; note that FRAC codes for downy mildews / oomycetes are different from ascomycete fungicides) are: FRAC 4 (Phenylamides = PA: mefenoxam = metalaxyl-M, metalaxyl, benalaxyl, ofurace, oxadixyl. PA was the most active systemic curative material ever developed for late blight, with up to 14 days kickback curative activity; however, PA resistance is extremely widespread in P. infestans globally (resistance factor RF > 100, all A2-mating-type US-8, US-22, US-23, US-24 genotypes are resistant; only rare A1-mating-type lineages are still sensitive). PA is still used but always tank-mixed with a multi-site contact and used at maximum 2-3 applications per season; use only on crops where resistance monitoring confirms PA-sensitive P. infestans populations. FRAC 40 (Carboxylic Acid Amides = CAA: dimethomorph, mandipropamid,",
+          "excerpt": "government-inspected, late-blight-indexed potato seed tubers produced in low-disease-pressure arid seed-increase zones (this eliminates the #1 source of primary inoculum in most regions); follow all national and international seed potato quarantine regulations (USDA APHIS, EU Plant Health Directive, NPPO requirements) preventing movement of untested seed potatoes; plant only certified disease-free tomato transplants produced in screened, soilless transplant houses with no late blight history; do…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json",
+          "title": "Potato Late Blight (Phytophthora infestans, Oomycota Peronosporaceae) - Irish Potato Famine Pathogen",
+          "category": "diseases",
+          "score": 0.496776,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json#chunk-2",
+          "raw_score": 0.366823285031008,
+          "relevance_rank": null
+        },
+        {
+          "text": "Potato Early Blight (Alternaria solani, Ascomycota Pleosporaceae) on Potato and Tomato Crop: potato Disease: early blight Potato early blight is the most common and most consistently occurring foliar and tuber disease of cultivated potato (Solanum tuberosum L.) worldwide, affecting all potato-growing regions of North and South America, Europe, Africa, the Middle East, India, China, Southeast Asia, Australia, and New Zealand. The causal organism is the necrotrophic ascomycete filamentous fungus Alternaria solani (Ellis & G. Martin) L.R. Jones & Grout (class Dothideomycetes, order Pleosporales, family Pleosporaceae; teleomorph stage = Lewia infectoria, only rarely observed in nature, not economically important). A second closely related species, Alternaria alternata (Fr.) Keissl. (syn. A. tenuis), often occurs as a secondary saprotrophic invader of senescent potato leaves already weakened by A. solani or abiotic stress, but is not considered a primary early blight pathogen. Annual yield losses of 20-40% are reported in unsprayed susceptible potato cultivars worldwide; in addition to direct foliar yield losses from premature defoliation, tuber infection at harvest causes 5-15% post-harvest storage losses from tuber rot in cool storage, and downgrades processing quality for French fry and potato chip production due to dark necrotic tuber lesions. The name 'early blight' was assigned in the 19th-century North American potato-growing literature because the disease typically appears earlier in the growing season (mid-season, 6-8 weeks after emergence) than the dreaded late blight (Phytophthora infestans, oomycete, which appears later in mid-to-late season under cool wet conditions), although both diseases can and do co-occur on the same potato plants later in the season and often interact synergistically. A. solani also attacks tomato (Solanum lycopersicum L.), eggplant (S. melongena), pepper (Capsicum annuum, weakly), and many wild and weedy Solanum species (S. sarrachoides, S. nigrum, S. dulcamara, S. carolinense horsenettle), but potato is the economically most important host. Symptoms occur on leaves, stems, petioles, and tubers. On potato leaves (the most important symptom type), the first symptoms appear on the oldest (lowest-positioned, basal) leaves and lower canopy, beginning as tiny (1-2 mm), circular, dark brown to black necrotic spots. As lesions expand (typically to 5-20 mm diameter, occasionally up to 40 mm under severe pressure), they develop a highly characteristic concentric 'target board' or 'bullseye' zonate pattern of alternating dark and light brown rings (this target-like zonation is the most diagnostic visual feature of early blight lesions, distinguishing them from late blight, Septoria leaf spot, or Verticillium wilt necrotic flecks). Each individual lesion often has a distinct narrow yellow chlorotic halo visible when the leaf is held against the light; the halo is produced by the Alternaria phytotoxin alternaric acid and host phenylpropanoid defense response. Under humid conditions, a close examination with a 10x hand lens reveals dark, olive-brown, club-shaped, muriform (longitudinal and transverse septa) multi-celled conidia (120-296 x 12-20 um, 8-12 transverse septa, beak up to 3x body length) borne singly or in chains of 2-5 on simple, geniculate conidiophores emerging through stomata on the lower lesion surface. Multiple lesions on a single leaf blade cause widespread necrosis and chlorosis; leaves with 20+ lesions turn yellow, wither, and die prematurely (defoliation progresses upward from the basal canopy in a characteristic gradient). Severely affected potato fields appear brown, 'burnt up', and senescent 2-4 weeks before normal vine kill, reducing tuber bulking time and final tuber dry matter and yield significantly. On stems and petioles, lesions are elongated, slightly sunken, dark brown cankers with faint concentric zonation 5-30 mm long; severe stem cankers on the main stem near the soil line (collar rot) can girdle and kill entire vines. On potato tubers (infection occurring at harvest when tubers are exposed to desiccating vines carrying heavy A. solani sporulation), lesions are superficial to slightly sunken, dark brown to purple-black, circular to irregular, dry, leathery necrotic areas 5-40 mm in diameter with slightly raised, corky margins; when cut, the underlying tuber flesh shows a 1-5 mm deep, firm, dry, dark brown to gray corky necrosis (the rot is firm and dry, distinguishing early blight tuber rot from soft bacterial Erwinia rot or water-soaked late blight tuber rot with reddish-brown granulation). Alternaria solani overwinters as thick-walled, dark, melanized, multi-celled chlamydospores and as dormant mycelium and conidia within infected potato crop debris (stems, leaves, petioles, desiccated vines) on or near the soil surface; it also survives on tomato crop residue, on many wild Solanum weed hosts, and on volunteer potato tubers ('ground keepers' or 'volunteers') that overwinter in the soil and sprout the following spring. In the spring, mature multi-celled conidia are produced abundantly on overwintered crop residue under conditions of alternating wetting/drying cycles and temperatures of 15-30 C; conidia are primarily wind-dispersed (canopy turbulence boundary-layer flow and frontal thunderstorm updrafts carry conidia 5-50 km downwind) and, secondarily, splash-dispersed by rain droplets from residue onto newly emerged lower potato leaves. Infection occurs when a conidium germinates on the leaf surface producing a germ tube and a melanized appressorium; penetration occurs either directly through the cuticle (most common) or through stomata and hydathodes. Infection requires 6-24 hours of continuous leaf wetness or RH > 90% at optimum temperatures of 24-29 C (75-84 F); the latent period (time from infection to appearance of visible lesions) is 2-8 days depending on temperature and host resistance. A. solani is a polycyclic pathogen with 6-15 repeated secondary cycles per growing season under favorable warm, humid, and periodically wet conditions. Early blight is primarily a 'stress-related' disease: potato plants that are",
+          "excerpt": "Potato Early Blight (Alternaria solani, Ascomycota Pleosporaceae) on Potato and Tomato Crop: potato Disease: early blight Potato early blight is the most common and most consistently occurring foliar and tuber disease of cultivated potato (Solanum tuberosum L.) worldwide, affecting all potato-growing regions of North and South America, Europe, Africa, the Middle East, India, China, Southeast Asia, Australia, and New Zealand. The causal organism is the necrotrophic ascomycete filamentous fungus A…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_early_blight.diseases.json",
+          "title": "Potato Early Blight (Alternaria solani, Ascomycota Pleosporaceae) on Potato and Tomato",
+          "category": "diseases",
+          "score": 0.433792,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_early_blight.diseases.json#chunk-0",
+          "raw_score": 0.19113214036139944,
+          "relevance_rank": null
+        },
+        {
+          "text": "across; when cut transversely, the underlying tuber flesh shows a characteristic shallow (3-15 mm deep), firm, dry, granular, reddish-brown to copper-colored necrotic 'marbling' or 'granulation' in the outer perimedullary cortex region immediately beneath the periderm (this reddish-brown granulation distinguishes late blight tuber rot from Erwinia bacterial soft rot [watery, mushy, smelly], early blight tuber rot [darker brown, dry, sharply defined corky lesion], Fusarium dry rot [cavities lined with white, pink, or orange mycelium], and Rhizoctonia black scurf [superficial black sclerotia on skin surface only]). Secondary infection by soft-rot Pectobacterium and Erwinia bacteria commonly enters through late blight tuber lesions and causes mushy, foul-smelling wet tuber rot in both the field and in storage, often leading to complete breakdown of entire potato storage piles within 2-4 months. Phytophthora infestans is a heterothallic oomycete with two mating types, designated A1 and A2; sexual reproduction (and the production of thick-walled, long-lived, diploid, soil-borne overwintering oospores, 24-35 um diameter, yellowish-brown) occurs only when mycelia of both compatible A1 and A2 mating types grow together in the same plant tissue. Historically (from 1845 through the early 1980s), only the A1 mating type of P. infestans was present outside of its center of origin in the Toluca Valley, central Mexico, and therefore sexual reproduction and oospore formation did not occur; the pathogen survived the winter / off-season almost exclusively as mycelium in infected, living, dormant potato seed tubers (seed-piece borne inoculum) and as mycelium in infected volunteer ('ground-keeper') potato tubers that overwintered in soil and sprouted the following spring. A second global migration event during the late 1970s and early 1980s introduced the A2 mating type into Europe and then to North America, South America, Africa, and Asia via contaminated seed potato shipments; today, both A1 and A2 mating types coexist in most major potato-growing regions worldwide, and sexual reproduction (oospores) is now documented in > 40 countries, greatly complicating disease management because oospores can survive in soil and crop debris for 3-7 years in the absence of any living potato or tomato host, providing a potent new soil-borne source of primary inoculum independent of seed tubers. The asexual polycyclic infection cycle, which is responsible for almost all of the explosive mid- and late-season epidemic spread, proceeds as follows: (1) primary inoculum arises in spring from three possible sources: (a) infected potato seed tubers (the most important primary inoculum source in most regions historically) - when an infected seed tuber sprouts, a small proportion of sprouts develop systemic late blight infection and emerge from the soil as a sporulating 'primary focus' or 'source plant' that produces sporangia; (b) oospores germinating in the soil (now important in regions where both mating types occur) produce sporangia that release zoospores that infect the lower leaves and underground parts of young potato sprouts; (c) infected volunteer potato plants (ground keepers) and wild Solanum weed hosts that overwinter in mild-climate regions. (2) Asexual sporangia (20-35 x 15-25 um, lemon-shaped, deciduous, with a distinct apical papilla 3-5 um wide, borne on sympodially branched sporangiophores with swollen, club-shaped, 90-degree-bent pedicel attachment points) are produced abundantly on the lower surface of sporulating lesions during humid nights at 16-22 C. (3) Sporangia are dispersed primarily by turbulent wind (can travel 50-100 km downwind from a source under storm conditions; typical within-field and between-field dispersal is 10-500 m) and secondarily by rain splash. (4) Infection occurs via two distinct pathways depending on temperature: (a) at relatively cool temperatures of 10-18 C, sporangia germinate indirectly within 30-90 minutes by releasing 6-12 (typically 8) biflagellate motile kidney-shaped zoospores (8-12 x 6-9 um) that swim in free water films on the leaf surface, encyst on stomata or the cuticle, produce a short germ tube, and penetrate the host directly through the cuticle or through stomatal openings. (b) at warmer temperatures of 19-26 C, sporangia may germinate directly by producing a single germ tube that penetrates via appressorium. Infection requires at least 4-6 hours of continuous free moisture on the leaf surface from dew, fog, or rain at temperatures of 10-26 C; the latent period (infection to first visible sporulating lesion) is 4-14 days depending on temperature (optimum 5-7 days at 18-22 C). Under ideal weather conditions, each lesion produces up to 300,000 sporangia per day for 5-10 days, and thus late blight epidemics exhibit classic exponential 'compound interest' logistic growth, potentially increasing from 1 lesion per 100,000 plants to 100% crop blighted in as little as 14-21 days. Management of potato and tomato late blight is one of the most complex and intensively studied areas of all plant pathology; an integrated, multi-component approach is mandatory. (1) Exclusion and regulatory measures are the first line of defense: plant only certified, government-inspected, late-blight-indexed potato seed tubers produced in low-disease-pressure arid seed-increase zones (this eliminates the #1 source of primary inoculum in most regions); follow all national and international seed potato quarantine regulations (USDA APHIS, EU Plant Health Directive, NPPO requirements) preventing movement of untested seed potatoes; plant only certified disease-free tomato transplants produced in screened, soilless transplant houses with no late blight history; do not plant saved 'home-saved' potato tubers or tomato seed from a late-blight-affected crop as primary inoculum sources. (2) Cultural practices: (a) eliminate all overwintering inoculum sources before planting: destroy all volunteer potato plants (ground keepers) growing in or near potato and tomato fields by disking, herbicide application, or hand removal in early spring; remove wild Solanum weed",
+          "excerpt": "across; when cut transversely, the underlying tuber flesh shows a characteristic shallow (3-15 mm deep), firm, dry, granular, reddish-brown to copper-colored necrotic 'marbling' or 'granulation' in the outer perimedullary cortex region immediately beneath the periderm (this reddish-brown granulation distinguishes late blight tuber rot from Erwinia bacterial soft rot [watery, mushy, smelly], early blight tuber rot [darker brown, dry, sharply defined corky lesion], Fusarium dry rot [cavities lined…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json",
+          "title": "Potato Late Blight (Phytophthora infestans, Oomycota Peronosporaceae) - Irish Potato Famine Pathogen",
+          "category": "diseases",
+          "score": 0.399135,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\diseases\\potato\\potato_late_blight.diseases.json#chunk-1",
+          "raw_score": 0.22733619378103515,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "treatment_tomato_late_blight",
+      "category": "treatment",
+      "query": "tomato late blight treatment fungicide",
+      "k": 5,
+      "relevant_sources": [
+        "tomato_late_blight.treatment.json"
+      ],
+      "retrieved_sources": [
+        "tomato_late_blight.treatment.json",
+        "tomato_early_blight.treatment.json",
+        "potato_late_blight.treatment.json",
+        "potato_early_blight.treatment.json",
+        "corn_northern_leaf_blight.treatment.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Tomato-Potato Late Blight — Management in the Home Garden and Field Crop: tomato Disease: late blight Late blight (Phytophthora infestans) is a fast-moving water-mould disease managed with sanitation, resistant varieties and preventive fungicides. Remove and destroy infected plants and cull piles immediately — do not compost them — and destroy volunteer tomato and potato plants, which harbour the pathogen between crops. Plant late-blight-resistant tomato varieties where available and use certified seed. Keep foliage dry with drip irrigation and stake plants for airflow. In gardens and fields, apply protectant fungicides (multi-site materials such as chlorothalonil or mancozeb where labelled) before infection periods during cool, wet weather, switching to specific products with Phytophthora activity (FRAC group 4 or 40) if the disease is present; rotate modes of action and follow the label. Copper-based products are an option for organic production but provide only partial control.",
+          "excerpt": "Tomato-Potato Late Blight — Management in the Home Garden and Field Crop: tomato Disease: late blight Late blight (Phytophthora infestans) is a fast-moving water-mould disease managed with sanitation, resistant varieties and preventive fungicides. Remove and destroy infected plants and cull piles immediately — do not compost them — and destroy volunteer tomato and potato plants, which harbour the pathogen between crops. Plant late-blight-resistant tomato varieties where available and use certifi…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\tomato\\tomato_late_blight.treatment.json",
+          "title": "Tomato-Potato Late Blight — Management in the Home Garden and Field",
+          "category": "treatment",
+          "score": 0.454363,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\tomato\\tomato_late_blight.treatment.json#chunk-0",
+          "raw_score": 0.39194721030139706,
+          "relevance_rank": null
+        },
+        {
+          "text": "Early Blight of Tomato (Alternaria solani) — Management Crop: tomato Disease: early blight Tomato early blight is managed with rotation, sanitation, resistant varieties, staking/mulching and a protectant fungicide program. Rotate away from tomato, potato and other solanaceous crops for at least two years and destroy crop residue and cull piles, which carry the fungus between seasons. Stake or cage plants and mulch to keep foliage off the soil and reduce rain splash, water at the base, and remove infected lower leaves to slow upward progress. Maintain balanced nitrogen, because stressed and older plants are most susceptible. Begin labelled fungicide sprays when symptoms first appear and continue on a 7- to 14-day schedule, alternating multi-site protectants with single-site FRAC-group materials (groups 7 and 11 with early-blight activity) and rotating modes of action. Follow the label for rate, interval and pre-harvest interval.",
+          "excerpt": "Early Blight of Tomato (Alternaria solani) — Management Crop: tomato Disease: early blight Tomato early blight is managed with rotation, sanitation, resistant varieties, staking/mulching and a protectant fungicide program. Rotate away from tomato, potato and other solanaceous crops for at least two years and destroy crop residue and cull piles, which carry the fungus between seasons. Stake or cage plants and mulch to keep foliage off the soil and reduce rain splash, water at the base, and remove…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\tomato\\tomato_early_blight.treatment.json",
+          "title": "Early Blight of Tomato (Alternaria solani) — Management",
+          "category": "treatment",
+          "score": 0.327514,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\tomato\\tomato_early_blight.treatment.json#chunk-0",
+          "raw_score": 0.21073442194467126,
+          "relevance_rank": null
+        },
+        {
+          "text": "Late Blight of Potato — Disease Management Crop: potato Disease: late blight Late blight (Phytophthora infestans) is a fast-moving water-mould disease that can destroy a potato crop within days; management must be preventive and integrated. Plant certified disease-free seed potatoes and destroy cull piles and volunteer potato plants, which are the main overwintering sources. Scout fields and use late-blight forecasting to time sprays, and apply protectant fungicides (multi-site materials such as mancozeb or chlorothalonil) before infection periods, adding or switching to specific materials with activity against Phytophthora (for example FRAC group 4 or 40 products where labelled) during high-risk weather. Rotate modes of action and follow the label for rate, interval and pre-harvest interval. Destroy infected plants promptly to limit spread; host resistance is limited and must be integrated with fungicides.",
+          "excerpt": "Late Blight of Potato — Disease Management Crop: potato Disease: late blight Late blight (Phytophthora infestans) is a fast-moving water-mould disease that can destroy a potato crop within days; management must be preventive and integrated. Plant certified disease-free seed potatoes and destroy cull piles and volunteer potato plants, which are the main overwintering sources. Scout fields and use late-blight forecasting to time sprays, and apply protectant fungicides (multi-site materials such as…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\potato\\potato_late_blight.treatment.json",
+          "title": "Late Blight of Potato — Disease Management",
+          "category": "treatment",
+          "score": 0.32439,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\potato\\potato_late_blight.treatment.json#chunk-0",
+          "raw_score": 0.2919858710067338,
+          "relevance_rank": null
+        },
+        {
+          "text": "Potato Early Blight (Alternaria solani) — Management Crop: potato Disease: early blight Potato early blight is managed with crop rotation, resistant varieties, sanitation, balanced fertility and a protectant fungicide program. Rotate away from potato and tomato for two to three years and destroy infected crop residue and cull piles that carry the fungus. Plant varieties with early-blight tolerance where available, and maintain balanced nitrogen, since stressed and senescing plants are more susceptible. Begin fungicide applications when symptoms first appear and continue on a 7- to 14-day schedule (adjusted to weather and label), tank-mixing or alternating multi-site protectants with single-site materials (FRAC groups 7 and 11 with early-blight activity) and rotating modes of action. Follow the label for rate, timing, and pre-harvest interval. Good vine coverage is essential for control.",
+          "excerpt": "Potato Early Blight (Alternaria solani) — Management Crop: potato Disease: early blight Potato early blight is managed with crop rotation, resistant varieties, sanitation, balanced fertility and a protectant fungicide program. Rotate away from potato and tomato for two to three years and destroy infected crop residue and cull piles that carry the fungus. Plant varieties with early-blight tolerance where available, and maintain balanced nitrogen, since stressed and senescing plants are more susce…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\potato\\potato_early_blight.treatment.json",
+          "title": "Potato Early Blight (Alternaria solani) — Management",
+          "category": "treatment",
+          "score": 0.288892,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\potato\\potato_early_blight.treatment.json#chunk-0",
+          "raw_score": 0.15556067162683876,
+          "relevance_rank": null
+        },
+        {
+          "text": "Northern Corn Leaf Blight — Management Crop: corn Disease: northern leaf blight Northern corn leaf blight (Exserohilum turcicum) is controlled with resistant hybrids, crop rotation, residue management and fungicide application when warranted. Choose hybrids with good resistance (both qualitative and quantitative resistance is available), rotate away from corn, and manage residue in reduced-till fields where the fungus overwinters. Scout fields and use local disease forecasts; when lesions develop before tasselling on susceptible hybrids, apply a labelled fungicide (FRAC 3, 7 or 11 chemistry with northern-leaf-blight activity) at the recommended stage, rotating modes of action. Applying fungicides to resistant hybrids is seldom economical, so base the decision on resistance rating, disease severity and weather outlook. Observe label rates, timing and pre-harvest intervals.",
+          "excerpt": "Northern Corn Leaf Blight — Management Crop: corn Disease: northern leaf blight Northern corn leaf blight (Exserohilum turcicum) is controlled with resistant hybrids, crop rotation, residue management and fungicide application when warranted. Choose hybrids with good resistance (both qualitative and quantitative resistance is available), rotate away from corn, and manage residue in reduced-till fields where the fungus overwinters. Scout fields and use local disease forecasts; when lesions develo…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\corn\\corn_northern_leaf_blight.treatment.json",
+          "title": "Northern Corn Leaf Blight — Management",
+          "category": "treatment",
+          "score": 0.207893,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\corn\\corn_northern_leaf_blight.treatment.json#chunk-0",
+          "raw_score": 0.12556197305280103,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "treatment_apple_scab",
+      "category": "treatment",
+      "query": "apple scab management control fungicide",
+      "k": 5,
+      "relevant_sources": [
+        "apple_scab.treatment.json"
+      ],
+      "retrieved_sources": [
+        "apple_scab.treatment.json",
+        "apple_black_rot.treatment.json",
+        "apple_rust.treatment.json",
+        "apple_mosaic_virus.treatment.json",
+        "peach_leaf_curl.treatment.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Apple Scab — Disease Management Crop: apple Disease: scab Apple scab (Venturia inaequalis) control integrates orchard-floor sanitation, resistant cultivars and a season-long fungicide program. In autumn, shred fallen leaves or apply urea (5% solution) to the orchard floor to accelerate leaf decomposition and reduce the ascospore inoculum responsible for primary infections the following spring. Where feasible, plant scab-resistant cultivars. Start protectant fungicide sprays at green tip and continue through the primary infection period (green tip to about two weeks after petal fall), timed to Mills-table infection periods using local disease-warning models; switch to extended-interval cover sprays for secondary control later in the season. Multi-site protectants (captan, mancozeb) are tank-mixed or alternated with single-site materials (FRAC 3 DMI, FRAC 7 SDHI, FRAC 11 QoI) to slow resistance. Observe label rates, pre-harvest intervals and restricted-entry intervals.",
+          "excerpt": "Apple Scab — Disease Management Crop: apple Disease: scab Apple scab (Venturia inaequalis) control integrates orchard-floor sanitation, resistant cultivars and a season-long fungicide program. In autumn, shred fallen leaves or apply urea (5% solution) to the orchard floor to accelerate leaf decomposition and reduce the ascospore inoculum responsible for primary infections the following spring. Where feasible, plant scab-resistant cultivars. Start protectant fungicide sprays at green tip and cont…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_scab.treatment.json",
+          "title": "Apple Scab — Disease Management",
+          "category": "treatment",
+          "score": 0.58908,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_scab.treatment.json#chunk-0",
+          "raw_score": 0.4129717790106687,
+          "relevance_rank": null
+        },
+        {
+          "text": "Black Rot of Apple — Management Crop: apple Disease: black rot Black rot (Botryosphaeria obtusa) management in apple combines sanitation, cultural control and a protectant fungicide program. Sanitation is the primary tactic: prune out and destroy dead wood, cankers, and fire-blight strikes during the dormant season, remove mummified fruit from the tree and orchard floor, and avoid leaving pruning stubs that the fungus colonises. Maintain tree vigour but avoid excessive nitrogen, which promotes the succulent growth most susceptible to infection. Fungicides applied from pink through harvest protect leaves and fruit; in high-pressure blocks, summer cover sprays are needed in addition to the early-season scab program. FRAC group M (multi-site protectants such as captan and mancozeb) and FRAC group 3 (DMI) and group 11 (QoI) materials are used; rotated modes of action are essential to manage resistance. Always follow the current product label for rate, timing, pre-harvest interval and restricted-entry interval.",
+          "excerpt": "Black Rot of Apple — Management Crop: apple Disease: black rot Black rot (Botryosphaeria obtusa) management in apple combines sanitation, cultural control and a protectant fungicide program. Sanitation is the primary tactic: prune out and destroy dead wood, cankers, and fire-blight strikes during the dormant season, remove mummified fruit from the tree and orchard floor, and avoid leaving pruning stubs that the fungus colonises. Maintain tree vigour but avoid excessive nitrogen, which promotes t…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_black_rot.treatment.json",
+          "title": "Black Rot of Apple — Management",
+          "category": "treatment",
+          "score": 0.432698,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_black_rot.treatment.json#chunk-0",
+          "raw_score": 0.1895680422978635,
+          "relevance_rank": null
+        },
+        {
+          "text": "Cedar Apple Rust — Management on Apple Crop: apple Disease: rust Cedar apple rust (Gymnosporangium juniperi-virginianae) is managed by breaking the juniper-to-apple life cycle and by protectant fungicides. Where practical, remove nearby eastern red cedar and juniper host plants (especially within a few hundred metres of the orchard) to reduce the basidiospore inoculum that infects apple. Plant rust-resistant apple and crabapple cultivars. On susceptible cultivars, apply protective fungicides beginning at pink and continuing on a 7- to 10-day interval through two to three weeks after petal fall, matching applications to infection periods during wet spring weather. FRAC group 3 (DMI), group 7 (SDHI) and group 11 (QoI) materials with cedar-apple-rust activity are labelled; rotate modes of action. Follow the label for rate, interval and pre-harvest interval.",
+          "excerpt": "Cedar Apple Rust — Management on Apple Crop: apple Disease: rust Cedar apple rust (Gymnosporangium juniperi-virginianae) is managed by breaking the juniper-to-apple life cycle and by protectant fungicides. Where practical, remove nearby eastern red cedar and juniper host plants (especially within a few hundred metres of the orchard) to reduce the basidiospore inoculum that infects apple. Plant rust-resistant apple and crabapple cultivars. On susceptible cultivars, apply protective fungicides beg…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_rust.treatment.json",
+          "title": "Cedar Apple Rust — Management on Apple",
+          "category": "treatment",
+          "score": 0.29652,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_rust.treatment.json#chunk-0",
+          "raw_score": 0.25217193685163736,
+          "relevance_rank": null
+        },
+        {
+          "text": "Apple Viruses — Disease Management Crop: apple Disease: mosaic virus There is no chemical cure for apple mosaic virus (ApMV); management depends entirely on exclusion and sanitation. Plant only certified virus-tested (virus-indexed) nursery stock and never graft with budwood of unknown status. Test budwood and scion wood with ELISA or RT-PCR before propagation. In young plantings, remove and destroy any tree confirmed infected to prevent it becoming a reservoir; disinfect pruning tools between trees. Because ApMV spreads primarily through propagation rather than a vector, the most effective control is a rigorous clean-stock certification program. Sensitive cultivars (for example Golden Delicious and Cox's Orange Pippin) show the strongest symptoms and should be sourced only from indexed material.",
+          "excerpt": "Apple Viruses — Disease Management Crop: apple Disease: mosaic virus There is no chemical cure for apple mosaic virus (ApMV); management depends entirely on exclusion and sanitation. Plant only certified virus-tested (virus-indexed) nursery stock and never graft with budwood of unknown status. Test budwood and scion wood with ELISA or RT-PCR before propagation. In young plantings, remove and destroy any tree confirmed infected to prevent it becoming a reservoir; disinfect pruning tools between t…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_mosaic_virus.treatment.json",
+          "title": "Apple Viruses — Disease Management",
+          "category": "treatment",
+          "score": 0.291309,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\apple\\apple_mosaic_virus.treatment.json#chunk-0",
+          "raw_score": 0.1590134817548841,
+          "relevance_rank": null
+        },
+        {
+          "text": "Peach Leaf Curl — Disease Management Crop: peach Disease: leaf curl Peach leaf curl (Taphrina deformans) is managed almost entirely with a single well-timed dormant fungicide application, because the fungus infects only during a narrow window as buds begin to swell and open. Apply a labelled fungicide (for example a copper-based product or a chlorothalonil or dodine product where registered for peach) at the dormant to delayed-dormant stage, before bud break, and repeat as the label directs; once leaves are expanded, sprays are ineffective. There is no useful in-season chemical control, so timing is critical. Growers should also maintain tree vigour, remove severely affected shoots where practical, and consult local extension for the exact recommended timing window in their region. Confirm current registrations, rates and timing with the product label and state extension guidance.",
+          "excerpt": "Peach Leaf Curl — Disease Management Crop: peach Disease: leaf curl Peach leaf curl (Taphrina deformans) is managed almost entirely with a single well-timed dormant fungicide application, because the fungus infects only during a narrow window as buds begin to swell and open. Apply a labelled fungicide (for example a copper-based product or a chlorothalonil or dodine product where registered for peach) at the dormant to delayed-dormant stage, before bud break, and repeat as the label directs; onc…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\peach\\peach_leaf_curl.treatment.json",
+          "title": "Peach Leaf Curl — Disease Management",
+          "category": "treatment",
+          "score": 0.229044,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\treatment\\peach\\peach_leaf_curl.treatment.json#chunk-0",
+          "raw_score": 0.07006288982884011,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "fertilizer_tomato",
+      "category": "fertilizer",
+      "query": "tomato fertilizer nitrogen guidance",
+      "k": 5,
+      "relevant_sources": [
+        "tomato.fertilizer.json"
+      ],
+      "retrieved_sources": [
+        "tomato.fertilizer.json",
+        "basil.fertilizer.json",
+        "soybean.fertilizer.json",
+        "garlic.fertilizer.json",
+        "bean.fertilizer.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500) Crop: tomato Tomato is a long-season, heavy-feeding solanaceous crop, and UF/IFAS guidance stresses that a sound nutrient programme considers rate together with fertilizer material, placement and timing, and links these to irrigation scheduling and crop nutritional status monitoring — soil tests, leaf analysis and petiole sap testing — so that nutrients remain available to the crop without being leached from sandy soils. In commercial production on polyethylene mulch with drip irrigation, a target fertilizer rate is used as a starting point, with nitrogen and potassium applied in split applications through the season and phosphorus applied largely pre-plant because it is relatively immobile in soil. Rate adjustments are expected during the season to account for leaching rains and for an extended harvest period when market conditions are favourable. Potassium is important for fruit size, colour and flavour as well as for plant vigour; nitrogen sustains the long fruiting period but excessive nitrogen delays maturity and reduces fruit quality and pest resistance. Calcium and boron, combined with even moisture, are important because blossom-end rot is a calcium-related disorder aggravated by irregular water supply rather than simply low soil calcium. Maintain soil pH in the recommended range and follow published best-management practices for irrigation and fertilizer application to protect water quality.",
+          "excerpt": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500) Crop: tomato Tomato is a long-season, heavy-feeding solanaceous crop, and UF/IFAS guidance stresses that a sound nutrient programme considers rate together with fertilizer material, placement and timing, and links these to irrigation scheduling and crop nutritional status monitoring — soil tests, leaf analysis and petiole sap testing — so that nutrients remain available to the crop without being leached from sandy soils. In commerc…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\tomato\\tomato.fertilizer.json",
+          "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+          "category": "fertilizer",
+          "score": 0.454291,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\tomato\\tomato.fertilizer.json#chunk-0",
+          "raw_score": 0.22041558971249964,
+          "relevance_rank": null
+        },
+        {
+          "text": "Basil: A Summer Favorite — Growing and Nutrition Crop: basil Basil is a fast-growing leafy herb in the mint family and responds strongly to nitrogen, which drives the vegetative leaf growth that is the harvested product. Work compost or a balanced complete fertilizer into the bed before planting and maintain soil pH in the 6.0-7.0 range, where most nutrients are most available to this crop. Because basil is grown for foliage rather than fruit, nitrogen-rich feeding produces the tender, aromatic leaves desired, but excessive nitrogen can reduce essential-oil content and flavour, so moderate split applications are preferred over a single heavy dose. Keep moisture even: basil wilts quickly and drought stress causes early flowering (bolting), which ends leaf production. Side-dress lightly with a nitrogen source such as compost or a soluble complete fertilizer every three to four weeks through the growing season, and pinch out flower spikes to prolong harvest. In container and hydroponic production, basil performs best with a nutrient solution in the electrical conductivity range of about 1.6-2.2 mS/cm and pH 5.5-6.6 as described in Penn State Extension hydroponic guidance. Avoid over-fertilising, which builds up soluble salts in containers and damages roots.",
+          "excerpt": "Basil: A Summer Favorite — Growing and Nutrition Crop: basil Basil is a fast-growing leafy herb in the mint family and responds strongly to nitrogen, which drives the vegetative leaf growth that is the harvested product. Work compost or a balanced complete fertilizer into the bed before planting and maintain soil pH in the 6.0-7.0 range, where most nutrients are most available to this crop. Because basil is grown for foliage rather than fruit, nitrogen-rich feeding produces the tender, aromatic…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\basil\\basil.fertilizer.json",
+          "title": "Basil: A Summer Favorite — Growing and Nutrition",
+          "category": "fertilizer",
+          "score": 0.340875,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\basil\\basil.fertilizer.json#chunk-0",
+          "raw_score": 0.16553501877936175,
+          "relevance_rank": null
+        },
+        {
+          "text": "Soybean Fertilizer Guidelines Crop: soybean Soybean is a legume and, if properly inoculated, can use atmospheric nitrogen through fixation in root nodules, so nitrogen fertilizer is generally unnecessary. University of Minnesota Extension explains that the amount of fixation is inversely related to soil nitrate-nitrogen: when soil nitrate is high, fixation in the nodules is small, and when soil nitrate is low, fixation quickly increases to meet the greater nitrogen demand. Because of this, the focus of soybean fertility is phosphorus, potassium, sulfur and micronutrients rather than nitrogen, and rates are set from a soil test. Manure is an excellent source of phosphorus, potassium, secondary nutrients and micronutrients, and Minnesota research across ten sites found that soybean actually removes more nitrogen than corn, so manure application rates should be limited to the amount of nitrogen removed by the crop; where manure nitrogen was applied at rates below crop removal, nodulation resumed quickly in mid-season and final nitrogen removal was similar to non-manured fields. Manure consistently improved soybean grain yield but also increased vegetative growth, which led to more lodging in some varieties and provided a more favourable environment for white mold, so variety selection should account for this. Soybean seed is very sensitive to salt injury, so fertilizer should never be placed in contact with seed; banded placement must leave at least one inch of soil between fertilizer and seed. In no-till production, research shows that yield responses to phosphate are similar for banded and broadcast applications, provided the fertilizer is adequately incorporated by the planting operation.",
+          "excerpt": "Soybean Fertilizer Guidelines Crop: soybean Soybean is a legume and, if properly inoculated, can use atmospheric nitrogen through fixation in root nodules, so nitrogen fertilizer is generally unnecessary. University of Minnesota Extension explains that the amount of fixation is inversely related to soil nitrate-nitrogen: when soil nitrate is high, fixation in the nodules is small, and when soil nitrate is low, fixation quickly increases to meet the greater nitrogen demand. Because of this, the f…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\soybean\\soybean.fertilizer.json",
+          "title": "Soybean Fertilizer Guidelines",
+          "category": "fertilizer",
+          "score": 0.322727,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\soybean\\soybean.fertilizer.json#chunk-0",
+          "raw_score": 0.2467522684720681,
+          "relevance_rank": null
+        },
+        {
+          "text": "Home Garden Soil Management and Fertilizing Vegetables Crop: garlic Garlic is a long-season bulb crop whose quality depends on nitrogen being available during leaf growth but tapering off as the bulb matures. Penn State Extension's home-garden soil-management guidance applies directly: begin with a soil test to determine pH and the lime and fertilizer requirement, because garlic performs best in well-drained soil with pH near 6.0-7.0 where nutrient availability is greatest. Phosphorus and potassium, together with lime, are best worked into the soil before planting in the autumn, since garlic roots establish in autumn and the crop overwinters; phosphorus supports root and bulb development while potassium contributes to bulb size, dry matter and storage quality. Nitrogen is applied in spring as growth resumes and again during active leaf growth, since nitrogen applied too late in the season delays bulb maturity and reduces storage life. Garlic, like other alliums, has a relatively shallow root system and benefits from even moisture and from organic matter supplied by compost; excessive nitrogen late in the season and irregular watering both promote splitting and poorer storage. Sulfur nutrition affects pungency and flavour compounds in alliums and is usually adequate unless soils are very low in organic matter. Avoid fresh manure just before planting because of salt injury and food-safety considerations.",
+          "excerpt": "Home Garden Soil Management and Fertilizing Vegetables Crop: garlic Garlic is a long-season bulb crop whose quality depends on nitrogen being available during leaf growth but tapering off as the bulb matures. Penn State Extension's home-garden soil-management guidance applies directly: begin with a soil test to determine pH and the lime and fertilizer requirement, because garlic performs best in well-drained soil with pH near 6.0-7.0 where nutrient availability is greatest. Phosphorus and potass…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\garlic\\garlic.fertilizer.json",
+          "title": "Home Garden Soil Management and Fertilizing Vegetables",
+          "category": "fertilizer",
+          "score": 0.305109,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\garlic\\garlic.fertilizer.json#chunk-0",
+          "raw_score": 0.11444204763364506,
+          "relevance_rank": null
+        },
+        {
+          "text": "Home Garden Soil Management and Fertilizing Vegetables Crop: bean Common bean is a legume and, when properly inoculated with the appropriate Rhizobium species, can fix most of its own nitrogen from the atmosphere, so nitrogen fertilizer is normally not required and can be counter-productive because high soil nitrate suppresses nodulation. Phosphorus is the nutrient that most often limits bean, particularly in cold soils, and it is applied at or before planting; potassium is also removed with the harvested pods and should be maintained by soil test. Penn State Extension emphasises that soil testing is the foundation of a vegetable fertility programme: it determines pH (maintain approximately 6.0-6.8 for bean, with a tolerance of slightly lower) as well as lime and fertilizer requirements, so that P and K levels are built to the optimum range and then maintained rather than applied blindly each year. Beans are sensitive to acidic soils and to low available molybdenum, which is more limited at low pH. Manure and compost supply P, K, secondary nutrients and micronutrients and improve soil organic matter; however, manure should be applied to the preceding crop rather than directly ahead of beans so that surplus nitrogen does not reduce fixation. Avoid fertilizer placed in direct contact with bean seed, because beans are very sensitive to salt injury from concentrated fertilizer bands.",
+          "excerpt": "Home Garden Soil Management and Fertilizing Vegetables Crop: bean Common bean is a legume and, when properly inoculated with the appropriate Rhizobium species, can fix most of its own nitrogen from the atmosphere, so nitrogen fertilizer is normally not required and can be counter-productive because high soil nitrate suppresses nodulation. Phosphorus is the nutrient that most often limits bean, particularly in cold soils, and it is applied at or before planting; potassium is also removed with the…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\bean\\bean.fertilizer.json",
+          "title": "Home Garden Soil Management and Fertilizing Vegetables",
+          "category": "fertilizer",
+          "score": 0.258711,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\bean\\bean.fertilizer.json#chunk-0",
+          "raw_score": 0.15530214006020457,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "fertilizer_corn",
+      "category": "fertilizer",
+      "query": "corn nutrient fertilizer nitrogen recommendations",
+      "k": 5,
+      "relevant_sources": [
+        "corn.fertilizer.json"
+      ],
+      "retrieved_sources": [
+        "cucumber.fertilizer.json",
+        "soybean.fertilizer.json",
+        "corn.fertilizer.json",
+        "bell_pepper.fertilizer.json",
+        "strawberry.fertilizer.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500) Crop: cucumber Cucumber and other cucurbits are fast-growing, heavy-feeding vegetables usually grown on polyethylene mulch with drip irrigation, which allows nitrogen and potassium to be injected as the crop develops. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook explains that at field level, adequate fertilizer rates must be combined with irrigation scheduling, controlled-release materials and crop nutritional status monitoring such as soil tests and petiole sap testing to keep nutrients in the root zone and avoid leaching in sandy soils. Recommendations are given as a target fertilizer rate that serves as a starting point, with supplemental applications allowed to account for leaching rains and extended harvest periods. Phosphorus is generally applied pre-plant based on soil test because it is relatively immobile, while nitrogen and potassium are the nutrients most often split or fertigated through the season. Cucurbits benefit from adequate potassium for fruit quality and from boron and other micronutrients in small quantities, and magnesium can be limiting on sandy, highly leached soils. Maintain soil pH in the recommended range for commercial vegetable production and follow best-management practices for irrigation and nutrient application to protect water quality. Watch plant vigour and leaf colour to fine-tune rates in-season.",
+          "excerpt": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500) Crop: cucumber Cucumber and other cucurbits are fast-growing, heavy-feeding vegetables usually grown on polyethylene mulch with drip irrigation, which allows nitrogen and potassium to be injected as the crop develops. The UF/IFAS Nutrient Management of Vegetable and Agronomic Row Crops handbook explains that at field level, adequate fertilizer rates must be combined with irrigation scheduling, controlled-release materials and crop…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\cucumber\\cucumber.fertilizer.json",
+          "title": "Nutrient Management of Vegetable and Agronomic Row Crops (SP500)",
+          "category": "fertilizer",
+          "score": 0.360159,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\cucumber\\cucumber.fertilizer.json#chunk-0",
+          "raw_score": 0.17165570834115293,
+          "relevance_rank": null
+        },
+        {
+          "text": "Soybean Fertilizer Guidelines Crop: soybean Soybean is a legume and, if properly inoculated, can use atmospheric nitrogen through fixation in root nodules, so nitrogen fertilizer is generally unnecessary. University of Minnesota Extension explains that the amount of fixation is inversely related to soil nitrate-nitrogen: when soil nitrate is high, fixation in the nodules is small, and when soil nitrate is low, fixation quickly increases to meet the greater nitrogen demand. Because of this, the focus of soybean fertility is phosphorus, potassium, sulfur and micronutrients rather than nitrogen, and rates are set from a soil test. Manure is an excellent source of phosphorus, potassium, secondary nutrients and micronutrients, and Minnesota research across ten sites found that soybean actually removes more nitrogen than corn, so manure application rates should be limited to the amount of nitrogen removed by the crop; where manure nitrogen was applied at rates below crop removal, nodulation resumed quickly in mid-season and final nitrogen removal was similar to non-manured fields. Manure consistently improved soybean grain yield but also increased vegetative growth, which led to more lodging in some varieties and provided a more favourable environment for white mold, so variety selection should account for this. Soybean seed is very sensitive to salt injury, so fertilizer should never be placed in contact with seed; banded placement must leave at least one inch of soil between fertilizer and seed. In no-till production, research shows that yield responses to phosphate are similar for banded and broadcast applications, provided the fertilizer is adequately incorporated by the planting operation.",
+          "excerpt": "Soybean Fertilizer Guidelines Crop: soybean Soybean is a legume and, if properly inoculated, can use atmospheric nitrogen through fixation in root nodules, so nitrogen fertilizer is generally unnecessary. University of Minnesota Extension explains that the amount of fixation is inversely related to soil nitrate-nitrogen: when soil nitrate is high, fixation in the nodules is small, and when soil nitrate is low, fixation quickly increases to meet the greater nitrogen demand. Because of this, the f…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\soybean\\soybean.fertilizer.json",
+          "title": "Soybean Fertilizer Guidelines",
+          "category": "fertilizer",
+          "score": 0.350825,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\soybean\\soybean.fertilizer.json#chunk-0",
+          "raw_score": 0.24403510502785608,
+          "relevance_rank": null
+        },
+        {
+          "text": "Fertilizing Corn in Minnesota Crop: corn Nitrogen is the nutrient most likely to limit corn and is the one that requires the most careful management. University of Minnesota Extension presents nitrogen rate guidelines based on the Maximum Return To Nitrogen (MRTN) concept, in which the economic optimum rate reflects the ratio of nitrogen price to crop value: for corn following corn without irrigation, MRTN values range from about 200 lb N per acre when the price/value ratio is 0.075 down to about 165 lb N per acre at a ratio of 0.150, whereas corn following soybean ranges from about 155 to 135 lb N per acre across the same ratios. Legumes and previous crops leave nitrogen credits that must be subtracted: first-year corn following a good stand of alfalfa can need 40-80 lb N per acre on medium and fine soils or nothing at all on USDA-class II or better medium and fine soils, and second-year corn following alfalfa generally needs 0-80 lb N per acre depending on soil texture and whether alfalfa was terminated in fall or spring. Residual soil nitrate measured in the top two feet before planting also earns a credit ranging from zero at 0-6 ppm nitrate-N up to 155 lb N per acre above 18 ppm. Because Minnesota soils, climates and rotations differ, Extension advises implementing regional nitrogen best-management practices covering source, placement, timing and use of nitrification inhibitors to optimise nitrogen-use efficiency and reduce losses to nitrate leaching and denitrification. Phosphorus, potassium and zinc should be managed according to soil test rather than by habit.",
+          "excerpt": "Fertilizing Corn in Minnesota Crop: corn Nitrogen is the nutrient most likely to limit corn and is the one that requires the most careful management. University of Minnesota Extension presents nitrogen rate guidelines based on the Maximum Return To Nitrogen (MRTN) concept, in which the economic optimum rate reflects the ratio of nitrogen price to crop value: for corn following corn without irrigation, MRTN values range from about 200 lb N per acre when the price/value ratio is 0.075 down to abou…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\corn\\corn.fertilizer.json",
+          "title": "Fertilizing Corn in Minnesota",
+          "category": "fertilizer",
+          "score": 0.348097,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\corn\\corn.fertilizer.json#chunk-0",
+          "raw_score": 0.24013897436394813,
+          "relevance_rank": null
+        },
+        {
+          "text": "A Summary of N, P, and K Research with Pepper in Florida Crop: bell pepper University of Florida IFAS summarises more than 60 years of pepper fertilization research. Modern pepper recommendations rest on the principle that rate is only one component of a sound programme: fertilizer material, placement and timing matter equally, and the single target rate is a starting point to be adjusted during the season for leaching rains and extended harvests. Screened and plastic-mulched production combined with drip irrigation and fertigation is standard, and nitrogen and potassium are applied as a target rate with split applications through the season because both are mobile and readily leached in Florida's sandy soils. A substantial portion of nitrogen and potassium is commonly injected through the drip system beginning at first flower and continuing through harvest, while phosphorus is less mobile and is largely applied pre-plant based on soil test. Drip irrigation must be managed carefully so that nutrients are not leached below the root zone. Soil pH for optimum commercial vegetable production is maintained in the acid range, and soil and plant tissue analyses are used to fine-tune rates. Unusually heavy rainfall or irrigation requires supplemental fertilizer; monitor plant nutrient status and adjust. Always follow locally recommended rates and BMPs that protect water quality.",
+          "excerpt": "A Summary of N, P, and K Research with Pepper in Florida Crop: bell pepper University of Florida IFAS summarises more than 60 years of pepper fertilization research. Modern pepper recommendations rest on the principle that rate is only one component of a sound programme: fertilizer material, placement and timing matter equally, and the single target rate is a starting point to be adjusted during the season for leaching rains and extended harvests. Screened and plastic-mulched production combined…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\bell_pepper\\bell_pepper.fertilizer.json",
+          "title": "A Summary of N, P, and K Research with Pepper in Florida",
+          "category": "fertilizer",
+          "score": 0.335958,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\bell_pepper\\bell_pepper.fertilizer.json#chunk-0",
+          "raw_score": 0.13708334225769944,
+          "relevance_rank": null
+        },
+        {
+          "text": "Strawberry Nutrient Management Crop: strawberry Strawberry nutrient management depends on the production system — June-bearing versus day-neutral — as well as soil type, crop history, nutrient sources and nutrient delivery system, and all strawberry plants need nitrogen, phosphorus, potassium and other nutrients for vigorous vegetative growth and fruit production. University of Minnesota Extension advises taking soil samples in the field a year before planting and having them tested, paying particular attention to pH: if soil pH is below 5.5 or above 7.5, apply lime or sulfur respectively in the year before planting, because the soil may take up to a year to change after amendment. In general, phosphorus, potassium and part of the nitrogen should be applied at or before planting, with subsequent applications timed to the production system and adjusted using foliar testing. For established June-bearing plantings, nitrogen is best applied after harvest during renovation, because nitrogen promotes leaf and runner growth and can reduce fruit quality if applied before or during harvest in medium or heavy soils; apply nitrogen again during runner production and take care not to over-apply, since surplus nitrogen both reduces yield and pushes late-season growth that fails to harden off for winter, and also moves readily in the soil and can contribute to nitrate pollution. Growers with drip tape can use fertigation, and foliar feeding is best used only as a supplement when foliar nutrient tests indicate a specific need, as current research shows no yield benefit from foliar programmes applied without a demonstrated deficiency. Strawberry is shallow-rooted, with most roots in the top 6-12 inches, so irrigation and soil drainage usually limit yield more than fertilizer does.",
+          "excerpt": "Strawberry Nutrient Management Crop: strawberry Strawberry nutrient management depends on the production system — June-bearing versus day-neutral — as well as soil type, crop history, nutrient sources and nutrient delivery system, and all strawberry plants need nitrogen, phosphorus, potassium and other nutrients for vigorous vegetative growth and fruit production. University of Minnesota Extension advises taking soil samples in the field a year before planting and having them tested, paying part…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\strawberry\\strawberry.fertilizer.json",
+          "title": "Strawberry Nutrient Management",
+          "category": "fertilizer",
+          "score": 0.317375,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\fertilizer\\strawberry\\strawberry.fertilizer.json#chunk-0",
+          "raw_score": 0.19624983282660668,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "care_cucumber",
+      "category": "plant care",
+      "query": "cucumber plant care watering",
+      "k": 5,
+      "relevant_sources": [
+        "cucumber.plant_care.json"
+      ],
+      "retrieved_sources": [
+        "cucumber.plant_care.json",
+        "zucchini.plant_care.json",
+        "squash.plant_care.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Growing Cucumbers in Home Gardens Crop: cucumber Cucumbers are warm-season vining crops that grow best in warm weather and are damaged by cold. UMN Extension advises starting seeds indoors in late April for transplants, or sowing seed directly in the garden after the soil has warmed, usually in May in Minnesota, and using plastic mulch and row covers to allow earlier planting and to protect plants from cold; cucumbers are among the most cold-sensitive of the common vegetables. Choose a sunny site with a well-drained, fertile soil high in organic matter, and space plants about 12 inches apart in rows 36-60 inches apart, or plant in hills. Cucumbers may be grown on the ground or trained up trellises and fences; vertical training saves space, keeps fruit clean and straight, improves air movement and makes harvest easier. Water regularly and deeply, about an inch per week, keeping moisture even because irregular watering produces bitter, misshapen fruit, and water at the base to keep foliage dry and reduce foliar disease. Cucumbers are heavy feeders: work compost and a balanced fertilizer into the bed before planting and side-dress lightly as vines begin to run, but avoid excessive nitrogen, which produces abundant vine growth and few fruit. Cucumbers bear separate male and female flowers on the same plant and depend on bees for pollination, so avoid insecticide applications during bloom and plant flowers nearby to attract pollinators; parthenocarpic (all-female) types grown under row covers set fruit without pollination. Scout regularly for cucumber beetles, which both feed on plants and transmit bacterial wilt, and for squash bugs, aphids and for powdery and downy mildew on the foliage. Harvest slicing cucumbers when they are 6-8 inches long, firm and uniformly green, and pickling types at 2-4 inches, harvesting every few days to keep vines productive; do not allow fruit to over-mature, and store cucumbers at about 50 F rather than at refrigerator temperatures, which cause chilling injury.",
+          "excerpt": "Growing Cucumbers in Home Gardens Crop: cucumber Cucumbers are warm-season vining crops that grow best in warm weather and are damaged by cold. UMN Extension advises starting seeds indoors in late April for transplants, or sowing seed directly in the garden after the soil has warmed, usually in May in Minnesota, and using plastic mulch and row covers to allow earlier planting and to protect plants from cold; cucumbers are among the most cold-sensitive of the common vegetables. Choose a sunny sit…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\cucumber\\cucumber.plant_care.json",
+          "title": "Growing Cucumbers in Home Gardens",
+          "category": "plant care",
+          "score": 0.30368,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\cucumber\\cucumber.plant_care.json#chunk-0",
+          "raw_score": 0.11239989673086297,
+          "relevance_rank": null
+        },
+        {
+          "text": "Cultural Tips for Growing Squash Crop: zucchini Zucchini and other summer squash are warm-season vine crops harvested immature and repeatedly through the season, and they need warm weather and a sunny, well-drained site. UC IPM advises preparing a site with a well-drained, fertile soil high in organic matter, and planting after the soil has warmed, since squash are damaged by cold and set poorly in cool conditions; black plastic mulch and row covers help accumulate heat and protect young plants. Plant zucchini in hills or rows, spacing bush types about 2-3 feet apart to allow for their mature spread, or train plants to a trellis or tepee in smaller gardens, which also lifts fruit off the ground and reduces fruit rot. Water regularly and deeply, about an inch per week, keeping moisture even, and water at the base rather than over the foliage to reduce foliar disease; zucchini under stress produces fewer and poorer-quality fruit. Squash are heavy feeders, so work compost and a balanced fertilizer into the bed before planting and side-dress lightly as the plants grow, avoiding excess nitrogen, which produces abundant foliage at the expense of fruit. Zucchini bear separate male and female flowers on the same plant and depend on bees for pollination, so avoid insecticide applications during bloom and plant flowers nearby to support pollinators; fruit set is poor in cool weather and when bee activity is low, and unpollinated female flowers shrivel and drop. Scout regularly for squash bug, squash vine borer, cucumber beetles and aphids, which also transmit disease, and for powdery and downy mildew on the leaves. Harvest zucchini while the fruit is young, tender and glossy and the skin can be nicked with a fingernail — generally 6-8 inches long for zucchini — picking every other day to keep the plants producing, because fruit left to over-mature becomes seedy and tough and reduces further yield; the edible blossoms are also harvested on some types. Squash are perishable and are sensitive to chilling injury, so store harvested fruit cool but not at refrigerator temperatures that damage it, and use it within a few days.",
+          "excerpt": "Cultural Tips for Growing Squash Crop: zucchini Zucchini and other summer squash are warm-season vine crops harvested immature and repeatedly through the season, and they need warm weather and a sunny, well-drained site. UC IPM advises preparing a site with a well-drained, fertile soil high in organic matter, and planting after the soil has warmed, since squash are damaged by cold and set poorly in cool conditions; black plastic mulch and row covers help accumulate heat and protect young plants.…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\zucchini\\zucchini.plant_care.json",
+          "title": "Cultural Tips for Growing Squash",
+          "category": "plant care",
+          "score": 0.189626,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\zucchini\\zucchini.plant_care.json#chunk-0",
+          "raw_score": 0.05660925502750662,
+          "relevance_rank": null
+        },
+        {
+          "text": "Cultural Tips for Growing Squash Crop: squash Squash are warm-season vine crops grown for both summer (immature) and winter (mature) use, and they need warm weather and a sunny, well-drained site. UC IPM advises preparing a site with a well-drained, fertile soil high in organic matter, and planting after the soil has warmed, since squash are damaged by cold and set poorly in cool conditions; black plastic mulch and row covers help accumulate heat and protect young plants. Plant in hills or rows, spacing bush types about 2-3 feet apart and vining types 4-8 feet apart to allow for the mature spread of the vines, or train vining squash to a trellis where space is limited; a trellis also lifts the fruit off the ground, which reduces fruit rot and keeps fruit clean. Water regularly and deeply, about an inch per week, keeping moisture even because dry/wet cycles stress plants and can cause poor fruit set and quality; water at the base rather than over the foliage to reduce foliar disease. Squash are heavy feeders, so work compost and a balanced fertilizer into the bed before planting and side-dress lightly as the vines grow; excessive nitrogen produces abundant leaf and vine at the expense of fruit. Squash bear separate male and female flowers on the same plant and depend on bees for pollination, so avoid insecticide applications during bloom and plant flowers nearby to support pollinators; fruit set is poor in cool weather and when bee activity is low. Scout regularly for squash bug, squash vine borer, cucumber beetles and aphids, which also transmit disease, and for powdery and downy mildew on the leaves. For summer squash, harvest young fruit when it is tender and glossy and the skin can be nicked with a fingernail, picking every other day to keep plants producing; for winter squash, leave fruit on the vine until the rind is hard and the stem begins to shrivel, harvest with a short stem attached, and cure in a warm, dry place before storing at cool room temperature, since immature winter squash stores poorly.",
+          "excerpt": "Cultural Tips for Growing Squash Crop: squash Squash are warm-season vine crops grown for both summer (immature) and winter (mature) use, and they need warm weather and a sunny, well-drained site. UC IPM advises preparing a site with a well-drained, fertile soil high in organic matter, and planting after the soil has warmed, since squash are damaged by cold and set poorly in cool conditions; black plastic mulch and row covers help accumulate heat and protect young plants. Plant in hills or rows,…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\squash\\squash.plant_care.json",
+          "title": "Cultural Tips for Growing Squash",
+          "category": "plant care",
+          "score": 0.188758,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\plant_care\\squash\\squash.plant_care.json#chunk-0",
+          "raw_score": 0.05536890706518725,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "care_tomato",
+      "category": "plant care",
+      "query": "tomato care pruning watering",
+      "k": 5,
+      "relevant_sources": [
+        "tomato.plant_care.json"
+      ],
+      "retrieved_sources": [],
+      "hit_at_5": 0,
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "citation_present": 0,
+      "error": null,
+      "ranked": []
+    },
+    {
+      "id": "agriculture_corn",
+      "category": "agriculture",
+      "query": "corn cultivation agriculture",
+      "k": 5,
+      "relevant_sources": [
+        "corn.agriculture.json"
+      ],
+      "retrieved_sources": [
+        "corn.agriculture.json",
+        "soybean.agriculture.json",
+        "tobacco.agriculture.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Crops — Corn and Other Feed Grains Crop: corn Corn (maize) is the largest crop by volume in the United States and one of the most important cereal crops in the world, used for animal feed, food, ethanol and industrial products, and it dominates the agricultural landscape of the U.S. Midwest. USDA's Economic Research Service notes that the U.S. feed grain sector — corn, sorghum, barley and oats — is the largest segment of U.S. field crops, representing nearly one-third of all cash receipts for field and miscellaneous crops, nearly one-third of area planted to principal crops, and about one-tenth of U.S. agricultural export value, and that corn's use as an ethanol feedstock has reshaped U.S. feed-grain demand and markets. Corn is a warm-season crop adapted to a wide range of temperate and subtropical environments, and in the United States the leading producing states form the Corn Belt — Iowa, Illinois, Nebraska, Minnesota, Indiana, Kansas, Missouri and South Dakota — with additional production in the Great Lakes, Plains and eastern states; globally the leading producers are the United States, China, Brazil, the European Union, Argentina, Ukraine and India. Corn production is highly concentrated in rainfed regions that receive adequate summer rainfall, with irrigation important in areas such as Nebraska and Kansas, and yields vary widely with region, hybrid and management: irrigated and high-yield rainfed areas in the U.S. Corn Belt commonly reach on the order of 11-13 tonnes per hectare, while average global yields are much lower. Corn is an outstanding rotation partner and is almost always grown in rotation with soybean, which supplies nitrogen by fixation and breaks pest and disease cycles; corn ground is also widely planted to cereal rye and other cover crops over winter to protect soil and reduce erosion and nitrate loss. Corn is economically central to U.S. agriculture and to the economies of producing regions, underpinning the livestock, ethanol and food industries, and it is also a major export commodity for the United States, Brazil, Argentina and Ukraine. Climate-adaptation pressures include drought, heat during pollination (which sharply reduces yield), changes in growing-season length and increasing rainfall extremes; principal pest and disease pressures include the European corn borer, corn rootworm, corn earworm, and foliar and ear diseases such as grey leaf spot and mycotoxin-producing ear rots.",
+          "excerpt": "Crops — Corn and Other Feed Grains Crop: corn Corn (maize) is the largest crop by volume in the United States and one of the most important cereal crops in the world, used for animal feed, food, ethanol and industrial products, and it dominates the agricultural landscape of the U.S. Midwest. USDA's Economic Research Service notes that the U.S. feed grain sector — corn, sorghum, barley and oats — is the largest segment of U.S. field crops, representing nearly one-third of all cash receipts for fi…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\corn\\corn.agriculture.json",
+          "title": "Crops — Corn and Other Feed Grains",
+          "category": "agriculture",
+          "score": 0.45839,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\corn\\corn.agriculture.json#chunk-0",
+          "raw_score": 0.3691280748517698,
+          "relevance_rank": null
+        },
+        {
+          "text": "Soybeans and Oil Crops Crop: soybean Soybean is one of the most important oilseed and protein crops in the world and is the second-largest crop by area in the United States, valued as a source of protein meal for livestock feed, vegetable oil for food and industrial use, and biodiesel. Soybeans are adapted to warm, temperate and subtropical climates and are grown as a summer annual; global production is dominated by Brazil, the United States, Argentina, China, India and Paraguay, while in the United States production is concentrated in the Midwest and Corn Belt — Illinois, Iowa, Minnesota, Indiana, Nebraska, Ohio and Missouri — with additional production in the South and eastern states. Soybean is a legume and fixes atmospheric nitrogen when properly inoculated, which makes it the outstanding rotation partner for corn: the corn-soybean rotation is the backbone of U.S. Midwest cropping systems because the soybean crop supplies nitrogen to the following corn crop, breaks pest and disease cycles and improves soil structure. Yields vary widely with region, maturity group and management, with high-yield U.S. Midwest production commonly reaching on the order of 3-4 tonnes per hectare and average global yields lower; soybean is highly responsive to management in narrow rows and with adequate moisture. Soybean ground is commonly planted to cereal rye or other cover crops over winter, which protect the soil from erosion, reduce nutrient loss and suppress weeds. The crop is economically central to U.S. agriculture and to global protein and oil markets, and the United States, Brazil and Argentina dominate world export supply. Climate-adaptation pressures include drought and heat during pod fill, waterlogging, and changes in the length of the growing season, while principal pest and disease pressures include soybean aphid, soybean cyst nematode, sudden death syndrome, soybean rust, white mould and frogeye leaf spot.",
+          "excerpt": "Soybeans and Oil Crops Crop: soybean Soybean is one of the most important oilseed and protein crops in the world and is the second-largest crop by area in the United States, valued as a source of protein meal for livestock feed, vegetable oil for food and industrial use, and biodiesel. Soybeans are adapted to warm, temperate and subtropical climates and are grown as a summer annual; global production is dominated by Brazil, the United States, Argentina, China, India and Paraguay, while in the Un…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\soybean\\soybean.agriculture.json",
+          "title": "Soybeans and Oil Crops",
+          "category": "agriculture",
+          "score": 0.283226,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\soybean\\soybean.agriculture.json#chunk-0",
+          "raw_score": 0.11889445645802042,
+          "relevance_rank": null
+        },
+        {
+          "text": "Tobacco Production and Farm Economics Crop: tobacco Tobacco is a warm-season specialty field crop grown for its leaves and is one of the most economically valuable crops per unit area in the regions where it is produced, though its cultivation and trade are shaped by health policy and global demand trends. Tobacco is grown in temperate and subtropical regions and is divided into types by curing method and use — flue-cured, burley, dark air-cured, fire-cured and cigar types — each with distinctive production and marketing requirements. The major world producers include China, which dominates world output, followed by India, Brazil, the United States, Indonesia, Turkey and Zimbabwe, while in the United States production is concentrated in North Carolina, Kentucky, Virginia, Tennessee, South Carolina, Pennsylvania and Georgia. Penn State Extension describes tobacco production in Pennsylvania, where about 7,000 acres produce the local Lancaster County type 41 variety used for cigar wrappers, and notes that tobacco has been grown there since colonial times. Tobacco is grown from transplants rather than direct-seeded and is traditionally cultivated numerous times through the season to eliminate weeds and competition and loosen the soil; Penn State Extension describes how this cultivation leaves the soil loose and prone to erosion and nutrient loss on sloping ground, and therefore promotes no-till transplanting into a cover crop such as clover, rye or wheat, which protects the soil with a residue mat, increases soil health and reduces runoff, erosion and nutrient pollution while producing uniform, high-quality crops. Because tobacco is a high-value crop it is often grown on smaller acreages and is economically important to farm income in producing regions and to the economies of some states and countries, and it is also a significant world export commodity. Production risks include black shank, granville wilt, tobacco mosaic virus, hornworms, aphids and flea beetles, and adaptation in producing regions centres on rotation, resistant varieties and integrated pest and soil management.",
+          "excerpt": "Tobacco Production and Farm Economics Crop: tobacco Tobacco is a warm-season specialty field crop grown for its leaves and is one of the most economically valuable crops per unit area in the regions where it is produced, though its cultivation and trade are shaped by health policy and global demand trends. Tobacco is grown in temperate and subtropical regions and is divided into types by curing method and use — flue-cured, burley, dark air-cured, fire-cured and cigar types — each with distinctiv…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\tobacco\\tobacco.agriculture.json",
+          "title": "Tobacco Production and Farm Economics",
+          "category": "agriculture",
+          "score": 0.144551,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\tobacco\\tobacco.agriculture.json#chunk-0",
+          "raw_score": 0.06364488636092593,
+          "relevance_rank": null
+        }
+      ]
+    },
+    {
+      "id": "agriculture_apple",
+      "category": "agriculture",
+      "query": "apple orchard growing production guide",
+      "k": 5,
+      "relevant_sources": [
+        "apple.agriculture.json"
+      ],
+      "retrieved_sources": [
+        "apple.agriculture.json",
+        "peach.agriculture.json",
+        "potato.agriculture.json"
+      ],
+      "hit_at_5": 1,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_present": 1,
+      "error": null,
+      "ranked": [
+        {
+          "text": "Apple Production Crop: apple Apple is a temperate tree fruit grown commercially across the world's mid-latitude regions and is one of the most economically important deciduous fruit crops. Production is concentrated where winters are cold enough to satisfy the chilling requirement, summers are moderate, and rainfall or irrigation is adequate; in the United States the leading regions are Washington state, New York, Michigan, Pennsylvania and California, while China is by far the world's largest producer, followed by the European Union, Turkey, India and the United States. Apples are grown on size-controlling rootstocks and trained to supported systems such as the tall spindle, which allow high-density plantings, earlier bearing and better fruit quality. Typical commercial orchard yields vary widely with density, rootstock, cultivar and management, ranging from roughly 400 to 1,000 bushels per acre in mature, well-managed blocks; yields are cyclical because the crop is biennial-bearing unless thinned and managed. Because apple is a perennial crop, rotation as practised in annual cropping does not apply: instead, orchard blocks are replanted on a long cycle, and growers manage soil health between blocks using cover crops and green manures, and reduce replant disease by rotating away from apples or by soil fumigation and rootstock choice before replanting. Grass and legume cover crops are widely used in orchard alleys to improve soil structure, support traffic and provide habitat for beneficial insects, while a herbicide strip is maintained in the tree row. Apples face significant climate-adaptation challenges, including spring frosts that damage bloom, hail damage, sunburn and increasingly variable winter chill; growers respond with frost protection, shade and evaporative cooling, sunburn protectants and the selection of cultivars matched to local chill and heat conditions. The crop also faces major pest and disease pressures including fire blight, apple scab, codling moth and the invasive spotted lanternfly, requiring integrated pest management.",
+          "excerpt": "Apple Production Crop: apple Apple is a temperate tree fruit grown commercially across the world's mid-latitude regions and is one of the most economically important deciduous fruit crops. Production is concentrated where winters are cold enough to satisfy the chilling requirement, summers are moderate, and rainfall or irrigation is adequate; in the United States the leading regions are Washington state, New York, Michigan, Pennsylvania and California, while China is by far the world's largest p…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\apple\\apple.agriculture.json",
+          "title": "Apple Production",
+          "category": "agriculture",
+          "score": 0.334329,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\apple\\apple.agriculture.json#chunk-0",
+          "raw_score": 0.22046936567823927,
+          "relevance_rank": null
+        },
+        {
+          "text": "Fruit Production and Harvesting — Tree Fruit and Stone Fruit Crop: peach Peach and nectarine are temperate stone fruits grown for fresh market, processing (canning and freezing) and, increasingly, for export, and they are among the most widely planted deciduous fruit crops in the world. Peaches require a distinct winter chilling period to break dormancy and bud normally, so production is concentrated in regions with cold but not severe winters and warm summers; because the trees bloom relatively early, suitable sites must also avoid spring frosts that destroy the crop. Penn State Extension's fruit production guidance stresses that site selection is the first and most important decision, because most fruit crops need plenty of sunlight through the day to produce well, and that orchard soil should be tested and amended before planting since correction afterwards is slow and difficult. The major world producers include China, which dominates world production, along with Spain, Italy, Turkey, Greece, the United States and Iran; in the United States, California dominates canning clingstone production while Georgia, South Carolina, New Jersey, Pennsylvania and other states produce fresh-market fruit. Peach production is organised around thinning and pruning as crop-load management: Penn State Extension notes that fruit trees often set more fruit than they can support, that leaving too much fruit weakens the tree and makes it more susceptible to pests, and that thinning is a highly effective crop-load management tool that improves fruit size, reduces disease spread and promotes return bloom, while pruning develops the desired tree shape, improves air circulation and increases produce quality. Yields vary by region, age and management, commonly reaching on the order of 15-30 tonnes per hectare in mature, well-managed orchards. Peach is a perennial, so rotation does not apply; instead, orchard blocks are managed on long cycles with cover crops and grass or legume alleys supporting soil health. Climate-adaptation pressures include insufficient winter chill, spring frost and hail; principal disease and pest pressures include brown rot, bacterial spot, peach leaf curl, oriental fruit moth and plum curculio.",
+          "excerpt": "Fruit Production and Harvesting — Tree Fruit and Stone Fruit Crop: peach Peach and nectarine are temperate stone fruits grown for fresh market, processing (canning and freezing) and, increasingly, for export, and they are among the most widely planted deciduous fruit crops in the world. Peaches require a distinct winter chilling period to break dormancy and bud normally, so production is concentrated in regions with cold but not severe winters and warm summers; because the trees bloom relatively…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\peach\\peach.agriculture.json",
+          "title": "Fruit Production and Harvesting — Tree Fruit and Stone Fruit",
+          "category": "agriculture",
+          "score": 0.188718,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\peach\\peach.agriculture.json#chunk-0",
+          "raw_score": 0.098169197166904,
+          "relevance_rank": null
+        },
+        {
+          "text": "Chapter 14. Potato Production (Vegetable Production Handbook of Florida) Crop: potato Potato is the world's most important non-cereal food crop and one of the most widely grown and traded vegetables, produced across temperate, subtropical and tropical highland regions and consumed fresh and in processed forms such as chips, fries and dehydrated products. Potatoes are adapted to cool growing conditions and are grown in two main production systems: a summer crop in temperate regions with a single growing season, and winter and spring crops in warm-climate regions where potatoes are grown during the cooler months. The major world producers include China, India, Russia, Ukraine, the United States, Germany, Bangladesh and Poland, while in the United States production is concentrated in Idaho, Washington, Wisconsin, North Dakota, Maine and Colorado for processing and fresh market, with significant winter and spring production in Florida and Texas. UF/IFAS's Vegetable Production Handbook describes potato production in Florida as a winter and spring crop: potatoes are grown in all 50 states, but the Florida crop is planted in spring in the Hastings area of St. Johns, Flagler and Putnam counties, where half the crop is used for chips, and in winter to the south near Immokalee for table stock. The chapter gives planting dates, cultivar recommendations, and the yield and specific-gravity classes by which potatoes are graded, with total yields classed as high above 300 cwt per acre, medium-high 250-299, medium 200-249 and low-medium 150-199, and tuber specific gravity classed as high above 1.075 and low below 1.064. Potato is grown as an annual from certified seed tubers on well-drained, friable soils, commonly on raised beds and increasingly under irrigation; certified seed is central because potatoes are propagated vegetatively and seed-borne disease reduces yield and marketability. Potatoes fit well into rotation with cereals, legumes and brassicas, and rotation away from other solanaceous crops and other potatoes is a core practice for managing soil-borne disease including nematodes, verticillium wilt and rhizoctonia, while cover crops and green manures protect soil and reduce erosion. The crop is economically important both as a staple food and as a high-value processed commodity, and its production risks include late blight, early blight, potato cyst nematodes, aphid-vectored viruses and the Colorado potato beetle, while climate adaptation centres on irrigation, cultivar choice and shifting production windows.",
+          "excerpt": "Chapter 14. Potato Production (Vegetable Production Handbook of Florida) Crop: potato Potato is the world's most important non-cereal food crop and one of the most widely grown and traded vegetables, produced across temperate, subtropical and tropical highland regions and consumed fresh and in processed forms such as chips, fries and dehydrated products. Potatoes are adapted to cool growing conditions and are grown in two main production systems: a summer crop in temperate regions with a single…",
+          "source": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\potato\\potato.agriculture.json",
+          "title": "Chapter 14. Potato Production (Vegetable Production Handbook of Florida)",
+          "category": "agriculture",
+          "score": 0.181325,
+          "chunk_id": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\knowledge_base\\agriculture\\potato\\potato.agriculture.json#chunk-0",
+          "raw_score": 0.08760781426778826,
+          "relevance_rank": null
+        }
+      ]
+    }
+  ]
+}

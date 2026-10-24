@@ -67,11 +67,21 @@ def _companion_metrics(model_path: Path) -> dict[str, Any]:
     if not results_path.is_file():
         return {}
     payload = json.loads(results_path.read_text(encoding="utf-8"))
+    history = payload.get("history") if isinstance(payload.get("history"), list) else []
+    best_epoch = payload.get("best_epoch")
+    best_history = next(
+        (row for row in history if isinstance(row, dict) and row.get("epoch") == best_epoch),
+        {},
+    )
     return {
         "test_acc": payload.get("test_acc"),
+        "test_loss": payload.get("test_loss"),
         "test_macro_f1": payload.get("test_macro_f1"),
         "best_val_macro_f1": payload.get("best_val_macro_f1"),
-        "best_epoch": payload.get("best_epoch"),
+        "best_val_acc": best_history.get("val_acc"),
+        "best_val_loss": best_history.get("val_loss"),
+        "best_epoch": best_epoch,
+        "epochs_ran": len(history) if history else None,
     }
 
 
@@ -135,7 +145,10 @@ def load_checkpoint(
         "model_path": str(model_path),
         "test_acc": companion.get("test_acc", payload.get("test_acc")),
         "test_macro_f1": companion.get("test_macro_f1"),
-        "best_val_acc": payload.get("best_val_acc"),
+        "best_val_acc": companion.get("best_val_acc", payload.get("best_val_acc")),
+        "test_loss": companion.get("test_loss", payload.get("test_loss")),
+        "best_val_loss": companion.get("best_val_loss"),
+        "epochs_ran": companion.get("epochs_ran"),
         "best_val_macro_f1": companion.get("best_val_macro_f1", payload.get("val_macro_f1")),
         "best_epoch": companion.get("best_epoch", payload.get("epoch")),
         "preprocessing": "efficientnet_b0_224" if efficientnet else "legacy_mobilenet",

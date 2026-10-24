@@ -6,6 +6,7 @@ import os
 import sys
 import time
 import uuid
+import csv
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,6 +33,15 @@ from backend.supabase_client import get_authenticated_user  # noqa: E402
 from backend.model_artifacts import resolve_model_checkpoint  # noqa: E402
 from rag.pipelines.knowledge import pipeline as rag_pipeline  # noqa: E402
 from agents.workflow import ChatSupervisorAgent, SupervisorAgent  # noqa: E402
+from agents.generation import AnswerGenerator  # noqa: E402
+from ml.fusion.registry import discover_models  # noqa: E402
+from ml.fusion.inference import (  # noqa: E402
+    SUPPORTED_FUSION_KINDS,
+    FusionInferenceError,
+    FusionInferenceRuntime,
+    MissingTextError,
+    fusion_runtime_status,
+)
 
 OUTPUTS = PROJECT_ROOT / "outputs"
 GRAPHS = OUTPUTS / "graphs"
@@ -54,6 +64,10 @@ CHAT_SUPERVISOR: Optional[ChatSupervisorAgent] = None
 MULTIMODAL_RUNTIME: Optional[MultimodalRuntime] = None
 MULTIMODAL_ERROR: Optional[str] = None
 MULTIMODAL_CHECKPOINT = Path(os.getenv("TERRAMIND_MULTIMODAL_CHECKPOINT", str(DEFAULT_MULTIMODAL_CHECKPOINT)))
+# Selectable fusion models are loaded lazily on first request so an unavailable
+# experiment checkpoint never blocks the production image-only service.
+FUSION_RUNTIMES: Dict[str, FusionInferenceRuntime] = {}
+FUSION_DEVICE = os.getenv("TERRAMIND_FUSION_DEVICE", "cuda")
 
 
 @asynccontextmanager
@@ -204,6 +218,7 @@ def _prediction_to_dict(res: InferenceResult, low_confidence_threshold: float = 
         "class_id": res.predicted_class.class_id,
         "label": res.predicted_class.label,
         "score": res.predicted_class.confidence,
+        "raw_score": res.predicted_class.raw_score,
         "confidence_pct": round(res.predicted_class.confidence * 100, 2),
     }
     payload["top5"] = [
@@ -211,6 +226,7 @@ def _prediction_to_dict(res: InferenceResult, low_confidence_threshold: float = 
             "class_id": item.class_id,
             "label": item.label,
             "score": item.confidence,
+            "raw_score": item.raw_score,
             "confidence_pct": round(item.confidence * 100, 2),
         }
         for item in res.top5
@@ -260,9 +276,74 @@ def model_labels() -> Dict:
     return {"num_classes": len(p.label_list()), "labels": p.label_list()}
 
 
+@app.get("/api/models/status", tags=["model"])
+def models_status() -> Dict:
+    """Expose availability and real artifacts without loading experiment weights."""
+    registry = discover_models(production_loaded=PREDICTOR is not None)
+    comparison_path = OUTPUTS / "experiments" / "efficientnet_b0_comparison" / "comparison.json"
+    candidate_checkpoint = OUTPUTS / "experiments" / "efficientnet_b0_weighted_loss_v1" / "best_model.pth"
+    candidate: Dict = {
+        "name": "Class-weighted EfficientNet-B0 candidate",
+        "kind": "image_only_candidate",
+        "status": "checkpoint_missing",
+        "trained": False,
+        "checkpoint_present": candidate_checkpoint.is_file(),
+        "loaded": False,
+        "available_for_inference": False,
+        "promoted": False,
+        "reason": "Experimental checkpoints are not loaded or promoted automatically.",
+        "metrics": None,
+        "evaluation_subset": None,
+    }
+    if comparison_path.is_file():
+        try:
+            comparison = json.loads(comparison_path.read_text(encoding="utf-8"))
+            record = comparison.get("candidate")
+            if isinstance(record, dict) and record.get("model") == "one-epoch class-weighted candidate":
+                candidate["test_evaluation_completed"] = bool(record.get("n") and record.get("accuracy") is not None)
+                candidate["trained"] = candidate["test_evaluation_completed"]
+                candidate["status"] = "evaluated_not_promoted" if candidate["trained"] else "trained_not_test_evaluated"
+                candidate["metrics"] = {
+                    key: record.get(key) for key in (
+                        "n", "accuracy", "macro_precision", "macro_recall", "macro_f1",
+                        "weighted_f1", "top3_accuracy", "inference_mean_ms", "checkpoint_size_bytes",
+                    )
+                }
+                candidate["evaluation_subset"] = record.get("evaluation_subset")
+                candidate["validation_macro_f1"] = comparison.get("candidate_validation_macro_f1")
+                if not candidate_checkpoint.is_file():
+                    candidate["reason"] = "Evaluation is recorded, but its experimental checkpoint is not packaged for inference."
+        except (OSError, ValueError, TypeError, json.JSONDecodeError):
+            candidate["metrics_error"] = "Candidate comparison artifact could not be read."
+    # Do not expose internal filesystem paths in this public status response.
+    models = [{key: value for key, value in model.items() if key != "checkpoint"} for model in registry["models"]]
+    fusion_models = [model for model in models if model["kind"] in {"early", "intermediate", "late"}]
+    text_only_baseline = next((model for model in models if model["kind"] == "text_only"), None)
+    production_info = PREDICTOR.info() if PREDICTOR is not None else None
+    if production_info is not None:
+        production_info = {
+            key: production_info.get(key) for key in (
+                "backbone", "num_classes", "img_size", "test_acc", "test_macro_f1",
+                "best_val_macro_f1", "best_epoch", "preprocessing", "confidence_calibration",
+            )
+        }
+    return {
+        "production": {
+            "name": "Image-only EfficientNet-B0",
+            "status": "loaded" if PREDICTOR is not None else "unavailable",
+            "available_for_inference": PREDICTOR is not None,
+            "metrics": production_info,
+        },
+        "experimental_candidates": [candidate],
+        "fusion_models": fusion_models,
+        "text_only_baseline": text_only_baseline,
+        "experimental_weights_loaded": False,
+    }
+
+
 @app.get("/api/multimodal/status", tags=["multimodal"])
 def multimodal_module_status() -> Dict:
-    status = multimodal_status(MULTIMODAL_CHECKPOINT)
+    status = multimodal_status(MULTIMODAL_CHECKPOINT, production_loaded=PREDICTOR is not None)
     ready = MULTIMODAL_RUNTIME is not None
     status.update(
         status="ready" if ready else "unavailable",
@@ -277,7 +358,10 @@ def multimodal_module_status() -> Dict:
 
 
 @app.post("/api/multimodal/analyze", tags=["multimodal"])
-async def multimodal_analyze(file: UploadFile = File(..., description="Plant image for multimodal analysis")) -> Dict:
+async def multimodal_analyze(
+    file: UploadFile = File(..., description="Plant image for multimodal analysis"),
+    paired_text: str = Form(..., min_length=3, description="Observed, non-label-derived text paired with this image"),
+) -> Dict:
     if MULTIMODAL_RUNTIME is None:
         raise HTTPException(
             status_code=503,
@@ -289,7 +373,7 @@ async def multimodal_analyze(file: UploadFile = File(..., description="Plant ima
         diagnosis = predictor.predict(data)
         image = predictor._to_pil(data)
         image_tensor = predictor.transform(image).unsqueeze(0)
-        fused = MULTIMODAL_RUNTIME.encode(image_tensor, diagnosis.predicted_class.label)
+        fused = MULTIMODAL_RUNTIME.encode(image_tensor, paired_text)
         try:
             guidance = rag_pipeline.retrieve(
                 f"plant disease treatment and care guidance for {diagnosis.predicted_class.label}", limit=5
@@ -310,6 +394,79 @@ async def multimodal_analyze(file: UploadFile = File(..., description="Plant ima
     except Exception as error:
         log.exception("Multimodal analysis failed: %s", error)
         raise HTTPException(status_code=500, detail=f"Multimodal analysis failed: {error}") from error
+
+
+# ==============================
+#  Fusion models (early / intermediate / late)
+# ==============================
+def _fusion_runtime(kind: str) -> FusionInferenceRuntime:
+    """Load and cache one fusion model; report missing/invalid checkpoints clearly."""
+    if kind not in SUPPORTED_FUSION_KINDS:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Unknown fusion kind '{kind}'. Choose one of {list(SUPPORTED_FUSION_KINDS)}.",
+        )
+    cached = FUSION_RUNTIMES.get(kind)
+    if cached is not None:
+        return cached
+    try:
+        runtime = FusionInferenceRuntime.load(kind, device=FUSION_DEVICE)
+    except (FusionInferenceError, FileNotFoundError, OSError, ValueError, KeyError) as error:
+        log.info("Fusion model '%s' is unavailable: %s", kind, error)
+        raise HTTPException(
+            status_code=503,
+            detail=f"The {kind} fusion model is not available: {error}",
+        ) from error
+    FUSION_RUNTIMES[kind] = runtime
+    return runtime
+
+
+@app.get("/api/fusion/status", tags=["fusion"])
+def fusion_models_status() -> Dict:
+    """Per-architecture fusion availability; weights are not loaded unless requested."""
+    models = fusion_runtime_status()
+    for entry in models:
+        entry["loaded"] = entry["kind"] in FUSION_RUNTIMES
+    return {
+        "supported_kinds": list(SUPPORTED_FUSION_KINDS),
+        "fusion_models": models,
+        "loaded_kinds": sorted(FUSION_RUNTIMES),
+        "experimental_weights_loaded": bool(FUSION_RUNTIMES),
+        "production_image_only_available": PREDICTOR is not None,
+    }
+
+
+@app.post("/api/fusion/analyze", tags=["fusion"])
+async def fusion_analyze(
+    file: UploadFile = File(..., description="Plant image for fusion analysis"),
+    kind: str = Form(..., description="Fusion architecture: early, intermediate, or late"),
+    paired_text: Optional[str] = Form(default=None, description="Observed, non-label-derived text paired with this image"),
+    top_k: int = Form(default=5, ge=1, le=89),
+) -> Dict:
+    """Run one selectable fusion model and report which modalities actually ran."""
+    data = _validated_image_bytes(file)
+    runtime = _fusion_runtime(kind)
+    try:
+        result = runtime.predict(data, text=paired_text, top_k=top_k)
+    except MissingTextError as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
+    except HTTPException:
+        raise
+    except Exception as error:  # noqa: BLE001 - surface a clear 500 for the client
+        log.exception("Fusion analysis failed: %s", error)
+        raise HTTPException(status_code=500, detail=f"Fusion analysis failed: {error}") from error
+    result["model"] = {
+        "fusion_kind": runtime.kind,
+        "requires_text": runtime.requires_text,
+        "supports_image_only_fallback": runtime.supports_image_only,
+        "class_count": len(runtime.labels),
+    }
+    result["notice"] = (
+        "Image-only prediction from the late-fusion image branch; no text was provided, so this is not a multimodal result."
+        if result["image_only_fallback"]
+        else "Multimodal prediction using both the image and the supplied text."
+    )
+    return result
 
 
 # ==============================
@@ -345,6 +502,20 @@ async def predict_single(
         "source_filename": file.filename,
         **_prediction_to_dict(res, threshold),
     }
+    # Retrieval is guidance tied to a model prediction, never diagnostic proof.
+    try:
+        label = res.predicted_class.label
+        payload["guidance"] = rag_pipeline.retrieve(
+            f"general disease information, treatment and plant care for {label}", limit=5
+        )
+        payload["guidance"]["diagnosis_notice"] = (
+            "Low-confidence model output; this is not a confirmed diagnosis. Seek expert review."
+            if payload["low_confidence"] else
+            "Model prediction only; retrieved sources provide general guidance and do not confirm diagnosis."
+        )
+    except Exception as e:
+        log.warning("Diagnosis succeeded but source guidance retrieval failed: %s", e)
+        payload["guidance"] = {"retrieved": 0, "sources": [], "error": "Knowledge retrieval is unavailable."}
     try:
         (REPORTS / f"{diag_id}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     except Exception as e:
@@ -606,49 +777,43 @@ def _safe_json(path: Path) -> Optional[Dict]:
 
 @app.get("/api/analytics/summary", tags=["analytics"])
 def analytics_summary() -> Dict:
-    # The serving model's companion metrics are the source of truth for the
-    # currently deployed checkpoint. OUTPUTS/metrics.json may describe an older run.
+    # Restrict metrics/config to the checkpoint actually served. Historic root
+    # outputs may belong to a different architecture and must not be conflated.
     predictor_info = _require_predictor().info()
-    metrics = _safe_json(OUTPUTS / "metrics.json") or {}
-    full = _safe_json(OUTPUTS / "full_report.json") or {}
-    cfg = _safe_json(OUTPUTS / "final_config.json") or {}
-    split_info = _safe_json(OUTPUTS / "split_info.json") or {}
-
-    def _g(obj, path_list, default=None):
-        cur = obj
-        for k in path_list:
-            if isinstance(cur, dict) and k in cur:
-                cur = cur[k]
-            else:
-                return default
-        return cur
+    model_dir = Path(predictor_info["model_path"]).parent
+    cfg = _safe_json(model_dir / "config.json") or {}
+    analysis = _safe_json(OUTPUTS / "experiments" / "efficientnet_b0_error_analysis" / "metrics.json") or {}
+    split_info = cfg.get("official_split", {})
 
     def f3(x, digits=2):
         return round(float(x) * 100, digits) if isinstance(x, (int, float)) else None
 
     test_acc = f3(predictor_info.get("test_acc"), 4)
-    val_acc = f3(_g(metrics, ["best_val_acc"]) or _g(full, ["best_val_acc"]) or _g(metrics, ["val_acc_final_eval"]))
+    val_acc = f3(predictor_info.get("best_val_acc"), 4)
     macro_f1 = f3(predictor_info.get("test_macro_f1"), 4)
-    w_f1 = f3(_g(metrics, ["test_weighted_f1"]) or _g(full, ["test_weighted_f1"]))
-    overfit = _g(metrics, ["overfitting"]) or _g(full, ["overfitting"]) or {}
-    epochs_ran = _g(full, ["epochs_ran"]) or _g(full, ["best_epoch"])
+    # The duplicate-free analysis is a separately identified evaluation
+    # protocol; expose its values as such, never as companion checkpoint scores.
+    duplicate_free = analysis.get("test_raw_duplicate_free", {})
 
     return {
         "metrics": {
             "test_accuracy_pct": test_acc,
             "validation_accuracy_pct": val_acc,
             "test_macro_f1_pct": macro_f1,
-            "test_weighted_f1_pct": w_f1,
+            "test_weighted_f1_pct": None,
+            "duplicate_free_test": duplicate_free or None,
+            "duplicate_free_test_n": duplicate_free.get("n"),
             "num_classes": predictor_info.get("num_classes", 89),
-            "epochs_ran": epochs_ran,
+            "epochs_ran": predictor_info.get("epochs_ran"),
             "best_epoch": predictor_info.get("best_epoch"),
             "best_val_macro_f1_pct": f3(predictor_info.get("best_val_macro_f1"), 4),
-            "best_val_loss": _g(full, ["best_val_loss"]),
-            "test_loss": _g(metrics, ["test_loss"]) or _g(full, ["test_loss"]),
+            "best_val_loss": predictor_info.get("best_val_loss"),
+            "test_loss": predictor_info.get("test_loss"),
         },
-        "overfitting": overfit or None,
+        "overfitting": None,
         "config": cfg,
         "split": split_info,
+        "metrics_source": "served_checkpoint_companion",
         "artifacts": {
             "training_curves_png": "/api/analytics/graph/training_curves",
             "confusion_matrix_png": "/api/analytics/graph/confusion_matrix",
@@ -660,33 +825,47 @@ def analytics_summary() -> Dict:
 
 @app.get("/api/analytics/full_report", tags=["analytics"])
 def get_full_report():
-    p = OUTPUTS / "full_report.json"
-    if not p.exists():
-        raise HTTPException(status_code=404, detail="full_report.json not found")
-    return _safe_json(p)
+    analysis_dir = OUTPUTS / "experiments" / "efficientnet_b0_error_analysis"
+    metrics = _safe_json(analysis_dir / "metrics.json")
+    per_class_path = analysis_dir / "per_class_metrics.csv"
+    cm_path = analysis_dir / "confusion_matrix.csv"
+    if not metrics or not per_class_path.exists() or not cm_path.exists():
+        raise HTTPException(status_code=404, detail="Verified EfficientNet-B0 error-analysis artifacts are unavailable")
+    with per_class_path.open(newline="", encoding="utf-8") as handle:
+        per_class = list(csv.DictReader(handle))
+    matrix = [[int(value) for value in row] for row in csv.reader(cm_path.open(encoding="utf-8"))]
+    return {
+        "model": "EfficientNet-B0 production checkpoint",
+        "evaluation_protocol": "official PlantWild test split, duplicate-free subset",
+        "sample_count": metrics.get("test_raw_duplicate_free", {}).get("n"),
+        "summary": metrics.get("test_raw_duplicate_free", {}),
+        "per_class": [{**row, "class_id": int(row["class_id"]), "support": int(row["support"]),
+                       "precision": float(row["precision"]), "recall": float(row["recall"]), "f1": float(row["f1"])}
+                      for row in per_class],
+        "confusion_matrix": matrix,
+        "labels": [row["class_name"] for row in per_class],
+        "class_order_matches": metrics.get("class_order_matches"),
+    }
 
 
 @app.get("/api/analytics/final_config", tags=["analytics"])
 def get_final_config():
-    p = OUTPUTS / "final_config.json"
-    if not p.exists():
-        raise HTTPException(status_code=404, detail="final_config.json not found")
-    return _safe_json(p)
+    info = _require_predictor().info()
+    p = Path(info["model_path"]).parent / "config.json"
+    config = _safe_json(p)
+    if config is None:
+        raise HTTPException(status_code=404, detail="Configuration for the served checkpoint is unavailable")
+    return config
 
 
 @app.get("/api/analytics/graph/{name}", tags=["analytics"])
 def get_graph(name: str):
-    mapping = {
-        "training_curves": "training_curves.png",
-        "confusion_matrix": "confusion_matrix.png",
-    }
-    fn = mapping.get(name)
-    if fn is None:
-        raise HTTPException(status_code=404, detail=f"Unknown graph: {name}. Valid: {list(mapping)}")
-    p = GRAPHS / fn
-    if not p.exists():
-        raise HTTPException(status_code=404, detail=f"Graph not found: {fn}")
-    return FileResponse(p, media_type="image/png", filename=fn)
+    if name not in {"training_curves", "confusion_matrix"}:
+        raise HTTPException(status_code=404, detail=f"Unknown graph: {name}")
+    p = OUTPUTS / "experiments" / "efficientnet_b0_error_analysis" / f"{name}.png"
+    if not p.is_file():
+        raise HTTPException(status_code=404, detail=f"Verified {name.replace('_', ' ')} plot is unavailable for the served checkpoint")
+    return FileResponse(p, media_type="image/png", filename=p.name)
 
 
 # ==============================
@@ -757,6 +936,18 @@ def rag_stats() -> Dict:
     except Exception as e:
         log.exception("RAG stats failed: %s", e)
         raise HTTPException(status_code=500, detail=f"RAG stats unavailable: {e}")
+
+
+@app.get("/api/llm/status", tags=["chat"])
+def llm_status() -> Dict:
+    generator = getattr(CHAT_SUPERVISOR, "generator", None) or AnswerGenerator()
+    return {
+        "configured": generator.configured,
+        "provider": "openai-compatible" if generator.configured else None,
+        "model": os.getenv("TERRAMIND_LLM_MODEL") if generator.configured else None,
+        "generation_fallback": "evidence_template",
+        "api_key_configured": bool(os.getenv("TERRAMIND_LLM_API_KEY")),
+    }
 
 
 @app.get("/api/agents/status", tags=["agents"])
@@ -840,12 +1031,15 @@ async def chat(req: ChatRequest, authorization: Optional[str] = Header(default=N
     diag_ctx = None
     if req.diagnosis_id:
         user = _current_user(authorization)
-        diag_ctx = _owned_local_report(req.diagnosis_id, user["id"])
+        diag_ctx = _owned_diagnosis(req.diagnosis_id, user["id"])
     last_user = next((m.content for m in reversed(req.messages) if m.role == "user"), "")
     if not last_user.strip():
         raise HTTPException(status_code=422, detail="At least one non-empty user message is required.")
     try:
-        chat_context = CHAT_SUPERVISOR.run(last_user, diagnosis_context=diag_ctx)
+        chat_context = CHAT_SUPERVISOR.run(
+            last_user, diagnosis_context=diag_ctx,
+            enable_specialist=req.enable_agents, enable_rag=req.enable_rag,
+        )
     except RuntimeError as error:
         raise HTTPException(status_code=409, detail=str(error))
     except Exception as error:
@@ -881,6 +1075,8 @@ async def chat(req: ChatRequest, authorization: Optional[str] = Header(default=N
         "sources": chat_context.retrieval.get("sources", []),
         "grounded": bool(chat_context.retrieval.get("sources")),
         "specialist_agent": chat_context.specialist,
+        "generation_mode": chat_context.generation.get("mode", "evidence_template"),
+        "generation_status": chat_context.generation.get("status", "not_run"),
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -890,12 +1086,15 @@ def root_index():
     return """\
 <html><head><title>TerraMind AI API</title></head>
 <body style="font-family:Arial;background:#051810;color:#c4efc8;padding:2rem;">
-<h1 style="color:#6ee7a0">TerraMind AI Backend (MobileNetV3-Small, 89 classes)</h1>
+<h1 style="color:#6ee7a0">TerraMind AI Backend (EfficientNet-B0, 89 classes)</h1>
 <p>✅ <a href="/health">/health</a> — system + model status</p>
 <p>✅ <a href="/docs">/docs</a> — OpenAPI / Swagger</p>
 <p>✅ POST /api/diagnosis/predict — single image prediction</p>
 <p>✅ POST /api/diagnosis/batch — batch prediction (up to 64 images)</p>
-<p>✅ <a href="/api/analytics/summary">/api/analytics/summary</a> — real 52% test acc / 50.04% val / 89 classes</p>
+<p>✅ <a href="/api/analytics/summary">/api/analytics/summary</a> — measured model evaluation</p>
+<p>✅ <a href="/api/models/status">/api/models/status</a> — production and experiment availability</p>
+<p>✅ <a href="/api/fusion/status">/api/fusion/status</a> — early / intermediate / late fusion availability</p>
+<p>✅ POST /api/fusion/analyze — selectable fusion inference (reports modalities used)</p>
 <p>✅ GET/POST /api/chat — status + workflow (no fakes)</p>
 <p style="opacity:0.8;font-size:0.9rem">Frontend runs separately — see frontend/ in this repo.</p>
 </body></html>"""

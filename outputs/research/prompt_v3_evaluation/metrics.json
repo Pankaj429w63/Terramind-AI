@@ -1,0 +1,737 @@
+{
+  "evaluation_date": "2026-10-18T09:54:09.819021+00:00",
+  "sample_size": 89,
+  "classes_count": 89,
+  "metrics_summary": {
+    "v1_store (raw completed baseline)": {
+      "total_samples": 89,
+      "unique_captions": 66,
+      "unique_rate": 0.7416,
+      "unique_rate_pct": 74.16,
+      "mean_words": 15.1,
+      "largest_group_size": 14,
+      "cross_class_collision_groups_count": 8,
+      "cross_class_colliding_samples_count": 31,
+      "cross_class_collision_rate_pct": 34.83,
+      "cross_class_collision_examples": [
+        {
+          "caption": "a close - up view of the plant surface showing the green leaves",
+          "count": 14,
+          "classes": [
+            "apple mosaic virus",
+            "basil downy mildew",
+            "bean leaf",
+            "celery leaf",
+            "cherry leaf",
+            "citrus greening disease",
+            "coffee leaf",
+            "corn leaf",
+            "garlic leaf blight",
+            "lettuce downy mildew",
+            "potato leaf",
+            "raspberry leaf",
+            "rice leaf",
+            "rice sheath blight"
+          ],
+          "sample_ids": [
+            "apple mosaic virus/14.jpg",
+            "basil downy mildew/google_0017.jpg",
+            "bean leaf/google_0087.jpg",
+            "celery leaf/40.jpg",
+            "cherry leaf/101.jpg",
+            "citrus greening disease/google_0008.jpg",
+            "coffee leaf/4.jpg",
+            "corn leaf/google_0055.jpg",
+            "garlic leaf blight/google_0161.jpg",
+            "lettuce downy mildew/google_0034.jpg",
+            "potato leaf/28.jpg",
+            "raspberry leaf/73.jpg",
+            "rice leaf/246.jpg",
+            "rice sheath blight/google_0054.jpg"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the fruit on the tree",
+          "count": 2,
+          "classes": [
+            "apple scab",
+            "bell pepper leaf"
+          ],
+          "sample_ids": [
+            "apple scab/google_0064.jpg",
+            "bell pepper leaf/110.jpg"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the damage of the soil",
+          "count": 2,
+          "classes": [
+            "banana panama disease",
+            "ginger leaf"
+          ],
+          "sample_ids": [
+            "banana panama disease/47 - copy (2).jpg",
+            "ginger leaf/35.jpg"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the leaves and flowers",
+          "count": 2,
+          "classes": [
+            "basil leaf",
+            "tobacco mosaic virus"
+          ],
+          "sample_ids": [
+            "basil leaf/google_0391.jpg",
+            "tobacco mosaic virus/google_0144.jpg"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the brown spots",
+          "count": 2,
+          "classes": [
+            "bean halo blight",
+            "bean rust"
+          ],
+          "sample_ids": [
+            "bean halo blight/2.jpg",
+            "bean rust/170.jpg"
+          ]
+        }
+      ],
+      "symptom_bearing_count": 30,
+      "symptom_bearing_rate_pct": 33.71,
+      "unsupported_disease_claims_count": 0,
+      "unsupported_disease_claims_rate_pct": 0.0,
+      "unsupported_disease_claim_examples": [],
+      "label_leakage_count": 0,
+      "label_leakage_rate_pct": 0.0,
+      "label_leakage_examples": [],
+      "misidentification_count": 8,
+      "misidentification_rate_pct": 8.99,
+      "misidentification_examples": [
+        {
+          "sample_id": "apple scab/google_0064.jpg",
+          "terms": [
+            "fruit on the tree"
+          ],
+          "caption": "a close - up view of the plant surface showing the fruit on the tree"
+        },
+        {
+          "sample_id": "banana panama disease/47 - copy (2).jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "a close - up view of the plant surface showing the damage of the soil"
+        },
+        {
+          "sample_id": "bell pepper leaf/110.jpg",
+          "terms": [
+            "fruit on the tree"
+          ],
+          "caption": "a close - up view of the plant surface showing the fruit on the tree"
+        },
+        {
+          "sample_id": "blueberry rust/8.jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "a close - up view of the plant surface showing the soil and soil"
+        },
+        {
+          "sample_id": "eggplant leaf/google_0259.jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "a close - up view of the plant surface showing the soil and the seed of the plant"
+        }
+      ],
+      "top_captions": [
+        {
+          "caption": "a close - up view of the plant surface showing the green leaves",
+          "count": 14,
+          "classes": [
+            "apple mosaic virus",
+            "basil downy mildew",
+            "bean leaf",
+            "celery leaf",
+            "cherry leaf",
+            "citrus greening disease",
+            "coffee leaf",
+            "corn leaf",
+            "garlic leaf blight",
+            "lettuce downy mildew",
+            "potato leaf",
+            "raspberry leaf",
+            "rice leaf",
+            "rice sheath blight"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the damage of the leaf",
+          "count": 4,
+          "classes": [
+            "broccoli downy mildew",
+            "corn gray leaf spot",
+            "eggplant cercospora leaf spot",
+            "tomato late blight"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the brown spots on the leaves",
+          "count": 3,
+          "classes": [
+            "coffee leaf rust",
+            "garlic rust",
+            "grape leaf spot"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the fruit on the tree",
+          "count": 2,
+          "classes": [
+            "apple scab",
+            "bell pepper leaf"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the damage of the soil",
+          "count": 2,
+          "classes": [
+            "banana panama disease",
+            "ginger leaf"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the leaves and flowers",
+          "count": 2,
+          "classes": [
+            "basil leaf",
+            "tobacco mosaic virus"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the brown spots",
+          "count": 2,
+          "classes": [
+            "bean halo blight",
+            "bean rust"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the damage of the leaves",
+          "count": 2,
+          "classes": [
+            "cabbage alternaria leaf spot",
+            "corn rust"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the fruit and the fruit is brown",
+          "count": 1,
+          "classes": [
+            "apple black rot"
+          ]
+        },
+        {
+          "caption": "a close - up view of the plant surface showing the green apples and white flowers",
+          "count": 1,
+          "classes": [
+            "apple leaf"
+          ]
+        }
+      ]
+    },
+    "v1_stripped (prompt v1 + prefix strip fix)": {
+      "total_samples": 89,
+      "unique_captions": 66,
+      "unique_rate": 0.7416,
+      "unique_rate_pct": 74.16,
+      "mean_words": 5.1,
+      "largest_group_size": 14,
+      "cross_class_collision_groups_count": 8,
+      "cross_class_colliding_samples_count": 31,
+      "cross_class_collision_rate_pct": 34.83,
+      "cross_class_collision_examples": [
+        {
+          "caption": "the green leaves",
+          "count": 14,
+          "classes": [
+            "apple mosaic virus",
+            "basil downy mildew",
+            "bean leaf",
+            "celery leaf",
+            "cherry leaf",
+            "citrus greening disease",
+            "coffee leaf",
+            "corn leaf",
+            "garlic leaf blight",
+            "lettuce downy mildew",
+            "potato leaf",
+            "raspberry leaf",
+            "rice leaf",
+            "rice sheath blight"
+          ],
+          "sample_ids": [
+            "apple mosaic virus/14.jpg",
+            "basil downy mildew/google_0017.jpg",
+            "bean leaf/google_0087.jpg",
+            "celery leaf/40.jpg",
+            "cherry leaf/101.jpg",
+            "citrus greening disease/google_0008.jpg",
+            "coffee leaf/4.jpg",
+            "corn leaf/google_0055.jpg",
+            "garlic leaf blight/google_0161.jpg",
+            "lettuce downy mildew/google_0034.jpg",
+            "potato leaf/28.jpg",
+            "raspberry leaf/73.jpg",
+            "rice leaf/246.jpg",
+            "rice sheath blight/google_0054.jpg"
+          ]
+        },
+        {
+          "caption": "the fruit on the tree",
+          "count": 2,
+          "classes": [
+            "apple scab",
+            "bell pepper leaf"
+          ],
+          "sample_ids": [
+            "apple scab/google_0064.jpg",
+            "bell pepper leaf/110.jpg"
+          ]
+        },
+        {
+          "caption": "the damage of the soil",
+          "count": 2,
+          "classes": [
+            "banana panama disease",
+            "ginger leaf"
+          ],
+          "sample_ids": [
+            "banana panama disease/47 - copy (2).jpg",
+            "ginger leaf/35.jpg"
+          ]
+        },
+        {
+          "caption": "the leaves and flowers",
+          "count": 2,
+          "classes": [
+            "basil leaf",
+            "tobacco mosaic virus"
+          ],
+          "sample_ids": [
+            "basil leaf/google_0391.jpg",
+            "tobacco mosaic virus/google_0144.jpg"
+          ]
+        },
+        {
+          "caption": "the brown spots",
+          "count": 2,
+          "classes": [
+            "bean halo blight",
+            "bean rust"
+          ],
+          "sample_ids": [
+            "bean halo blight/2.jpg",
+            "bean rust/170.jpg"
+          ]
+        }
+      ],
+      "symptom_bearing_count": 30,
+      "symptom_bearing_rate_pct": 33.71,
+      "unsupported_disease_claims_count": 0,
+      "unsupported_disease_claims_rate_pct": 0.0,
+      "unsupported_disease_claim_examples": [],
+      "label_leakage_count": 0,
+      "label_leakage_rate_pct": 0.0,
+      "label_leakage_examples": [],
+      "misidentification_count": 8,
+      "misidentification_rate_pct": 8.99,
+      "misidentification_examples": [
+        {
+          "sample_id": "apple scab/google_0064.jpg",
+          "terms": [
+            "fruit on the tree"
+          ],
+          "caption": "the fruit on the tree"
+        },
+        {
+          "sample_id": "banana panama disease/47 - copy (2).jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "the damage of the soil"
+        },
+        {
+          "sample_id": "bell pepper leaf/110.jpg",
+          "terms": [
+            "fruit on the tree"
+          ],
+          "caption": "the fruit on the tree"
+        },
+        {
+          "sample_id": "blueberry rust/8.jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "the soil and soil"
+        },
+        {
+          "sample_id": "eggplant leaf/google_0259.jpg",
+          "terms": [
+            "soil"
+          ],
+          "caption": "the soil and the seed of the plant"
+        }
+      ],
+      "top_captions": [
+        {
+          "caption": "the green leaves",
+          "count": 14,
+          "classes": [
+            "apple mosaic virus",
+            "basil downy mildew",
+            "bean leaf",
+            "celery leaf",
+            "cherry leaf",
+            "citrus greening disease",
+            "coffee leaf",
+            "corn leaf",
+            "garlic leaf blight",
+            "lettuce downy mildew",
+            "potato leaf",
+            "raspberry leaf",
+            "rice leaf",
+            "rice sheath blight"
+          ]
+        },
+        {
+          "caption": "the damage of the leaf",
+          "count": 4,
+          "classes": [
+            "broccoli downy mildew",
+            "corn gray leaf spot",
+            "eggplant cercospora leaf spot",
+            "tomato late blight"
+          ]
+        },
+        {
+          "caption": "the brown spots on the leaves",
+          "count": 3,
+          "classes": [
+            "coffee leaf rust",
+            "garlic rust",
+            "grape leaf spot"
+          ]
+        },
+        {
+          "caption": "the fruit on the tree",
+          "count": 2,
+          "classes": [
+            "apple scab",
+            "bell pepper leaf"
+          ]
+        },
+        {
+          "caption": "the damage of the soil",
+          "count": 2,
+          "classes": [
+            "banana panama disease",
+            "ginger leaf"
+          ]
+        },
+        {
+          "caption": "the leaves and flowers",
+          "count": 2,
+          "classes": [
+            "basil leaf",
+            "tobacco mosaic virus"
+          ]
+        },
+        {
+          "caption": "the brown spots",
+          "count": 2,
+          "classes": [
+            "bean halo blight",
+            "bean rust"
+          ]
+        },
+        {
+          "caption": "the damage of the leaves",
+          "count": 2,
+          "classes": [
+            "cabbage alternaria leaf spot",
+            "corn rust"
+          ]
+        },
+        {
+          "caption": "the fruit and the fruit is brown",
+          "count": 1,
+          "classes": [
+            "apple black rot"
+          ]
+        },
+        {
+          "caption": "the green apples and white flowers",
+          "count": 1,
+          "classes": [
+            "apple leaf"
+          ]
+        }
+      ]
+    },
+    "v3 (symptom prompt + prefix strip fix)": {
+      "total_samples": 89,
+      "unique_captions": 65,
+      "unique_rate": 0.7303,
+      "unique_rate_pct": 73.03,
+      "mean_words": 7.36,
+      "largest_group_size": 8,
+      "cross_class_collision_groups_count": 8,
+      "cross_class_colliding_samples_count": 32,
+      "cross_class_collision_rate_pct": 35.96,
+      "cross_class_collision_examples": [
+        {
+          "caption": "a few of the leaves that have been removed",
+          "count": 8,
+          "classes": [
+            "apple mosaic virus",
+            "blueberry rust",
+            "ginger leaf spot",
+            "maple tar spot",
+            "potato leaf",
+            "raspberry leaf",
+            "tobacco leaf",
+            "zucchini yellow mosaic virus"
+          ],
+          "sample_ids": [
+            "apple mosaic virus/14.jpg",
+            "blueberry rust/8.jpg",
+            "ginger leaf spot/61 - copy.jpg",
+            "maple tar spot/google_0012.jpg",
+            "potato leaf/28.jpg",
+            "raspberry leaf/73.jpg",
+            "tobacco leaf/42.jpg",
+            "zucchini yellow mosaic virus/57.jpg"
+          ]
+        },
+        {
+          "caption": "a few of the leaves that are not in the plant",
+          "count": 4,
+          "classes": [
+            "bean leaf",
+            "corn leaf",
+            "peach leaf",
+            "plum pocket disease"
+          ],
+          "sample_ids": [
+            "bean leaf/google_0087.jpg",
+            "corn leaf/google_0055.jpg",
+            "peach leaf/21.jpg",
+            "plum pocket disease/7.jpg"
+          ]
+        },
+        {
+          "caption": "a number of brown spots",
+          "count": 2,
+          "classes": [
+            "bean rust",
+            "coffee leaf rust"
+          ],
+          "sample_ids": [
+            "bean rust/170.jpg",
+            "coffee leaf rust/google_0001.jpg"
+          ]
+        },
+        {
+          "caption": "a few of the disease",
+          "count": 7,
+          "classes": [
+            "cabbage alternaria leaf spot",
+            "citrus canker",
+            "garlic rust",
+            "grape leaf spot",
+            "potato early blight",
+            "potato late blight",
+            "tomato mosaic virus"
+          ],
+          "sample_ids": [
+            "cabbage alternaria leaf spot/google_0114.jpg",
+            "citrus canker/google_0116.jpg",
+            "garlic rust/google_0086.jpg",
+            "grape leaf spot/google_0049.jpg",
+            "potato early blight/google_0008.jpg",
+            "potato late blight/google_0313 - copy (2) - copy.jpg",
+            "tomato mosaic virus/google_0019.jpg"
+          ]
+        },
+        {
+          "caption": "a few of the signs of disease",
+          "count": 2,
+          "classes": [
+            "citrus greening disease",
+            "strawberry leaf scorch"
+          ],
+          "sample_ids": [
+            "citrus greening disease/google_0008.jpg",
+            "strawberry leaf scorch/google_0025.jpg"
+          ]
+        }
+      ],
+      "symptom_bearing_count": 14,
+      "symptom_bearing_rate_pct": 15.73,
+      "unsupported_disease_claims_count": 23,
+      "unsupported_disease_claims_rate_pct": 25.84,
+      "unsupported_disease_claim_examples": [
+        {
+          "sample_id": "banana panama disease/47 - copy (2).jpg",
+          "terms": [
+            "disease"
+          ]
+        },
+        {
+          "sample_id": "cabbage alternaria leaf spot/google_0114.jpg",
+          "terms": [
+            "disease"
+          ]
+        },
+        {
+          "sample_id": "cauliflower alternaria leaf spot/google_0089.jpg",
+          "terms": [
+            "disease"
+          ]
+        },
+        {
+          "sample_id": "citrus canker/google_0116.jpg",
+          "terms": [
+            "disease"
+          ]
+        },
+        {
+          "sample_id": "citrus greening disease/google_0008.jpg",
+          "terms": [
+            "disease"
+          ]
+        }
+      ],
+      "label_leakage_count": 0,
+      "label_leakage_rate_pct": 0.0,
+      "label_leakage_examples": [],
+      "misidentification_count": 2,
+      "misidentification_rate_pct": 2.25,
+      "misidentification_examples": [
+        {
+          "sample_id": "cabbage leaf/246.jpg",
+          "terms": [
+            "table"
+          ],
+          "caption": "a variety of vegetables"
+        },
+        {
+          "sample_id": "soybean leaf/google_0566.jpg",
+          "terms": [
+            "insect"
+          ],
+          "caption": "a few of the leaves that can be eaten by insects"
+        }
+      ],
+      "top_captions": [
+        {
+          "caption": "a few of the leaves that have been removed",
+          "count": 8,
+          "classes": [
+            "apple mosaic virus",
+            "blueberry rust",
+            "ginger leaf spot",
+            "maple tar spot",
+            "potato leaf",
+            "raspberry leaf",
+            "tobacco leaf",
+            "zucchini yellow mosaic virus"
+          ]
+        },
+        {
+          "caption": "a few of the disease",
+          "count": 7,
+          "classes": [
+            "cabbage alternaria leaf spot",
+            "citrus canker",
+            "garlic rust",
+            "grape leaf spot",
+            "potato early blight",
+            "potato late blight",
+            "tomato mosaic virus"
+          ]
+        },
+        {
+          "caption": "a few signs of disease",
+          "count": 5,
+          "classes": [
+            "corn gray leaf spot",
+            "corn northern leaf blight",
+            "garlic leaf blight",
+            "tomato late blight",
+            "tomato leaf"
+          ]
+        },
+        {
+          "caption": "a few of the leaves that are not in the plant",
+          "count": 4,
+          "classes": [
+            "bean leaf",
+            "corn leaf",
+            "peach leaf",
+            "plum pocket disease"
+          ]
+        },
+        {
+          "caption": "a number of brown spots",
+          "count": 2,
+          "classes": [
+            "bean rust",
+            "coffee leaf rust"
+          ]
+        },
+        {
+          "caption": "a few of the signs of disease",
+          "count": 2,
+          "classes": [
+            "citrus greening disease",
+            "strawberry leaf scorch"
+          ]
+        },
+        {
+          "caption": "a number of signs of disease",
+          "count": 2,
+          "classes": [
+            "coffee leaf",
+            "lettuce mosaic virus"
+          ]
+        },
+        {
+          "caption": "a few of the leaves that are not yeted",
+          "count": 2,
+          "classes": [
+            "rice sheath blight",
+            "squash leaf"
+          ]
+        },
+        {
+          "caption": "a few of the fruit that is eaten",
+          "count": 1,
+          "classes": [
+            "apple black rot"
+          ]
+        },
+        {
+          "caption": "the green apple",
+          "count": 1,
+          "classes": [
+            "apple leaf"
+          ]
+        }
+      ]
+    }
+  }
+}

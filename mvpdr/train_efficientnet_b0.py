@@ -10,10 +10,12 @@ Safety rules:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import random
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 
@@ -60,6 +62,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dropout", type=float, default=0.25)
     parser.add_argument("--label-smoothing", type=float, default=0.05)
     parser.add_argument("--num-workers", type=int, default=0)
+    parser.add_argument("--init-checkpoint", type=Path,
+                        help="Initialize from a compatible checkpoint instead of downloaded ImageNet weights.")
+    parser.add_argument("--exclude-duplicate-content", action="store_true",
+                        help="Remove all exact-byte duplicate images across/within official splits before training/evaluation.")
+    parser.add_argument("--class-balance", choices=("weighted_sampler", "weighted_loss", "none"),
+                        default="weighted_sampler")
+    parser.add_argument("--skip-test", action="store_true",
+                        help="Do not touch the test split; evaluate it separately only after validation selection.")
     return parser.parse_args()
 
 
@@ -276,6 +286,26 @@ def make_weighted_sampler(dataset: PlantWildDataset, generator: torch.Generator)
     )
 
 
+def exclude_duplicate_content(splits: dict[str, list[str]]) -> tuple[dict[str, list[str]], dict[str, object]]:
+    """Drop every path whose exact bytes occur more than once in the official splits."""
+    digest_paths: dict[str, list[tuple[str, str]]] = {}
+    for split_name, entries in splits.items():
+        for line in entries:
+            relative, _class_id, _mode = parse_split_line(line)
+            digest = hashlib.sha256((DATASET_ROOT / "images" / relative).read_bytes()).hexdigest()
+            digest_paths.setdefault(digest, []).append((split_name, line))
+    duplicates = [items for items in digest_paths.values() if len(items) > 1]
+    duplicate_lines = {line for group in duplicates for _split, line in group}
+    clean = {name: [line for line in lines if line not in duplicate_lines]
+             for name, lines in splits.items()}
+    audit = {"duplicate_content_groups": len(duplicates),
+             "duplicate_paths_removed_by_split": {
+                 name: sum(split_name == name for group in duplicates for split_name, _line in group)
+                 for name in splits
+             }, "eligible_counts": {name: len(lines) for name, lines in clean.items()}}
+    return clean, audit
+
+
 def macro_f1(predictions: list[int], targets: list[int], num_classes: int = 89) -> float:
     values = []
     for class_id in range(num_classes):
@@ -291,6 +321,9 @@ def train_epoch(model: nn.Module, loader: DataLoader, optimizer: optim.Optimizer
                 criterion: nn.Module, device: torch.device, accum_steps: int,
                 epoch: int) -> tuple[float, float]:
     model.train()
+    if not any(parameter.requires_grad for parameter in model.features.parameters()):
+        # A frozen feature extractor must keep its pretrained/trained BatchNorm statistics fixed.
+        model.features.eval()
     total = correct = 0
     loss_sum = 0.0
     optimizer.zero_grad(set_to_none=True)
@@ -359,13 +392,20 @@ def main() -> None:
     args = parse_args()
     class_to_id = load_classes()
     train_lines, val_lines, test_lines, split_audit = load_official_split(class_to_id)
+    duplicate_audit = None
+    if args.exclude_duplicate_content:
+        filtered, duplicate_audit = exclude_duplicate_content(
+            {"train": train_lines, "validation": val_lines, "test": test_lines}
+        )
+        train_lines, val_lines, test_lines = filtered["train"], filtered["validation"], filtered["test"]
     train_transform = build_train_transform(args.img_size)
     eval_transform = build_eval_transform(args.img_size)
     plan = {
         "experiment": "EfficientNet-B0 pretrained PlantWild official split",
         "split": split_audit,
+        "duplicate_content_filter": duplicate_audit,
         "num_classes": len(class_to_id),
-        "model": "torchvision EfficientNet_B0_Weights.DEFAULT",
+        "model": f"production checkpoint initialization: {args.init_checkpoint}" if args.init_checkpoint else "torchvision EfficientNet_B0_Weights.DEFAULT",
         "preprocessing": {
             "train": "RandomResizedCrop+HFlip+Rotation+ColorJitter+RandomErasing+ImageNetNorm",
             "validation": "Resize(shorter-edge, BICUBIC)+CenterCrop+ImageNetNorm",
@@ -399,9 +439,12 @@ def main() -> None:
         return
 
     run_dir = prepare_run_directory(args)
+    run_started = time.perf_counter()
     seed_everything(args.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    config = vars(args) | {"device": str(device), "official_split": split_audit["counts"]}
+    config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()} | {
+                           "device": str(device), "official_split": split_audit["counts"],
+                           "duplicate_content_filter": duplicate_audit}
     (run_dir / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
     print(f"Training started run={args.run_name} device={device} epochs={args.epochs}", flush=True)
     print(f"Writing checkpoints only to {run_dir}", flush=True)
@@ -413,21 +456,36 @@ def main() -> None:
         raise RuntimeError("Validation and test must share the identical eval transform object.")
     generator = torch.Generator()
     generator.manual_seed(args.seed)
-    train_sampler = make_weighted_sampler(train_ds, generator)
+    train_sampler = make_weighted_sampler(train_ds, generator) if args.class_balance == "weighted_sampler" else None
+    train_class_counts = Counter(label for _, label in train_ds.items)
     loader_kwargs = {
         "batch_size": args.batch_size,
         "num_workers": args.num_workers,
         "worker_init_fn": seed_worker if args.num_workers else None,
     }
-    train_loader = DataLoader(train_ds, sampler=train_sampler, generator=generator, **loader_kwargs)
+    train_loader = DataLoader(train_ds, sampler=train_sampler, shuffle=train_sampler is None,
+                              generator=generator, **loader_kwargs)
     val_loader = DataLoader(val_ds, shuffle=False, **loader_kwargs)
     test_loader = DataLoader(test_ds, shuffle=False, **loader_kwargs)
 
-    model = build_model(args.dropout).to(device)
+    model = build_model(args.dropout, pretrained=args.init_checkpoint is None).to(device)
+    if args.init_checkpoint is not None:
+        initial = torch.load(args.init_checkpoint, map_location="cpu", weights_only=False)
+        if initial.get("class_to_id") != class_to_id or not isinstance(initial.get("model_state"), dict):
+            raise RuntimeError("Initialization checkpoint is missing compatible model weights/class ordering")
+        model.load_state_dict(initial["model_state"], strict=True)
     set_backbone_trainable(model, trainable=False)
     optimizer = make_optimizer(model, args, backbone_trainable=False)
     scheduler = make_scheduler(optimizer, args.min_delta)
-    criterion = nn.CrossEntropyLoss(label_smoothing=args.label_smoothing)
+    loss_weights = None
+    if args.class_balance == "weighted_loss":
+        counts = torch.tensor([train_class_counts.get(index, 0) for index in range(89)], dtype=torch.float32)
+        if (counts == 0).any():
+            raise RuntimeError("A class is missing from the filtered training set")
+        loss_weights = counts.sum() / (len(counts) * counts)
+        loss_weights /= loss_weights.mean()
+    criterion = nn.CrossEntropyLoss(weight=loss_weights.to(device) if loss_weights is not None else None,
+                                    label_smoothing=args.label_smoothing)
     best_f1, stale, history = -1.0, 0, []
 
     for epoch in range(1, args.epochs + 1):
@@ -457,9 +515,15 @@ def main() -> None:
 
     checkpoint = torch.load(run_dir / "best_model.pth", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model_state"])
-    test_loss, test_acc, test_f1 = evaluate(model, test_loader, criterion, device)
+    if args.skip_test:
+        test_loss = test_acc = test_f1 = None
+    else:
+        test_loss, test_acc, test_f1 = evaluate(model, test_loader, criterion, device)
     results = {"best_epoch": checkpoint["epoch"], "best_val_macro_f1": checkpoint["val_macro_f1"],
-               "test_loss": test_loss, "test_acc": test_acc, "test_macro_f1": test_f1, "history": history}
+               "test_loss": test_loss, "test_acc": test_acc, "test_macro_f1": test_f1,
+               "test_evaluation_completed": not args.skip_test,
+               "training_and_validation_wall_seconds": time.perf_counter() - run_started,
+               "history": history}
     (run_dir / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(json.dumps(results, indent=2), flush=True)
 

@@ -7,10 +7,18 @@ import { getAnalyticsSummary, getGraphUrl, pct } from "../services/analytics";
 import { AgentDiagnosis, AgentEvent, listLocalHistory, runAgentDiagnosis } from "../services/agents";
 import { getAgentStatus, getRagStats, RagStats, AgentStatus } from "../services/dashboard";
 import { retrieveKnowledge, RagRetrieval, RetrievedSource } from "../services/rag";
-import { getHealth, getServingModelInfo, getSupabaseStatus, getModelLabels, HealthResponse, ServingModelInfo, SupabaseStatus } from "../services/system";
+import { getHealth, getServingModelInfo, getSupabaseStatus, getModelLabels, getModelRegistryStatus, getLlmStatus, HealthResponse, ServingModelInfo, SupabaseStatus, ModelRegistryStatus, LlmStatus } from "../services/system";
 import { signIn, signOut, signUp } from "../services/auth";
 import { supabase } from "../services/supabase";
 import { analyzeMultimodalImage, getMultimodalStatus, MultimodalAnalysis, MultimodalStatus } from "../services/multimodal";
+import {
+  analyzeFusionImage,
+  getFusionStatus,
+  FusionAnalysis,
+  FusionKind,
+  FusionStatus,
+} from "../services/fusion";
+
 
 function Card({ children, className = "", style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   return <section className={`card ${className}`} style={style}>{children}</section>;
@@ -33,14 +41,23 @@ function RequestState({ loading, error, empty, children }: { loading: boolean; e
 
 function SourceList({ sources }: { sources: RetrievedSource[] }) {
   if (!sources.length) return <Card className="empty-state"><span className="empty-icon">▱</span><h2>No sources retrieved</h2><p>Try a crop name, disease, or a more specific question. Recommendations only appear when the RAG API returns supporting sources.</p></Card>;
-  return <div className="source-grid">{sources.map((source, index) => (
-    <Card className="source-card" key={`${source.source}-${source.title}-${index}`}>
-      <div className="card-heading"><h3>[{index + 1}] {source.title || "Knowledge source"}</h3><span className="live">{source.category || "RAG"}</span></div>
-      {typeof source.score === "number" && <small className="subtle">Relevance {source.score.toFixed(3)}</small>}
-      <p>{source.text || source.excerpt || "No excerpt was returned by the RAG API."}</p>
-      {source.source && <small className="citation">Source: {source.source}</small>}
-    </Card>
-  ))}</div>;
+  return <div className="source-grid">{sources.map((source, index) => {
+    const norm = (source.source || "").replace(/\\/g, "/");
+    let category = source.category || "Agricultural Reference";
+    if (norm.includes("/diseases/")) category = "Pathogen Profile";
+    else if (norm.includes("/treatment/")) category = "Treatment Guideline";
+    else if (norm.includes("/fertilizer/")) category = "Fertilizer Guide";
+    else if (norm.includes("/plant_care/")) category = "Plant Care Guide";
+    else if (norm.includes("/agriculture/")) category = "Agronomy Extension";
+    return (
+      <Card className="source-card" key={`${source.source}-${source.title}-${index}`}>
+        <div className="card-heading"><h3>[{index + 1}] {source.title || "Knowledge source"}</h3><span className="live">{category}</span></div>
+        {typeof source.score === "number" && <small className="subtle">Relevance score: {source.score.toFixed(3)}</small>}
+        <p>{source.text || source.excerpt || "No excerpt was returned by the RAG API."}</p>
+        <small className="citation">Reference Type: {category}</small>
+      </Card>
+    );
+  })}</div>;
 }
 
 const recommendationConfig: Record<string, { category: string; intro: string; hint: string }> = {
@@ -231,17 +248,17 @@ export function AgentToolsPage({ mode }: { mode: "orchestrator" | "workflow" }) 
   </div>;
 }
 
-type LiveStatus = { health: HealthResponse | null; model: ServingModelInfo | null; rag: RagStats | null; agents: AgentStatus | null; supabase: SupabaseStatus | null };
+type LiveStatus = { health: HealthResponse | null; model: ServingModelInfo | null; rag: RagStats | null; agents: AgentStatus | null; supabase: SupabaseStatus | null; registry: ModelRegistryStatus | null; llm: LlmStatus | null };
 
 export function SystemStatusPage() {
-  const [data, setData] = useState<LiveStatus>({ health: null, model: null, rag: null, agents: null, supabase: null });
+  const [data, setData] = useState<LiveStatus>({ health: null, model: null, rag: null, agents: null, supabase: null, registry: null, llm: null });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
   const [checkedAt, setCheckedAt] = useState<string | null>(null);
   async function load() {
     setLoading(true);
-    const requests = await Promise.allSettled([getHealth(), getServingModelInfo(), getRagStats(), getAgentStatus(), getSupabaseStatus()]);
-    const keys = ["health", "model", "rag", "agents", "supabase"] as const;
+    const requests = await Promise.allSettled([getHealth(), getServingModelInfo(), getRagStats(), getAgentStatus(), getSupabaseStatus(), getModelRegistryStatus(), getLlmStatus()]);
+    const keys = ["health", "model", "rag", "agents", "supabase", "registry", "llm"] as const;
     const next = {} as LiveStatus;
     const nextErrors: Record<string, string> = {};
     requests.forEach((result, index) => {
@@ -262,6 +279,7 @@ export function SystemStatusPage() {
     { name: "RAG index", value: data.rag ? `${data.rag.total_points} chunks · ${data.rag.sources_indexed} sources` : "Unavailable", detail: data.rag ? `${data.rag.backend || "unknown backend"} · ${data.rag.indexed ? "indexed" : "empty"}` : errors.rag ?? "Not loaded", ok: Boolean(data.rag?.indexed) },
     { name: "Agent supervisor", value: data.agents?.supervisor.state ?? "Unavailable", detail: data.agents ? `${data.agents.supervisor.ready ? "Supervisor" : "Supervisor unavailable"} · ${data.agents.supervisor.chat_ready ? "Chat ready" : "Chat unavailable"}` : errors.agents ?? "Not loaded", ok: Boolean(data.agents?.supervisor.ready && data.agents.supervisor.chat_ready) },
     { name: "Supabase", value: data.supabase ? (data.supabase.configured ? "Configured" : "Not configured") : "Status unavailable", detail: data.supabase?.missing.length ? `Missing: ${data.supabase.missing.join(", ")}` : data.supabase ? "Configuration status only; connectivity is checked on requests." : errors.supabase ?? "Not loaded", ok: Boolean(data.supabase?.configured) },
+    { name: "LLM provider", value: data.llm ? (data.llm.configured ? `${data.llm.provider} configured` : "Not configured") : "Status unavailable", detail: data.llm ? (data.llm.configured ? `Model: ${data.llm.model}` : "Chat uses cited evidence-template responses") : errors.llm ?? "Not loaded", ok: Boolean(data.llm?.configured) },
   ];
 
   return <div className="page-content inner-page">
@@ -269,7 +287,15 @@ export function SystemStatusPage() {
     {loading && <Card className="loading-state">Checking backend services…</Card>}
     {!loading && <><Card><div className="card-heading"><h3>Service health</h3><small className="subtle">Checked {checkedAt ?? "—"}</small></div>
       {rows.map((row) => <div className="status-detail" key={row.name}><div><b>{row.name}</b><small>{row.detail}</small></div><span className={row.ok ? "live" : "low-confidence"}>{row.value}</span></div>)}
-    </Card><Card><div className="card-heading"><h3>Served model</h3></div>{data.model ? <><p><b>{data.model.backbone}</b></p><p>{data.model.num_classes} classes · {data.model.img_size}px · {data.model.preprocessing || "preprocessing metadata unavailable"}</p><p>Test accuracy {pct(data.model.test_acc)} · Test macro F1 {pct(data.model.test_macro_f1 ?? undefined)}</p></> : <p className="error">{errors.model || "Model information unavailable."}</p>}</Card></>}
+    </Card><Card><div className="card-heading"><h3>Served model</h3></div>{data.model ? <><p><b>{data.model.backbone}</b></p><p>{data.model.num_classes} classes · {data.model.img_size}px · {data.model.preprocessing || "preprocessing metadata unavailable"}</p><p>Test accuracy {pct(data.model.test_acc)} · Test macro F1 {pct(data.model.test_macro_f1 ?? undefined)}</p></> : <p className="error">{errors.model || "Model information unavailable."}</p>}</Card>
+    <Card><div className="card-heading"><h3>Model availability</h3><small className="subtle">Experimental weights remain unloaded</small></div>
+      {data.registry ? <>
+        <p className="settings-row"><span>{data.registry.production.name}</span><b>{data.registry.production.available_for_inference ? "Loaded · available" : "Unavailable"}</b></p>
+        {data.registry.experimental_candidates.map((candidate) => <div key={candidate.kind} className="status-detail"><div><b>{candidate.name}</b><small>{candidate.reason}</small></div><span>{candidate.status}{candidate.metrics?.macro_f1 != null ? ` · duplicate-free test subset (n=${candidate.metrics.n}): macro F1 ${pct(candidate.metrics.macro_f1)}` : ""}</span></div>)}
+        {data.registry.fusion_models.map((fusion) => <div key={fusion.kind} className="status-detail"><div><b>{fusion.name}</b><small>{fusion.reason || (fusion.requires_text ? "Requires valid paired text" : "")}</small></div><span>{fusion.status}{fusion.validation_macro_f1 != null ? ` · val macro F1 ${pct(fusion.validation_macro_f1)}` : ""}</span></div>)}
+        {data.registry.text_only_baseline && <div className="status-detail"><div><b>{data.registry.text_only_baseline.name}</b><small>{data.registry.text_only_baseline.requires_text ? "Requires valid paired text" : ""}</small></div><span>{data.registry.text_only_baseline.status}{data.registry.text_only_baseline.validation_macro_f1 != null ? ` · val macro F1 ${pct(data.registry.text_only_baseline.validation_macro_f1)}` : ""}</span></div>}
+      </> : <p className="error">{errors.registry || "Model registry status unavailable."}</p>}
+    </Card></>}
   </div>;
 }
 
@@ -453,6 +479,7 @@ export function ServedModelInsightsPage() {
 export function MultimodalPage() {
   const [status, setStatus] = useState<MultimodalStatus | null>(null);
   const [file, setFile] = useState<File | null>(null);
+  const [pairedText, setPairedText] = useState("");
   const [analysis, setAnalysis] = useState<MultimodalAnalysis | null>(null);
   const [loading, setLoading] = useState(true);
   const [running, setRunning] = useState(false);
@@ -470,11 +497,11 @@ export function MultimodalPage() {
 
   async function submit(event: FormEvent) {
     event.preventDefault();
-    if (!file || running || !status?.trained) return;
+    if (!file || !pairedText.trim() || running || !status?.trained) return;
     setRunning(true);
     setAnalysisError(null);
     setAnalysis(null);
-    try { setAnalysis(await analyzeMultimodalImage(file)); }
+    try { setAnalysis(await analyzeMultimodalImage(file, pairedText)); }
     catch (cause) { setAnalysisError(cause instanceof Error ? cause.message : "Multimodal analysis failed."); }
     finally { setRunning(false); }
   }
@@ -492,13 +519,17 @@ export function MultimodalPage() {
         <p className="settings-row"><span>PlantWild train / validation entries</span><b>{status.data.train_split_entries.toLocaleString()} / {status.data.validation_split_entries.toLocaleString()}</b></p>
         <p className="settings-row"><span>Cross-attention</span><b>{String(architecture.decoder ?? "Bidirectional image-text Transformer decoders")}</b></p>
         <p className="subtle">No paired natural-language descriptions are used. The production EfficientNet-B0 classifier remains responsible for diagnosis.</p>
+        <h3>Diagnosis model availability</h3>
+        {status.model_availability?.map((model) => <p className="settings-row" key={model.name}><span>{model.name}</span><b className={model.trained ? "live" : "low-confidence"}>{model.trained ? "Available" : "Unavailable"}</b></p>)}
+        <p className="subtle">{status.text_modality_gate}</p>
       </Card>
       <Card>
         <div className="card-heading"><h3>Multimodal analysis</h3><small className="subtle">Requires completed and validated multimodal training</small></div>
         {!status.trained && <p className="low-confidence">Analysis is disabled until a real trained checkpoint is installed. No embeddings or performance claims are generated from random weights.</p>}
         <form className="query-form agent-form" onSubmit={submit}>
           <label className="agent-file">Plant image<input type="file" accept="image/*" onChange={(event) => setFile(event.target.files?.[0] ?? null)} disabled={!status.trained || running} /></label>
-          <Button primary type="submit" disabled={!file || !status.trained || running}>{running ? "Analyzing…" : "Run multimodal analysis"}</Button>
+          <label>Observed paired text<textarea value={pairedText} onChange={(event) => setPairedText(event.target.value)} placeholder="Describe only observations available for this image…" disabled={!status.trained || running} /></label>
+          <Button primary type="submit" disabled={!file || !pairedText.trim() || !status.trained || running}>{running ? "Analyzing…" : "Run multimodal analysis"}</Button>
         </form>
         {file && <p className="subtle">Selected: {file.name}</p>}
         {running && <p className="loading-state">Running EfficientNet-B0 diagnosis and multimodal fusion…</p>}
@@ -508,12 +539,416 @@ export function MultimodalPage() {
         <Card><div className="card-heading"><h3>Production diagnosis</h3><span className={analysis.diagnosis.low_confidence ? "low-confidence" : "live"}>{analysis.diagnosis.low_confidence ? "Low confidence" : "Diagnosis returned"}</span></div>
           <h2>{analysis.diagnosis.predicted_class.label}</h2><p>Confidence {(analysis.diagnosis.predicted_class.confidence * 100).toFixed(2)}% · {analysis.production_classifier} · {analysis.diagnosis.model_info.num_classes} classes</p>
           <p className="settings-row"><span>Fused shared representation</span><b>{analysis.fused_representation.dimension} dimensions</b></p>
-          <p className="subtle">Text metadata used: {analysis.metadata_text}. This representation is returned for downstream consumers; it does not replace classifier output.</p>
+          <p className="subtle">Paired text used: {analysis.metadata_text}. This representation is returned for downstream consumers; it does not replace classifier output.</p>
         </Card>
-        <Card><div className="card-heading"><h3>RAG guidance sources</h3><small className="subtle">{analysis.guidance.retrieved ?? 0} passages retrieved</small></div>
-          {analysis.guidance.sources?.length ? analysis.guidance.sources.map((source, index) => <div className="source-item" key={`${source.source}-${index}`}><b>[{index + 1}] {source.title || "Knowledge source"}</b><small>{source.source}</small><p>{source.text || source.excerpt || "No excerpt was returned."}</p></div>) : <p className="subtle">No grounded guidance sources were returned{analysis.guidance.error ? `: ${analysis.guidance.error}` : "."}</p>}
+        <Card>
+          <div className="card-heading"><h3>RAG guidance sources</h3><small className="subtle">{analysis.guidance.retrieved ?? 0} passages retrieved</small></div>
+          {analysis.guidance.sources?.length ? analysis.guidance.sources.map((source, index) => {
+            const norm = (source.source || "").replace(/\\/g, "/");
+            let category = "Reference Profile";
+            if (norm.includes("/diseases/")) category = "Disease Profile";
+            else if (norm.includes("/treatment/")) category = "Treatment Guideline";
+            else if (norm.includes("/fertilizer/")) category = "Fertilizer Guide";
+            else if (norm.includes("/plant_care/")) category = "Plant Care";
+            return (
+              <div className="source-item" key={`${source.source}-${index}`}>
+                <b>[{index + 1}] {source.title || "Knowledge source"}</b>
+                <span className="source-category-tag">{category}</span>
+                <p>{source.text || source.excerpt || "No excerpt was returned."}</p>
+              </div>
+            );
+          }) : <p className="subtle">No grounded guidance sources were returned{analysis.guidance.error ? `: ${analysis.guidance.error}` : "."}</p>}
         </Card>
       </>}
     </>}
   </div>;
 }
+
+const FUSION_ARCHITECTURES: {
+  kind: FusionKind;
+  name: string;
+  tagline: string;
+  description: string;
+  textRequired: boolean;
+  textNote: string;
+}[] = [
+  {
+    kind: "early",
+    name: "Early Fusion",
+    tagline: "Feature-level concatenation",
+    description: "Concatenates extracted visual feature vectors with tokenized symptom embeddings before deep joint multilayer classification.",
+    textRequired: true,
+    textNote: "Requires observed symptom text to produce joint representation.",
+  },
+  {
+    kind: "intermediate",
+    name: "Intermediate / Gated Fusion",
+    tagline: "Cross-attention gating",
+    description: "Uses a learned gating network and cross-attention layers to dynamically balance visual cues against observed text descriptions.",
+    textRequired: true,
+    textNote: "Requires paired symptom text to compute cross-attention weights.",
+  },
+  {
+    kind: "late",
+    name: "Late Fusion",
+    tagline: "Decision-level ensemble with fallback",
+    description: "Maintains parallel image and text classification branches combined via learned fusion weights. Supports image-only fallback.",
+    textRequired: false,
+    textNote: "Optional paired text. Runs in image-only fallback mode if text is omitted.",
+  },
+];
+
+export function FusionAnalysisPage() {
+  const [status, setStatus] = useState<FusionStatus | null>(null);
+  const [selectedKind, setSelectedKind] = useState<FusionKind>("early");
+  const [file, setFile] = useState<File | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [pairedText, setPairedText] = useState("");
+  const [topK, setTopK] = useState(5);
+  const [loadingStatus, setLoadingStatus] = useState(true);
+  const [running, setRunning] = useState(false);
+  const [statusError, setStatusError] = useState<string | null>(null);
+  const [validationError, setValidationError] = useState<string | null>(null);
+  const [analysisError, setAnalysisError] = useState<string | null>(null);
+  const [result, setResult] = useState<FusionAnalysis | null>(null);
+
+  async function refresh() {
+    setLoadingStatus(true);
+    setStatusError(null);
+    try {
+      setStatus(await getFusionStatus());
+    } catch (cause) {
+      setStatusError(cause instanceof Error ? cause.message : "Fusion service status is unavailable.");
+    } finally {
+      setLoadingStatus(false);
+    }
+  }
+
+  useEffect(() => {
+    void refresh();
+  }, []);
+
+  function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const selected = event.target.files?.[0] ?? null;
+    if (preview) URL.revokeObjectURL(preview);
+    setFile(selected);
+    setPreview(selected ? URL.createObjectURL(selected) : null);
+    setValidationError(null);
+  }
+
+  const selectedArch = FUSION_ARCHITECTURES.find((a) => a.kind === selectedKind) || FUSION_ARCHITECTURES[0];
+  const isTextMissing = selectedArch.textRequired && !pairedText.trim();
+
+  async function submit(event: FormEvent) {
+    event.preventDefault();
+    setValidationError(null);
+    setAnalysisError(null);
+
+    if (!file) {
+      setValidationError("Please select a plant image to analyze.");
+      return;
+    }
+    if (selectedArch.textRequired && !pairedText.trim()) {
+      setValidationError(
+        `Paired symptom text is required for ${selectedArch.name}. Please enter field observations or switch to Late Fusion.`
+      );
+      return;
+    }
+
+    setRunning(true);
+    setResult(null);
+    try {
+      const res = await analyzeFusionImage(selectedKind, file, pairedText.trim() || undefined, topK);
+      setResult(res);
+    } catch (cause) {
+      setAnalysisError(cause instanceof Error ? cause.message : "Fusion analysis request failed.");
+    } finally {
+      setRunning(false);
+    }
+  }
+
+  return (
+    <div className="page-content inner-page">
+      <PageTitle
+        title="Multimodal Fusion Analysis"
+        description="Select and evaluate trained multimodal neural fusion architectures (Early, Intermediate/Gated, and Late) on plant disease imagery and symptom observations."
+      >
+        <Button onClick={() => void refresh()} disabled={loadingStatus}>
+          {loadingStatus ? "Checking…" : "Refresh status"}
+        </Button>
+      </PageTitle>
+
+      {statusError && (
+        <Card>
+          <p className="error">Fusion status error: {statusError}</p>
+          <Button onClick={() => void refresh()}>Retry</Button>
+        </Card>
+      )}
+
+      {/* Architecture Selection Grid */}
+      <Card>
+        <div className="card-heading">
+          <h3>1. Select Fusion Architecture</h3>
+          <small className="subtle">3 trained architectures available</small>
+        </div>
+        <p className="subtle" style={{ margin: "4px 0 12px" }}>
+          Choose an architecture to compare how image features and symptom text descriptions are integrated during classification.
+        </p>
+        <div className="fusion-arch-grid">
+          {FUSION_ARCHITECTURES.map((arch) => {
+            const isSelected = selectedKind === arch.kind;
+            const modelAvail = status?.fusion_models?.find((m) => m.kind === arch.kind);
+            return (
+              <button
+                type="button"
+                key={arch.kind}
+                className={`fusion-arch-card ${isSelected ? "selected" : ""}`}
+                onClick={() => {
+                  setSelectedKind(arch.kind);
+                  setValidationError(null);
+                }}
+              >
+                <div className="fusion-arch-head">
+                  <h4 className="fusion-arch-title">{arch.name}</h4>
+                  <span className={modelAvail?.available ? "live" : "low-confidence"}>
+                    {modelAvail?.available ? "Ready" : "Unavailable"}
+                  </span>
+                </div>
+                <small style={{ color: "#16a267", fontWeight: 600 }}>{arch.tagline}</small>
+                <p className="fusion-arch-desc">{arch.description}</p>
+                <div className="fusion-arch-badges">
+                  <span className={`fusion-req-tag ${arch.textRequired ? "required" : "optional"}`}>
+                    {arch.textRequired ? "Text Required" : "Text Optional · Fallback Supported"}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </Card>
+
+      {/* Input Form Card */}
+      <Card>
+        <div className="card-heading">
+          <h3>2. Provide Image &amp; Observation Inputs</h3>
+          <small className="subtle">Selected architecture: {selectedArch.name}</small>
+        </div>
+
+        <form onSubmit={submit}>
+          <div className="fusion-form-grid">
+            {/* Image upload column */}
+            <div>
+              <label className="agent-file" style={{ display: "block", marginBottom: 6, fontWeight: 600 }}>
+                Plant Leaf Image <span style={{ color: "#db5a57" }}>*</span>
+              </label>
+              <label className="fusion-upload-box">
+                {preview ? (
+                  <>
+                    <img src={preview} alt="Selected sample" className="fusion-preview-img" />
+                    <small className="subtle">Click or drag to change image: {file?.name}</small>
+                  </>
+                ) : (
+                  <>
+                    <span style={{ fontSize: 36, color: "#16a267" }}>↥</span>
+                    <b>Upload Plant Leaf / Canopy Image</b>
+                    <small className="subtle">Supports JPG, PNG, WEBP (validated for 89 agricultural classes)</small>
+                  </>
+                )}
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  disabled={running}
+                  style={{ display: "none" }}
+                />
+              </label>
+            </div>
+
+            {/* Paired text column */}
+            <div className="fusion-text-group">
+              <label htmlFor="fusion-paired-text">
+                Observed Symptom Text {selectedArch.textRequired ? <span style={{ color: "#db5a57" }}>* (Required)</span> : <span className="subtle">(Optional)</span>}
+              </label>
+              <textarea
+                id="fusion-paired-text"
+                value={pairedText}
+                onChange={(e) => {
+                  setPairedText(e.target.value);
+                  setValidationError(null);
+                }}
+                placeholder="Enter field observations, leaf discoloration, lesion patterns, or crop context (e.g., 'circular dark brown lesions with yellow halo on apple leaf margins')..."
+                disabled={running}
+              />
+              {selectedArch.textRequired ? (
+                <p className="fusion-hint required">
+                  ⚠️ <b>Text Required:</b> {selectedArch.name} cannot evaluate without paired symptom observations.
+                </p>
+              ) : (
+                <p className="fusion-hint optional">
+                  ℹ️ <b>Text Optional:</b> If omitted, Late Fusion falls back to unimodal image classification via its vision stream.
+                </p>
+              )}
+
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 8 }}>
+                <label style={{ fontSize: 11, fontWeight: 600, color: "#43596c" }}>
+                  Top-K Predictions:
+                </label>
+                <select
+                  value={topK}
+                  onChange={(e) => setTopK(Number(e.target.value))}
+                  disabled={running}
+                  style={{
+                    padding: "4px 8px",
+                    borderRadius: 5,
+                    border: "1px solid #d4e0e6",
+                    background: "#fff",
+                    font: "inherit",
+                    fontSize: 11,
+                  }}
+                >
+                  <option value={3}>Top 3</option>
+                  <option value={5}>Top 5</option>
+                  <option value={10}>Top 10</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {validationError && (
+            <p className="error" style={{ marginTop: 12, fontWeight: 600 }}>
+              ⚠️ {validationError}
+            </p>
+          )}
+
+          {analysisError && (
+            <div className="prediction-alert-banner low-confidence-banner" style={{ marginTop: 12 }}>
+              <div className="prediction-alert-content">
+                <b>Analysis Error</b>
+                <p>{analysisError}</p>
+              </div>
+            </div>
+          )}
+
+          <div style={{ marginTop: 16, display: "flex", gap: 10, alignItems: "center" }}>
+            <Button
+              primary
+              type="submit"
+              disabled={running || !file || isTextMissing}
+            >
+              {running ? `Analyzing with ${selectedArch.name}…` : `Run ${selectedArch.name} Analysis`}
+            </Button>
+            {running && <span className="loading-state">Running fusion neural network inference…</span>}
+          </div>
+        </form>
+      </Card>
+
+      {/* Results Display */}
+      {result && (
+        <Card style={{ marginTop: 16 }}>
+          <div className="card-heading">
+            <h3>3. Fusion Diagnostic Results</h3>
+            <span className="live">Inference Completed</span>
+          </div>
+
+          {/* Fallback & Modality Alert Banner */}
+          {result.image_only_fallback ? (
+            <div className="prediction-alert-banner low-confidence-banner">
+              <span className="prediction-alert-icon">ℹ</span>
+              <div className="prediction-alert-content">
+                <b>Late Fusion Image-Only Fallback Active</b>
+                <p>
+                  No paired symptom text was provided; the model evaluated solely using the visual classification branch.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="prediction-alert-banner standard-banner">
+              <span className="prediction-alert-icon">⚛</span>
+              <div className="prediction-alert-content">
+                <b>Multimodal Fusion Active</b>
+                <p>
+                  Diagnostic prediction synthesized across visual features and provided symptom text observations.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Primary Result Details */}
+          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 20, marginTop: 12 }}>
+            <div>
+              <span className="prediction-label-prefix">Predicted Class</span>
+              <h2 style={{ fontSize: 22, color: "#16a267", margin: "2px 0 8px", textTransform: "capitalize" }}>
+                {result.predicted_class.label.replace(/[_-]/g, " ")}
+              </h2>
+              <p style={{ margin: "0 0 10px", fontSize: 13, color: "#324456" }}>
+                Confidence: <strong style={{ color: "#16a267", fontSize: 16 }}>{(result.confidence * 100).toFixed(2)}%</strong>
+              </p>
+
+              <div className="modality-badges">
+                <span className="subtle" style={{ fontSize: 11, marginRight: 4 }}>Modalities:</span>
+                {result.modalities_used.map((m) => (
+                  <span key={m} className={`modality-tag ${m}`}>
+                    {m}
+                  </span>
+                ))}
+                {result.image_only_fallback && (
+                  <span className="modality-tag fallback">Image-Only Fallback</span>
+                )}
+              </div>
+
+              <div style={{ marginTop: 14 }}>
+                <p className="settings-row">
+                  <span>Architecture</span>
+                  <b>{result.model.fusion_kind.toUpperCase()} FUSION</b>
+                </p>
+                <p className="settings-row">
+                  <span>Inference Latency</span>
+                  <b>{result.inference_ms.toFixed(1)} ms</b>
+                </p>
+                <p className="settings-row">
+                  <span>Classification Space</span>
+                  <b>{result.model.class_count} plant disease classes</b>
+                </p>
+                <p className="settings-row">
+                  <span>Text Observation Provided</span>
+                  <b>{result.text_provided ? "Yes" : "No"}</b>
+                </p>
+              </div>
+              <p className="subtle" style={{ marginTop: 10, fontStyle: "italic" }}>
+                {result.notice}
+              </p>
+            </div>
+
+            {/* Top-K Confidence Bars */}
+            <div>
+              <div className="card-heading" style={{ marginBottom: 8 }}>
+                <h4 style={{ margin: 0, fontSize: 12, color: "#43596c" }}>
+                  Top-{result.top_k.length} Class Probabilities
+                </h4>
+              </div>
+              <div className="top-list">
+                {result.top_k.map((item, idx) => {
+                  const confPct = item.confidence * 100;
+                  return (
+                    <div key={item.class_id} style={{ marginBottom: 9 }}>
+                      <p style={{ margin: "0 0 3px" }}>
+                        <span>
+                          {idx + 1}. <strong style={{ textTransform: "capitalize" }}>{item.label.replace(/[_-]/g, " ")}</strong>
+                        </span>
+                        <b>{confPct.toFixed(2)}%</b>
+                        <i>
+                          <em style={{ width: `${Math.max(2, confPct)}%` }} />
+                        </i>
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </Card>
+      )}
+    </div>
+  );
+}
+

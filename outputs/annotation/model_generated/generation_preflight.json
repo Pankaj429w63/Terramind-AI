@@ -1,0 +1,28 @@
+{
+  "backend": "local",
+  "model": "Salesforce/blip-image-captioning-base",
+  "prompt_version": "v1",
+  "missing_dependencies": [],
+  "warnings": [],
+  "prompt_sha256": "3e7606a661d57f5a",
+  "output_path": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\annotation\\model_generated\\generation_records.csv",
+  "torch": "2.9.0+cpu",
+  "cuda_available": false,
+  "device": "cpu",
+  "transformers": "5.17.0",
+  "pillow": true,
+  "free_disk_gb": 18.63,
+  "model_cached_locally": true,
+  "eligible_samples": 17870,
+  "eligible_by_split": {
+    "train": 12573,
+    "validation": 1751,
+    "test": 3546
+  },
+  "records_on_disk": 8561,
+  "completed_on_disk": 8561,
+  "discarded_lines": 0,
+  "remaining": 9309,
+  "prompt_text": "a close-up view of the plant surface showing",
+  "ready": true
+}

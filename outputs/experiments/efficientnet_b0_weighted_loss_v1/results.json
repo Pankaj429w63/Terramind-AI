@@ -1,0 +1,18 @@
+{
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.5824293182143294,
+  "test_loss": null,
+  "test_acc": null,
+  "test_macro_f1": null,
+  "test_evaluation_completed": false,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.4980926637594798,
+      "train_acc": 0.7287149234693877,
+      "val_loss": 1.9895191513967814,
+      "val_acc": 0.6196459166190749,
+      "val_macro_f1": 0.5824293182143294
+    }
+  ]
+}

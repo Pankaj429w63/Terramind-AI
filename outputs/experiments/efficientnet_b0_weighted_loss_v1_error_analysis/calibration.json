@@ -1,0 +1,12 @@
+{
+  "format": "terramind-temperature-scaling-v1",
+  "checkpoint_sha256": "fb4d89dc315a252512cd2d89e39d0ec132f7f06ab65baf2ff35fb09c915d6efa",
+  "method": "temperature scaling",
+  "temperature": 0.788735231236371,
+  "fit_split": "duplicate-free official validation",
+  "fit_samples": 1751,
+  "validation_nll_before": 1.4525507157990394,
+  "validation_nll_after": 1.39770263373249,
+  "validation_ece_15_bins_before": 0.10681957644040273,
+  "validation_ece_15_bins_after": 0.02606890084799472
+}

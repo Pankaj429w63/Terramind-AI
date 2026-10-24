@@ -7,4 +7,5 @@ ENV MKL_NUM_THREADS=1
 ENV OPENBLAS_NUM_THREADS=1
 ENV NUMEXPR_NUM_THREADS=1
 COPY . /app
-CMD ["python", "-u", "mvpdr/synthetic_train.py"]
+EXPOSE 8000
+CMD ["sh", "-c", "exec python -m uvicorn backend.app:app --host 0.0.0.0 --port ${PORT:-8000}"]

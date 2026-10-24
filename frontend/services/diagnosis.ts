@@ -1,15 +1,20 @@
 import { apiRequest } from "./api";
 
-export type Prediction = { class_id: number; label: string; confidence: number; score?: number; confidence_pct?: number };
-export type ModelInfo = { backbone: string; num_classes: number; img_size: number; mean: number[]; std: number[]; model_path: string; test_acc?: number; best_val_acc?: number };
-export type Diagnosis = { id: string; source_filename?: string; predicted_class: Prediction; top5: Prediction[]; model_info: ModelInfo; inference_ms: number; low_confidence?: boolean; low_confidence_threshold?: number };
+export type Prediction = { class_id: number; label: string; confidence: number; raw_score?: number; score?: number; confidence_pct?: number };
+export type ModelInfo = { backbone: string; num_classes: number; img_size: number; mean: number[]; std: number[]; model_path: string; test_acc?: number; best_val_acc?: number; confidence_calibration?: { method: string; temperature: number; fit_split?: string } };
+export type Diagnosis = { id: string; source_filename?: string; predicted_class: Prediction; top5: Prediction[]; model_info: ModelInfo; inference_ms: number; low_confidence?: boolean; low_confidence_threshold?: number; guidance?: { retrieved?: number; sources?: Array<{ title?: string; source?: string; excerpt?: string; text?: string }>; error?: string | null; diagnosis_notice?: string } };
 export type BatchResult = { id: string; filename: string; error: string | null; prediction: Diagnosis | null };
 export type BatchResponse = { batch_id: string; count: number; errors: number; results: BatchResult[] };
 
 export type ExpertReview = { id?: string; diagnosis_id: string; diagnosis: string; confidence: number; reviewer_decision: string; corrected_disease?: string | null; notes?: string | null; created_at: string };
+export type ExpertReviewList = { items: ExpertReview[]; source: "supabase" | "local" };
 
 export function submitExpertReview(review: Pick<ExpertReview, "diagnosis_id" | "reviewer_decision" | "corrected_disease" | "notes">): Promise<ExpertReview> {
   return apiRequest<ExpertReview>("/api/reviews", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(review) });
+}
+
+export function listExpertReviews(diagnosisId: string): Promise<ExpertReviewList> {
+  return apiRequest<ExpertReviewList>(`/api/reviews/${encodeURIComponent(diagnosisId)}`);
 }
 
 function finiteConfidence(prediction: Prediction): number {

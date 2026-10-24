@@ -1,0 +1,19 @@
+{
+  "workbook_rows": 178,
+  "aliases_defined": 178,
+  "eligible_samples": 17870,
+  "filled_rows": 178,
+  "missing_rows": 0,
+  "rejected_count": 0,
+  "rejected_rows": [],
+  "emitted": false,
+  "review": {
+    "ledger_entries": 178,
+    "pending": 178,
+    "approved": 0,
+    "rejected": 0,
+    "disputed": 0
+  },
+  "decision": "READY",
+  "blocker": "All observations are present and valid; re-run with --emit-observations, --review-ledger, --provenance, --source-reference, and --instrument-version to emit"
+}

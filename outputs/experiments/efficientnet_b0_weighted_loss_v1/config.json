@@ -1,0 +1,41 @@
+{
+  "run_name": "efficientnet_b0_weighted_loss_v1",
+  "confirm_train": true,
+  "seed": 42,
+  "epochs": 1,
+  "patience": 1,
+  "min_delta": 0.001,
+  "img_size": 224,
+  "batch_size": 16,
+  "accum_steps": 4,
+  "freeze_epochs": 1,
+  "head_lr": 0.0003,
+  "backbone_lr": 1e-05,
+  "weight_decay": 0.00015,
+  "dropout": 0.25,
+  "label_smoothing": 0.05,
+  "num_workers": 0,
+  "init_checkpoint": "models\\archive\\2026-09-09_efficientnet_b0_official_v3\\best_model.pth",
+  "exclude_duplicate_content": true,
+  "class_balance": "weighted_loss",
+  "skip_test": true,
+  "device": "cpu",
+  "official_split": {
+    "train": 13045,
+    "validation": 1820,
+    "test": 3677
+  },
+  "duplicate_content_filter": {
+    "duplicate_content_groups": 335,
+    "duplicate_paths_removed_by_split": {
+      "train": 501,
+      "validation": 69,
+      "test": 132
+    },
+    "eligible_counts": {
+      "train": 12544,
+      "validation": 1751,
+      "test": 3545
+    }
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
-import { Diagnosis, Prediction, ExpertReview, submitExpertReview } from "../services/diagnosis";
+import { Diagnosis, Prediction, ExpertReview, submitExpertReview, listExpertReviews } from "../services/diagnosis";
 import { useDiagnosis } from "../hooks/useDiagnosis";
 import { askTerraMind, ChatMessage, ChatResponse } from "../services/chat";
 import { getDiagnosisById, listDiagnosisHistory, LocalHistoryItem } from "../services/history";
@@ -21,6 +21,7 @@ import { supabase } from "../services/supabase";
 import { signOut } from "../services/auth";
 import {
   AgentToolsPage,
+  FusionAnalysisPage,
   MultimodalPage,
   ProfilePage,
   RagKnowledgeBasePage,
@@ -36,7 +37,7 @@ const nav = [
   { group: "DIAGNOSIS", items: [["Upload Image", "↥"], ["Batch Detection", "▤"], ["Live Detection", "◉"]] },
   { group: "AI ASSISTANT", items: [["AI Chat Assistant", "✧"]] },
   { group: "RECOMMENDATIONS", items: [["Treatment Advisor", "♧"], ["Fertilizer Guide", "✚"], ["Care Recommendations", "♡"]] },
-  { group: "KNOWLEDGE & AI", items: [["RAG Knowledge Base", "▱"], ["Agent Orchestrator", "⌘"], ["Agent Workflow", "⌘"], ["Multimodal AI", "?"]] },
+  { group: "KNOWLEDGE & AI", items: [["RAG Knowledge Base", "▱"], ["Agent Orchestrator", "⌘"], ["Agent Workflow", "⌘"], ["Multimodal AI", "?"], ["Fusion Analysis", "⚯"]] },
   { group: "ANALYTICS", items: [["Model Performance", "◒"], ["Model Insights", "⌗"], ["System Status", "◇"]] },
   { group: "HISTORY & REPORTS", items: [["History", "◴"], ["Reports", "▤"]] },
   { group: "SETTINGS", items: [["Settings", "⚙"], ["Profile", "♙"]] },
@@ -631,6 +632,64 @@ function Dashboard({ go }: { go: (page: string) => void }) {
   );
 }
 
+function getCleanSourceDetails(sourcePath?: string, category?: string, title?: string): {
+  typeLabel: string;
+  cleanTitle: string;
+} {
+  const norm = (sourcePath || "").replace(/\\/g, "/");
+  let typeLabel = category || "Knowledge Reference";
+  if (!category || category === "RAG") {
+    if (norm.includes("/diseases/")) typeLabel = "Disease Profile";
+    else if (norm.includes("/treatment/")) typeLabel = "Treatment Guide";
+    else if (norm.includes("/fertilizer/")) typeLabel = "Fertilizer Guide";
+    else if (norm.includes("/plant_care/")) typeLabel = "Plant Care Guide";
+    else if (norm.includes("/agriculture/")) typeLabel = "Agronomy Extension";
+  }
+
+  let cleanTitle = (title || "").trim();
+  if (!cleanTitle || cleanTitle.toLowerCase() === "knowledge source") {
+    const filename = norm.split("/").pop()?.replace(/\.[^/.]+$/, "") || "";
+    cleanTitle = filename ? filename.replace(/[_-]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) : "Agricultural Reference";
+  }
+  return { typeLabel, cleanTitle };
+}
+
+function GuidanceSourceCard({
+  source,
+  index,
+}: {
+  source: { title?: string; source?: string; excerpt?: string; text?: string; category?: string };
+  index: number;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const text = (source.excerpt || source.text || "").trim();
+  const { typeLabel, cleanTitle } = getCleanSourceDetails(source.source, source.category, source.title);
+  const isLong = text.length > 170;
+  const preview = isLong && !expanded ? `${text.slice(0, 170)}…` : text;
+
+  return (
+    <div className="guidance-source-card">
+      <div className="guidance-source-header">
+        <div className="guidance-source-title">
+          <span className="source-index">[S{index + 1}]</span>
+          <b>{cleanTitle}</b>
+        </div>
+        <span className="source-category-tag">{typeLabel}</span>
+      </div>
+      <p className="guidance-source-text">{preview || "No excerpt was returned."}</p>
+      {isLong && (
+        <button
+          type="button"
+          className="guidance-expand-btn"
+          onClick={() => setExpanded((prev) => !prev)}
+        >
+          {expanded ? "Show less ▴" : "Read full excerpt ▾"}
+        </button>
+      )}
+    </div>
+  );
+}
+
 function Upload({ batch = false, live = false }: { batch?: boolean; live?: boolean }) {
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
@@ -670,12 +729,70 @@ function Upload({ batch = false, live = false }: { batch?: boolean; live?: boole
       {list.length > 0 && <div className="result-grid">{list.map((diagnosis, index) => (
         <Card className="prediction-card" key={`${diagnosis.id}-${index}`}>
           {previews[index] && <img className="result-image" src={previews[index]} alt={diagnosis.source_filename || "Uploaded plant"} />}
-          <div className="card-heading"><h3>{diagnosis.source_filename || `Image ${index + 1}`}</h3><span className="confidence">{(diagnosis.predicted_class.confidence * 100).toFixed(2)}%</span></div>
-          {diagnosis.low_confidence && <><p className="low-confidence">Low confidence result — try a clearer, closer leaf image.</p><ExpertReviewForm diagnosis={diagnosis} /></>}
-          <h2>{diagnosis.predicted_class.label}</h2>
-          <p className="subtle">Inference time · {diagnosis.inference_ms.toFixed(1)} ms</p>
-          <div className="model-info"><b>{diagnosis.model_info.backbone}</b><span>{diagnosis.model_info.num_classes} classes · {diagnosis.model_info.img_size}px input</span></div>
-          <div className="top-list">{diagnosis.top5.map((prediction, rank) => <p key={`${prediction.class_id}-${prediction.label}`}><span>{rank + 1}. {prediction.label}</span><b>{(prediction.confidence * 100).toFixed(2)}%</b><i><em style={{ width: `${prediction.confidence * 100}%` }} /></i></p>)}</div>
+          <div className="card-heading">
+            <h3>{diagnosis.source_filename || `Image ${index + 1}`}</h3>
+            <span className={diagnosis.low_confidence ? "confidence warn" : "confidence"}>
+              {(diagnosis.predicted_class.confidence * 100).toFixed(2)}%
+            </span>
+          </div>
+
+          {diagnosis.low_confidence ? (
+            <div className="prediction-alert-banner low-confidence-banner">
+              <span className="prediction-alert-icon">⚠️</span>
+              <div className="prediction-alert-content">
+                <b>Candidate ML Hypothesis — Verification Advised</b>
+                <p>Model confidence ({(diagnosis.predicted_class.confidence * 100).toFixed(1)}%) is below the high-reliability threshold. This automated prediction is not a verified field diagnosis. Consult an agronomist before taking crop intervention actions.</p>
+              </div>
+            </div>
+          ) : (
+            <div className="prediction-alert-banner standard-banner">
+              <span className="prediction-alert-icon">ℹ️</span>
+              <div className="prediction-alert-content">
+                <b>Automated Model Prediction</b>
+                <p>Generated by the calibrated EfficientNet-B0 vision classifier. Sourced agricultural guidance below provides general context and does not replace field diagnostic testing.</p>
+              </div>
+            </div>
+          )}
+
+          <div className="prediction-primary-result">
+            <span className="prediction-label-prefix">{diagnosis.low_confidence ? "Proposed Candidate Class:" : "Predicted Condition:"}</span>
+            <h2>{diagnosis.predicted_class.label}</h2>
+          </div>
+
+          <p className="subtle">{diagnosis.model_info.confidence_calibration?.method === "temperature scaling" && diagnosis.predicted_class.raw_score !== undefined
+            ? `Calibrated confidence ${(diagnosis.predicted_class.confidence * 100).toFixed(2)}% · Raw model score ${(diagnosis.predicted_class.raw_score * 100).toFixed(2)}%`
+            : "Confidence is the model's calibrated probability score, not diagnostic proof."}</p>
+          <p className="subtle">Inference latency · {diagnosis.inference_ms.toFixed(1)} ms</p>
+          <div className="model-info">
+            <b>{diagnosis.model_info.backbone}</b>
+            <span>{diagnosis.model_info.num_classes} classes · {diagnosis.model_info.img_size}px input</span>
+          </div>
+
+          <div className="top-list">
+            {diagnosis.top5.map((prediction, rank) => (
+              <p key={`${prediction.class_id}-${prediction.label}`}>
+                <span>{rank + 1}. {prediction.label}</span>
+                <b>{(prediction.confidence * 100).toFixed(2)}%</b>
+                <i><em style={{ width: `${Math.min(100, Math.max(2, prediction.confidence * 100))}%` }} /></i>
+              </p>
+            ))}
+          </div>
+
+          {diagnosis.low_confidence && <ExpertReviewForm diagnosis={diagnosis} />}
+
+          {!Array.isArray(result) && diagnosis.guidance && (
+            <div className="source-list">
+              <h3>Evidence-based guidance</h3>
+              <p className="subtle">{diagnosis.guidance.diagnosis_notice}</p>
+              {diagnosis.guidance.sources?.length ? (
+                diagnosis.guidance.sources.map((source, sourceIndex) => (
+                  <GuidanceSourceCard key={`${source.source || source.title}-${sourceIndex}`} source={source} index={sourceIndex} />
+                ))
+              ) : (
+                <p className="subtle">No relevant source was retrieved{diagnosis.guidance.error ? `: ${diagnosis.guidance.error}` : "."}</p>
+              )}
+            </div>
+          )}
         </Card>
       ))}</div>}
     </div>
@@ -687,22 +804,104 @@ function ExpertReviewForm({ diagnosis }: { diagnosis: Diagnosis }) {
   const [corrected, setCorrected] = useState("");
   const [notes, setNotes] = useState("");
   const [review, setReview] = useState<ExpertReview | null>(null);
+  const [previousReviews, setPreviousReviews] = useState<ExpertReview[]>([]);
+  const [reviewLoadError, setReviewLoadError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    listExpertReviews(diagnosis.id).then((result) => {
+      if (active) setPreviousReviews(result.items);
+    }).catch((cause) => {
+      if (active) setReviewLoadError(cause instanceof Error ? cause.message : "Could not load previous reviews.");
+    });
+    return () => { active = false; };
+  }, [diagnosis.id]);
+
   async function submit(event: FormEvent) {
     event.preventDefault(); setBusy(true); setError(null);
-    try { setReview(await submitExpertReview({ diagnosis_id: diagnosis.id, reviewer_decision: decision, corrected_disease: corrected.trim() || null, notes: notes.trim() || null })); }
-    catch (cause) { setError(cause instanceof Error ? cause.message : "Could not save expert review."); }
-    finally { setBusy(false); }
+    try {
+      setReview(await submitExpertReview({
+        diagnosis_id: diagnosis.id,
+        reviewer_decision: decision,
+        corrected_disease: corrected.trim() || null,
+        notes: notes.trim() || null
+      }));
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Could not save expert review.");
+    } finally {
+      setBusy(false);
+    }
   }
-  return <div className="expert-review"><h3>Expert Review Recommended</h3><p className="subtle">Record a human review. This feedback is stored for review and does not change the EfficientNet-B0 model.</p>
-    {review ? <p className="live">Review saved · {new Date(review.created_at).toLocaleString()}</p> : <form className="query-form" onSubmit={submit}>
-      <label>Diagnosis<input value={diagnosis.predicted_class.label} readOnly /></label><label>Confidence<input value={`${(diagnosis.predicted_class.confidence * 100).toFixed(2)}%`} readOnly /></label>
-      <label>Reviewer decision<select value={decision} onChange={(event) => setDecision(event.target.value)}><option value="confirmed">Confirmed</option><option value="incorrect">Incorrect</option><option value="uncertain">Uncertain</option></select></label>
-      <label>Corrected disease / class<input value={corrected} onChange={(event) => setCorrected(event.target.value)} placeholder="Optional correction" /></label>
-      <label>Notes<textarea value={notes} onChange={(event) => setNotes(event.target.value)} maxLength={5000} /></label>
-      <Button primary type="submit" disabled={busy}>{busy ? "Saving review…" : "Save review"}</Button>
-    </form>}{error && <p className="error">{error}</p>}</div>;
+
+  return (
+    <div className="expert-review">
+      <div className="expert-review-header">
+        <span className="expert-review-badge">Agronomist Review Workflow</span>
+        <h3>Record Human Validation</h3>
+        <p className="subtle">Record feedback for this prediction. Reviews are logged for audit and retraining analysis without altering served model weights.</p>
+      </div>
+
+      {reviewLoadError && <p className="subtle">Previous reviews unavailable: {reviewLoadError}</p>}
+      {previousReviews.map((item) => (
+        <div key={`${item.id || item.created_at}-${item.reviewer_decision}`} className="previous-review-item">
+          <b>Prior Review:</b> <span className="decision-tag">{item.reviewer_decision}</span>
+          {item.corrected_disease ? ` · corrected to: ${item.corrected_disease}` : ""}
+          <small style={{ float: "right", color: "#6b8293" }}>{new Date(item.created_at).toLocaleString()}</small>
+        </div>
+      ))}
+
+      {review ? (
+        <p className="live" style={{ padding: "8px 12px", borderRadius: 6, display: "inline-block" }}>
+          ✓ Review recorded · {new Date(review.created_at).toLocaleString()}
+        </p>
+      ) : (
+        <form className="expert-review-grid" onSubmit={submit}>
+          <div className="form-group">
+            <label>Model Candidate Label</label>
+            <input value={diagnosis.predicted_class.label} readOnly className="input-readonly" />
+          </div>
+          <div className="form-group">
+            <label>Model Confidence</label>
+            <input value={`${(diagnosis.predicted_class.confidence * 100).toFixed(2)}%`} readOnly className="input-readonly" />
+          </div>
+          <div className="form-group">
+            <label>Reviewer Decision *</label>
+            <select value={decision} onChange={(event) => setDecision(event.target.value)}>
+              <option value="confirmed">Confirmed (Agree with model)</option>
+              <option value="incorrect">Incorrect (Disagree with model)</option>
+              <option value="uncertain">Uncertain (Symptoms ambiguous)</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Corrected Disease / Condition</label>
+            <input
+              value={corrected}
+              onChange={(event) => setCorrected(event.target.value)}
+              placeholder="e.g. apple black rot, healthy canopy, physiological scorch"
+            />
+          </div>
+          <div className="form-group full-width">
+            <label>Agronomic Notes & Visual Inspection Details</label>
+            <textarea
+              value={notes}
+              onChange={(event) => setNotes(event.target.value)}
+              maxLength={5000}
+              placeholder="Describe lesions, sporulation, leaf discoloration, or field context…"
+              rows={3}
+            />
+          </div>
+          <div className="form-actions">
+            <Button primary type="submit" disabled={busy}>
+              {busy ? "Saving review…" : "Submit Expert Review"}
+            </Button>
+          </div>
+        </form>
+      )}
+      {error && <p className="error" style={{ marginTop: 8 }}>{error}</p>}
+    </div>
+  );
 }
 
 function ChatAssistant() {
@@ -733,7 +932,7 @@ function ChatAssistant() {
     }
   }
 
-  return <div className="page-content inner-page"><div className="section-title"><div><h1>AI Chat Assistant</h1><p>Ask questions grounded in TerraMind&apos;s indexed agricultural knowledge.</p></div></div><div className="dashboard-grid"><Card className="chat-card"><div className="chat-messages">{messages.length === 0 && <p className="subtle">Ask about a disease, treatment, fertilizer, or plant care.</p>}{messages.map((message, index) => <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}><b>{message.role === "user" ? "You" : "TerraMind"}</b><p>{message.content}</p></div>)}{loading && <p className="loading-state">Supervisor is routing the question through RAG and a specialist agent…</p>}</div><form onSubmit={submit}><input className="chat-input" value={question} onChange={(event) => setQuestion(event.target.value)} placeholder="Ask a plant health question…" disabled={loading} /><input className="chat-context-input" value={diagnosisId} onChange={(event) => setDiagnosisId(event.target.value)} placeholder="Optional diagnosis ID for context" disabled={loading} /><Button primary type="submit">{loading ? "Researching…" : "Ask TerraMind"}</Button></form>{error && <p className="error">API error: {error}</p>}</Card>{result && <Card className="chat-status"><div className="card-heading"><h3>Workflow status</h3><span className={result.grounded ? "live" : "low-confidence"}>{result.grounded ? "Grounded" : "No sources"}</span></div><p className="subtle">Workflow: {result.workflow_id}</p><p>Specialist: <b>{result.specialist_agent}</b></p>{result.workflow.map((event, index) => <p key={`${event.agent_name}-${index}`}><span>{event.status === "completed" ? "●" : "!"} {event.agent_name}</span><small>{event.status}</small></p>)}<h3>Retrieved sources ({result.sources.length})</h3>{result.sources.map((source, index) => <div className="source-item" key={`${source.source}-${index}`}><b>{source.title || "Knowledge source"}</b><small>{source.source}</small><p>{source.text?.slice(0, 240)}</p></div>)}</Card>}</div></div>;
+  return <div className="page-content inner-page"><div className="section-title"><div><h1>AI Chat Assistant</h1><p>Ask questions grounded in TerraMind&apos;s indexed agricultural knowledge.</p></div></div><div className="dashboard-grid"><Card className="chat-card"><div className="chat-messages">{messages.length === 0 && <p className="subtle">Ask about a disease, treatment, fertilizer, or plant care.</p>}{messages.map((message, index) => <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}><b>{message.role === "user" ? "You" : "TerraMind"}</b><p>{message.content}</p></div>)}{loading && <p className="loading-state">Supervisor is routing the question through RAG and a specialist agent…</p>}</div><form onSubmit={submit}><input className="chat-input" value={question} onChange={(event) => setQuestion(event.target.value)} placeholder="Ask a plant health question…" disabled={loading} /><input className="chat-context-input" value={diagnosisId} onChange={(event) => setDiagnosisId(event.target.value)} placeholder="Optional diagnosis ID for context" disabled={loading} /><Button primary type="submit">{loading ? "Researching…" : "Ask TerraMind"}</Button></form>{error && <p className="error">API error: {error}</p>}</Card>{result && <Card className="chat-status"><div className="card-heading"><h3>Workflow status</h3><span className={result.grounded ? "live" : "low-confidence"}>{result.grounded ? "Grounded" : "No sources"}</span></div><p className="subtle">Workflow: {result.workflow_id}</p><p>Answer mode: <b>{result.generation_mode}</b> ({result.generation_status})</p><p>Selected specialist: <b>{result.specialist_agent || "Not run"}</b></p>{result.workflow.map((event, index) => <p key={`${event.agent_name}-${index}`}><span>{event.status === "completed" ? "●" : "!"} {event.agent_name}</span><small>{event.status}</small></p>)}<h3>Retrieved sources ({result.sources.length})</h3>{result.sources.map((source, index) => <div className="source-item" key={`${source.source}-${index}`}><b>[{source.citation_id || `S${index + 1}`}] {source.title || "Knowledge source"}</b><small>{source.source}</small><p>{(source.excerpt || source.text)?.slice(0, 240)}</p></div>)}</Card>}</div></div>;
 }
 
 function ConfidenceBadge({ value }: { value: number }) {
@@ -1233,6 +1432,7 @@ export default function Home() {
     if (page === "Agent Orchestrator") return <AgentToolsPage mode="orchestrator" />;
     if (page === "Agent Workflow") return <AgentToolsPage mode="workflow" />;
     if (page === "Multimodal AI") return <MultimodalPage />;
+    if (page === "Fusion Analysis") return <FusionAnalysisPage />;
     if (page === "Model Performance") return <ServedModelPerformancePage go={setPage} />;
     if (page === "Model Insights") return <ServedModelInsightsPage />;
     if (page === "System Status") return <SystemStatusPage />;

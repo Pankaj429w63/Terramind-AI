@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import io
+import hashlib
+import json
+import os
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -23,6 +26,7 @@ class Prediction:
     class_id: int
     label: str
     confidence: float
+    raw_score: float
 
 
 @dataclass(frozen=True)
@@ -51,10 +55,38 @@ class Predictor:
         labels_path: Path = DEFAULT_LABELS_PATH,
         device: str = "cpu",
     ) -> None:
+        # Bound CPU thread pools for small, memory-constrained inference hosts.
+        torch.set_num_threads(max(1, int(os.getenv("TERRAMIND_TORCH_THREADS", "1"))))
+        try:
+            torch.set_num_interop_threads(1)
+        except RuntimeError:
+            # Another library may already have initialized the inter-op pool.
+            pass
         self.device = torch.device(device)
         self.model, metadata = load_checkpoint(model_path, labels_path, self.device)
         self.labels: dict[int, str] = metadata.pop("labels")  # type: ignore[assignment]
         self.model_info = metadata
+        self.temperature = 1.0
+        calibration_path = Path(model_path).with_name("confidence_calibration.json")
+        if calibration_path.is_file():
+            try:
+                calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
+                digest = hashlib.sha256(Path(model_path).read_bytes()).hexdigest()
+                temperature = float(calibration["temperature"])
+                if (calibration.get("format") == "terramind-temperature-scaling-v1"
+                        and calibration.get("checkpoint_sha256") == digest
+                        and 0.05 <= temperature <= 20.0
+                        and calibration.get("fit_split") == "duplicate-free official validation"):
+                    self.temperature = temperature
+                    self.model_info["confidence_calibration"] = {
+                        "method": calibration["method"], "temperature": temperature,
+                        "fit_split": calibration["fit_split"], "fit_samples": calibration["fit_samples"],
+                    }
+            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+                # A missing or invalid sidecar must never make the production model unavailable.
+                pass
+        if "confidence_calibration" not in self.model_info:
+            self.model_info["confidence_calibration"] = {"method": "none", "temperature": 1.0}
         self.transform = build_inference_transform(
             str(metadata["backbone"]), int(metadata["img_size"]), metadata["mean"], metadata["std"]  # type: ignore[arg-type]
         )
@@ -87,12 +119,15 @@ class Predictor:
             raise RuntimeError(f"EfficientNet-B0 inference requires a 224px tensor, got {tuple(tensor.shape)}")
         started = time.perf_counter()
         with torch.inference_mode():
-            probabilities = F.softmax(self.model(tensor), dim=1)[0].cpu()
+            logits = self.model(tensor)[0]
+            raw_probabilities = F.softmax(logits, dim=0).cpu()
+            probabilities = F.softmax(logits / self.temperature, dim=0).cpu()
         elapsed_ms = (time.perf_counter() - started) * 1000
 
         scores, indexes = torch.topk(probabilities, k=top_k)
         predictions = [
-            Prediction(int(index), self.labels[int(index)], round(float(score), 6))
+            Prediction(int(index), self.labels[int(index)], round(float(score), 6),
+                       round(float(raw_probabilities[int(index)]), 6))
             for score, index in zip(scores, indexes)
         ]
         return InferenceResult(
@@ -114,14 +149,17 @@ class Predictor:
             raise RuntimeError(f"EfficientNet-B0 inference requires a 224px tensor, got {tuple(batch.shape)}")
         started = time.perf_counter()
         with torch.inference_mode():
-            probabilities = F.softmax(self.model(batch), dim=1).cpu()
+            logits = self.model(batch)
+            raw_probabilities = F.softmax(logits, dim=1).cpu()
+            probabilities = F.softmax(logits / self.temperature, dim=1).cpu()
         elapsed_ms = (time.perf_counter() - started) * 1000 / len(sources)
 
         results: list[InferenceResult] = []
         for row in probabilities:
             scores, indexes = torch.topk(row, k=top_k)
             predictions = [
-                Prediction(int(index), self.labels[int(index)], round(float(score), 6))
+                Prediction(int(index), self.labels[int(index)], round(float(score), 6),
+                           round(float(raw_probabilities[len(results), int(index)]), 6))
                 for score, index in zip(scores, indexes)
             ]
             results.append(

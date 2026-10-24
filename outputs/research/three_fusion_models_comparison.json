@@ -1,0 +1,91 @@
+{
+  "report": "three_fusion_models_comparison",
+  "fusion_root": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion",
+  "status": "EVALUATED",
+  "evaluated_kinds": [
+    "early",
+    "intermediate",
+    "late"
+  ],
+  "not_evaluated_kinds": [],
+  "same_eligible_samples": true,
+  "test_examples": 3531,
+  "eligibility_manifest_sha256": "f31c9a0472a0d3188e1cc23f5663937e7959beaa95084e70c43aa1f078317d81",
+  "rows": [
+    {
+      "model": "Early fusion",
+      "source_file": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion\\early\\evaluation\\test_metrics.json",
+      "test_examples": 3531,
+      "test_accuracy": 0.5491362220334183,
+      "macro_precision": 0.5544286579260026,
+      "macro_recall": 0.4993720771689943,
+      "macro_f1": 0.49688532262494994,
+      "weighted_f1": 0.5392960459493144,
+      "top3_accuracy": 0.7660719342962333,
+      "parameter_count": 5856213,
+      "model_size_bytes": 38561995,
+      "inference_latency_ms_per_image": 21.382498003686162
+    },
+    {
+      "model": "Intermediate fusion",
+      "source_file": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion\\intermediate\\evaluation\\test_metrics.json",
+      "test_examples": 3531,
+      "test_accuracy": 0.567827810818465,
+      "macro_precision": 0.5595546515191531,
+      "macro_recall": 0.5177232815394278,
+      "macro_f1": 0.5127319608983615,
+      "weighted_f1": 0.5569780732016676,
+      "top3_accuracy": 0.7810818465024072,
+      "parameter_count": 6382037,
+      "model_size_bytes": 25858660,
+      "inference_latency_ms_per_image": 21.692526955354005
+    },
+    {
+      "model": "Late fusion",
+      "source_file": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion\\late\\evaluation\\test_metrics.json",
+      "test_examples": 3531,
+      "test_accuracy": 0.5641461342395921,
+      "macro_precision": 0.5569389189146967,
+      "macro_recall": 0.49810561649583185,
+      "macro_f1": 0.4965084246570165,
+      "weighted_f1": 0.5450217077911864,
+      "top3_accuracy": 0.7790994052676296,
+      "parameter_count": 5377070,
+      "model_size_bytes": 21837264,
+      "inference_latency_ms_per_image": 21.97032063370948
+    },
+    {
+      "model": "Image-only EfficientNet-B0 baseline",
+      "source_file": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion\\early\\evaluation\\test_metrics.json",
+      "test_examples": 3531,
+      "test_accuracy": 0.6057774001699235,
+      "macro_precision": 0.5764582189898093,
+      "macro_recall": 0.5918278368620385,
+      "macro_f1": 0.5727988174673574,
+      "weighted_f1": 0.6018559528645098,
+      "top3_accuracy": 0.8034551118663268,
+      "parameter_count": 4121557,
+      "model_size_bytes": 16783865,
+      "inference_latency_ms_per_image": 21.05631518989915
+    },
+    {
+      "model": "Text-only baseline",
+      "source_file": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\fusion\\intermediate\\evaluation\\test_metrics.json",
+      "test_examples": 3531,
+      "test_accuracy": 0.19456244689889549,
+      "macro_precision": 0.16999601680806004,
+      "macro_recall": 0.15152434816845864,
+      "macro_f1": 0.1412011146371037,
+      "weighted_f1": 0.17247033616662097,
+      "top3_accuracy": 0.3350325686774285,
+      "parameter_count": 666969,
+      "model_size_bytes": 2691209,
+      "inference_latency_ms_per_image": 0.16541782095723212
+    }
+  ],
+  "notes": [
+    "Only metrics present in real test_metrics.json files are shown.",
+    "The image-only and text-only rows are the baselines recorded by the fusion evaluation.",
+    "Fusion must not be claimed to improve on the baselines unless these rows show it."
+  ]
+}

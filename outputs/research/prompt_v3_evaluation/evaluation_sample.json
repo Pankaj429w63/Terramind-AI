@@ -1,0 +1,625 @@
+[
+  {
+    "sample_id": "apple black rot/google_0186.jpg",
+    "class_id": 0,
+    "class_name": "apple black rot",
+    "split": "test",
+    "sha256": "631c9cd7995483be023401793ba914e77c2073ff18d6ce34b929e92d6186f4e0"
+  },
+  {
+    "sample_id": "apple leaf/160.jpg",
+    "class_id": 1,
+    "class_name": "apple leaf",
+    "split": "test",
+    "sha256": "25522228b7084b2ac039ca369825082b96ce6ba6a0de0961bcb4d5d4f7416653"
+  },
+  {
+    "sample_id": "apple mosaic virus/14.jpg",
+    "class_id": 2,
+    "class_name": "apple mosaic virus",
+    "split": "train",
+    "sha256": "82e947013b295dd67c790342abbef3f4755e309c03673c499fd483a15d65ac96"
+  },
+  {
+    "sample_id": "apple rust/google_0038.jpg",
+    "class_id": 3,
+    "class_name": "apple rust",
+    "split": "train",
+    "sha256": "38d4ea66e97c8a57e760f1f495e63d17be9e9b470758a0de64a6a1e78d1f6df9"
+  },
+  {
+    "sample_id": "apple scab/google_0064.jpg",
+    "class_id": 4,
+    "class_name": "apple scab",
+    "split": "validation",
+    "sha256": "dd2c972b2f09a021c87790de106287ee11e5d8e756273f9f162e694c7842eb53"
+  },
+  {
+    "sample_id": "banana leaf/19.jpg",
+    "class_id": 5,
+    "class_name": "banana leaf",
+    "split": "train",
+    "sha256": "8aa167e30579cd028930fc1e4e7893159feb16e44eaf43e08fdcda22413f1189"
+  },
+  {
+    "sample_id": "banana panama disease/47 - copy (2).jpg",
+    "class_id": 6,
+    "class_name": "banana panama disease",
+    "split": "train",
+    "sha256": "daecbe5df1c0a689084373659cf178cc4c62557a4476d2467fc8b03e281ed3ee"
+  },
+  {
+    "sample_id": "basil downy mildew/google_0017.jpg",
+    "class_id": 7,
+    "class_name": "basil downy mildew",
+    "split": "train",
+    "sha256": "2bf876ad2580e9ca93f7a37f608f1fa617e5aa5b02544184d2ac40ec2148172b"
+  },
+  {
+    "sample_id": "basil leaf/google_0391.jpg",
+    "class_id": 8,
+    "class_name": "basil leaf",
+    "split": "validation",
+    "sha256": "b1153a775d0cc4c0c4f1521cf81bc51a661b3c709dfeb9c85c5551f4c4a334d4"
+  },
+  {
+    "sample_id": "bean halo blight/2.jpg",
+    "class_id": 9,
+    "class_name": "bean halo blight",
+    "split": "test",
+    "sha256": "ed4e2ac566e83be0135cd478388310a5a08347a12a3389d95c85249ab9d657f9"
+  },
+  {
+    "sample_id": "bean leaf/google_0087.jpg",
+    "class_id": 10,
+    "class_name": "bean leaf",
+    "split": "train",
+    "sha256": "415880e133bf5fd401f5b43f2e0f9796a6014ac748a2b86d40ae3efc2cd2725b"
+  },
+  {
+    "sample_id": "bean mosaic virus/google_0027.jpg",
+    "class_id": 11,
+    "class_name": "bean mosaic virus",
+    "split": "train",
+    "sha256": "0c58f455549e5d8605158f63f60fcac6ed7044313d078881f8db2288dca2f92c"
+  },
+  {
+    "sample_id": "bean rust/170.jpg",
+    "class_id": 12,
+    "class_name": "bean rust",
+    "split": "validation",
+    "sha256": "5a0320b84d2643ba5aa1ea394ba7277fd68d4d1008cd2e8383ec206bd0e6065e"
+  },
+  {
+    "sample_id": "bell pepper leaf/110.jpg",
+    "class_id": 13,
+    "class_name": "bell pepper leaf",
+    "split": "train",
+    "sha256": "0dcf890cdad17299d39d0cef6c816c13208e0402e26643c25c2d1a56b76cc5d3"
+  },
+  {
+    "sample_id": "bell pepper leaf spot/22.jpg",
+    "class_id": 14,
+    "class_name": "bell pepper leaf spot",
+    "split": "test",
+    "sha256": "bc1029b7eff00b0d3986cafe95748a91d3517a22038ec86d6b8a4e65ad7c306b"
+  },
+  {
+    "sample_id": "blueberry leaf/30.jpg",
+    "class_id": 15,
+    "class_name": "blueberry leaf",
+    "split": "train",
+    "sha256": "9d44535841e7e75ac40622f4970ad51b4ab4f5bea145a53a991cad7a3b186d44"
+  },
+  {
+    "sample_id": "blueberry rust/8.jpg",
+    "class_id": 16,
+    "class_name": "blueberry rust",
+    "split": "train",
+    "sha256": "08894bbe035b45e8b70e84b725c959ca246b2c113425406eaf78eb03a5053dd4"
+  },
+  {
+    "sample_id": "broccoli downy mildew/google_0041.jpg",
+    "class_id": 17,
+    "class_name": "broccoli downy mildew",
+    "split": "train",
+    "sha256": "b61b26be57ea276cf1a2d92d9e62aa5ae733ff9296e396996f7fbbcffc132908"
+  },
+  {
+    "sample_id": "broccoli leaf/172.jpg",
+    "class_id": 18,
+    "class_name": "broccoli leaf",
+    "split": "validation",
+    "sha256": "9e0b4eb2ebcdf321fcc2fd98b7b665410fe0c70f6929fbc11668b1870bde8519"
+  },
+  {
+    "sample_id": "cabbage alternaria leaf spot/google_0114.jpg",
+    "class_id": 19,
+    "class_name": "cabbage alternaria leaf spot",
+    "split": "train",
+    "sha256": "51100471125663419062b32ddae0803cbd45a3232fe1cc75401417ce04fbba6c"
+  },
+  {
+    "sample_id": "cabbage leaf/246.jpg",
+    "class_id": 20,
+    "class_name": "cabbage leaf",
+    "split": "train",
+    "sha256": "25b8fcaee4214aad5777318477ccb8630c263c0124a99089df515c04ebec32db"
+  },
+  {
+    "sample_id": "carrot cavity spot/google_0278.jpg",
+    "class_id": 21,
+    "class_name": "carrot cavity spot",
+    "split": "train",
+    "sha256": "45696a14b0dfd42e55e438af263ac04fb27b26652b733c5481cbd3ba2d342063"
+  },
+  {
+    "sample_id": "cauliflower alternaria leaf spot/google_0089.jpg",
+    "class_id": 22,
+    "class_name": "cauliflower alternaria leaf spot",
+    "split": "train",
+    "sha256": "5741290e39e0fefd4ee9357dc92a01cff29d18fde346f1026c9579dce7a021b5"
+  },
+  {
+    "sample_id": "cauliflower leaf/43.jpg",
+    "class_id": 23,
+    "class_name": "cauliflower leaf",
+    "split": "train",
+    "sha256": "1903f8d3256aad0e7e6bfceb6f83a68ea0e7e4a815eb2d418dbd4357c3245881"
+  },
+  {
+    "sample_id": "celery anthracnose/google_0035.jpg",
+    "class_id": 24,
+    "class_name": "celery anthracnose",
+    "split": "validation",
+    "sha256": "20c3f8eb380c69d9779a9020e03d464ad6e134c222f653d570d43d3212041f49"
+  },
+  {
+    "sample_id": "celery early blight/google_0011.jpg",
+    "class_id": 25,
+    "class_name": "celery early blight",
+    "split": "train",
+    "sha256": "4098b8aff539495f1d43b8f4db03694607d3abb8f4e946fea684bf10e6dd0040"
+  },
+  {
+    "sample_id": "celery leaf/40.jpg",
+    "class_id": 26,
+    "class_name": "celery leaf",
+    "split": "train",
+    "sha256": "d35127d1ef433c480268e0d67cfd1845b25446403c83c94aebfca793e1973d97"
+  },
+  {
+    "sample_id": "cherry leaf/101.jpg",
+    "class_id": 27,
+    "class_name": "cherry leaf",
+    "split": "test",
+    "sha256": "3324639cfac5bca17cadf813fd1f542edbd6c8c996eefb1bd9a19bd24995e006"
+  },
+  {
+    "sample_id": "cherry leaf spot/google_0300.jpg",
+    "class_id": 28,
+    "class_name": "cherry leaf spot",
+    "split": "validation",
+    "sha256": "a1bfebed64659edf9f69762ad741d9c5e516f579d8cd8c5a961df595f89dca6a"
+  },
+  {
+    "sample_id": "cherry powdery mildew/26.jpg",
+    "class_id": 29,
+    "class_name": "cherry powdery mildew",
+    "split": "train",
+    "sha256": "1192eb8b20e14619580a3f55f534bd00e780640aa3a2a04628ae5b09f7c1d284"
+  },
+  {
+    "sample_id": "citrus canker/google_0116.jpg",
+    "class_id": 30,
+    "class_name": "citrus canker",
+    "split": "test",
+    "sha256": "a23b42a514b1ad59a613054f8c162382dc0166fac5f114a135f04bcebc617b75"
+  },
+  {
+    "sample_id": "citrus greening disease/google_0008.jpg",
+    "class_id": 31,
+    "class_name": "citrus greening disease",
+    "split": "test",
+    "sha256": "07d7e02eeccc5550c9d851881765a051c8c218f6a683e0364dc693213df43d0f"
+  },
+  {
+    "sample_id": "coffee leaf/4.jpg",
+    "class_id": 32,
+    "class_name": "coffee leaf",
+    "split": "train",
+    "sha256": "168c41925d21f0396d018b6b165ed42d43999dd334add4e2fe03256fc4292fbc"
+  },
+  {
+    "sample_id": "coffee leaf rust/google_0001.jpg",
+    "class_id": 33,
+    "class_name": "coffee leaf rust",
+    "split": "validation",
+    "sha256": "c550b185c09a7f82bcfaa62ca8b9bc51ab8e67c65860142a42fadf5e184f6a40"
+  },
+  {
+    "sample_id": "corn gray leaf spot/google_0008.jpg",
+    "class_id": 34,
+    "class_name": "corn gray leaf spot",
+    "split": "train",
+    "sha256": "9a1f344e5dabfef19a8d95537d2385d3ce7911d2fe56aeb9db0caa7ebd139f6e"
+  },
+  {
+    "sample_id": "corn leaf/google_0055.jpg",
+    "class_id": 35,
+    "class_name": "corn leaf",
+    "split": "test",
+    "sha256": "2c6f4cafea3e8c2b664ccfbd02b85cd22cc29dda6f78cbd2f4afce25aec3b9a1"
+  },
+  {
+    "sample_id": "corn northern leaf blight/31.jpg",
+    "class_id": 36,
+    "class_name": "corn northern leaf blight",
+    "split": "train",
+    "sha256": "9c2784d88d1f20c7f46ebcf7a9c0c1b86ef713f54455dfd0d99ca0f5537cdd9a"
+  },
+  {
+    "sample_id": "corn rust/34.jpg",
+    "class_id": 37,
+    "class_name": "corn rust",
+    "split": "train",
+    "sha256": "2383f698e0ba8ec8b1dc0bd56c9a701824d9b5b285093a05bd1a3d49519d8de6"
+  },
+  {
+    "sample_id": "corn smut/google_0163.jpg",
+    "class_id": 38,
+    "class_name": "corn smut",
+    "split": "train",
+    "sha256": "896cdb37f78c75c43365ad94465f99970eadafd63ef754b44b927a5c3a80a5b7"
+  },
+  {
+    "sample_id": "cucumber angular leaf spot/152.jpg",
+    "class_id": 39,
+    "class_name": "cucumber angular leaf spot",
+    "split": "validation",
+    "sha256": "906ee4318893dbf59d0bae020cb74e6f4fed4baefa0792d46ce9191e45581a44"
+  },
+  {
+    "sample_id": "cucumber bacterial wilt/google_0093.jpg",
+    "class_id": 40,
+    "class_name": "cucumber bacterial wilt",
+    "split": "test",
+    "sha256": "f10e9d0354cee2cf393664beace8438ecf1f1483564779f20cd287e19fd60c87"
+  },
+  {
+    "sample_id": "cucumber leaf/google_0056.jpg",
+    "class_id": 41,
+    "class_name": "cucumber leaf",
+    "split": "train",
+    "sha256": "9b498318ba9896ed4cf66a7300ab744c3175b89e7035bf53715678dac27ad08e"
+  },
+  {
+    "sample_id": "cucumber powdery mildew/google_0025.jpg",
+    "class_id": 42,
+    "class_name": "cucumber powdery mildew",
+    "split": "train",
+    "sha256": "c132b8119fdfb594e710c1400797b47129983450f9174c492bac3aa3aef6fed4"
+  },
+  {
+    "sample_id": "eggplant cercospora leaf spot/98.jpg",
+    "class_id": 43,
+    "class_name": "eggplant cercospora leaf spot",
+    "split": "train",
+    "sha256": "0d711f3d5458eb7f27690b58d9e3f7322b236e4d6d3a442f2e5d90722b09e6df"
+  },
+  {
+    "sample_id": "eggplant leaf/google_0259.jpg",
+    "class_id": 44,
+    "class_name": "eggplant leaf",
+    "split": "train",
+    "sha256": "441c106dff30be832c10bfeb8f7eb9c2c0a699f5ca81e5067e5ce3662e548f19"
+  },
+  {
+    "sample_id": "garlic leaf/171.jpg",
+    "class_id": 45,
+    "class_name": "garlic leaf",
+    "split": "train",
+    "sha256": "f9b560d314ae1c837de65f1b1c97593331be05c0d64d5f30e39f303de90a0ba7"
+  },
+  {
+    "sample_id": "garlic leaf blight/google_0161.jpg",
+    "class_id": 46,
+    "class_name": "garlic leaf blight",
+    "split": "train",
+    "sha256": "03984a51e7d07e18c5f70c5df851aa6d85c6fb95ec0b00fa145b2f41f39cc28b"
+  },
+  {
+    "sample_id": "garlic rust/google_0086.jpg",
+    "class_id": 47,
+    "class_name": "garlic rust",
+    "split": "train",
+    "sha256": "a40f8210642697facad88252ec1a560ea07e4e3389d2501edbe4400e7cc906c9"
+  },
+  {
+    "sample_id": "ginger leaf/35.jpg",
+    "class_id": 48,
+    "class_name": "ginger leaf",
+    "split": "train",
+    "sha256": "7067e0b4a696e92065c1895272bb8c82c44759bc7d0b830b6392da68638ab31a"
+  },
+  {
+    "sample_id": "ginger leaf spot/61 - copy.jpg",
+    "class_id": 49,
+    "class_name": "ginger leaf spot",
+    "split": "train",
+    "sha256": "c630d500d5d853dc3a905aad9bcc12a22c74dd2d0a17991565f509208cb466c8"
+  },
+  {
+    "sample_id": "ginger sheath blight/166.jpg",
+    "class_id": 50,
+    "class_name": "ginger sheath blight",
+    "split": "test",
+    "sha256": "221d84105d03253fdc978c4740392b5406452c5b98b767248720f1e46a926797"
+  },
+  {
+    "sample_id": "grape black rot/google_0085.jpg",
+    "class_id": 51,
+    "class_name": "grape black rot",
+    "split": "train",
+    "sha256": "cb79682935b805226dd70de53e685627059b2d0a540badbbeb6f67938ab89287"
+  },
+  {
+    "sample_id": "grape downy mildew/4.jpg",
+    "class_id": 52,
+    "class_name": "grape downy mildew",
+    "split": "train",
+    "sha256": "73d3802a4a5ad61e9a9591301a259edc86de105bca4d308b78f1d6298560a277"
+  },
+  {
+    "sample_id": "grape leaf/google_0004.jpg",
+    "class_id": 53,
+    "class_name": "grape leaf",
+    "split": "train",
+    "sha256": "018253ee6d53ace42ee3f9e4a5e0d6024e29a2076ee13bda92dba2189ff1fe0c"
+  },
+  {
+    "sample_id": "grape leaf spot/google_0049.jpg",
+    "class_id": 54,
+    "class_name": "grape leaf spot",
+    "split": "train",
+    "sha256": "22c7828e0caba4f3861315793479a753cd1b067d2fe04cb44acea31773675a9d"
+  },
+  {
+    "sample_id": "grapevine leafroll disease/google_0057 - copy (4).jpg",
+    "class_id": 55,
+    "class_name": "grapevine leafroll disease",
+    "split": "train",
+    "sha256": "0f52124ff7c0d8fb9adf2ebf6471cafdcb827a30e62d4e33a5480be3fe14ba20"
+  },
+  {
+    "sample_id": "lettuce downy mildew/google_0034.jpg",
+    "class_id": 56,
+    "class_name": "lettuce downy mildew",
+    "split": "train",
+    "sha256": "7960579618df58958adf939ab147c77de08e94b6bdca6717b405bbfcfd9ccdbd"
+  },
+  {
+    "sample_id": "lettuce leaf/55.jpg",
+    "class_id": 57,
+    "class_name": "lettuce leaf",
+    "split": "train",
+    "sha256": "322423e696495a58bf354f4cdac88e78a6803e8cbf3195364a1d379b11a92337"
+  },
+  {
+    "sample_id": "lettuce mosaic virus/google_0209.jpg",
+    "class_id": 58,
+    "class_name": "lettuce mosaic virus",
+    "split": "train",
+    "sha256": "fcdc4be8708a3a996d40cfa4d1cd52ec3a094a5e361cd6b5a6492e1d2db67bf1"
+  },
+  {
+    "sample_id": "maple leaf/152.jpg",
+    "class_id": 59,
+    "class_name": "maple leaf",
+    "split": "train",
+    "sha256": "a75274307fe0b97cf2b2a157f557a1c6e5b01c3c65091e392b669072b942b462"
+  },
+  {
+    "sample_id": "maple tar spot/google_0012.jpg",
+    "class_id": 60,
+    "class_name": "maple tar spot",
+    "split": "validation",
+    "sha256": "6fe6b30a1cb2254c9a87a21053e3a8eb4badf7e1a563a3d444185416dae3eff5"
+  },
+  {
+    "sample_id": "peach leaf/21.jpg",
+    "class_id": 61,
+    "class_name": "peach leaf",
+    "split": "train",
+    "sha256": "0f70f3e4d4c243d03e29c638070f536625c614d51411a6347a69001fa0d72634"
+  },
+  {
+    "sample_id": "peach leaf curl/google_0212.jpg",
+    "class_id": 62,
+    "class_name": "peach leaf curl",
+    "split": "train",
+    "sha256": "9331eae9f3025a17c078c9abbc07a1323c1f31b99578378f19fbc62046c64984"
+  },
+  {
+    "sample_id": "plum leaf/363.jpg",
+    "class_id": 63,
+    "class_name": "plum leaf",
+    "split": "test",
+    "sha256": "5ba580a088175e84908340f8ce955b8d904b1dfe0a5796e9807cd910e22afded"
+  },
+  {
+    "sample_id": "plum pocket disease/7.jpg",
+    "class_id": 64,
+    "class_name": "plum pocket disease",
+    "split": "train",
+    "sha256": "8b810421548e36584174495d2318f5f5e5c62c1df82d3a866b40a63cc3ee906b"
+  },
+  {
+    "sample_id": "potato early blight/google_0008.jpg",
+    "class_id": 65,
+    "class_name": "potato early blight",
+    "split": "train",
+    "sha256": "5fffbc40caa405d25a465694129e07557b328b2ae1819a8e2b4ae4ff3e7a1b5a"
+  },
+  {
+    "sample_id": "potato late blight/google_0313 - copy (2) - copy.jpg",
+    "class_id": 66,
+    "class_name": "potato late blight",
+    "split": "test",
+    "sha256": "ecc30346ea816c3d5fea63ee01412e26d6104d25be5e5530a796ecb2ebd43a87"
+  },
+  {
+    "sample_id": "potato leaf/28.jpg",
+    "class_id": 67,
+    "class_name": "potato leaf",
+    "split": "validation",
+    "sha256": "9b451f1b6a6850f5d8310bbe20545d1dd99a5739eb673b33aaa4262cd9d60d07"
+  },
+  {
+    "sample_id": "raspberry leaf/73.jpg",
+    "class_id": 68,
+    "class_name": "raspberry leaf",
+    "split": "train",
+    "sha256": "401e1ae9d95a4c1f174d1275e2d3d026fb6d532ef82e498e260bfe1d8adf731a"
+  },
+  {
+    "sample_id": "rice blast/93.jpg",
+    "class_id": 69,
+    "class_name": "rice blast",
+    "split": "train",
+    "sha256": "84fc3fae01a72cfb29fcae89fbfdff4c43c49125c98fed017f437a45b19f3fd7"
+  },
+  {
+    "sample_id": "rice leaf/246.jpg",
+    "class_id": 70,
+    "class_name": "rice leaf",
+    "split": "train",
+    "sha256": "be61cc17d2d021f6a1e579994325d7c756d1995f60eb7857ba7a96d790ffbb4e"
+  },
+  {
+    "sample_id": "rice sheath blight/google_0054.jpg",
+    "class_id": 71,
+    "class_name": "rice sheath blight",
+    "split": "train",
+    "sha256": "02b531248a4831654954a29159cb2e153d567278b3ba10d77e3ac9f50efa3125"
+  },
+  {
+    "sample_id": "soybean leaf/google_0566.jpg",
+    "class_id": 72,
+    "class_name": "soybean leaf",
+    "split": "test",
+    "sha256": "048904dc0b05e77d7b1bdad36ace2de71ecb64453961c151714bb866b17066f7"
+  },
+  {
+    "sample_id": "squash leaf/google_0460.jpg",
+    "class_id": 73,
+    "class_name": "squash leaf",
+    "split": "train",
+    "sha256": "78168ba83c77bccf9dfbf326f66ffbd4a54e24af58dec67fd5ec259bf195a877"
+  },
+  {
+    "sample_id": "squash powdery mildew/79.jpg",
+    "class_id": 74,
+    "class_name": "squash powdery mildew",
+    "split": "train",
+    "sha256": "6f0f9756145d90531422f84e3f6b36f3348af145cf40a69031eea02279f9d5e2"
+  },
+  {
+    "sample_id": "strawberry anthracnose/google_0031.jpg",
+    "class_id": 75,
+    "class_name": "strawberry anthracnose",
+    "split": "train",
+    "sha256": "9477b93cdb686bb3c066ee5f1022d65507f232beb1414c04f852ae6c56b112d6"
+  },
+  {
+    "sample_id": "strawberry leaf/google_0080.jpg",
+    "class_id": 76,
+    "class_name": "strawberry leaf",
+    "split": "train",
+    "sha256": "a44d63e1d23e39b7a642796759b1d6e1bf153a48318804b1d04cf1d02760e78c"
+  },
+  {
+    "sample_id": "strawberry leaf scorch/google_0025.jpg",
+    "class_id": 77,
+    "class_name": "strawberry leaf scorch",
+    "split": "train",
+    "sha256": "dd77c916fc96433eabbd13f238f3e60f2e47ae2c77de53e0ce8ee43b06d155d5"
+  },
+  {
+    "sample_id": "tobacco leaf/42.jpg",
+    "class_id": 78,
+    "class_name": "tobacco leaf",
+    "split": "test",
+    "sha256": "822419a1afcf396209348f5bc4f1508432eb063afaf87462c5a3f19e77cbf181"
+  },
+  {
+    "sample_id": "tobacco mosaic virus/google_0144.jpg",
+    "class_id": 79,
+    "class_name": "tobacco mosaic virus",
+    "split": "train",
+    "sha256": "6131927349c08f2c1fbfbd3fac129d8fb4efc5b14c059ae737d978b2f4b5206a"
+  },
+  {
+    "sample_id": "tomato bacterial leaf spot/178.jpg",
+    "class_id": 80,
+    "class_name": "tomato bacterial leaf spot",
+    "split": "test",
+    "sha256": "7cf9fe424531d62f1f055e0b90c2af0e21ec8911f81ef4f53356cad83d8ce40d"
+  },
+  {
+    "sample_id": "tomato early blight/28.jpg",
+    "class_id": 81,
+    "class_name": "tomato early blight",
+    "split": "test",
+    "sha256": "622e0222d381a4f187cf3aebf6c7001c5ad7dbff65d16092a506510c39ed285c"
+  },
+  {
+    "sample_id": "tomato late blight/89.jpg",
+    "class_id": 82,
+    "class_name": "tomato late blight",
+    "split": "test",
+    "sha256": "877a3baa4ed96d84139f8d2f7d6e89c3b714ec21aec27099507cd9c1b9db831c"
+  },
+  {
+    "sample_id": "tomato leaf/3.jpg",
+    "class_id": 83,
+    "class_name": "tomato leaf",
+    "split": "test",
+    "sha256": "4c5ea2baf40c425756fe1cfedf4704f1cfb4ca2240fb4fc0b4eef1af3e5ac2aa"
+  },
+  {
+    "sample_id": "tomato leaf mold/5.jpg",
+    "class_id": 84,
+    "class_name": "tomato leaf mold",
+    "split": "test",
+    "sha256": "bfd8197c6e8250b75d59a49497cc23ecd43ef7494468f92476c41989a9dd9bda"
+  },
+  {
+    "sample_id": "tomato mosaic virus/google_0019.jpg",
+    "class_id": 85,
+    "class_name": "tomato mosaic virus",
+    "split": "train",
+    "sha256": "cd8ada07a3165e9369572982ee29d898f227d9e4dcdae4a638db44222ef82165"
+  },
+  {
+    "sample_id": "tomato septoria leaf spot/google_0033.jpg",
+    "class_id": 86,
+    "class_name": "tomato septoria leaf spot",
+    "split": "test",
+    "sha256": "5aab5ca5e4bad19bc68d9ddfc851ffcf5bfdfde63ffa4ae0b14b30173e0d18ca"
+  },
+  {
+    "sample_id": "tomato yellow leaf curl virus/google_0135.jpg",
+    "class_id": 87,
+    "class_name": "tomato yellow leaf curl virus",
+    "split": "train",
+    "sha256": "531a5c55cb92773863e0ece5f14c9435e49156bdc1ca4797d9935afb88d5dff3"
+  },
+  {
+    "sample_id": "zucchini yellow mosaic virus/57.jpg",
+    "class_id": 88,
+    "class_name": "zucchini yellow mosaic virus",
+    "split": "train",
+    "sha256": "b1a2f77d1f774bbed4731265e40eef1a828e48870b36d5aeb2202e3ae27966ad"
+  }
+]

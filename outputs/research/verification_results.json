@@ -1,0 +1,34 @@
+{
+  "status": "local_checks_passed_hosted_services_unverified",
+  "verification_date": "2026-10-17",
+  "checks": {
+    "python_unittest_discover": {"status": "passed", "tests": 32},
+    "backend_api_integration": {"status": "passed", "command": "python scripts/test_backend_api.py"},
+    "local_uvicorn_health": {"status": "passed", "http_status": 200, "inference_available": true, "backbone": "EfficientNet-B0", "classes": 89, "bind": "127.0.0.1:8001"},
+    "rag_loader": {"status": "passed", "assertions": 39},
+    "rag_agent_generation": {"status": "passed", "tests": 6, "included_in_unittest_total": true},
+    "rag_retrieval_evaluation": {"status": "passed", "queries": 10, "metrics_artifact": "outputs/research/rag_retrieval_evaluation.json"},
+    "python_compileall": {"status": "passed", "scope": ["backend", "ml", "agents", "rag", "scripts", "tests"]},
+    "next_production_build": {"status": "passed", "command": "npm run build", "directory": "frontend"},
+    "git_diff_check": {"status": "passed"},
+    "pytest": {"status": "blocked", "reason": "pytest is not installed; pytest-style RAG tests were adapted to and run with unittest"},
+    "frontend_lint": {"status": "skipped", "reason": "no ESLint configuration is present; production build compilation and TypeScript validity checks passed"}
+  },
+  "local_runtime": {
+    "backend_health": "200 via FastAPI TestClient lifespan startup",
+    "production_model": "EfficientNet-B0, 89 classes, loaded",
+    "experimental_candidate": "not promoted and not loaded",
+    "fusion_models": "implemented, untrained, unavailable",
+    "rag_backend": "local-memory fallback; 218 sources and 251 points",
+    "llm_provider": "not configured; evidence-template fallback active",
+    "backend_startup_rss_mib": 470.4,
+    "memory_measurement_platform": "Windows local process; not a Render/Linux measurement",
+    "torch_threads": 1
+  },
+  "external_services": {
+    "hosted_frontend_backend_connection": "not verified; exact Render public origin is not available in repository/local frontend environment",
+    "render_health": "not verified",
+    "supabase_connectivity": "not verified against hosted service; auth/ownership/local-fallback tests used mocks",
+    "live_llm_provider": "not verified; no provider configured"
+  }
+}

@@ -30,6 +30,18 @@ assert r.status_code == 200
 assert r.json()["info"]["num_classes"] == 89
 print("OK /api/model/info\n")
 
+print("== GET /api/models/status ==")
+r = client.get("/api/models/status")
+assert r.status_code == 200, f"Model registry failed: {r.status_code} {r.text[:300]}"
+registry = r.json()
+assert registry["production"]["available_for_inference"] is True
+assert registry["experimental_weights_loaded"] is False
+assert len(registry["fusion_models"]) == 3
+assert all(model["available"] and model["requires_text"] for model in registry["fusion_models"])
+assert registry["experimental_candidates"][0]["promoted"] is False
+print("  production=loaded, candidate=not promoted, fusion=available")
+print("OK /api/models/status\n")
+
 # ---- Multimodal module remains explicitly unavailable until trained ----
 print("== GET /api/multimodal/status ==")
 r = client.get("/api/multimodal/status")
@@ -38,14 +50,50 @@ multimodal = r.json()
 assert multimodal["status"] == "unavailable", f"Expected no trained checkpoint: {multimodal}"
 assert multimodal["trained"] is False
 assert multimodal["data"]["paired_natural_language_descriptions"] is False
+availability = {item["name"]: item for item in multimodal["model_availability"]}
+assert availability["Image-only EfficientNet-B0"]["trained"] is True
+for fusion_name in ("Early fusion", "Intermediate fusion", "Late fusion"):
+    assert availability[fusion_name]["trained"] is True
+    assert availability[fusion_name]["requires_text"] is True
 print(f"  status={multimodal['status']} train_entries={multimodal['data']['train_split_entries']} val_entries={multimodal['data']['validation_split_entries']}")
 print("OK multimodal status\n")
 
 print("== POST /api/multimodal/analyze before training ==")
-r = client.post("/api/multimodal/analyze", files={"file": ("not-used.jpg", b"", "image/jpeg")})
+r = client.post("/api/multimodal/analyze", files={"file": ("not-used.jpg", b"", "image/jpeg")}, data={"paired_text": "observed leaf spots"})
 assert r.status_code == 503, f"Untrained multimodal analysis should be unavailable: {r.status_code} {r.text[:300]}"
 print("  analysis correctly reports unavailable until a validated checkpoint is installed")
 print("OK multimodal untrained guard\n")
+
+# ---- Selectable fusion models: status + guarded analyze ----
+print("== GET /api/fusion/status ==")
+r = client.get("/api/fusion/status")
+assert r.status_code == 200, f"fusion/status failed: {r.status_code} {r.text[:300]}"
+fusion = r.json()
+assert fusion["supported_kinds"] == ["early", "intermediate", "late"]
+assert len(fusion["fusion_models"]) == 3
+fusion_by_kind = {entry["kind"]: entry for entry in fusion["fusion_models"]}
+for kind in ("early", "intermediate", "late"):
+    assert fusion_by_kind[kind]["implemented"] is True
+    assert fusion_by_kind[kind]["requires_text"] is (kind != "late")
+assert fusion["production_image_only_available"] is True
+print(f"  kinds={fusion['supported_kinds']} loaded={fusion['loaded_kinds']}")
+print("OK /api/fusion/status\n")
+
+print("== POST /api/fusion/analyze (trained checkpoint) ==")
+fusion_sample = next(SAMPLES_DIR.rglob("*.jpg"))
+with open(fusion_sample, "rb") as fh:
+    r = client.post("/api/fusion/analyze", files={"file": (fusion_sample.name, fh, "image/jpeg")},
+                    data={"kind": "early", "paired_text": "observed leaf spots"})
+assert r.status_code == 200, f"Fusion analyze failed: {r.status_code} {r.text[:300]}"
+assert r.json()["multimodal"] is True
+print("  early fusion correctly analyzes image + text\n")
+
+print("== POST /api/fusion/analyze (bad kind) ==")
+with open(fusion_sample, "rb") as fh:
+    r = client.post("/api/fusion/analyze", files={"file": (fusion_sample.name, fh, "image/jpeg")},
+                    data={"kind": "midfusion", "paired_text": "observed leaf spots"})
+assert r.status_code == 422, f"Unknown fusion kind should be rejected: {r.status_code} {r.text[:300]}"
+print("OK fusion analyze input validation\n")
 
 # ---- /api/analytics/summary ----
 print("== GET /api/analytics/summary ==")
@@ -77,6 +125,9 @@ assert m["best_val_macro_f1_pct"] == 56.5659, (
 )
 assert m["best_epoch"] == 20, f"Unexpected best epoch: {m['best_epoch']}"
 assert m["num_classes"] == 89, f"Unexpected class count: {m['num_classes']}"
+assert m["validation_accuracy_pct"] == 60.5495, f"Expected checkpoint validation accuracy, got {m['validation_accuracy_pct']}"
+assert m["test_weighted_f1_pct"] is None, "Do not attach weighted-F1 from a different model run"
+assert d["metrics_source"] == "served_checkpoint_companion"
 print("OK /api/analytics/summary\n")
 
 # ---- Graph endpoints ----
@@ -88,6 +139,15 @@ for name in ("training_curves", "confusion_matrix"):
     size_kb = len(r.content) // 1024
     print(f"  status=200 bytes={len(r.content)} ~{size_kb}KB")
     print(f"OK graph/{name}\n")
+
+report = client.get("/api/analytics/full_report")
+assert report.status_code == 200, report.text[:300]
+assert report.json()["sample_count"] == 3545
+assert len(report.json()["per_class"]) == 89
+assert len(report.json()["confusion_matrix"]) == 89
+config = client.get("/api/analytics/final_config")
+assert config.status_code == 200 and config.json()["run_name"] == "efficientnet_b0_official_v3"
+print("OK served checkpoint report/config artifacts\n")
 
 # ---- Predict ----
 sample_path = next(SAMPLES_DIR.rglob("*.jpg"))
@@ -103,6 +163,10 @@ d = r.json()
 assert r.status_code == 200, f"Predict failed: {r.status_code} {d}"
 print(f"  top1 label : {d['prediction']['label']}")
 print(f"  top1 conf  : {d['prediction']['confidence_pct']}%")
+assert "raw_score" in d["prediction"]
+assert "raw_score" in d["top5"][0]
+assert d["model_info"]["confidence_calibration"]["method"] == "temperature scaling"
+print(f"  raw score  : {d['prediction']['raw_score']:.4f} (confidence is validation-calibrated)")
 print(f"  top5 (topk={len(d['top5'])}) :")
 for i, t in enumerate(d["top5"], 1):
     print(f"    {i}. {t['confidence_pct']:6.2f}%  {t['label']}")
@@ -110,6 +174,9 @@ print(f"  inference : {d['inference_ms']:.1f}ms")
 print(f"  low_conf? : {d['low_confidence']}")
 assert len(d["top5"]) == 5
 assert isinstance(d["prediction"]["label"], str) and len(d["prediction"]["label"]) > 0
+assert isinstance(d.get("guidance"), dict), "Diagnosis response should include separate RAG guidance"
+assert d["guidance"].get("diagnosis_notice"), "RAG guidance must not imply that prediction confirms diagnosis"
+assert all(s.get("source") and s.get("title") for s in d["guidance"].get("sources", []))
 last_diag_id = d["id"]
 print("OK /api/diagnosis/predict\n")
 
@@ -181,7 +248,17 @@ print(f"  grounded: {ch.get('grounded')}  sources: {len(ch.get('sources') or [])
 assert ch.get("grounded") is True, "Chat should return grounded sources"
 assert len(ch.get("sources") or []) > 0, "Chat should return retrieved sources"
 assert ch.get("response"), "Chat should return a sourced response"
+assert ch.get("generation_mode") in {"llm", "evidence_template", "no_evidence"}
+assert ch.get("generation_status"), "Chat should expose generation status"
+assert all(source.get("source") and source.get("title") and source.get("citation_id") for source in ch.get("sources", []))
+if ch.get("generation_mode") == "evidence_template":
+    assert "[S1]" in ch["response"], "Evidence template should preserve citation IDs"
 print("OK /chat\n")
+
+llm = client.get("/api/llm/status")
+assert llm.status_code == 200 and llm.json().get("generation_fallback") == "evidence_template"
+assert "api_key_configured" in llm.json()
+print("OK /api/llm/status\n")
 
 # ---- Error handling: bad extension ----
 print("== POST bad extension ==")

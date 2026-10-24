@@ -1,0 +1,42 @@
+{
+  "dataset_root": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild",
+  "report": "fusion_dataset_validation",
+  "hard_errors": [],
+  "paired_csv": null,
+  "eligible": {
+    "manifest": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\research\\fusion_eligibility_manifest.json",
+    "sample_count": 17870,
+    "counts_by_split": {
+      "train": 12573,
+      "validation": 1751,
+      "test": 3546
+    },
+    "duplicate_groups": {
+      "all": 335,
+      "cross_split": 155,
+      "within_split": 180
+    },
+    "excluded_counts_by_reason": {
+      "duplicate_content_crosses_official_splits": 333,
+      "duplicate_content_has_conflicting_labels": 309,
+      "duplicate_copy_within_same_split": 30
+    },
+    "policy": {
+      "official_assignments_are_immutable": true,
+      "cross_split_duplicate_policy": "exclude every member of any exact-SHA256 group represented in more than one official split",
+      "within_split_duplicate_policy": "retain lexicographically first relative path only when all copies have the same official class; exclude all copies when labels conflict",
+      "comparison_rule": "image-only, text-only, early/intermediate/late fusion must all evaluate on these same eligible sample IDs",
+      "hash": "SHA-256 over image file bytes"
+    }
+  },
+  "official": {
+    "path_rows": 18542,
+    "counts_by_split": {
+      "train": 13045,
+      "validation": 1820,
+      "test": 3677
+    },
+    "classes": 89
+  },
+  "status": "VALID"
+}

@@ -1,6 +1,6 @@
 # TerraMind multimodal representation module
 
-This experimental module is separate from the production EfficientNet-B0 classifier. It uses the current EfficientNet-B0 convolutional feature weights as its image encoder initialization, and uses exact PlantWild class labels from `data/plantwild/plantwild/classes.txt` as the text modality. PlantWild split rows provide the existing image-to-class-ID pairing. The text pipeline tokenizes those labels; it does not generate or assume natural-language captions.
+This experimental representation module is separate from the production EfficientNet-B0 classifier. It uses exact PlantWild class labels from `data/plantwild/plantwild/classes.txt` as its text modality, paired by split metadata. This is class-conditioned target information, not a valid leakage-free text input for disease classification. The dataset's GPT-generated prompts are also associated with each class and are not valid per-image observations. Do not use this module or those prompts to claim multimodal disease-classification performance. Valid paired text must be available at inference before such an experiment can proceed.
 
 ## Implemented architecture
 
@@ -10,7 +10,7 @@ This experimental module is separate from the production EfficientNet-B0 classif
 - A symmetric multi-positive contrastive alignment objective treats repeated examples of the same class as positives rather than false negatives.
 - Pooled cross-attended streams are projected to a fused latent vector. A future trained checkpoint can expose this vector alongside the unchanged production diagnosis.
 
-The repository contains the PlantWild `train_split.txt` and `val_split.txt` metadata and their corresponding image files (13,045 train entries and 1,820 validation entries at implementation time). Preparation validates each split path and class ID and uses only the mapped class label. This is image/class-metadata supervision, not a dataset of paired natural-language descriptions.
+The repository contains PlantWild `train_split.txt` and `val_split.txt` metadata and their corresponding image files (13,045 train entries and 1,820 validation entries at implementation time). Preparation validates each split path and class ID and uses only the mapped class label. This is image/class-metadata representation learning, not a dataset of paired natural-language descriptions or a supervised fusion classifier.
 
 ## Training and inference
 
@@ -20,14 +20,14 @@ Training is explicit and does not run during backend startup. It reads the exist
 .\.venv\Scripts\python.exe -m ml.multimodal.train
 ```
 
-After a validated checkpoint is created, standalone inference uses the existing production classifier and emits its prediction with the fused vector:
+After a valid paired-text checkpoint is created, standalone inference requires image-specific observed text and emits it with the fused vector:
 
 ```powershell
-.\.venv\Scripts\python.exe -m ml.multimodal.infer path/to/plant.jpg
+.\.venv\Scripts\python.exe -m ml.multimodal.infer path/to/plant.jpg --paired-text "observed leaf symptoms"
 ```
 
-The backend checks `TERRAMIND_MULTIMODAL_CHECKPOINT`, defaulting to the path above. `/api/multimodal/status` reports the module and checkpoint state. `/api/multimodal/analyze` is unavailable until a checkpoint has completed training and validation; when available, it returns the unchanged EfficientNet diagnosis and a fused representation based on the predicted class label. The classifier remains responsible for all production disease predictions.
+The backend checks `TERRAMIND_MULTIMODAL_CHECKPOINT`, defaulting to the path above. `/api/multimodal/status` reports the module/checkpoint state and explicitly marks the early, intermediate, and late classification fusion methods unavailable. `/api/multimodal/analyze` remains unavailable until a checkpoint has completed training and validation. Any future disease-classification integration must accept valid user-available text and must not feed the target class or a class-derived description at inference.
 
 ## Training status
 
-Architecture, deterministic data preparation, loss functions, training code, runtime loading, API status/analysis routes, and focused tests are implemented. **Training has not been run. No multimodal checkpoint, accuracy, or experimental result is claimed.**
+Architecture, deterministic data preparation, loss functions, training code, runtime loading, API status/analysis routes, and focused tests exist. **Training has not been run. No multimodal checkpoint, accuracy, or experimental result is claimed. The current metadata text is not eligible for disease-classifier evaluation due to target leakage.**

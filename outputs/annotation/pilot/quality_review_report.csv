@@ -1,0 +1,179 @@
+sample_id,quality_concerns,suggested_correction,review_status
+tomato mosaic virus/google_0005.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+garlic leaf blight/33.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grapevine leafroll disease/google_0004 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+broccoli downy mildew/google_0163.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry leaf spot/16.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape leaf/21.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean mosaic virus/77.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry leaf spot/44.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger leaf/5.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+squash powdery mildew/106.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bell pepper leaf/275.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber powdery mildew/137.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry anthracnose/google_0096.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grapevine leafroll disease/google_0022 - copy (2).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean rust/50.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+eggplant leaf/google_0090.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn smut/92.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn northern leaf blight/16.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+garlic leaf/6.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape black rot/23.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean leaf/google_0286.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn leaf/google_0134.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tobacco leaf/27.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bell pepper leaf spot/google_0118.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple rust/177.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato late blight/google_0022.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+citrus greening disease/google_0036.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger leaf spot/96.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+rice blast/google_0096.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+garlic leaf/212.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tobacco leaf/google_0027 - copy (4).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber angular leaf spot/185.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+lettuce leaf/google_0296.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato early blight/google_0352.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+squash leaf/zgoogle_0080.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape leaf spot/44.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape leaf spot/google_0041.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+rice blast/86.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn rust/google_0203.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery early blight/google_0012.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+coffee leaf/224.jpg,"Contains subjective non-objective term 'healthy' (Guidelines: use objective terms like 'intact', 'uniform green')",Replace 'healthy-looking' with objective morphological phrasing (e.g. 'intact green leaves').,needs_human_review
+corn rust/google_0181.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato leaf/google_0656.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery early blight/22.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+basil downy mildew/google_0000.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn gray leaf spot/google_0122.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato yellow leaf curl virus/google_0049.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato early blight/google_0213 - copy (4).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato septoria leaf spot/77.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato mosaic virus/153.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+banana panama disease/addition (6).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+squash leaf/45.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean halo blight/google_0184 - copy (2).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry leaf scorch/google_0003.jpg,Contains prohibited disease/diagnostic claim terms: ['severity'],"Replace subjective 'severity' with objective morphological description (e.g., lesion diameter or leaf area affected).",needs_human_review
+apple rust/google_0168.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple scab/google_0249.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry leaf/8.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+squash powdery mildew/google_0132.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape black rot/google_0017.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+blueberry rust/google_0054.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn leaf/44.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato septoria leaf spot/google_0140 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean mosaic virus/google_0203.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry leaf/google_0489.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean leaf/111.jpg,Contains prohibited disease/diagnostic claim terms: ['disease'],Remove the word 'disease' and rephrase purely based on visible morphological symptoms.,needs_human_review
+rice leaf/96.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+lettuce leaf/google_0241.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+lettuce downy mildew/193.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato leaf mold/google_0262.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato yellow leaf curl virus/google_0162.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato early blight/google_0246.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry leaf/google_0335.jpg,"Contains subjective non-objective term 'healthy' (Guidelines: use objective terms like 'intact', 'uniform green')",Replace 'healthy-looking' with objective morphological phrasing (e.g. 'intact green leaves').,needs_human_review
+carrot cavity spot/google_0024.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+soybean leaf/284.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger leaf/google_0203.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery leaf/google_0064.jpg,"Contains subjective non-objective term 'healthy' (Guidelines: use objective terms like 'intact', 'uniform green')",Replace 'healthy-looking' with objective morphological phrasing (e.g. 'intact green leaves').,needs_human_review
+corn gray leaf spot/google_0143.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+maple leaf/14.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato leaf mold/267.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape leaf/google_0367.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger leaf spot/36.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+basil downy mildew/google_0045.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+citrus greening disease/39.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cabbage alternaria leaf spot/google_0085 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry anthracnose/google_0033.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+plum leaf/google_0043.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cauliflower leaf/google_0169.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+zucchini yellow mosaic virus/33.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean halo blight/google_0152.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber powdery mildew/59.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato late blight/198.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber leaf/google_0030.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple mosaic virus/50.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry powdery mildew/59.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+maple tar spot/google_0117.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+citrus canker/165.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+banana leaf/15.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple leaf/121.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato leaf/google_0468.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple black rot/google_0072.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry powdery mildew/google_0028.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+blueberry rust/69.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+banana leaf/google_0056.jpg,Truncated text ending abruptly with 'discolor',Complete truncated sentence (e.g. replace 'discolor' with 'discoloration.').,needs_human_review
+eggplant cercospora leaf spot/29.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+plum pocket disease/google_0030.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+broccoli leaf/198.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+eggplant cercospora leaf spot/15.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bell pepper leaf spot/google_0151.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber leaf/39.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape downy mildew/google_0255.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+basil leaf/270.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple scab/45.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+banana panama disease/118.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+garlic rust/29.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger sheath blight/21.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cauliflower alternaria leaf spot/google_0024 - copy (3).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple leaf/48.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cabbage leaf/213.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery anthracnose/google_0090.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+blueberry leaf/google_0431.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cauliflower leaf/121.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cabbage alternaria leaf spot/16.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+ginger sheath blight/51 - copy (6).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+strawberry leaf scorch/google_0084.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+grape downy mildew/71.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato early blight/214.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+rice leaf/223.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato bacterial leaf spot/google_0265.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+plum leaf/152.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple black rot/156.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn smut/google_0150.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+blueberry leaf/10.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery anthracnose/google_0008.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+garlic leaf blight/google_0159 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tobacco mosaic virus/google_0038.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato late blight/google_0110 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato leaf/1.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+eggplant leaf/google_0056.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+maple leaf/google_0169.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+citrus canker/262.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+corn northern leaf blight/add (29).jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bean rust/google_0083.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+celery leaf/google_0161.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+coffee leaf rust/google_0149.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+carrot cavity spot/google_0015.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+maple tar spot/google_0037.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+lettuce downy mildew/52.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+rice sheath blight/google_0009.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+peach leaf curl/google_0138.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+raspberry leaf/33.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+plum pocket disease/google_0043.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tomato bacterial leaf spot/33.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cabbage leaf/428.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+raspberry leaf/google_0015.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber angular leaf spot/271.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber bacterial wilt/95.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+tobacco mosaic virus/google_0010.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+soybean leaf/179.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+peach leaf/152.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+zucchini yellow mosaic virus/117.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cucumber bacterial wilt/google_0076.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+basil leaf/284.jpg,Truncated text ending abruptly with 'Several',Complete truncated sentence starting with 'Several' or remove dangling word.,needs_human_review
+tomato late blight/google_0092.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+peach leaf curl/google_0220.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+rice sheath blight/google_0224.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cherry leaf/183.jpg,Identical text duplicated with ['garlic rust/google_0003.jpg'],Verify if observation correctly corresponds to this cherry image (distinct from garlic sample).,needs_human_review
+garlic rust/google_0003.jpg,Identical text duplicated with ['cherry leaf/183.jpg'],"Observation describes red cherry fruits against white background, but image is garlic plant. Re-annotate with genuine visual features of this garlic image.",needs_human_review
+lettuce mosaic virus/203.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+bell pepper leaf/google_0003.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+potato leaf/101.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+peach leaf/google_0311.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+coffee leaf rust/9.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+coffee leaf/48.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+apple mosaic virus/google_0024.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+broccoli leaf/328.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+lettuce mosaic virus/16.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+cauliflower alternaria leaf spot/google_0042 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks
+broccoli downy mildew/google_0037 - copy.jpg,"None (passes automated lexical, structural, and image verification)",None needed,passed_automated_checks

@@ -1,0 +1,11 @@
+id,category,query,k,relevant_sources,retrieved_sources,hit_at_5,precision_at_5,recall_at_5,reciprocal_rank,citation_present,error
+disease_apple_scab,diseases,apple scab leaf lesions disease,5,apple_scab.diseases.json,apple_scab.diseases.json;apple_rust.diseases.json;apple_mosaic_virus.diseases.json;apple_black_rot.diseases.json;eggplant_cercospora_leaf_spot.diseases.json,1,0.2,1.0,1.0,1,
+disease_tomato_late_blight,diseases,tomato late blight symptoms lesions,5,tomato_late_blight.diseases.json,potato_late_blight.diseases.json;tomato_late_blight.diseases.json;potato_late_blight.diseases.json;potato_early_blight.diseases.json;potato_late_blight.diseases.json,1,0.2,1.0,0.5,1,
+treatment_tomato_late_blight,treatment,tomato late blight treatment fungicide,5,tomato_late_blight.treatment.json,tomato_late_blight.treatment.json;tomato_early_blight.treatment.json;potato_late_blight.treatment.json;potato_early_blight.treatment.json;corn_northern_leaf_blight.treatment.json,1,0.2,1.0,1.0,1,
+treatment_apple_scab,treatment,apple scab management control fungicide,5,apple_scab.treatment.json,apple_scab.treatment.json;apple_black_rot.treatment.json;apple_rust.treatment.json;apple_mosaic_virus.treatment.json;peach_leaf_curl.treatment.json,1,0.2,1.0,1.0,1,
+fertilizer_tomato,fertilizer,tomato fertilizer nitrogen guidance,5,tomato.fertilizer.json,tomato.fertilizer.json;basil.fertilizer.json;soybean.fertilizer.json;garlic.fertilizer.json;bean.fertilizer.json,1,0.2,1.0,1.0,1,
+fertilizer_corn,fertilizer,corn nutrient fertilizer nitrogen recommendations,5,corn.fertilizer.json,cucumber.fertilizer.json;soybean.fertilizer.json;corn.fertilizer.json;bell_pepper.fertilizer.json;strawberry.fertilizer.json,1,0.2,1.0,0.3333333333333333,1,
+care_cucumber,plant care,cucumber plant care watering,5,cucumber.plant_care.json,cucumber.plant_care.json;zucchini.plant_care.json;squash.plant_care.json,1,0.2,1.0,1.0,1,
+care_tomato,plant care,tomato care pruning watering,5,tomato.plant_care.json,,0,0.0,0.0,0.0,0,
+agriculture_corn,agriculture,corn cultivation agriculture,5,corn.agriculture.json,corn.agriculture.json;soybean.agriculture.json;tobacco.agriculture.json,1,0.2,1.0,1.0,1,
+agriculture_apple,agriculture,apple orchard growing production guide,5,apple.agriculture.json,apple.agriculture.json;peach.agriculture.json;potato.agriculture.json,1,0.2,1.0,1.0,1,

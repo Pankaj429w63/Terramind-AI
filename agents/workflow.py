@@ -10,6 +10,7 @@ from typing import Any, Callable
 from backend.repositories import repository
 from ml.serving.predictor import InferenceResult, Predictor
 from rag.pipelines.knowledge import KnowledgePipeline
+from agents.generation import AnswerGenerator
 
 log = logging.getLogger("terramind.agents")
 
@@ -216,14 +217,16 @@ class ChatWorkflowContext:
     retrieval: dict[str, Any] = field(default_factory=dict)
     specialist: str = ""
     response: str | None = None
+    generation: dict[str, str] = field(default_factory=dict)
     events: list[dict[str, Any]] = field(default_factory=list)
 
 
 class ChatSupervisorAgent:
     """Orchestrates source-grounded chat without inventing an LLM response."""
 
-    def __init__(self, pipeline: KnowledgePipeline) -> None:
+    def __init__(self, pipeline: KnowledgePipeline, generator: AnswerGenerator | None = None) -> None:
         self.pipeline = pipeline
+        self.generator = generator or AnswerGenerator()
 
     @staticmethod
     def _specialist(query: str) -> tuple[str, str]:
@@ -254,14 +257,22 @@ class ChatSupervisorAgent:
         event["completed_at"] = now()
         return event
 
-    def run(self, query: str, diagnosis_context: dict[str, Any] | None = None) -> ChatWorkflowContext:
+    def run(
+        self,
+        query: str,
+        diagnosis_context: dict[str, Any] | None = None,
+        enable_specialist: bool = True,
+        enable_rag: bool = True,
+    ) -> ChatWorkflowContext:
         if not query.strip():
             raise ValueError("Chat requires a non-empty user question.")
-        context = ChatWorkflowContext(str(uuid.uuid4()), query.strip(), diagnosis_context)
-        context.events.append(self._event(context.workflow_id, "supervisor", "completed", {"query": context.query}, {"route": "research_rag"}))
+        clean_query = " ".join(query.split())
+        context = ChatWorkflowContext(str(uuid.uuid4()), clean_query, diagnosis_context)
         specialist_key, specialist_name = self._specialist(context.query)
-        context.specialist = specialist_name
+        context.specialist = specialist_name if enable_specialist else ""
+        context.events.append(self._event(context.workflow_id, "supervisor", "completed", {"query": context.query}, {"route": "research_rag" if enable_rag else "none", "specialist": context.specialist or None}))
         retrieval_query = context.query
+        uncertainty_note = None
         if diagnosis_context:
             predicted = (
                 diagnosis_context.get("predicted_class", {}).get("label")
@@ -269,39 +280,49 @@ class ChatSupervisorAgent:
             )
             if predicted:
                 retrieval_query = f"{predicted} {context.query}"
+                is_uncertain = bool(diagnosis_context.get("low_confidence"))
+                uncertainty_note = (
+                    "The image model's prediction is low confidence and is not a confirmed diagnosis. "
+                    "Retrieved sources provide general context only; consider expert review."
+                    if is_uncertain else
+                    "The image model prediction is not a confirmed diagnosis. Retrieved sources provide general context only."
+                )
         try:
-            context.retrieval = self.pipeline.retrieve(retrieval_query, limit=5)
+            context.retrieval = self.pipeline.retrieve(retrieval_query, limit=5) if enable_rag else {
+                "query": retrieval_query, "retrieved": 0, "sources": [], "error": None, "grounded": False
+            }
             context.events.append(self._event(
                 context.workflow_id,
                 "research_rag",
-                "completed",
+                "skipped" if not enable_rag else "failed" if context.retrieval.get("error") else "completed",
                 {"query": retrieval_query},
-                {"retrieved": context.retrieval["retrieved"], "source_count": len(context.retrieval["sources"])},
+                {"retrieved": context.retrieval["retrieved"], "source_count": len(context.retrieval["sources"]), "error": context.retrieval.get("error")},
             ))
             sources = context.retrieval.get("sources", [])
             focused = [item for item in sources if specialist_key in str(item.get("category", "")).lower()]
             selected = focused or sources
-            context.events.append(self._event(
-                context.workflow_id,
-                specialist_name,
-                "completed",
-                {"focus": specialist_key, "source_count": len(selected)},
-                {"sources": [{"title": item.get("title"), "source": item.get("source")} for item in selected]},
-            ))
-            if selected:
-                excerpts = "\n\n".join(
-                    f"[{item.get('title', 'Source')}] {item.get('text', '')[:700]}"
-                    for item in selected
-                )
-                context.response = f"Based on the retrieved TerraMind knowledge sources:\n\n{excerpts}"
-            else:
-                context.response = None
+            if enable_specialist:
+                context.events.append(self._event(
+                    context.workflow_id,
+                    specialist_name,
+                    "completed",
+                    {"focus": specialist_key, "source_count": len(selected)},
+                    {"sources": [{"title": item.get("title"), "source": item.get("source")} for item in selected]},
+                ))
+            context.generation = self.generator.generate(context.query, selected)
+            context.response = context.generation["text"]
+            if uncertainty_note:
+                context.response = uncertainty_note + "\n\n" + context.response
+            cited = []
+            for index, item in enumerate(selected, 1):
+                cited.append({**item, "citation_id": f"S{index}"})
+            context.retrieval = {**context.retrieval, "sources": cited}
             context.events.append(self._event(
                 context.workflow_id,
                 "response",
                 "completed",
-                {"source_count": len(selected)},
-                {"grounded": bool(selected)},
+                {"source_count": len(selected), "generation_mode": context.generation["mode"]},
+                {"grounded": bool(selected), "generation_mode": context.generation["mode"], "generation_status": context.generation["status"]},
             ))
             return context
         except Exception as error:

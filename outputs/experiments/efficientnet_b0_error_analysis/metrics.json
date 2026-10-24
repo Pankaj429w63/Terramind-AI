@@ -1,0 +1,818 @@
+{
+  "checkpoint": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\models\\archive\\2026-09-09_efficientnet_b0_official_v3\\best_model.pth",
+  "checkpoint_sha256": "9ac45c5f02ad65c344611be03aa0f9576933629420c11fee00d3221e4db5a28b",
+  "class_order_matches": true,
+  "official_split_audit": {
+    "counts": {
+      "train": 13045,
+      "validation": 1820,
+      "test": 3677
+    },
+    "path_overlap": "none",
+    "within_split_duplicates": "none",
+    "class_id_folder_alignment": "ok",
+    "train_class_coverage": 89,
+    "validation_class_coverage": 89,
+    "test_class_coverage": 89,
+    "source": "PlantWild trainval.txt modes 1=train, 2=validation, 0=test"
+  },
+  "class_counts": {
+    "train": {
+      "0": 122,
+      "1": 312,
+      "2": 127,
+      "3": 217,
+      "4": 205,
+      "5": 171,
+      "6": 152,
+      "7": 61,
+      "8": 413,
+      "9": 81,
+      "10": 182,
+      "11": 88,
+      "12": 116,
+      "13": 168,
+      "14": 83,
+      "15": 197,
+      "16": 83,
+      "17": 46,
+      "18": 189,
+      "19": 91,
+      "20": 326,
+      "21": 53,
+      "22": 70,
+      "23": 137,
+      "24": 32,
+      "25": 39,
+      "26": 149,
+      "27": 201,
+      "28": 161,
+      "29": 81,
+      "30": 375,
+      "31": 167,
+      "32": 98,
+      "33": 133,
+      "34": 152,
+      "35": 110,
+      "36": 158,
+      "37": 167,
+      "38": 206,
+      "39": 176,
+      "40": 101,
+      "41": 245,
+      "42": 166,
+      "43": 63,
+      "44": 168,
+      "45": 161,
+      "46": 104,
+      "47": 112,
+      "48": 125,
+      "49": 62,
+      "50": 62,
+      "51": 161,
+      "52": 277,
+      "53": 141,
+      "54": 75,
+      "55": 98,
+      "56": 84,
+      "57": 172,
+      "58": 70,
+      "59": 222,
+      "60": 98,
+      "61": 111,
+      "62": 165,
+      "63": 228,
+      "64": 54,
+      "65": 160,
+      "66": 168,
+      "67": 175,
+      "68": 126,
+      "69": 105,
+      "70": 177,
+      "71": 175,
+      "72": 170,
+      "73": 287,
+      "74": 197,
+      "75": 70,
+      "76": 140,
+      "77": 54,
+      "78": 50,
+      "79": 64,
+      "80": 196,
+      "81": 243,
+      "82": 207,
+      "83": 159,
+      "84": 168,
+      "85": 133,
+      "86": 154,
+      "87": 120,
+      "88": 127
+    },
+    "validation": {
+      "0": 17,
+      "1": 44,
+      "2": 18,
+      "3": 30,
+      "4": 29,
+      "5": 24,
+      "6": 21,
+      "7": 8,
+      "8": 59,
+      "9": 11,
+      "10": 25,
+      "11": 12,
+      "12": 16,
+      "13": 24,
+      "14": 11,
+      "15": 28,
+      "16": 11,
+      "17": 6,
+      "18": 27,
+      "19": 12,
+      "20": 46,
+      "21": 7,
+      "22": 9,
+      "23": 19,
+      "24": 4,
+      "25": 5,
+      "26": 21,
+      "27": 28,
+      "28": 23,
+      "29": 11,
+      "30": 53,
+      "31": 23,
+      "32": 13,
+      "33": 19,
+      "34": 21,
+      "35": 15,
+      "36": 22,
+      "37": 23,
+      "38": 29,
+      "39": 25,
+      "40": 14,
+      "41": 34,
+      "42": 23,
+      "43": 8,
+      "44": 24,
+      "45": 22,
+      "46": 14,
+      "47": 16,
+      "48": 17,
+      "49": 8,
+      "50": 8,
+      "51": 23,
+      "52": 39,
+      "53": 20,
+      "54": 10,
+      "55": 13,
+      "56": 11,
+      "57": 24,
+      "58": 10,
+      "59": 31,
+      "60": 14,
+      "61": 15,
+      "62": 23,
+      "63": 32,
+      "64": 7,
+      "65": 22,
+      "66": 24,
+      "67": 25,
+      "68": 18,
+      "69": 14,
+      "70": 25,
+      "71": 25,
+      "72": 24,
+      "73": 41,
+      "74": 28,
+      "75": 9,
+      "76": 20,
+      "77": 7,
+      "78": 7,
+      "79": 9,
+      "80": 28,
+      "81": 34,
+      "82": 29,
+      "83": 22,
+      "84": 24,
+      "85": 19,
+      "86": 22,
+      "87": 17,
+      "88": 18
+    },
+    "test": {
+      "0": 34,
+      "1": 88,
+      "2": 36,
+      "3": 61,
+      "4": 58,
+      "5": 48,
+      "6": 43,
+      "7": 17,
+      "8": 117,
+      "9": 23,
+      "10": 51,
+      "11": 25,
+      "12": 33,
+      "13": 48,
+      "14": 23,
+      "15": 56,
+      "16": 23,
+      "17": 13,
+      "18": 53,
+      "19": 25,
+      "20": 92,
+      "21": 14,
+      "22": 19,
+      "23": 39,
+      "24": 8,
+      "25": 11,
+      "26": 42,
+      "27": 57,
+      "28": 46,
+      "29": 22,
+      "30": 107,
+      "31": 47,
+      "32": 27,
+      "33": 38,
+      "34": 43,
+      "35": 31,
+      "36": 44,
+      "37": 47,
+      "38": 58,
+      "39": 50,
+      "40": 28,
+      "41": 69,
+      "42": 47,
+      "43": 17,
+      "44": 48,
+      "45": 45,
+      "46": 29,
+      "47": 32,
+      "48": 35,
+      "49": 17,
+      "50": 17,
+      "51": 45,
+      "52": 79,
+      "53": 40,
+      "54": 21,
+      "55": 27,
+      "56": 23,
+      "57": 48,
+      "58": 20,
+      "59": 63,
+      "60": 27,
+      "61": 31,
+      "62": 47,
+      "63": 65,
+      "64": 15,
+      "65": 45,
+      "66": 48,
+      "67": 49,
+      "68": 36,
+      "69": 29,
+      "70": 50,
+      "71": 50,
+      "72": 48,
+      "73": 82,
+      "74": 56,
+      "75": 19,
+      "76": 39,
+      "77": 15,
+      "78": 14,
+      "79": 18,
+      "80": 56,
+      "81": 69,
+      "82": 59,
+      "83": 45,
+      "84": 47,
+      "85": 37,
+      "86": 44,
+      "87": 34,
+      "88": 36
+    }
+  },
+  "checkpoint_companion_metrics": {
+    "best_epoch": 20,
+    "best_val_macro_f1": 0.5656594268402917,
+    "test_loss": 2.093963352597081,
+    "test_acc": 0.6002175686701116,
+    "test_macro_f1": 0.5669687405660447,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 4.1507214267667845,
+        "train_acc": 0.1415101571483327,
+        "val_loss": 3.811368888813061,
+        "val_acc": 0.29010989010989013,
+        "val_macro_f1": 0.2379189337369024
+      },
+      {
+        "epoch": 2,
+        "train_loss": 3.6305650133152674,
+        "train_acc": 0.2860099655040245,
+        "val_loss": 3.4524035542875855,
+        "val_acc": 0.3395604395604396,
+        "val_macro_f1": 0.29127592322721235
+      },
+      {
+        "epoch": 3,
+        "train_loss": 3.3257074439420515,
+        "train_acc": 0.3425067075507857,
+        "val_loss": 3.199500837430849,
+        "val_acc": 0.3631868131868132,
+        "val_macro_f1": 0.3121893219230226
+      },
+      {
+        "epoch": 4,
+        "train_loss": 3.0043864059375136,
+        "train_acc": 0.39264085856650055,
+        "val_loss": 2.8200050673642,
+        "val_acc": 0.42417582417582417,
+        "val_macro_f1": 0.37370720287645376
+      },
+      {
+        "epoch": 5,
+        "train_loss": 2.7427850783579464,
+        "train_acc": 0.43840551935607514,
+        "val_loss": 2.624731235713749,
+        "val_acc": 0.45164835164835165,
+        "val_macro_f1": 0.40956286296718813
+      },
+      {
+        "epoch": 6,
+        "train_loss": 2.567110428475657,
+        "train_acc": 0.48156381755461863,
+        "val_loss": 2.4994287883842383,
+        "val_acc": 0.49175824175824173,
+        "val_macro_f1": 0.45509018975851234
+      },
+      {
+        "epoch": 7,
+        "train_loss": 2.467328028388296,
+        "train_acc": 0.5035645841318512,
+        "val_loss": 2.4083954512417973,
+        "val_acc": 0.5153846153846153,
+        "val_macro_f1": 0.4804640751798723
+      },
+      {
+        "epoch": 8,
+        "train_loss": 2.3617829105688632,
+        "train_acc": 0.5400536604062859,
+        "val_loss": 2.3549916424594084,
+        "val_acc": 0.5291208791208791,
+        "val_macro_f1": 0.4911858876499624
+      },
+      {
+        "epoch": 9,
+        "train_loss": 2.3081785393199867,
+        "train_acc": 0.5532387888079724,
+        "val_loss": 2.293698868384728,
+        "val_acc": 0.5445054945054945,
+        "val_macro_f1": 0.5030183281504685
+      },
+      {
+        "epoch": 10,
+        "train_loss": 2.230024119088731,
+        "train_acc": 0.576849367573783,
+        "val_loss": 2.259175293786185,
+        "val_acc": 0.5521978021978022,
+        "val_macro_f1": 0.5145180295298114
+      },
+      {
+        "epoch": 11,
+        "train_loss": 2.1895433594048272,
+        "train_acc": 0.5821387504791108,
+        "val_loss": 2.2466769925840606,
+        "val_acc": 0.5587912087912088,
+        "val_macro_f1": 0.5259399438846738
+      },
+      {
+        "epoch": 12,
+        "train_loss": 2.1344519675303437,
+        "train_acc": 0.6002299731697969,
+        "val_loss": 2.208822912174267,
+        "val_acc": 0.5637362637362637,
+        "val_macro_f1": 0.520410114626524
+      },
+      {
+        "epoch": 13,
+        "train_loss": 2.0944168249461423,
+        "train_acc": 0.606439248754312,
+        "val_loss": 2.2013269220079694,
+        "val_acc": 0.573076923076923,
+        "val_macro_f1": 0.540204102536326
+      },
+      {
+        "epoch": 14,
+        "train_loss": 2.051554629591609,
+        "train_acc": 0.6266768876964354,
+        "val_loss": 2.180269036974226,
+        "val_acc": 0.5686813186813187,
+        "val_macro_f1": 0.535840915074988
+      },
+      {
+        "epoch": 15,
+        "train_loss": 2.0355523663583317,
+        "train_acc": 0.6275201226523572,
+        "val_loss": 2.1647081307002476,
+        "val_acc": 0.5736263736263736,
+        "val_macro_f1": 0.537739085492385
+      },
+      {
+        "epoch": 16,
+        "train_loss": 2.019252099840976,
+        "train_acc": 0.6336527405136068,
+        "val_loss": 2.141046134718172,
+        "val_acc": 0.5884615384615385,
+        "val_macro_f1": 0.5491602471895918
+      },
+      {
+        "epoch": 17,
+        "train_loss": 1.9804466489358348,
+        "train_acc": 0.6478344193177462,
+        "val_loss": 2.141528891993093,
+        "val_acc": 0.5835164835164836,
+        "val_macro_f1": 0.5479316995786211
+      },
+      {
+        "epoch": 18,
+        "train_loss": 1.9665697422919488,
+        "train_acc": 0.6508240705251054,
+        "val_loss": 2.134594918345357,
+        "val_acc": 0.5879120879120879,
+        "val_macro_f1": 0.5523382760467997
+      },
+      {
+        "epoch": 19,
+        "train_loss": 1.96360209224872,
+        "train_acc": 0.6499808355691836,
+        "val_loss": 2.1313516679700912,
+        "val_acc": 0.5884615384615385,
+        "val_macro_f1": 0.5460560537280349
+      },
+      {
+        "epoch": 20,
+        "train_loss": 1.9255884191002046,
+        "train_acc": 0.6581832119586049,
+        "val_loss": 2.1067252489236683,
+        "val_acc": 0.6054945054945055,
+        "val_macro_f1": 0.5656594268402917
+      }
+    ]
+  },
+  "split_content_duplicate_audit": {
+    "unique_image_paths": 18542,
+    "duplicate_content_groups": 335,
+    "duplicate_content_extra_files": 367,
+    "cross_split_duplicate_groups": 155,
+    "cross_split_paths_by_split": {
+      "train": 162,
+      "validation": 61,
+      "test": 110
+    },
+    "all_duplicate_paths_by_split": {
+      "train": 501,
+      "validation": 69,
+      "test": 132
+    },
+    "cross_split_examples": [
+      [
+        "apple black rot/10.jpg",
+        "grape black rot/96.jpg"
+      ],
+      [
+        "apple leaf/google_0207.jpg",
+        "cherry leaf/google_0158.jpg"
+      ],
+      [
+        "apple leaf/34.jpg",
+        "apple leaf/28.jpg"
+      ],
+      [
+        "apple mosaic virus/google_0052.jpg",
+        "apple scab/google_0125.jpg"
+      ],
+      [
+        "apple mosaic virus/93.jpg",
+        "tomato mosaic virus/16.jpg"
+      ],
+      [
+        "apple mosaic virus/google_0161.jpg",
+        "tomato mosaic virus/google_0034.jpg",
+        "bean mosaic virus/google_0111.jpg"
+      ],
+      [
+        "apple rust/104.jpg",
+        "cherry powdery mildew/8.jpg"
+      ],
+      [
+        "apple rust/98.jpg",
+        "apple rust/286.jpg"
+      ],
+      [
+        "apple rust/162.jpg",
+        "apple scab/76.jpg"
+      ],
+      [
+        "apple rust/64.jpg",
+        "apple scab/62.jpg"
+      ]
+    ]
+  },
+  "test_raw_official_all_rows": {
+    "n": 3677,
+    "accuracy": 0.5972259994560783,
+    "macro_precision": 0.5696619144989461,
+    "macro_recall": 0.5841257676390349,
+    "macro_f1": 0.5650428201523336,
+    "weighted_f1": 0.5931702161471093,
+    "top3_accuracy": 0.7992929018221376,
+    "nll": 1.517908243289827,
+    "ece_15_bins": 0.09756172956670876,
+    "mean_max_probability": 0.5007586840874944,
+    "temperature": 1.0
+  },
+  "parameter_count": 4121557,
+  "checkpoint_size_bytes": 16783865,
+  "inference_latency_ms_per_image": {
+    "n": 20,
+    "mean": 35.45256000002155,
+    "median": 26.9699499995113,
+    "device": "cpu",
+    "includes_image_decode_and_transform": true
+  },
+  "duplicate_free_eligible_counts": {
+    "validation": 1751,
+    "test": 3545,
+    "excluded_validation_duplicates": 69,
+    "excluded_test_duplicates": 132
+  },
+  "validation_raw_duplicate_free": {
+    "n": 1751,
+    "accuracy": 0.6093660765276985,
+    "macro_precision": 0.5777469691250012,
+    "macro_recall": 0.5875599707652271,
+    "macro_f1": 0.568671851625347,
+    "weighted_f1": 0.6097786090998134,
+    "top3_accuracy": 0.8063963449457453,
+    "nll": 1.4739542899064195,
+    "ece_15_bins": 0.09955729832216291,
+    "mean_max_probability": 0.5098087782055355,
+    "temperature": 1.0
+  },
+  "test_raw_duplicate_free": {
+    "n": 3545,
+    "accuracy": 0.6067700987306065,
+    "macro_precision": 0.5780018911973904,
+    "macro_recall": 0.5927895799544863,
+    "macro_f1": 0.5739557700938932,
+    "weighted_f1": 0.6031537240324489,
+    "top3_accuracy": 0.8045133991537377,
+    "nll": 1.491628709044067,
+    "ece_15_bins": 0.10580512869857177,
+    "mean_max_probability": 0.5009986488126537,
+    "temperature": 1.0
+  },
+  "calibration": {
+    "method": "temperature scaling",
+    "fit_split": "duplicate-free validation only",
+    "validation_samples": 1751,
+    "temperature": 0.7913304648683721,
+    "test": {
+      "n": 3545,
+      "accuracy": 0.6067700987306065,
+      "macro_precision": 0.5780018911973904,
+      "macro_recall": 0.5927895799544863,
+      "macro_f1": 0.5739557700938932,
+      "weighted_f1": 0.6031537240324489,
+      "top3_accuracy": 0.8045133991537377,
+      "nll": 1.4330240117473783,
+      "ece_15_bins": 0.018118379576850543,
+      "mean_max_probability": 0.6045120226234759,
+      "temperature": 0.7913304648683721
+    },
+    "validation_nll_before": 1.4739542899064195,
+    "validation_nll_after": 1.4205392146990472,
+    "validation_ece_15_bins_before": 0.09955729832216291,
+    "validation_ece_15_bins_after": 0.027286355700751882,
+    "sidecar_selected": true
+  },
+  "healthy_diseased": {
+    "healthy_class_ids": [],
+    "diseased_class_count": 89
+  },
+  "top_confusion_pairs": [
+    {
+      "actual_id": 52,
+      "actual": "grape downy mildew",
+      "predicted_id": 51,
+      "predicted": "grape black rot",
+      "count": 15
+    },
+    {
+      "actual_id": 1,
+      "actual": "apple leaf",
+      "predicted_id": 15,
+      "predicted": "blueberry leaf",
+      "count": 11
+    },
+    {
+      "actual_id": 34,
+      "actual": "corn gray leaf spot",
+      "predicted_id": 36,
+      "predicted": "corn northern leaf blight",
+      "count": 11
+    },
+    {
+      "actual_id": 52,
+      "actual": "grape downy mildew",
+      "predicted_id": 54,
+      "predicted": "grape leaf spot",
+      "count": 10
+    },
+    {
+      "actual_id": 73,
+      "actual": "squash leaf",
+      "predicted_id": 41,
+      "predicted": "cucumber leaf",
+      "count": 9
+    },
+    {
+      "actual_id": 74,
+      "actual": "squash powdery mildew",
+      "predicted_id": 42,
+      "predicted": "cucumber powdery mildew",
+      "count": 9
+    },
+    {
+      "actual_id": 65,
+      "actual": "potato early blight",
+      "predicted_id": 66,
+      "predicted": "potato late blight",
+      "count": 8
+    },
+    {
+      "actual_id": 81,
+      "actual": "tomato early blight",
+      "predicted_id": 86,
+      "predicted": "tomato septoria leaf spot",
+      "count": 8
+    },
+    {
+      "actual_id": 85,
+      "actual": "tomato mosaic virus",
+      "predicted_id": 87,
+      "predicted": "tomato yellow leaf curl virus",
+      "count": 8
+    },
+    {
+      "actual_id": 1,
+      "actual": "apple leaf",
+      "predicted_id": 27,
+      "predicted": "cherry leaf",
+      "count": 7
+    },
+    {
+      "actual_id": 10,
+      "actual": "bean leaf",
+      "predicted_id": 72,
+      "predicted": "soybean leaf",
+      "count": 7
+    },
+    {
+      "actual_id": 36,
+      "actual": "corn northern leaf blight",
+      "predicted_id": 34,
+      "predicted": "corn gray leaf spot",
+      "count": 7
+    },
+    {
+      "actual_id": 72,
+      "actual": "soybean leaf",
+      "predicted_id": 15,
+      "predicted": "blueberry leaf",
+      "count": 7
+    },
+    {
+      "actual_id": 82,
+      "actual": "tomato late blight",
+      "predicted_id": 66,
+      "predicted": "potato late blight",
+      "count": 7
+    },
+    {
+      "actual_id": 42,
+      "actual": "cucumber powdery mildew",
+      "predicted_id": 74,
+      "predicted": "squash powdery mildew",
+      "count": 6
+    },
+    {
+      "actual_id": 46,
+      "actual": "garlic leaf blight",
+      "predicted_id": 45,
+      "predicted": "garlic leaf",
+      "count": 6
+    },
+    {
+      "actual_id": 63,
+      "actual": "plum leaf",
+      "predicted_id": 15,
+      "predicted": "blueberry leaf",
+      "count": 6
+    },
+    {
+      "actual_id": 63,
+      "actual": "plum leaf",
+      "predicted_id": 61,
+      "predicted": "peach leaf",
+      "count": 6
+    },
+    {
+      "actual_id": 80,
+      "actual": "tomato bacterial leaf spot",
+      "predicted_id": 82,
+      "predicted": "tomato late blight",
+      "count": 6
+    },
+    {
+      "actual_id": 87,
+      "actual": "tomato yellow leaf curl virus",
+      "predicted_id": 85,
+      "predicted": "tomato mosaic virus",
+      "count": 6
+    },
+    {
+      "actual_id": 1,
+      "actual": "apple leaf",
+      "predicted_id": 63,
+      "predicted": "plum leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 4,
+      "actual": "apple scab",
+      "predicted_id": 16,
+      "predicted": "blueberry rust",
+      "count": 5
+    },
+    {
+      "actual_id": 7,
+      "actual": "basil downy mildew",
+      "predicted_id": 8,
+      "predicted": "basil leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 18,
+      "actual": "broccoli leaf",
+      "predicted_id": 23,
+      "predicted": "cauliflower leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 34,
+      "actual": "corn gray leaf spot",
+      "predicted_id": 37,
+      "predicted": "corn rust",
+      "count": 5
+    },
+    {
+      "actual_id": 41,
+      "actual": "cucumber leaf",
+      "predicted_id": 73,
+      "predicted": "squash leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 63,
+      "actual": "plum leaf",
+      "predicted_id": 27,
+      "predicted": "cherry leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 63,
+      "actual": "plum leaf",
+      "predicted_id": 72,
+      "predicted": "soybean leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 67,
+      "actual": "potato leaf",
+      "predicted_id": 10,
+      "predicted": "bean leaf",
+      "count": 5
+    },
+    {
+      "actual_id": 67,
+      "actual": "potato leaf",
+      "predicted_id": 72,
+      "predicted": "soybean leaf",
+      "count": 5
+    }
+  ],
+  "elapsed_eval_seconds": 5.666677399999571,
+  "inference_seconds_per_image": 0.0010308672730579536
+}

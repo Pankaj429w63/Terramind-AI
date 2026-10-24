@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import uuid
 from pathlib import Path
@@ -12,6 +13,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parents[2]
 _DEFAULT_QDRANT_PATH = _PROJECT_ROOT / "outputs" / "qdrant_data"
 _LOCAL_PERSIST_PATH = _PROJECT_ROOT / "outputs" / "rag" / "vector_store_memory.json"
 _LOCAL_PERSIST_PATH.parent.mkdir(parents=True, exist_ok=True)
+log = logging.getLogger("terramind.rag.store")
 
 
 def _default_qdrant_path() -> str | None:
@@ -82,9 +84,11 @@ class VectorStore:
 
     def _save_local(self) -> None:
         try:
-            _LOCAL_PERSIST_PATH.write_text(json.dumps(self._points, ensure_ascii=False), encoding="utf-8")
-        except Exception:
-            pass
+            temporary = _LOCAL_PERSIST_PATH.with_suffix(".json.tmp")
+            temporary.write_text(json.dumps(self._points, ensure_ascii=False), encoding="utf-8")
+            temporary.replace(_LOCAL_PERSIST_PATH)
+        except Exception as error:
+            log.warning("Could not persist local RAG fallback index: %s", error)
 
     # ---------------------------
     # Shared chunk ID helpers
@@ -160,6 +164,31 @@ class VectorStore:
     def upsert(self, chunks: list[Chunk], vectors: list[list[float]]) -> int:
         if len(chunks) != len(vectors) or not chunks:
             raise ValueError("Chunks and vectors must be non-empty and have equal length.")
+        # Keep the local fallback synchronized even when Qdrant is primary.
+        by_id: dict[str, int] = {}
+        for i, p in enumerate(self._points):
+            cid = (p.get("payload") or {}).get("chunk_id")
+            if isinstance(cid, str):
+                by_id[cid] = i
+        for chunk, vector in zip(chunks, vectors):
+            record = {
+                "vector": vector,
+                "payload": {
+                    "text": chunk.text,
+                    "chunk_id": chunk.chunk_id,
+                    "source": chunk.source,
+                    "title": chunk.title,
+                    "category": chunk.category,
+                    "metadata": chunk.metadata,
+                },
+            }
+            existing = by_id.get(chunk.chunk_id)
+            if existing is not None:
+                self._points[existing] = record
+            else:
+                by_id[chunk.chunk_id] = len(self._points)
+                self._points.append(record)
+        self._save_local()
         if self.client:
             try:
                 models = self._models
@@ -189,31 +218,6 @@ class VectorStore:
             except Exception:
                 self.client = None
                 return self.upsert(chunks, vectors)
-        # local-memory: deduplicate in-place by chunk_id (update existing or append)
-        by_id: dict[str, int] = {}
-        for i, p in enumerate(self._points):
-            cid = (p.get("payload") or {}).get("chunk_id")
-            if isinstance(cid, str):
-                by_id[cid] = i
-        for chunk, vector in zip(chunks, vectors):
-            record = {
-                "vector": vector,
-                "payload": {
-                    "text": chunk.text,
-                    "chunk_id": chunk.chunk_id,
-                    "source": chunk.source,
-                    "title": chunk.title,
-                    "category": chunk.category,
-                    "metadata": chunk.metadata,
-                },
-            }
-            existing = by_id.get(chunk.chunk_id)
-            if existing is not None:
-                self._points[existing] = record
-            else:
-                by_id[chunk.chunk_id] = len(self._points)
-                self._points.append(record)
-        self._save_local()
         return len(chunks)
 
     # ---------------------------
@@ -276,6 +280,8 @@ class VectorStore:
                         "total_points": total_points,
                         "by_category": by_category,
                         "by_source_count": len(by_source),
+                        "local_fallback_persisted": _LOCAL_PERSIST_PATH.exists(),
+                        "local_fallback_bytes": _LOCAL_PERSIST_PATH.stat().st_size if _LOCAL_PERSIST_PATH.exists() else 0,
                     }
                 self.client = None
             except Exception:
@@ -303,4 +309,6 @@ class VectorStore:
             "total_points": len(self._points),
             "by_category": by_category,
             "by_source_count": len(by_source),
+            "local_fallback_persisted": _LOCAL_PERSIST_PATH.exists(),
+            "local_fallback_bytes": _LOCAL_PERSIST_PATH.stat().st_size if _LOCAL_PERSIST_PATH.exists() else 0,
         }

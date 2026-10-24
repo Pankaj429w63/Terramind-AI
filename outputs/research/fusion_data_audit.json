@@ -1,0 +1,577 @@
+{
+  "decision": "BLOCKED",
+  "blocker": "No image-specific, independently sourced text-pair CSV is present.",
+  "dataset_root": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\plantwild\\plantwild",
+  "official_split_counts": {
+    "train": 13045,
+    "validation": 1820,
+    "test": 3677
+  },
+  "official_class_count": 89,
+  "class_image_count_min": 44,
+  "class_image_count_max": 589,
+  "class_counts_by_split": {
+    "train": {
+      "0": 122,
+      "1": 312,
+      "2": 127,
+      "3": 217,
+      "4": 205,
+      "5": 171,
+      "6": 152,
+      "7": 61,
+      "8": 413,
+      "9": 81,
+      "10": 182,
+      "11": 88,
+      "12": 116,
+      "13": 168,
+      "14": 83,
+      "15": 197,
+      "16": 83,
+      "17": 46,
+      "18": 189,
+      "19": 91,
+      "20": 326,
+      "21": 53,
+      "22": 70,
+      "23": 137,
+      "24": 32,
+      "25": 39,
+      "26": 149,
+      "27": 201,
+      "28": 161,
+      "29": 81,
+      "30": 375,
+      "31": 167,
+      "32": 98,
+      "33": 133,
+      "34": 152,
+      "35": 110,
+      "36": 158,
+      "37": 167,
+      "38": 206,
+      "39": 176,
+      "40": 101,
+      "41": 245,
+      "42": 166,
+      "43": 63,
+      "44": 168,
+      "45": 161,
+      "46": 104,
+      "47": 112,
+      "48": 125,
+      "49": 62,
+      "50": 62,
+      "51": 161,
+      "52": 277,
+      "53": 141,
+      "54": 75,
+      "55": 98,
+      "56": 84,
+      "57": 172,
+      "58": 70,
+      "59": 222,
+      "60": 98,
+      "61": 111,
+      "62": 165,
+      "63": 228,
+      "64": 54,
+      "65": 160,
+      "66": 168,
+      "67": 175,
+      "68": 126,
+      "69": 105,
+      "70": 177,
+      "71": 175,
+      "72": 170,
+      "73": 287,
+      "74": 197,
+      "75": 70,
+      "76": 140,
+      "77": 54,
+      "78": 50,
+      "79": 64,
+      "80": 196,
+      "81": 243,
+      "82": 207,
+      "83": 159,
+      "84": 168,
+      "85": 133,
+      "86": 154,
+      "87": 120,
+      "88": 127
+    },
+    "validation": {
+      "0": 17,
+      "1": 44,
+      "2": 18,
+      "3": 30,
+      "4": 29,
+      "5": 24,
+      "6": 21,
+      "7": 8,
+      "8": 59,
+      "9": 11,
+      "10": 25,
+      "11": 12,
+      "12": 16,
+      "13": 24,
+      "14": 11,
+      "15": 28,
+      "16": 11,
+      "17": 6,
+      "18": 27,
+      "19": 12,
+      "20": 46,
+      "21": 7,
+      "22": 9,
+      "23": 19,
+      "24": 4,
+      "25": 5,
+      "26": 21,
+      "27": 28,
+      "28": 23,
+      "29": 11,
+      "30": 53,
+      "31": 23,
+      "32": 13,
+      "33": 19,
+      "34": 21,
+      "35": 15,
+      "36": 22,
+      "37": 23,
+      "38": 29,
+      "39": 25,
+      "40": 14,
+      "41": 34,
+      "42": 23,
+      "43": 8,
+      "44": 24,
+      "45": 22,
+      "46": 14,
+      "47": 16,
+      "48": 17,
+      "49": 8,
+      "50": 8,
+      "51": 23,
+      "52": 39,
+      "53": 20,
+      "54": 10,
+      "55": 13,
+      "56": 11,
+      "57": 24,
+      "58": 10,
+      "59": 31,
+      "60": 14,
+      "61": 15,
+      "62": 23,
+      "63": 32,
+      "64": 7,
+      "65": 22,
+      "66": 24,
+      "67": 25,
+      "68": 18,
+      "69": 14,
+      "70": 25,
+      "71": 25,
+      "72": 24,
+      "73": 41,
+      "74": 28,
+      "75": 9,
+      "76": 20,
+      "77": 7,
+      "78": 7,
+      "79": 9,
+      "80": 28,
+      "81": 34,
+      "82": 29,
+      "83": 22,
+      "84": 24,
+      "85": 19,
+      "86": 22,
+      "87": 17,
+      "88": 18
+    },
+    "test": {
+      "0": 34,
+      "1": 88,
+      "2": 36,
+      "3": 61,
+      "4": 58,
+      "5": 48,
+      "6": 43,
+      "7": 17,
+      "8": 117,
+      "9": 23,
+      "10": 51,
+      "11": 25,
+      "12": 33,
+      "13": 48,
+      "14": 23,
+      "15": 56,
+      "16": 23,
+      "17": 13,
+      "18": 53,
+      "19": 25,
+      "20": 92,
+      "21": 14,
+      "22": 19,
+      "23": 39,
+      "24": 8,
+      "25": 11,
+      "26": 42,
+      "27": 57,
+      "28": 46,
+      "29": 22,
+      "30": 107,
+      "31": 47,
+      "32": 27,
+      "33": 38,
+      "34": 43,
+      "35": 31,
+      "36": 44,
+      "37": 47,
+      "38": 58,
+      "39": 50,
+      "40": 28,
+      "41": 69,
+      "42": 47,
+      "43": 17,
+      "44": 48,
+      "45": 45,
+      "46": 29,
+      "47": 32,
+      "48": 35,
+      "49": 17,
+      "50": 17,
+      "51": 45,
+      "52": 79,
+      "53": 40,
+      "54": 21,
+      "55": 27,
+      "56": 23,
+      "57": 48,
+      "58": 20,
+      "59": 63,
+      "60": 27,
+      "61": 31,
+      "62": 47,
+      "63": 65,
+      "64": 15,
+      "65": 45,
+      "66": 48,
+      "67": 49,
+      "68": 36,
+      "69": 29,
+      "70": 50,
+      "71": 50,
+      "72": 48,
+      "73": 82,
+      "74": 56,
+      "75": 19,
+      "76": 39,
+      "77": 15,
+      "78": 14,
+      "79": 18,
+      "80": 56,
+      "81": 69,
+      "82": 59,
+      "83": 45,
+      "84": 47,
+      "85": 37,
+      "86": 44,
+      "87": 34,
+      "88": 36
+    }
+  },
+  "path_rows": 18542,
+  "unique_official_paths": 18542,
+  "missing_images": [],
+  "corrupt_images": [],
+  "hashed_images": 18542,
+  "unique_image_sha256": 18175,
+  "exact_duplicate_image_groups": 335,
+  "extra_duplicate_image_rows": 367,
+  "exact_duplicate_groups_crossing_splits": 155,
+  "cross_split_duplicate_examples": [
+    [
+      [
+        "apple black rot/10.jpg",
+        "train",
+        0
+      ],
+      [
+        "grape black rot/96.jpg",
+        "test",
+        51
+      ]
+    ],
+    [
+      [
+        "apple leaf/google_0207.jpg",
+        "train",
+        1
+      ],
+      [
+        "cherry leaf/google_0158.jpg",
+        "validation",
+        27
+      ]
+    ],
+    [
+      [
+        "apple leaf/34.jpg",
+        "train",
+        1
+      ],
+      [
+        "apple leaf/28.jpg",
+        "test",
+        1
+      ]
+    ],
+    [
+      [
+        "apple mosaic virus/google_0052.jpg",
+        "train",
+        2
+      ],
+      [
+        "apple scab/google_0125.jpg",
+        "validation",
+        4
+      ]
+    ],
+    [
+      [
+        "apple mosaic virus/93.jpg",
+        "train",
+        2
+      ],
+      [
+        "tomato mosaic virus/16.jpg",
+        "validation",
+        85
+      ]
+    ],
+    [
+      [
+        "apple mosaic virus/google_0161.jpg",
+        "train",
+        2
+      ],
+      [
+        "tomato mosaic virus/google_0034.jpg",
+        "train",
+        85
+      ],
+      [
+        "bean mosaic virus/google_0111.jpg",
+        "validation",
+        11
+      ]
+    ],
+    [
+      [
+        "apple rust/104.jpg",
+        "train",
+        3
+      ],
+      [
+        "cherry powdery mildew/8.jpg",
+        "validation",
+        29
+      ]
+    ],
+    [
+      [
+        "apple rust/98.jpg",
+        "train",
+        3
+      ],
+      [
+        "apple rust/286.jpg",
+        "test",
+        3
+      ]
+    ],
+    [
+      [
+        "apple rust/162.jpg",
+        "train",
+        3
+      ],
+      [
+        "apple scab/76.jpg",
+        "test",
+        4
+      ]
+    ],
+    [
+      [
+        "apple rust/64.jpg",
+        "train",
+        3
+      ],
+      [
+        "apple scab/62.jpg",
+        "validation",
+        4
+      ]
+    ],
+    [
+      [
+        "apple scab/65.jpg",
+        "train",
+        4
+      ],
+      [
+        "apple rust/78.jpg",
+        "test",
+        3
+      ]
+    ],
+    [
+      [
+        "banana panama disease/105.jpg",
+        "train",
+        6
+      ],
+      [
+        "banana panama disease/addition (17).jpg",
+        "validation",
+        6
+      ]
+    ],
+    [
+      [
+        "banana panama disease/11.jpg",
+        "train",
+        6
+      ],
+      [
+        "banana panama disease/addition (15).jpg",
+        "test",
+        6
+      ]
+    ],
+    [
+      [
+        "basil downy mildew/google_0020.jpg",
+        "train",
+        7
+      ],
+      [
+        "cucumber powdery mildew/google_0131.jpg",
+        "validation",
+        42
+      ],
+      [
+        "lettuce downy mildew/google_0209.jpg",
+        "test",
+        56
+      ]
+    ],
+    [
+      [
+        "basil leaf/203.jpg",
+        "train",
+        8
+      ],
+      [
+        "basil leaf/121.jpg",
+        "test",
+        8
+      ]
+    ],
+    [
+      [
+        "bean halo blight/google_0027.jpg",
+        "train",
+        9
+      ],
+      [
+        "eggplant cercospora leaf spot/google_0106.jpg",
+        "train",
+        43
+      ],
+      [
+        "bell pepper leaf spot/google_0213.jpg",
+        "validation",
+        14
+      ]
+    ],
+    [
+      [
+        "bean mosaic virus/30.jpg",
+        "train",
+        11
+      ],
+      [
+        "tomato mosaic virus/184.jpg",
+        "validation",
+        85
+      ]
+    ],
+    [
+      [
+        "bean mosaic virus/76.jpg",
+        "train",
+        11
+      ],
+      [
+        "apple mosaic virus/18.jpg",
+        "test",
+        2
+      ]
+    ],
+    [
+      [
+        "bean rust/google_0002.jpg",
+        "train",
+        12
+      ],
+      [
+        "bean halo blight/google_0191.jpg",
+        "test",
+        9
+      ]
+    ],
+    [
+      [
+        "bean rust/google_0054 - Copy.jpg",
+        "train",
+        12
+      ],
+      [
+        "bean leaf/google_0054 - Copy.jpg",
+        "test",
+        10
+      ]
+    ]
+  ],
+  "local_text_assets": {
+    "plantwild_prompts_file_present": true,
+    "prompt_class_keys": 92,
+    "prompt_classes_matching_official_labels": 89,
+    "prompt_rows": 4600,
+    "unique_exact_prompts_casefolded": 4394,
+    "duplicate_exact_prompt_rows": 206,
+    "association": "50 class-conditioned GPT-generated prompts per class; not image-specific observations",
+    "usable_as_paired_training_text": false
+  },
+  "url_record": {
+    "present": true,
+    "record_count": 18542,
+    "role": "image source URL provenance only; not text descriptions"
+  },
+  "paired_csv": null,
+  "paired_csv_exists": false,
+  "paired_csv_validated": false,
+  "notes": [
+    "A CSV's existence alone does not establish text provenance or image-text correspondence.",
+    "When supplied, validate with ml.fusion.data.load_paired_text_csv; labels and splits must be joined from official split files.",
+    "Exact class-name rejection is a partial automated leakage check; provenance still requires curator verification."
+  ]
+}

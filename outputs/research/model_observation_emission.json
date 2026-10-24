@@ -1,0 +1,634 @@
+{
+  "store": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\outputs\\annotation\\model_generated\\generation_records.csv",
+  "records": 17870,
+  "status_counts": {
+    "generated": 17867,
+    "flagged_for_review": 3,
+    "unreadable_image": 0,
+    "failed": 0
+  },
+  "eligible_samples": 17870,
+  "missing_generations": 0,
+  "successful_generated": 17867,
+  "flagged_uncertain": 3,
+  "failed": 0,
+  "unreadable_or_changed_images": 0,
+  "duplicate_description_groups": 1130,
+  "duplicate_description_rows": 14943,
+  "duplicate_description_examples": [
+    {
+      "text": "a close - up view of the plant surface showing the red spot on the apple",
+      "sample_ids": [
+        "apple black rot/1.jpg",
+        "apple scab/66.jpg"
+      ],
+      "size": 2
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit on the tree",
+      "sample_ids": [
+        "apple black rot/11.jpg",
+        "apple black rot/12.jpg",
+        "apple black rot/147.jpg",
+        "apple black rot/149.jpg",
+        "apple black rot/3.jpg"
+      ],
+      "size": 163
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the bark",
+      "sample_ids": [
+        "apple black rot/14.jpg",
+        "apple black rot/17.jpg",
+        "apple black rot/171.jpg",
+        "apple black rot/58.jpg",
+        "apple black rot/67.jpg"
+      ],
+      "size": 12
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit and the fruit on the tree",
+      "sample_ids": [
+        "apple black rot/144.jpg",
+        "apple black rot/6.jpg",
+        "apple black rot/google_0090.jpg",
+        "apple black rot/google_0115.jpg",
+        "apple rust/156.jpg"
+      ],
+      "size": 20
+    },
+    {
+      "text": "a close - up view of the plant surface showing the leaves and flowers",
+      "sample_ids": [
+        "apple black rot/148.jpg",
+        "apple leaf/117.jpg",
+        "apple leaf/google_0423.jpg",
+        "apple mosaic virus/15.jpg",
+        "apple mosaic virus/22.jpg"
+      ],
+      "size": 108
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit and the fruit on the plant",
+      "sample_ids": [
+        "apple black rot/15.jpg",
+        "apple black rot/38 - copy.jpg",
+        "apple scab/27.jpg",
+        "apple scab/43 - copy.jpg",
+        "apple scab/google_0297.jpg"
+      ],
+      "size": 38
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the trunk",
+      "sample_ids": [
+        "apple black rot/152.jpg",
+        "banana panama disease/google_0063 - copy (2).jpg",
+        "banana leaf/296.jpg"
+      ],
+      "size": 3
+    },
+    {
+      "text": "a close - up view of the plant surface showing the damage of the roots",
+      "sample_ids": [
+        "apple black rot/155.jpg",
+        "banana panama disease/google_0030.jpg",
+        "tomato bacterial leaf spot/130.jpg"
+      ],
+      "size": 3
+    },
+    {
+      "text": "a close - up view of the plant surface showing the brown substance",
+      "sample_ids": [
+        "apple black rot/16.jpg",
+        "citrus canker/237.jpg",
+        "tomato leaf mold/google_0048.jpg"
+      ],
+      "size": 3
+    },
+    {
+      "text": "a close - up view of the plant surface showing the fruit",
+      "sample_ids": [
+        "apple black rot/167.jpg",
+        "apple black rot/google_0026.jpg",
+        "apple black rot/google_0031.jpg",
+        "apple black rot/google_0033.jpg",
+        "apple black rot/google_0046.jpg"
+      ],
+      "size": 83
+    }
+  ],
+  "checks": {
+    "empty_or_malformed": {
+      "count": 0,
+      "blocking": false,
+      "note": "empty, too short, or boilerplate-only text",
+      "examples": []
+    },
+    "class_label_leakage": {
+      "count": 16,
+      "blocking": false,
+      "note": "text contains a PlantWild class name",
+      "examples": [
+        {
+          "sample_id": "apple scab/google_0074.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "coffee leaf rust/google_0056.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/27.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/377.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0003.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0006.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0016.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0027.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0048.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        },
+        {
+          "sample_id": "maple leaf/google_0109.jpg",
+          "detail": "Paired text contains a PlantWild class name; target-derived text is prohibited"
+        }
+      ]
+    },
+    "unsupported_disease_claim": {
+      "count": 95,
+      "blocking": false,
+      "note": "text asserts a cause/disease/treatment beyond visible evidence",
+      "examples": [
+        {
+          "sample_id": "apple mosaic virus/google_0063.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple rust/43.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease', 'infect']"
+        },
+        {
+          "sample_id": "apple rust/google_0120.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple rust/google_0244.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple rust/google_0245.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        },
+        {
+          "sample_id": "apple scab/22.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/29.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/google_0041.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "apple scab/google_0240.jpg",
+          "detail": "disease/cause/treatment claim terms: ['disease']"
+        },
+        {
+          "sample_id": "banana panama disease/31.jpg",
+          "detail": "disease/cause/treatment claim terms: ['fungus']"
+        }
+      ]
+    },
+    "metadata_echo": {
+      "count": 0,
+      "blocking": false,
+      "note": "text repeats paths, ids, or URLs instead of visible evidence",
+      "examples": []
+    },
+    "missing_or_invalid_provenance": {
+      "count": 0,
+      "blocking": true,
+      "note": "provenance/source_reference failed validation",
+      "examples": []
+    },
+    "invalid_model_metadata": {
+      "count": 0,
+      "blocking": true,
+      "note": "model, version, backend, or prompt metadata is missing/inconsistent",
+      "examples": []
+    },
+    "image_identity_or_corruption": {
+      "count": 0,
+      "blocking": true,
+      "note": "image missing, changed, or not matching the manifest hash",
+      "examples": []
+    },
+    "duplicate_records": {
+      "count": 0,
+      "blocking": true,
+      "note": "more than one record for the same sample_id",
+      "examples": []
+    },
+    "duplicate_descriptions": {
+      "count": 10,
+      "blocking": false,
+      "note": "identical text across different images (not image-specific)",
+      "examples": [
+        {
+          "sample_id": "apple black rot/1.jpg",
+          "detail": "text shared by 2 images"
+        },
+        {
+          "sample_id": "apple black rot/11.jpg",
+          "detail": "text shared by 163 images"
+        },
+        {
+          "sample_id": "apple black rot/14.jpg",
+          "detail": "text shared by 12 images"
+        },
+        {
+          "sample_id": "apple black rot/144.jpg",
+          "detail": "text shared by 20 images"
+        },
+        {
+          "sample_id": "apple black rot/148.jpg",
+          "detail": "text shared by 108 images"
+        },
+        {
+          "sample_id": "apple black rot/15.jpg",
+          "detail": "text shared by 38 images"
+        },
+        {
+          "sample_id": "apple black rot/152.jpg",
+          "detail": "text shared by 3 images"
+        },
+        {
+          "sample_id": "apple black rot/155.jpg",
+          "detail": "text shared by 3 images"
+        },
+        {
+          "sample_id": "apple black rot/16.jpg",
+          "detail": "text shared by 3 images"
+        },
+        {
+          "sample_id": "apple black rot/167.jpg",
+          "detail": "text shared by 83 images"
+        }
+      ]
+    },
+    "missing_generations": {
+      "count": 0,
+      "blocking": false,
+      "note": "0 eligible image(s) have no record",
+      "examples": []
+    }
+  },
+  "clean_records": 17759,
+  "records_requiring_human_verification": 111,
+  "integrity_blocked": false,
+  "emittable": true,
+  "decision": "EMITTED",
+  "limitations": [
+    "Automated checks are structural and lexical; they do not prove that a description semantically matches its image.",
+    "Records excluded here are excluded, never rewritten or replaced.",
+    "Only store-integrity checks halt emission outright; other checks exclude the individual offending records and report the counts.",
+    "Text/vocabulary overlap between generated descriptions and class labels is checked only for exact class-name phrases, not for paraphrases."
+  ],
+  "excluded_records": [
+    {
+      "sample_id": "apple mosaic virus/google_0063.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/43.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0120.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0244.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple rust/google_0245.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/22.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/29.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0041.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0074.jpg",
+      "reasons": [
+        "class-label leakage"
+      ]
+    },
+    {
+      "sample_id": "apple scab/google_0240.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "banana panama disease/31.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "banana panama disease/google_0011.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "basil leaf/google_0302.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "bean halo blight/google_0050.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "bean rust/google_0031.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "bean rust/google_0213.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "bell pepper leaf spot/google_0225.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "blueberry rust/50.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "blueberry rust/google_0092.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "blueberry rust/google_0212.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "blueberry rust/google_0290.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "citrus canker/115.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "citrus canker/130.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "citrus canker/245.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "citrus canker/63.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/167.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/18.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/19.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0008.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0014.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0023.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0056.jpg",
+      "reasons": [
+        "class-label leakage"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0060.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0072.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0077.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0140.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "coffee leaf rust/google_0281.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn gray leaf spot/google_0072.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn gray leaf spot/google_0096.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn gray leaf spot/google_0327.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/1.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/41.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0003.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0014.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0021.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0027.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0034.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0035.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0039.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    },
+    {
+      "sample_id": "corn rust/google_0072.jpg",
+      "reasons": [
+        "unsupported disease claim"
+      ]
+    }
+  ],
+  "emitted": true,
+  "output": "C:\\Users\\PANKAJ YADAV\\OneDrive\\Desktop\\Terramind AI\\data\\paired_model_observations.csv",
+  "model": "Salesforce/blip-image-captioning-base",
+  "prompt_version": "v1",
+  "validated_rows": 17759,
+  "validated_rows_by_split": {
+    "train": 12481,
+    "validation": 1747,
+    "test": 3531
+  },
+  "text_origins": [
+    "model_generated_observation"
+  ],
+  "unique_texts": 4007,
+  "blocker": "Model-generated candidate descriptions only. They are not human observations, not independently reviewed, and cannot support a deployable multimodal claim."
+}

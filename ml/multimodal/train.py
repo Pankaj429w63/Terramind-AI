@@ -39,6 +39,13 @@ def _loader(dataset: PlantWildMetadataDataset, batch_size: int, shuffle: bool, s
 
 
 def train(args: argparse.Namespace) -> Path:
+    raise RuntimeError(
+        "This legacy autoencoder pairs images with disease class labels and is blocked for this task. "
+        "Use ml.fusion.train with independently paired, inference-available text instead."
+    )
+
+    # Retained below for historical checkpoint reproducibility only; the guard
+    # above prevents new label-conditioned representation weights being made.
     config_values = yaml.safe_load(args.config.read_text(encoding="utf-8")) or {}
     model_config = MultimodalConfig(**{key: value for key, value in config_values.items() if key in MultimodalConfig.__dataclass_fields__})
     seed = int(config_values.get("seed", 42))
